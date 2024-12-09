@@ -1,32 +1,28 @@
 jfarla:
   name: Joost Farla
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
+  title: Implementatie ondersteuner - Data bij de Bron
   image_url: https://github.com/joostfarla.png
   page: true
   socials:
+    linkedin: joostfarla
     github: joostfarla
 
 ootes:
   name: Tom Ootes
-  title: Docusaurus maintainer
+  title: Developer Advocate - Developer Overheid NL
   url: https://sebastienlorber.com
   image_url: https://github.com/tomootes.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
+    linkedin: tootes
     github: tomootes
-    newsletter: https://thisweekinreact.com
 
 dvh:
   name: Dimitri van Hees
-  title: Front End Engineer @ Facebook
+  title: Product Owner - Developer Overheid NL
   url: https://github.com/dvh
   image_url: https://github.com/dvh.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    linkedin: dimitrivanhees
+    github: dvh

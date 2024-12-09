@@ -28,24 +28,22 @@ EMREX onderkent de volgende 3 componenten:
 
 Het EMP Registry is het enige centrale component, in tegenstelling tot EMC's en EMP's die juist decentraal van aard zijn.
 
-<!-- ![emrex-proces|593x230](upload://ptorOegK4ZeEXYrgtxKHMkMRLqJ.png) -->
+```mermaid
+graph
+	A[EMP] <-- Response (HTTP ELMO XML) --> B[EMC] 
+	B <-- Request (HTTPS POST) --> A 
+	B <-- EMP information (JSON) --> C[EWP Registry]
+```
 
 Het proces gaat in de basis als volgt:
 
 1. De student start proces bij organisatie met een EMC die onderwijsgegevens wenst te ontvangen (bijv. inschrijven hoger onderwijs).
-
 1. De EMC raadpleegt het centrale EWP Registry om een lijst van EMPs te tonen.
-
 1. De student kiest de EMP van het land waar de studieresultaten zijn behaald.
-
 1. De EMC raadpleegt de EMP om een overzicht van alle beschikbare studieresultaten op te halen.
-
 1. De student kiest de gewenste studieresultaten.
-
 1. De EMC stuurt een verzoek naar de EMP voor de gekozen studieresultaten, voorzien van een callback URL.
-
 1. De EMP verzamelt de studieresultaten en stuurt deze retour naar de callback URL.
-
 1. De EMC verifieert de digitale handtekening van de ontvangen studieresultaten.
 
 De uitwisseling tussen de EMC en EMP is gestandaardiseerd middels het [ELMO XML formaat](https://github.com/emrex-eu/elmo-schemas) en versleuteld middels standaard TLS-encryptie.
