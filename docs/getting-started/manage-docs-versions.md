@@ -1,7 +1,7 @@
 ---
 tags:
-  - 'API'
-  - 'Open API Specification'
+  - 'api'
+  - 'open-api-specification'
 title: 'Bouw een API'
 ---
 Hier leggen we uit welke stappen je kunt doorlopen om snel en efficient een nieuwe REST API te ontwikkelen. We gaan hierbij uit van een *design first* aanpak, dus we starten met het API design.
