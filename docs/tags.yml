@@ -1,0 +1,8 @@
+docusaurus:
+  label: 'API'
+  permalink: '/api'
+  description: 'API'
+OpenAPISpec:
+  label: 'Open API Specification'
+  permalink: '/oas'
+  description: 'Open API Specification related docs'
