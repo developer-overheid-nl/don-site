@@ -62,13 +62,13 @@ De FSC policy builder maakt onderscheid tussen routes, policies en data:
 
 Een voorbeeld een vergelijkbare policy als de bovenstaande is te zien in de volgende screenshot:
 
-![policies|690x388](upload://mAp3aEpGuES8i749EoyL5nFqF8N.png)
+![Sreenshot FSC Policy Builder](./img/digilab_2.png)
 
 (Hierbij wordt ervan uitgegaan dat de service die het verzoek doet de goede `X-User-Id` request header meegeeft, dus dat de eindgebruiker niet zelf het request kan aanpassen.)
 
 Een voorbeeld van bijbehorende data is te zien in de volgende screenshot:
 
-![Sreenshot FSC Policy Builder](./img/digilab_2.png)
+![Sreenshot FSC Policy Builder](./img/digilab_3.png)
 
 
 Het voordeel van de splitsing tussen policies en data is dat de data kan worden gewijzigd zonder dat de policies zelf hoeven te worden aangepast. Bijvoorbeeld kan een gebruiker andere rechten of eigenschappen krijgen, zonder dat de policies daarvoor hoeven te worden aangepast.
