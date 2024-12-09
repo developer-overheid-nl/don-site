@@ -69,19 +69,22 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Developer Overheid NL',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
+        { to: 'https://developer.overheid.nl/apis', label: 'API\'s', position: 'left' },
+        { to: 'https://developer.overheid.nl/repositories', label: 'Repositories', position: 'left' },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Kennisbank',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
+        { to: 'https://community.developer.overheid.nl', label: 'Community', position: 'left' },
         {
           href: 'https://github.com/developer-overheid-nl',
           label: 'GitHub',
