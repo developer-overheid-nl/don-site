@@ -1,7 +1,7 @@
 ---
 tags:
   - 'api'
-title: 'Gebruik API\'s van de overheid'
+title: "Gebruik API's van de overheid"
 ---
 
 Overheidsorganisaties ontwikkelen veel [API's](https://nl.wikipedia.org/wiki/Application_programming_interface) om allerlei data snel en efficient te delen met andere overheidsorganisaties en andere partijen die met de overheid werken. In deze post leer je hoe je zelf deze API's kan gebruiken.

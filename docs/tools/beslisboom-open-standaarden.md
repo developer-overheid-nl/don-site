@@ -1,7 +1,7 @@
 ---
 tags:
-  - 'open-source'
-  - 'git'
+  - 'standaarden'
+  - 'forum-standaardisatie'
 title: 'Beslisboom Open Standaarden'
 organization: 'https://community.developer.overheid.nl/g/forum_standaard'
 ---

@@ -1,7 +1,9 @@
 ---
 tags:
   - 'open-source'
-  - 'git'
+  - 'community'
+  - 'security'
+  - 'monitoring'
 title: 'Quality Time'
 organization: 'https://community.developer.overheid.nl/g/ictu'
 ---
@@ -20,6 +22,4 @@ Quality-time is open source en beschikbaar via [GitHub](https://github.com/ICTU/
 
 Wij hebben al jaren veel plezier van Quality-time in onze projecten. Het zou mooi zijn als het ook voor jouw project/organisatie nuttig kan zijn?!
 
-[wrap="button"]
 **[Naar de github van Quality-time »](https://github.com/ICTU/quality-time)**
-[/wrap]
