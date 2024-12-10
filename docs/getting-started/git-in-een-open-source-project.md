@@ -17,8 +17,23 @@ Er zijn hele workflows om Git heen ontstaan, die helpen om bijdragen op een goed
 
 Een branching workflow met Git ziet er dan (bijvoorbeeld) als volgt uit:
 
-![Gitflow schema](./img/7dc23684e56dd0a12be6e695235f89f7e4c8cdc6_2_1380x774.jpeg)
-
+```mermaid
+    gitGraph
+        commit
+        commit
+        branch fix
+        commit
+        commit
+        checkout main
+        commit
+        branch feature
+        commit
+        commit
+        commit
+        checkout main
+        merge fix
+        merge feature
+```
 
 ## Git repo
 

@@ -79,9 +79,15 @@ const config: Config = {
         { to: 'https://developer.overheid.nl/repositories', label: 'Repositories', position: 'left' },
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'gettingStartedSidebar',
           position: 'left',
-          label: 'Kennisbank',
+          label: 'Getting started',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'richtlijnenSidebar',
+          position: 'left',
+          label: 'Richtlijnen',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: 'https://community.developer.overheid.nl', label: 'Community', position: 'left' },
@@ -95,15 +101,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'Community',
           items: [
