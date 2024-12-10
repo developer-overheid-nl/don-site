@@ -71,26 +71,42 @@ const config: Config = {
     navbar: {
       title: 'Developer Overheid NL',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Developer Overheid NL',
         src: 'img/logo.svg',
       },
       items: [
-        { to: 'https://developer.overheid.nl/apis', label: 'API\'s', position: 'left' },
-        { to: 'https://developer.overheid.nl/repositories', label: 'Repositories', position: 'left' },
         {
-          type: 'docSidebar',
-          sidebarId: 'gettingStartedSidebar',
+          type: 'doc',
           position: 'left',
-          label: 'Getting started',
+          docId: 'apis/introduction',
+          label: 'API\'s',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'richtlijnenSidebar',
           position: 'left',
-          label: 'Richtlijnen',
+          sidebarId: 'openSource',
+          label: 'Open Source',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        { to: 'https://community.developer.overheid.nl', label: 'Community', position: 'left' },
+        {
+          type: 'docSidebar',
+          sidebarId: 'security',
+          position: 'left',
+          label: 'Security',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'toegankelijkheid',
+          position: 'left',
+          label: 'Toegankelijkheid',
+        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'richtlijnenSidebar',
+        //   position: 'left',
+        //   label: 'Richtlijnen',
+        // },
+        { to: '/blog', label: 'Blog', position: 'right' },
+        { href: 'https://community.developer.overheid.nl', label: 'Community', position: 'right' },
         {
           href: 'https://github.com/developer-overheid-nl',
           label: 'GitHub',
