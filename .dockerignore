@@ -1,0 +1,4 @@
+.docusaurus
+.cache-loader
+build
+node_modules
