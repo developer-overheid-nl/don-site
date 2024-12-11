@@ -17,7 +17,7 @@ WORKDIR /opt/docusaurus
 ## Expose the port that Docusaurus will run on.
 EXPOSE 3000
 ## Run the development server.
-CMD [ -d "node_modules" ] && npm run start --host 0.0.0.0 --poll 1000 || npm run install && npm run start --host 0.0.0.0 --poll 1000
+CMD [ -d "node_modules" ] && pnpm start --host 0.0.0.0 --poll 1000 || pnpm install && pnpm start --host 0.0.0.0 --poll 1000
 
 # Stage 2b: Production build mode.
 FROM base AS prod
@@ -25,17 +25,17 @@ FROM base AS prod
 WORKDIR /opt/docusaurus
 ## Copy over the source code.
 COPY . /opt/docusaurus/
-## Install dependencies with `--immutable` to ensure reproducibility.
+## Install dependencies with `--frozen-lockfile` to ensure reproducibility.
 RUN pnpm install --frozen-lockfile
 ## Build the static site.
-RUN pnpm run build
+RUN pnpm build
 
 # Stage 3a: Serve with `docusaurus serve`.
 FROM prod AS serve
 ## Expose the port that Docusaurus will run on.
 EXPOSE 3000
 ## Run the production server.
-CMD ["pnpm", "run", "serve", "--", "--host", "0.0.0.0", "--no-open"]
+CMD ["pnpm", "serve", "--host", "0.0.0.0", "--no-open"]
 
 # Stage 3b: Serve with Caddy.
 FROM caddy:2-alpine AS caddy

@@ -142,6 +142,14 @@ const config: Config = {
               label: 'Privacyverklaring',
               to: '/privacy',
             },
+            {
+              label: 'Toegankelijkheidsverklaring',
+              href: 'https://www.toegankelijkheidsverklaring.nl/register/17963',
+            },
+            {
+              label: 'Sitearchief',
+              href: 'https://minbzk.sitearchief.nl/?subsite=developeroverheid',
+            }
           ],
         },
       ],
