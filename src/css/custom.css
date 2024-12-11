@@ -20,6 +20,17 @@
   --ifm-heading-font-family: 'FiraSans-Bold', sans-serif;
   --ifm-heading-font-weight: var(--rhc-font-size-heading-level-1);
   --ifm-font-family-base: 'FiraSans-Regular', sans-serif;
+  --ifm-link-color: rgb(1, 104, 155);
+  --ifm-navbar-link-hover-color: rgb(1, 104, 155);
+
+  /* Hero */
+  /* BROKEN! */
+  /* --ifm-hero-background-color: #01689b !important; */
+
+}
+
+.hero {
+  background-color: #01689b;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
