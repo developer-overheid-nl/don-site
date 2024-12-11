@@ -7,14 +7,11 @@ tags:
   - 'HTML'
 ---
 # Digitoegankelijk
+
 :::info[Verplichte standaard]
 
 Deze standaard is [verplicht voor alle websites](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) van de overheid.
 
-:::
-
-:::info 
-BLABLA
 :::
 
 Dit artikel heeft als doel om developers ondersteuning te bieden bij het implementeren van de standaard [Digitoegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) zoals vastgesteld door het Forum Standaardisatie.

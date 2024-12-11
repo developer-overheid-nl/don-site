@@ -76,10 +76,10 @@ const config: Config = {
       },
       items: [
         {
-          type: 'doc',
+          type: 'docSidebar',
           position: 'left',
-          docId: 'apis/introduction',
-          label: 'API\'s',
+          sidebarId: 'apis',
+          label: 'REST API\'s',
         },
         {
           type: 'docSidebar',
@@ -99,12 +99,12 @@ const config: Config = {
           position: 'left',
           label: 'Toegankelijkheid',
         },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'richtlijnenSidebar',
-        //   position: 'left',
-        //   label: 'Richtlijnen',
-        // },
+        {
+          type: 'docSidebar',
+          sidebarId: 'overig',
+          position: 'left',
+          label: 'Overig',
+        },
         { to: '/blog', label: 'Blog', position: 'right' },
         { href: 'https://community.developer.overheid.nl', label: 'Community', position: 'right' },
         { href: 'https://developer.overheid.nl/apis', label: 'API Catalogus', position: 'right' },
