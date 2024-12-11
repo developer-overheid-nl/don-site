@@ -96,7 +96,7 @@ is ook een goede bron van inspiratie.
 
 ## Stap 5: Governance en processen
 
-1. Zorg voor een [PROJECT_GOVERNANCE.md](../standarden/PROJECT_GOVERNANCE.md) waarin de
+1. Zorg voor een [PROJECT_GOVERNANCE.md](../standaarden/project-governance-md.md) waarin de
    governance structuur beschreven is.
 2. Bepaal wat de roadmap wordt
 3. Zorg voor een code repository, bug reporting en code testing infrastructuur die toegankelijk is
@@ -106,7 +106,7 @@ is ook een goede bron van inspiratie.
 ## Stap 6: Launch en maintain
 
 1. Open het project en start met open source ontwikkel proces
-2. Zorg dat het gebruik van [Developer Certificate or Origin (DCO)](./DCO.md) wordt afgedwongen.
+2. Zorg dat het gebruik van [Developer Certificate or Origin (DCO)](../standaarden/dco-md.md) wordt afgedwongen.
 3. Zorg er voor dat veranderingen aan de roadmap of governance helder gecommuniceerd worden.
 4. Volg best practices zoveel mogelijk & behaal [OpenSSF ( formerly CII ) Best Practices
    badge](https://bestpractices.coreinfrastructure.org/en)
