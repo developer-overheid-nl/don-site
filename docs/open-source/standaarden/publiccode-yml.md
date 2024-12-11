@@ -2,8 +2,9 @@
 title: publiccode.yml
 ---
 
+Voorbeeld van [Developer Overheid NL](https://developer.overheid.nl):
 
-```yaml showLineNumbers
+```yaml showLineNumbers title="./publiccode.yml"
 # This repository adheres to the publiccode.yml standard by including this
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/publiccodeyml/publiccode.yml
