@@ -1,15 +1,18 @@
 import { MDXProvider } from '@mdx-js/react';
 import type { Props } from '@theme/MDXContent';
+import Admonition from '@theme/Admonition';
+import DocCardList from '@theme/DocCardList';
+import Mermaid from '@theme/Mermaid';
 import type { ReactElement } from 'react';
 
-import { Link } from '@rijkshuisstijl-community/components-react';
+import { Link, Image } from '@rijkshuisstijl-community/components-react';
 
 export default function MDXContent({ children }: Props): ReactElement {
     return (
         <MDXProvider
             components={{
                 // code: Code,
-                a: Link,
+                // a: Link,
                 // em: Emphasis,DocCardList
                 // ul: ({ children }) => {
                 //     return <UnorderedList className="utrecht-unordered-list--html-content">{children}</UnorderedList>;
@@ -25,6 +28,10 @@ export default function MDXContent({ children }: Props): ReactElement {
                 // h5: Heading5,
                 // h6: Heading6,
                 // mermaid: Mermaid,
+                // img: Image,
+                DocCardList: DocCardList,
+                admonition: Admonition,
+                mermaid: Mermaid,
             }}
         >
             {children}
