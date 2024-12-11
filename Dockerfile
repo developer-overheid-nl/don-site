@@ -26,7 +26,7 @@ WORKDIR /opt/docusaurus
 ## Copy over the source code.
 COPY . /opt/docusaurus/
 ## Install dependencies with `--immutable` to ensure reproducibility.
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
 ## Build the static site.
 RUN pnpm run build
 
