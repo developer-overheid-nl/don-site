@@ -8,6 +8,14 @@ title: 'Quality Time'
 organization: 'https://community.developer.overheid.nl/g/ictu'
 ---
 
+# Quality Time
+
+:::info
+
+Dit is een bijdrage van ICTU
+
+:::
+
 tl;dr: Quality-time is een open source tool die je kan helpen de kwaliteit van je maatwerksoftware te bewaken en technische schuld te managen.
 
 Mijn werkgever, ICTU, doet projecten met/voor andere overheden om de digitale dienstverlening door de overheid te verbeteren. Vaak ontwikkelen we daarbij maatwerksoftware. Voorbeelden die je misschien kent zijn het [Landelijk Register Kinderopvang](https://www.landelijkregisterkinderopvang.nl) of het [Leeroverzicht](https://www.leeroverzicht.nl). 

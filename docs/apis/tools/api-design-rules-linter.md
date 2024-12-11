@@ -37,4 +37,3 @@ $ docker run --rm --entrypoint=sh \
     -v $(pwd)/api:/locale stoplight/spectral:5.9.1 \
     -c "spectral lint -r https://developer.overheid.nl/static/adr/ruleset.yaml"
 ```
-<div data-theme-toc="true"> </div>

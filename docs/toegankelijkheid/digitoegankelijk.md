@@ -5,8 +5,13 @@ tags:
   - 'nl-design-system'
   - 'forum-standaardisatie'
   - 'HTML'
-title: "Digitoegankelijk"
 ---
+# Digitoegankelijk
+:::info[Verplichte standaard]
+
+Deze standaard is [verplicht voor alle websites](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) van de overheid.
+
+:::
 
 Dit artikel heeft als doel om developers ondersteuning te bieden bij het implementeren van de standaard [Digitoegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) zoals vastgesteld door het Forum Standaardisatie.
 
@@ -67,21 +72,6 @@ Een voorbeeld van een alt-text:
 Een makkelijke manier om de gebruiksvriendelijkheid van je website te verhogen is door de minimale "target size" te hanteren. Een target kan alles zijn waar een gebruiker op poogt te klikken, bijvoorbeeld een button of een link. De minimale size van dit element dient **24 × 24 pixels** te zijn. Gebruikers die moeite hebben met hun motoriek hebben hier profijt van, maar denk ook aan touchscreens.
 ### Kleurgebruik
 Zorg ervoor dat kleur niet het enige visuele middel is om informatie over te brengen, een actie aan te geven, tot een reactie op te roepen of een visueel element te onderscheiden. Niet iedereen kan alle kleuren onderscheiden of kleurcontrast even goed opmerken.
-## Tools
-
-### Axe DevTools
-Axe DevTools is een browserplugin die voor zowel Chrome als Firefox beschikbaar is. Meer informatie over de plugin vind je hier:
-[Axe DevTools](https://www.deque.com/axe/devtools)
-
-### Wave
-Wave is een online tool die websites kan scannen op toegankelijkheidsproblemen:
-[Wave](https://wave.webaim.org/)
-
-### CI/CD
-#### Playwright
-Het end-to-end testing framework Playwright kan gebruikt worden om accessibility problemen op te sporen. Een link naar de documentatie vind je hier:
-
-[Playwright: accessibility testing](https://playwright.dev/docs/accessibility-testing)
 
 ## [NL Design System](https://community.developer.overheid.nl/docs?topic=591)
 NL Design System is een community die zich bezighoudt met het gezamenlijk ontwikkelen van components met een hele hoge kwaliteitsstandaard als het gaat om toegankelijkheid. Het kan dus strategisch slim zijn om NL Design System te gaan gebruiken in jouw project, omdat je dan toegang hebt tot een hele rits aan componenten waarvan de toegankelijkheid al gewaarborgd is.

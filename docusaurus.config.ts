@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Developer Overheid NL',
   tagline: 'Developer Portal van de Nederlandse Overheid',
-  favicon: 'img/favicon.ico',
+  favicon: 'favicon.ico',
 
   // Set the production url of your site here
   url: 'https://don.apps.digilab.network',
@@ -56,7 +56,7 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
         },
         pages: {
-          
+
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -107,11 +107,8 @@ const config: Config = {
         // },
         { to: '/blog', label: 'Blog', position: 'right' },
         { href: 'https://community.developer.overheid.nl', label: 'Community', position: 'right' },
-        {
-          href: 'https://github.com/developer-overheid-nl',
-          label: 'GitHub',
-          position: 'right',
-        },
+        { href: 'https://developer.overheid.nl/apis', label: 'API Catalogus', position: 'right' },
+        { href: 'https://developer.overheid.nl/apis', label: 'Open Source Catalogus', position: 'right' },
       ],
     },
     footer: {

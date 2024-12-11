@@ -3,6 +3,6 @@ docusaurus:
   permalink: '/api'
   description: 'API'
 OpenAPISpec:
-  label: 'Open API Specification'
+  label: 'OpenAPI Specification'
   permalink: '/oas'
-  description: 'Open API Specification related docs'
+  description: 'OpenAPI Specification related docs'

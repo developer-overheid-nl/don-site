@@ -2,7 +2,7 @@
 tags:
   - 'open-api-spec'
   - 'API'
-title: 'Open API Spec Generator'
+title: 'OpenAPI Spec Generator'
 ---
 
 

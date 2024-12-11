@@ -7,7 +7,7 @@ title: 'Bouw een API'
 Hier leggen we uit welke stappen je kunt doorlopen om snel en efficient een nieuwe REST API te ontwikkelen. We gaan hierbij uit van een *design first* aanpak, dus we starten met het API design.
 
 ## 1. Genereer een OpenAPI Specification (OAS)
-Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [Open API Specification Generator](https://community.developer.overheid.nl/docs?topic=189) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](https://community.developer.overheid.nl/docs?topic=183) voldoet.
+Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [OpenAPI Specification Generator](https://community.developer.overheid.nl/docs?topic=189) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](https://community.developer.overheid.nl/docs?topic=183) voldoet.
 
 ## 2. Pas de OAS aan naar jouw specifieke usecase
 De template die zojuit gegenereerd is, is nog niet compleet. Specifieke responses en requests ontbreken nog, dus het is noodzakelijk om de OAS verder af te maken. Om te zorgen dat het design niet afwijkt van de REST API Design Rules, kun je de [ADR Linter](https://community.developer.overheid.nl/docs?topic=182) gebruiken.
