@@ -13,6 +13,10 @@ Deze standaard is [verplicht voor alle websites](https://www.forumstandaardisati
 
 :::
 
+:::info 
+BLABLA
+:::
+
 Dit artikel heeft als doel om developers ondersteuning te bieden bij het implementeren van de standaard [Digitoegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) zoals vastgesteld door het Forum Standaardisatie.
 
 Sinds 1 juli 2018 zijn overheidsorganisaties verplicht [zich te houden](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) aan de [WCAG 2.1](https://www.w3.org/TR/WCAG21/) richtlijnen. Dit om te zorgen dat zoveel mogelijk Nederlandse burgers, ook mensen met een beperking gebruik kunnen maken van overheidsdiensten.
