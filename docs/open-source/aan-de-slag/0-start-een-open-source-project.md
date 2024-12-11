@@ -83,20 +83,20 @@ is ook een goede bron van inspiratie.
 1. Verwijder kritische afhankelijkheden met niet-publieke componenten.
 2. Zorg voor een goede README.md met use-case voorbeelden. Zie [Make a
    Readme.com](https://www.makeareadme.com/)
-3. Zorg voor een goede [CONTRIBUTING.md](../nieuw-project/CONTRIBUTING.md).
-4. Zorg voor een [CODE_OF_CONDUCT.md](../nieuw-project/CODE_OF_CONDUCT.md).
-5. Zorg voor een SUPPORT.md. Zie ons [eigen voorbeeld](../community/SUPPORT.md)
+3. Zorg voor een goede [CONTRIBUTING.md](../standaarden/contributing-md.md).
+4. Zorg voor een [CODE_OF_CONDUCT.md](../standaarden/code-of-conduct-md.md).
+5. Zorg voor een SUPPORT.md. Zie ons [eigen voorbeeld](../standaarden/support-md.md)
 6. Verwijder interne opmerkingen en referenties
 7. Zorg voor voldoende code kwaliteit
 8. Zorg ervoor dat coding style is consistent
 9. Update de copyright notities in de source code files
 10. Voeg een licentie notitie in de source code files
 11. Voeg voor een kopie licentie tekst (volgt uit [stap 3](#stap-3-juridische-beoordeling)) toe aan
-    de root directory (LICENSE). Zie ons [eigen voorbeeld](../community/LICENSE.md)
+    de root directory (LICENSE). Zie ons [eigen voorbeeld](../standaarden/license.md)
 
 ## Stap 5: Governance en processen
 
-1. Zorg voor een [PROJECT_GOVERNANCE.md](../nieuw-project/PROJECT_GOVERNANCE.md) waarin de
+1. Zorg voor een [PROJECT_GOVERNANCE.md](../standarden/PROJECT_GOVERNANCE.md) waarin de
    governance structuur beschreven is.
 2. Bepaal wat de roadmap wordt
 3. Zorg voor een code repository, bug reporting en code testing infrastructuur die toegankelijk is
