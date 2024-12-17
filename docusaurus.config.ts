@@ -101,6 +101,12 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
+          sidebarId: 'front-end',
+          position: 'left',
+          label: 'Front-end',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'overig',
           position: 'left',
           label: 'Overig',
