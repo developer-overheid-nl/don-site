@@ -4,7 +4,6 @@ import MDXComponents from '@theme-original/MDXComponents';
 import {
     Link,
     Icon,
-    IconArrowRight
 } from '@rijkshuisstijl-community/components-react';
 
 export default {
@@ -14,5 +13,4 @@ export default {
     // `Highlight` will receive all props that were passed to `<Highlight>` in MDX
     Link,
     Icon,
-    IconArrowRight
 };

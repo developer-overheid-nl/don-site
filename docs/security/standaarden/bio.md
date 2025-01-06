@@ -1,10 +1,7 @@
 ---
 tags:
-  - "bio"
   - "security"
-  - "risicomanagement"
   - "ciso"
-  - "iso27001"
   - "security-by-design"
 ---
 

@@ -1,9 +1,10 @@
 ---
 tags:
-  - 'api'
-  - 'api-design-rules'
-  - 'rest'
+  - "api"
+  - "adr"
+  - "rest"
 ---
+
 # REST API Design Rules
 
 :::info[Verplichte standaard]

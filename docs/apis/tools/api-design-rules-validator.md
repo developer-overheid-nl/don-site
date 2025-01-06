@@ -1,9 +1,9 @@
 ---
 tags:
-  - 'api-design-rules'
-  - 'API'
-  - 'cli'
-title: 'API Design Rules Validator'
+  - "adr"
+  - "api"
+  - "cli"
+title: "API Design Rules Validator"
 ---
 
 De API Design Rules (ADR) Validator is een command line interface die gebruikt kan worden om te valideren of een API zicht gedraagt conform deze delen van de [NL API Strategie](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Inleiding/):
@@ -19,5 +19,5 @@ In de readme van de [ADR Validator repository](https://gitlab.com/commonground/d
 
 Het is mogelijk om de ADR validator toe te voegen aan je Continuous Integration (CI) pipeline om je API automatisch elke keer te valideren als deze wordt uitgerold. Hiervoor dien je op twee plekken de build-step toe te voegen. Voorbeelden vind je hier:
 
-- [DockerFile](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/Dockerfile?ref_type=heads )
+- [DockerFile](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/Dockerfile?ref_type=heads)
 - [.gitlab-ci.yml](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/.gitlab-ci.yml?ref_type=heads)

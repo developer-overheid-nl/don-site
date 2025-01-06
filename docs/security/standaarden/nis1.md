@@ -1,10 +1,9 @@
 ---
 tags:
   - "security"
-  - "risk-management"
   - "ciso"
   - "security-by-design"
-  - "europe"
+  - "eu"
 title: "NIS1"
 ---
 

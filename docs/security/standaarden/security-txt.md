@@ -1,7 +1,7 @@
 ---
 tags:
-  - 'security'
-    - "security-by-design"
+  - "security"
+  - "security-by-design"
 title: "Security.txt"
 ---
 

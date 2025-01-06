@@ -1,18 +1,13 @@
 ---
-tags:
-  - 'Digilab'
-  - 'FSC'
-title: 'FSC Policy Builder'
-organization: 'https://community.developer.overheid.nl/g/digilab-g'
+title: "FSC Policy Builder"
+organization: "https://community.developer.overheid.nl/g/digilab-g"
 ---
 
 ![Sreenshot FSC Policy Builder](./img/digilab_1.png)
 
 Overheidsorganisaties delen regelmatig gegevens met andere (overheids)organisaties. [Federatieve Service Connectivity (FSC)](https://nlx.io/) is een standaard (in wording d.d. jun 2024) voor veilige digitale gegevensuitwisseling, ontwikkeld door de overheid. Vaak is het echter wenselijk om deze gegevensuitwisseling te beperken door bepaalde regels, zogenaamde policies. Digilab heeft een tool ontwikkeld om het maken en beheren van zulke policies eenvoudiger te maken.
 
-FSC zorgt voor de *autorisatie* van de vragende partij: een verzoek wordt wel of niet doorgelaten. Daarnaast is er vaak sprake van *authenticatie*: de vragende gebruiker of partij wordt gecontroleerd op bevoegdheden om de data te mogen inzien.
-
-
+FSC zorgt voor de _autorisatie_ van de vragende partij: een verzoek wordt wel of niet doorgelaten. Daarnaast is er vaak sprake van _authenticatie_: de vragende gebruiker of partij wordt gecontroleerd op bevoegdheden om de data te mogen inzien.
 
 ## Soorten authenticatie
 
@@ -70,10 +65,9 @@ Een voorbeeld van bijbehorende data is te zien in de volgende screenshot:
 
 ![Sreenshot FSC Policy Builder](./img/digilab_3.png)
 
-
 Het voordeel van de splitsing tussen policies en data is dat de data kan worden gewijzigd zonder dat de policies zelf hoeven te worden aangepast. Bijvoorbeeld kan een gebruiker andere rechten of eigenschappen krijgen, zonder dat de policies daarvoor hoeven te worden aangepast.
 
-De policies kunnen eventueel worden getoetst aan verschillende invoer met behulp van een zogenaamde *playground* die onderdeel is van de policy builder.
+De policies kunnen eventueel worden getoetst aan verschillende invoer met behulp van een zogenaamde _playground_ die onderdeel is van de policy builder.
 
 ## Policies implementeren
 

@@ -1,7 +1,6 @@
 ---
 tags:
   - "security"
-  - "SecurityByDesign"
 title: "Digitale Overheid"
 ---
 

@@ -1,8 +1,8 @@
 ---
 tags:
-  - 'api-design-rules'
-  - 'API'
-title: 'API Design Rules Linter'
+  - "adr"
+  - "api"
+title: "API Design Rules Linter"
 ---
 
 api-design-rulesDe ADR Linter controleert of een OpenAPI Specificatie compliant is met de API Design Rules. De linter is gebaseerd op het Open Source project [Spectral](https://github.com/stoplightio/spectral).
@@ -17,7 +17,7 @@ $ spectral lint -r https://developer.overheid.nl/static/adr/ruleset.yaml $OAS_UR
 
 ## IDE
 
-Sommige IDEs ondersteunen Spectral via extensies of plugins. Eén daarvan is VSCode. Hieronder staat beschreven hoe je de ADR Linter kunt gebruiken met  [de officiele Spectral extensie voor Visual Studio Code](https://github.com/stoplightio/vscode-spectral):
+Sommige IDEs ondersteunen Spectral via extensies of plugins. Eén daarvan is VSCode. Hieronder staat beschreven hoe je de ADR Linter kunt gebruiken met [de officiele Spectral extensie voor Visual Studio Code](https://github.com/stoplightio/vscode-spectral):
 
 ```bash
 # Install the extension from the vscode marketplace
