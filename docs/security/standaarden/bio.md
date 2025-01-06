@@ -3,11 +3,14 @@ tags:
   - "bio"
   - "security"
   - "risicomanagement"
-  - "CISO"
-  - "ISO27001"
-  - "SecurityByDesign"
-title: "BIO"
+  - "ciso"
+  - "iso27001"
+  - "security-by-design"
 ---
+
+# BIO
+
+### Kader voor informatiebeveiling binnen de Nederlandse overheid
 
 De Baseline Informatiebeveiliging Overheid (BIO) is een kader dat eisen en richtlijnen biedt voor informatiebeveiliging binnen de Nederlandse overheid. Het dient als een gemeenschappelijke standaard die overheidsorganisaties helpt om de beveiliging van informatie en IT-systemen op orde te brengen en te houden.
 
