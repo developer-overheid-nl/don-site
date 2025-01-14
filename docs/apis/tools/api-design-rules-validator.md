@@ -3,6 +3,7 @@ tags:
   - "adr"
   - "api"
   - "cli"
+  - "validator"
 title: "API Design Rules Validator"
 ---
 

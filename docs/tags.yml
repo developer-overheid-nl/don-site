@@ -78,3 +78,15 @@ eu:
   label: "Europe"
   permalink: "/eu"
   description: "Europa."
+ci/cd:
+  label: "CI/CD"
+  permalink: "/ci-cd"
+  description: "CI/CD."
+go:
+  label: "Golang"
+  permalink: "/golang"
+  description: "The programming language Go (Golang)."
+license:
+  label: "License"
+  permalink: "/license"
+  description: "Software licenses."

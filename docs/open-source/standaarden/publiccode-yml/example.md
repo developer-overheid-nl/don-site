@@ -1,8 +1,9 @@
 ---
-title: publiccode.yml
+tags:
+  - "open-source"
+  - "publiccode-yml"
+title: "Example"
 ---
-
-Voorbeeld van [Developer Overheid NL](https://developer.overheid.nl):
 
 ```yaml showLineNumbers title="./publiccode.yml"
 # This repository adheres to the publiccode.yml standard by including this
@@ -134,7 +135,4 @@ maintenance:
       email: tom@ootes.io
       affiliation: Geonovum
       phone: "+31623447230"
-    - name: Sam Wind
-      email: sam.x.wind@pm.me
-      affiliation: Geonovum
 ```

@@ -1,65 +1,63 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Developer Overheid NL',
-  tagline: 'Developer Portal van de Nederlandse Overheid',
-  favicon: 'favicon.ico',
+  title: "Developer Overheid NL",
+  tagline: "Developer Portal van de Nederlandse Overheid",
+  favicon: "favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://don.apps.digilab.network',
+  url: "https://don.apps.digilab.network",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'nl',
-    locales: ['nl'],
+    defaultLocale: "nl",
+    locales: ["nl"],
   },
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ["@docusaurus/theme-mermaid"],
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/',
+            "https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/",
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/',
+            "https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/",
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
-        pages: {
-
-        },
+        pages: {},
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -67,95 +65,101 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: 'Developer Overheid NL',
+      title: "Developer Overheid NL",
       logo: {
-        alt: 'Developer Overheid NL',
-        src: 'img/logo.svg',
+        alt: "Developer Overheid NL",
+        src: "img/logo.svg",
       },
       items: [
         {
-          type: 'docSidebar',
-          position: 'left',
-          sidebarId: 'apis',
-          label: 'REST API\'s',
+          type: "docSidebar",
+          position: "left",
+          sidebarId: "apis",
+          label: "REST API's",
         },
         {
-          type: 'docSidebar',
-          position: 'left',
-          sidebarId: 'openSource',
-          label: 'Open Source',
+          type: "docSidebar",
+          position: "left",
+          sidebarId: "openSource",
+          label: "Open Source",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'security',
-          position: 'left',
-          label: 'Security',
+          type: "docSidebar",
+          sidebarId: "security",
+          position: "left",
+          label: "Security",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'toegankelijkheid',
-          position: 'left',
-          label: 'Toegankelijkheid',
+          type: "docSidebar",
+          sidebarId: "front-end",
+          position: "left",
+          label: "Front-end",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'front-end',
-          position: 'left',
-          label: 'Front-end',
+          type: "docSidebar",
+          sidebarId: "overig",
+          position: "left",
+          label: "Overig",
+        },
+        { to: "/blog", label: "Blog", position: "right" },
+        {
+          href: "https://community.developer.overheid.nl",
+          label: "Community",
+          position: "right",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'overig',
-          position: 'left',
-          label: 'Overig',
+          href: "https://developer.overheid.nl/apis",
+          label: "API Catalogus",
+          position: "right",
         },
-        { to: '/blog', label: 'Blog', position: 'right' },
-        { href: 'https://community.developer.overheid.nl', label: 'Community', position: 'right' },
-        { href: 'https://developer.overheid.nl/apis', label: 'API Catalogus', position: 'right' },
-        { href: 'https://developer.overheid.nl/apis', label: 'Open Source Catalogus', position: 'right' },
+        {
+          href: "https://developer.overheid.nl/apis",
+          label: "Open Source Catalogus",
+          position: "right",
+        },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Discourse',
-              href: 'https://community.developer.overheid.nl',
+              label: "Discourse",
+              href: "https://community.developer.overheid.nl",
             },
             {
-              label: 'Slack',
-              href: 'https://codefornl.slack.com/archives/CFV4B3XE2',
+              label: "Slack",
+              href: "https://codefornl.slack.com/archives/CFV4B3XE2",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/developer-overheid-nl',
+              label: "GitHub",
+              href: "https://github.com/developer-overheid-nl",
             },
           ],
         },
         {
-          title: 'Overig',
+          title: "Overig",
           items: [
             {
-              label: 'Contact',
-              to: '/contact',
+              label: "Contact",
+              to: "/contact",
             },
             {
-              label: 'Privacyverklaring',
-              to: '/privacy',
+              label: "Privacyverklaring",
+              to: "/privacy",
             },
             {
-              label: 'Toegankelijkheidsverklaring',
-              href: 'https://www.toegankelijkheidsverklaring.nl/register/17963',
+              label: "Toegankelijkheidsverklaring",
+              href: "https://www.toegankelijkheidsverklaring.nl/register/17963",
             },
             {
-              label: 'Sitearchief',
-              href: 'https://minbzk.sitearchief.nl/?subsite=developeroverheid',
-            }
+              label: "Sitearchief",
+              href: "https://minbzk.sitearchief.nl/?subsite=developeroverheid",
+            },
           ],
         },
       ],

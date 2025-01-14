@@ -3,6 +3,7 @@ tags:
   - "open-source"
   - "front-end"
   - "accessibility"
+  - "nl-design-system"
 title: "NL Design System"
 ---
 
@@ -43,9 +44,7 @@ Je kunt makkelijk beginnen met het bouwen van een eigen thema op basis van de [e
 - Twee example components
 - Een opzet met Storybook (componenten-catalogus)
 
-[wrap="button"]
 **[Example Repo van NL Design System »](https://github.com/nl-design-system/example)**
-[/wrap]
 
 ## Aan de slag met components zonder theme?
 

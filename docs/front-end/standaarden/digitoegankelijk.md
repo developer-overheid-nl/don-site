@@ -43,7 +43,7 @@ De WCAG 2.1 dient toegepast te worden op:
 - Android/ iOS of andere mobiele apps
 - Desktop apps
 
-## De WCAG-niveaus van naleving (A, AA, AAA)
+## Drie WCAG-niveaus van naleving (A, AA, AAA)
 
 De in totaal 78 successcriteria die zijn opgenomen in WCAG 2.1 zijn allemaal verbonden aan een conformiteits-niveau. De drie niveaus die WCAG onderscheidt, zijn:
 
@@ -61,7 +61,7 @@ De in totaal 78 successcriteria die zijn opgenomen in WCAG 2.1 zijn allemaal ver
 
 Een goede stap richting een toegankelijke website is het correct toepassen van HTML-syntax. Door HTML-elementen te gebruiken waarvoor ze bedoeld zijn, wordt je webpagina automatisch beter leesbaar voor screenreaders. Bovendien maak je je eigen code leesbaarder en profiteer je van de standaardfunctionaliteiten die HTML biedt.
 
-Wat je misschien niet direct zou verwachten, is dat [HTML](https://www.forumstandaardisatie.nl/open-standaarden/html) zelf ook een standaard is, die vastgelegd is door forum standaardisatie. De HTML-implementatie die hier wordt gevolgd, is vastgelegd door [WHATWG](https://whatwg.org/). Hier vind je meer informatie over het correct gebruik van HTML-elementen:
+Wat je misschien niet direct zou verwachten, is dat HTML zelf ook een standaard is. Forum Standaardisatie [beveelt de Nederlandse overheid aan](https://www.forumstandaardisatie.nl/open-standaarden/html) om de HTML standaard te gebruiken zoals die door de standaardisatie-organisatie WHATWG is vastgelegd.
 
 [WHATWG: The elements of HTML](https://html.spec.whatwg.org/multipage/#toc-semantics)
 
