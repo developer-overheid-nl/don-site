@@ -2,7 +2,7 @@
 tags:
   - "open-source"
   - "publiccode-yml"
-title: "Example"
+title: "Publiccode.yml example"
 ---
 
 ```yaml showLineNumbers title="./publiccode.yml"

@@ -24,3 +24,4 @@ De EUPL (European Union Public License) is een open source-licentie ontwikkeld d
 
 - [**Europese Commissie:** What is the EUPL?](https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-strategy-history/european-union-public-licence_en)
 - [**Standaard voor Publieke Code:** Publiceer met een open licentie](https://codefor.nl/community-translations-standard/nl/criteria/publish-with-an-open-license.html)
+- [**Opensourcewerken.nl: **Vanaf nu wettelijke verplichting Europees gestandaardiseerde opensource-licentie](https://opensourcewerken.nl/blog/view/e07add3e-075e-47cd-ab08-63608b914514/vanaf-nu-wettelijke-verplichting-europees-gestandaardiseerde-opensourcelicentie)

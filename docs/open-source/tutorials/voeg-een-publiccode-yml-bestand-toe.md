@@ -9,7 +9,7 @@ title: "Voeg een publiccode.yml toe"
 sidebar_position: 1
 ---
 
-# Voeg een publiccode.yml toe aan je project met VSCode
+# Voeg een publiccode.yml toe en valideer deze met VSCode
 
 :::tip[publiccode.yml editor beschikbaar]
 
@@ -29,7 +29,7 @@ De belangrijkste reden om een publiccode.yml-bestand aan je project toe te voege
 
 Door het publiccode.yml bestand in te vullen voorzie je je project van machine-leesbare metadata. Deze meta-data kan ingelezen worden door Open Source Software Catalogi om jou code zo nog beter vindbaar te maken.
 
-Voor meer informatie, ga naar de [pagina over de publiccode.yml standaard](../standaarden/publiccode-yml.md).
+Voor meer informatie, ga naar de [pagina over de publiccode.yml standaard](../standaarden/publiccode-yml).
 
 ## Vereisten
 
@@ -37,7 +37,7 @@ Voor meer informatie, ga naar de [pagina over de publiccode.yml standaard](../st
 
 ### Stap 1 - Voeg een publiccode.yml bestand toe
 
-Voeg een bestand toe aan de root van je project met de filename: `publiccode.yml`.
+Open je project in VSCode en voeg een bestand toe aan de root van je project met de filename: `publiccode.yml`.
 
 ### Stap 2 - Kopieer ons voorbeeld
 
