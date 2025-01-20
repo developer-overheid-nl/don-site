@@ -6,15 +6,15 @@ tags:
   - "html"
 ---
 
-# Digitoegankelijk
+# DigiToegankelijk
 
 :::info[Verplichte standaard]
 
-Deze standaard is [verplicht voor alle websites](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) van de overheid.
+Deze standaard is [verplicht voor alle websites](https://www.digitoegankelijk.nl/wetgeving) van de overheid.
 
 :::
 
-Dit artikel heeft als doel om developers ondersteuning te bieden bij het implementeren van de standaard [Digitoegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) zoals vastgesteld door het Forum Standaardisatie.
+Dit artikel heeft als doel om developers ondersteuning te bieden bij het implementeren van de standaard [DigiToegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) zoals vastgesteld door het Forum Standaardisatie.
 
 Sinds 1 juli 2018 zijn overheidsorganisaties verplicht [zich te houden](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) aan de [WCAG 2.1](https://www.w3.org/TR/WCAG21/) richtlijnen. Dit om te zorgen dat zoveel mogelijk Nederlandse burgers, ook mensen met een beperking gebruik kunnen maken van overheidsdiensten.
 
@@ -41,13 +41,13 @@ De WCAG 2.1 dient toegepast te worden op:
 - Single Page Applications (HTML, JS)
 - Documenten (PDF)
 - Android/ iOS of andere mobiele apps
-- Desktop apps
 
 ## Drie WCAG-niveaus van naleving (A, AA, AAA)
 
 De in totaal 78 successcriteria die zijn opgenomen in WCAG 2.1 zijn allemaal verbonden aan een conformiteits-niveau. De drie niveaus die WCAG onderscheidt, zijn:
 
 - Niveau A (laagste niveau)
+  - Makkelijkst toe te passen, meeste impact voor de gebruiker
   - Bevat 30 succescriteria van niveau A
   - Deze criteria zijn het gemakkelijkst om aan te voldoen en hebben minimale impact op de structuur en vormgeving van een website.
 - Niveau AA
@@ -90,7 +90,7 @@ Een makkelijke manier om de gebruiksvriendelijkheid van je website te verhogen i
 
 Zorg ervoor dat kleur niet het enige visuele middel is om informatie over te brengen, een actie aan te geven, tot een reactie op te roepen of een visueel element te onderscheiden. Niet iedereen kan alle kleuren onderscheiden of kleurcontrast even goed opmerken.
 
-## [NL Design System](https://community.developer.overheid.nl/docs?topic=591)
+## NL Design System
 
 NL Design System is een community die zich bezighoudt met het gezamenlijk ontwikkelen van components met een hele hoge kwaliteitsstandaard als het gaat om toegankelijkheid. Het kan dus strategisch slim zijn om NL Design System te gaan gebruiken in jouw project, omdat je dan toegang hebt tot een hele rits aan componenten waarvan de toegankelijkheid al gewaarborgd is.
 
@@ -108,9 +108,8 @@ _Let op: het werk van NL Design System is work in progress, nog niet alle tekstj
 
 ## Links
 
-[Forum Standaardisatie: digitoegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21)<br/>
-[Digitoegankelijk.nl](https://www.digitoegankelijk.nl/)<br/>
-[Digitaaltoegankelijk.pleio.nl](https://digitaaltoegankelijk.pleio.nl/)<br/>
+[Forum Standaardisatie: DigiToegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21)<br/>
+[DigiToegankelijk.nl](https://www.digitoegankelijk.nl/)<br/>
 [Gebruikercentraal.nl](https://www.gebruikercentraal.nl/)<br/>
 
 ## Tools
@@ -127,3 +126,7 @@ Het end-to-end testing framework Playwright kan gebruikt worden om accessibility
 ### Wave
 
 Wave is een online tool die websites kan scannen op toegankelijkheidsproblemen: [Wave](https://wave.webaim.org/)
+
+## Externe links
+
+- [DigitaalToegankelijk.nl over de European Accessibility Act (2025)](https://digitaaltoegankelijk.nl/nieuws/european-accessibility-act-2025/)

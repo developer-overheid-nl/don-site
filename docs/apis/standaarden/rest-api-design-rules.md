@@ -13,7 +13,7 @@ Deze standaard is [verplicht voor REST API's](https://www.forumstandaardisatie.n
 
 :::
 
-De REST API Design Rules (ADR) schrijven voor waar een REST API van de overheid aan moet voldoen. Een aantal van deze regels is tijdens het API design te testen met de [ADR Linter](../tools/api-design-rules-linter.md). Als een API eenmaal in productie is kan de [ADR Validator](https://community.developer.overheid.nl/t/api-design-rules-validator-cli/188) gebruikt worden om bepaalde regels automatisch te valideren.
+De REST API Design Rules (ADR) schrijven voor waar een REST API van de overheid aan moet voldoen. Een aantal van deze regels is tijdens het API design te testen met de [ADR Linter](../tools/api-design-rules-linter.md). Als een API eenmaal in productie is kan de [ADR Validator](../tools/api-design-rules-validator) gebruikt worden om bepaalde regels automatisch te valideren.
 
 Het actuele overzicht van de REST API Design Rules vind je hier: [API Design Rules](https://logius-standaarden.github.io/API-Design-Rules/#normative-design-rules).
 

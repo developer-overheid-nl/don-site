@@ -9,11 +9,11 @@ Hier leggen we uit welke stappen je kunt doorlopen om snel en efficient een nieu
 
 ## 1. Genereer een OpenAPI Specification (OAS)
 
-Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [OpenAPI Specification Generator](https://community.developer.overheid.nl/docs?topic=189) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](https://community.developer.overheid.nl/docs?topic=183) voldoet.
+Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [OpenAPI Specification Generator](https://developer.overheid.nl/tools/oas-generator) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/#list-of-technical-rules) voldoet.
 
 ## 2. Pas de OAS aan naar jouw specifieke usecase
 
-De template die zojuit gegenereerd is, is nog niet compleet. Specifieke responses en requests ontbreken nog, dus het is noodzakelijk om de OAS verder af te maken. Om te zorgen dat het design niet afwijkt van de REST API Design Rules, kun je de [ADR Linter](https://community.developer.overheid.nl/docs?topic=182) gebruiken.
+De template die zojuit gegenereerd is, is nog niet compleet. Specifieke responses en requests ontbreken nog, dus het is noodzakelijk om de OAS verder af te maken. Om te zorgen dat het design niet afwijkt van de REST API Design Rules, kun je de [ADR Linter](../tools/api-design-rules-linter) gebruiken.
 
 ## 3. Feedback verzamelen en verwerken
 
@@ -29,7 +29,7 @@ Zodra het API Design final is, kan de ontwikkeling van de API beginnen. Afhankel
 
 ### Publiceer de endpoints
 
-Een stapje verder dan een mocking service is het daadwerkelijk publiceren van de endpoints. Hoewel misschien nog geen business logic aanwezig is, kan hiermee de verbinding en eventuele authenticatie getest worden. Met de [ADR Validator](https://community.developer.overheid.nl/docs?topic=188) kan zo ook al gevalideerd worden of er issues zijn met bepaalde API Design Rules en security.
+Een stapje verder dan een mocking service is het daadwerkelijk publiceren van de endpoints. Hoewel misschien nog geen business logic aanwezig is, kan hiermee de verbinding en eventuele authenticatie getest worden. Met de [ADR Validator](../tools/api-design-rules-validator) kan zo ook al gevalideerd worden of er issues zijn met bepaalde API Design Rules en security.
 
 ### Publiceer de business logic
 
