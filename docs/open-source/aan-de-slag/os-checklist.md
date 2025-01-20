@@ -59,20 +59,20 @@ is ook een goede bron van inspiratie.
 1. Verwijder kritische afhankelijkheden met niet-publieke componenten.
 2. Zorg voor een goede README.md met use-case voorbeelden. Zie [Make a
    Readme.com](https://www.makeareadme.com/)
-3. Zorg voor een goede [CONTRIBUTING.md](../standaarden/contributing-md.md).
-4. Zorg voor een [CODE_OF_CONDUCT.md](../standaarden/code-of-conduct-md.md).
-5. Zorg voor een SUPPORT.md. Zie ons [eigen voorbeeld](../standaarden/support-md.md)
+3. Zorg voor een goede `CONTRIBUTING.md`.
+4. Zorg voor een CODE_OF_CONDUCT.md.
+5. Zorg voor een SUPPORT.md.
 6. Verwijder interne opmerkingen en referenties
 7. Zorg voor voldoende code kwaliteit
 8. Zorg ervoor dat coding style is consistent
 9. Update de copyright notities in de source code files
 10. Voeg een licentie notitie in de source code files
 11. Voeg voor een kopie licentie tekst (volgt uit [stap 3](#stap-3-juridische-beoordeling)) toe aan
-    de root directory (LICENSE). Zie ons [eigen voorbeeld](../standaarden/license.md)
+    de root directory (LICENSE).
 
 ## Stap 5: Governance en processen
 
-1. Zorg voor een [PROJECT_GOVERNANCE.md](../standaarden/project-governance-md.md) waarin de
+1. Zorg voor een PROJECT_GOVERNANCE.md waarin de
    governance structuur beschreven is.
 2. Bepaal wat de roadmap wordt
 3. Zorg voor een code repository, bug reporting en code testing infrastructuur die toegankelijk is
@@ -82,7 +82,7 @@ is ook een goede bron van inspiratie.
 ## Stap 6: Launch en maintain
 
 1. Open het project en start met open source ontwikkel proces
-2. Zorg dat het gebruik van [Developer Certificate or Origin (DCO)](../standaarden/dco-md.md) wordt afgedwongen.
+2. Zorg dat het gebruik van Developer Certificate or Origin (DCO) wordt afgedwongen.
 3. Zorg er voor dat veranderingen aan de roadmap of governance helder gecommuniceerd worden.
 4. Volg best practices zoveel mogelijk & behaal [OpenSSF ( formerly CII ) Best Practices
    badge](https://bestpractices.coreinfrastructure.org/en)

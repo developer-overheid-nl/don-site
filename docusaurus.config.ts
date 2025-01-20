@@ -77,7 +77,7 @@ const config: Config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "apis",
-          label: "REST API's",
+          label: "API's",
         },
         {
           type: "docSidebar",
