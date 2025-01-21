@@ -5,8 +5,9 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Developer Overheid NL",
-  tagline: "Developer Portal van de Nederlandse Overheid",
+  title: "Developer Portal van de Nederlandse Overheid",
+  tagline:
+    "Eén centrale plek voor de developer die voor of met de overheid ontwikkelt ",
   favicon: "favicon.ico",
 
   // Set the production url of your site here
@@ -67,9 +68,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Developer Overheid NL",
+      title: "Developer Overheid",
       logo: {
-        alt: "Developer Overheid NL",
+        alt: "Developer Overheid",
         src: "img/logo.svg",
       },
       items: [

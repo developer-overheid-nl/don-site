@@ -8,8 +8,7 @@ title: "Quality Time"
 organization: "https://community.developer.overheid.nl/g/ictu"
 ---
 
-Dit artikel is geschreven door:<br/>
-**Frank Niessink**, Quality Manager bij ICTU
+Dit artikel is geschreven door **Frank Niessink**, Quality Manager bij ICTU
 
 :::info[tl;dr]
 Quality-time is een open source tool die je kan helpen de kwaliteit van je maatwerksoftware te bewaken en technical debt te managen.

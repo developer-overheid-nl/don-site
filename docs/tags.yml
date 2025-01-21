@@ -90,3 +90,7 @@ license:
   label: "License"
   permalink: "/license"
   description: "Software licenses."
+msa:
+  label: "Microservices Architectuur"
+  permalink: msa
+  description: "Microservices Architectuur"

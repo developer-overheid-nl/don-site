@@ -6,7 +6,7 @@ tags:
 
 # Een licentie kiezen
 
-Welke licentie je kiest voor je project heeft invloed op wat mensen uiteindelijk allemaal met jouw code mogen en kunnen.
+De keuze van een licentie voor je project bepaalt wat anderen met jouw code mogen en kunnen doen.
 
 ## Veelgebruikt in overheidsland: EUPL
 

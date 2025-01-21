@@ -2,7 +2,7 @@
 tags:
   - "api"
   - "msa"
-title: "Gebruik API's van de overheid"
+title: "Standaardisering door middel van een API referentie implementatie"
 ---
 
 In dit artikel leer je hoe je zelf deze API's kan gebruiken.
