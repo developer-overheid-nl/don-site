@@ -9,7 +9,7 @@ title: "NL Design System"
 
 > **NL Design System is een project dat specialisten van verschillende overheidsorganisaties laat samenwerken aan concrete oplossingen voor websites en applicaties. Denk bijvoorbeeld aan code, ontwerp en richtlijnen.**
 
-**[Direct naar NL Design System »](https://nldesignsystem.nl/)**
+**[Direct naar NL Design System](https://nldesignsystem.nl/)**
 
 Door organisatie-overstijgend samen te werken en de krachten te bundelen is het mogelijk om web-componenten te bouwen die **consistenter**, **gebruiksvriendelijker** en **toegankelijker** zijn.
 
