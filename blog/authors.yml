@@ -7,10 +7,9 @@ jfarla:
     linkedin: joostfarla
     github: joostfarla
 
-ootes:
+tomootes:
   name: Tom Ootes
   title: Developer Advocate - Developer Overheid NL
-  url: https://sebastienlorber.com
   image_url: https://github.com/tomootes.png
   page: true
   socials:
