@@ -17,9 +17,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Fonts */
-  --ifm-heading-font-family: 'FiraSans-Bold', sans-serif;
+  --ifm-heading-font-family: 'RijksoverheidSansWebText', sans-serif;
   --ifm-heading-font-weight: var(--rhc-font-size-heading-level-1);
-  --ifm-font-family-base: 'FiraSans-Regular', sans-serif;
+  --ifm-font-family-base: 'RijksoverheidSansWebText', sans-serif;
+  --ifm-heading-font-weight: 700;
   --ifm-link-color: rgb(1, 104, 155);
   --ifm-navbar-link-hover-color: rgb(1, 104, 155);
 
@@ -32,6 +33,26 @@
 .hero {
   background-color: #01689b;
 }
+
+.ro-header {
+  display: grid;
+  grid-template-columns: calc(50% - 25px) 50px calc(50% - 25px);
+  justify-content: space-between;
+}
+
+.ro-header__site-name {
+  font-size: 115%;
+  margin-block-start: 1.5rem;
+  margin-inline: 1rem;
+}
+
+.ro-header__site-logo {
+  height: 2rem;
+  margin-inline-end: 0.5rem;
+}
+
+/* .ro-header__ro-logo {
+} */
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -103,4 +124,94 @@
 
 .fira-sans-bold {
   font-family: "FiraSans-Bold", sans-serif;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: local("ROsanswebtextregular"), 
+    url("../fonts/ro/ROsanswebtextregular.woff") format("woff"), 
+    url("../fonts/ro/ROsanswebtextregular.eot") format("embedded-opentype"), 
+    url("../fonts/ro/ROsanswebtextregular.ttf") format("truetype");
+  font-family: "RijksoverheidSansWebText";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: local("ROsanswebtextbold"), 
+    url("../fonts/ro/ROsanswebtextbold.woff") format("woff"), 
+    url("../fonts/ro/ROsanswebtextbold.eot") format("embedded-opentype"), 
+    url("../fonts/ro/ROsanswebtextbold.ttf") format("truetype");
+  font-family: "RijksoverheidSansWebText";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  src: local("ROsanswebtextitalic"), 
+    url("../fonts/ro/ROsanswebtextitalic.woff") format("woff"), 
+    url("../fonts/ro/ROsanswebtextitalic.eot") format("embedded-opentype"), 
+    url("../fonts/ro/ROsanswebtextitalic.ttf") format("truetype");
+  font-family: "RijksoverheidSansWebText";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: local("ROserifwebregular"), 
+    url("../fonts/ro/ROserifwebregular.woff") format("woff"), 
+    url("../fonts/ro/ROserifwebregular.eot") format("embedded-opentype"), 
+    url("../fonts/ro/ROserifwebregular.ttf") format("truetype");
+  font-family: "RijksoverheidSerifWeb";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: local("ROserifwebbold"), 
+    url("../fonts/ro/ROserifwebbold.woff") format("woff"), 
+    url("../fonts/ro/ROserifwebbold.eot") format("embedded-opentype"), 
+    url("../fonts/ro/ROserifwebbold.ttf") format("truetype");
+  font-family: "RijksoverheidSerifWeb";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  src: local("ROserifwebitalic"), 
+    url("../fonts/ro/ROserifwebitalic.woff") format("woff"), 
+    url("../fonts/ro/ROserifwebitalic.eot") format("embedded-opentype"), 
+    url("../fonts/ro/ROserifwebitalic.ttf") format("truetype");
+  font-family: "RijksoverheidSerifWeb";
+}
+
+.ro-sans-regular {
+  font-family: "RijksoverheidSansWebText", sans-serif;
+  font-style: normal;
+}
+
+.ro-sans-bold {
+  font-family: "RijksoverheidSansWebText", sans-serif;
+  font-weight: 700;
+}
+
+.ro-sans-italic {
+  font-family: "RijksoverheidSansWebText", sans-serif;
+  font-style: italic;
+}
+
+.ro-serif-regular {
+  font-family: "RijksoverheidSerifWeb", serif;
+  font-style: normal;
+}
+
+.ro-serif-bold {
+  font-family: "RijksoverheidSerifWeb", serif;
+  font-weight: 700;
+}
+
+.ro-serif-italic {
+  font-family: "RijksoverheidSerifWeb", serif;
+  font-style: italic;
 }
