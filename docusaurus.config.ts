@@ -100,6 +100,12 @@ const config: Config = {
         },
         {
           type: "docSidebar",
+          sidebarId: "richtlijnen",
+          position: "left",
+          label: "Richtlijnen",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "overig",
           position: "left",
           label: "Overig",
