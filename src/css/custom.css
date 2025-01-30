@@ -51,8 +51,9 @@
   margin-inline-end: 0.5rem;
 }
 
-/* .ro-header__ro-logo {
-} */
+.ro-header__ro-logo {
+  display: contents;
+}
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {

@@ -1,57 +1,64 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import { Card } from "@rijkshuisstijl-community/components-react";
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  image?: string;
   description: JSX.Element;
+  link: string;
+  label?: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Onze community',
+    image: '/img/tekstballonnen-met-punten.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Ga in gesprek met andere developers en vind hier getting started guides, tutorials en tools.
       </>
     ),
+    link: 'https://community.developer.overheid.nl/',
+    label: 'Ga naar de community',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Vind een API',
+    image: '/img/ict.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Bekijk welke API's er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten.
       </>
     ),
+    link: '/apis',
+    label: 'Zoek API\'s',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Vind een repository',
+    image: '/img/computercode.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Vind bestaande repositories om bij aan te haken en ontdek wat er binnen welke organisatie beschikbaar is.
       </>
     ),
+    link: '/repositories',
+    label: 'Zoek repositories',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, image, description, link, label}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
+    <Card href={link} heading={title} description={description} imageSrc={image} linkLabel={label} />
+    // <div className={clsx('col col--4')}>
+    //   <div className="text--center">
+    //     <Svg className={styles.featureSvg} role="img" />
+    //   </div>
+    //   <div className="text--center padding-horiz--md">
+    //     <Heading as="h3">{title}</Heading>
+    //     <p>{description}</p>
+    //   </div>
+    // </div>
   );
 }
 
@@ -59,7 +66,7 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row row--align-stretch">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
