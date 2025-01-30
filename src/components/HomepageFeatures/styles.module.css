@@ -4,3 +4,8 @@
   padding: 2rem 0;
   width: 100%;
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
