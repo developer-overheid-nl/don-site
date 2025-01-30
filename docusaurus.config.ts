@@ -96,6 +96,12 @@ const config: Config = {
         },
         {
           type: "docSidebar",
+          sidebarId: "richtlijnen",
+          position: "left",
+          label: "Richtlijnen",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "overig",
           position: "left",
           label: "Overig",
@@ -165,6 +171,12 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+
   } satisfies Preset.ThemeConfig,
 };
 

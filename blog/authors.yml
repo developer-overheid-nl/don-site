@@ -1,23 +1,13 @@
-jfarla:
+joostfarla:
   name: Joost Farla
-  title: Implementatie ondersteuner - Data bij de Bron
+  title: Implementatie ondersteuner - Developer Overheid NL
   image_url: https://github.com/joostfarla.png
   page: true
   socials:
     linkedin: joostfarla
     github: joostfarla
 
-ootes:
-  name: Tom Ootes
-  title: Developer Advocate - Developer Overheid NL
-  url: https://sebastienlorber.com
-  image_url: https://github.com/tomootes.png
-  page: true
-  socials:
-    linkedin: tootes
-    github: tomootes
-
-dvh:
+dimitrivanhees:
   name: Dimitri van Hees
   title: Product Owner - Developer Overheid NL
   url: https://github.com/dvh
@@ -26,3 +16,52 @@ dvh:
   socials:
     linkedin: dimitrivanhees
     github: dvh
+
+matthijshovestad:
+  name: Matthijs Hovestad
+  title: Senior Backend Developer - Developer Overheid NL
+  url: https://github.com/pasibun
+  image_url: https://github.com/pasibun.png
+  page: true
+  socials:
+    linkedin: matthijs-hovestad-a123898b
+    github: pasibun
+
+tomootes:
+  name: Tom Ootes
+  title: Developer Advocate - Developer Overheid NL
+  image_url: https://github.com/tomootes.png
+  page: true
+  socials:
+    linkedin: tootes
+    github: tomootes
+
+martinvanderplas:
+  name: Martin van der Plas
+  title: Implementatie ondersteuner - Developer Overheid NL
+  url: https://github.com/mrtn78
+  image_url: https://github.com/mrtn78.png
+  page: true
+  socials:
+    linkedin: martinvanderplas
+    github: mrtn78
+
+frankterpstra:
+  name: Frank Terpstra
+  title: Implementatie ondersteuner - Developer Overheid NL
+  url: https://github.com/fterpstra
+  image_url: https://github.com/fterpstra.png
+  page: true
+  socials:
+    linkedin: frank-terpstra-1bb5096
+    github: fterpstra 
+
+jaapheinwester:
+  name: Jaap-Hein Wester
+  title: Senior Frontend Developer - Developer Overheid NL
+  url: https://github.com/MrSkippy
+  image_url: https://github.com/MrSkippy.png
+  page: true
+  socials:
+    linkedin: jaapheinwester
+    github: MrSkippy 
