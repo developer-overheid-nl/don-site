@@ -3,6 +3,7 @@
 # title: Emrex
 authors: [joostfarla]
 # tags: [hola, docusaurus]
+date: 2024-12-10
 ---
 # EMREX: Europese standaard voor gegevensuitwisseling in het onderwijs
 

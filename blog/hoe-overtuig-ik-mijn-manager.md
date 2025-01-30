@@ -2,6 +2,7 @@
 title: "Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?"
 authors: [tomootes]
 tags: [open-source]
+date: 2025-01-30
 ---
 
 ## Open Source: steeds belangrijker én wettelijk vastgelegd
