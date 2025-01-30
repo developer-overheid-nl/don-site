@@ -5,7 +5,15 @@ tags:
   - "accessibility"
   - "nl-design-system"
 title: "Richtlijnen voor Software Ontwikkeling"
+hide_table_of_contents: true
 ---
+
+```mdx-code-block
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+```
+<!-- 
 
 ### 1. [Breng in kaart wat de gebruiker nodig heeft](./1-define-user-needs.md)
 
@@ -53,7 +61,7 @@ Je inkoopstrategie moet aantonen dat je zowel commerciële als technologische as
 
 ### 12. [Denk na over duurzaamheid](./12-sustainability.md)
 
-Verhoog de duurzaamheid gedurende de gehele levenscyclus van je technologie.
+Verhoog de duurzaamheid gedurende de gehele levenscyclus van je technologie. -->
 
 <!-- 13. Meet the Service Standard
 

@@ -68,9 +68,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Developer Overheid",
+      title: "Developer Overheid NL",
       logo: {
-        alt: "Developer Overheid",
+        alt: "Developer Overheid NL",
         src: "img/logo.svg",
       },
       items: [
@@ -175,6 +175,12 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+
   } satisfies Preset.ThemeConfig,
 };
 

@@ -8,6 +8,8 @@ tags: [open-source]
 
 Open source werken wint snel aan bekendheid binnen de overheid – en dat is niet zonder reden. Het stelt organisaties in staat van elkaar te leren, en het kan voorkomen dat ze afhankelijk worden van leveranciers. Ook is het inmiddels wettelijk vastgelegd dat overheidsorganisaties open source moeten werken. In 2020 is vastgelegd in de beleidslijn ‘Open, tenzij’, dat software die wordt ontwikkeld door de overheid "open source by default" moet zijn. Ook [onderschrijven](https://opensourcewerken.nl/page/view/b28e707b-2731-49bf-bcc6-ac693f1f250a/overzicht-wet-en-regelgeving) de Wet open overheid (Woo) en Wet hergebruik overheidsinformatie (Who) dat overheidscode openlijk beschikbaar zou moeten zijn.
 
+<!-- truncate -->
+
 ## Niet zo spannend als je denkt
 
 Hoewel open source werken een enorme potentie in zich heeft, is de realiteit ervan vaak niet eens zo heel spannend. Toen ik een tijdje terug een presentatie zag van Niels Hatzmann (projectleider bij [Abacus](https://github.com/kiesraad/abacus), De Kiesraad) begon het met te dagen. Open source werken is een goede manier om de opdrachtgever bij een project te betrekken, het werkproces is namelijk op elk moment inzichtelijk. Dit in combinatie met sprints en regelmatige demo's en je beperkt de kans dat je afdwaalt van het projectdoel.

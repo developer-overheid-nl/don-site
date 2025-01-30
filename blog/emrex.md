@@ -1,7 +1,7 @@
 ---
 # slug: emrex
 # title: Emrex
-authors: [jfarla]
+authors: [joostfarla]
 # tags: [hola, docusaurus]
 ---
 # EMREX: Europese standaard voor gegevensuitwisseling in het onderwijs

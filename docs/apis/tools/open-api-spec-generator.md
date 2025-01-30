@@ -14,9 +14,9 @@ Hieronder een voorbeeldconfiguratie:
 ```json
 {
   "title": "DON API v1",
-  "description": "API of developer.overheid.nl (Developer Overheid).",
+  "description": "API of developer.overheid.nl (Developer Overheid NL).",
   "contact": {
-    "name": "Team Developer Overheid",
+    "name": "Team Developer Overheid NL",
     "email": "developer.overheid@geonovum.nl",
     "url": "https://developer.overheid.nl"
   },

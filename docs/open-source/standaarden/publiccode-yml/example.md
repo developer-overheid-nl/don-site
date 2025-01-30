@@ -14,7 +14,7 @@ publiccodeYmlVersion: "0.3"
 
 # Dit veld bevat de korte naam van het project. Kies hier de naam waaronder het
 # project bekend is bij de meeste mensen.
-name: Developer Overheid
+name: Developer Overheid NL
 # De url naar de source code.
 url: "https://gitlab.com/commonground/don/developer.overheid.nl"
 
@@ -75,7 +75,7 @@ dependsOn:
 description:
   nl:
     longDescription: >
-      Developer Overheid is de wegwijzer voor developers die voor of bij de overheid ontwikkelen. Zij vervult deze
+      Developer Overheid NL is de wegwijzer voor developers die voor of bij de overheid ontwikkelen. Zij vervult deze
       rol door het aanbieden van standaarden, best practices en tools.
 
       Een belangrijke feature van het platform is de API catalogus. Deze maakt inzichtelijk welke API's er beschikbaar
@@ -87,7 +87,7 @@ description:
       waardevolle datapunten.
 
     # Mand!
-    shortDescription: Developer Overheid is de wegwijzer voor developers die voor of bij de overheid ontwikkelen.
+    shortDescription: Developer Overheid NL is de wegwijzer voor developers die voor of bij de overheid ontwikkelen.
 
     # Welke grote features heeft dit project?
     features:

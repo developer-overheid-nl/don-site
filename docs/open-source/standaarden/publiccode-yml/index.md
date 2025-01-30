@@ -16,7 +16,7 @@ De publiccode.yml-standaard zorgt op een eenvoudige manier voor vindbaarheid. Op
 
 ## Examples
 
-- [Example van Developer Overheid](./example)
+- [Example van Developer Overheid NL](./example)
 - [Examples uit de documentatie van de standaard`](https://yml.publiccode.tools/example.html)
 - [Publiccode.yml van Open Zaak](https://github.com/open-zaak/open-zaak/blob/main/publiccode.yaml)
 
