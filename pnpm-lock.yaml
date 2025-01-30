@@ -21,8 +21,8 @@ importers:
         specifier: ^3.0.0
         version: 3.1.0(@types/react@19.0.1)(react@18.3.1)
       '@rijkshuisstijl-community/components-react':
-        specifier: ^1.0.0-alpha.60
-        version: 1.0.0-alpha.60(@babel/runtime@7.26.0)(@stencil/core@4.22.3)(@types/react@19.0.1)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.0.0-alpha.103
+        version: 1.0.0-alpha.103(@babel/runtime@7.26.0)(@stencil/core@4.22.3)(@types/react@19.0.1)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
@@ -52,8 +52,8 @@ importers:
         specifier: 3.7.0
         version: 3.7.0(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@rijkshuisstijl-community/design-tokens':
-        specifier: ^1.0.0-alpha.84
-        version: 1.0.0-alpha.85
+        specifier: ^1.0.0-alpha.128
+        version: 1.0.0-alpha.128
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -1289,6 +1289,15 @@ packages:
   '@mermaid-js/parser@0.3.0':
     resolution: {integrity: sha512-HsvL6zgE5sUPGgkIDlmAWR1HTNHz2Iy11BAWPTa4Jjabkpguy4Ze2gzfLrg6pdRuBvFwgUYyxiaNqZwrEEXepA==}
 
+  '@nl-design-system-candidate/heading-css@1.0.0':
+    resolution: {integrity: sha512-TQl43o42GUOsgdfggFUWeOSEkM5iOEhFdtb+Ga20oH0wBfGbWTt4jz6BEpGxFImLDPwA1ThkK4Bm5CHOGvXQNQ==}
+
+  '@nl-design-system-candidate/heading-react@1.0.0':
+    resolution: {integrity: sha512-tJ6JGokl7AY7tEZ0vYDhIUCAzL1Sz7TapTLJ/DOfAb4koVY5IUdbnNjII0OJn6a4fQON8m/Ngly2ezErG0ojsQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -1320,23 +1329,26 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@rijkshuisstijl-community/components-css@1.0.0-alpha.84':
-    resolution: {integrity: sha512-sPlTDsn7wgu3hFR/N4GijgUzscDQZlk6sCMjRjMJnmxPRnQhsaKyh16gF7qTciOgWKkVJvga6jkSDvGyygOGoA==}
+  '@rijkshuisstijl-community/components-css@1.0.0-alpha.127':
+    resolution: {integrity: sha512-uAxJSiPC4bsD8ttvP94FLzU+PWSz0KQh3LhxpFANcTSTCh3zoKD/ZJYsnh06TapJGGSW0aUtdsOxx1e/u8TNDw==}
 
-  '@rijkshuisstijl-community/components-react@1.0.0-alpha.60':
-    resolution: {integrity: sha512-BRmqHclzGtAquCrPFiV6Zaz9tHF6oVfU0/iLX0a5y5n6nTAT29z8DJ/ibG+/NK3PJi5GP7YzVZCWagIcfHOstw==}
+  '@rijkshuisstijl-community/components-react@1.0.0-alpha.103':
+    resolution: {integrity: sha512-ZnIGCjWysJX60BeCuiBRXnFEjroqDjY5kCtin1vDhV8ii6Nw1FHwyJYpadx2YjJNK5OolSPKVC2BRMwv/v1+7g==}
     peerDependencies:
-      react: '18'
-      react-dom: '18'
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
+
+  '@rijkshuisstijl-community/design-tokens@1.0.0-alpha.128':
+    resolution: {integrity: sha512-D5H+16TAl4DemkrPVBk0Q1zoExP3SgN1XHNUNaXsKlkAMr1Zjj09CPODRh2GWfyyjvYEyJAShJVbDh8RX3NWzw==}
 
   '@rijkshuisstijl-community/design-tokens@1.0.0-alpha.85':
     resolution: {integrity: sha512-0zOc2QL1euhT2FD3GeT+Qm/JAzKP3I/NTIAQlzhdu1cRkLMtiNF/iMtKjw1w9GkdRnan7aKm1jlu5FcXSHC7yg==}
 
-  '@rijkshuisstijl-community/web-components-react@1.0.0-alpha.66':
-    resolution: {integrity: sha512-VmHCaLSGUT70D174nBf9KAzvw1ycCdPRG0tncVcr9A6vMFuvljuAvYmO9hD3po3rAghnMzekoWJMWS81YLK2zg==}
+  '@rijkshuisstijl-community/web-components-react@1.0.0-alpha.109':
+    resolution: {integrity: sha512-fhRoxs/OrrLRqaLJ/r/0EjG+Wioy2SO6d9THIfW2G3nEqCWJh03B5rbvsi0xczK3l4aZFb7XdxdWbW4VI5oWog==}
     peerDependencies:
-      react: ^18.3.1
-      react-dom: ^18.3.1
+      react: '19'
+      react-dom: '19'
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -1459,13 +1471,13 @@ packages:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
 
-  '@tabler/icons-react@3.23.0':
-    resolution: {integrity: sha512-uSJfu1Tnhk6AAkerNCOBL3KL3aPpb/bnB4UjTbV3jItTJKitEgr4a98ted67qu5FHB3/tG1bxs32pqy5OL7NGw==}
+  '@tabler/icons-react@3.28.1':
+    resolution: {integrity: sha512-KNBpA2kbxr3/2YK5swt7b/kd/xpDP1FHYZCxDFIw54tX8slELRFEf95VMxsccQHZeIcUbdoojmUUuYSbt/sM5Q==}
     peerDependencies:
       react: '>= 16'
 
-  '@tabler/icons@3.23.0':
-    resolution: {integrity: sha512-Cz+X58jfRm0g/KcupXXuPw5knj671lNR054AnmLXvCjudiQBWI0wZulDDSsqDoGezvBzMTNPQtNcjLkZs82ZxQ==}
+  '@tabler/icons@3.28.1':
+    resolution: {integrity: sha512-h7nqKEvFooLtFxhMOC1/2eiV+KRXhBUuDUUJrJlt6Ft6tuMw2eU/9GLQgrTk41DNmIEzp/LI83K9J9UUU8YBYQ==}
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -8422,6 +8434,14 @@ snapshots:
     dependencies:
       langium: 3.0.0
 
+  '@nl-design-system-candidate/heading-css@1.0.0': {}
+
+  '@nl-design-system-candidate/heading-react@1.0.0(@babel/runtime@7.26.0)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      clsx: 2.1.1
+      react: 18.3.1
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -8451,15 +8471,17 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@rijkshuisstijl-community/components-css@1.0.0-alpha.84':
+  '@rijkshuisstijl-community/components-css@1.0.0-alpha.127':
     dependencies:
+      '@nl-design-system-candidate/heading-css': 1.0.0
       '@utrecht/component-library-css': 7.0.0
 
-  '@rijkshuisstijl-community/components-react@1.0.0-alpha.60(@babel/runtime@7.26.0)(@stencil/core@4.22.3)(@types/react@19.0.1)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@rijkshuisstijl-community/components-react@1.0.0-alpha.103(@babel/runtime@7.26.0)(@stencil/core@4.22.3)(@types/react@19.0.1)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@rijkshuisstijl-community/components-css': 1.0.0-alpha.84
-      '@rijkshuisstijl-community/web-components-react': 1.0.0-alpha.66(@stencil/core@4.22.3)(@types/react@19.0.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@tabler/icons-react': 3.23.0(react@18.3.1)
+      '@nl-design-system-candidate/heading-react': 1.0.0(@babel/runtime@7.26.0)(react@18.3.1)
+      '@rijkshuisstijl-community/components-css': 1.0.0-alpha.127
+      '@rijkshuisstijl-community/web-components-react': 1.0.0-alpha.109(@stencil/core@4.22.3)(@types/react@19.0.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tabler/icons-react': 3.28.1(react@18.3.1)
       '@utrecht/component-library-react': 7.3.5(@babel/runtime@7.26.0)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx: 2.1.1
       lodash.chunk: 4.2.0
@@ -8473,9 +8495,11 @@ snapshots:
       - react-vega
       - vega
 
+  '@rijkshuisstijl-community/design-tokens@1.0.0-alpha.128': {}
+
   '@rijkshuisstijl-community/design-tokens@1.0.0-alpha.85': {}
 
-  '@rijkshuisstijl-community/web-components-react@1.0.0-alpha.66(@stencil/core@4.22.3)(@types/react@19.0.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@rijkshuisstijl-community/web-components-react@1.0.0-alpha.109(@stencil/core@4.22.3)(@types/react@19.0.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@stencil/react-output-target': 0.7.4(@stencil/core@4.22.3)(@types/react@19.0.1)(react@18.3.1)
       react: 18.3.1
@@ -8625,12 +8649,12 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@tabler/icons-react@3.23.0(react@18.3.1)':
+  '@tabler/icons-react@3.28.1(react@18.3.1)':
     dependencies:
-      '@tabler/icons': 3.23.0
+      '@tabler/icons': 3.28.1
       react: 18.3.1
 
-  '@tabler/icons@3.23.0': {}
+  '@tabler/icons@3.28.1': {}
 
   '@trysound/sax@0.2.0': {}
 

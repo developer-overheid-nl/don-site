@@ -68,11 +68,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Developer Overheid NL",
-      logo: {
-        alt: "Developer Overheid NL",
-        src: "img/logo.svg",
-      },
+      title: "Home",
       items: [
         {
           type: "docSidebar",
