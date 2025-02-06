@@ -11,6 +11,13 @@ jobs:
     permissions:
       packages: write
     steps:
+      - name: Use Latest Corepack
+        run: |
+          echo "Before: corepack version => $(corepack --version || echo 'not installed')"
+          npm install -g corepack@latest
+          echo "After : corepack version => $(corepack --version)"
+          corepack enable
+          pnpm --version
       - uses: actions/checkout@v4
       - name: Login to container registry
         uses: docker/login-action@v3
