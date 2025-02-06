@@ -39,7 +39,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/",
+            "https://github.com/developer-overheid-nl/don-site/tree/main/",
         },
         blog: {
           showReadingTime: true,
@@ -50,7 +50,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/",
+            "https://github.com/developer-overheid-nl/don-site/tree/main/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",

@@ -25,5 +25,5 @@ jobs:
           push: true
           target: serve
           tags: |
-            ghcr.io/developer-overheid-nl/don-fieldlab-padv:latest
-            ghcr.io/developer-overheid-nl/don-fieldlab-padv:${{ github.sha }}
+            ghcr.io/developer-overheid-nl/don-site:latest
+            ghcr.io/developer-overheid-nl/don-site:${{ github.sha }}
