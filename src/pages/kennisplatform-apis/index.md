@@ -33,7 +33,7 @@ Het meest actuele overzicht van de API documentatie vind je op de [Github pagina
 
 Verschillende overheidsorganisaties hebben al een intentieverklaring ondertekend waarmee zij zich ervoor uitspreken om API’s te structureren conform de afspraken in de API Strategie. Deze intentieverklaring is opgesteld om samenwerking tussen partijen die binnen de overheid met API’s en standaarden werken te bevorderen.
 
-[Meer informatie over de Intentieverklaring API Strategie](kennisplatform-apis/intentieverklaring)
+[Meer informatie over de Intentieverklaring API Strategie](intentieverklaring)
 
 ## Gouden API's
 

@@ -18,4 +18,4 @@ De intentieverklaring is opgesteld door het Kennisplatform API's in opdracht van
 
 ## Meedoen?
 
-Ook belangstelling om deze intentieverklaring te ondertekenen? [Neem contact op met Geonovum](f.terpstra@geonovum.nl) voor meer informatie.
+Ook belangstelling om deze intentieverklaring te ondertekenen? [Neem contact op met Geonovum](mailto:f.terpstra@geonovum.nl) voor meer informatie.
