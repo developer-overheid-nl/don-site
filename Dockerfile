@@ -27,6 +27,7 @@ WORKDIR /opt/docusaurus
 COPY . /opt/docusaurus/
 ## Install dependencies with `--frozen-lockfile` to ensure reproducibility.
 RUN corepack enable
+RUN corepack prepare pnpm@9.15.0 --activate
 RUN pnpm -v
 RUN pnpm install --frozen-lockfile
 ## Build the static site.
