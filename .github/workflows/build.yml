@@ -17,6 +17,7 @@ jobs:
           npm install -g corepack@latest
           echo "After : corepack version => $(corepack --version)"
           corepack enable
+          corepack prepare pnpm@9.15.0 --activate
           pnpm --version
       - uses: actions/checkout@v4
       - name: Login to container registry
