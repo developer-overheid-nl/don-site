@@ -9,7 +9,7 @@ title: "Getting Started: NL Design System"
 
 # Getting Started
 
-Wil je snel aan de slag met het NL Design System? In deze handleiding laten we je zien hoe je het lokaal kunt opzetten en experimenteren met de beschikbare componenten.
+Wil je snel aan de slag met NL Design System? In deze handleiding laten we je zien hoe je het lokaal kunt opzetten en hoe je experimenteert met de beschikbare componenten.
 
 ## 📌 Benodigdheden
 
@@ -45,7 +45,7 @@ Ga naar je nieuwe projectmap en installeer de benodigde pakketten:
 cd nl-design-system-playground
 npm install
 ```
-Voeg vervolgens de NL Design System-componenten toe:
+Voeg vervolgens de benodigde NL Design System libraries toe:
 
 ```sh
 npm install --save-dev @rijkshuisstijl-community/components-react
