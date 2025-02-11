@@ -1,6 +1,6 @@
 ---
-title: "Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?"
-authors: [tomootes]
+title: Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?
+authors: [tom-ootes]
 tags: [open-source]
 date: 2025-01-30
 ---
