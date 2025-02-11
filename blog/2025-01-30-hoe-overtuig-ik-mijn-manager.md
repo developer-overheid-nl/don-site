@@ -1,9 +1,10 @@
 ---
-title: Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?
-authors: [tom-ootes]
+slug: hoe-overtuig-ik-mijn-manager
+authors: [tom-ootes, opensourcewerken]
 tags: [open-source]
 date: 2025-01-30
 ---
+# Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?
 
 ## Open Source: steeds belangrijker én wettelijk vastgelegd
 

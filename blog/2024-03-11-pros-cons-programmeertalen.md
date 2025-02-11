@@ -1,6 +1,7 @@
 ---
 slug: de-pros-en-cons-van-back-end-programmeertalen-bij-de-nederlandse-overheid
 authors: [tom-ootes]
+tags: []
 date: 2024-09-30
 ---
 # De pros en cons van back-end programmeertalen bij de Nederlandse Overheid
