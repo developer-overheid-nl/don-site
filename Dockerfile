@@ -5,6 +5,8 @@
 FROM node:lts AS base
 ## Disable colour output from yarn to make logs easier to read.
 ENV FORCE_COLOR=0
+## Update Corepack
+RUN npm install -g corepack@latest
 ## Enable corepack.
 RUN corepack enable
 ## Set the working directory to `/opt/docusaurus`.
@@ -17,7 +19,7 @@ WORKDIR /opt/docusaurus
 ## Expose the port that Docusaurus will run on.
 EXPOSE 3000
 ## Run the development server.
-CMD [ -d "node_modules" ] && pnpm start --host 0.0.0.0 --poll 1000 || pnpm install && pnpm start --host 0.0.0.0 --poll 1000
+CMD [ -d "node_modules" ] && pnpm start -- --host 0.0.0.0 --poll 1000 || pnpm install && pnpm start -- --host 0.0.0.0 --poll 1000
 
 # Stage 2b: Production build mode.
 FROM base AS prod
@@ -26,9 +28,6 @@ WORKDIR /opt/docusaurus
 ## Copy over the source code.
 COPY . /opt/docusaurus/
 ## Install dependencies with `--frozen-lockfile` to ensure reproducibility.
-RUN corepack enable
-RUN corepack prepare pnpm@9.15.0 --activate
-RUN pnpm -v
 RUN pnpm install --frozen-lockfile
 ## Build the static site.
 RUN pnpm build
@@ -38,7 +37,7 @@ FROM prod AS serve
 ## Expose the port that Docusaurus will run on.
 EXPOSE 3000
 ## Run the production server.
-CMD ["pnpm", "serve", "--host", "0.0.0.0", "--no-open"]
+CMD ["pnpm", "serve", "--", "--host", "0.0.0.0", "--no-open"]
 
 # Stage 3b: Serve with Caddy.
 FROM caddy:2-alpine AS caddy
