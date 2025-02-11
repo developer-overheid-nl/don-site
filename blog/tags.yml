@@ -1,0 +1,22 @@
+adr:
+  label: API Design Rules
+api-design:
+  label: API Design
+azure:
+  label: Azure
+development:
+  label: Development
+gouden-api:
+  label: Gouden API
+infra:
+  label: Infra
+ipv6:
+  label: IPv6
+kubernetes:
+  label: Kubernetes
+openapi:
+  label: OpenAPI
+open-source:
+  label: Open Source
+orkestratie:
+  label: Orkestratie

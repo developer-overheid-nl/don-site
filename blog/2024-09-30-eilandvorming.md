@@ -1,7 +1,7 @@
 ---
 slug: 5-nadelen-van-eilandjesvorming-en-3-tips-om-onderlingen-samenwerking-te-stimuleren
 authors: [opensourcewerken]
-tags: [development, developer-advocate]
+tags: [development]
 date: 2024-09-30
 ---
 # 5 nadelen van "eilandjesvorming" en 3 tips om onderlinge samenwerking te stimuleren        
