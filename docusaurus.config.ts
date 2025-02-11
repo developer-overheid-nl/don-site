@@ -42,6 +42,8 @@ const config: Config = {
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
         },
         blog: {
+          blogSidebarCount: 30,
+          blogSidebarTitle: "Laatste posts",
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
