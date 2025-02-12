@@ -4,6 +4,9 @@ tags:
   - "front-end"
   - "accessibility"
   - "nl-design-system"
+  - "vite"
+  - "nvm"
+  - "nodejs"
 title: "Getting Started: NL Design System"
 ---
 
@@ -11,21 +14,26 @@ title: "Getting Started: NL Design System"
 
 Wil je snel aan de slag met NL Design System? In deze handleiding laten we je zien hoe je het lokaal kunt opzetten en hoe je experimenteert met de beschikbare componenten.
 
-## 📌 Benodigdheden
+## Benodigdheden
 
-- [Node @ v22.13.1](https://nodejs.org/en/download)
-
-Zorg ervoor dat je de juiste versie van Node.js hebt geïnstalleerd:
-```sh
-node -v
-# Verwachte output: v22.13.1
-```
-
-Heb je een andere versie? Download de juiste via [Node.js](https://nodejs.org/en/download).
+- [NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
 ## Aan de slag
 
-### 🚀 Stap 1: Installeer Vite
+### Stap 1: Installeer de juiste versie van NodeJS met nvm
+
+Gebruik nvm om de juiste versie van node te installeren.
+
+```sh
+nvm install 22.13.1
+```
+
+```sh
+nvm use 22.13.1
+```
+
+
+### Stap 2: Installeer Vite, genereer een React project
 
 ```sh
 npm install -g vite@6.1.0
@@ -37,7 +45,7 @@ Maak vervolgens een nieuwe React-app met Vite:
 npm create vite@6.1.0 nl-design-system-playground -- --template react
 ```
 
-### 📦 Stap 2: Installeer dependencies
+###  Stap 3: Installeer dependencies
 
 Ga naar je nieuwe projectmap en installeer de benodigde pakketten:
 
@@ -53,9 +61,9 @@ npm install --save-dev @rijkshuisstijl-community/design-tokens
 npm install --save-dev @rijkshuisstijl-community/font
 ```
 
-### 🎨 Stap 3: Importeer het thema en de componenten
+### Stap 4: Importeer het thema en de componenten
 
-Open `App.jsx` en voeg de volgende imports toe:
+Open `src/App.jsx` en voeg de volgende imports toe:
 
 ```js
 import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // importeer het theme.
@@ -63,9 +71,9 @@ import '@rijkshuisstijl-community/font/src/index.mjs'; // font importeren.
 import '@rijkshuisstijl-community/components-css/dist/index.css'; // importeer de CSS van de components.
 ```
 
-### 🛠️ Stap 4: Voeg je eerste componenten toe
+### Stap 5: Voeg je eerste componenten toe
 
-Gebruik een paar standaardcomponenten om te zien hoe het werkt. Voeg deze code toe aan `App.jsx`:
+Gebruik een paar standaardcomponenten om te zien hoe het werkt. Voeg deze code toe aan `src/App.jsx`:
 
 ```js
 import { Button, Card, Alert, Checkbox, Blockquote } from "@rijkshuisstijl-community/components-react";
@@ -114,22 +122,22 @@ return (
 );
 ```
 
-### 🎨 Stap 5: Verwijder de boilerplate CSS
+### Stap 6: Verwijder de boilerplate CSS
 
 Comment twee regels uit om de standaard-styling van Vite uit te schakelen.
 
-In `main.jsx`:
+In `src/main.jsx`:
 
 ```jsx
 // import './index.css'
 ```
 
-In `App.jsx`:
+In `src/App.jsx`:
 ```js
 // import './App.css'
 ```
 
-### ▶️ Stap 6: Start de development server
+### Stap 7: Start de development server
 
 Draai je project lokaal met:
 
@@ -140,11 +148,11 @@ npm run dev
 Je zou nu een werkende interface moeten zien in je browser.
 
 
-## 🔍 Bekijk meer componenten
+## Bekijk meer componenten
 
 Meer componenten vind je in de [Storybook omgeving](https://rijkshuisstijl-community.vercel.app) van de Rijkshuisstijl Community van NL-Design-System.
 
-## 🤝 Bijdragen
+## Bijdragen
 
 De componenten van Rijkshuisstijl Community zijn open source, als je wilt meedoen zijn de volgende links handig.
 
