@@ -92,9 +92,13 @@ license:
   description: "Software licenses."
 msa:
   label: "Microservices Architectuur"
-  permalink: msa
+  permalink: /msa
   description: "Microservices Architectuur"
 nl-design-system:
   label: "NL Design System"
-  permalink: nlds
+  permalink: /nlds
   description: "NL Design System community"
+data-bij-de-bron:
+  label: "Data bij de Bron"
+  permalink: "/data-bij-de-bron"
+  description: "Het principe Data bij de Bron"
