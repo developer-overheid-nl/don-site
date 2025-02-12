@@ -94,3 +94,7 @@ msa:
   label: "Microservices Architectuur"
   permalink: msa
   description: "Microservices Architectuur"
+nl-design-system:
+  label: "NL Design System"
+  permalink: nlds
+  description: "NL Design System community"
