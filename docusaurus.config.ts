@@ -5,9 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Developer Portal van de Nederlandse Overheid",
-  tagline:
-    "Eén centrale plek voor de developer die voor of met de overheid ontwikkelt ",
+  title: "Developer.overheid.nl",
+  tagline: "Voor de developer bij de overheid",
   favicon: "favicon.ico",
 
   // Set the production url of your site here
@@ -127,6 +126,20 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [
+        {
+          title: "Een initiatief van:",
+          items: [
+            {
+              html: `
+              <div class="sponsors">
+                <img class="sponsors__logo" src="/img/logo-bzk.png" alt="Logo van Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" />
+                <img class="sponsors__logo" src="/img/logo-vng.svg" alt="Logo van Vereniging van Nederlandse Gemeenten" />
+                <img class="sponsors__logo" src="/img/Logo_Forum_Standaardisatie_RGB_wit.png" alt="Logo forum voor standaardisatie" />
+              </div>
+              `,
+            }
+          ]
+        },
         {
           title: "Community",
           items: [

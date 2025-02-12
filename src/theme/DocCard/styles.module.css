@@ -25,3 +25,10 @@
 .cardDescription {
   font-size: 0.8rem;
 }
+
+.cardIcon {
+  fill: var(--don-robijnrood-100);
+  height: 2rem;
+  width: 2rem;
+  vertical-align: bottom;
+}

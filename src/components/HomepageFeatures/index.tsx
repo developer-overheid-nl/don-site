@@ -14,6 +14,18 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'Kennisbank',
+    image: '/img/boek-opengeslagen.svg',
+    alt: '',
+    description: (
+      <>
+        Lees artikelen over diverse onderwerpen zoals ...
+      </>
+    ),
+    link: '#',
+    label: 'Lees onze artikelen',
+  },
+  {
     title: 'Onze community',
     image: '/img/tekstballonnen-met-punten.svg',
     alt: '',

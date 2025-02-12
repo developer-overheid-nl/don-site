@@ -19,6 +19,7 @@ import type {
 import styles from './styles.module.css';
 import IconDocumentMetVlakkenEnLijnenErop from '../icons/IconDocumentMetVlakkenEnLijnenErop';
 import IconKetting2Schakels from '../icons/IconKetting2Schakels';
+import IconLadeArchiefkast from '../icons/IconLadeArchiefkast';
 
 function useCategoryItemsPlural() {
   const {selectMessage} = usePluralForm();
@@ -95,7 +96,7 @@ function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
   return (
     <CardLayout
       href={href}
-      icon="🗃️"
+      icon={<IconLadeArchiefkast className={styles.cardIcon} />}
       title={item.label}
       description={item.description ?? categoryItemsPlural(item.items.length)}
     />
@@ -103,7 +104,7 @@ function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
 }
 
 function CardLink({item}: {item: PropSidebarItemLink}): ReactNode {
-  const icon = isInternalUrl(item.href) ? <IconDocumentMetVlakkenEnLijnenErop /> : <IconKetting2Schakels />;
+  const icon = isInternalUrl(item.href) ? <IconDocumentMetVlakkenEnLijnenErop className={styles.cardIcon} /> : <IconKetting2Schakels className={styles.cardIcon} />;
   const doc = useDocById(item.docId ?? undefined);
   return (
     <CardLayout
