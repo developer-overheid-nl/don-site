@@ -92,5 +92,9 @@ license:
   description: "Software licenses."
 msa:
   label: "Microservices Architectuur"
-  permalink: msa
+  permalink: "/msa"
   description: "Microservices Architectuur"
+data-bij-de-bron:
+  label: "Data bij de Bron"
+  permalink: "/data-bij-de-bron"
+  description: "Het principe Data bij de Bron"
