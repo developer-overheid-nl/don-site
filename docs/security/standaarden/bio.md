@@ -62,3 +62,4 @@ Het biedt een basis om te rapporteren over de mate van naleving van de BIO.
 - [Website van BIO: bio-overheid.nl](https://www.bio-overheid.nl/)
 - [DigitaleOverheid.nl over BIO](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/)
 - [Naar ontwikkelomgeving van BIO2](https://minbzk.github.io/Baseline-Informatiebeveiliging-Overheid/)
+- [CIP over BIO](https://www.cip-overheid.nl/producten-en-diensten?type=BIO%20en%20Thema-uitwerkingen)
