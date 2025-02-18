@@ -1,13 +1,15 @@
 ---
-title: "Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?"
-authors: [tomootes]
+slug: hoe-overtuig-ik-mijn-manager
+authors: [tom-ootes, opensourcewerken]
 tags: [open-source]
 date: 2025-01-30
 ---
 
+# Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?
+
 ## Open Source: steeds belangrijker én wettelijk vastgelegd
 
-Open source werken wint snel aan bekendheid binnen de overheid – en dat is niet zonder reden. Het stelt organisaties in staat van elkaar te leren, en het kan voorkomen dat ze afhankelijk worden van leveranciers. Ook is het inmiddels wettelijk vastgelegd dat overheidsorganisaties open source moeten werken. In 2020 is vastgelegd in de beleidslijn ‘Open, tenzij’, dat software die wordt ontwikkeld door de overheid "open source by default" moet zijn. Ook [onderschrijven](https://opensourcewerken.nl/page/view/b28e707b-2731-49bf-bcc6-ac693f1f250a/overzicht-wet-en-regelgeving) de Wet open overheid (Woo) en Wet hergebruik overheidsinformatie (Who) dat overheidscode openlijk beschikbaar zou moeten zijn.
+Open source werken wint snel aan bekendheid binnen de overheid – en dat is niet zonder reden. Het stelt organisaties in staat van elkaar te leren, en het kan voorkomen dat ze afhankelijk worden van leveranciers. Ook is het inmiddels wettelijk vastgelegd dat overheidsorganisaties open source moeten werken. In 2020 is vastgelegd in de beleidslijn ‘Open, tenzij’, dat software die wordt ontwikkeld door de overheid "open source by default" moet zijn. Ook [onderschrijven](https://opensourcewerken.nl/page/view/b28e707b-2731-49bf-bcc6-ac693f1f250a/overzicht-wet-en-regelgeving) de Wet open overheid (Woo) en Wet hergebruik overheidsinformatie (Who) dat overheidscode openlijk beschikbaar zou moeten zijn. Meer info over waarom open source werken een goed idee is vind je op [opensourcewerken.nl](https://opensourcewerken.nl).
 
 <!-- truncate -->
 
@@ -29,21 +31,21 @@ Omdat developers in hun dagelijkse leven de voordelen van open source code aan d
 
 Voor jou is het zo klaar als een klontje, maar voor de manager nog niet. Daarom is het belangrijk te beseffen waar die zorgen vandaan komen. Ook is het belangrijk te laten blijken dat je deze zorgen ook echt ziet, en dat je bereid bent deze samen te tackelen. Er spelen waarschijnlijk vragen op vlak van de volgende thema's:
 
-#### Veiligheid: Is open source wel veilig en betrouwbaar?
+#### Veiligheid: is open source wel veilig en betrouwbaar?
 
 Als je deze vraag krijgt, kun je uitleggen dat open source software geen nieuw fenomeen is, maar juist de fundering vormt van de hele techindustrie. Van de telefoons in onze zak, tot de servers waarop onze software draait, alles bevat open source componenten.
 
 Ook geldt dat fouten of risico’s gemakkelijk ontdekt kunnen worden in open source software, omdat deze open en inzichtelijk is. Dat mensen van buiten de organisatie bugs en veiligheidsissues kunnen melden betekent natuurlijk niet dat software niet meer onderhouden en gemonitord hoeft te worden.
 
-#### Kosten: Hoeveel tijd en geld kost het ons?
+#### Kosten: hoeveel tijd en geld kost het ons?
 
 Uiteindelijk kan open source werken ons een hoop geld besparen. Door bijvoorbeeld met andere organisaties aan een design-system te werken kan je op termijn veel sneller front-ends ontwikkelen. Ook voorkom je door open source software te gebruiken terecht te komen in een "vendor lock-in"; de situatie waarbij je te maken hebt met onevenredig hoog oplopende licentiekosten bij een leverancier waar je je afhankelijk van hebt gemaakt.
 
-#### Juridische risico’s: Hoe zit het met licenties?
+#### Juridische risico’s: hoe zit het met licenties?
 
 Lopen wij als organisatie risico's als andere organisatie met onze code aan de gang gaan? Antwoord op deze vraag is: als de juist licenties worden gebruikt niet. In veel software-licenties staat heel duidelijk vermeld dat gebruik voor eigen risico is. Daarmee is het ook juridisch afgedekt.
 
-#### Productiviteit: Wordt er nog genoeg aan onze eigen doelen gewerkt?
+#### Productiviteit: wordt er dan nog genoeg aan onze eigen doelen gewerkt?
 
 Als we onze code open source maken, komen we dan nog toe aan onze eigen features?
 

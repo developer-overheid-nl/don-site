@@ -51,9 +51,11 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/",
+            "https://github.com/developer-overheid-nl/don-site/tree/main/",
         },
         blog: {
+          blogSidebarCount: 30,
+          blogSidebarTitle: "Laatste posts",
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
@@ -62,7 +64,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/developer-overheid-nl/don-fieldlab-padv/tree/main/",
+            "https://github.com/developer-overheid-nl/don-site/tree/main/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -111,6 +113,12 @@ const config: Config = {
           sidebarId: "richtlijnen",
           position: "left",
           label: "Richtlijnen",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "architectuur",
+          position: "left",
+          label: "Architectuur",
         },
         {
           type: "docSidebar",
@@ -198,11 +206,10 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: "light",
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
-
   } satisfies Preset.ThemeConfig,
 };
 

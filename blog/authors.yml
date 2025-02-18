@@ -1,4 +1,4 @@
-joostfarla:
+joost-farla:
   name: Joost Farla
   title: Implementatie ondersteuner - Developer Overheid NL
   image_url: https://github.com/joostfarla.png
@@ -7,27 +7,27 @@ joostfarla:
     linkedin: joostfarla
     github: joostfarla
 
-dimitrivanhees:
+dimitri-van-hees:
   name: Dimitri van Hees
   title: Product Owner - Developer Overheid NL
-  url: https://github.com/dvh
   image_url: https://github.com/dvh.png
   page: true
   socials:
     linkedin: dimitrivanhees
     github: dvh
+    mastodon: https://me.dm/@dvh
+    bluesky: dvh.nu
 
-matthijshovestad:
+matthijs-hovestad:
   name: Matthijs Hovestad
   title: Senior Backend Developer - Developer Overheid NL
-  url: https://github.com/pasibun
   image_url: https://github.com/pasibun.png
   page: true
   socials:
     linkedin: matthijs-hovestad-a123898b
     github: pasibun
 
-tomootes:
+tom-ootes:
   name: Tom Ootes
   title: Developer Advocate - Developer Overheid NL
   image_url: https://github.com/tomootes.png
@@ -35,28 +35,27 @@ tomootes:
   socials:
     linkedin: tootes
     github: tomootes
+    mastodon: https://hostux.social/@tomootes
 
-martinvanderplas:
+martin-van-der-plas:
   name: Martin van der Plas
   title: Implementatie ondersteuner - Developer Overheid NL
-  url: https://github.com/mrtn78
   image_url: https://github.com/mrtn78.png
   page: true
   socials:
     linkedin: martinvanderplas
     github: mrtn78
 
-frankterpstra:
+frank-terpstra:
   name: Frank Terpstra
   title: Implementatie ondersteuner - Developer Overheid NL
-  url: https://github.com/fterpstra
   image_url: https://github.com/fterpstra.png
   page: true
   socials:
     linkedin: frank-terpstra-1bb5096
     github: fterpstra 
 
-jaapheinwester:
+jaap-hein-wester:
   name: Jaap-Hein Wester
   title: Senior Frontend Developer - Developer Overheid NL
   url: https://github.com/MrSkippy
@@ -64,4 +63,28 @@ jaapheinwester:
   page: true
   socials:
     linkedin: jaapheinwester
-    github: MrSkippy 
+    github: MrSkippy
+
+digilab:
+  name: Digilab
+  title: Innovatiewerkplaats voor het Federatief Datastelsel
+  url: https://digilab.overheid.nl
+  image_url: https://social.overheid.nl/system/accounts/avatars/112/552/867/348/125/912/original/4a4f714089a5b239.png
+  page: true
+  socials:
+    mastodon: https://social.overheid.nl/@digilab
+
+kennisplatform-apis:
+  name: Kennisplatform API's
+  title: Strategische en tactische vraagstukken rond het ontwikkelen van API's
+  image_url: https://developer.overheid.nl/static/images/logo_icon_kpa.1787d5b5302a.png
+  page: true
+
+opensourcewerken:
+  name: Open Source Werken
+  title: Community voor Open Source werken bij de overheid
+  url: https://opensource.overheid.nl
+  image_url: https://social.overheid.nl/system/accounts/avatars/112/292/076/020/535/022/original/e0f2ce016250a43d.jpg
+  page: true
+  socials:
+    mastodon: https://social.overheid.nl/@opensource
