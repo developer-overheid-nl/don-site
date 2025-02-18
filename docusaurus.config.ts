@@ -34,6 +34,18 @@ const config: Config = {
     mermaid: true,
   },
   themes: ["@docusaurus/theme-mermaid"],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'communities',
+        path: 'communities',
+        routeBasePath: 'communities',
+        sidebarPath: './sidebarsCommunities.ts',
+        // ... other options
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -63,6 +75,7 @@ const config: Config = {
           onUntruncatedBlogPosts: "warn",
         },
         pages: {},
+        sitemap: {},
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -87,61 +100,41 @@ const config: Config = {
       title: "Home",
       items: [
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "apis",
-          label: "API's",
+          to: '/docs',
+          label: 'Kennisbank',
+          position: 'left',
+          activeBaseRegex: `/docs`,
         },
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "openSource",
-          label: "Open Source",
+          to: '/communities',
+          label: 'Communities',
+          position: 'left',
+          activeBaseRegex: `/communities/`,
         },
-        {
-          type: "docSidebar",
-          sidebarId: "security",
-          position: "left",
-          label: "Security",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "front-end",
-          position: "left",
-          label: "Front-end",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "richtlijnen",
-          position: "left",
-          label: "Richtlijnen",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "architectuur",
-          position: "left",
-          label: "Architectuur",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "overig",
-          position: "left",
-          label: "Overig",
-        },
-        { to: "/blog", label: "Blog", position: "right" },
+        { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://community.developer.overheid.nl",
-          label: "Community",
+          label: "Forum",
           position: "right",
         },
         {
-          href: "https://developer.overheid.nl/apis",
-          label: "API Catalogus",
+          href: "https://apis.developer.overheid.nl",
+          label: "API's",
           position: "right",
         },
         {
-          href: "https://developer.overheid.nl/apis",
-          label: "Open Source Catalogus",
+          href: "https://oss.developer.overheid.nl",
+          label: "Open Source Software",
+          position: "right",
+        },
+        {
+          href: "https://data.overheid.nl",
+          label: "Open Data",
+          position: "right",
+        },
+        {
+          href: "https://www.pdok.nl",
+          label: "Geodata",
           position: "right",
         },
       ],
@@ -177,6 +170,10 @@ const config: Config = {
             {
               label: "GitHub",
               href: "https://github.com/developer-overheid-nl",
+            },
+            {
+              label: "Mastodon",
+              href: "https://social.overheid.nl/@developer",
             },
           ],
         },

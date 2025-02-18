@@ -1,8 +1,12 @@
+---
+tags: [security]
+---
+
 # Kennisplatform API's
 
 Geonovum is samen met Bureau Forum Standaardisatie, Kamer van Koophandel, VNG Realisatie, Logius en het Kadaster het Kennisplatform API's gestart. Gezien de ontwikkeling naar een digitale samenleving waar veel digitale diensten eenvoudig met elkaar moeten kunnen samenwerken, geloven wij dat de Nederlandse overheid baat heeft bij een Kennisplatform API's, waarin we gezamenlijk kijken naar strategische en tactische vraagstukken rond het ontwikkelen van API's door de overheid en gebruik van deze APIs buiten en binnen de overheid.
 
-![Logo van Kennisplatform API's](kpa_logo.png)
+![Logo van Kennisplatform API's](logo.png)
 
 ## Waarom een kennisplatform API's?
 
@@ -49,7 +53,7 @@ In 2024 ging de Gouden API naar de CPA Register API. In 2023 heeft het Kennispla
 
 Om kennis te delen over het maken en gebruiken van APIs, publiceren we Masterclasses. Deze Masterclasses zijn na de live uitzending ook nog online te bekijken.
 
-- Sessie Kennisplatform API met [op minuut 18.17 de Masterclass 'Van UML Model naar API Specificatie'](https://youtu.be/B98638Aa27Q) door de Johan Boer (VNG) en het Koos Boersma (Informatiehuis Water) en op [1.27 uur de Masterclass 'Studentmobiliteit met Emrex'](https://youtu.be/B98638Aa27Q)met Gerald Groot Roessink, Jan Joost Norder en Pieter Zeeuw van DUO.
+- Sessie Kennisplatform API met [op minuut 18.17 de Masterclass 'Van UML Model naar API Specificatie'](https://youtu.be/B98638Aa27Q) door de Johan Boer (VNG) en het Koos Boersma (Informatiehuis Water) en op [1.27 uur de Masterclass 'Studentmobiliteit met Emrex'](https://youtu.be/B98638Aa27Q) met Gerald Groot Roessink, Jan Joost Norder en Pieter Zeeuw van DUO.
 - [Transport Operator, Mobility as a service Provider API](https://youtu.be/wWf8w6NfDRI) - Bon Bakermans, Ministerie van Infrastructuur en Waterstaat
 - [De Blauwe Knop](https://youtu.be/uqXbB6Igz2w) - Kiske de Leest en Timen Olthof, VNG Realisatie
 - [Haal Centraal BRP-API](https://youtu.be/mv4afTdxyH0)- Mel Raboen de Sánchez Pacheco | RvIG, Bob te Riele | RvIG en Cathy Dingemanse | VNG Realisatie, Haal Centraal
