@@ -104,6 +104,12 @@ const config: Config = {
         },
         {
           type: "docSidebar",
+          sidebarId: "architectuur",
+          position: "left",
+          label: "Architectuur",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "overig",
           position: "left",
           label: "Overig",
@@ -174,11 +180,10 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: "light",
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
-
   } satisfies Preset.ThemeConfig,
 };
 
