@@ -22,7 +22,7 @@ De FSC standaard helpt je op het gebied van de volgende thema's:
 
 - **Security**: de FSC standaard beschrijft hoe een aanbieder en afnemer veilig kunnen communiceren.
 - **Autorisatie**: Toestemming om met een API te verbinden word vastgelegd met een digitaal Contract.
-- **Beheerbaarheid**: de beheeromgeving geeft je een overzicht van alle koppelingen van en naar jouw organistatie. Deze koppelingen kunnen eenvoudig worden aangemaakt of ingetrokken.
+- **Beheerbaarheid**: de beheeromgeving geeft je een overzicht van alle koppelingen van en naar jouw organisatie. Deze koppelingen kunnen eenvoudig worden aangemaakt of ingetrokken.
 - **Discovery**: de Directory geeft inzicht in welke API's er worden aangeboden.
 - **Logging**: door middel van transactielogging heb je op een gestandaardiseerde manier inzicht in welke gegevens er zijn ingezien.
 - **Delegatie**: Geef op een transparante wijze een organisatie toestemming om names jou een API aan te bieden of te consumeren.
