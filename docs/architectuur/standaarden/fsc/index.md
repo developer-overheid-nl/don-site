@@ -41,7 +41,7 @@ In deze tutorial leer je hoe je een lokale testomgeving opzet, met als doel een 
 
 ### Met Helm
 
-In deze tutorial bouw je met Helm een omgeving op van waaruit je een API ofwel service kan aanbieden op de FSC-manier.
+In deze tutorial gebruik je Helm om OpenFSC op een Kubernetes omgeving te installeren. In deze tutorial leer je hoe je een API kan aanbieden en consumeren.
 
 - [Naar de tutorial voor Helm](https://docs.open-fsc.nl/try-fsc/helm/introduction)
 
