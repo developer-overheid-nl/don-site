@@ -12,15 +12,7 @@ const config: Config = {
   tagline: "Voor de developer bij de overheid",
   organizationName: "developer.overheid.nl",
   favicon: "favicon.ico",
-  headTags: [
-    {
-      tagName: "meta",
-      attributes: {
-        property: "cool:title",
-        content: "Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid",
-      },
-    }
-  ],
+  headTags: [],
 
   // Set the production url of your site here
   url: "https://don.apps.digilab.network",
@@ -80,7 +72,17 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/don-social-card.png",
+    metadata: [
+      {
+        property: 'og:title',
+        content: 'Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid',
+      },
+      {
+        name: 'twitter:image:alt', 
+        content: 'Ontwikkelaarsportaal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
+      }
+    ],
     navbar: {
       title: "Home",
       items: [

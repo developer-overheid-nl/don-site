@@ -26,7 +26,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Ontwikkelaarsportaal voor de developer bij de overheid`}
-      description="TODO: good meta description">
+      description="Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.">
       <main>
         <HomepageHeader />
         <HomepageFeatures />
