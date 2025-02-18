@@ -7,10 +7,10 @@ tags:
   - "vite"
   - "nvm"
   - "nodejs"
-title: "Getting Started: NL Design System"
+title: "Aan de slag met NL Design System"
 ---
 
-# Getting Started
+# Aan de slag met NL Design System
 
 Wil je snel aan de slag met NL Design System? In deze handleiding laten we je zien hoe je het lokaal kunt opzetten en hoe je experimenteert met de beschikbare componenten.
 
