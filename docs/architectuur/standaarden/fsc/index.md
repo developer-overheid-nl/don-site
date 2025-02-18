@@ -16,14 +16,16 @@ De [FSC-standaard](https://fsc-standaard.nl) beschrijft hoe koppelingen voor geg
 
 ## Standaardisatie in gegevensuitwisseling
 
-Volgens het principe [Data bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron) moeten organisaties die verantwoordelijk zijn voor data deze op een bruikbare manier beschikbaar stellen. Dit principe gaat er voor zorgen dat er veel koppelingen zullen onstaan tussen afnemers en bronnen. Om te voorkomen dat er een onbeheersbaar data-landschap ontstaat van verschillenden manieren van koppelen is de standaard FSC geschreven. FSC beschijft hoe koppelingen gemaakt en beheerd kunnen worden. 
+Volgens het principe [Data bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron) moeten organisaties die verantwoordelijk zijn voor data deze op een bruikbare manier beschikbaar stellen. Dit principe gaat er voor zorgen dat er veel koppelingen zullen onstaan tussen afnemers en bronnen. Om te voorkomen dat er een onbeheersbaar data-landschap ontstaat van verschillenden manieren van koppelen is de standaard FSC geschreven. FSC beschijft hoe koppelingen gemaakt en beheerd kunnen worden.
 
 De FSC standaard helpt je op het gebied van de volgende thema's:
 
+- **Security**: de FSC standaard beschrijft hoe een aanbieder en afnemer veilig kunnen communiceren.
+- **Autorisatie**: Toestemming om met een API te verbinden word vastgelegd met een digitaal Contract.
+- **Beheerbaarheid**: de beheeromgeving geeft je een overzicht van alle koppelingen van en naar jouw organistatie. Deze koppelingen kunnen eenvoudig worden aangemaakt of ingetrokken.
+- **Discovery**: de Directory geeft inzicht in welke API's er worden aangeboden.
 - **Logging**: door middel van transactielogging heb je op een gestandaardiseerde manier inzicht in welke gegevens er zijn ingezien.
-- **Security**: de FSC standaard schrijft voor dat aanbieder en afnemer van de data communiceren middels een [PKIoverheid](https://www.logius.nl/domeinen/toegang/pkioverheid) beveiligingscertificaat.
-- **Autorisatie**: in de beheeromgeving zie je per service welke organisaties er toegang tot hebben, en heb je de mogelijkheid om nieuwe organisaties toegang te geven.
-- **Beheerbaarheid**: de beheeromgeving bevat een zogenaamde "directory" waarin je kan zien welke services er allemaal beschikbaar zijn.
+- **Delegatie**: Geef op een transparante wijze een organisatie toestemming om names jou een API aan te bieden of te consumeren.
 
 <br/>
 
