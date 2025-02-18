@@ -35,7 +35,7 @@ Er zijn twee manieren om lokaal OpenFSC te draaien, via Docker Compose en door h
 
 ### Met Docker Compose
 
-In deze tutorial leer je hoe je een lokale testomgeving opzet, met als doel om API's te ontsluiten door middel van een FSC "group". Vervolgens kan je de Controller web-interface gebruiken om je FSC componenten te beheren.
+In deze tutorial leer je hoe je een lokale testomgeving opzet, met als doel een API aanbieden op de demo omgeving van FSC. Vervolgens kan je de Controller web-interface gebruiken om je FSC componenten te beheren.
 
 - [Naar de tutorial voor Docker Compose](https://docs.open-fsc.nl/try-fsc/docker/introduction)
 
