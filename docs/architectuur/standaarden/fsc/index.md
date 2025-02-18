@@ -16,7 +16,7 @@ De [FSC-standaard](https://fsc-standaard.nl) beschrijft hoe koppelingen voor geg
 
 ## Standaardisatie in gegevensuitwisseling
 
-Volgens het principe [Data bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron) moeten organisaties die verantwoordelijk zijn voor data deze op een bruikbare manier beschikbaar stellen. Dit principe gaat er voor zorgen dat er veel koppelingen zullen onstaan tussen afnemers en bronnen. Om te voorkomen dat er een onbeheersbaar data-landschap ontstaat van verschillenden manieren van koppelen is de standaard FSC geschreven. FSC beschijft hoe koppelingen gemaakt en beheerd kunnen worden.
+Volgens het principe [Data bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron) moeten organisaties die verantwoordelijk zijn voor data deze op een bruikbare manier beschikbaar stellen. Dit principe gaat er voor zorgen dat er veel koppelingen zullen ontstaan tussen afnemers en bronnen. Om te voorkomen dat er een onbeheersbaar data-landschap ontstaat van verschillenden manieren van koppelen is de standaard FSC geschreven. FSC beschrijft hoe koppelingen gemaakt en beheerd kunnen worden.
 
 De FSC standaard helpt je op het gebied van de volgende thema's:
 
