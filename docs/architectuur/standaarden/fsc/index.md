@@ -33,7 +33,7 @@ De FSC standaard helpt je op het gebied van de volgende thema's:
 
 ## Aan de slag
 
-Er zijn twee manieren om lokaal OpenFSC te draaien, via Docker Compose en door het gebruik van Helm.
+Wil je experimenteren met OpenFSC? Dan kan dat op meerdere manieren. Je kan eenvoudig lokaal met Docker Compose OpenFSC draaien. Of je kan OpenFSC draaien op een Kubernetes cluster via de Helm charts.
 
 ### Met Docker Compose
 
