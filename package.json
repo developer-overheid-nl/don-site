@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "pnpm run --if-present --recursive build && npm-run-all start:*",
+    "start:docusaurus": "docusaurus start",
+    "build": "pnpm run --if-present --recursive build && npm-run-all build:*",
+    "build:docusaurus": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

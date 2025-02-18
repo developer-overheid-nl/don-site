@@ -10,14 +10,14 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <div className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <p className={styles.intro}>
           Informatie en tools van de <strong className={styles.intro__highlight}>overheid voor ontwikkelaars</strong> door 
           Kennisplatform API's, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.
         </p>
       </div>
-    </div>
+    </header>
   );
 }
 
@@ -27,8 +27,8 @@ export default function Home(): JSX.Element {
     <Layout
       title={`Ontwikkelaarsportaal voor de developer bij de overheid`}
       description="TODO: good meta description">
-      <HomepageHeader />
       <main>
+        <HomepageHeader />
         <HomepageFeatures />
       </main>
     </Layout>

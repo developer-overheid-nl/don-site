@@ -6,8 +6,21 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Developer.overheid.nl",
+  customFields: {
+    siteName: 'Ontwikkelaarsportaal'
+  },
   tagline: "Voor de developer bij de overheid",
+  organizationName: "developer.overheid.nl",
   favicon: "favicon.ico",
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        property: "cool:title",
+        content: "Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid",
+      },
+    }
+  ],
 
   // Set the production url of your site here
   url: "https://don.apps.digilab.network",
@@ -127,7 +140,7 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Een initiatief van:",
+          title: "Mede mogelijk gemaakt door:",
           items: [
             {
               html: `
