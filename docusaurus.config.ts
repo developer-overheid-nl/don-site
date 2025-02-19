@@ -7,21 +7,21 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Developer.overheid.nl",
   customFields: {
-    siteName: 'Ontwikkelaarsportaal'
+    siteName: 'Developer Portal'
   },
-  tagline: "Voor de developer bij de overheid",
+  tagline: "Eén plek voor developers die voor of met de overheid ontwikkelen",
   organizationName: "developer.overheid.nl",
   favicon: "favicon.ico",
   headTags: [],
 
   // Set the production url of your site here
-  url: "https://don.apps.digilab.network",
+  url: "https://developer.overheid.nl",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -34,11 +34,25 @@ const config: Config = {
     mermaid: true,
   },
   themes: ["@docusaurus/theme-mermaid"],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'communities',
+        path: 'communities',
+        routeBasePath: 'communities',
+        sidebarPath: './sidebarsCommunities.ts',
+        // ... other options
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
       {
         docs: {
+          path: 'docs',
+          routeBasePath: 'kennisbank',
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -58,11 +72,12 @@ const config: Config = {
           editUrl:
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
           // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
+          onInlineTags: "throw",
+          onInlineAuthors: "throw",
+          onUntruncatedBlogPosts: "throw",
         },
         pages: {},
+        sitemap: {},
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -87,61 +102,41 @@ const config: Config = {
       title: "Home",
       items: [
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "apis",
-          label: "API's",
+          to: '/kennisbank',
+          label: 'Kennisbank',
+          position: 'left',
+          activeBaseRegex: `/kennisbank`,
         },
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "openSource",
-          label: "Open Source",
+          to: '/communities',
+          label: 'Communities',
+          position: 'left',
+          activeBaseRegex: `/communities`,
         },
-        {
-          type: "docSidebar",
-          sidebarId: "security",
-          position: "left",
-          label: "Security",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "front-end",
-          position: "left",
-          label: "Front-end",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "richtlijnen",
-          position: "left",
-          label: "Richtlijnen",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "architectuur",
-          position: "left",
-          label: "Architectuur",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "overig",
-          position: "left",
-          label: "Overig",
-        },
-        { to: "/blog", label: "Blog", position: "right" },
+        { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://community.developer.overheid.nl",
-          label: "Community",
+          label: "Forum",
           position: "right",
         },
         {
-          href: "https://developer.overheid.nl/apis",
-          label: "API Catalogus",
+          href: "https://apis.developer.overheid.nl",
+          label: "API's",
           position: "right",
         },
         {
-          href: "https://developer.overheid.nl/apis",
-          label: "Open Source Catalogus",
+          href: "https://oss.developer.overheid.nl",
+          label: "Open Source Software",
+          position: "right",
+        },
+        {
+          href: "https://data.overheid.nl",
+          label: "Open Data",
+          position: "right",
+        },
+        {
+          href: "https://www.pdok.nl",
+          label: "Geodata",
           position: "right",
         },
       ],
@@ -177,6 +172,10 @@ const config: Config = {
             {
               label: "GitHub",
               href: "https://github.com/developer-overheid-nl",
+            },
+            {
+              label: "Mastodon",
+              href: "https://social.overheid.nl/@developer",
             },
           ],
         },

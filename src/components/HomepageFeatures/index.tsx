@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
         Lees artikelen over diverse onderwerpen zoals ...
       </>
     ),
-    link: '/docs',
+    link: '/kennisbank',
     label: 'Lees onze artikelen',
   },
   {

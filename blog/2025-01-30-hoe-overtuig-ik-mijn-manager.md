@@ -3,6 +3,7 @@ slug: hoe-overtuig-ik-mijn-manager
 authors: [tom-ootes, opensourcewerken]
 tags: [open-source]
 date: 2025-01-30
+draft: true
 ---
 
 # Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?
