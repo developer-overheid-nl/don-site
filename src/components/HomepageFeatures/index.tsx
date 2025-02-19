@@ -19,11 +19,11 @@ const FeatureList: FeatureItem[] = [
     alt: '',
     description: (
       <>
-        Lees artikelen over diverse onderwerpen zoals ...
+        Tutorials, tools, code voorbeelden en meer. Alles wat je nodig hebt om aan de slag te gaan met software van en voor de overheid.
       </>
     ),
     link: '/kennisbank',
-    label: 'Lees onze artikelen',
+    label: 'Ga naar de kennisbank',
   },
   {
     title: 'Onze community',
@@ -31,11 +31,11 @@ const FeatureList: FeatureItem[] = [
     alt: '',
     description: (
       <>
-        Ga in gesprek met andere developers en vind hier getting started guides, tutorials en tools.
+        Hulp nodig? Ga in gesprek met ons team of andere developers die actief zijn in het publieke domein op ons Discourse forum.
       </>
     ),
     link: 'https://community.developer.overheid.nl/',
-    label: 'Ga naar de community',
+    label: 'Ga naar het forum',
   },
   {
     title: 'Vind een API',
@@ -43,11 +43,11 @@ const FeatureList: FeatureItem[] = [
     alt: '',
     description: (
       <>
-        Bekijk welke API's er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten.
+        Bekijk welke API's van de overheid er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten.
       </>
     ),
     link: '/apis',
-    label: 'Zoek API\'s',
+    label: 'Ga naar het API register',
   },
   {
     title: 'Vind een repository',
@@ -55,11 +55,11 @@ const FeatureList: FeatureItem[] = [
     alt: '',
     description: (
       <>
-        Vind bestaande repositories om bij aan te haken en ontdek wat er binnen welke organisatie beschikbaar is.
+        Vind, verbeter of hergebruik bestaande Open Source projecten van de overheid in het Open Source Software register.
       </>
     ),
     link: '/repositories',
-    label: 'Zoek repositories',
+    label: 'Ga naar het OSS register',
   },
 ];
 

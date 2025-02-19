@@ -19,7 +19,7 @@ function HomepageHeader() {
       <div className="container">
         <p className={styles.intro}>
           Informatie, bronnen en tools van de <strong className={styles.intro__highlight}>overheid voor ontwikkelaars</strong> door 
-          Kennisplatform API's, Digilab, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsinstanties.
+          Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.
         </p>
       </div>
     </header>
@@ -30,8 +30,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Ontwikkelaarsportaal voor de developer bij de overheid`}
-      description="Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.">
+      title={`Developer Portal van de Nederlandse Overheid`}
+      description="Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.">
       <main>
         <HomepageHeader />
         <HomepageFeatures />
