@@ -70,9 +70,9 @@ const config: Config = {
           editUrl:
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
           // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
+          onInlineTags: "throw",
+          onInlineAuthors: "throw",
+          onUntruncatedBlogPosts: "throw",
         },
         pages: {},
         sitemap: {},

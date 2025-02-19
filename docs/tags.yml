@@ -1,104 +1,90 @@
 api:
   label: "API"
-  permalink: "/api"
   description: "API"
 rest:
   label: "REST API design"
-  permalink: "/rest"
   description: "REST API design"
 oas:
   label: "OpenAPI Specification"
-  permalink: "/oas"
   description: "OpenAPI Specification related docs"
 forum-standaardisatie:
   label: "Forum Standaardisatie"
-  permalink: "/forum-standaardisatie"
   description: "Het Forum Standaardisatie is een adviescommissie met deskundigen uit diverse overheidsorganisaties, het bedrijfsleven en de wetenschap."
 adr:
   label: "API Design Rules"
-  permalink: "/api-design-rules"
   description: "REST-API Design Rules is een lijst afspraken die ontwikkelaars volgen tijdens het bouwen van een REST-API voor de publieke sector."
 open-source:
   label: "Open Source"
-  permalink: "/open-source"
   description: "Open Source."
 accessibility:
   label: "Accessibility"
-  permalink: "/accessibility"
   description: "Accessibility/ toegankelijkheid."
 cli:
   label: "CLI"
-  permalink: "/cli"
   description: "Command line interface."
 front-end:
   label: "Front-end"
-  permalink: "/front-end"
   description: "Front-end."
 wcag:
   label: "WCAG"
-  permalink: "/wcag"
   description: "WCAG."
 git:
   label: "Git"
-  permalink: "/git"
   description: "Git."
 html:
   label: "HTML"
-  permalink: "/html"
   description: "HTML."
 publiccode:
   label: "PublicCode"
-  permalink: "/publiccode"
   description: "Publiccode"
 publiccode-yml:
   label: "publiccode.yml"
-  permalink: "/publiccode-yml"
   description: "Publiccode.yml"
 security:
   label: "Security"
-  permalink: "/security"
   description: "Security."
 security-by-design:
   label: "Security By Design"
-  permalink: "/security-by-design"
   description: "Security By Design."
 ciso:
   label: "Ciso"
-  permalink: "/ciso"
   description: "Chief information security officer."
 community:
   label: "Community"
-  permalink: "/community"
   description: "Community."
 monitoring:
   label: "Monitoring"
-  permalink: "/monitoring"
   description: "Monitoring."
 eu:
   label: "Europe"
-  permalink: "/eu"
   description: "Europa."
 ci/cd:
   label: "CI/CD"
-  permalink: "/ci-cd"
   description: "CI/CD."
 go:
   label: "Golang"
-  permalink: "/golang"
   description: "The programming language Go (Golang)."
 license:
   label: "License"
-  permalink: "/license"
   description: "Software licenses."
 msa:
   label: "Microservices Architectuur"
-  permalink: /msa
   description: "Microservices Architectuur"
 nl-design-system:
   label: "NL Design System"
-  permalink: /nlds
   description: "NL Design System community"
 data-bij-de-bron:
   label: "Data bij de Bron"
-  permalink: "/data-bij-de-bron"
   description: "Het principe Data bij de Bron"
+validator:
+  label: "Validator"
+golang:
+  label: "Golang"
+vscode:
+  label: "VS Code"
+vite:
+  label: "Vite"
+nvm:
+  label: "NVM"
+nodejs:
+  label: "Node.js"
