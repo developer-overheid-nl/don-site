@@ -18,8 +18,8 @@ function HomepageHeader() {
       ></script>
       <div className="container">
         <p className={styles.intro}>
-          Informatie en tools van de <strong className={styles.intro__highlight}>overheid voor ontwikkelaars</strong> door 
-          Kennisplatform API's, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.
+          Informatie, bronnen en tools van de <strong className={styles.intro__highlight}>overheid voor ontwikkelaars</strong> door 
+          Kennisplatform API's, Digilab, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsinstanties.
         </p>
       </div>
     </header>

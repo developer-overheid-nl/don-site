@@ -1,4 +1,6 @@
 # Kennisbank
 
-- [API's](./docs/apis)
-- [Security](./docs/security)
+- [Algemeen](/kennisbank/algemeen)
+- [API's](/kennisbank/apis)
+- [Frontend](/kennisbank/frontend)
+- [Infra](/kennisbank/infra)

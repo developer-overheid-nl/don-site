@@ -7,21 +7,21 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Developer.overheid.nl",
   customFields: {
-    siteName: 'Ontwikkelaarsportaal'
+    siteName: 'Developer Portal'
   },
-  tagline: "Voor de developer bij de overheid",
+  tagline: "Eén plek voor developers die voor of met de overheid ontwikkelen",
   organizationName: "developer.overheid.nl",
   favicon: "favicon.ico",
   headTags: [],
 
   // Set the production url of your site here
-  url: "https://don.apps.digilab.network",
+  url: "https://developer.overheid.nl",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -51,6 +51,8 @@ const config: Config = {
       "classic",
       {
         docs: {
+          path: 'docs',
+          routeBasePath: 'kennisbank',
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -100,16 +102,16 @@ const config: Config = {
       title: "Home",
       items: [
         {
-          to: '/docs',
+          to: '/kennisbank',
           label: 'Kennisbank',
           position: 'left',
-          activeBaseRegex: `/docs`,
+          activeBaseRegex: `/kennisbank`,
         },
         {
           to: '/communities',
           label: 'Communities',
           position: 'left',
-          activeBaseRegex: `/communities/`,
+          activeBaseRegex: `/communities`,
         },
         { to: "/blog", label: "Blog", position: "left" },
         {

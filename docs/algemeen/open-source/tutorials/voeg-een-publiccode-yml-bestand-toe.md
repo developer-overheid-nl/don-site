@@ -5,7 +5,6 @@ tags:
   - "vscode"
   - "tutorial"
   - "json-schema"
-title: "Voeg een publiccode.yml toe"
 sidebar_position: 1
 ---
 
@@ -41,7 +40,7 @@ Open je project in VSCode en voeg een bestand toe aan de root van je project met
 
 ### Stap 2 - Kopieer ons voorbeeld
 
-Kopieer ons voorbeeld op [deze pagina](../standaarden/publiccode-yml/example). En plak deze in jouw `publiccode.yml`-bestand.
+Kopieer ons voorbeeld op [deze pagina](../standaarden/publiccode-yml). En plak deze in jouw `publiccode.yml`-bestand.
 
 ### Stap 3 - Pas het voorbeeld aan
 

@@ -1,7 +1,3 @@
----
-hide_table_of_contents: true
----
-
 # Intentieverklaring API Strategie
 
 In onze visie zal de digitale overheid de komende jaren gegevens en data steeds meer veilig en efficiënt uitwisselen door applicaties zoveel mogelijk te scheiden van de data, en deze data bij de bron te bewaren. Voorzieningen gaan data pas ophalen bij de bron, zodra deze nodig is.
@@ -12,9 +8,19 @@ Om deze data-uitwisseling mogelijk te maken, zijn platformen, standaarden en API
 
 De intentieverklaring is opgesteld door het Kennisplatform API's in opdracht van het Ministerie van BZK. Het Kennisplatform API's is een samenwerkingsverband dat zich inzet voor het bevorderen van de uitwisseling van data en diensten binnen de overheid door middel van standaarden en API's.
 
-## De Intentieverklaring API Strategie is getekend door
+## Deelnemers
 
-@ TODO Logo's
+De Intentieverklaring API Strategie is getekend door onderstaande organisaties:
+
+- Forum Standaardisatie (Larissa Zegveld, voorzitter)
+- Logius (Ing. P.J. den Held RI, Directeur Digitale Programma's)
+- SVB (Britt van den Berg, CIO)
+- Kadaster (Rob Agelink, CDO)
+- VNG Realisatie (Theo Peters, CTO)
+- RVIG (Michiel van der Veen, directeur Innovatie en Ontwikkeling)
+- KVK (Marije Hovestad, Directeur Dataverstrekking)
+- Ministerie van Justitie en Veiligheid (Raymond Kers)
+- Geonovum (Rob van de Velde, directeur)
 
 ## Meedoen?
 

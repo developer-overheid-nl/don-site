@@ -6,6 +6,7 @@ tags:
   - "privacy"
   - "data-bij-de-bron"
 title: "FSC (Federated Service Connectivity)"
+sidebar_position: 20
 ---
 
 :::info[**TL;DR**]

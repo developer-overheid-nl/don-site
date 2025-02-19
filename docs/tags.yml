@@ -88,3 +88,15 @@ nvm:
   label: "NVM"
 nodejs:
   label: "Node.js"
+fsc:
+  label: "FSC"
+gegevensuitwisseling:
+  label: "Gegevensuitwisseling"
+digikoppeling:
+  label: "Digikoppeling"
+privacy:
+  label: "Privacy"
+tutorial:
+  label: "Tutorial"
+json-schema:
+  label: "JSON Schema"
