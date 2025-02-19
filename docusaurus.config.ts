@@ -5,10 +5,14 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Developer Portal van de Nederlandse Overheid",
-  tagline:
-    "Eén centrale plek voor de developer die voor of met de overheid ontwikkelt ",
+  title: "Developer.overheid.nl",
+  customFields: {
+    siteName: 'Ontwikkelaarsportaal'
+  },
+  tagline: "Voor de developer bij de overheid",
+  organizationName: "developer.overheid.nl",
   favicon: "favicon.ico",
+  headTags: [],
 
   // Set the production url of your site here
   url: "https://don.apps.digilab.network",
@@ -68,7 +72,17 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/don-social-card.png",
+    metadata: [
+      {
+        property: 'og:title',
+        content: 'Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid',
+      },
+      {
+        name: 'twitter:image:alt', 
+        content: 'Ontwikkelaarsportaal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
+      }
+    ],
     navbar: {
       title: "Home",
       items: [
@@ -135,6 +149,20 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [
+        {
+          title: "Mede mogelijk gemaakt door:",
+          items: [
+            {
+              html: `
+              <div class="sponsors">
+                <img class="sponsors__logo" src="/img/logo-bzk.png" alt="Logo van Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" />
+                <img class="sponsors__logo" src="/img/logo-vng.svg" alt="Logo van Vereniging van Nederlandse Gemeenten" />
+                <img class="sponsors__logo" src="/img/Logo_Forum_Standaardisatie_RGB_wit.png" alt="Logo forum voor standaardisatie" />
+              </div>
+              `,
+            }
+          ]
+        },
         {
           title: "Community",
           items: [

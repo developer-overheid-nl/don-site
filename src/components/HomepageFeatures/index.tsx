@@ -6,6 +6,7 @@ import styles from './styles.module.css';
 type FeatureItem = {
   title: string;
   image?: string;
+  alt?: string;
   description: JSX.Element;
   link: string;
   label?: string;
@@ -13,8 +14,21 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'Kennisbank',
+    image: '/img/boek-opengeslagen.svg',
+    alt: '',
+    description: (
+      <>
+        Lees artikelen over diverse onderwerpen zoals ...
+      </>
+    ),
+    link: '/docs',
+    label: 'Lees onze artikelen',
+  },
+  {
     title: 'Onze community',
     image: '/img/tekstballonnen-met-punten.svg',
+    alt: '',
     description: (
       <>
         Ga in gesprek met andere developers en vind hier getting started guides, tutorials en tools.
@@ -26,6 +40,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Vind een API',
     image: '/img/ict.svg',
+    alt: '',
     description: (
       <>
         Bekijk welke API's er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten.
@@ -37,6 +52,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Vind een repository',
     image: '/img/computercode.svg',
+    alt: '',
     description: (
       <>
         Vind bestaande repositories om bij aan te haken en ontdek wat er binnen welke organisatie beschikbaar is.
@@ -50,15 +66,6 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, image, description, link, label}: FeatureItem) {
   return (
     <Card href={link} heading={title} description={description} imageSrc={image} linkLabel={label} />
-    // <div className={clsx('col col--4')}>
-    //   <div className="text--center">
-    //     <Svg className={styles.featureSvg} role="img" />
-    //   </div>
-    //   <div className="text--center padding-horiz--md">
-    //     <Heading as="h3">{title}</Heading>
-    //     <p>{description}</p>
-    //   </div>
-    // </div>
   );
 }
 
