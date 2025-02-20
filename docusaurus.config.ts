@@ -36,7 +36,7 @@ const config: Config = {
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     [
-      "@docusaurus/plugin-content-docs",
+      '@docusaurus/plugin-content-docs',
       {
         id: 'communities',
         path: 'communities',
