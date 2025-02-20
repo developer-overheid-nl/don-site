@@ -1,0 +1,119 @@
+accessibility:
+  label: Accessibility
+  description: Accessibility / toegankelijkheid.
+adr:
+  label: API Design Rules
+api:
+  label: API
+  description: Application Programming Interface
+api-design:
+  label: API Design
+azure:
+  label: Azure
+ci/cd:
+  label: CI/CD
+  description: Continuous Integration / Continuous Deployment
+ciso:
+  label: Ciso
+  description: Chief information security officer
+cli:
+  label: CLI
+  description: Command line interface
+community:
+  label: Community
+data-bij-de-bron:
+  label: Data bij de Bron
+  description: Het principe Data bij de Bron
+dcat:
+  label: DCAT
+design-system:
+  label: Design System
+development:
+  label: Development
+digikoppeling:
+  label: Digikoppeling
+eu:
+  label: Europe
+forum-standaardisatie:
+  label: Forum Standaardisatie
+front-end:
+  label: Front-end
+  description: Front-end.
+fsc:
+  label: FSC
+gegevensuitwisseling:
+  label: Gegevensuitwisseling
+git:
+  label: Git
+golang:
+  label: Golang
+gouden-api:
+  label: Gouden API
+html:
+  description: HTML.
+  label: HTML
+infra:
+  label: Infra
+interoperability:
+  label: Interoperability
+ipv6:
+  label: IPv6
+json-schema:
+  label: JSON Schema
+kubernetes:
+  label: Kubernetes
+license:
+  label: License
+meetups:
+  label: Meetups
+monitoring:
+  label: Monitoring
+msa:
+  label: Microservices Architectuur
+nl-design-system:
+  label: NL Design System
+nodejs:
+  label: Node.js
+nvm:
+  label: NVM
+oas:
+  label: OpenAPI Specification
+open-source:
+  label: Open Source
+openapi:
+  label: OpenAPI
+orkestratie:
+  label: Orkestratie
+portal:
+  label: Portal
+privacy:
+  label: Privacy
+publiccode:
+  label: PublicCode
+publiccode-yml:
+  label: publiccode.yml
+rest:
+  label: REST API design
+security:
+  label: Security
+security-by-design:
+  label: Security By Design
+tutorial:
+  label: Tutorial
+vng:
+  label: VNG
+validator:
+  label: Validator
+vite:
+  label: Vite
+vscode:
+  label: VS Code
+wcag:
+  label: WCAG
+  description: Web Content Accessibility Guidelines
+ospo:
+  label: OSPO
+  description: Open Source Program Office
+foss:
+  label: FOSS
+  description: Free and Open Source Software
