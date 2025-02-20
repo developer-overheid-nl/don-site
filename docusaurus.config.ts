@@ -36,12 +36,14 @@ const config: Config = {
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     [
-      "@docusaurus/plugin-content-docs",
+      '@docusaurus/plugin-content-docs',
       {
-        id: "communities",
-        path: "communities",
-        routeBasePath: "communities",
-        sidebarPath: "./sidebarsCommunities.ts",
+        id: 'communities',
+        path: 'communities',
+        routeBasePath: 'communities',
+        sidebarPath: './sidebarsCommunities.ts',
+        tags: '../tags.yml',
+        onInlineTags: 'throw',
         // ... other options
       },
     ],
@@ -54,6 +56,8 @@ const config: Config = {
           path: "docs",
           routeBasePath: "kennisbank",
           sidebarPath: "./sidebars.ts",
+          tags: '../tags.yml',
+          onInlineTags: 'throw',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -72,6 +76,7 @@ const config: Config = {
           editUrl:
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
           // Useful options to enforce blogging best practices
+          tags: "../tags.yml",
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "throw",
