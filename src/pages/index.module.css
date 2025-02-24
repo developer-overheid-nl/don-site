@@ -17,7 +17,7 @@
 }
 
 .intro {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3.333vw, 2rem);
   max-width: 60rem;
   color: var(--don-lichtblauw-200);
   margin: 0;

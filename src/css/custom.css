@@ -142,14 +142,22 @@
 }
 
 .ro-header {
-  display: grid;
-  grid-template-columns: calc(50% - 25px) 50px calc(50% - 25px);
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
-.ro-header__word-mark {
-  margin-block-start: 1.5rem;
-  margin-inline-end: 1rem;
+@media (min-width: 800px) {
+  .ro-header {
+    display: grid;
+    grid-template-columns: calc(50% - 25px) 50px calc(50% - 25px);
+    justify-content: space-between;
+  }
+
+  .ro-header__word-mark {
+    margin-block-start: 1.5rem;
+    margin-inline-end: 1rem;
+  }
 }
 
 .ro-header__site-name {

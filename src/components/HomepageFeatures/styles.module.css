@@ -7,6 +7,29 @@
 
 .row {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 381px) {
+  .row {
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media (min-width: 721px) {
+  .row {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1065px) {
+  .row {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 }
