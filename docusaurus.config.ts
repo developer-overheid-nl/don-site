@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Developer.overheid.nl",
   customFields: {
-    siteName: 'Developer Portal'
+    siteName: "Developer Portal",
   },
   tagline: "Eén plek voor developers die voor of met de overheid ontwikkelen",
   organizationName: "developer.overheid.nl",
@@ -33,15 +33,15 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ["@docusaurus/theme-mermaid"],
+  themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'communities',
-        path: 'communities',
-        routeBasePath: 'communities',
-        sidebarPath: './sidebarsCommunities.ts',
+        id: "communities",
+        path: "communities",
+        routeBasePath: "communities",
+        sidebarPath: "./sidebarsCommunities.ts",
         // ... other options
       },
     ],
@@ -51,8 +51,8 @@ const config: Config = {
       "classic",
       {
         docs: {
-          path: 'docs',
-          routeBasePath: 'kennisbank',
+          path: "docs",
+          routeBasePath: "kennisbank",
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -86,31 +86,60 @@ const config: Config = {
   ],
 
   themeConfig: {
+    typesense: {
+      typesenseCollectionName: "developer_overheid",
+      typesenseServerConfig: {
+        nodes: [
+          {
+            host: "search.don.apps.digilab.network",
+            port: 443,
+            protocol: "http",
+          },
+          // {
+          //   host: "localhost",
+          //   port: 8108,
+          //   protocol: "http",
+          // },
+        ],
+        apiKey: "xyz",//TODO: replace with original key
+      },
+      typesenseSearchParameters: {
+        query_by:
+          "hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5",
+        filter_by: "",
+        multi_search: true,
+      },
+      externalUrlRegex: "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
+      contextualSearch: false,
+      searchPagePath: "search",
+    },    
     // Replace with your project's social card
     image: "img/don-social-card.png",
     metadata: [
       {
-        property: 'og:title',
-        content: 'Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid',
+        property: "og:title",
+        content:
+          "Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid",
       },
       {
-        name: 'twitter:image:alt', 
-        content: 'Ontwikkelaarsportaal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
-      }
+        name: "twitter:image:alt",
+        content:
+          "Ontwikkelaarsportaal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.",
+      },
     ],
     navbar: {
       title: "Home",
       items: [
         {
-          to: '/kennisbank',
-          label: 'Kennisbank',
-          position: 'left',
+          to: "/kennisbank",
+          label: "Kennisbank",
+          position: "left",
           activeBaseRegex: `/kennisbank`,
         },
         {
-          to: '/communities',
-          label: 'Communities',
-          position: 'left',
+          to: "/communities",
+          label: "Communities",
+          position: "left",
           activeBaseRegex: `/communities`,
         },
         { to: "/blog", label: "Blog", position: "left" },
@@ -155,8 +184,8 @@ const config: Config = {
                 <img class="sponsors__logo" src="/img/Logo_Forum_Standaardisatie_RGB_wit.png" alt="Logo forum voor standaardisatie" />
               </div>
               `,
-            }
-          ]
+            },
+          ],
         },
         {
           title: "Community",
