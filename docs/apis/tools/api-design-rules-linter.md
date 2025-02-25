@@ -24,7 +24,7 @@ Sommige IDEs ondersteunen Spectral via extensies of plugins. Eén daarvan is VSC
 $ code --install-extension stoplight.spectral
 
 # Download the ruleset to your project home
-$ curl https://developer.overheid.nl/static/adr/ruleset.yaml > .spectral.yml
+$ curl -L https://developer.overheid.nl/static/adr/ruleset.yaml > .spectral.yml
 
 # Run the IDE
 $ code
@@ -36,4 +36,20 @@ $ code
 $ docker run --rm --entrypoint=sh \
     -v $(pwd)/api:/locale stoplight/spectral:5.9.1 \
     -c "spectral lint -r https://developer.overheid.nl/static/adr/ruleset.yaml"
+```
+
+## GitLab
+
+```yaml
+spectral-lint:
+  image: node:20
+  stage: spectral_lint
+  script:
+    - npm install -g @stoplight/spectral-cli
+    - curl -L https://developer.overheid.nl/static/adr/ruleset.yaml > .spectral.yml
+    - spectral lint -r .spectral.yml $OAS_URL_OR_FILE
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: always
+    - when: manual
 ```
