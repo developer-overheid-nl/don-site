@@ -38,6 +38,8 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
+typesense-data/
+
 # Dependency directories
 node_modules/
 jspm_packages/
@@ -73,7 +75,7 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
+# .env
 .env.development.local
 .env.test.local
 .env.production.local
