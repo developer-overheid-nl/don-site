@@ -9,7 +9,7 @@ const config: Config = {
   customFields: {
     siteName: 'Developer Portal'
   },
-  tagline: "Eén plek voor developers die voor of met de overheid ontwikkelen",
+  tagline: "Eén plek voor developers bij de overheid",
   organizationName: "developer.overheid.nl",
   favicon: "favicon.ico",
   headTags: [],
