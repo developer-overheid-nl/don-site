@@ -15,6 +15,7 @@ function Root({ children }: PropsWithChildren<object>) {
       <header className='ro-header container'>
         {/* <h1 className='ro-header__site-name'><img src='/img/logo.svg' className='ro-header__site-logo' alt='Logo Developer Overheid' />Developer Overheid</h1> */}
         <div className='ro-header__word-mark'>
+          <img className='ro-header__site-logo' src='/img/logo-don.svg' alt='Logo Developer.overheid.nl' />
           <h1 className='ro-header__site-name' title={`${siteConfig.title} | ${siteConfig.customFields.siteName}`}>{`${siteConfig.customFields.siteName}`}</h1>
           <p className='ro-header__pay-off'>{siteConfig.tagline}</p>
         </div>
