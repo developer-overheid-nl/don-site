@@ -107,7 +107,7 @@ const config: Config = {
           // },
         ],
         // apiKey: "xyz",
-        apiKey: "BtVmZcPssnormhHT0JuuLMMfQQHyK4ap",
+        apiKey: "wpxe5EBzgodXiGygAr5jIYIAXNErTg3w",
       },
       typesenseSearchParameters: {
         query_by:
