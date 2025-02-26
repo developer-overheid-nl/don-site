@@ -1,18 +1,16 @@
 ---
-# slug: gouden-api-award-voor-cpa-register-api
 authors: [kennisplatform-apis]
 tags: [gouden-api]
-date: 2024-12-11
 ---
-# Gouden API Award voor CPA Register API        
+# Gouden API Award voor CPA Register API
 
 ![gouden api](https://www.geonovum.nl/uploads/styles/auto_1600/public/image/2024-12/goudenapigroot.jpg?itok=o0rz1M1t)
 
-Op 11 december 2024, tijdens de IBDS Stelseldag, heeft het Kennisplatform API's de Gouden API Award uitgereikt voor de CPA Register API gemaakt door Justid. Deze API zorgt ervoor dat je eenvoudig digitale contracten kunt maken en beheren voor gegevensuitwisseling op Digikoppeling. Een eervolle vermelding ging naar de Basisregistratie Ondergrond - [Grondwatermonitoring](https://www.geonovum.nl/over-geonovum/actueel/data-over-ondergrond-boven-water-halen) API van TNO die het samengesteld bevragen van grondwatermonitoringsdata mogelijk maakt. Ook de [TOMP-API](https://www.geonovum.nl/index.php/over-geonovum/actueel/mobiliteits-api-met-internationale-allures) van DAT.Mobility voor het slim en efficiënt delen van mobiliteitsdata tussen Mobility-as-a-Service-platforms en vervoersaanbieders, kreeg een eervolle vermelding. 
+Op 11 december 2024, tijdens de IBDS Stelseldag, heeft het Kennisplatform API's de Gouden API Award uitgereikt voor de CPA Register API gemaakt door Justid. Deze API zorgt ervoor dat je eenvoudig digitale contracten kunt maken en beheren voor gegevensuitwisseling op Digikoppeling. Een eervolle vermelding ging naar de Basisregistratie Ondergrond - [Grondwatermonitoring](https://www.geonovum.nl/over-geonovum/actueel/data-over-ondergrond-boven-water-halen) API van TNO die het samengesteld bevragen van grondwatermonitoringsdata mogelijk maakt. Ook de [TOMP-API](https://www.geonovum.nl/index.php/over-geonovum/actueel/mobiliteits-api-met-internationale-allures) van DAT.Mobility voor het slim en efficiënt delen van mobiliteitsdata tussen Mobility-as-a-Service-platforms en vervoersaanbieders, kreeg een eervolle vermelding.
 
 <!-- truncate -->
 
-De Gouden API is een award voor API's die een verschil maken voor de digitale dienstverlening van en met de overheid. API's (Application Programming Interfaces) helpen om digitale gegevens makkelijker herbruikbaar maken voor programmeurs. Zo wordt het eenvoudiger om bijvoorbeeld apps en andere programma's te maken waarin je één of meerdere databronnen hergebruikt. 
+De Gouden API is een award voor API's die een verschil maken voor de digitale dienstverlening van en met de overheid. API's (Application Programming Interfaces) helpen om digitale gegevens makkelijker herbruikbaar maken voor programmeurs. Zo wordt het eenvoudiger om bijvoorbeeld apps en andere programma's te maken waarin je één of meerdere databronnen hergebruikt.
 
 ## Negen nominaties
 
@@ -27,7 +25,7 @@ Het CPA Register is een belangrijke schakel binnen de digitale dienstverlening v
 
 ## Kennisplatform API's
 
-De Gouden API Award is een initiatief van het Kennisplatform API's; onderdeel van programma Data bij de Bron. Het inzetten van API's is niet alleen een praktisch technisch vraagstuk. Het gaat óók over hoe je digitale diensten ontsluit, hoe je deze met elkaar combineert en hoe je de informatiehuishouding inricht. Door afspraken te maken zoals de Nederlandse API Strategie en Design Rules en door kennis te delen, ondersteunen de deelnemers in het Kennisplatform API's soepele, efficiënte èn veilige data-uitwisseling. Met de uitreiking van de Gouden API Award, geeft het Kennisplatform credits aan ontwikkelaars van API's met impact en een goede developer experience. 
+De Gouden API Award is een initiatief van het Kennisplatform API's; onderdeel van programma Data bij de Bron. Het inzetten van API's is niet alleen een praktisch technisch vraagstuk. Het gaat óók over hoe je digitale diensten ontsluit, hoe je deze met elkaar combineert en hoe je de informatiehuishouding inricht. Door afspraken te maken zoals de Nederlandse API Strategie en Design Rules en door kennis te delen, ondersteunen de deelnemers in het Kennisplatform API's soepele, efficiënte èn veilige data-uitwisseling. Met de uitreiking van de Gouden API Award, geeft het Kennisplatform credits aan ontwikkelaars van API's met impact en een goede developer experience.
 
 ## Eerdere uitreikingen
 
