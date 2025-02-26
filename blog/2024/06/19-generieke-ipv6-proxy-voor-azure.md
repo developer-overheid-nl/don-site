@@ -1,8 +1,6 @@
 ---
-slug: generieke-ipv6-proxy-voor-azure
 authors: [digilab]
 tags: [kubernetes, azure, ipv6, infra]
-date: 2024-06-19
 ---
 # Generieke IPv6 proxy voor Azure
 
@@ -18,8 +16,7 @@ Als je een website bezoekt, wordt er op de achtergrond een IP-adres opgezocht da
 
 De Terraform-module zet een virtuele machine op die zowel IPv4 als IPv6 ondersteunt. De machine krijgt een publiek bereikbaar IPv6-adres. Je kunt dit adres gebruiken voor het IPv6 `AAAA` DNS-record. De machine ontvangt een IPv6-request en maakt vervolgens via IPv4 een request naar de IPv4-bestemming. Aangezien de machine aan TLS-passthrough doet is de machine niet in staat om het verkeer te inspecteren.
 
-![ipv6-proxy|390x500](upload://zlBB1nh1w4zmPLF5QuWO5LvQU6n.png)
-
+![ipv6-proxy|390x500](ipv6-proxy.png)
 
 Op deze manier is je website beschikbaar via IPv6, zonder dat je aanpassingen hoeft te doen aan je bestaande (IPv4-only) infrastructuur.
 
@@ -40,6 +37,7 @@ module "ipv6_proxy" {
 De module ondersteunt het ook gelijk een `AAAA` DNS-record aan te maken voor het IPv6-adres dat de proxy toegewezen heeft gekregen. Zie de voorbeelden in de repository van de module om te kijken hoe dat werkt.
 
 ## Limitaties
+
 - doordat er een enkele virtuele machine wordt gebruikt, creëer je een Single Point of Failure.
 - doordat er een enkele virtuele machine wordt gebruikt, is de oplossing niet schaalbaar.
 - door de TLS-passthrough (en geen ondersteuning voor SNI), kun je geen backend selecteren op basis van de hostname / domeinnaam. Al het verkeer gaat naar dezelfde bestemming, en pas daar kan het onderscheid gemaakt worden.
@@ -49,3 +47,6 @@ De module ondersteunt het ook gelijk een `AAAA` DNS-record aan te maken voor het
 - - -
 
 *Wil je gewoon meer weten over Digilab? Neem [contact](https://digilab.overheid.nl/contact/) op of log met je Pleio-account in bij onze [online community](https://digilab.overheid.nl/chat/).*
+
+:::note[Dit artikel verscheen eerder op [digilab.overheid.nl](https://digilab.overheid.nl/blog/azure-generieke-ipv6-proxy/)]
+:::

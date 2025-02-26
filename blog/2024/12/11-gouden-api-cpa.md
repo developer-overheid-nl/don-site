@@ -1,5 +1,5 @@
 ---
-slug: gouden-api-award-voor-cpa-register-api
+# slug: gouden-api-award-voor-cpa-register-api
 authors: [kennisplatform-apis]
 tags: [gouden-api]
 date: 2024-12-11
@@ -19,6 +19,7 @@ De Gouden API is een award voor API's die een verschil maken voor de digitale di
 Voor de verkiezing van de Gouden API Award in 2024 waren in totaal negen API's genomineerd. De jury, die bestond uit voorzitter Michiel Steltman van Forum Standaardisatie, Yvana Wagter van CGI en winnaar van de Gouden API Award in 2023: Ronald Ham van SURF, beoordeelden de negen genomineerde API's op hun waarde voor de gebruiker, hun toegankelijkheid, vindbaarheid, de praktische implementeerbaarheid en de kwaliteit. Daarbij kwam de CPA Register API als winnaar uit de bus.
 
 ## Een API zoals API's bedoeld zijn
+
 Het CPA Register is een belangrijke schakel binnen de digitale dienstverlening van de overheid. De jury zei hierover: "Om in een digitaal stelsel te kunnen participeren zijn zogenaamde Collaboration Protocol Agreements (CPA's) onmisbaar. Deze CPA Register API helpt de bijna 1000 organisaties die geregistreerd staan in het register om snel en efficiënt CPA's aan te maken en te beheren. De developer experience van deze API is positief. De API is toegankelijk en goed implementeerbaar. Er is duidelijk aandacht besteed aan details. Grondig stuk werk! Echt een API zoals API's bedoeld zijn."
 
 ![foto van genomineerden](https://www.geonovum.nl/uploads/inline/goudenapi.jpg)

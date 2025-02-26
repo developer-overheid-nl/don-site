@@ -19,6 +19,8 @@ ciso:
 cli:
   label: CLI
   description: Command line interface
+cloudevents:
+  label: CloudEvents
 community:
   label: Community
 data-bij-de-bron:
@@ -38,9 +40,9 @@ forum-standaardisatie:
   label: Forum Standaardisatie
 front-end:
   label: Front-end
-  description: Front-end.
 fsc:
   label: FSC
+  description: Federated Service Connectivity
 gegevensuitwisseling:
   label: Gegevensuitwisseling
 git:

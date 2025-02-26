@@ -1,14 +1,9 @@
 ---
-slug: hoe-overtuig-ik-mijn-manager
 authors: [tom-ootes, opensourcewerken]
 tags: [open-source]
-date: 2025-01-30
 draft: true
 ---
-
 # Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?
-
-## Open Source: steeds belangrijker én wettelijk vastgelegd
 
 Open source werken wint snel aan bekendheid binnen de overheid – en dat is niet zonder reden. Het stelt organisaties in staat van elkaar te leren, en het kan voorkomen dat ze afhankelijk worden van leveranciers. Ook is het inmiddels wettelijk vastgelegd dat overheidsorganisaties open source moeten werken. In 2020 is vastgelegd in de beleidslijn ‘Open, tenzij’, dat software die wordt ontwikkeld door de overheid "open source by default" moet zijn. Ook [onderschrijven](https://opensourcewerken.nl/page/view/b28e707b-2731-49bf-bcc6-ac693f1f250a/overzicht-wet-en-regelgeving) de Wet open overheid (Woo) en Wet hergebruik overheidsinformatie (Who) dat overheidscode openlijk beschikbaar zou moeten zijn. Meer info over waarom open source werken een goed idee is vind je op [opensourcewerken.nl](https://opensourcewerken.nl).
 
@@ -106,7 +101,7 @@ Wat zijn de voordelen die jij zelf ondervindt van open source werken? Laat bijvo
 
 Zo is het belangrijk goed op te letten met persoonlijke data. Het is niet de bedoeling dat er persoonlijke data terecht komt in issues als dit openbaar staat. Gelukkig bestaan er allerlei gidsen die helpen bij open source werken, zoals de [Standaard voor Publieke Code](https://standaardvoorpubliekecode.nl/). Hier staat precies in wat je anders moet doen als je open source werkt.
 
-# Conclusie: bekijk beren op de weg door de ogen van je manager
+## Conclusie: bekijk beren op de weg door de ogen van je manager
 
 Dus, verdiep je in de zorgen die er leven bij jouw manager en adresseer deze. Steek het verhaal positief in: open source werken heeft veel mooie, avontuurlijke kanten. Maar ook bijvoorbeeld voor het werven van talent en PR. Het levert mooie verhalen op.
 

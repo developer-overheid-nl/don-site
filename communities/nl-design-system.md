@@ -5,8 +5,8 @@ tags:
   - "meetups"
   - "nl-design-system"
   - "design-system"
-title: "NL-Design-System"
 ---
+# NL Design System
 
 > **NL Design System is een project dat specialisten van verschillende overheidsorganisaties laat samenwerken aan concrete oplossingen voor websites en applicaties. Denk bijvoorbeeld aan code, ontwerp en richtlijnen.**
 
