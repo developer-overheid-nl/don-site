@@ -128,11 +128,11 @@ const config: Config = {
     metadata: [
       {
         property: 'og:title',
-        content: 'Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid',
+        content: 'Developer.overheid.nl | Developer Portal voor de developer bij de overheid',
       },
       {
         name: 'twitter:image:alt', 
-        content: 'Ontwikkelaarsportaal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
+        content: 'Developer Portal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform APIs, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
       }
     ],
     navbar: {
