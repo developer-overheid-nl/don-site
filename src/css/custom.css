@@ -160,6 +160,12 @@
   }
 }
 
+.ro-header__site-logo {
+  float: inline-start;
+  height: 1.5rem;
+  margin-inline-end: 0.5rem;
+}
+
 .ro-header__site-name {
   font-size: 1.5rem;
   margin-block-end: -0.25rem;
@@ -168,11 +174,6 @@
 .ro-header__pay-off {
   color: var(--don-donkerblauw-500);
   margin: 0;
-}
-
-.ro-header__site-logo {
-  height: 2rem;
-  margin-inline-end: 0.5rem;
 }
 
 .ro-header__ro-logo {

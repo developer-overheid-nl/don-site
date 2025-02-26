@@ -10,10 +10,42 @@ const config: Config = {
   customFields: {
     siteName: 'Developer Portal'
   },
-  tagline: "Eén plek voor developers die voor of met de overheid ontwikkelen",
+  tagline: "Eén plek voor developers bij de overheid",
   organizationName: "developer.overheid.nl",
-  favicon: "favicon.ico",
-  headTags: [],
+  favicon: "favicon.svg",
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon-96x96.png',
+        sizes: '96x96',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'shortcut icon',
+        href: '/favicon.ico',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png',
+        sizes: '180x180',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+    },
+  ],
 
   // Set the production url of your site here
   url: "https://developer.overheid.nl",
@@ -98,11 +130,11 @@ const config: Config = {
     metadata: [
       {
         property: 'og:title',
-        content: 'Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid',
+        content: 'Developer.overheid.nl | Developer Portal voor de developer bij de overheid',
       },
       {
         name: 'twitter:image:alt', 
-        content: 'Ontwikkelaarsportaal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
+        content: 'Developer Portal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform APIs, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
       }
     ],
     navbar: {
