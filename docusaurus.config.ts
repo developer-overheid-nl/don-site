@@ -11,8 +11,40 @@ const config: Config = {
   },
   tagline: "Eén plek voor developers bij de overheid",
   organizationName: "developer.overheid.nl",
-  favicon: "favicon.ico",
-  headTags: [],
+  favicon: "favicon.svg",
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon-96x96.png',
+        sizes: '96x96',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'shortcut icon',
+        href: '/favicon.ico',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png',
+        sizes: '180x180',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+    },
+  ],
 
   // Set the production url of your site here
   url: "https://developer.overheid.nl",
