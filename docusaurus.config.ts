@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import remarkDirectiveSugar from 'remark-directive-sugar';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -64,9 +65,10 @@ const config: Config = {
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
         },
         blog: {
-          blogSidebarCount: 30,
+          blogSidebarCount: 0,
           blogSidebarTitle: "Laatste posts",
           showReadingTime: true,
+          beforeDefaultRemarkPlugins: [remarkDirectiveSugar],
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,

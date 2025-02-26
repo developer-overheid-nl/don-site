@@ -58,7 +58,6 @@ frank-terpstra:
 jaap-hein-wester:
   name: Jaap-Hein Wester
   title: Senior Frontend Developer - Developer Overheid NL
-  url: https://github.com/MrSkippy
   image_url: https://github.com/MrSkippy.png
   page: true
   socials:
@@ -68,10 +67,10 @@ jaap-hein-wester:
 digilab:
   name: Digilab
   title: Innovatiewerkplaats voor het Federatief Datastelsel
-  url: https://digilab.overheid.nl
   image_url: https://social.overheid.nl/system/accounts/avatars/112/552/867/348/125/912/original/4a4f714089a5b239.png
   page: true
   socials:
+    url: https://digilab.overheid.nl
     mastodon: https://social.overheid.nl/@digilab
 
 kennisplatform-apis:
@@ -79,12 +78,14 @@ kennisplatform-apis:
   title: Strategische en tactische vraagstukken rond het ontwikkelen van API's
   image_url: https://developer.overheid.nl/static/images/logo_icon_kpa.1787d5b5302a.png
   page: true
+  socials:
+    url: https://apigov.nl
 
 opensourcewerken:
   name: Open Source Werken
   title: Community voor Open Source werken bij de overheid
-  url: https://opensource.overheid.nl
   image_url: https://social.overheid.nl/system/accounts/avatars/112/292/076/020/535/022/original/e0f2ce016250a43d.jpg
   page: true
   socials:
+    url: https://opensource.overheid.nl
     mastodon: https://social.overheid.nl/@opensource

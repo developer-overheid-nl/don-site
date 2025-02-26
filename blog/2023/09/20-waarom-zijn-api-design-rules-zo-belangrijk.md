@@ -1,8 +1,6 @@
 ---
-slug: waarom-zijn-api-design-rules-zo-belangrijk
 authors: [joost-farla]
 tags: [adr, api-design]
-date: 2023-09-20
 ---
 # Waarom zijn API design rules zo belangrijk?
 

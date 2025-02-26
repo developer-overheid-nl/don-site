@@ -2,11 +2,8 @@
 slug: 5-nadelen-van-eilandjesvorming-en-3-tips-om-onderlingen-samenwerking-te-stimuleren
 authors: [opensourcewerken]
 tags: [development]
-date: 2024-09-30
 ---
-# 5 nadelen van "eilandjesvorming" en 3 tips om onderlinge samenwerking te stimuleren        
-
-*Dit artikel verscheen eerder op [**opensourcewerken.nl**](https://opensourcewerken.nl/blog/view/588d9a2e-1fba-4b85-b612-59268237c570/5-nadelen-van-eilandjesvorming-en-3-tips-van-developer-overheid).*
+# 5 nadelen van "eilandjesvorming" en 3 tips om onderlinge samenwerking te stimuleren
 
 Terwijl software development bij uitstek een werkveld is waarin samenwerking vereist is, kampen veel organisaties met "eilandjesvorming". Teams werken geïsoleerd van elkaar, met weinig onderlinge afstemming. Dit leidt tot een gebrek aan eenheid in het gebruik van technieken, zoals programmeertalen en libraries.
 
@@ -63,3 +60,6 @@ Kortom, met deze aanpak profiteren zowel management als developers van een meer 
 ### Jouw ervaring?
 
 Heb jij in jouw organisatie ook ervaring met een eilandjescultuur, hebben jullie manieren gevonden om dit aan te pakken? We horen graag jullie inzichten.
+
+:::note[Dit artikel verscheen eerder op [opensourcewerken.nl](https://opensourcewerken.nl/blog/view/588d9a2e-1fba-4b85-b612-59268237c570/5-nadelen-van-eilandjesvorming-en-3-tips-van-developer-overheid)]
+:::

@@ -16,7 +16,7 @@ Een OpenAPI Specificatie is nuttig voor ontwikkelaars en gebruikers van een API:
 
 ## Makkelijk genereren met de OAS Generator
 
-Om het maken van een OAS Specificatie makkelijker te maken hebben wij de [OAS Generator](https://developer.overheid.nl/tools/oas-generator) gebouwd. Met deze tool creëer je gemakkelijk een lijstje met resources; de tool genereert automatisch de benodigde endpoints voor je.
+Om het maken van een OAS Specificatie makkelijker te maken hebben wij de [OAS Generator](https://apis.developer.overheid.nl/tools/oas-generator) gebouwd. Met deze tool creëer je gemakkelijk een lijstje met resources; de tool genereert automatisch de benodigde endpoints voor je.
 
 ## Meer lezen
 
