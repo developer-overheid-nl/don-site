@@ -98,7 +98,7 @@ const config: Config = {
           {
             host: "search.don.apps.digilab.network",
             port: 443,
-            protocol: "http",
+            protocol: "https",
           },
           // {
           //   host: "localhost",
