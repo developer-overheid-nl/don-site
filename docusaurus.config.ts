@@ -106,7 +106,8 @@ const config: Config = {
           //   protocol: "http",
           // },
         ],
-        apiKey: "xyz",//TODO: replace with original key
+        // apiKey: "xyz",
+        apiKey: "BtVmZcPssnormhHT0JuuLMMfQQHyK4ap",
       },
       typesenseSearchParameters: {
         query_by:
