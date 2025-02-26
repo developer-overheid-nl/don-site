@@ -65,7 +65,7 @@ const config: Config = {
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
         },
         blog: {
-          blogSidebarCount: 0,
+          blogSidebarCount: 20,
           blogSidebarTitle: "Laatste posts",
           showReadingTime: true,
           beforeDefaultRemarkPlugins: [remarkDirectiveSugar],
