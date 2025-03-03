@@ -4,7 +4,73 @@ tags:
 ---
 # CONTRIBUTING.md
 
-Voorbeeld van [OSPO-NL](https://github.com/ospo-nl):
+Een goede CONTRIBUTING.md helpt potentiële bijdragers om efficiënt en effectief bij te dragen aan een project. Hier zijn de belangrijkste onderdelen die je erin kunt opnemen:
+
+## Wat moet je erin opnemen?
+
+### 1. Introductie
+
+Een korte uitleg over het project en waarom bijdragen belangrijk zijn. Eventueel een verwijzing naar de doelstellingen of missie van het project.
+
+### 2. Hoe je kunt bijdragen
+
+- Bijdragen aan de code (bugfixes, nieuwe features, refactoring).
+- Aandragen van issues (feature requests).
+- Deelnemen aan discussies (op Mattermost, Github, Slack of een ander platform).
+- Documentatie verbeteringen.
+- Testen en bug reports indienen.
+- Design, UX of accessibility verbeteringen.
+
+### 3. Voordat je begint
+
+Waar moet je rekening mee houden als je een bijdrage wilt doen? Verwijs naar de lijst met bestaande issues en leg uit hoe je een nieuwe issue opent. Geef aan of je eerst met de maintainers dient te overleggen voordat je een grote feature aandraagt.
+
+### 4. Richtlijnen voor bijdragen
+
+- Code style: verwijzing naar linters, formattering, en naming conventions.
+- Commit messages: bijvoorbeeld conventies zoals [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+- Pull requests: hoe je een PR indient.
+- Reviewproces: hoe de feedbackloop werkt en wie reviews uitvoert.
+
+### 5. Opzetten van de ontwikkelomgeving
+
+- Hoe je het project lokaal installeert en draait.
+- Vereisten zoals dependencies, SDK's, en buildtools.
+- Eventuele scripts om het project snel op te zetten. 
+- Heb je documentatie voor het lokaal opzetten van het project in de `README.md`? Link hier dan vooral naartoe.
+
+### 6. Tests en kwaliteitscontrole
+
+- Hoe je tests draait en toevoegt.
+- Code coverage en teststrategie (unit, integration, e2e).
+- Continuous Integration: welke checks en pipelines draaien er? 
+- Zorg ervoor dat bijdragers zelf alle tests lokaal kunnen vinden en draaien.
+
+### 7. Gedragscode
+
+- Verwijzing naar een `CODE_OF_CONDUCT.md` (indien van toepassing). 
+- Noem de basisprincipes voor een inclusieve en respectvolle samenwerking.
+
+### 8. Licentie en juridische zaken
+
+- Vertel onder welke licentie bijdragen vallen.
+- Of bijdragers een Contributor License Agreement (CLA) moeten tekenen.
+
+### 9. Bestuur
+
+Wie bepaalt welke bijdragen uiteindelijk wel en niet worden geaccepteerd? Verwijs eventueel naar de `GOVERNANCE.md`. Vermeld onder dit kopje ook wie er betaalt voor het beoordelen en verwerken van de bijdragen. Als meerdere organisaties bij het project betrokken zijn, neem ze dan op in een lijst en benoem hun rollen.
+
+### 10. Contact en ondersteuning
+
+- Hoe en waar je vragen stelt (bijv. Discord, Slack, GitHub Discussions).
+- Wie je kunt benaderen voor hulp. 
+- Vermeld hier ook contactgegevens (bijv. e-mailadressen)
+- Voeg hier ook links toe naar communicatiekanalen (Slack, Mattermost, Mastodon).
+
+## Voorbeeld
+
+<details>
+  <summary>Voorbeeld: de `CONTRIBUTING.md` [OSPO-NL](https://github.com/ospo-nl):</summary>
 
 ```markdown showLineNumbers title="./CONTRIBUTING.md"
 # Contributing Guide
@@ -52,7 +118,7 @@ Guide.
 > - Verwijs naar dit project in de readme van uw project
 > - Noem het project op lokale meetups en vertel het aan je vrienden/collega's
 
-## Basis regels
+## Basisregels
 
 ### Gedragscode
 
@@ -257,3 +323,9 @@ variant komt van een
 **contributing-gen**. [Genereer zelf](https://github.com/bttger/contributing-gen) (incl. CODE OF
 CONDUCT) !
 ```
+
+</details>
+
+## Externe links
+
+- [Standaard voor Publieke Code /  Criterium 4: verwelkom bijdragers](https://codefor.nl/community-translations-standard/nl/criteria/welcome-contributors.html)
