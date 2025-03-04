@@ -1,8 +1,6 @@
 ---
-slug: de-uitdagingen-bij-api-orkestratie
 authors: [joost-farla]
 tags: [adr, orkestratie]
-date: 2023-11-28
 ---
 # De uitdagingen bij API orkestratie
 

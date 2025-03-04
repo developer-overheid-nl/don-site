@@ -1,18 +1,51 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import remarkDirectiveSugar from 'remark-directive-sugar';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Developer.overheid.nl",
+  title: "Developer.Overheid.NL",
   customFields: {
-    siteName: 'Developer Portal'
+    siteName: 'Developer Overheid NL'
   },
-  tagline: "Eén plek voor developers die voor of met de overheid ontwikkelen",
+  tagline: "Developer Portal van de Nederlandse Overheid",
   organizationName: "developer.overheid.nl",
-  favicon: "favicon.ico",
-  headTags: [],
+  favicon: "favicon.svg",
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon-96x96.png',
+        sizes: '96x96',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'shortcut icon',
+        href: '/favicon.ico',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png',
+        sizes: '180x180',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+    },
+  ],
 
   // Set the production url of your site here
   url: "https://developer.overheid.nl",
@@ -64,9 +97,10 @@ const config: Config = {
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
         },
         blog: {
-          blogSidebarCount: 30,
+          blogSidebarCount: 20,
           blogSidebarTitle: "Laatste posts",
           showReadingTime: true,
+          beforeDefaultRemarkPlugins: [remarkDirectiveSugar],
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,
@@ -96,11 +130,11 @@ const config: Config = {
     metadata: [
       {
         property: 'og:title',
-        content: 'Developer.overheid.nl | Ontwikkelaarsportaal voor de developer bij de overheid',
+        content: 'Developer Overheid NL | Developer Portal van de Nederlandse Overheid',
       },
       {
         name: 'twitter:image:alt', 
-        content: 'Ontwikkelaarsportaal voor de developer bij de overheid; Informatie en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, DSO, Open source werken, BZK, Belastingdienst, Kadaster en andere overheidsorganisaties.',
+        content: "Developer Portal van de Nederlandse Overheid; Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.",
       }
     ],
     navbar: {

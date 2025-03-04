@@ -1,8 +1,6 @@
 ---
-slug: design-first-of-code-first-api-ontwikkeling
 authors: [joost-farla]
 tags: [openapi, adr, api-design]
-date: 2024-03-27
 ---
 # Design-first of code-first API ontwikkeling?
 
