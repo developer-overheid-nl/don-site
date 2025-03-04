@@ -17,4 +17,4 @@ Iedereen die bijdraagt aan [developer.overheid.nl](https://developer.overheid.nl
 - we extra aandacht besteden aan toegang voor en inspraak van groepen mensen die in democratische processen vaak slecht gehoord worden;
 - we belanghebbenden, vertegenwoordigers, en inhoudelijk experts actief bij ontwerp en besluitvorming betrekken.
 
-Mocht er zich een situatie voordoen waar deze waarden in het geding komen dan kan je een berichtje sturen naar onze communitymanager [Tom Ootes](https://codefornl.slack.com/archives/D010ZM2DNNR).
+Mocht er zich een situatie voordoen waar deze waarden in het geding komen, dan kan je een berichtje sturen naar onze communitymanager [Tom Ootes](https://codefornl.slack.com/archives/D010ZM2DNNR).
