@@ -6,7 +6,7 @@ tags:
 
 Een goede CONTRIBUTING.md helpt potentiële bijdragers om efficiënt en effectief bij te dragen aan een project. Hier zijn de belangrijkste onderdelen die je erin kunt opnemen:
 
-## Wat moet je erin opnemen?
+## Wat neem je erin op?
 
 ### 1. Introductie
 
@@ -25,7 +25,7 @@ Een korte uitleg over het project en waarom bijdragen belangrijk zijn. Eventueel
 
 Waar moet je rekening mee houden als je een bijdrage wilt doen? Verwijs naar de lijst met bestaande issues en leg uit hoe je een nieuwe issue opent. Geef aan of je eerst met de maintainers dient te overleggen voordat je een grote feature aandraagt.
 
-### 4. Richtlijnen voor bijdragen
+### 4. Technische richtlijnen
 
 - Code style: verwijzing naar linters, formattering, en naming conventions.
 - Commit messages: bijvoorbeeld conventies zoals [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
@@ -50,10 +50,12 @@ Waar moet je rekening mee houden als je een bijdrage wilt doen? Verwijs naar de 
 
 - Verwijzing naar een `CODE_OF_CONDUCT.md` (indien van toepassing). 
 - Noem de basisprincipes voor een inclusieve en respectvolle samenwerking.
+- Geef aan met wie een deelnemer contact kan opnemen in het geval dat de gedragscode wordt geschonden.
 
 ### 8. Licentie en juridische zaken
 
 - Vertel onder welke licentie bijdragen vallen.
+- Welke implicaties heeft de licentie voor de developer?
 - Of bijdragers een Contributor License Agreement (CLA) moeten tekenen.
 
 ### 9. Bestuur
