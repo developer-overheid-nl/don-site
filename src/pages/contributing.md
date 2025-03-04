@@ -25,6 +25,7 @@ Je kunt bijdragen op de volgende manieren:
 - Door vragen te stellen of je te **mengen in discussies** in ons [Slack kanaal](https://codefornl.slack.com/archives/CFV4B3XE2).
 - **Bugs** te melden. Dien een [issue](https://github.com/developer-overheid-nl/don-site/issues/new) in.
 - Door ideeën aan te dragen om ons design, UX of accessibility te verbeteren. Je doet dit door een [issue in te schieten](https://github.com/developer-overheid-nl/don-site/issues/new).
+- Volg ons of toot over ons op [**Mastodon**](https://social.overheid.nl/@developer).
 
 
 ## Labels voor issues
