@@ -7,19 +7,18 @@
     "https://apis.developer.overheid.nl/apis",
     "https://oss.developer.overheid.nl/repositories"
   ],
-  "batch_size": 5,
   "selectors": {
     "lvl0": {
-      "selector": ".navbar__link--active",
+      "selector": "header h1",
       "global": true,
       "default_value": "Documentation"
     },
-    "lvl1": "h1.page-title, .theme-doc-markdown h1, .docItemContainer h1",
-    "lvl2": "h2, .theme-doc-markdown h2, .docItemContainer h2",
-    "lvl3": "h3, .theme-doc-markdown h3, .docItemContainer h3",
-    "lvl4": "h4, .theme-doc-markdown h4, .docItemContainer h4",
-    "lvl5": "h5, .theme-doc-markdown h5, .docItemContainer h5",
-    "text": "p, .theme-doc-markdown p, .theme-doc-markdown li"
+    "lvl1": "h1.page-title, article h1, header h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5, article td:first-child", 
+    "text": "article p, article li, article td:last-child"
   },
   "selectors_exclude": [".hash-link"],
   "custom_settings": {
@@ -47,7 +46,6 @@
     "https://developer.overheid.nl/contact",
     "https://developer.overheid.nl/toegankelijkheid"
   ],
-  "nb_hits": 10,
   "link_selectors": [
     {
       "selector": ".card .card__left a.card__link",
