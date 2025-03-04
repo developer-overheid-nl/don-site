@@ -4,7 +4,7 @@ tags:
 ---
 # CONTRIBUTING.md
 
-Een goede CONTRIBUTING.md helpt potentiële bijdragers om efficiënt en effectief bij te dragen aan een project. Hier zijn de belangrijkste onderdelen die je erin kunt opnemen:
+Een goede CONTRIBUTING.md helpt potentiële bijdragers om efficiënt en effectief bij te dragen aan een project.
 
 ## Wat neem je erin op?
 
