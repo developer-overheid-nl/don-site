@@ -1,0 +1,75 @@
+name: Rapporteer een Bug 
+description: Ik heb een bug gevonden
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes: 
+      value: |
+        Bedankt voor het rapporteren van een bug. Beschrijf zo duidelijk mogelijk wat er mis gaat.
+        Voordat je aan de slag gaat met dit formulier, nog een puntje:
+        - Heeft iemand anders al eens een soortgelijk issue ingediend? Check dit in de [backlog](https://github.com/developer-overheid-nl/don-site/issues).
+  - type: input
+    id: name
+    attributes: 
+      label: Je naam
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes: 
+      label: Contactdetails
+      description: Hoe kunnen we contact met je opnemen als er nog vragen zijn?
+      placeholder: bijv. email@example.com of Slack-profiel
+    validations:
+      required: false
+  - type: dropdown
+    id: application
+    attributes:
+      label: In welk onderdeel heb je de bug gevonden?
+      options:
+        - De website / kennisbank (developer.overheid.nl)
+        - Forum / Discourse (community.developer.overheid.nl)
+        - API-register (apis.developer.overheid.nl)
+        - OSS-register (oss.developer.overheid.nl)
+        - Socials / Github
+        - Ergens anders, ik laat een opmerking achter hieronder
+    validations:
+      required: true
+  - type: checkboxes
+    id: browsers
+    attributes:
+      label: Bij welke browser(s) treedt het probleem op?
+      options:
+        - label: Firefox
+        - label: Chrome
+        - label: Safari
+        - label: Microsoft Edge
+  - type: textarea
+    id: description
+    attributes: 
+      label: Omschrijving
+      description: Beschrijf de bug, graag met een link of stappen zodat we het kunnen reproduceren.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevante (console.)log output
+      description: Heb je output van een log, plak deze hier. Het wordt automatisch geformatteerd, dus je hoeft geen `backticks` te gebruiken.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: remarks
+    attributes: 
+      label: Opmerkingen
+      description: Heb je nog andere opmerkingen of iets wat je wilt delen met ons, laat dat hier achter.
+    validations:
+      required: false
+  - type: markdown
+    attributes: 
+      value: |
+        Alvast bedankt voor je bijdrage, we gaan er zsm mee aan de slag.
+
+        Het team van Developer Overheid NL
