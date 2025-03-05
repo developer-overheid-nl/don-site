@@ -19,6 +19,7 @@ Alle artikelen in onze kennisbank zijn geschreven in de `.md` of `.mdx` extensie
 Je kunt bijdragen op de volgende manieren:
 
 - Draag een **artikelonderwerp aan**. Dien een [issue](https://github.com/developer-overheid-nl/don-site/issues/new) in met jouw idee.
+- Zelf een **artikel bijdragen** via een [Gist](https://gist.github.com/), sla hem op als een `Public Gist` en dien een issue in met de link. Dit heeft als voordeel dat je het artikel in Markdown kan schrijven.
 - Zelf een **artikel bijdragen** via een [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Dit doe je door een [fork aan te maken](https://github.com/developer-overheid-nl/don-site/fork) en deze vervolgens aan te bieden als [pull request bij ons](https://github.com/developer-overheid-nl/don-site/compare).
 - Voeg een [**API**](https://apis.developer.overheid.nl/apis/toevoegen) toe aan ons API register.
 - Voeg een [**gitaccount**](https://oss.developer.overheid.nl/toevoegen/repository) toe aan ons OSS register.
