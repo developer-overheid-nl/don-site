@@ -1,0 +1,59 @@
+name: Nieuwe feature
+description: Ik heb een idee voor een nieuwe feature of verbetering
+title: "[Enhancement]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes: 
+      value: |
+        Bedankt voor het aanbrengen van een nieuwe feature. Beschrijf zo duidelijk mogelijk je idee of verbetering.  
+        Voordat je aan de slag gaat met dit formulier, nog een puntje:
+        - Heeft iemand anders al eens een soortgelijk issue ingediend? Check dit in de [backlog](https://github.com/developer-overheid-nl/don-site/issues).
+  - type: input
+    id: name
+    attributes: 
+      label: Je naam
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes: 
+      label: Contactdetails
+      description: Hoe kunnen we contact met je opnemen als er nog vragen zijn?
+      placeholder: bijv. email@example.com of Slack-profiel
+    validations:
+      required: false
+  - type: dropdown
+    id: application
+    attributes:
+      label: In welk onderdeel behoort de feature of verbetering?
+      options:
+        - De website / kennisbank (developer.overheid.nl)
+        - Forum / Discourse (community.developer.overheid.nl)
+        - API-register (apis.developer.overheid.nl)
+        - OSS-register (oss.developer.overheid.nl)
+        - Socials / Github
+        - Een nieuw onderdeel, ik laat een opmerking achter hieronder
+        - Ergens anders, ik laat een opmerking achter hieronder
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes: 
+      label: Omschrijving
+      description: Beschrijf de feature of verbetering, heb je een link naar een voorbeeld of andere informatie voeg deze ook toe.
+    validations:
+      required: true
+  - type: textarea
+    id: remarks
+    attributes: 
+      label: Opmerkingen
+      description: Heb je nog andere opmerkingen of iets wat je wilt delen met ons, laat dat hier achter.
+    validations:
+      required: false
+  - type: markdown
+    attributes: 
+      value: |
+        Alvast bedankt voor je bijdrage.
+
+        Het team van Developer Overheid NL

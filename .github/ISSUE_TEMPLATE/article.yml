@@ -1,0 +1,78 @@
+name: Idee voor een artikel
+description: Ik heb een idee voor een nieuw artikel
+title: "Artikel over "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes: 
+      value: |
+        Hartelijk dank voor je interesse om bij te dragen aan ons gezamenlijke Developer Portal voor de hele Nederlandse overheid.
+  - type: input
+    id: name
+    attributes: 
+      label: Je naam
+      description: Je naam en eventueel je organisatie.
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes: 
+      label: Contactdetails
+      description: Hoe kunnen we contact met je opnemen als er nog vragen zijn?
+      placeholder: bijv. email@example.com of Slack-profiel
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes: 
+      label: Omschrijving
+      description: Beschrijf het onderwerp van het artikel, waarom het toegevoegd zou moeten worden en waar meer informatie gevonden kan worden.
+    validations:
+      required: true
+  - type: input
+    id: draft
+    attributes: 
+      label: Concept
+      description: Voeg een link toe naar je concept, bijvoorbeeld naar je Gist.
+    validations:
+      required: false
+  - type: textarea
+    id: related
+    attributes: 
+      label: Gerelateerde items
+      description: Voeg links toe naar gereleateerde items, zoals artikelen, documentatie, etc.
+    validations:
+      required: false
+  - type: textarea
+    id: category
+    attributes: 
+      label: Categorie en Tags
+      description: In welke categorie valt het onderwerp en welke tags moeten er toegevoegd worden?
+    validations:
+      required: false
+  - type: dropdown
+    id: author
+    attributes:
+      label: Onder welke naam moet het artikel gepubliceerd worden?
+      options:
+        - Niet van toepassing
+        - Ik heb alleen een idee aangeleverd, ik hoef geen credits
+        - Ik heb alleen een idee aangeleverd, ik wil wel genoemd worden in de credits
+        - Ik heb een concept aangeleverd, mijn eigen naam als (een van de) auteur(s)
+        - Ik heb een concept aangeleverd, mijn organisatie als (een van de) auteur(s)
+        - Iets anders, ik laat een opmerking achter hieronder
+    validations:
+      required: true
+  - type: textarea
+    id: remarks
+    attributes: 
+      label: Opmerkingen
+      description: Heb je nog andere opmerkingen of iets wat je wilt delen met ons, laat dat hier achter.
+    validations:
+      required: false
+  - type: markdown
+    attributes: 
+      value: |
+        Alvast bedankt voor je bijdrage.
+
+        Het team van Developer Overheid NL
