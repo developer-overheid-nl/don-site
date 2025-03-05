@@ -5,7 +5,7 @@ De basis van de website is [Docusaurus](https://docusaurus.io), de artikelen bes
 
 ## Help mee
 
-Wil je bijdragen aan onze kennisbank, blog en of website. Op de pagina [Bijdragen](https://developer.overheid.nl/contributing#hoe-kun-je-bijdragen) staan de verschillende manieren waarop je mee kan helpen.
+Wil je bijdragen aan onze kennisbank, blog en of website. Op de pagina [Bijdragen](https://developer.overheid.nl/contributing#hoe-je-kunt-bijdragen) staan de verschillende manieren waarop je mee kan helpen.
 
 ### Contact
 
@@ -17,7 +17,7 @@ We gebruiken [`pnpm`](https://pnpm.io/) om afhankelijkheden te installeren en de
 Daarna kan je de website lokaal draaien.
 
 1. Draai `pnpm install` om te zorgen dat alle afhankelijkheden die Docusaurus nodig heeft beschikbaar zijn
-1. Draai `pnpm run build` om de CSS te builden (dit hoeft alleen de eerste keer)
-1. Draai `pnpm run start` om Docusaurus te starten.
+1. Draai `pnpm run start` om te builden en Docusaurus te starten.
 
-Daarna kan je de lokale versie van de site bekijken op `http://localhost:3000/`. 
+Daarna kan je de lokale versie van de site bekijken op `http://localhost:3000/`.   
+Maak je aanpassingen aan de design tokens, draai `pnpm run build` om de CSS te builden.
