@@ -1,48 +1,48 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import remarkDirectiveSugar from 'remark-directive-sugar';
+import remarkDirectiveSugar from "remark-directive-sugar";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: "Developer.Overheid.NL",
   customFields: {
-    siteName: 'Developer Overheid NL'
+    siteName: "Developer Overheid NL",
   },
   tagline: "Developer Portal van de Nederlandse Overheid",
   organizationName: "developer.overheid.nl",
   favicon: "favicon.svg",
   headTags: [
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'icon',
-        type: 'image/png',
-        href: '/favicon-96x96.png',
-        sizes: '96x96',
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon-96x96.png",
+        sizes: "96x96",
       },
     },
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'shortcut icon',
-        href: '/favicon.ico',
+        rel: "shortcut icon",
+        href: "/favicon.ico",
       },
     },
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'apple-touch-icon',
-        href: '/apple-touch-icon.png',
-        sizes: '180x180',
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon.png",
+        sizes: "180x180",
       },
     },
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'manifest',
-        href: '/site.webmanifest',
+        rel: "manifest",
+        href: "/site.webmanifest",
       },
     },
   ],
@@ -69,14 +69,14 @@ const config: Config = {
   themes: ["@docusaurus/theme-mermaid"],
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'communities',
-        path: 'communities',
-        routeBasePath: 'communities',
-        sidebarPath: './sidebarsCommunities.ts',
-        tags: '../tags.yml',
-        onInlineTags: 'throw',
+        id: "communities",
+        path: "communities",
+        routeBasePath: "communities",
+        sidebarPath: "./sidebarsCommunities.ts",
+        tags: "../tags.yml",
+        onInlineTags: "throw",
         // ... other options
       },
     ],
@@ -86,11 +86,11 @@ const config: Config = {
       "classic",
       {
         docs: {
-          path: 'docs',
-          routeBasePath: 'kennisbank',
+          path: "docs",
+          routeBasePath: "kennisbank",
           sidebarPath: "./sidebars.ts",
-          tags: '../tags.yml',
-          onInlineTags: 'throw',
+          tags: "../tags.yml",
+          onInlineTags: "throw",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -129,27 +129,29 @@ const config: Config = {
     image: "img/don-social-card.png",
     metadata: [
       {
-        property: 'og:title',
-        content: 'Developer Overheid NL | Developer Portal van de Nederlandse Overheid',
+        property: "og:title",
+        content:
+          "Developer Overheid NL | Developer Portal van de Nederlandse Overheid",
       },
       {
-        name: 'twitter:image:alt', 
-        content: "Developer Portal van de Nederlandse Overheid; Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.",
-      }
+        name: "twitter:image:alt",
+        content:
+          "Developer Portal van de Nederlandse Overheid; Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.",
+      },
     ],
     navbar: {
       title: "Home",
       items: [
         {
-          to: '/kennisbank',
-          label: 'Kennisbank',
-          position: 'left',
+          to: "/kennisbank",
+          label: "Kennisbank",
+          position: "left",
           activeBaseRegex: `/kennisbank`,
         },
         {
-          to: '/communities',
-          label: 'Communities',
-          position: 'left',
+          to: "/communities",
+          label: "Communities",
+          position: "left",
           activeBaseRegex: `/communities`,
         },
         { to: "/blog", label: "Blog", position: "left" },
@@ -202,8 +204,8 @@ const config: Config = {
                 <img class="sponsors__logo" src="/img/Logo_Forum_Standaardisatie_RGB_wit.png" alt="Logo forum voor standaardisatie" />
               </div>
               `,
-            }
-          ]
+            },
+          ],
         },
         {
           title: "Community",
@@ -232,6 +234,10 @@ const config: Config = {
             {
               label: "Contact",
               to: "/contact",
+            },
+            {
+              label: "Bijdragen",
+              to: "/contributing",
             },
             {
               label: "Privacyverklaring",
