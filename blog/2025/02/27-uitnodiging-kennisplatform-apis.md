@@ -12,7 +12,7 @@ Op woensdagmiddag 26 maart 2025 heet het Kennisplatform API je van harte welkom 
 
 Er is een update (versie 2.0) van de API Design Rules ingediend bij het Forum Standaardisatie. In deze sessie gaan we in op de aanpak van de modules en de strategie voor de adoptie van de standaard.
 
-## Werkgroep Notificaties – Stas Maronov, Logius
+## Werkgroep Notificaties – Stas Mironov, Logius
 
 We gaan aan de slag met notificaties. Hoewel geen REST API, merken we dat dit onderwerp leeft. Bij de laatste bijeenkomst van het Kennisplatform was dit het onderwerp dat de meeste stemmen kreeg om op te pakken.
 We hebben al een standaard voor notificaties: Cloudevents. Deze standaard gaat over de inhoud van notificatieberichten. Maar er staan nog drie onderwerpen open:
