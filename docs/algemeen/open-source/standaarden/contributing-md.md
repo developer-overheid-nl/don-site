@@ -69,7 +69,9 @@ Wie bepaalt welke bijdragen uiteindelijk wel en niet worden geaccepteerd? Verwij
 - Vermeld hier ook contactgegevens (bijv. e-mailadressen)
 - Voeg hier ook links toe naar communicatiekanalen (Slack, Mattermost, Mastodon).
 
-## Voorbeeld
+## Voorbeelden
+
+- Zie de [contributing guidelines](https://docs.openkat.nl/guidelines/contributions.html) van OpenKAT.
 
 <details>
   <summary>Voorbeeld: de `CONTRIBUTING.md` [OSPO-NL](https://github.com/ospo-nl):</summary>
