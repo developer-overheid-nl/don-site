@@ -12,4 +12,3 @@ Infrastructuur vormt de ruggengraat van softwaretoepassingen binnen de overheid.
 - **Veiligheid en compliance** → Gegevens van burgers moeten goed beschermd worden, volgens standaarden zoals BIO en ISO 27001.  
 - **Schaalbaarheid en flexibiliteit** → Moderne cloud- en containertechnologieën (zoals Kubernetes) zorgen ervoor dat systemen mee kunnen groeien met de vraag.  
 - **Interoperabiliteit** → Systemen moeten naadloos samenwerken via API’s en open standaarden.  
-

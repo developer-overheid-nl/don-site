@@ -17,3 +17,9 @@ Pianoo is een organisatie die organisaties helpt bij digitale transformatie en i
 Kortom, Pianoo ondersteunt zowel publieke als private organisaties in het realiseren van een efficiëntere, klantgerichte en toekomst
 
 Direct naar [**pianoo.nl**](https://www.pianoo.nl/nl).
+
+## Opensourcewerken.nl
+[Opensourcewerken](https://opensourcewerken.nl) is de community of practice omtrent open source werken van het Ministerie van Binnenlandse zaken. Je vindt er informatie en een community voor onder andere inkopers die graag informatie willen inwinnen over hoe je open source projecten kunt inkopen /aanbesteden.
+
+- Direct naar [**de richtlijnen voor inkopers**](https://opensourcewerken.nl/page/view/82f295bb-9f0b-44d9-89c1-474cf9a5f370/landingspagina-inkoper) open source werken. 
+- Direct naar [**onze communitypagina**](/communities/open-source-werken) an opensourcewerken.nl. 

@@ -13,11 +13,13 @@ Toegankelijkheid zorgt ervoor dat iedereen, inclusief mensen met een beperking, 
 
 ## Communities
 
+### NL Design System
 **NL Design System is een project dat specialisten van verschillende overheidsorganisaties laat samenwerken aan concrete oplossingen voor websites en applicaties. Denk bijvoorbeeld aan code, ontwerp en richtlijnen.**
 
 Door organisatie-overstijgend samen te werken en de krachten te bundelen is het mogelijk om web-componenten te bouwen die **consistenter**, **gebruiksvriendelijker** en **toegankelijker** zijn.
 
-**[Direct naar NL Design System](https://nldesignsystem.nl/)**
+- **[Naar onze tutorial van NL Design System](/kennisbank/frontend/nl-design-system/aan-de-slag-met-nl-design-system)**
+- **[Direct naar NL Design System](https://nldesignsystem.nl/)**
 
 ## Standaarden
 

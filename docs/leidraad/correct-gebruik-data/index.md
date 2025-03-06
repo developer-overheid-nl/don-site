@@ -42,7 +42,11 @@ De **DCAT (Data Catalog Vocabulary)** standaard biedt jou als developer diverse 
 - **Voldoen aan Europese standaarden:** Met profielen zoals DCAT-AP sluit je aan bij de Europese open data standaarden, wat de uitwisseling van data tussen overheidsorganisaties vergemakkelijkt.
 - **Efficiëntie in ontwikkeling:** Door gebruik te maken van een standaard metadata schema hoef je niet telkens nieuwe beschrijvingen te maken, wat je ontwikkelingsproces versnelt en vereenvoudigt.
 
+## FSC
 
+De FSC-standaard beschrijft hoe koppelingen voor gegevensuitwisseling veilig, transparant en beheersbaar kunnen worden opgezet. De standaard is opgenomen als verplicht onderdeel van het Digikoppeling REST API profiel. Wil je direct met FSC aan de slag dan kan je de referentie implementatie OpenFSC gebruiken.
+
+- [Naar ons artikel over FSC](/kennisbank/infra/standaarden/fsc).
 
 ## Federatief datastelsel
 
@@ -59,3 +63,5 @@ Als developer binnen de overheid kun je op verschillende manieren aan de slag me
 
 - **Draag bij aan de verbetering van de data-ecosystemen:**  
   Door jouw technische kennis en ervaring in te brengen, help je mee aan een robuust en toekomstbestendig data-ecosysteem dat de basis vormt voor betere dienstverlening en beleidsvorming binnen de overheid.
+
+Ga direct naar de  [FDS werkbank](https://federatief.datastelsel.nl/kennisbank/).
