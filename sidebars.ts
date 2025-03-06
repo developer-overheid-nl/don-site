@@ -31,7 +31,7 @@ const sidebars: SidebarsConfig = {
           id: "apis/index",
           label: "API's",
         },
-        "data/index",
+        // "data/index",
         {
           type: "doc",
           id: "frontend/index",
