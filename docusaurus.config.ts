@@ -196,7 +196,7 @@ const config: Config = {
         },
         {
           href: "https://oss.developer.overheid.nl",
-          label: "Open Source Software",
+          label: "Open Source",
           position: "right",
         },
         {

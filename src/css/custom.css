@@ -39,7 +39,7 @@
   --don-grijs-600: #475569;
   --don-grijs-500: #64748B;
   --don-grijs-400: #94A3B8;
-  --don-grijs-300: #CBD5E1;
+  --don-grijs-300: #cbd5e1;
   --don-grijs-200: #E2E8F0;
   --don-grijs-100: #F1F5F9;
   --don-grijs-50: #F8FAFC;
@@ -204,6 +204,20 @@
 
 .table-of-contents__link--active {
   color: var(--don-robijnrood-500);
+}
+
+/* Search */
+.DocSearch {
+  --docsearch-searchbox-background: var(--ifm-color-white);
+  --docsearch-searchbox-shadow: 0 0 0 2px var(--docsearch-primary-color);
+  --docsearch-key-gradient: linear-gradient(-225deg, var(--ifm-color-gray-200), var(--ifm-color-gray-100));
+  --docsearch-key-shadow: inset 0 -2px 0 0 var(--ifm-color-gray-300), inset 0 0 1px 1px var(--ifm-color-gray-100), 0 1px 2px 1px rgba(203, 213, 225, 0.2);
+}
+
+.DocSearch-Button.DocSearch-Button {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-pagination-nav-border-radius);
+  color: var(--ifm-navbar-link-color);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
