@@ -1,9 +1,11 @@
 ---
 title: "1. Werk vanuit de behoefte van de gebruiker"
 sidebar_position: 1
+tags:
+  - "ux"
 ---
 
-Begrijp je gebruikers en hun behoeften. Zorg ervoor dat je inzicht hebt in wat je gebruikers drijft en wat dat betekent voor je project of -programma.
+Begrijp je gebruikers en hun behoeften. Zorg ervoor dat je inzicht hebt in wat je gebruikers drijft en wat dat betekent voor je project of programma.
 
 ## Gebruiker Centraal
 

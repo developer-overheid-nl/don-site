@@ -3,7 +3,7 @@ title: "5. Softwareontwikkeling in de cloud"
 sidebar_position: 5
 ---
 
-In de overheid wordt steeds vaker gesproken over Digitale Soevereiniteit. Wanneer applicaties en de onderliggende infrastructuur goed zijn opgezet, wordt het eenvoudiger om services te verplaatsen of nieuwe diensten toe te voegen.
+Binnen de overheid wordt steeds vaker gesproken over digitale soevereiniteit. Wanneer applicaties en de onderliggende infrastructuur goed zijn opgezet, wordt het eenvoudiger om services te verplaatsen of nieuwe diensten toe te voegen.
 
 ## Haven (Common Ground)
 
@@ -11,7 +11,7 @@ In de overheid wordt steeds vaker gesproken over Digitale Soevereiniteit. Wannee
 
 ### Technische details
 
-Haven maakt gebruik van een specifieke configuratie van Kubernetes als abstractielaag tussen applicaties en de onderliggende infrastructuur. Hierdoor kunnen applicaties consistent draaien, ongeacht of de infrastructuur lokaal (on-premise) of in de cloud is.
+Haven maakt gebruik van een gestandaardiseerde Kubernetes-configuratie als abstractielaag tussen applicaties en de onderliggende infrastructuur. Hierdoor kunnen applicaties consistent draaien, ongeacht of de infrastructuur lokaal (on-premise) of in de cloud is.
 
 Meer technische details zijn te vinden op de [techniek-pagina](https://haven.commonground.nl/techniek).
 
