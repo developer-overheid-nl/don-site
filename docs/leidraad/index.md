@@ -39,5 +39,5 @@ De leidraad bevat de volgende principes:
 
 Voor feedback of andere handreikingen kan je ons bereiken via:
 
-- Mail: [developer.overheid@geonovum.nl](developer.overheid@geonovum.nl)
+- Mail: [developer.overheid@geonovum.nl](mailto:developer.overheid@geonovum.nl)
 - Slack: [#developer-overheid.nl](https://codefornl.slack.com/archives/CFV4B3XE2)
