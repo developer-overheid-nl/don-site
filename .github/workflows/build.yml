@@ -45,6 +45,8 @@ jobs:
           recurse: true
           config: "./linkinator.config.json"
           verbosity: "error"
+          timeout: 1000
+          concurrency: 200
 
   build-and-push:
     runs-on: ubuntu-latest
