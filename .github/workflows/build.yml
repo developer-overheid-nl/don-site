@@ -44,7 +44,7 @@ jobs:
           paths: "build"
           recurse: true
           config: "./linkinator.config.json"
-          verbosity: "ERROR
+          verbosity: "ERROR"
           timeout: 5000
           retry: 3
           userAgent: "Mozilla/5.0 (compatible; Linkinator/2.0; +https://github.com/JustinBeckwith/linkinator)"
