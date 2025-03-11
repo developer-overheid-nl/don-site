@@ -130,18 +130,24 @@ const config: Config = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: "search.don.apps.digilab.network",
+            host: "search.developer.overheid.nl",
             port: 443,
             protocol: "https",
           },
+          // {
+          //   host: "search.don.apps.digilab.network",
+          //   port: 443,
+          //   protocol: "https",
+          // },
           // {
           //   host: "localhost",
           //   port: 8108,
           //   protocol: "http",
           // },
         ],
-        // apiKey: "xyz",
-        apiKey: "wpxe5EBzgodXiGygAr5jIYIAXNErTg3w",
+        // apiKey: "xyz", Lokaal
+        // apiKey: "wpxe5EBzgodXiGygAr5jIYIAXNErTg3w", //test
+        apiKey: "TimHDyXz7K91KWuiXDcH2UN41hMk8BNc", //prod
       },
       typesenseSearchParameters: {
         query_by:
