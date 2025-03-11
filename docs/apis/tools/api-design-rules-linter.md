@@ -12,7 +12,7 @@ api-design-rulesDe ADR Linter controleert of een OpenAPI Specificatie compliant 
 Als je Spectral geïnstalleerd hebt, kun je een OAS via de commandline op de volgende manier valideren:
 
 ```bash
-$ spectral lint -r https://developer.overheid.nl/static/adr/ruleset.yaml $OAS_URL_OR_FILE
+$ spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE
 ```
 
 ## IDE
@@ -24,7 +24,7 @@ Sommige IDEs ondersteunen Spectral via extensies of plugins. Eén daarvan is VSC
 $ code --install-extension stoplight.spectral
 
 # Download the ruleset to your project home
-$ curl -L https://developer.overheid.nl/static/adr/ruleset.yaml > .spectral.yml
+$ curl -L https://static.developer.overheid.nl/adr/ruleset.yaml > .spectral.yml
 
 # Run the IDE
 $ code
@@ -35,7 +35,7 @@ $ code
 ```bash
 $ docker run --rm --entrypoint=sh \
     -v $(pwd)/api:/locale stoplight/spectral:5.9.1 \
-    -c "spectral lint -r https://developer.overheid.nl/static/adr/ruleset.yaml"
+    -c "spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml"
 ```
 
 ## GitLab
@@ -46,7 +46,7 @@ spectral-lint:
   stage: spectral_lint
   script:
     - npm install -g @stoplight/spectral-cli
-    - curl -L https://developer.overheid.nl/static/adr/ruleset.yaml > .spectral.yml
+    - curl -L https://static.developer.overheid.nl/adr/ruleset.yaml > .spectral.yml
     - spectral lint -r .spectral.yml $OAS_URL_OR_FILE
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
