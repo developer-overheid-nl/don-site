@@ -1,0 +1,9 @@
+{
+  "skip": [
+    "build/apis",
+    "build/repositories",
+    "tweakers.net",
+    "www.linkedin.com",
+    "player.vimeo.com"
+  ]
+}

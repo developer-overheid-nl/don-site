@@ -1,26 +1,41 @@
 name: Build
 
-on: push
+on:
+  push:
+    branches:
+      - external-link-checker
 
 jobs:
-  build:
+  check-links:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
     steps:
       - uses: actions/checkout@v4
-      - name: Login to container registry
-        uses: docker/login-action@v3
+
+      - name: Run Linkinator to check external links
+        uses: JustinBeckwith/linkinator-action@v1
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build & push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          target: serve
-          tags: |
-            ghcr.io/developer-overheid-nl/don-site:latest
-            ghcr.io/developer-overheid-nl/don-site:${{ github.sha }}
+          paths: "./build"
+          recurse: true
+          config: "./linkinator.config.json"
+          verbosity: "error"
+  # build:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     packages: write
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Login to container registry
+  #       uses: docker/login-action@v3
+  #       with:
+  #         registry: ghcr.io
+  #         username: ${{ github.actor }}
+  #         password: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Build & push Docker image
+  #       uses: docker/build-push-action@v6
+  #       with:
+  #         context: .
+  #         push: true
+  #         target: serve
+  #         tags: |
+  #           ghcr.io/developer-overheid-nl/don-site:latest
+  #           ghcr.io/developer-overheid-nl/don-site:${{ github.sha }}
