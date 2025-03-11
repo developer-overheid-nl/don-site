@@ -1,0 +1,80 @@
+{
+    "theme.SearchBar.label": {
+        "message": "Zoeken"
+    },
+    "theme.SearchPage.inputLabel": {
+        "message": "Zoeken"
+    },
+    "theme.SearchModal.searchBox.resetButtonTitle": {
+        "message": "Maak de zoekopdracht leeg"
+    },
+    "theme.SearchModal.searchBox.cancelButtonText": {
+        "message": "Annuleren"
+    },
+    "theme.SearchModal.startScreen.recentSearchesTitle": {
+        "message": "Recente zoekopdrachten"
+    },
+    "theme.SearchModal.startScreen.noRecentSearchesText": {
+        "message": "Geen recente zoekopdrachten"
+    },
+    "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+        "message": "Sla deze zoekopdracht op"
+    },
+    "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+        "message": "Verwijder deze zoekopdracht uit mijn geschiedenis"
+    },
+    "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+        "message": "Favoriet"
+    },
+    "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+        "message": "Verwijder deze zoekopdracht uit mijn favorieten"
+    },
+    "theme.SearchModal.errorScreen.titleText": {
+        "message": "Niet in staat resultaten op te halen"
+    },
+    "theme.SearchModal.errorScreen.helpText": {
+        "message": "Misschien wilt u uw netwerkverbinding controleren."
+    },
+    "theme.SearchModal.footer.selectText": {
+        "message": "om te selecteren"
+    },
+    "theme.SearchModal.footer.selectKeyAriaLabel": {
+        "message": "Enter-toets"
+    },
+    "theme.SearchModal.footer.navigateText": {
+        "message": "om te navigeren"
+    },
+    "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+        "message": "Pijltoets naar boven"
+    },
+    "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+        "message": "Pijltoets naar beneden"
+    },
+    "theme.SearchModal.footer.closeText": {
+        "message": "om te sluiten"
+    },
+    "theme.SearchModal.footer.closeKeyAriaLabel": {
+        "message": "Escape-toets"
+    },
+    "theme.SearchModal.footer.searchByText": {
+        "message": "Je zoekt via"
+    },
+    "theme.SearchModal.noResultsScreen.noResultsText": {
+        "message": "Geen resultaten voor"
+    },
+    "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+        "message": "Probeer om te zoeken op"
+    },
+    "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+        "message": "Zou deze zoekopdracht resultaten moeten opleveren?"
+    },
+    "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+        "message": "Laat het ons weten."
+    },
+    "leeg": {
+        "message": "leeg"
+    },
+    "theme.SearchModal.placeholder": {
+        "message": "Typ hier uw zoekopdracht"
+    }
+}

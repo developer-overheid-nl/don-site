@@ -66,7 +66,7 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ["@docusaurus/theme-mermaid"],
+  themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     [
       "@docusaurus/plugin-content-docs",
@@ -125,6 +125,41 @@ const config: Config = {
   ],
 
   themeConfig: {
+    typesense: {
+      typesenseCollectionName: "developer_overheid",
+      typesenseServerConfig: {
+        nodes: [
+          {
+            host: "search.developer.overheid.nl",
+            port: 443,
+            protocol: "https",
+          },
+          // {
+          //   host: "search.don.apps.digilab.network",
+          //   port: 443,
+          //   protocol: "https",
+          // },
+          // {
+          //   host: "localhost",
+          //   port: 8108,
+          //   protocol: "http",
+          // },
+        ],
+        // apiKey: "xyz", Lokaal
+        // apiKey: "wpxe5EBzgodXiGygAr5jIYIAXNErTg3w", //test
+        apiKey: "TimHDyXz7K91KWuiXDcH2UN41hMk8BNc", //prod
+      },
+      typesenseSearchParameters: {
+        query_by:
+          "hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5",
+        filter_by: "",
+        multi_search: true,
+      },
+      externalUrlRegex:
+        "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
+      contextualSearch: false,
+      searchPagePath: false,
+    },
     // Replace with your project's social card
     image: "img/don-social-card.png",
     metadata: [
@@ -167,7 +202,7 @@ const config: Config = {
         },
         {
           href: "https://oss.developer.overheid.nl",
-          label: "Open Source Software",
+          label: "Open Source",
           position: "right",
         },
         {

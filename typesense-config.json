@@ -1,0 +1,60 @@
+{
+  "index_name": "developer_overheid",
+  "start_urls": [
+    "https://developer.overheid.nl/kennisbank/",
+    "https://developer.overheid.nl/communities/",
+    "https://developer.overheid.nl/blog/",
+    "https://apis.developer.overheid.nl/apis",
+    "https://oss.developer.overheid.nl/repositories"
+  ],
+  "sitemap_urls": ["https://developer.overheid.nl/sitemap.xml"],
+  "selectors": {
+    "lvl0": {
+      "selector": "(//nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text() | //header//h1/text())[last()]",
+      "type": "xpath",
+      "global": true,
+      "default_value": "Kennisbank"
+    },
+    "lvl1": "h1.page-title, article h1, header h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5, article td:first-child",
+    "text": "article p, article li, article td:last-child"
+  },
+  "aggregateContent": true,
+  "recordVersion": "v3",
+  "selectors_exclude": [".hash-link"],
+  "strip_chars": " .,;:#",
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ]
+  },
+  "stop_urls": [
+    "https://developer.overheid.nl/privacy",
+    "https://developer.overheid.nl/contact",
+    "https://developer.overheid.nl/toegankelijkheid"
+  ],
+  "link_selectors": [
+    {
+      "selector": ".card .card__left a.card__link",
+      "type": "url"
+    },
+    {
+      "selector": ".card a[href*='/apis/']",
+      "type": "url"
+    },
+    {
+      "selector": ".card a[href*='/repositories/']",
+      "type": "url"
+    }
+  ]
+}
