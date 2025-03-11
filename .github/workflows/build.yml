@@ -1,10 +1,7 @@
 name: Build & Link Check
 
-on:
-  push:
-    branches:
-      - external-link-checker
-
+on: push
+    
 jobs:
   build-site:
     runs-on: ubuntu-latest
