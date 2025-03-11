@@ -1,5 +1,6 @@
 {
   "skip": [
+    "https://publicatie.centrumvoorstandaarden.nl/api/adr/",
     "build/apis",
     "build/repositories",
     "tweakers.net",
