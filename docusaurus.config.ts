@@ -6,11 +6,11 @@ import remarkDirectiveSugar from "remark-directive-sugar";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Developer.Overheid.NL",
+  title: "developer.overheid.nl",
   customFields: {
-    siteName: "Developer Overheid NL",
+    siteName: "developer.overheid.nl",
   },
-  tagline: "Developer Portal van de Nederlandse Overheid",
+  tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
   organizationName: "developer.overheid.nl",
   favicon: "favicon.svg",
   headTags: [
@@ -166,12 +166,12 @@ const config: Config = {
       {
         property: "og:title",
         content:
-          "Developer Overheid NL | Developer Portal van de Nederlandse Overheid",
+          "developer.overheid.nl | Ontwikkelaarsportaal van de Nederlandse overheid",
       },
       {
         name: "twitter:image:alt",
         content:
-          "Developer Portal van de Nederlandse Overheid; Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.",
+          "Ontwikkelaarsportaal van de Nederlandse overheid; Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.",
       },
     ],
     navbar: {
