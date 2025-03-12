@@ -36,19 +36,19 @@ Waar moet je rekening mee houden als je een bijdrage wilt doen? Verwijs naar de 
 
 - Hoe je het project lokaal installeert en draait.
 - Vereisten zoals dependencies, SDK's, en buildtools.
-- Eventuele scripts om het project snel op te zetten. 
+- Eventuele scripts om het project snel op te zetten.
 - Heb je documentatie voor het lokaal opzetten van het project in de `README.md`? Link hier dan vooral naartoe.
 
 ### 6. Tests en kwaliteitscontrole
 
 - Hoe je tests draait en toevoegt.
 - Code coverage en teststrategie (unit, integration, e2e).
-- Continuous Integration: welke checks en pipelines draaien er? 
+- Continuous Integration: welke checks en pipelines draaien er?
 - Zorg ervoor dat bijdragers zelf alle tests lokaal kunnen vinden en draaien.
 
 ### 7. Gedragscode
 
-- Verwijzing naar een `CODE_OF_CONDUCT.md` (indien van toepassing). 
+- Verwijzing naar een `CODE_OF_CONDUCT.md` (indien van toepassing).
 - Noem de basisprincipes voor een inclusieve en respectvolle samenwerking.
 - Geef aan met wie een deelnemer contact kan opnemen in het geval dat de gedragscode wordt geschonden.
 
@@ -65,7 +65,7 @@ Wie bepaalt welke bijdragen uiteindelijk wel en niet worden geaccepteerd? Verwij
 ### 10. Contact en ondersteuning
 
 - Hoe en waar je vragen stelt (bijv. Discord, Slack, GitHub Discussions).
-- Wie je kunt benaderen voor hulp. 
+- Wie je kunt benaderen voor hulp.
 - Vermeld hier ook contactgegevens (bijv. e-mailadressen)
 - Voeg hier ook links toe naar communicatiekanalen (Slack, Mattermost, Mastodon).
 
@@ -330,7 +330,6 @@ CONDUCT) !
 
 </details>
 
-
 <details>
   <summary>Voorbeeld: de `CONTRIBUTING.md` van [developer.overheid.nl](https://github.com/developer-overheid-nl/don-site/blob/main/src/pages/contributing.md):</summary>
 
@@ -346,8 +345,8 @@ Raadpleeg [ons artikel over CONTRIBUTING.md](https://developer.overheid.nl/kenni
 
 Om te beginnen, hartelijk dank voor je interesse om bij te dragen aan ons gezamenlijke Developer Portal voor de hele Nederlandse overheid! Door onze ervaringen te delen, helpen we anderen om beter onderbouwde keuzes te maken. Omdat wij willen voorkomen dat we standaarden of projecten uit specifieke organisaties een voorkeursbehandeling geven, ontvangen we graag thema's en documentatie van zoveel mogelijk organisaties binnen de overheid.
 
-## Dit portal
-Software bouwen voor de overheid brengt specifieke uitdagingen met zich mee. Dit portal helpt je om te voldoen aan overheidspecifieke eisen, zoals securitystandaarden en toegankelijkheidsrichtlijnen. Daarnaast vind je hier informatie over beschikbare Open Source-projecten en hoe je deze kunt inzetten.
+## Dit portaal
+Software bouwen voor de overheid brengt specifieke uitdagingen met zich mee. Dit portaal helpt je om te voldoen aan overheidspecifieke eisen, zoals securitystandaarden en toegankelijkheidsrichtlijnen. Daarnaast vind je hier informatie over beschikbare Open Source-projecten en hoe je deze kunt inzetten.
 
 ## Hoe je kunt bijdragen
 
