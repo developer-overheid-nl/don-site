@@ -10,7 +10,7 @@ De vernieuwde versie van developer.overheid.nl is live! Met deze update zetten w
 
 ## Developer portal
 
-De website developer.overheid.nl is - de domeinnaam verklapt het al - de *developer portal* van de Nederlandse overheid. Zo'n ontwikkelaarsportaal is simpelweg een vertrekpunt voor software ontwikkelaars om op een zo'n *developer friendly* mogelijke manier met software van een bepaalde organisatie te kunnen werken. Voor de meeste partijen gaat dit vaak niet verder dan enkele services, in de vorm van API's, en Software Development Kits (SDK's), maar in dit geval betreft het de gehele Nederlandse overheid.
+De website developer.overheid.nl is - de domeinnaam verklapt het al - de *developer portal* van de Nederlandse overheid. Zo'n ontwikkelaarsportaal is simpelweg een vertrekpunt voor softwareontwikkelaars om op een zo'n *developer friendly* mogelijke manier met/ aan software van een bepaalde organisatie te kunnen werken. Voor de meeste partijen gaat dit vaak niet verder dan enkele services, in de vorm van API's, en Software Development Kits (SDK's), maar in dit geval betreft het de gehele Nederlandse overheid.
 
 ## Eén centrale plek voor software development
 
