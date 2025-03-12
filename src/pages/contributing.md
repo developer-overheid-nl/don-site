@@ -4,13 +4,13 @@
 Raadpleeg [ons artikel over CONTRIBUTING.md](/kennisbank/leidraad/open-source/standaarden/contributing-md) voor meer info over het zelf opstellen van bijdragerichtlijnen.
 :::
 
-
 ## Introductie
 
 Om te beginnen, hartelijk dank voor je interesse om bij te dragen aan ons gezamenlijke Developer Portal voor de hele Nederlandse overheid! Door onze ervaringen te delen, helpen we anderen om beter onderbouwde keuzes te maken. Omdat wij willen voorkomen dat we standaarden of projecten uit specifieke organisaties een voorkeursbehandeling geven, ontvangen we graag thema's en documentatie van zoveel mogelijk organisaties binnen de overheid.
 
-## Dit portal
-Software bouwen voor de overheid brengt specifieke uitdagingen met zich mee. Dit portal helpt je om te voldoen aan overheidspecifieke eisen, zoals securitystandaarden en toegankelijkheidsrichtlijnen. Daarnaast vind je hier informatie over beschikbare Open Source-projecten en hoe je deze kunt inzetten.
+## Dit portaal
+
+Software bouwen voor de overheid brengt specifieke uitdagingen met zich mee. Dit portaal helpt je om te voldoen aan overheidspecifieke eisen, zoals securitystandaarden en toegankelijkheidsrichtlijnen. Daarnaast vind je hier informatie over beschikbare Open Source-projecten en hoe je deze kunt inzetten.
 
 ## Hoe je kunt bijdragen
 
@@ -27,7 +27,6 @@ Je kunt bijdragen op de volgende manieren:
 - **Bugs** te melden. Dien een [issue](https://github.com/developer-overheid-nl/don-site/issues/new) in.
 - Door ideeën aan te dragen om ons design, UX of accessibility te verbeteren. Je doet dit door een [issue in te schieten](https://github.com/developer-overheid-nl/don-site/issues/new).
 - Volg ons of toot over ons op [**Mastodon**](https://social.overheid.nl/@developer).
-
 
 ## Labels voor issues
 
@@ -48,18 +47,23 @@ Voor je aan de gang gaat zouden we je willen vragen de volgende punten af te vin
 - Ben je van plan zelf een feature te bouwen? Neem dan om af te stemmen eerst contact met ons op via [Slack](https://codefornl.slack.com/archives/CFV4B3XE2) of [e-mail](mailto:developer.overheid@geonovum.nl).
 
 ## Coderichtlijnen
+
 Op dit moment hanteren we in onze codebases (nog) geen strikte voorschriften mbt het opleveren van code. We gaan er vanuit dat als iets met zorg is gebouwd er goed is nagedacht over de opzet en de schrijfwijze. Mocht je vragen hebben over hoe je iets dient op te leveren dan kun je je vraag stellen in ons [Slackkanaal](https://codefornl.slack.com/archives/CFV4B3XE2).
 
 ## Aanbieden pull request
+
 Wanneer je pull request wordt gemerged in de `main` branch, squashen we alle commits tot één commit met een passende naam. Je hoeft je dus niet druk te maken dat de namen van je commits allemaal even eloquent hoeven te zijn.
 
 ## Opzetten ontwikkelomgeving
+
 Check onze [README.md](https://github.com/developer-overheid-nl/don-site/blob/main/README.md).
 
 ## Gedragscode
+
 Check onze [CODE_OF_CONDUCT.md](https://github.com/developer-overheid-nl/don-site/blob/main/CODE_OF_CONDUCT.md).
 
 ## Juridisch
+
 Dit project heeft een EUPL (European Union Public License) licentie. Dit betekent dat de volgende punten van toepassing zijn op je bijdrage:
 
 1. Je bijdrage valt **automatisch onder de EUPL**.
@@ -83,7 +87,9 @@ Dit project heeft een EUPL (European Union Public License) licentie. Dit beteken
 Als je jezelf, nadat je een bijdrage hebt gedaan, wilt vereeuwigen in onze codebase nodigen we je uit om jezelf aan onze [AUTHORS.md](https://github.com/developer-overheid-nl/don-site/blob/main/AUTHORS.md) toe te voegen.
 
 ## Bestuur
+
 Voor meer informatie over de financiering en organisatie van dit project, zie onze [GOVERNANCE.md](https://github.com/developer-overheid-nl/don-site/blob/main/GOVERNANCE.md).
 
 ## Contact
+
 Check onze [README.md](https://github.com/developer-overheid-nl/don-site/blob/main/README.md#contact) onder het kopje contact.
