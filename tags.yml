@@ -10,6 +10,8 @@ api-design:
   label: API Design
 azure:
   label: Azure
+changelog:
+  label: Changelog
 ci/cd:
   label: CI/CD
   description: Continuous Integration / Continuous Deployment
@@ -30,6 +32,8 @@ dcat:
   label: DCAT
 design-system:
   label: Design System
+developer.overheid.nl:
+  label: developer.overheid.nl
 development:
   label: Development
 digikoppeling:
@@ -94,6 +98,8 @@ publiccode:
   label: PublicCode
 publiccode-yml:
   label: publiccode.yml
+release:
+  label: Release
 rest:
   label: REST API design
 security:

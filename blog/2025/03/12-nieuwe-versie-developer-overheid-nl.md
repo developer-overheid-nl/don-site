@@ -1,5 +1,6 @@
 ---
 authors: [dimitri-van-hees]
+tags: [developer.overheid.nl, changelog, release]
 ---
 
 # Nieuwe versie developer.overheid.nl
@@ -10,7 +11,7 @@ De vernieuwde versie van developer.overheid.nl is live! Met deze update zetten w
 
 ## Developer portal
 
-De website developer.overheid.nl is - de domeinnaam verklapt het al - de *developer portal* van de Nederlandse overheid. Zo'n ontwikkelaarsportaal is simpelweg een vertrekpunt voor softwareontwikkelaars om op een zo'n *developer friendly* mogelijke manier met/ aan software van een bepaalde organisatie te kunnen werken. Voor de meeste partijen gaat dit vaak niet verder dan enkele services, in de vorm van API's, en Software Development Kits (SDK's), maar in dit geval betreft het de gehele Nederlandse overheid.
+De website developer.overheid.nl is - de domeinnaam verklapt het al - de *developer portal* van de Nederlandse overheid. Zo'n ontwikkelaarsportaal is simpelweg een vertrekpunt voor softwareontwikkelaars om op een zo'n *developer friendly* mogelijke manier met of aan software van een bepaalde organisatie te kunnen werken. Voor de meeste partijen gaat dit vaak niet verder dan enkele services, in de vorm van API's, en Software Development Kits (SDK's), maar in dit geval betreft het de gehele Nederlandse overheid.
 
 ## Eén centrale plek voor software development
 
@@ -60,11 +61,11 @@ Zoals gezegd hebben we besloten om alvast te releasen wat we al hebben. Misschie
 
 ## Roadmap
 
-Op korte termijn zullen we ons vooral bezighouden met het toevoegen van content en het verhelpen van de hierboven genoemde *known issues*. Een gedetailleerde roadmap is te volgen via ons GitHub project: [https://github.com/orgs/developer-overheid-nl/projects/9/views/4](https://GitHub.com/orgs/developer-overheid-nl/projects/9). Daarnaast staan er verschillende ideeën op ons netvlies, maar die verdienen allemaal hun eigen blogpost. Hieronder alvast een voorproefje.
+Op korte termijn zullen we ons vooral bezighouden met het toevoegen van content en het verhelpen van de hierboven genoemde *known issues*. Een gedetailleerde roadmap is te volgen via ons GitHub project: [https://github.com/orgs/developer-overheid-nl/projects/9/views/4](https://github.com/orgs/developer-overheid-nl/projects/9/views/4). Daarnaast staan er verschillende ideeën op ons netvlies, maar die verdienen allemaal hun eigen blogpost. Hieronder alvast een voorproefje.
 
 ### Techradar
 
-Naarmate we meer content verzamelen, des te meer inzicht we krijgen in het IT landschap van de Nederlandse Overheid. Dit inzicht is uitstekend te visualiseren middels een *techradar*.
+Naarmate we meer content verzamelen, des te meer inzicht we krijgen in het IT landschap van de Nederlandse overheid. Dit inzicht is uitstekend te visualiseren middels een *techradar*.
 
 ### Verbeteringen API register
 
