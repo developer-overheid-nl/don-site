@@ -7,6 +7,7 @@ body:
     attributes: 
       value: |
         Hartelijk dank voor je interesse om bij te dragen aan ons gezamenlijke Developer Portal voor de hele Nederlandse overheid.
+        Lees ook onze [Bijdragerichtlijnen](https://developer.overheid.nl/contributing)pagina.
   - type: input
     id: name
     attributes: 
@@ -40,7 +41,7 @@ body:
     id: related
     attributes: 
       label: Gerelateerde items
-      description: Voeg links toe naar gereleateerde items, zoals artikelen, documentatie, etc.
+      description: Voeg links toe naar gerelateerde items, zoals artikelen, documentatie, etc.
     validations:
       required: false
   - type: textarea

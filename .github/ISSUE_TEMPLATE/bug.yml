@@ -45,6 +45,7 @@ body:
         - label: Chrome
         - label: Safari
         - label: Microsoft Edge
+        - label: Niet van toepassing / Anders
   - type: textarea
     id: description
     attributes: 

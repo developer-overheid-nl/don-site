@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes: 
       value: |
-        Bedankt voor het aanbrengen van een nieuwe feature. Beschrijf zo duidelijk mogelijk je idee of verbetering.  
+        Bedankt voor het aandragen van een nieuwe feature. Beschrijf zo duidelijk mogelijk je idee of verbetering.  
         Voordat je aan de slag gaat met dit formulier, nog een puntje:
         - Heeft iemand anders al eens een soortgelijk issue ingediend? Check dit in de [backlog](https://github.com/developer-overheid-nl/don-site/issues).
   - type: input
