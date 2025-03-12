@@ -54,7 +54,7 @@ Zoals gezegd hebben we besloten om alvast te releasen wat we al hebben. Misschie
 
 - Content; momenteel missen er nog vele onderwerpen in de kennisbank. Voel je daarom vooral vrij om bij te dragen! En mocht je nou geen tijd of zin hebben om een heel artikel te schrijven, dan nemen wij graag een interview af om het vervolgens zelf te schrijven. Uiteraard met een eervolle vermelding.
 - Homepage; bepaalde features als aankomende events en laatste blogposts die je wellicht zou verwachten op de homepage zijn nog niet geïmplementeerd. Houd onze roadmap en blog in de gaten voor de laatste updates, zodat je meteen weet wanneer er nieuwe features beschikbaar zijn.
-- Toegankelijkheid: op dit moment voldoet nog niet alles aan de WCAG toegankelijkheidseisen. Hier wordt momenteel hard aan gewerkt zodat we zo snel mogelijk voldoen.
+- Toegankelijkheid; op dit moment voldoet nog niet alles aan de WCAG toegankelijkheidseisen. Hier wordt momenteel hard aan gewerkt zodat we zo snel mogelijk voldoen.
 - API en OSS register; we gaan dezelfde NL Design System componenten gebruiken om de front-ends van de registers te vervangen zodat deze dezelfde styling krijgen als developer.overheid.nl. Tevens worden beide registers voorzien van een nieuwe API om integratie met externe bronnen mogelijk te maken.
 - Slack en GitHub; op dit moment zijn verreweg de meeste mensen uit onze doelgroep nog te bereiken via Slack en GitHub. Omdat dit project deels afhankelijk is van de participatie van derden hebben we ervoor gekozen om (in ieder geval voorlopig) aan te haken bij de [Code4NL Slack](https://codefornl.slack.com/archives/CFV4B3XE2) en gebruik te maken van GitHub.
 
