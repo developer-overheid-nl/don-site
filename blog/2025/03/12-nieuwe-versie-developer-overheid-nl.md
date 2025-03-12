@@ -22,7 +22,7 @@ Op deze manier voorkomen we dat mensen het wiel opnieuw gaan uitvinden. Voorbeel
 
 ## Kennisbank
 
-De belangrijkste nieuwe feature is de kennisbank. Op het moment van schrijven is ons team druk bezig met het verzamelen en schrijven van documentatie over standaarden, tools, best practices, tutorials en andere onderwerpen die te maken hebben met IT ontwikkeling bij de overheid. Een hele klus, want ook wij weten niet precies hoe het  gehele IT landschap van de overheid eruit ziet.
+De belangrijkste nieuwe feature is de kennisbank. Op het moment van schrijven is ons team druk bezig met het verzamelen en schrijven van documentatie over standaarden, tools, best practices, tutorials en andere onderwerpen die te maken hebben met IT ontwikkeling bij de overheid. Een hele klus, want ook wij weten niet precies hoe het gehele IT landschap van de overheid eruit ziet.
 
 Daarom kunnen we jouw hulp goed gebruiken. Immers: hoe meer input, hoe sneller de kennisbank groeit. Heb jij dus nog artikelen, tools, ervaringen of andere bronnen die je graag wilt delen? Laat het ons weten! Of draag direct bij via GitHub. De hele kennisbank is gebaseerd op markdown en volledig Open Source, waardoor iedereen met een GitHub account eenvoudig kan bijdragen aan het verbeteren van de inhoud van de kennisbank. Dit beperkt zich overigens niet tot de kennisbank; het hele project is open source en gebaseerd op markdown. Meer informatie over hoe je kunt bijdragen vind je in [dit artikel](https://developer.overheid.nl/contributing).
 
