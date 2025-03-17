@@ -7,7 +7,7 @@ date: 2025-03-18
 ---
 # Deze goede redenen heeft de Kiesraad om Rust te gebruiken
 
-Toen ik kennis maakte met het project [Abacus](https://github.com/kiesraad/abacus) van De Kiesraad was ik direct nieuwsgierig naar hoe de programmeertaal Rust ze bevalt en waarom het goed werkt voor hun project. Daarom toog ik naar Den Haag, waar De Kiesraad huist, om Mark Janssen en Ellen van Leeuwen van Abacus hier eens over uit te vragen.
+Toen ik kennis maakte met het project [Abacus](https://github.com/kiesraad/abacus) van De Kiesraad was ik direct nieuwsgierig naar hoe de programmeertaal Rust ze bevalt en waarom het goed werkt voor hun project. Daarom toog ik naar Den Haag, waar de Kiesraad huist, om Mark Janssen en Ellen van Leeuwen van Abacus hier eens over uit te vragen.
 
 ![Mark Janssen (links) en Ellen van Leeuwen (rechts)](./img/ellen_mark_landscape.jpg)
 *Mark Janssen: Lead Developer (links) en Ellen van Leeuwen: Software Developer (rechts)*
@@ -27,14 +27,15 @@ Tijdens mijn eerste maand ben ik begonnen met de standaard Rust oefenomgeving: [
 ## Over Abacus
 [Abacus](https://github.com/kiesraad/abacus) is een applicatie voor het vaststellen van verkiezingsuitslagen. Binnen het proces van de Nederlandse verkiezingsuitslagen is het papieren proces leidend. Dit betekent dat stemmen niet allen op papier gebeurt, maar ook het optellen van de stemmen in het stembureau. Vervolgens worden per gemeente alle optellingen van de stembureaus ingevoerd in Abacus.
 
-### Niet in de cloud maar op lokale computers, compilen naar een executable een voordeel van Rust
-Elke gemeente draait zijn eigen instantie van Abacus. Abacus draait dus niet in de cloud. De reden hiervoor is dat we het systeem volledig "air-gapped" willen houden. Alle data blijft dus lokaal. Dat is waar Rust mooi om de hoek kijken. Rust stelt je namelijk in staat code gemakkelijk te compilen naar een native executable voor je operating system (in overheidsland veelal Windows) zonder dat je verdere dependencies nodig hebt. Een bekende onhandige dependency die voor veel legacy software nodig is, is de "Java virtual machine". 
+### Niet in de cloud: stemmen tellen via een lokaal netwerk
+Elke gemeente draait zijn eigen instantie van Abacus. Abacus draait dus niet in de cloud. De reden hiervoor is dat we het systeem volledig "air-gapped" willen houden. Alle data blijft dus lokaal. Dit is waar Rust om de hoek komt kijken.
 
-### Stemmen tellen via een lokaal netwerk
-Binnen een gemeente heb je tijdens het tellen een aantal laptops of computers waar mensen dan de uitslagen op intypen. Afhankelijk van hoe groot de gemeente is heb je meer of minder computers. Er wordt een lokaal netwerkje opgezet met één server en een aantal invoerstations waar mensen de papieren optelling in over typen. Het handige is dat mensen het eigenhandig kunnen installeren en hebben verder niets nodig behalve de executable die wij ze geven.
+### Compilen naar een executable: een voordeel van Rust 
+Rust stelt je namelijk in staat code gemakkelijk te compilen naar een native executable voor je operating system (in overheidsland veelal Windows) zonder dat je verdere dependencies nodig hebt. Een bekende onhandige dependency die voor veel legacy software nodig is, is de "Java virtual machine". 
 
+Binnen een gemeente heb je bij het tellen een aantal laptops of computers nodig waar mensen de uitslagen op invoeren. Afhankelijk van hoe groot de gemeente is heb je meer of minder computers. Er wordt een lokaal netwerkje opgezet met één server, alle computers verbinden hier mee. Het handige is dat mensen de executable (.exe) die wij ze geven eigenhandig kunnen installeren en verder niets nodig hebben.
 
-![Een plaatje met daarin het logo van Rust met daarnaast de tekst "The Rust Programming Language"](./img/abacus.png)
+!["Het Abacus logo"](./img/abacus.png)
 
 ## Hoe verschilt Rust ten opzichte van andere talen?
 Mark: "Ik heb hiervoor heel veel in Go geprogrammeerd en daarvoor veel Java en wat Python. Dit heeft er toe geleid dat ik een voorkeur voor statisch getypeerde talen heb gekregen. Statisch getypeerde talen kunnen je goed helpen omdat ze meer bugs door je compiler afvangen. Java kan dat al best goed. Maar Python is hierin weer helemaal niet strict. In zo'n taal ben je meer afhankelijk van een goede testcoverage om erachter te komen dat je code geen bugs bevat."
@@ -68,54 +69,29 @@ Zeker: we leveren alle features goed gedocumenteerd op en denken goed na over go
 
 ## Hoe is julie ervaring met Cargo; de Package Manager van Rust?
 
-Ja, [Cargo](https://github.com/rust-lang/cargo) werkt erg goed. Het feit dat de package manager wordt meegeleverd met de taal heeft veel voordelen. Het is fijn dat het team achter de programmeertaal één officiële packagemanager aanbiedt, zo concentreren zich alle open source bijdrages ook in één package-manager. 
+We zijn erg tevreden met [Cargo](https://github.com/rust-lang/cargo). Het feit dat de package manager wordt meegeleverd met de taal scheelt veel. Het zorgt ervoor dat alle contributies aan package-managers zich concentreren in één package-manager. Dit zorgt voor een goed en duidelijk eco-systeem.
 
-Cargo ondersteunt het pinnen van dependencies. Hierbij wordt er ook een hash is gegenereerd die garandeert dat als je de dependencies opnieuw installeert, je dezelfde dependency binnenhaalt die je hebt vastgezet. Deze hashes worden 
+### Het pinnen van versies met hashes
+Cargo ondersteunt het pinnen van dependencies. Hierbij wordt er een hash gegenereerd die garandeert dat als je dependencies opnieuw installeert, je dezelfde dependency binnenhaalt als die je hebt vastgezet. Deze hashes worden namelijk gebaseerd op basis van een fingerprint van de code. Als er is gerommeld met de code klopt de hash niet meer en trekt Cargo aan de bel.
+ 
+### Ecosysteem/ aanbod libraries
+In het ecosystem vind je al redelijk wat volwassen libraries, bijvoorbeeld onze [HTTP library](https://github.com/kiesraad/abacus/blob/eaa9d3e3b0e3ac0d484c201085f1a614f33af29f/backend/Cargo.toml#L26).
+Ook gebruiken we [typst](https://github.com/kiesraad/abacus/blob/eaa9d3e3b0e3ac0d484c201085f1a614f33af29f/backend/Cargo.toml#L39) voor het maken van pdf-bestanden. 
+
+### Een jonger ecosysteem betekent minder uitgebreide libraries voor legacy standaarden (bijvoorbeeld XML)
+Een nadeel dat we ondervinden is dat we voor het verwerken van XML nog geen fantastische library hebben. Dit terwijl we dat wel nodig hebben om te publiceren in de Lexa Markup Language, De Nederlandse standaard voor het publiceren van verkiezingsuitslagen en het uitwisselen ervan. Je merkt dat de meest gebruikte XML library voor Rust ([`quick-xml`](https://github.com/kiesraad/abacus/blob/eaa9d3e3b0e3ac0d484c201085f1a614f33af29f/backend/Cargo.toml#L40)) wel voldoet, maar minder volwassen en uitgebreid is dan wat je in andere talen vindt. Dus in een oudere taal als Java of als.NET. Wel was `quick-xml` volwassen genoeg om bug-vrij te zijn.
 
 
-[19:24–19:37] In het ecosystem zijn er ook heel veel best wel volwassen libraries, bijvoorbeeld onze HTTP library of onze HTTP framework eigenlijk moet je het zeggen, dat is heel volwassen.
-[19:38–19:56] En we hebben heel veel mooie andere libraries zoals typst voor het maken van pdf-bestanden. Een soort van alternatief voor later. Dat is ook in rust geschreven. Dat gebruiken we om pdf-bestanden te maken. Uitslagen van de gemeente
-[19:56–20:17] worden dan als pdf-bestand ook beschikbaar gemaakt. Dat rinderen we daarmee. Dat is heel fijn. Rust is volgens mij in 2012 voor de eerste uitgekomen.
-[20:22–20:40] Als je het over XML hebt, daar is bijvoorbeeld nog best wel een beetje een gat in de beschikbare libraries. En we hebben XML nodig omdat de Lexa Markup Language, De Nederlandse standaard voor het publiceren van verkiezingsuitslagen.
-[20:43–21:04] En voor het uitzustelen van verkiezingsgegevens. Dat is een XML-formaat. En daar merk je dat de library die er is, die voldoet. Maar het is minder volwassen en minder uitgebreid dan wat je in andere talen vindt. Dus een taal als Java of als.NET. Die helemaal in die XML-boom zijn ontwikkeld. Ja, precies. Hele andere tijd. Daar is dat super uitgebreid. Het, helemaal in de taal ingebakken.
-[21:05–21:19] Helemaal, ja weet je, dat zijn misschien zelfs wel de referentie implementaties van sommige XML stukken van een XSD bijvoorbeeld. Ja, dat heb je in Rust niet en dat is dus veel minder volwassen. Ja, heb je toen ook wel dingen terug
-[21:19–21:35] gecontribueerd of? Hebben we nog niet nodig gehad. Het zijn ook wel dingen dat je dan, dat het echt veel werk is om te maken. Dus ik snap heel goed dat mensen dat nog niet gedaan hebben. Het was volwassen genoeg dat we niet
-[21:35–21:52] tegen bugs aan liepen. Waar bijvoorbeeld gewoon code generation vanuit een schema dat bestond niet eigenlijk, bestaat niet echt. Dus dat gebruiken we dan niet. Het is dan meer handwerk om dat bij elkaar te zoeken. Hoe bedoel je dan die code generation vanuit de schema?
-[21:52–22:09] als je een xml schema hebt kan je in bijvoorbeeld in java kan je java klassen helemaal genereren vanuit die xml schema's nou ja dat is hoe iedereen dat gebruikt ja en ook hoe die hoe die standaard is opgebouwd is niet is niet
-[22:09–22:22] echt ontworpen om zeg maar als mens zeg maar lekker een barstertje voor te schrijven, want het is van heel groot en uitgebreid. Dus ja, je wil het liefst dat genereren, maar uiteindelijk, omdat die generators niet bestaan,
-[22:23–22:37] zijn we het met de hand aan het doen. En dat is wel iets meer werk, maar ik denk wel minder werk dan een parser schrijven, die dan generiek werkt voor een enorme standaard die een XML schema is. Ja, dat wordt dan een beetje zo'n bizarre sidequest, lijkt me niet.
-[22:37–22:49] Ja, het is een beetje alsof je je eigen compiler gaat schrijven door uit te spreken, omdat je je eigen dialect van een bepaalde taal wilt schrijven. Zo groot zijn we helaas ook weer niet. Of nou, laten we helaas maar weg.
-[22:49–23:03] Zo groot zijn we niet. We hebben niet de luxe om al dat soort sidequests er maar uit te lopen. Nee, maar wel een interessante match met een project die inderdaad dan te maken heeft met een kiesraad die van oudsher iets met XML doet.
-[23:03–23:17] Iets wat al lang loopt. Dat is wel logisch dat je daar dan tegenaan loopt. Ja, kijken. Ja, dan kunnen we denk ik door naar de volgende. Dus wat voor projecten zouden jullie ook
-[23:17–23:37] wat voor projecten zouden jullie aanraden om ook over te gaan op rust? Dus wat voor profiel zou je dan Ik denk sowieso projecten waar iets als portability of waar je iets embedded wil doen of iets
-[23:37–23:56] wat portable moet zijn of als je iets op een mobiel of meerdere OS'en wil kunnen draaien bijvoorbeeld dan is Rust heel geschikt. Daar is het denk ik een soort heel erg afhangt van, heb je mensen met ervaring, heb je mensen
-[23:57–24:14] die het leuk vinden, wat voor match is er? En tegelijkertijd ook gewoon, zijn er daadwerkelijk wel libraries voor alles wat je gaat doen? Moet je bijvoorbeeld integreren in een XML heavy ecosysteem, moet je allemaal soap calls
-[24:14–24:30] gaan doen? Misschien is het dan niet de beste keuze, want daar zijn libraries gewoon wat minder volwassen voor. Voor andere projecten is het juist wel weer heel fijn en heb je wel goede libraries die heel volwassen zijn.
-[24:33–24:49] Nee, dat is een heel duidelijk profiel van de taal, dat HTP vast heel goed werkt, maar zo'n paar dingen niet, want het is gewoon een jonge taal. eigenlijk ook vast de voor het ecosysteem jonger en wat minder
-[24:49–25:05] daar toch iets minder enterprise zeg maar dus al die soort standaarden die alleen maar in de grote enterprise gebruikt worden tegenwoordig zoals een zoop ja überhaupt dingen met xml is wat meer dan binnen de overheid denk ik wel reëel heel veel organisatie ja denk dat
-[25:05–25:19] je dat je daar wel een casus te pakken het als je de heel veel van dat soort werk aan doen bent dat moet je misschien even twee keer nadenken voordat je rust gaat gebruiken. Voor heel andere dingen is het juist een heel fijne taal en is het heel fijn om te gebruiken
-[25:19–25:36] en heel productief. Ja, weet je, je zei ook inderdaad, je noemde al het eerste punt van iets wat portable moet zijn en je zei ook ik ben het in de embedded wereld tegengekomen. Is het dan ook heel goed in die systeem-schililachtige dingen
-[25:39–25:52] dus systeem API het kan heel low level je kan het echt gebruiken als alternatief voor C om heel low level te programmeren tot en met een hele krappe microcontroller waar je weinig geheugen hebt
-[25:52–26:03] dat kan je ook gewoon rustig gebruiken maar je kan het ook gebruiken voor een grotere applicatie die web API gebaseerd werkt.
-[26:04–26:19] Meer koppelingen heeft. Het schaalt wel van heel klein tot best groot. Het is niet dat het alleen maar in die systeemprogrammeer hoek zit, of system programming om het in het Engels te zeggen.
-[26:19–26:32] Maar je merkt wel dat daar heel veel gebruik op zit, dat het toch in die hoek dat daar de het ecosysteem zich wat meer op focust. Ik vind dat totaal als geheel dat niet beperkt is tot die hoek.
-[26:35–26:48] En je hebt heel veel gebruik eromheen, waar mensen ook UI-complete koeiapplicaties maken in Rust en zo. Dus mensen doen het wel normaal, maar dat is minder volwassen. Ja, maar daar dacht ik ook aan. Je hebt heel veel die elektron-apps en zo.
-[26:49–27:02] Ja, je hebt mensen die ook daar, die dat in Rust bouwen. Je hebt Z bijvoorbeeld, ZED, dat is een editor die in Rust gemaakt is. Die doen volgens mij ook gewoon hun eigen UI-rendering enzo in Rust.
-[27:03–27:24] En dat is dan heel snel, dus dat is een groot voordeel. Ja. Dus het is zeker heel versatile. Maar wat ik zeg, je zal denk ik in het ecosysteem bepaalde gaten zien als je niches hebt waar het ecosysteem het minder op aansluit.
+## Wat voor IDE en tooling gebruiken jullie?
+Ellen: "Ik gebruik Rust Rover, dat is van JetBrains. Dat is in principe een Rust dedicated IDE, maar ondersteunt gelukkig ook TypeScript. Ik kan dus alles in één IDE doen. Rust Rover krijgt ook veel updates en is stabiel."
 
-# Wat voor IDE en  gebruiken jullie er nu omheen? Leuk, misschien jij eerst? Ik gebruik Rust Rover, dus dat is van JetBrains. Dus echt een Rust dedicated IDE. Maar die ook
+### Clippy: een behulpzame linter geïnspireerd op Microsoft Word '97s aimabele assistent
+Mark: "De linter die geshipt wordt met Rust heet Clippy. Deze assistent heeft helaas geen geanimeerd karakter maar doet wel goede code-suggesties. Je ziet alle suggestions netjes in je terminal." Ellen beaamt dat de suggesties van Clippy erg handig zijn: "Dat is echt wel een van de grote voordelen van Rust. Dat het hele goede suggestieve error messages en linter messages heeft.
 
-[27:46–27:54] Ik gebruik Rust Rover, dus dat is van JetBrains. Dus echt een Rust dedicated IDE. Maar die ook
-[27:54–28:06] wel TypeScript ondersteunt. Gelukkig. Dus je kan gewoon alles in één IDE programmeren. En zoals ik al zei, daar zit dus die tutorial inge... tutorial, ja die
-[28:06–28:17] Rust link zit daar ingebakken. Dus dat is echt heel maakt het relatief laagdrempelig om te beginnen ja is alle dan heb je gewoon al documentatie alles eromheen heb je in je IDI zit was ik het zou moeten switchen
-[28:17–28:30] tussen de web page met documentatie en dan de uitleggen en je leert je IDI gebruiken precies dat is wel slecht ja direct in die dingetjes die je leert je shortcuts enzo want hoe was dat rust links is dat
-[28:30–28:47] vond je dat leuk of hoe zag dat er uit ja Ja, nou, dat is al even geleden. Volgens mij vond ik het wel leuk om te doen. Ik heb er denk ik twee weken een beetje, ja redelijk, nee niet redelijk fulltime, vier dagen in de week, maar aan besteed. Het was volgens mij ongeveer klaar. En ja, als ik me even terugdenk,
-[28:47–29:01] dan vond ik het volgens mij wel leuk om te doen. En is dat wel een goede intro. Je hebt natuurlijk lang nog niet alles behandeld, maar goed, daar kom je gaandeweg wel achter wat er nog aan, dat is die functionele componenten enzo, wat je daarmee
-[29:02–29:18] nog wat meer kan leren. Dus ja, dus ja, Rustover vind ik zelf top. Wordt ook heel actief geüpdate en dat soort dingen. Werkt gewoon goed. Ja, cool. Ja, die heb ik. En qua tooling,
-[29:18–29:31] hebben jullie dan, ja ik kom zelf een beetje uit Python en JavaScript wereld, dus dan heb je een linter en die ga je dan eenmaal instellen met z'n allen. Ja. In Rust heb je ook een linter ingebouwd.
-[29:33–29:47] Die heet Clippy. Naar de assistant van Word, zeg maar. Die kan je ook, zeg maar, even pedantisch instellen dat die, zeg maar, gaat klagen over allemaal dingen die je doet. Is er ook zo'n icoontje die dan...
-[29:47–30:01] Nee, dat niet. Wel netjes in je terminal. Je hebt op deze regel, misschien wil je dit doen. Dus ook echt suggesties van hoe je dingen beter kan doen. Dat is zo handig oprecht. Dat is echt wel een van de grote voordelen van Rust.
-[30:01–30:19] Dat het hele goede suggestieve error messages en linter messages heeft. Ja, precies. Ik ben het mee eens inderdaad. Het is een heel vriendelijke taal. Veel vriendelijker dan, als je embedded ofzo doet, C, dan ja, dat blerf er op, byte 100,
+### Een stukje over behulpzame LINTING
+HIER
+
+
 [30:19–30:32] ziet er maar uit. Ja, nou ja, JavaScript is ook... Het kan soms ook wel. Het kan soms echt drama zijn om JavaScript op te vinden, maar ik regel die nou eigenlijk bedoeld. Ja, en in Rust is dat echt,
 [30:32–30:44] echt veel beter. Dus dat is wel, dat maakt het voor mij ook wel, ik denk van ja ik ga toch wel voor deze stap. Ik had ook weer gewoon een Python baan kunnen zoeken. Maar ik dacht van nee laten we gewoon voor iets heel anders gaan.
 [30:44–30:56] En dit is dan wel een van de voordelen ervan van het heeft wel een aardige learning curve, maar je wordt ook een beetje geholpen. Dat is ook misschien precies. Ja, dus het is niet dat je echt, ik wil altijd zeggen een jaar bezig bent om te leren. 
