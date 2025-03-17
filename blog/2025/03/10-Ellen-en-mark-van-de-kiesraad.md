@@ -7,81 +7,72 @@ date: 2025-03-18
 ---
 # Deze goede redenen heeft de Kiesraad om Rust te gebruiken
 
-Toen we kennismaakten met het project Abacus van De Kiesraad waren we direct nieuwsgierig hoe de programmeertaal Rust ze bevalt en waarom het zo goed voor hun project werkt. Daarom togen we naar Den Haag om de developers van Abacus hier eens over uit te vragen.
+Toen ik kennis maakte met het project [Abacus](https://github.com/kiesraad/abacus) van De Kiesraad was ik direct nieuwsgierig naar hoe de programmeertaal Rust ze bevalt en waarom het goed werkt voor hun project. Daarom toog ik naar Den Haag, waar De Kiesraad huist, om Mark Janssen en Ellen van Leeuwen van Abacus hier eens over uit te vragen.
 
 ![Mark Janssen (links) en Ellen van Leeuwen (rechts)](./img/ellen_mark_landscape.jpg)
+*Mark Janssen: Lead Developer (links) en Ellen van Leeuwen: Software Developer (rechts)*
 
 <!-- truncate -->
 
-## Aan Mark: hoe heb jij ooit kennisgemaakt met Rust?
+## Hoe heb jij ooit kennisgemaakt met Rust?
 Mark: "In 2021 leerde ik de taal kennen toen ik met een hobbyproject bezig was om mijn slimme meter thuis uit te lezen, ik kende het op zich al langer, uit blogposts en van [hackernews](https://news.ycombinator.com/) bijvoorbeeld maar ik had er nog nooit iets mee gedaan. Dit projectje was een goed excuus om het eens een keer te proberen. Daarna heb ik er ook de [Advent of Code](https://adventofcode.com/) mee gedaan, om er wat dieper in te duiken. Dat bleek wel pittig, om met een nieuwe taal uitdagende puzzels op te lossen dus ik weet niet of ik dit iedereen zou aanraden, maar het was wel heel leuk en zo ben ik het ook meer gaan gebruiken. Uiteindelijk dus ook voor wat grotere projecten, en nu ook dus bij de Kiesraad."
 
-## Aan Ellen: hoe heb jij ooit kennisgemaakt met Rust?
 Ellen: "Ik kwam er ooit mee in aanraking tijdens mijn studie. Ik had in 2015 een studiegenoot die tijdens het vak compilerbouw besloot om niet een framework te gebruiken om de compiler te bouwen. Maar om het helemaal from scratch in rust te bouwen. Des tijds dacht ik, bij hem zit een steekje los. Daarna kwam ik er pas weer mee in aanraking bij de kiesraad. 
 In mijn vorige baan gebruikten we Python, JavaScript. Maar programmeren in Rust is natuurlijk compleet anders. Omdat ik wel van een uitdaging houd leek het me leuk om iets nieuws te leren. En ik hoorde dat Rust heel nette error logging heeft.
 Dat vond ik wel een heel groot pluspunt.
 
-### [Rustlings](https://blog.jetbrains.com/education/2019/12/19/rustlings-course-adaptation/) in Rustrover
-Tijdens mijn eerste maand ben ik begonnen met de standaard Rust oefenomgeving: Rustlings. Deze kan je helemaal doorlopen in RustRover. Zo heb ik langzaamaan meer en meer geleerd. Natuurlijk ook vooral van mijn collega's en van, Stackoverflow. 
+### Rustlings in Rustrover
+Tijdens mijn eerste maand ben ik begonnen met de standaard Rust oefenomgeving: [Rustlings](https://blog.jetbrains.com/education/2019/12/19/rustlings-course-adaptation/). Deze kan je helemaal doorlopen in [RustRover](https://www.jetbrains.com/rust/). Zo heb ik langzaamaan meer en meer features van de taal leren kennen. Daarnaast leerde ik natuurlijk veel mijn collega's.
 
-## Waarom is Rust een geschikte taal voor [Abacus](https://github.com/kiesraad/abacus)?
-Abacus is een stuk software voor  uitslagvaststelling. Het papieren proces is hierin leidend. Dit betekent dat het stemmen gebeurt op papier, maar ook het optellen van de stemmen. Vervolgens wordt er op het gemeentelijk stembureau, nadat alle stemmen zijn geteld, alle optellingen van de stembureaus ingevoerd in software.
+## Over Abacus
+[Abacus](https://github.com/kiesraad/abacus) is een applicatie voor het vaststellen van verkiezingsuitslagen. Binnen het proces van de Nederlandse verkiezingsuitslagen is het papieren proces leidend. Dit betekent dat stemmen niet allen op papier gebeurt, maar ook het optellen van de stemmen in het stembureau. Vervolgens worden per gemeente alle optellingen van de stembureaus ingevoerd in Abacus.
 
-## Niet in de cloud maar op lokale computers
-met 1200 kandidaten, een gemeente met 300 stembureaus, je kan je voorstellen, dat wil je niet met een rekenmachine doen. Nee. Dat doen we met software. En elke gemeente draait zijn eigen instantie van Abacus. Dus het draait niet in de cloud, het draait niet op een host ergens. Nee. En Rust komt daar mooi om de hoek kijken, omdat je er software mee kan maken die gewoon native compiled voor je operating system zonder zonder dat je verdere dependencies nodig hebt, zonder dat je een Java virtual machine nodig hebt bijvoorbeeld, zonder dat je een ander gedoe hebt. Dus je kan het heel makkelijk gebruiken. En dan blijft het ook op die machine. Ja, het idee van Abacus is inderdaad dat alle data op die ene machine blijft ook. Dat het volledig air-gapped gebruikt wordt. Dus je hebt vaak een aantal laptops of computers waar mensen dan die uitslagen op gaan intypen. Afhankelijk van hoe groot de gemeente is heb je meer of minder computers. En dan wordt het een netwerkje met één server en een aantal invoerstations waar mensen dan de papieren optelling over typen. En op die manier wordt dan de uitslag van zo'n gemeente bepaald. Het handige is dat mensen het eigenhandig kunnen installeren en hebben verder niets nodig behalve de executable die wij ze geven. Rust is hier niet uniek in natuurlijk, maar er zijn andere talen die het niet bieden. Alle andere overwegingen kan je vinden in onze [rationale](https://github.com/kiesraad/abacus/blob/main/documentatie/softwarearchitectuur/overwegingen-talen-en-frameworks.md#gemaakte-keuze-backend-rust).
+### Niet in de cloud maar op lokale computers, compilen naar een executable een voordeel van Rust
+Elke gemeente draait zijn eigen instantie van Abacus. Abacus draait dus niet in de cloud. De reden hiervoor is dat we het systeem volledig "air-gapped" willen houden. Alle data blijft dus lokaal. Dat is waar Rust mooi om de hoek kijken. Rust stelt je namelijk in staat code gemakkelijk te compilen naar een native executable voor je operating system (in overheidsland veelal Windows) zonder dat je verdere dependencies nodig hebt. Een bekende onhandige dependency die voor veel legacy software nodig is, is de "Java virtual machine". 
 
+### Stemmen tellen via een lokaal netwerk
+Binnen een gemeente heb je tijdens het tellen een aantal laptops of computers waar mensen dan de uitslagen op intypen. Afhankelijk van hoe groot de gemeente is heb je meer of minder computers. Er wordt een lokaal netwerkje opgezet met één server en een aantal invoerstations waar mensen de papieren optelling in over typen. Het handige is dat mensen het eigenhandig kunnen installeren en hebben verder niets nodig behalve de executable die wij ze geven.
+
+
+![Een plaatje met daarin het logo van Rust met daarnaast de tekst "The Rust Programming Language"](./img/abacus.png)
 
 ## Hoe verschilt Rust ten opzichte van andere talen?
-Mark: "Ik heb hiervoor heel veel in Go geprogrammeerd. En daarvoor heel veel Java. En tussendoor nog Python. Ik heb sowieso een voorkeur voor statisch getypeerde talen. Omdat je dan al iets meer fouten door je compiler laat afvangen. Java kan dat al best goed. Maar Python heeft dat weer helemaal niet. En dan moet je toch een beetje hopen dat het goed is of hopen dat je goede testcoverage hebt om erachter te komen dat je code goed is.
-Go is ook een taal met statische typechecking, is statically tight, maar had destijds een heel simpel, veel simpeler typesystem en dat heeft Rust veel uitgebreider, nog veel uitgebreider dan Java.
-Ik merkte dat je dat flexibiliteit geeft om dingen door de compiler af te laten vangen waar dat met andere talen echt moeilijker is. Dus dat is met name wat me interesseerde.
-Tegelijkertijd heb je in techland ook heel veel hype natuurlijk. Dus dan ga je toch ook eens een keer kijken: waar gaat die hype nou precies over? Is het echt zo handig? Is het echt nuttig? Dus dan ga je het proberen. Ja, cool. En toen bleek het inderdaad dat het dus wel bereikbaar was.
+Mark: "Ik heb hiervoor heel veel in Go geprogrammeerd en daarvoor veel Java en wat Python. Dit heeft er toe geleid dat ik een voorkeur voor statisch getypeerde talen heb gekregen. Statisch getypeerde talen kunnen je goed helpen omdat ze meer bugs door je compiler afvangen. Java kan dat al best goed. Maar Python is hierin weer helemaal niet strict. In zo'n taal ben je meer afhankelijk van een goede testcoverage om erachter te komen dat je code geen bugs bevat."
+
+### Statische typechecking
+Go is ook een taal met statische typechecking, maar toen ik er mee begon was deze nog wat basic. Rust heeft een heel uitgebreid typesystem, veel uitgebreider dan bijvoorbeeld Java.
+Een uitgebreid typesystem geeft je de flexibiliteit om dingen door de compiler af te laten vangen waar dat met andere talen echt moeilijker is.
 
 
-## Verschillen met Python
+> Een uitgebreid typesystem geeft je de flexibiliteit om dingen door de compiler af te laten vangen waar dat met andere talen echt moeilijker is.
+>
+> — Mark Janssen, De Kiesraad
 
-Ellen: "wel interessante casus. Je zegt, ik kom van Python vandaan. Ja. Maar dan kun je dus wel, heb je aan de lijf onderwonden van hoe dat verschil is. En hoe is dat dan, ja, hoe voel je dat dan anders of hoe werkt dat anders in de partij?
-[07:40–07:52] Ja, het is echt wel goed uitzoeken van, ja, Rust heeft heel veel, ja hoe noem je dat, al die iterators en dat soort dingen, die ik echt allemaal moest leren van wat voor opties zijn hiervoor.
-[07:52–08:06] Je hebt niet alleen maar een, nou ja, for loops en while loops, maar je hebt ook allemaal andere soorten. Het meer functionele programmeren van Rust. Ja, dat. En dat was wel echt zo van, oké, daar moet ik echt even, nou ja, dat is compleet nieuw
-[08:06–08:20] eigenlijk. En als ik dan bijvoorbeeld code schrijf, dan ga ik met een van de Rust experts zitten om dat dan wat meer rustachtig te maken. Zodat ik gewoon wat meer de echte native Rust dingen kan leren en gebruiken.
-[08:20–08:32] Ja, dat ik dat niet... Wat is het? Efficiënter wordt of bondiger. Een vocabulaire past echt op Rust en niet dat het een soort Python-achtig vocabulaire is in Rust.
-[08:32–08:44] Precies. Maar heb je dan ook, wat is dan een heel duidelijk voordeel die je ziet naast Python? Want je komt uit die Python-wereld en dan nu Rust. Dat je compile-time errors krijgt.
-[08:44–08:56] Dat je pas ergens een maand later dat je in Python is, blijkt dat je toch een bug erin had omdat je iets bent vergeten te testen of whatever. Hier, over het algemeen kom je er heel snel achter als er iets fout is.
-[08:56–09:07] En sneller achter als er iets fout is. Je moet nog steeds gewoon alles heel goed testen, dat deed ik met Python ook. Maar hier is het wel zo dat je gewoon, je komt echt wel sneller achter bugs. Het is altijd wel een beetje een learning curve voor mij om rust te leren, maar nu
-[09:08–09:25] ik het dan een beetje aardig kan, na bijna een jaar, heb ik wel het gevoel van ja, het is wel een goede taal om mee te werken. Niet per se meer secure, maar gewoon minder bug prone. Ja, wat ever dat Nederlandse
-[09:25–09:38] vertaling daarvan is. Klinkt wel goed inderdaad. Dan kunnen we door naar de volgende, want we hadden het net inderdaad over abacus en over rust.
+### Aan Ellen: welke verschillen zie je ten opzichte van Python?
 
+Ellen: "Rust heeft veen handige concept zoals iterators en dat soort dingen. Ik moest deze concepten dus allemaal leren kennen. Je hebt dus niet alleen maar, for loops en while loops, maar ook andere soorten iterators. Om het goed te leren ga ik vaak met een van de Rust-experts in ons team zitten om naar een Pull Request te kijken en dan mijn code wat meer Rust-achtig te maken. Zodat ik gewoon wat meer de echte native Rust dingen leer en ga gebruiken. 
 
+### De compiler: eerder bugs aan het licht
+Een voordeel aan Rust wat mij betreft is dat je compile-time type-errors krijgt. Dit voorkomt bugs en over het algemeen kom je er heel snel achter als er een bug in je code zit. Natuurlijk moet je alles goed afdichten met tests. 
+
+Natuurlijk is het een steilere learning curve om Rust te leren dan meer losely typed programeertalen. Maar na het bijna een jaar te hebben gebruikt kan ik zeggen: het is een fijne taal om mee te werken. Het is gewoon minder bug prone dan andere talen.
+
+![Een plaatje met daarin het logo van Rust met daarnaast de tekst "The Rust Programming Language"](./img/rust.png)
 
 ## Jullie zetten de wet direct om in code: is Rust daar specifiek geschikt voor?
 
-[13:48–14:03] ik denk niet dat specifiek rust daar een specifiek voordeel heeft op andere talen denk ik. Maar, soms moet jij er een keer anders over. Nee, ik denk dat dat ook nog meevalt.
-
-[14:07–14:30] Kijk, je wil een taal hebben die expressief genoeg is om dat soort dingen allemaal te kunnen bevatten. Dus zo'n type system is dan vaak wel handiger. Dat je dan verschillende varianten in een type system kan vatten. En dat op die manier kan, als abstracties, aanbrengen in je code. Ja. acties aan kan brengen in je code. Ja. Maar ik denk niet dat dat een doorslaggevend argument is om voor een bepaalde taal te kiezen.
-[14:32–14:45] Nee. Ik kan me voorstellen dat het wel een voordeeltje is, maar dat het inderdaad niet... Ja. Dat het documenteren en hoe je codeert, dat dat meer invloed heeft uiteindelijk op
-[14:45–14:58] de transparantie dan de taal zelf. Ja. Ik heb een voordeel van Rust, is ook wel dat het goed leesbaar is. Dus ook al vinden mensen het misschien, is de learning curve wat steiler, zeg maar.
-[14:59–15:17] Dat is nog steeds best goed leesbaar. Dus dat is voor de transparantie van de software die we bouwen ook wel belangrijk. Dat een buitenstaander toch ook wel, of nou ja, een buitenstaander die iets betrofder ontwikkeling weet. Dat die ook wel gewoon kan lezen van wat gebeurt er nou allemaal en hoe zit het in elkaar.
-[15:18–15:33] We pretenderen niet dat elke Nederlander onze software kan gaan begrijpen en elke regel code kan bevatten. Maar ja, als je iets als Haskell gebruikt, dan wordt het vaak wel lastiger om code te lezen als je die taal niet kent.
-[15:34–15:48] Ja, en denk je dat dat ook, want je noemt net al een heel erg functionele taal, denk je dat dat het leesbaarder maakt? Rust is niet mega functioneel, maar het heeft wat functionele aspecten erin.
-[15:48–15:59] En ik denk zelf dat die wel leesbaar zijn, maar je moet dan nog steeds wel een begrip hebben van wat die functies doen. Wat een fold bijvoorbeeld doet, of wat een map doet, en wat een filter doet.
-[15:59–16:11] Als je over een set itereert of een collectie itereert en dan daar operatie op uitvoeren dat is een beetje tot functionele ja ja dan moet je moet je moet je dus een beetje begrip van hebben van ja hoe
-[16:11–16:26] dat dan werkt ja check en waar nodig proberen we natuurlijk comment te zetten en goede variabelen namens wat ook wat makkelijker te lezen is ja als je misschien niet precies weet wat die ene functie doet dat je dat dan dat je eventueel nog uit de context eromheen kan begrijpen ja
-[16:26–16:38] dus voor mij was het ook wel inderdaad dat volt enzo, wat is dit, dit is echt iets nieuws. Dat moet je dan wel even googlen, even opzoeken in de rustdocumentatie. Maar met goede comments eromheen zou je het nog steeds wel gewoon kunnen begrijpen wat
+Mark: "Ik denk niet dat Rust specifiek extra geschikt is voor deze use-case maar het heeft er wel wat goed eigenschappen voor. Zo is het een expressieve taal waardoor je dingen als de wet wel op een goede manier kan vatten. Ook denk ik dat een goed leesbare taal is dus dat is goed voor de transparantie van de software."
 
 ## Is dat iets waar jullie mee bezig zijn; onze code moet transparant zijn voor mensen van buitenaf?
+Zeker: we leveren alle features goed gedocumenteerd op en denken goed na over goed opgesplitste, behapbare functies. Wat we heel leuk vinden is dat je dan soms hulp krijgt. Zo hebben we een feature die zorgt voor de zetelverdeling in de tweede kamer. Onze collega's van de [tweede golf](https://tweedegolf.nl/en) (Rust-bureau uit Nijmegen) zijn toen deze feature in gedoken en zo testen ze eigenlijk gewoon gratis onze code. Zulke samenwerkingen zijn heel erg leuk.
 
-[16:52–17:05] Ja, en we werken open source dus inderdaad, je wilt niet dat je een stuk code oplevert zonder enige documentatie en gewoon dit is allemaal wel prima, nee. We willen zorgen dat alles gewoon
-[17:05–17:20] voldoende getest is, dat het allemaal netjes opgesplitst is in behapbare functies en dat soort dingen. Ja, en zeker voor de meer cruciale functies zoals het ontdellen van resultaten en de zetelverdeling.
-[17:22–17:37] Dat is de kritieke business logic in deze applicatie. Dus ik wil wel dat dat echt begrijpelijk is. We hebben dus een aantal mensen die al bijdragen aan onze code testen. En dan bugs rapporteren aan ons.
-[17:37–17:50] Dat is wel heel leuk. Het zijn een aantal collega's van onze tweede golf collega's. Die zijn zelf daar een beetje ingedokenoken in zetelverdeling en je had je tweede golf al eerder genoemd ja ja niet niet in de opname maar wel eerder met tom ja dus we hebben
-[17:50–18:07] een aantal inderdaad aantal van onze collega's komen van tweede golf ja dat is een rustbureau hoe noemen we dat ja en een aantal van hun collega's zijn dus zijn wel geïnteresseerd in verkiezingen ja dus ja het is niet die voor ons werken en zij zijn niet meer ingedoken ze testen eigenlijk gewoon onze code, hebben een eigen validator gebouwd en weet ik wat allemaal.
-[18:07–18:21] En het is echt heel cool. Een eigen implementatie ook van de Zetel. Ja, precies. Ja, wel leuk dat ze inderdaad... Omdat je open source werkt, heb je dat natuurlijk eerder dat mensen het gaan checken en meegaan kijken.
+## Hoe is julie ervaring met Cargo; de Package Manager van Rust?
 
-## Hoe is julie ervaring met Cargo; de Package Manager van Rust? Kan je makkelijk versies pinnen etc? Zijn er voldoende libraries beschikbaar?
+Ja, [Cargo](https://github.com/rust-lang/cargo) werkt erg goed. Het feit dat de package manager wordt meegeleverd met de taal heeft veel voordelen. Het is fijn dat het team achter de programmeertaal één officiële packagemanager aanbiedt, zo concentreren zich alle open source bijdrages ook in één package-manager. 
 
-[18:45–18:46] 
-[18:46–19:02] Ja, gaat heel goed. Het feit dat de package manager, dat cargo dan echt een, hoe zeg je dat, dat het ingebouwd is in de taal of meegeleverd wordt met de taal, dat geldt heel veel. Dat is niet iets wat zeg maar achteraf nog een
-[19:02–19:24] keer bedacht is zoals bijvoorbeeld bij Go een beetje het geval is of nou extremer bij taal C ofzo. Daar is helemaal geen standaard voor. Dus het is heel fijn dat je dat hebt en dat je gewoon, dat je dependencies gepind kunnen worden en dat er een hash is dat hij niet verandert gedurende dat jij dezelfde dependency hebt vastgezet.
+Cargo ondersteunt het pinnen van dependencies. Hierbij wordt er ook een hash is gegenereerd die garandeert dat als je de dependencies opnieuw installeert, je dezelfde dependency binnenhaalt die je hebt vastgezet. Deze hashes worden 
+
+
 [19:24–19:37] In het ecosystem zijn er ook heel veel best wel volwassen libraries, bijvoorbeeld onze HTTP library of onze HTTP framework eigenlijk moet je het zeggen, dat is heel volwassen.
 [19:38–19:56] En we hebben heel veel mooie andere libraries zoals typst voor het maken van pdf-bestanden. Een soort van alternatief voor later. Dat is ook in rust geschreven. Dat gebruiken we om pdf-bestanden te maken. Uitslagen van de gemeente
 [19:56–20:17] worden dan als pdf-bestand ook beschikbaar gemaakt. Dat rinderen we daarmee. Dat is heel fijn. Rust is volgens mij in 2012 voor de eerste uitgekomen.
@@ -170,3 +161,12 @@ Ellen: "wel interessante casus. Je zegt, ik kom van Python vandaan. Ja. Maar dan
 [38:10–38:21] Dus als je ook met je team daar wil zitten, zeg dan we gaan even een keer met de kiesgaard daar met de kus aan. Ja, dat kan wel leuk zijn om een keertje te doen. Ja, toevallig zijn er twee van onze teamleden die wonen in Utrecht. Dus
 [38:21–38:34] voor hen is het helemaal... Ja, en ook als je in Nijmegen woont, is Utrecht een stuk dichterbij dan Den Haag, inderdaad. Dus ik ben van de collega's die uit Nijmegen komen, want de Tweede Golf zit daar. Ja. Nijmegen in de omgeving
 [38:34–38:41] moet ik zeggen. Maar laten we inderdaad even een foto maken. Ja, tof. Dan... Maar laten we in dat even foto maken. Ja, tof. Dan...
+
+
+## Conclusie
+- ✅ Rust geeft de mogelijkheid om makkelijk executables (.exe etc.) to compilen zonder andere dependencies
+- ✅ Rust heeft een uitgebreid typesystem waardoor het errors vroegtijdig door de compiler worden afgevangen
+
+## Verder lezen
+- [Onderbouwing van De Kiesraad voor keuze van Rust](https://github.com/kiesraad/abacus/blob/main/documentatie/softwarearchitectuur/overwegingen-talen-en-frameworks.md#gemaakte-keuze-backend-rust)
+- [Github van de Kiesraad](https://github.com/kiesraad/)
