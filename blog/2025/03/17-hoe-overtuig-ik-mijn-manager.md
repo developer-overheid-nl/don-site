@@ -14,7 +14,6 @@ Hoewel open source werken een enorme potentie in zich heeft, is de realiteit erv
 
 > Open Source werken is niet spannend; het is zelfs een beetje saai. Je kijkt gewoon naar mensen die aan het werk zijn.
 >
-> — **Niels Hatzmann**, De Kiesraad
 
 ## Het pijnpunt: developers kennen de voordelen, managers (nog) niet
 
