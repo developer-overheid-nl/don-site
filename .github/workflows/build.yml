@@ -1,9 +1,51 @@
-name: Build
+name: Build & Link Check
 
 on: push
-
+    
 jobs:
-  build:
+  build-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Docusaurus site
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docusaurus-build
+          path: build
+
+  check-links:
+    runs-on: ubuntu-latest
+    needs: build-site
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: docusaurus-build
+          path: build
+
+      - name: Run Linkinator to check external links
+        uses: JustinBeckwith/linkinator-action@v1
+        with:
+          paths: "build"
+          recurse: true
+          config: "./linkinator.config.json"
+          verbosity: "ERROR"
+          timeout: 5000
+          retry: 3
+
+  build-and-push:
     runs-on: ubuntu-latest
     permissions:
       packages: write
