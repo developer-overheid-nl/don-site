@@ -10,5 +10,5 @@ Als ontwikkelaar van overheidssoftware is het natuurlijk verstandig om rekening 
 
 ## Direct naar
 
-[ Beslisboom Open Standaarden](https://www.forumstandaardisatie.nl/beslisboom/beslisboom-open-standaarden)
-[ Instructie rijksdienst bij aanschaf van ICT-diensten](https://wetten.overheid.nl/BWBR0024717/2008-11-23)
+- [Beslisboom Open Standaarden](https://www.forumstandaardisatie.nl/beslisboom/beslisboom-open-standaarden)
+- [Instructie rijksdienst bij aanschaf van ICT-diensten](https://wetten.overheid.nl/BWBR0024717/2008-11-23)

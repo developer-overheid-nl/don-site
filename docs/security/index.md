@@ -1,35 +1,22 @@
 ---
-title: "6. Beveilig systemen en data"
-sidebar_position: 6
+title: "Security"
+sidebar_position: 1
 ---
-
-import { Card } from "@rijkshuisstijl-community/components-react";
 
 In een wereld die snel verandert en waar geopolitieke verschuivingen plaatsvinden, wordt security een steeds crucialer thema. Het is daarom belangrijker dan ooit om proactief kwetsbaarheden te monitoren en ervoor te zorgen dat software altijd up-to-date is. In dit thema vind je een overzicht van relevante securitystandaarden en beschikbare tools.
 
 ## Communities
 
 - [Nationaal Cyber Security Centrum (NCSC)](/communities/ncsc)
-- [Rijksinspectie Digitale Infrastructuur (RDI)](/communities/rijksdienst-digitale-infastructuur)
+- [Rijksinspectie Digitale Infrastructuur (RDI)](/communities/rijksdienst-digitale-infrastructuur)
 - [Nationaal innovatie centrum privacy-enhancing technologies (nicpet)](/communities/ncsc)
 
 ## Monitoring met OpenKAT
 
 OpenKAT is ontwikkeld om de (beveiligings-)status van informatiesystemen te monitoren, analyseren en op te slaan.
 
-- Lees meer over [**OpenKAT**](/kennisbank/security/tools/openkat)
+- Lees meer over [**OpenKAT**](./tools/openkat.md)
 
 ## Bronnen
 
 [Hulp gevraagd! Welke bronnen kunnen we hier opnemen?]
-
-<br />
-<br />
-
-<Card
-  appearance="default"
-  description="In dit hoofdstuk van onze kennisbank vind je tools, standaarden en tutorials over Security."
-  heading="Meer over Security"
-  href="/kennisbank/security"
-  linkLabel="Naar hoofdstuk over Security"
-/>
