@@ -15,7 +15,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Docusaurus site
-        run: npm run build
+        run: pnpm build
 
       - name: Run Linkinator to check external links
         uses: JustinBeckwith/linkinator-action@v1
