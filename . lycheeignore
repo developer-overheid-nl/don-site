@@ -2,7 +2,8 @@
 https://publicatie.centrumvoorstandaarden.nl/api/adr/
 build/apis
 build/repositories
+build/*
 tweakers.net
 www.linkedin.com
 player.vimeo.com
-https://github.com/developer-overheid-nl/don-site/
+https://github.com/developer-overheid-nl/don-site/*
