@@ -37,8 +37,8 @@ De WCAG 2.1 bevat verschillende succescriteria die aansluiten bij de genoemde be
 
 De WCAG 2.1 dient toegepast te worden op:
 
-- Websites, waaronder Single Page Applications (HTML, CSS, JS)
-- Documenten (PDF, Word, Excel)
+- Websites, waaronder Single Page Applications (denk aan HTML, CSS, SVG, JavaScript)
+- Documenten (zoals PDF, Word, Excel)
 - Mobiele apps (zoals op iOS en Android)
 
 ## Drie WCAG-niveaus van naleving (A, AA, AAA)
