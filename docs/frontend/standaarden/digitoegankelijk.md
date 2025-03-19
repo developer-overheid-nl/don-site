@@ -41,20 +41,15 @@ De WCAG 2.1 dient toegepast te worden op:
 - Documenten (zoals PDF, Word, Excel)
 - Mobiele apps (zoals op iOS en Android)
 
-## Drie WCAG-niveaus van naleving (A, AA, AAA)
+## Drie conformiteitsniveaus (A, AA, AAA)
 
-De in totaal 78 successcriteria die zijn opgenomen in WCAG 2.1 zijn allemaal verbonden aan een conformiteits-niveau. De drie niveaus die WCAG onderscheidt, zijn:
+Elk van de 78 successcriteria in WCAG 2.1 heeft een conformiteitsniveau. Websites en apps kunnen verklaren tot op welk niveau ze voldoen. De drie niveaus die WCAG onderscheidt, zijn:
 
-- Niveau A (laagste niveau)
-  - Makkelijkst toe te passen, meeste impact voor de gebruiker
-  - Bevat 30 succescriteria van niveau A
-  - Deze criteria zijn het gemakkelijkst om aan te voldoen en hebben minimale impact op de structuur en vormgeving van een website.
-- Niveau AA
-  - Bevat 20 succescriteria van niveau AA
-  - Aan deze criteria is moeilijker te voldoen. Het stelt bijvoorbeeld hoge eisen aan het contrast tussen tekst en achtergrond. Ook eist het van je dat HTML-elementen die in-focus zijn een duidelijke actieve status hebben met bijvoorbeeld een border.
-- Niveau AAA (hoogste niveau)
-  - Bevat 28 succescriteria van niveau AAA
-  - Niveau AAA stelt nog hogere eisen. Zo is het bijvoorbeeld verplicht videomateriaal aan te bieden met gebarentolk.
+- Niveau A (laagste niveau), 30 succescriteria
+- Niveau AA, 20 succescriteria
+- Niveau AAA (hoogste niveau), 28 succescriteria
+
+In Nederland is het voor overheden verplicht om te voldoen tot niveau AA. Op niveau AAA kun je het beste per criterium inschatten of mogelijk is om te voldoen.
 
 ## Correct HTML-gebruik voor toegankelijkheid
 
