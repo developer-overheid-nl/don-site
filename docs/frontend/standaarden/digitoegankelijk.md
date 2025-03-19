@@ -18,15 +18,15 @@ Dit artikel heeft als doel om developers ondersteuning te bieden bij het impleme
 
 Sinds 1 juli 2018 zijn overheidsorganisaties verplicht [zich te houden](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) aan de [WCAG 2.1](https://www.w3.org/TR/WCAG21/) richtlijnen. Dit om te zorgen dat zoveel mogelijk Nederlandse burgers, ook mensen met een beperking gebruik kunnen maken van overheidsdiensten.
 
-## Toegankelijkheid voor Iedereen
+## Toegankelijkheid voor iedereen
 
 Burgers kunnen bijvoorbeeld te maken hebben met **permanente functiebeperkingen**:
 
-- dyslexie
-- kleurenblindheid
-- slechthorendheid
-- slechtziendheid
+- slechthorendheid en doofheid
+- lichtgevoeligheid, slechtziendheid en blindheid
+- spraakbeperkingen
 - motorische beperkingen
+- cognitieve beperkingen
 
 Naast permanente functiebeperkingen kunnen gebruikers ook te kampen hebben met:
 
@@ -37,10 +37,9 @@ De WCAG 2.1 bevat verschillende succescriteria die aansluiten bij de genoemde be
 
 De WCAG 2.1 dient toegepast te worden op:
 
-- Websites (HTML, JS)
-- Single Page Applications (HTML, JS)
-- Documenten (PDF)
-- Android/ iOS of andere mobiele apps
+- Websites, waaronder Single Page Applications (HTML, CSS, JS)
+- Documenten (PDF, Word, Excel)
+- Mobiele apps (zoals op iOS en Android)
 
 ## Drie WCAG-niveaus van naleving (A, AA, AAA)
 
