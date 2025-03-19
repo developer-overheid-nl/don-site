@@ -87,6 +87,9 @@ Ook gebruiken we [typst](https://github.com/kiesraad/abacus/blob/eaa9d3e3b0e3ac0
 
 Een nadeel dat we ondervinden is dat we voor het verwerken van XML nog geen fantastische library hebben. Dit terwijl we dat wel nodig hebben om te publiceren in de Lexa Markup Language, De Nederlandse standaard voor het publiceren van verkiezingsuitslagen en het uitwisselen ervan. Je merkt dat de meest gebruikte XML library voor Rust ([`quick-xml`](https://github.com/kiesraad/abacus/blob/eaa9d3e3b0e3ac0d484c201085f1a614f33af29f/backend/Cargo.toml#L40)) wel voldoet, maar minder volwassen en uitgebreid is dan wat je in andere talen vindt. Dus in een oudere taal als Java of als.NET. Wel was `quick-xml` volwassen genoeg om bug-vrij te zijn.
 
+![Mark Janssen (links) en Ellen van Leeuwen (rechts)](./img/mark_en_ellen_poster.png)
+*Mark Janssen: Lead Developer (links) en Ellen van Leeuwen: Software Developer (rechts)*
+
 ## Wat voor IDE en tooling gebruiken jullie?
 Ellen: "Ik gebruik Rust Rover, dat is van JetBrains. Dat is in principe een Rust dedicated IDE, maar ondersteunt gelukkig ook TypeScript. Ik kan dus alles in één IDE doen. Rust Rover krijgt ook veel updates en is stabiel."
 
