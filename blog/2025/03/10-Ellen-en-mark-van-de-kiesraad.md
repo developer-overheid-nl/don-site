@@ -1,7 +1,6 @@
 ---
 authors: [tom-ootes]
 tags: [rust, kiesraad]
-draft: true
 image: ./img/ellen_mark_landscape.jpg
 date: 2025-03-18
 ---
