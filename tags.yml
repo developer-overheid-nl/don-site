@@ -134,3 +134,15 @@ kiesraad:
 rust:
   label: Rust
   description: "Rust"
+devops:
+  label: DevOps
+  description: DevOps (een samentrekking van "development" en "operations") is een gebruik en een praktijk binnen softwareontwikkeling die tot doel heeft softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen. 
+owasp:
+  label: OWASP
+  description: "OWASP: Open Web Application Security Project"
+logging:
+  label: Logging
+  description: "Logging"
+fieldlab:
+  label: "Fieldlab"
+  description: "Fieldlab"

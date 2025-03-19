@@ -5,28 +5,33 @@ tags:
   - "ux"
 ---
 
-Begrijp je gebruikers en hun behoeften. Zorg ervoor dat je inzicht hebt in wat je gebruikers drijft en wat dat betekent voor je project of programma.
+"Zorg ervoor dat je begrijpt wat je gebruikers drijft en wat dit betekent voor je project."
 
-## Gebruiker Centraal
+## Belangrijke redenen
 
-[Gebruiker Centraal](https://www.gebruikercentraal.nl/over-gebruiker-centraal/) is een actieve community van en voor professionals die werken aan de dienstverlening en communicatie van de overheid. Het doel is een toegankelijke, bruikbare en begrijpelijke overheid met inclusieve dienstverlening die iedereen kan en wil gebruiken.
+- Wanneer niet wordt onderzocht welke problemen een gebruiker probeert op te lossen, bestaat het risico dat functionaliteiten worden ontwikkeld die uiteindelijk niet worden gebruikt.
+- Een team dat werkt aan software met daadwerkelijke maatschappelijke waarde voor burgers, ervaart meer zingeving.
 
-### Thema's
+## User stories
 
-De community richt zich op verschillende thema’s:
+Om op gestandaardiseerde wijze vast te leggen wat je software precies moet kunnen, kun je user stories gebruiken.
 
-- **Begrijpelijke tekst en beeldtaal**: Communiceren in begrijpelijke woorden, iconen en beelden met de doelgroep.
-- **Onderzoeken, testen en meten**: Onderzoeken wat de doelgroep wil en meten of testen wat de bedachte oplossing doet.
-- **Mensgericht denken en ontwerpen**: Niet interne processen, maar de gebruiker centraal zetten in de dienstverlening.
-- **Inclusie en digitale toegankelijkheid**: Dienstverlening en communicatie toegankelijk en herkenbaar maken voor iedereen.
-- **Draagvlak en bewustwording**: Draagvlak creëren om als organisatie de gebruiker centraal te stellen, beginnend met bewustwording.
+User stories zijn korte, informele beschrijvingen van een functionaliteit of een feature die een gebruiker van een systeem zou willen hebben. Ze worden vaak gebruikt in agile softwareontwikkeling om de wensen en behoeften van de eindgebruikers te begrijpen en te documenteren. Het doel is om de ontwikkeling te sturen vanuit het perspectief van de gebruiker, zodat de software beter aansluit bij hun behoeften.
 
-### Activiteiten en hulpmiddelen
+Een typische user story volgt dit format:
 
-Gebruiker Centraal organiseert diverse evenementen, zoals vakinhoudelijke sessies en bijeenkomsten van community’s, die te vinden zijn in hun [agenda](https://www.gebruikercentraal.nl/evenementen/).
+Als [type gebruiker], wil ik [doel of actie], zodat ik [wens of voordeel].
 
-Daarnaast bieden ze [hulpmiddelen](https://www.gebruikercentraal.nl/hulpmiddelen/) aan om de dienstverlening en communicatie van organisaties te verbeteren. Ook zijn er verschillende [community’s](https://www.gebruikercentraal.nl/meedoen/) waarin professionals kunnen meedenken en meedoen aan een gebruiksvriendelijke overheid.
+Bijvoorbeeld:
 
-### Organisatie
+- Als *burger* wil ik *inloggen* op een overheidswebsite zodat ik mijn *belastingaangifte kan indienen*.
 
-Gebruiker Centraal werkt in opdracht van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties (BZK), met de uitvoering in handen van [ICTU](https://www.ictu.nl/), een onpartijdige advies- en projectorganisatie binnen de overheid.
+## Persona's
+
+Persona's zijn fictieve, representatieve gebruikersprofielen die gebaseerd zijn op data en inzichten uit gebruikersonderzoek. In UX (User Experience) zijn persona's bijzonder nuttig om de behoeften, doelen en gedragingen van verschillende gebruikersgroepen te begrijpen en te visualiseren. Dit helpt om de ervaring van de gebruiker te verbeteren door te focussen op wat echt belangrijk is voor de gebruikers van een systeem, product of dienst.
+
+- Lees het artikel van Gebruiker Centraal: [Persona’s in be­leid, hoe dan? Zo dan!](https://www.gebruikercentraal.nl/personas-in-beleid-hoe-dan-zo-dan/)
+
+## Communities
+
+- [Gebruiker Centraal](/communities/gebruiker-centraal)
