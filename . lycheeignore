@@ -3,7 +3,8 @@ build/apis
 build/repositories
 build/*
 tweakers.net
-www.linkedin.com
-player.vimeo.com
-https://github.com/developer-overheid-nl/don-site/*
-https://developer.overheid.nl/*
+^https://www\.linkedin\.com
+^https://player\.vimeo\.com
+^https://github\.com/developer-overheid-nl/don-site/
+^https://developer\.overheid\.nl/
+^https?://developer\.overheid\.com
