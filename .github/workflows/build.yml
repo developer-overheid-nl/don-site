@@ -35,15 +35,12 @@ jobs:
           name: docusaurus-build
           path: build
 
-      - name: Run Linkinator to check external links
-        uses: JustinBeckwith/linkinator-action@v1
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
         with:
-          paths: "build"
-          recurse: true
-          config: "./linkinator.config.json"
-          verbosity: "ERROR"
-          timeout: 5000
-          retry: 3
+          fail: false
+          args: "--exclude-link-local --verbose --no-progress './**/*.md' './**/*.html' './**/*.rst'"
 
   build-and-push:
     runs-on: ubuntu-latest
