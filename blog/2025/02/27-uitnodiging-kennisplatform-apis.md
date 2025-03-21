@@ -17,7 +17,7 @@ In de korte opening gaan we in vogelvlucht langs actuele ontiwkkelingen.Zo wille
 13.30 uur **Parallelle sessies** 
 *Keuze uit de sessies:*
 
-- **Update API Design Rules** \| door Tim Lippe, Logius Er is een update (versie 2.0) van de API Design Rules ingediend bij het Forum Standaardisatie. In deze sessie gaan we in op de aanpak van de modules en de strategie voor de adoptie van de standaard.
+- **Update API Design Rules** \| door Tim van der Lippe, Logius Er is een update (versie 2.0) van de API Design Rules ingediend bij het Forum Standaardisatie. In deze sessie gaan we in op de aanpak van de modules en de strategie voor de adoptie van de standaard.
 - **Werkgroep Notificatie**s \| door Stas Mironov, Logius Hoewel geen REST API, kreeg het onderwerp notificaties bij de laatste kennisplatform bijeenkomst de meeste stemmen om op te pakken.Dat gaan we nu doen.We hebben al een standaard voor notificaties: Cloudevents. Deze standaard gaat over de inhoud van notificatieberichten. Maar er zijn aanvullende wensen en daar zoeken we passende oplossing voor. In deze sessie gaan we dieper in op de openliggende vragen. 
 
 14.15 uur Pauze  
