@@ -53,15 +53,11 @@ In Nederland is het voor overheden verplicht om te voldoen tot niveau AA. Op niv
 
 ## Correct HTML-gebruik voor toegankelijkheid
 
-Een goede stap richting een toegankelijke website is het correct toepassen van HTML-syntax. Door HTML-elementen te gebruiken waarvoor ze bedoeld zijn, wordt je webpagina automatisch beter leesbaar voor screenreaders. Bovendien maak je je eigen code leesbaarder en profiteer je van de standaardfunctionaliteiten die HTML biedt.
+Belangrijk voor een toegankelijke website is dat je HTML-syntax correct gebruikt. Je wilt ervoor zorgen dat de structuur in je websites en apps die visueel zichtbaar is, terugkomt in de HTML. Zo kunnen hulptechnologieën, zoals screenreaders, je structuur ontsluiten op een manier die werkt voor de gebruiker. Bovendien maak je je eigen code leesbaarder en profiteer je van de standaardfunctionaliteiten die HTML biedt.
 
 Wat je misschien niet direct zou verwachten, is dat HTML zelf ook een standaard is. Forum Standaardisatie [beveelt de Nederlandse overheid aan](https://www.forumstandaardisatie.nl/open-standaarden/html) om de HTML standaard te gebruiken zoals die door de standaardisatie-organisatie WHATWG is vastgelegd.
 
 [WHATWG: The elements of HTML](https://html.spec.whatwg.org/multipage/#toc-semantics)
-
-### Screenreader
-
-Mensen die blind of slechtziend zijn kunnen gebruik maken van een screenreader om door websites en apps te navigeren en tekst, afbeeldingen en video's te consumeren. Voor gebruikers van screenreaders is het van belang dat de volgorde van de HTML-elementen op de pagina klopt met de visuele weergave van de pagina. Dit om te voorkomen dat gebruikers eerst langs heel veel irrelevante informatie moeten voor ze bij de content zijn waarnaar ze op zoek waren.
 
 ### Alt text
 
