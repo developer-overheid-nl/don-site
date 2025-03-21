@@ -12,7 +12,7 @@ Op woensdagmiddag 26 maart 2025 heet het Kennisplatform API je van harte welkom 
 
 12.30 uur **Inlooplunch**   
 13.00 uur **Welkom en opening** 
-In de korte opening gaan we in vogelvlucht langs actuele ontiwkkelingen.Zo willen we bijvoorbeeld een nieuwe werkgroep starten rond het Service Management van API's. Ook vertellen we je graag iets over de mogelijkheid om implementatieondersteuning te krijgen bij implementatie van standaarden, ontwikkeling van API's en bij concrete casussen en architectuurvraagstukken. En we gaan kort in op aandacht voor API's in een lopend testbed voor sensordata en een nieuw testbed voor digitale tweelingen.  
+In de korte opening gaan we in vogelvlucht langs actuele ontwikkelingen. Zo willen we bijvoorbeeld een nieuwe werkgroep starten rond het Service Management van API's. Ook vertellen we je graag iets over de mogelijkheid om implementatieondersteuning te krijgen bij implementatie van standaarden, ontwikkeling van API's en bij concrete casussen en architectuurvraagstukken. En we gaan kort in op aandacht voor API's in een lopend testbed voor sensordata en een nieuw testbed voor digitale tweelingen.  
 
 13.30 uur **Parallelle sessies** 
 *Keuze uit de sessies:*
