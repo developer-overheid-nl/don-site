@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 title: "Infrastructuur"
-tags: [kubernetes, azure, ipv6, infra]
+tags: [kubernetes, ipv6, infra, devops]
 
 ---
 
