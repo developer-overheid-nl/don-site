@@ -127,5 +127,5 @@ Rust is voor de Kiesraad een fijne taal omdat het ze helpt bugvrije software op 
 
 ## Verdiep je verder
 - [Onderbouwing van De Kiesraad voor keuze van Rust](https://github.com/kiesraad/abacus/blob/main/documentatie/softwarearchitectuur/overwegingen-talen-en-frameworks.md#gemaakte-keuze-backend-rust)
-- [Github van de Kiesraad](https://github.com/kiesraad/)
+- [GitHub van de Kiesraad](https://github.com/kiesraad/)
 - [Rustlings.cool](https://rustlings.cool/)
