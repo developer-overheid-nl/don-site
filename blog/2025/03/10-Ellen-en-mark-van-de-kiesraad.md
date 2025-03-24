@@ -36,7 +36,7 @@ Als je meer wilt weten over het precieze proces omtrent het tellen van de stemme
 Abacus is de kleinste versie van de software die de Kiesraad in het uitslagenproces nodig heeft. De software wordt gebouwd voor de situatie waar elke gemeente zijn eigen versie draait, die volledig "air-gapped" dient te blijven. Alle data blijft dus lokaal. Dit is waar Rust om de hoek komt kijken.
 
 ### Compilen naar een executable: een voordeel van Rust 
-Mark: "Rust stelt je in staat code gemakkelijk te compilen naar een native executable voor je operating system (in overheidsland veelal Windows) zonder dat je verdere dependencies nodig hebt. Een bekende onhandige dependency die voor veel legacy software nodig is, is de "Java virtual machine". 
+Mark: "Rust stelt je in staat code gemakkelijk te compilen naar een native executable voor je operating system (in overheidsland veelal Windows) zonder dat je verdere dependencies nodig hebt. Een bekende onhandige dependency die voor veel legacy software nodig is, is de "Java Virtual Machine". 
 
 Binnen een gemeente heb je bij het tellen een aantal laptops of computers nodig waar mensen de uitslagen op invoeren. Afhankelijk van hoe groot de gemeente is heb je meer of minder computers. Er wordt een lokaal netwerkje opgezet met één server, alle computers verbinden hier mee. Het handige is dat mensen de executable (.exe) die wij ze geven eigenhandig kunnen installeren en verder niets nodig hebben."
 
