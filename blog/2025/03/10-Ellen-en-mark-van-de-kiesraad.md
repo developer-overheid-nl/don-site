@@ -30,7 +30,7 @@ De Kiesraad is een onafhankelijke instantie die toezicht houdt op de verkiezings
 ## Over Abacus
 [Abacus](https://github.com/kiesraad/abacus) is een applicatie voor het vaststellen van verkiezingsuitslagen. Op termijn moet het de huidige verouderde applicatie voor het tellen van de stemmen OSV2020 vervangen. Binnen het proces van de Nederlandse verkiezingsuitslagen is het **papieren proces** leidend. Dit betekent dat de papieren stembiljetten op alle stembureaus met de hand worden geteld zodra de stembussen zijn gesloten. Vervolgens worden ze op een centraal punt in elke gemeente, ter controle opnieuw met de hand geteld. Daarna worden alle optellingen van de stembureaus ingevoerd in Abacus.
 
-Als je meer wilt weten over het precieze proces omtrent het tellen van de stemmen verwijzen je graag door naar [dit artikel van De Kiesraad](https://www.kiesraad.nl/verkiezingen/gemeenteraden/uitslagen/tellen-van-de-stemmen).
+Als je meer wilt weten over het precieze proces omtrent het tellen van de stemmen verwijzen we je graag door naar [dit artikel van De Kiesraad](https://www.kiesraad.nl/verkiezingen/gemeenteraden/uitslagen/tellen-van-de-stemmen).
 
 ### Niet in de cloud: resultaten optellen via een lokaal netwerk
 Abacus is de kleinste versie van de software die de Kiesraad in het uitslagenproces nodig heeft. De software wordt gebouwd voor de situatie waar elke gemeente zijn eigen versie draait, die volledig "air-gapped" dient te blijven. Alle data blijft dus lokaal. Dit is waar Rust om de hoek komt kijken.
