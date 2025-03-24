@@ -134,3 +134,12 @@ devops:
 owasp:
   label: OWASP
   description: "OWASP: Open Web Application Security Project"
+logging:
+  label: Logging
+  description: "Logging"
+irealisatie:
+  label: iRealisatie
+  description: "iRealisatie"
+gebruiker-centraal:
+  label: "gebruiker-centraal"
+  description: "Gebruiker Centraal"

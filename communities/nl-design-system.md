@@ -19,3 +19,7 @@ Deelproducten zijn:
 - Een methode om je **huisstijl** **toe te passen** op onze componenten ([design tokens](https://nldesignsystem.nl/handboek/design-tokens)).
 - Technische **infrastructuur** om werk efficiënt te testen, te delen en **uit te rollen** (zoals een voorbeeldrepository met Storybook en visuele regressietests).
 - **Stijlgids** om de huisstijl van je organisatie consistent te gebruiken.
+
+## Links
+- [nldesignsystem.nl](https://nldesignsystem.nl/)
+- [https://github.com/nl-design-system/backlog](https://github.com/nl-design-system/backlog)

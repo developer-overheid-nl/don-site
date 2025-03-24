@@ -8,4 +8,5 @@ De Rijksinspectie Digitale Infrastructuur (RDI) is een Nederlandse overheidsorga
 
 De RDI houdt toezicht op de naleving van wet- en regelgeving op het gebied van telecommunicatie en IT-netwerken. Dit omvat thema's zoals cyberveiligheid, digitaal veilige apparatuur, kunstmatige intelligentie, 5G, energietransitie, digitale weerbaarheid en frequentiemanagement.
 
-- [Naar de website van RDI](https://www.rdi.nl)
+## Links
+- [rdi.nl](https://rdi.nl)
