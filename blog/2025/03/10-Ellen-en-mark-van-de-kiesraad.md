@@ -45,7 +45,7 @@ Mark: "In 2021 leerde ik de taal kennen toen ik met een hobbyproject bezig was o
 
 Ellen: "Ik kwam er ooit mee in aanraking tijdens mijn studie. Ik had in 2015 een studiegenoot die tijdens het vak compilerbouw besloot om niet het aangeboden framework te gebruiken om de compiler te bouwen maar om het helemaal from scratch in Rust te bouwen. Destijds dacht ik, bij hem zit een steekje los. Maar uiteindelijk bleek hij dus zo gek nog niet. Hier bij de Kiesraad kwam ik er pas weer mee in aanraking. In mijn vorige baan gebruikten we Python en JavaScript. Maar omdat ik wel van een uitdaging houd leek het me leuk om een nieuwe taal te leren. En ik hoorde goede dingen over Rust."
 
-### De oefenomgeving: Rustlings in Rustrover
+### De oefenomgeving: Rustlings in RustRover
 Ellen: "Tijdens mijn eerste maand ben ik begonnen met de standaard Rust oefenomgeving: [Rustlings](https://blog.jetbrains.com/education/2019/12/19/rustlings-course-adaptation/). Deze kan je helemaal doorlopen in [RustRover](https://www.jetbrains.com/rust/). Zo heb ik langzaamaan meer en meer features van de taal leren kennen. Daarnaast leerde ik natuurlijk veel van mijn collega's."
 
 
