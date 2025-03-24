@@ -63,5 +63,3 @@ Een aantal goede voorbeelden van NL Design System implementaties en communities 
 [Introductie NL Design System](https://nldesignsystem.nl/handboek/introductie/)<br/>
 [Over NL Design System](https://nldesignsystem.nl/project/over-nl-design-system/)<br/>
 [Website NL Design System](https://nldesignsystem.nl)
-
-Wat zijn jouw gedachten over NL Design System? Laat iets achter in de comments.
