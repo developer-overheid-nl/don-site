@@ -78,7 +78,7 @@ Zeker: we leveren alle features goed gedocumenteerd op en denken goed na over go
 We zijn erg tevreden met [Cargo](https://github.com/rust-lang/cargo). Het feit dat de package manager wordt meegeleverd met de taal scheelt veel. Het zorgt ervoor dat alle contributies aan package-managers zich concentreren in één package-manager. Dit zorgt voor een goed en duidelijk eco-systeem.
 
 ### Het pinnen van versies met hashes
-Cargo ondersteunt het pinnen van dependencies. Hierbij wordt er een hash gegenereerd die garandeert dat als je dependencies opnieuw installeert, je dezelfde dependency binnenhaalt als die je hebt vastgezet. Deze hashes worden namelijk gebaseerd op basis van een fingerprint van de code. Als er is gerommeld met de code klopt de hash niet meer en trekt Cargo aan de bel.
+Cargo ondersteunt het pinnen van dependencies. Hierbij wordt er een hash gegenereerd die garandeert dat je dezelfde dependency binnenhaalt als die je hebt vastgezet, wanneer je dependencies opnieuw installeert. Deze hashes worden namelijk gebaseerd op basis van een fingerprint van de code. Als er is gerommeld met de code klopt de hash niet meer en trekt Cargo aan de bel.
  
 ### Een jonger ecosysteem betekent minder uitgebreide libraries voor legacy standaarden (bijvoorbeeld XML)
 In het ecosystem vind je al redelijk wat volwassen libraries, bijvoorbeeld onze [HTTP library](https://github.com/kiesraad/abacus/blob/eaa9d3e3b0e3ac0d484c201085f1a614f33af29f/backend/Cargo.toml#L26).
