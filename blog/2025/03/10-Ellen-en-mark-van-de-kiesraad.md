@@ -107,7 +107,7 @@ Nog een leuk (ambitieus) initiatief om te noemen is de [Zed editor](https://zed.
 ## Conclusie
 Rust is voor de Kiesraad een fijne taal omdat het ze helpt bugvrije software op te leveren. Ook is het een expressieve taal met een uitgebreid typesystem waardoor je er complexe concepten goed in kan vatten. De tooling om Rust heen is erg hulpvaardig en de linter Clippy geeft handige tips voor het correct gebruik van Rust. Wel is het een taal met een jong ecosysteem waardoor je soms specifieke functionaliteiten binnen libraries zou kunnen missen.
  
-### ✅ Voordelen van Rust voor de Kiesraad:mist
+### ✅ Voordelen van Rust voor de Kiesraad
 - Rust geeft de mogelijkheid om makkelijk executables (.exe etc.) to compilen zonder andere dependencies
 - Rust is een taal die erg goed performt en zeer efficiënte machinecode genereert
 - Rust heeft een uitgebreid typesysteem, waardoor de compiler fouten vroegtijdig detecteert
