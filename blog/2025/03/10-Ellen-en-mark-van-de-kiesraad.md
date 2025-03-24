@@ -65,7 +65,7 @@ Een uitgebreid typesystem geeft je de flexibiliteit om dingen door de compiler a
 Ellen: "Rust heeft veel handige concepten zoals iterators en dat soort dingen. Ik moest deze concepten dus allemaal leren kennen. Je hebt dus niet alleen maar for loops en while loops, maar ook andere soorten iterators. Om het goed te leren ga ik vaak met een van de Rust-experts in ons team zitten om naar een Pull Request te kijken en dan mijn code wat meer Rust-achtig te maken. Zodat ik ook de meer echte native Rust dingen leer en ga gebruiken."
 
 ### De compiler: eerder bugs aan het licht
-"Een voordeel aan Rust wat mij betreft is dat je compile-time type-errors krijgt. Dit voorkomt bugs en over het algemeen kom je er heel snel achter als er een bug in je code zit. Natuurlijk moet je alles goed afdichten met tests."
+"Een voordeel aan Rust wat mij betreft is dat je compile-time type-errors krijgt. Dit voorkomt bugs en over het algemeen kom je er heel snel achter als er een bug in je code zit. Vanzelfsprekend moet je alles alsnog goed afdichten met tests."
 
 "Natuurlijk heeft Rust een steilere learning curve dan dynamisch-getypeerde programmeertalen, maar na er bijna een jaar mee gewerkt te hebben kan ik zeggen: het is echt een fijne taal om mee te werken. Het is gewoon minder bug prone dan andere talen."
 
