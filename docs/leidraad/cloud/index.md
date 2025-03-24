@@ -1,6 +1,7 @@
 ---
 title: "5. Softwareontwikkeling in de cloud"
 sidebar_position: 5
+tags: ["devops","cloud"]
 ---
 
 Binnen de overheid wordt steeds vaker gesproken over digitale soevereiniteit. Wanneer applicaties en de onderliggende infrastructuur goed zijn opgezet, wordt het eenvoudiger om services te verplaatsen of nieuwe diensten toe te voegen.

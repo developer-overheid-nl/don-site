@@ -1,6 +1,7 @@
 ---
 title: "13. Denk na over duurzaamheid"
 sidebar_position: 13
+tags: ["logging"]
 ---
 
 Duurzaam beheer betekent dat je ervoor zorgt dat je web-applicatie veilig, efficiënt en schaalbaar blijft over de gehele levenscyclus.
@@ -18,3 +19,4 @@ Voor het beheer van applicaties is het van groot belang dat de logging op orde i
 Quality-time is een open source tool die je kan helpen de kwaliteit van je maatwerksoftware te bewaken en technical debt te managen.
 
 - [Naar ons artikel over Quality-Time](/kennisbank/infra/tools/quality-time).
+- [Naar de documentatie van Quality-Time](https://quality-time.readthedocs.io/en/latest/)

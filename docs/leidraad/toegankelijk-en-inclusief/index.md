@@ -1,6 +1,7 @@
 ---
 title: "2. Maak producten toegankelijk en inclusief"
 sidebar_position: 2
+tags: ["accessibility"]
 ---
 
 Toegankelijkheid zorgt ervoor dat iedereen, inclusief mensen met een beperking, overheidsdiensten digitaal kan gebruiken. Dit is niet alleen een wettelijke verplichting (zoals de Europese **Webrichtlijnen** en de **Wet digitale overheid**), maar ook essentieel voor inclusieve dienstverlening.

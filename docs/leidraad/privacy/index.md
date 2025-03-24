@@ -1,11 +1,10 @@
 ---
 title: "7. Neem privacy als uitgangspunt"
 sidebar_position: 7
+tags: [privacy]
 ---
 
 Het waarborgen van de privacy van de gebruiker zou in elke stap van het proces een prioriteit moeten zijn.
-
-## Bronnen
 
 ### Centrum Informatiebeveiliging en Privacybescherming (CIP)
 

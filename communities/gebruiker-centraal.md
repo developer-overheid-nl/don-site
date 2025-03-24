@@ -1,6 +1,6 @@
 ---
 tags:
-  - "security"
+  - "accessibility"
 title: "Gebruiker Centraal"
 ---
 
