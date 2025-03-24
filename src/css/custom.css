@@ -436,10 +436,10 @@ blockquote {
 
 /* I know this is quite hacky but its less laborious than re-writing the whole template i suppose */
 .blog-post-page aside.col--3 {
-  display: none;
+  /* display: none; */
 }
 
 /* Idem */
 .blog-post-page .col--2 {
-  --ifm-col-width: calc(3 / 12 * 100%);
+  /* --ifm-col-width: calc(3 / 12 * 100%); */
 }

@@ -3,6 +3,7 @@ authors: [tom-ootes]
 tags: [rust, kiesraad, development]
 image: ./img/ellen_mark_landscape.jpg
 date: 2025-03-18
+hide_table_of_contents: true
 ---
 # Deze goede redenen heeft de Kiesraad om Rust te gebruiken
 
