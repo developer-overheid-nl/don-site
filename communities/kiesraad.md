@@ -1,6 +1,5 @@
 ---
-tags:
-  - ["rust","kiesraad"]
+tags: ["rust","kiesraad"]
 title: "De Kiesraad"
 ---
 

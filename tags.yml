@@ -129,7 +129,7 @@ ux:
   label: UX
   description: "UX: User experience"
 kiesraad:
-  label: kiesraad
+  label: Kiesraad
   description: "De Kiesraad: de nationale Kiesraad."
 rust:
   label: Rust
