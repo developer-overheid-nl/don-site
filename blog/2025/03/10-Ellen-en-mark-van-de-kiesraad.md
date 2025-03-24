@@ -98,7 +98,7 @@ Mark: "De linter die geshipt wordt met Rust heet Clippy. Deze assistent heeft he
 ### Cargo Test Framework
 Cargo test framework, de goto test-suite is onderdeel van de Rust programmeertaal zelf. Waarbij het in andere talen lastig is om te kiezen omdat er legio test-frameworks beschikbaar zijn, hoeft je bij Rust niet te kiezen. Het voordeel is dat iedereen het gebruikt en daardoor is het goed gedocumenteerd. 
 
-### Vscode & Rust-analyzer
+### VS Code & Rust-analyzer
 Nog een prima optie qua IDE is VSCode met de [rust-analyzer extensie](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer). Deze extensie werkt trouwens ook [met Emacs en Vim](https://rust-analyzer.github.io/), voor de wat meer die-hard gebruikers.
 
 ### Zed.dev
