@@ -99,7 +99,7 @@ Mark: "De linter die geshipt wordt met Rust heet Clippy. Deze assistent heeft he
 Cargo test framework, de goto test-suite is onderdeel van de Rust programmeertaal zelf. Waarbij het in andere talen lastig is om te kiezen omdat er legio test-frameworks beschikbaar zijn, hoeft je bij Rust niet te kiezen. Het voordeel is dat iedereen het gebruikt en daardoor is het goed gedocumenteerd. 
 
 ### VS Code & Rust-analyzer
-Nog een prima optie qua IDE is VSCode met de [rust-analyzer extensie](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer). Deze extensie werkt trouwens ook [met Emacs en Vim](https://rust-analyzer.github.io/), voor de wat meer die-hard gebruikers.
+Nog een prima optie qua IDE is VS Code met de [rust-analyzer extensie](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer). Deze extensie werkt trouwens ook [met Emacs en Vim](https://rust-analyzer.github.io/), voor de wat meer die-hard gebruikers.
 
 ### Zed.dev
 Nog een leuk (ambitieus) initiatief om te noemen is de [Zed editor](https://zed.dev/). Deze editor is volledig in Rust geschreven en is daardoor erg snel. Inmiddels zit deze editor op versie `v0.177.10` dus het lijkt er wel op dat deze nog eventjes in beta zal blijven. Mark: "Misschien wel een eternal beta".
