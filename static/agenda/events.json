@@ -22,5 +22,21 @@
     "place": "Aristo meeting center",
     "summary": "Join the fourth OSPOlogyLive Europe in Amsterdam (part presentations, part roundtable sessions) to help organizations navigate open source management, strategy, and Open Source Program Offices (OSPOs)…",
     "url": "https://opensourcewerken.nl/events/view/17b01134-dd4c-4071-9a38-7f13a0d77dec/ospologylive-amsterdam"
+  },
+  {
+    "title": "\"Vraag een expert\" inloopuur",
+    "start_date": "2025-04-09T15:00:11+02:00",
+    "end_date": "2025-04-09T16:00:11+02:00",
+    "place": "Online",
+    "summary": "Ben jij bezig met een opensource-project of overweeg je om aan de slag te gaan met opensourcewerken? Of je nu een beginner bent of al enige ervaring hebt, ons maandelijkse digitale inloopuur is het perfecte moment om je vragen te stellen en advies te krijgen van een expert.",
+    "url": "https://opensourcewerken.nl/events/view/3e83d9d8-201b-4cfa-b64b-3d5326c32f52/vraag-een-expert-inloopuur"
+  },
+  {
+    "title": "FLEX op Dev.loer",
+    "start_date": "2025-04-17T09:00:18+02:00",
+    "end_date": "2025-04-17T16:00:00+02:00",
+    "place": "Dev.loer Utrecht",
+    "summary": "Dev.loer te Utrecht biedt jou een flexwerkplek met koffie, wifi en breedbeeldschermen waar je prettig kunt werken. Werk jij als techneut voor een (semi)overheid? Reserveer je beeldscherm en ga -zelfstandig of samen- aan de slag!",
+    "url": "https://opensourcewerken.nl/events/view/17b01134-dd4c-4071-9a38-7f13a0d77dec/ospologylive-amsterdam"
   }
 ]
