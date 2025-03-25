@@ -1,0 +1,27 @@
+.blogTitle {
+  margin-block-start: 1rem;
+  margin-block-end: 0;
+}
+
+.blogMeta {
+  font-size: smaller;
+  margin-block-end: 0.5rem;
+  color: var(--don-grijs-600);
+}
+
+.blogIntro {
+  margin-block-end: 0;
+  font-size: smaller;
+  color: var(--ifm-color-content);
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
+:global(a:hover) .blogTitle {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}

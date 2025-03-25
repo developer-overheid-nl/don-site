@@ -102,7 +102,7 @@ const config: Config = {
           showReadingTime: true,
           beforeDefaultRemarkPlugins: [remarkDirectiveSugar],
           feedOptions: {
-            type: ["rss", "atom"],
+            type: "all",
             xslt: true,
           },
           // Please change this to your repo.
