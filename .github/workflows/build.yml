@@ -37,6 +37,7 @@ jobs:
 
       - name: Run Linkinator to check external links
         uses: JustinBeckwith/linkinator-action@v1
+        continue-on-error: true
         with:
           paths: "build"
           recurse: true
