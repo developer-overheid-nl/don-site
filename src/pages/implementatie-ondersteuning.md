@@ -1,11 +1,4 @@
----
-tags:
-  - "api"
-  - "msa"
-  - "community"
-  - "meetups"
-title: "Implementatie ondersteuning API's"
----
+# Implementatie ondersteuning API's
 
 Bij het implementeren van nieuwe standaarden en het moderniseren van architecturen is de hoeveelheid keuzes overweldigend. Naast het maken van de juiste architectuurkeuzes kan het implementeren ervan veel uitdagingen met zich meebrengen. Daarom bieden wij - naast de [standaarden](https://www.forumstandaardisatie.nl/open-standaarden) en [referentie architecturen](https://www.noraonline.nl/wiki/NORA_Familie) - gerichte implementatieondersteuning om organisaties te helpen deze uitdagingen aan te gaan en hun digitale dienstverlening te verbeteren.  
 
@@ -15,7 +8,7 @@ Daar waar toepassing van verplichte standaarden moeilijk lijkt helpen we graag m
 
 ## Aanleiding
 
-De adoptie van standaarden stagneert, terwijl de digitale uitdagingen bij de overheid toenemen. Op verzoek van het [Ministerie van Binnenlandse zaken en Koninkrijksrelaties(BZK)](https://github.com/MinBZK/) ondersteunt [Geonovum](https://www.geonovum.nl/) daarom overheidsorganisaties bij het toepassen van standaarden en het moderniseren van hun digitale landschap.
+De adoptie van standaarden stagneert, terwijl de digitale uitdagingen bij de overheid toenemen. Op verzoek van het [Ministerie van Binnenlandse zaken en Koninkrijksrelaties (BZK)](https://github.com/MinBZK/) ondersteunt [Geonovum](https://www.geonovum.nl/) daarom overheidsorganisaties bij het toepassen van standaarden en het moderniseren van hun digitale landschap.
 
 ## Wat bieden wij?
 
@@ -32,13 +25,13 @@ Door het bieden van implementatie ondersteuning willen we:
 - Het gebruik van standaarden in architecturen vergemakkelijken en de implementatie versnellen.
 - Duidelijke richtlijnen bieden voor het integreren van standaarden in oplossingen.
 - Knelpunten in standaarden identificeren en adresseren, zodat de implementaties soepeler verlopen.
-- Kennis borgen: alle inzichten, ervaringen en best practices delen we via [de kennisbank op het developer portaal van de Nederlandse Overheid](https://developer.overheid.nl/kennisbank), zodat iedereen kan profiteren van de geleerde lessen.
+- Kennis borgen: alle inzichten, ervaringen en best practices delen we via [de kennisbank op het developer portaal van de Nederlandse Overheid](/kennisbank), zodat iedereen kan profiteren van de geleerde lessen.
 
 Wij bieden niet alleen de technische expertise, maar zorgen er ook voor dat alle benodigde kennis wordt verzameld en geborgd in een kennisbank, zodat er altijd een referentiepunt is voor de toekomst.
 
 ## Met wie doen we dat?
 
-We zijn [Joost Farla](https://developer.overheid.nl/blog/authors/joost-farla), [Martin van der Plas](https://developer.overheid.nl/blog/authors/martin-van-der-plas) en [Frank Terpstra](https://developer.overheid.nl/blog/authors/frank-terpstra). Een team met jarenlange ervaring in het implementeren van API standaarden in software, het opstellen van (solution) architecturen met API standaarden als ook het opstellen beheren, invoeren en uitfaseren van API standaarden.
+We zijn [Joost Farla](/blog/authors/joost-farla), [Martin van der Plas](/blog/authors/martin-van-der-plas) en [Frank Terpstra](/blog/authors/frank-terpstra). Een team met jarenlange ervaring in het implementeren van API standaarden in software, het opstellen van (solution) architecturen met API standaarden als ook het opstellen beheren, invoeren en uitfaseren van API standaarden.
 
 ## Hoe bereik je ons?
 
@@ -46,4 +39,4 @@ Onze experts staan voor je klaar om samen te werken aan de digitale transformati
 
 Voor vragen of ondersteuning kun je eenvoudig contact opnemen via: [api@geonovum.nl](mailto:api@geonovum.nl)
 
-Spreek je ons liever persoonlijk aan dan zijn we altijd aan te spreken bij het [Kennisplatform API's](https://developer.overheid.nl/communities/kennisplatform-apis/).
+Spreek je ons liever persoonlijk aan dan zijn we altijd aan te spreken bij het [Kennisplatform API's](/communities/kennisplatform-apis/).
