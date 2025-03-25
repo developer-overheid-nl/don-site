@@ -50,7 +50,10 @@ export default function HomepageAgenda(): JSX.Element {
 
   useEffect(function fetchFeed() {
     fetch('/agenda/events.json')
-      .then((response) => response.json())
+      .then((response) => response.json().catch((error) => {
+        console.warn("JSON Error: ", error.message);
+        return [];
+      }))
       .then((list) => {
         const events = list.filter(({ end_date }) => filterDate(end_date))
           .map(({ title, summary, start_date, end_date, place, url }) => ({
@@ -72,8 +75,8 @@ export default function HomepageAgenda(): JSX.Element {
       headingLevel={2}
     >
       { agenda && ((agenda.length > 0) ?
-        agenda.map(({ title, summary, date, place, url }) => (
-          <LinkListLink href={url}>
+        agenda.map(({ title, summary, date, place, url }, index) => (
+          <LinkListLink href={url} key={index}>
             <h3 className={styles.agendaTitle}>{title}</h3>
             <p className={styles.agendaMeta}>
               { date && (<span className={styles.agendaDate}><IconKalenderInline /> {date}</span>) }

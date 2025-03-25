@@ -1,5 +1,5 @@
-// import useEffect from 'react';
 import { useState, useEffect } from 'react';
+import Admonition from "@theme/Admonition";
 import { LinkListCard, LinkListLink } from "@rijkshuisstijl-community/components-react";
 import styles from './styles.module.css';
 
@@ -20,7 +20,12 @@ export default function HomepageBlogposts(): JSX.Element {
 
   useEffect(function fetchFeed() {
     fetch('/blog/feed.json')
-      .then((response) => response.json())
+      .then((response) => response.json().catch((error) => {
+        console.warn("JSON Error: ", error.message);
+        return {
+          items: []
+        };
+      }))
       .then((feed) => {
         const posts = feed.items.map(( {title, summary, date_modified, url} ) => ({
           title,
@@ -31,6 +36,8 @@ export default function HomepageBlogposts(): JSX.Element {
         .slice(0, NUM_POSTS);
 
         setFeed(posts);
+      }).catch((error) => {
+        console.error("Fetch Error: ", error.message);
       });
   }, []);
 
@@ -39,8 +46,12 @@ export default function HomepageBlogposts(): JSX.Element {
       heading="Laatste blogposts"
       headingLevel={2}
     >
-      { feed && ((feed.length > 0) ? feed.map(({title, date, summary, url}) => (
-        <LinkListLink href={url}>
+      { process.env.NODE_ENV === 'development' ? (
+          <Admonition type='caution' title="Let op">De feed wordt niet opgebouwd in development.</Admonition>
+       ) : null
+      }
+      { feed && ((feed.length > 0) ? feed.map(({title, date, summary, url}, index) => (
+        <LinkListLink href={url} key={index}>
           <h3 className={styles.blogTitle}>{title}</h3>
           <p className={styles.blogMeta}>{date}</p>
           <p className={styles.blogIntro}>{summary}</p>
