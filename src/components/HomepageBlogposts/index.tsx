@@ -1,8 +1,6 @@
 // import useEffect from 'react';
 import { useState, useEffect } from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import { Card, LinkListCard, LinkListLink } from "@rijkshuisstijl-community/components-react";
+import { LinkListCard, LinkListLink } from "@rijkshuisstijl-community/components-react";
 import styles from './styles.module.css';
 
 const NUM_POSTS = 4;
@@ -41,13 +39,17 @@ export default function HomepageBlogposts(): JSX.Element {
       heading="Laatste blogposts"
       headingLevel={2}
     >
-      { feed && feed.map(({title, date, summary, url}) => (
+      { feed && ((feed.length > 0) ? feed.map(({title, date, summary, url}) => (
         <LinkListLink href={url}>
           <h3 className={styles.blogTitle}>{title}</h3>
           <p className={styles.blogMeta}>{date}</p>
           <p className={styles.blogIntro}>{summary}</p>
         </LinkListLink>
-      )) }
+      )) : (
+        <li>De laatste blogposts kunnen niet geladen worden.</li>
+      )) || (
+        <li><img src='/img/bouncing-squares.svg' width={42} alt='Blogposts worden geladen' /></li>
+      )}
     </LinkListCard>
   );
 }

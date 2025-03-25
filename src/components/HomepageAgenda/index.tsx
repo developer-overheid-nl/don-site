@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import clsx from 'clsx';
 import { LinkListCard, LinkListLink } from "@rijkshuisstijl-community/components-react";
 import styles from './styles.module.css';
 import IconKalenderInline from '@site/src/theme/icons/IconKalenderInline';
@@ -34,8 +33,6 @@ function formatDate(start_dateString, end_dateString) {
 
 function filterDate(dateString) {
   const date = new Date(dateString);
-
-  console.log(dateString, date, date.valueOf(), new Date().valueOf());
 
   if (Number.isNaN(date.valueOf())) {
     // show if date cannot be parsed
@@ -74,16 +71,21 @@ export default function HomepageAgenda(): JSX.Element {
       heading="Agenda"
       headingLevel={2}
     >
-      { agenda && agenda.map(({ title, summary, date, place, url }) => (
-        <LinkListLink href={url}>
-          <h3 className={styles.agendaTitle}>{title}</h3>
-          <p className={styles.agendaMeta}>
-            { date && (<span className={styles.agendaDate}><IconKalenderInline /> {date}</span>) }
-            { place && (<span className={styles.agendaPlace}><IconLocatiemarkerInline /> {place}</span>) }
-          </p>
-          <p className={styles.agendaIntro}>{summary}</p>
-        </LinkListLink>
-      )) }
+      { agenda && ((agenda.length > 0) ?
+        agenda.map(({ title, summary, date, place, url }) => (
+          <LinkListLink href={url}>
+            <h3 className={styles.agendaTitle}>{title}</h3>
+            <p className={styles.agendaMeta}>
+              { date && (<span className={styles.agendaDate}><IconKalenderInline /> {date}</span>) }
+              { place && (<span className={styles.agendaPlace}><IconLocatiemarkerInline /> {place}</span>) }
+            </p>
+            <p className={styles.agendaIntro}>{summary}</p>
+          </LinkListLink>
+      )) : (
+        <li>Er zijn geen aankomende evenementen in de agenda.</li>
+      )) || (
+        <li><img src='/img/bouncing-squares.svg' width={42} alt='Agenda wordt geladen' /></li>
+      ) }
     </LinkListCard>
   );
 }
