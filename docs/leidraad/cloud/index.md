@@ -1,27 +1,42 @@
 ---
-title: "5. Softwareontwikkeling in de cloud"
+title: "5. Cloud-native softwareontwikkeling"
 sidebar_position: 5
-tags: ["devops"]
+tags: ["devops","kubernetes"]
 ---
 
 Binnen de overheid wordt steeds vaker gesproken over digitale soevereiniteit. Wanneer applicaties en de onderliggende infrastructuur goed zijn opgezet, wordt het eenvoudiger om services te verplaatsen of nieuwe diensten toe te voegen.
 
-## Haven (Common Ground)
+## Belangrijke redenen
 
-[Haven](https://haven.commonground.nl/) is een standaard voor platform-onafhankelijke cloud hosting, ontwikkeld om gemeenten in staat te stellen applicaties op uniforme wijze te hosten zonder aanpassingen aan hun bestaande IT-infrastructuur. Dit bevordert de herbruikbaarheid van applicaties en vermindert de afhankelijkheid van specifieke leveranciers.
+### Flexibiliteit
+- Applicaties kunnen snel worden geschaald
+- Onafhankelijkheid van specifieke hardware
+- Mogelijkheid om services te verplaatsen zonder grote technische herstructurering
 
-### Technische details
 
-Haven maakt gebruik van een gestandaardiseerde Kubernetes-configuratie als abstractielaag tussen applicaties en de onderliggende infrastructuur. Hierdoor kunnen applicaties consistent draaien, ongeacht of de infrastructuur lokaal (on-premise) of in de cloud is.
+### Architecturale Onafhankelijkheid
+- Geen vendor lock-in
+- Services kunnen gemakkelijk worden geïsoleerd en beheerd
+- Eenvoudiger om nieuwe diensten toe te voegen of bestaande te vervangen
 
-Meer technische details zijn te vinden op de [techniek-pagina](https://haven.commonground.nl/techniek).
+### Kostenefficiëntie
+- Dynamische resource-allocatie
+- Betalen naar werkelijk gebruik
+- Lagere onderhoudskosten voor infrastructuur
+- Eenvoudiger continue integratie en delivery
 
-### Haven als standaard
+### Betrouwbaarheid
+- Betere beschikbaarheid van services
+- Gecontroleerde en gestandaardiseerde deployment processen
 
-Op **25 maart 2022** heeft het bestuur van de **Vereniging van Nederlandse Gemeenten (VNG)** Haven tot standaard verklaard volgens het **'pas-toe-of-leg-uit'-principe**. Dit betekent dat gemeenten Haven moeten toepassen bij het gebruik van cloud-infrastructuur of bij de implementatie van Common Ground-toepassingen, tenzij ze kunnen uitleggen waarom ze dat niet doen.
+## Communities
 
-Meer hierover is te lezen op de [VNG-website](https://vng.nl/nieuws/bestuur-vng-verklaart-haven-tot-standaard).
+- [Commom Ground](/communities/common-ground)
 
-### Meer informatie
+## Bronnen
 
-Voor documentatie en implementatierichtlijnen, bezoek de [officiële website](https://haven.commonground.nl/).
+- [Haven](https://haven.commonground.nl/)
+
+<!-- ## Standaarden
+
+- [Haven](/infra/standaarden/haven) -->

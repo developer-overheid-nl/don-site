@@ -6,28 +6,27 @@ tags: [privacy]
 
 Het waarborgen van de privacy van de gebruiker zou in elke stap van het proces een prioriteit moeten zijn.
 
-### Centrum Informatiebeveiliging en Privacybescherming (CIP)
+## Communities
 
-Het Centrum Informatiebeveiliging en Privacybescherming (CIP) is een publiek-private netwerkorganisatie die zich richt op het verbeteren van de informatieveiligheid en privacybescherming binnen de Nederlandse overheid en aanverwante sectoren.
-
-- [Naar de website van CIP](https://www.cip-overheid.nl)
-
-### Autoriteit Persoonsgegevens (AP)
-Is de toezichthouder op privacywetgeving in Nederland. Ze handhaven de **AVG (GDPR)**, geven advies over gegevensbescherming en kunnen boetes opleggen bij overtredingen.
-
-### Hoe word je AVG-compliant?
-
-1. **Minimaliseer data** – Verwerk alleen de strikt noodzakelijke persoonsgegevens.  
-2. **Vraag om toestemming** – Zorg dat gebruikers expliciet akkoord gaan met dataverwerking.  
-3. **Beveilig gegevens** – Gebruik versleuteling, hashing en andere beveiligingsmaatregelen.  
-4. **Houd een verwerkingsregister bij** – Documenteer welke data je verwerkt en waarom.  
-5. **Bied inzage en verwijderopties** – Gebruikers moeten hun data kunnen inzien, corrigeren of laten verwijderen.  
-6. **Gebruik privacy by design** – Bouw systemen die vanaf het begin privacyvriendelijk zijn.  
-7. **Sluit verwerkersovereenkomsten** – Zorg dat derde partijen die data verwerken ook compliant zijn.  
-
-Meer info: [Autoriteit Persoonsgegevens](https://autoriteitpersoonsgegevens.nl)  
-
+<!-- - [Autoriteit Persoonsgegevens (AP)](/communities/autoriteit-persoonsgegevens.md)
+- [Centrum Informatiebeveiliging en Privacybescherming (CIP)](/communities/cip.md) -->
 
 ## Bronnen
+
+### Het Blauwe Boekje
+
+Het Blauwe Boekje is een handleiding die de abstracte privacywetgeving vertaalt naar concrete technische ontwerpprincipes.
+
+Het boek biedt een praktische benadering om privacy al in de vroegste fase van systeemontwikkeling mee te nemen. Door acht heldere privacyontwerpstrategieën te presenteren, helpt het boekje overheids-IT teams om:
+
+    Complexe privacywetgeving (zoals de AVG) praktisch te implementeren
+    Principiële ontwerpkeuzes te maken die privacy beschermen
+    Risico's op datalekken en ongewenste gegevensverwerkingen te minimaliseren
+    Privacy te zien als een integraal onderdeel van systeemkwaliteit
+
+De strategieën zijn niet bedoeld als bureaucratische drempels, maar als gereedschappen om innovatieve, burgervriendelijke digitale oplossingen te creëren. Het boekje daagt developers uit om verder te gaan dan minimale wettelijke compliance en privacy actief in te bouwen in overheidsystemen.
+
+Voor een IT-afdeling bij de overheid is dit boekje vergelijkbaar met een routekaart die complexe wetgeving vertaalt naar begrijpelijke, uitvoerbare ontwerprichtlijnen.
+
 
 - [CIP: handleiding Privacy by Design ](https://www.cip-overheid.nl/producten-en-diensten/handleiding-privacy-by-design)

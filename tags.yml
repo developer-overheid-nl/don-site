@@ -143,3 +143,6 @@ irealisatie:
 gebruiker-centraal:
   label: "gebruiker-centraal"
   description: "Gebruiker Centraal"
+fieldlab:
+  label: "Fieldlab"
+  description: "Fieldlab"

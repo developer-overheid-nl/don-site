@@ -24,7 +24,7 @@ De leidraad bevat de volgende principes:
 - ### [2. Maak producten toegankelijk en inclusief](./toegankelijk-en-inclusief/)
 - ### [3. Werk open source en gebruik open source](./open-source/)
 - ### [4. Maak gebruik van open standaarden](./open-standaarden/)
-- ### [5. Softwareontwikkeling in de cloud](./cloud)
+- ### [5. Cloud-native softwareontwikkeling](./cloud)
 - ### [6. Beveilig systemen en data](./security/)
 - ### [7. Neem privacy als uitgangspunt ](./privacy)
 - ### [8. Deel, hergebruik en werk samen](./hergebruik)

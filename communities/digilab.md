@@ -2,7 +2,7 @@
 tags:
   - "open-source"
   - "community"
-  - "meetups"
+  - "fieldlab"
 title: "Digilab"
 ---
 

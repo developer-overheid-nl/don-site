@@ -1,7 +1,7 @@
 ---
 tags:
   - "security"
-title: "RDI (De Rijksinspectie Digitale Infrastructuur)"
+title: "Rijksinspectie Digitale Infrastructuur (RDI)"
 ---
 
 De Rijksinspectie Digitale Infrastructuur (RDI) is een Nederlandse overheidsorganisatie die valt onder het Ministerie van Economische Zaken en Klimaat. De RDI is verantwoordelijk voor het waarborgen van de beschikbaarheid, continuïteit en betrouwbaarheid van de digitale infrastructuur in Nederland, zodat iedereen kan vertrouwen op een veilige werking ervan.
