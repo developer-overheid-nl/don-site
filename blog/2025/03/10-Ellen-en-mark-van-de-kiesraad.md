@@ -92,7 +92,7 @@ Cargo ondersteunt het pinnen van dependencies. Hierbij wordt er een hash gegener
 In het ecosystem vind je al redelijk wat volwassen libraries, bijvoorbeeld het [web application framework Axum](https://crates.io/crates/axum).
 Ook gebruiken we [Typst](https://typst.app) voor het maken van pdf-bestanden. 
 
-Een nadeel dat we ondervinden is dat we voor het verwerken van XML nog geen fantastische library hebben. Dit terwijl we dat wel nodig hebben om te publiceren in de Election Markup Language, De Nederlandse standaard voor het publiceren van verkiezingsuitslagen en het uitwisselen ervan. Je merkt dat de meest gebruikte XML library voor Rust ([`quick-xml`](https://github.com/kiesraad/abacus/blob/eaa9d3e3b0e3ac0d484c201085f1a614f33af29f/backend/Cargo.toml#L40)) wel voldoet, maar minder volwassen en uitgebreid is dan wat je in andere talen vindt. Dus in een oudere taal als Java of als.NET. Wel was `quick-xml` volwassen genoeg om bugvrij te zijn.
+Een nadeel dat we ondervinden is dat we voor het verwerken van XML nog geen fantastische library hebben. Dit terwijl we dat wel nodig hebben om te publiceren in de Election Markup Language, de in Nederland gebruikte standaard voor het publiceren van verkiezingsuitslagen en het uitwisselen ervan. Je merkt dat de meest gebruikte XML library voor Rust ([`quick-xml`](https://crates.io/crates/quick-xml)) wel voldoet, maar minder volwassen en uitgebreid is dan wat je in andere talen vindt. Bijvoorbeeld in Java of .NET, die zijn ontwikkeld toen XML in opkomst was.
 
 ![Mark Janssen (links) en Ellen van Leeuwen (rechts)](./img/mark_en_ellen_poster_small.png)
 *Mark Janssen: Lead Developer (links) en Ellen van Leeuwen: Software Developer (rechts)*
