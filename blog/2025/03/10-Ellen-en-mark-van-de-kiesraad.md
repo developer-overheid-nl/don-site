@@ -53,7 +53,7 @@ Ellen: "Tijdens mijn eerste maand ben ik begonnen met de standaard Rust oefenomg
 Mark: "Ik heb hiervoor heel veel in Go geprogrammeerd en daarvoor veel Java en wat Python. Dit heeft er toe geleid dat ik een voorkeur voor statisch getypeerde talen heb gekregen. Statisch getypeerde talen kunnen je goed helpen omdat ze meer bugs door je compiler afvangen. Java kan dat al best goed. Maar Python is hierin weer helemaal niet strikt. In zo'n taal ben je meer afhankelijk van een goede testcoverage om erachter te komen dat je code geen bugs bevat."
 
 ### Statische typechecking
-Go is ook een taal met statische typechecking, maar toen ik ermee begon was dit nog wat basic. Rust heeft een heel uitgebreid typesystem, veel uitgebreider dan bijvoorbeeld Java.
+Go is ook een taal met statische typechecking, in de tijd dat ik er veel mee werkte was het type system nog beperkt. Rust heeft een heel uitgebreid type system, veel uitgebreider dan bijvoorbeeld Java.
 Een uitgebreid typesystem geeft je de flexibiliteit om dingen door de compiler af te laten vangen waar dat met andere talen echt moeilijker is.
 
 > "Een uitgebreid typesystem geeft je de flexibiliteit om dingen door de compiler af te laten vangen waar dat met andere talen echt moeilijker is."
