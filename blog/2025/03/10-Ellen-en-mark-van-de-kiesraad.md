@@ -56,7 +56,7 @@ Mark: "Ik heb hiervoor heel veel in Go geprogrammeerd en daarvoor veel Java en w
 Go is ook een taal met statische typechecking, in de tijd dat ik er veel mee werkte was het type system nog beperkt. Rust heeft een heel uitgebreid type system, veel uitgebreider dan bijvoorbeeld Java.
 Een uitgebreid type system geeft je de flexibiliteit om dingen door de compiler af te laten vangen waar dat met andere talen niet mogelijk is.
 
-> "Een uitgebreid typesystem geeft je de flexibiliteit om dingen door de compiler af te laten vangen waar dat met andere talen echt moeilijker is."
+> "Een uitgebreid type system geeft je de flexibiliteit om dingen door de compiler af te laten vangen waar dat met andere talen niet mogelijk is."
 >
 > — Mark Janssen, De Kiesraad
 
