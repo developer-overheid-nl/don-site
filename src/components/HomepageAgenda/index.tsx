@@ -71,7 +71,7 @@ export default function HomepageAgenda(): JSX.Element {
 
   return (
     <LinkListCard
-      heading="Agenda"
+      heading="Aankomende evenementen"
       headingLevel={2}
     >
       { agenda && ((agenda.length > 0) ?
