@@ -267,12 +267,16 @@ const config: Config = {
           title: "Overig",
           items: [
             {
-              label: "Contact",
-              to: "/contact",
-            },
-            {
               label: "Bijdragen",
               to: "/contributing",
+            },
+            {
+              label: "Implementatie ondersteuning",
+              to: "/implementatie-ondersteuning",
+            },
+            {
+              label: "Contact",
+              to: "/contact",
             },
             {
               label: "Privacyverklaring",
