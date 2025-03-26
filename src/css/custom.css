@@ -176,6 +176,12 @@
   margin: 0;
 }
 
+.ro-header a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: inherit;
+}
+
 .ro-header__ro-logo {
   display: contents;
 }
