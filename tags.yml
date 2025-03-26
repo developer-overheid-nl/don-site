@@ -128,3 +128,9 @@ foss:
 ux:
   label: UX
   description: "UX: User experience"
+kiesraad:
+  label: Kiesraad
+  description: "De Kiesraad: de nationale Kiesraad."
+rust:
+  label: Rust
+  description: "Rust"
