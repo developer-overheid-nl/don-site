@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Oprichtingsbijeenkomst DOSBA: Dutch Open Source Business Alliance",
+    "start_date": "2025-03-20T15:00:38+01:00",
+    "end_date": "2025-03-20T18:00:38+01:00",
+    "place": "SUE | Cloud Native Solutions, Geldermalsen",
+    "summary": "Tijdens de bijeenkomst bespreken we onder andere: Doelstellingen DOSBA, Statuten, MOU, Huishoudelijk Reglement, Lidmaatschap, structuur, contributie. Aansluitend borrel.",
+    "url": "https://opensourcewerken.nl/events/view/615bee32-7446-434e-b65a-796338d76180/oprichtingsbijeenkomst-dosba-dutch-open-source-business-alliance"
+  },
+  {
+    "title": "Open Source Aanbesteden: Hoe werkt dat?",
+    "start_date": "2025-03-24T13:00:22+01:00",
+    "end_date": "2025-03-24T15:30:22+01:00",
+    "place": "Hoftoren, zaal 12.003, Den Haag",
+    "summary": "Ben je inkoper binnen de overheid en wil je meer weten over open source aanbestedingen? Tijdens dit evenement exclusief voor inkopers delen we inzichten en praktijkervaringen over het aanbesteden van publieke open source software.",
+    "url": "https://opensourcewerken.nl/events/view/6fad5988-3fd6-41a9-80e2-85eda67330ac/open-source-aanbesteden-hoe-werkt-dat"
+  },
+  {
+    "title": "Kennissessie Kennisplatform API's",
+    "start_date": "2025-03-26T12:30:00+01:00",
+    "end_date": "2025-03-26T16:00:00+01:00",
+    "place": "Meetup (boven het Beatrixtheater), Utrecht",
+    "summary": "Het Kennisplatform API's heet je van harte welkom voor een nieuwe kennissessie in Meetup Utrecht.",
+    "url": "/blog/2025/02/27/uitnodiging-kennisplatform-apis"
+  },
+  {
+    "title": "OSPOlogyLive Amsterdam",
+    "start_date": "2025-03-26T09:00:09+01:00",
+    "end_date": "2025-03-27T17:00:00+01:00",
+    "place": "Aristo meeting center",
+    "summary": "Join the fourth OSPOlogyLive Europe in Amsterdam (part presentations, part roundtable sessions) to help organizations navigate open source management, strategy, and Open Source Program Offices (OSPOs)…",
+    "url": "https://opensourcewerken.nl/events/view/17b01134-dd4c-4071-9a38-7f13a0d77dec/ospologylive-amsterdam"
+  },
+  {
+    "title": "Dag van de Toekomstige Ketens",
+    "start_date": "2025-04-03T09:00:15+02:00",
+    "end_date": "2025-04-03T16:30:15+02:00",
+    "place": "Digivloer (Dev.loer), Utrecht",
+    "summary": "Na het succes van de Dag van de Toekomstige Registraties en De Toekomst van de Federatieve Toegang organiseert…",
+    "url": "https://digilab.pleio.nl/groups/view/d690b0dc-1f19-42c0-a635-6a77e3ca2240/dag-van-de-toekomstige-ketens/events/view/b54b1981-9684-474e-8b51-0cb299cf44c7/dag-van-de-toekomstige-ketens"
+  },
+  {
+    "title": "Digilab DevelopmentDag: Samen bouwen aan digitale interoperabiliteit",
+    "start_date": "2025-04-08T09:30:12+02:00",
+    "end_date": "2025-04-08T17:30:12+02:00",
+    "place": "Digivloer (Dev.loer), Utrecht",
+    "summary": "Na de succesvolle bijeenkomst op 11 februari, waar dertig professionals aan verschillende onderwerpen werkten, nemen we de volgende stap.",
+    "url": "https://digilab.pleio.nl/groups/view/c182ef44-4cf1-4912-9afa-da3e8b509f32/evenementen-algemeen/events/view/409d025c-b6f0-420c-b35d-8494dc76ece5/digilab-developmentdag-samen-bouwen-aan-digitale-interoperabiliteit"
+  },
+  {
+    "title": "Digilab doet mee aan webinar: 'Samenwerken aan de toekomst van datadelen'",
+    "start_date": "2025-05-13T11:30:43+02:00",
+    "end_date": "2025-05-13T12:30:43+02:00",
+    "place": "Online",
+    "summary": "Data zijn onmisbaar bij de aanpak van grote maatschappelijke opgaven en voor (proactieve) dienstverlening aan burgers en bedrijven. Dat vraagt steeds vaker om datadeling over de grenzen van domeinen heen. Daarom wordt het Federatief Datastelsel (FDS) ontwikkeld. Tijdens dit webinar kijken we naar de uitdagingen en knelpunten bij gegevensdeling en wordt toegelicht wat FDS inhoudt en hoe FDS in de praktijk kan werken.",
+    "url": "https://digilab.pleio.nl/groups/view/c182ef44-4cf1-4912-9afa-da3e8b509f32/evenementen-algemeen/events/view/344c7887-8466-4fa7-a28f-d6158e1d3c94/digilab-doet-mee-aan-webinar-samenwerken-aan-de-toekomst-van-datadelen"
+  },
+  {
+    "title": "\"Vraag een expert\" inloopuur",
+    "start_date": "2025-04-09T15:00:11+02:00",
+    "end_date": "2025-04-09T16:00:11+02:00",
+    "place": "Online",
+    "summary": "Ben jij bezig met een opensource-project of overweeg je om aan de slag te gaan met opensourcewerken? Of je nu een beginner bent of al enige ervaring hebt, ons maandelijkse digitale inloopuur is het perfecte moment om je vragen te stellen en advies te krijgen van een expert.",
+    "url": "https://opensourcewerken.nl/events/view/3e83d9d8-201b-4cfa-b64b-3d5326c32f52/vraag-een-expert-inloopuur"
+  },
+  {
+    "title": "FLEX op Dev.loer",
+    "start_date": "2025-04-17T09:00:18+02:00",
+    "end_date": "2025-04-17T16:00:00+02:00",
+    "place": "Dev.loer, Utrecht",
+    "summary": "Dev.loer te Utrecht biedt jou een flexwerkplek met koffie, wifi en breedbeeldschermen waar je prettig kunt werken. Werk jij als techneut voor een (semi)overheid? Reserveer je beeldscherm en ga -zelfstandig of samen- aan de slag!",
+    "url": "https://opensourcewerken.nl/events/view/aa3643e2-6cd5-4678-90c3-9a3560fc0345/flex-op-devloer"
+  }
+]

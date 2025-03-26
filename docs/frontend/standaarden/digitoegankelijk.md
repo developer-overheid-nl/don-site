@@ -18,15 +18,15 @@ Dit artikel heeft als doel om developers ondersteuning te bieden bij het impleme
 
 Sinds 1 juli 2018 zijn overheidsorganisaties verplicht [zich te houden](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21) aan de [WCAG 2.1](https://www.w3.org/TR/WCAG21/) richtlijnen. Dit om te zorgen dat zoveel mogelijk Nederlandse burgers, ook mensen met een beperking gebruik kunnen maken van overheidsdiensten.
 
-## Toegankelijkheid voor Iedereen
+## Toegankelijkheid voor iedereen
 
 Burgers kunnen bijvoorbeeld te maken hebben met **permanente functiebeperkingen**:
 
-- dyslexie
-- kleurenblindheid
-- slechthorendheid
-- slechtziendheid
+- slechthorendheid en doofheid
+- lichtgevoeligheid, slechtziendheid en blindheid
+- spraakbeperkingen
 - motorische beperkingen
+- cognitieve beperkingen
 
 Naast permanente functiebeperkingen kunnen gebruikers ook te kampen hebben met:
 
@@ -37,37 +37,27 @@ De WCAG 2.1 bevat verschillende succescriteria die aansluiten bij de genoemde be
 
 De WCAG 2.1 dient toegepast te worden op:
 
-- Websites (HTML, JS)
-- Single Page Applications (HTML, JS)
-- Documenten (PDF)
-- Android/ iOS of andere mobiele apps
+- Websites, waaronder Single Page Applications (denk aan HTML, CSS, SVG, JavaScript)
+- Documenten (zoals PDF, Word, Excel)
+- Mobiele apps (zoals op iOS en Android)
 
-## Drie WCAG-niveaus van naleving (A, AA, AAA)
+## Drie conformiteitsniveaus (A, AA, AAA)
 
-De in totaal 78 successcriteria die zijn opgenomen in WCAG 2.1 zijn allemaal verbonden aan een conformiteits-niveau. De drie niveaus die WCAG onderscheidt, zijn:
+Elk van de 78 successcriteria in WCAG 2.1 heeft een conformiteitsniveau. Websites en apps kunnen verklaren tot op welk niveau ze voldoen. De drie niveaus die WCAG onderscheidt, zijn:
 
-- Niveau A (laagste niveau)
-  - Makkelijkst toe te passen, meeste impact voor de gebruiker
-  - Bevat 30 succescriteria van niveau A
-  - Deze criteria zijn het gemakkelijkst om aan te voldoen en hebben minimale impact op de structuur en vormgeving van een website.
-- Niveau AA
-  - Bevat 20 succescriteria van niveau AA
-  - Aan deze criteria is moeilijker te voldoen. Het stelt bijvoorbeeld hoge eisen aan het contrast tussen tekst en achtergrond. Ook eist het van je dat HTML-elementen die in-focus zijn een duidelijke actieve status hebben met bijvoorbeeld een border.
-- Niveau AAA (hoogste niveau)
-  - Bevat 28 succescriteria van niveau AAA
-  - Niveau AAA stelt nog hogere eisen. Zo is het bijvoorbeeld verplicht videomateriaal aan te bieden met gebarentolk.
+- Niveau A (laagste niveau), 30 succescriteria
+- Niveau AA, 20 succescriteria
+- Niveau AAA (hoogste niveau), 28 succescriteria
+
+In Nederland is het voor overheden verplicht om te voldoen tot niveau AA. Op niveau AAA kun je het beste per criterium inschatten of mogelijk is om te voldoen.
 
 ## Correct HTML-gebruik voor toegankelijkheid
 
-Een goede stap richting een toegankelijke website is het correct toepassen van HTML-syntax. Door HTML-elementen te gebruiken waarvoor ze bedoeld zijn, wordt je webpagina automatisch beter leesbaar voor screenreaders. Bovendien maak je je eigen code leesbaarder en profiteer je van de standaardfunctionaliteiten die HTML biedt.
+Belangrijk voor een toegankelijke website is dat je HTML-syntax correct gebruikt. Je wilt ervoor zorgen dat de structuur in je websites en apps die visueel zichtbaar is, terugkomt in de HTML. Zo kunnen hulptechnologieën, zoals screenreaders, je structuur ontsluiten op een manier die werkt voor de gebruiker. Bovendien maak je je eigen code leesbaarder en profiteer je van de standaardfunctionaliteiten die HTML biedt.
 
 Wat je misschien niet direct zou verwachten, is dat HTML zelf ook een standaard is. Forum Standaardisatie [beveelt de Nederlandse overheid aan](https://www.forumstandaardisatie.nl/open-standaarden/html) om de HTML standaard te gebruiken zoals die door de standaardisatie-organisatie WHATWG is vastgelegd.
 
 [WHATWG: The elements of HTML](https://html.spec.whatwg.org/multipage/#toc-semantics)
-
-### Screenreader
-
-Mensen die blind of slechtziend zijn kunnen gebruik maken van een screenreader om door websites en apps te navigeren en tekst, afbeeldingen en video's te consumeren. Voor gebruikers van screenreaders is het van belang dat de volgorde van de HTML-elementen op de pagina klopt met de visuele weergave van de pagina. Dit om te voorkomen dat gebruikers eerst langs heel veel irrelevante informatie moeten voor ze bij de content zijn waarnaar ze op zoek waren.
 
 ### Alt text
 

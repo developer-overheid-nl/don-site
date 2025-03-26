@@ -1,6 +1,6 @@
 joost-farla:
   name: Joost Farla
-  title: Implementatie ondersteuner - Developer Overheid NL
+  title: Implementatie ondersteuner - developer.overheid.nl
   image_url: https://github.com/joostfarla.png
   page: true
   socials:
@@ -9,7 +9,7 @@ joost-farla:
 
 dimitri-van-hees:
   name: Dimitri van Hees
-  title: Product Owner - Developer Overheid NL
+  title: Product Owner - developer.overheid.nl
   image_url: https://github.com/dvh.png
   page: true
   socials:
@@ -20,7 +20,7 @@ dimitri-van-hees:
 
 matthijs-hovestad:
   name: Matthijs Hovestad
-  title: Senior Backend Developer - Developer Overheid NL
+  title: Senior Backend Developer - developer.overheid.nl
   image_url: https://github.com/pasibun.png
   page: true
   socials:
@@ -29,8 +29,8 @@ matthijs-hovestad:
 
 tom-ootes:
   name: Tom Ootes
-  title: Developer Advocate - Developer Overheid NL
-  image_url: https://github.com/tomootes.png
+  title: Developer Advocate - developer.overheid.nl
+  image_url: https://hostux.social/system/accounts/avatars/109/449/185/673/235/504/original/04278dc16bb36f0d.jpg
   page: true
   socials:
     linkedin: tootes
@@ -39,7 +39,7 @@ tom-ootes:
 
 martin-van-der-plas:
   name: Martin van der Plas
-  title: Implementatie ondersteuner - Developer Overheid NL
+  title: Implementatie ondersteuner - developer.overheid.nl
   image_url: https://github.com/mrtn78.png
   page: true
   socials:
@@ -48,7 +48,7 @@ martin-van-der-plas:
 
 frank-terpstra:
   name: Frank Terpstra
-  title: Implementatie ondersteuner - Developer Overheid NL
+  title: Implementatie ondersteuner - developer.overheid.nl
   image_url: https://github.com/fterpstra.png
   page: true
   socials:
@@ -57,7 +57,7 @@ frank-terpstra:
 
 jaap-hein-wester:
   name: Jaap-Hein Wester
-  title: Senior Frontend Developer - Developer Overheid NL
+  title: Senior Frontend Developer - developer.overheid.nl
   image_url: https://github.com/MrSkippy.png
   page: true
   socials:

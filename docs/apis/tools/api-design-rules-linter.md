@@ -9,9 +9,10 @@ api-design-rulesDe ADR Linter controleert of een OpenAPI Specificatie compliant 
 
 ## CLI
 
-Als je Spectral geïnstalleerd hebt, kun je een OAS via de commandline op de volgende manier valideren:
+Nadat je Spectral geïnstalleerd hebt, kun je een OAS via de commandline op de volgende manier valideren:
 
 ```bash
+$ npm install -g @stoplight/spectral-cli
 $ spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE
 ```
 

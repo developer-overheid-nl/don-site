@@ -1,9 +1,8 @@
 ---
 authors: [tom-ootes, opensourcewerken]
 tags: [open-source]
-draft: true
 ---
-# Hoe overtuig ik mijn manager ervan dat open source werken een goed idee is?
+# Zo overtuig je je manager ervan dat open source werken slim is
 
 Open source werken wint snel aan bekendheid binnen de overheid – en dat is niet zonder reden. Het stelt organisaties in staat van elkaar te leren, en het kan voorkomen dat ze afhankelijk worden van leveranciers. Ook is het inmiddels wettelijk vastgelegd dat overheidsorganisaties open source moeten werken. In 2020 is vastgelegd in de beleidslijn ‘Open, tenzij’, dat software die wordt ontwikkeld door de overheid "open source by default" moet zijn. Ook [onderschrijven](https://opensourcewerken.nl/page/view/b28e707b-2731-49bf-bcc6-ac693f1f250a/overzicht-wet-en-regelgeving) de Wet open overheid (Woo) en Wet hergebruik overheidsinformatie (Who) dat overheidscode openlijk beschikbaar zou moeten zijn. Meer info over waarom open source werken een goed idee is vind je op [opensourcewerken.nl](https://opensourcewerken.nl).
 
@@ -15,7 +14,6 @@ Hoewel open source werken een enorme potentie in zich heeft, is de realiteit erv
 
 > Open Source werken is niet spannend; het is zelfs een beetje saai. Je kijkt gewoon naar mensen die aan het werk zijn.
 >
-> — Niels Hatzmann, De Kiesraad
 
 ## Het pijnpunt: developers kennen de voordelen, managers (nog) niet
 
@@ -108,3 +106,9 @@ Dus, verdiep je in de zorgen die er leven bij jouw manager en adresseer deze. St
 Begin klein, toon aan dat open source werken gecontroleerd en gefaseerd kan gebeuren, en laat zien dat andere overheidsorganisaties het al succesvol doen. Open source werken is geen sprong in het diepe, maar een strategische stap richting een transparantere, efficiëntere en innovatievere overheid.
 
 Wij horen graag tegen welke obstakels jij nog meer oploopt bij gesprekken met managers/ non-technici!
+
+## Meer lezen/ andere bronnen
+
+- [Ons hoofdstuk over Open Source werken](/kennisbank/leidraad/open-source/)
+- [Praat verder op opensourcewerken.nl](https://opensourcewerken.nl)
+- [Bouw mee aan de standaard voor publieke code](https://standaardvoorpubliekecode.nl)
