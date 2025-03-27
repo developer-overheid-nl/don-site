@@ -63,9 +63,9 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, image, description, link, label}: FeatureItem) {
+function Feature({title, image, alt, description, link, label}: FeatureItem) {
   return (
-    <Card href={link} heading={title} description={description} imageSrc={image} linkLabel={label} />
+    <Card href={link} heading={title} description={description} imageSrc={image} imageAlt={alt} linkLabel={label} />
   );
 }
 
