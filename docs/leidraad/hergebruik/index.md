@@ -24,7 +24,7 @@ Binnen de front-end kunnen componenten eenvoudig worden hergebruikt. Sommige org
 ### NL Design System
 Naast deze design systems is er ook het overheidsbrede initiatief 'NL Design System'. De community werkt gezamenlijk aan een systeem om makkelijk themes en sets van componenten aan te bieden. Het voordeel van NL Design System is dat je makkelijk componenten kunt hergebruiken van andere projecten die ook NL Design System gebruiken.
 
-Bekijk het [hoofdstuk over NL Design System](/kennisbank/frontend/nl-design-system/) voor meer informatie.
+Bekijk het [hoofdstuk over NL Design System](/kennisbank/front-end/nl-design-system/) voor meer informatie.
 
 ## Checklist, vind bestaande software
 

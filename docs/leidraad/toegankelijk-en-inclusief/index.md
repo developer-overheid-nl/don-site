@@ -18,4 +18,4 @@ Toegankelijkheid zorgt ervoor dat iedereen, inclusief mensen met een beperking, 
 
 ## Standaarden
 
-- [DigiToegankelijk](/kennisbank/frontend/standaarden/digitoegankelijk)
+- [DigiToegankelijk](/kennisbank/front-end/standaarden/digitoegankelijk)
