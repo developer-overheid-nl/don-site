@@ -59,7 +59,7 @@ Door interne projecten te open sourcen kunnen andere (overheids-)organisaties me
 
 Open source werken kan gezien worden als een kans voor een team om te professionaliseren. Als je bijvoorbeeld de ["Standaard voor Publieke Code"](https://standaardvoorpubliekecode.nl/) erbij pakt kom je erachter dat je als open source project ten alle tijden een roadmap beschikbaar moet stellen. Als je goed naar buiten communiceert is dat ook fijn voor jezelf. Zo stel je je eigen doelen nog scherper op.
 
-Als je in de openbaarheid opereert heb je meer kans dat mensen je te hulp schieten/ en je zo direct een kennisnetwerk opbouwt.
+Als je in de openbaarheid opereert heb je meer kans dat mensen je te hulp schieten en je zo direct een kennisnetwerk opbouwt.
 
 #### Kansen om talent te werven/ PR
 
