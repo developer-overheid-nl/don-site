@@ -98,7 +98,7 @@ _Let op: het werk van NL Design System is work in progress, nog niet alle tekstj
 
 ## Links
 
-[Forum Standaardisatie: DigiToegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21)<br/>
+
 [DigiToegankelijk.nl](https://www.digitoegankelijk.nl/)<br/>
 [Gebruikercentraal.nl](https://www.gebruikercentraal.nl/)<br/>
 
@@ -117,6 +117,12 @@ Het end-to-end testing framework Playwright kan gebruikt worden om accessibility
 
 Wave is een online tool die websites kan scannen op toegankelijkheidsproblemen: [Wave](https://wave.webaim.org/)
 
-## Externe links
+## Communities
 
+- [DigiToegankelijk](/communities/digitoegankelijk)
+
+## Bronnen
+
+- [Overzicht accessibility standaardcomponenten NL-Design-System](https://nldesignsystem.nl/componenten/)
 - [DigitaalToegankelijk.nl over de European Accessibility Act (2025)](https://digitaaltoegankelijk.nl/nieuws/european-accessibility-act-2025/)
+- [Forum Standaardisatie: DigiToegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21)
