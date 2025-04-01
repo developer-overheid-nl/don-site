@@ -158,7 +158,7 @@ const config: Config = {
       externalUrlRegex:
         "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
       contextualSearch: false,
-      searchPagePath: false,
+      searchPagePath: 'zoeken',
     },
     // Replace with your project's social card
     image: "img/don-social-card.png",
