@@ -91,3 +91,12 @@ opensourcewerken:
   socials:
     url: https://opensource.overheid.nl
     mastodon: https://social.overheid.nl/@opensource
+
+tim-van-der-lippe:
+  name: Tim van der Lippe
+  title: Architect/API Adviseur - Logius
+  image_url: https://github.com/timvdlippe.png
+  page: true
+  socials:
+    github: timvdlippe
+    mastodon: https://fosstodon.org/@tvanderlippe
