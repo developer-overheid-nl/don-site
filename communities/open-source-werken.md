@@ -17,4 +17,4 @@ Je vindt er bijvoorbeeld:
 - Informatie over de **[wet- en regelgeving](https://opensourcewerken.nl/page/view/b28e707b-2731-49bf-bcc6-ac693f1f250a/overzicht-wet-en-regelgeving)** die van toepassing is op open source werken.
 
 ## Links
-- [opensourcewerken.nl](https://opensourcewerken.nl)
+- [Naar opensourcewerken.nl](https://opensourcewerken.nl)

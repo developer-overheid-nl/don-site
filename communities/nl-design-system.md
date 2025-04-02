@@ -21,5 +21,6 @@ Deelproducten zijn:
 - **Stijlgids** om de huisstijl van je organisatie consistent te gebruiken.
 
 ## Links
-- [nldesignsystem.nl](https://nldesignsystem.nl/)
+- [Naar de website van NL Design System](https://nldesignsystem.nl/)
+- [Bekijk de components van NL Design System](https://nldesignsystem.nl/componenten/)
 - [https://github.com/nl-design-system/backlog](https://github.com/nl-design-system/backlog)

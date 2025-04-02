@@ -1,7 +1,7 @@
 ---
 title: "7. Neem privacy als uitgangspunt"
 sidebar_position: 7
-tags: [privacy]
+tags: [privacy, avg, gdpr]
 ---
 
 Het waarborgen van de privacy van de gebruiker zou in elke stap van het proces een prioriteit moeten zijn.
@@ -17,13 +17,33 @@ Het waarborgen van de privacy van de gebruiker zou in elke stap van het proces e
 
 - **Efficiëntere en duurzamere systemen** - Het nemen van privacy als uitgangspunt dwingt ontwikkelaars tot het toepassen van dataminimalisatie: alleen noodzakelijke gegevens worden verwerkt en bewaard. Dit leidt tot betere beveiliging, efficiëntere systemen en lagere kosten op de lange termijn.
 
+## Hoe word je AVG-compliant?
 
-## Communities
+Door de Algemene verordening gegevensbescherming (AVG) hebben organisaties die persoonsgegevens verzamelen en gebruiken meer verantwoordelijkheden gekregen. En de mensen van wie zij gegevens gebruiken hebben meer rechten gekregen. Houden organisaties zich niet aan de regels? Dan kunnen zij een boete krijgen.
 
-- [Autoriteit Persoonsgegevens (AP)](/communities/autoriteit-persoonsgegevens)
-- [Centrum Informatiebeveiliging en Privacybescherming (CIP)](/communities/cip)
+1. **Minimaliseer data** – Verwerk alleen de strikt noodzakelijke persoonsgegevens.
+2. **Vraag om toestemming** – Zorg dat gebruikers expliciet akkoord gaan met dataverwerking.
+3. **Beveilig gegevens** – Gebruik versleuteling, hashing en andere beveiligingsmaatregelen.
+4. **Houd een verwerkingsregister bij** – Documenteer welke data je verwerkt en waarom.  
+5. **Bied inzage en verwijderopties** – Gebruikers moeten hun data kunnen inzien, corrigeren of laten verwijderen.  
+6. **Gebruik privacy by design** – Bouw systemen die vanaf het begin privacyvriendelijk zijn.  
+7. **Sluit verwerkersovereenkomsten** – Zorg dat derde partijen die data verwerken ook compliant zijn.  
 
 ## Bronnen
+
+### Autoriteit Persoonsgegevens (AP)
+
+Is de toezichthouder op privacywetgeving in Nederland. Ze handhaven de **AVG (GDPR)**, geven advies over gegevensbescherming en kunnen boetes opleggen bij overtredingen.
+
+- [Naar autoriteitpersoonsgegevens.nl](https://autoriteitpersoonsgegevens.nl)
+
+### Centrum Informatiebeveiliging en Privacybescherming (CIP) 
+
+Het Centrum Informatiebeveiliging en Privacybescherming (CIP) is een publiek-private netwerkorganisatie die zich richt op het verbeteren van de informatieveiligheid en privacybescherming binnen de Nederlandse overheid en aanverwante sectoren.
+
+- [Naar cip-overheid.nl](https://www.cip-overheid.nl)
+- [Naar de handleiding "Privacy by Design" van het CIP](https://www.cip-overheid.nl/producten-en-diensten/handleiding-privacy-by-design)
+
 
 ### Het Blauwe Boekje
 
@@ -41,5 +61,3 @@ De strategieën zijn niet bedoeld als bureaucratische drempels, maar als gereeds
 Voor een IT-afdeling bij de overheid fungeert dit boekje als een routekaart die complexe wetgeving vertaalt naar begrijpelijke, uitvoerbare ontwerprichtlijnen.
 
 - [Meer over het Blauwe Boekje](https://www.cs.ru.nl/~jhh/blauwe-boekje.html)
-
-- [CIP: handleiding Privacy by Design ](https://www.cip-overheid.nl/producten-en-diensten/handleiding-privacy-by-design)

@@ -8,4 +8,5 @@ title: "CommonGround"
 
 Gemeenten werken samen met een community van betrokkenen partijen aan bouwstenen, zoals softwaretoepassingen, technische componenten of standaarden voor gegevensuitwisseling.
 
-- [Naar commonground.nl](https://commonground.nl/)
+- [Naar de website van CommonGround](https://commonground.nl/)
+- [Gitlab Common Ground](https://gitlab.com/commonground)

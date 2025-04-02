@@ -6,9 +6,6 @@ tags:
 title: "Federatief Datastelsel"
 ---
 
-
-## Federatief datastelsel
-
 Als developer binnen de overheid kun je op verschillende manieren aan de slag met het Federatief Datastelsel (FDS). Hier zijn een aantal kernpunten om te overwegen:
 
 - **Integreer met gestandaardiseerde API's en protocollen:**  
@@ -23,6 +20,6 @@ Als developer binnen de overheid kun je op verschillende manieren aan de slag me
 - **Draag bij aan de verbetering van de data-ecosystemen:**  
   Door jouw technische kennis en ervaring in te brengen, help je mee aan een robuust en toekomstbestendig data-ecosysteem dat de basis vormt voor betere dienstverlening en beleidsvorming binnen de overheid.
 
-Ga direct naar de  [FDS werkbank](https://federatief.datastelsel.nl/kennisbank/).
-
-- [Naar federatief.datastelsel.nl](https://federatief.datastelsel.nl/)
+## Links
+- [Naar de FDS werkbank](https://federatief.datastelsel.nl/kennisbank/).
+- [Naar website van Federatief Datastelsel](https://federatief.datastelsel.nl/)

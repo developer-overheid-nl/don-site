@@ -8,5 +8,4 @@ DigiToegankelijk biedt overheidsorganisaties vanaf 2023 verschillende vormen van
 
 Heb je een vraag of wil je meer weten over een bepaald onderwerp? Kijk dan eens bij onze wekelijkse vragenuurtjes en kennissessies.
 
-## Links
-- [digitoegankelijk.nl](https://www.digitoegankelijk.nl/)
+- [Naar de website van DigiToegankelijk](https://www.digitoegankelijk.nl/)
