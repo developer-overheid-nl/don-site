@@ -1,7 +1,7 @@
 ---
 authors: [tim-van-der-lippe, kennisplatform-apis]
 tags: [api, adr]
-date: 2025-04-01
+date: 2025-04-02
 ---
 # Status update API Design Rules bij Kennisplatform API's
 
