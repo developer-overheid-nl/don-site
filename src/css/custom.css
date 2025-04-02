@@ -117,6 +117,8 @@
   --ifm-breadcrumb-color-active: var(--don-robijnrood-500);
   --ifm-toc-border-color: var(--don-robijnrood-200);
 
+  --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 3);
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
