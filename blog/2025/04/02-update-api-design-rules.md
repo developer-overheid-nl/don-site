@@ -7,13 +7,13 @@ tags: [api, adr]
 Op woensdagmiddag 26 maart 2025 kwam [het Kennisplatform API's](/communities/kennisplatform-apis/) bijeen om de laatste ontwikkelingen rond API's te bespreken.
 Hier presenteerde ik een update over de [API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/) (ADR), waarvan de 2.0 versie is ingediend bij het Forum Standaardisatie om op de ['Pas toe of leg uit'-lijst (PTOLU)](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) te zetten.
 Tevens lichtte ik toe wat [Logius](https://www.logius.nl/) als beheerder doet om de standaard verder te brengen en hoe wij toe werken naar een 2.1 versie.
-Hierbij is de symbiose tussen <https://developer.overheid.nl>, het Kennisplatform en de ADR van belang voor een succesvolle toekomst.
+Hierbij is de symbiose tussen [developer.overheid.nl](https://developer.overheid.nl), het Kennisplatform en de ADR van belang voor een succesvolle toekomst.
 
 <!-- truncate -->
 
 :::success[**TL;DR**]
 
-Logius werkt toe naar een 2.1 versie op basis van de input van API experts en werkt hierbij samen met <https://developer.overheid.nl> en het Kennisplatform API's.
+Logius werkt toe naar een 2.1 versie op basis van de input van API experts en werkt hierbij samen met developer.overheid.nl en het Kennisplatform API's.
 Wijzigingen worden behandeld in een technisch overleg, waarbij beheerorganisaties het draagvlak borgen en extra tooling (zoals een linter) aanleveren ter implementatieondersteuning.
 Alle genoemde partijen, tooling en documenten zijn openbaar en input wordt zeer gewaardeerd, dus doe mee!
 
@@ -21,7 +21,7 @@ Alle genoemde partijen, tooling en documenten zijn openbaar en input wordt zeer 
 
 ## Scope van ADR 2.1
 
-De scope van de 2.1 versie zal grotendeels de vergaarde feedback van het Forum verwerken alsmede enkele ontwikkelingen rondom <https://developer.overheid.nl> (DON).
+De scope van de 2.1 versie zal grotendeels de vergaarde feedback van het Forum verwerken alsmede enkele ontwikkelingen rondom developer.overheid.nl (DON).
 De focus is hier op het verder stimuleren van adoptie van de standaard, zodat API's die door (overheids-)organisaties worden gebouwd bruikbaar zijn nu en in de toekomst.
 Een van de voordelen van samenwerking tussen projecten zoals DON en beheerders zoals Logius is een symbiosewerking waar praktijk en toekomstbestendigheid bij elkaar komen.
 Twee voorbeelden van deze samenwerking licht ik nu wat verder toe.
