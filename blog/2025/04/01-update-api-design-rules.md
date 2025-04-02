@@ -24,16 +24,16 @@ Alle genoemde partijen, tooling en documenten zijn openbaar en input wordt zeer 
 
 De scope van de 2.1 versie zal grotendeels de vergaarde feedback van het Forum verwerken alsmede enkele ontwikkelingen rondom https://developer.overheid.nl (DON).
 De focus is hier op het verder stimuleren van adoptie van de standaard, zodat API's die door (overheids-)organisaties worden gebouwd bruikbaar zijn nu en in de toekomst.
-Een van de voordelen van samenwerking tussen projecten zoals DON en beheerders zoals Logius is een symbiose werking waar praktijk en toekomstbestendigheid bij elkaar komen.
+Een van de voordelen van samenwerking tussen projecten zoals DON en beheerders zoals Logius is een symbiosewerking waar praktijk en toekomstbestendigheid bij elkaar komen.
 Twee voorbeelden van deze samenwerking licht ik nu wat verder toe.
 
 Data die DON vergaart uit het API register hebben wij als input gebruikt voor de 2.1 versie.
-Hierbij focusen we op het bereik van developers, door bijvoorbeeld het [`info.contact` veld te vereisen](https://github.com/Logius-standaarden/API-Design-Rules/pull/161) in de OpenAPI specification.
+Hierbij focussen we op het bereik van developers, door bijvoorbeeld het [`info.contact` veld te vereisen](https://github.com/Logius-standaarden/API-Design-Rules/pull/161) in de OpenAPI specification.
 Dit contactveld kan door partijen zoals DON worden gebruikt om automatisch checks uit te voeren en resultaten te delen met beheerders.
 Tevens kunnen gebruikers van een API weten met welke partij zij te maken hebben en hoe ze die kunnen bereiken.
 
 Ook is er een analyse gedaan door [Joost Farla](/blog/authors/joost-farla) over een mogelijk conflict tussen [OData](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html) en de API Design rules wat betreft het vereisen dat [resources geen trailing slash hebben](https://gitdocumentatie.logius.nl/publicatie/api/adr/#/core/no-trailing-slash).
-Gelukkig volgde uit Joost' analyse dat dit conflict niet aanwezig is, maar hebben we zijn input meegenomen en hier [een nieuwe design rule](https://github.com/Logius-standaarden/API-Design-Rules/pull/165/) over geschreven.
+Gelukkig volgde uit Joost's analyse dat dit conflict niet aanwezig is, maar hebben we zijn input meegenomen en hier [een nieuwe design rule](https://github.com/Logius-standaarden/API-Design-Rules/pull/165/) over geschreven.
 Deze regel lost daarnaast ook het probleem op dat developers gingen twijfelen of een API bestond, omdat de `/` resource een 404 (of andere error code) terug gaf.
 
 ## Technisch Overleg ter besluitvorming, Kennisplatform als input
@@ -64,7 +64,7 @@ Bij vaststelling zijn belanghebbenden het eens over de standaard en kan die word
 Dit doen beheerorganisaties allemaal volgens het [BOMOS-model](https://www.logius.nl/onze-dienstverlening/domeinen/infrastructuur/bomos).
 
 Een van de aspecten van BOMOS is implementatieondersteuning, waar developers een van de belangrijke doelgroepen zijn.
-Voor de ADR gaat Logius focusen op het aanleveren van extra ondersteuning door middel van automatisering.
+Voor de ADR gaat Logius focussen op het aanleveren van extra ondersteuning door middel van automatisering.
 Hiervoor is de [Spectral](https://stoplight.io/open-source/spectral) linter (die origineel door DON is gepubliceerd) [geintegreerd in de standaard](https://github.com/Logius-standaarden/API-Design-Rules/pull/177) zelf.
 Dit betekent dat Logius als beheerder ervoor zorgt dat API regels niet alleen de juiste afspraken zijn, maar dat ze ook automatisch worden gecheckt.
 Developers kunnen hierdoor op een laagdrempelige manier checken of zij voldoen aan de standaard en eventuele problemen sneller oplossen.
