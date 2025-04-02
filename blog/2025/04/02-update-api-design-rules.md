@@ -3,7 +3,7 @@ authors: [tim-van-der-lippe, kennisplatform-apis]
 tags: [api, adr]
 date: 2025-04-02
 ---
-# Status update API Design Rules bij Kennisplatform API's
+# Status update API Design Rules
 
 Op woensdagmiddag 26 maart 2025 kwam [het Kennisplatform API's](/communities/kennisplatform-apis/) bijeen om de laatste ontwikkelingen rond API's te bespreken.
 Hier presenteerde ik een update over de [API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/) (ADR), waarvan de 2.0 versie is ingediend bij het Forum Standaardisatie om op de ['Pas toe of leg uit'-lijst (PTOLU)](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) te zetten.
