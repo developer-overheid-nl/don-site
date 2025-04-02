@@ -6,6 +6,8 @@ import HomepageBlogposts from "../components/HomepageBlogposts";
 import HomepageAgenda from "../components/HomepageAgenda";
 
 import styles from "./index.module.css";
+import { IconButton, TextInput } from "@rijkshuisstijl-community/components-react";
+import IconZoekInline from "../theme/icons/IconZoekInline";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -21,6 +23,13 @@ function HomepageHeader() {
           Informatie, bronnen en tools van de <strong className={styles.intro__highlight}>overheid voor ontwikkelaars</strong> door 
           Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.
         </p>
+        <form action="/zoeken" method="get" className={styles.heroSearch}>
+          <label className="visual-hidden" htmlFor="banner-search">Zoeken</label>
+          <TextInput type="search" name="q" id="banner-search" className={styles.heroSearchInput} />
+          <IconButton label="Zoeken" type="submit" className={styles.heroSearchButton}>
+            <IconZoekInline />
+          </IconButton>
+        </form>
       </div>
     </header>
   );

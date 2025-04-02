@@ -224,6 +224,16 @@
   display: none !important;
 }
 
+.visual-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: clip;
+  inline-size: 1px;
+  block-size: 1px;
+  white-space: nowrap;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 /* [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
