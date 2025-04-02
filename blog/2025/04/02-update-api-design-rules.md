@@ -42,7 +42,7 @@ In het geval van het `info.contact` veld is [dit besluit al genomen](https://git
 De tweede wijziging (op het moment van schrijven) wordt voorgelegd in het [volgende TO op 13 mei](https://github.com/Logius-standaarden/Overleg/tree/main/API/2025-05-13).
 
 Alle gebeurtenissen rond de standaard zijn openbaar en volgen uit input van open communities zoals het Kennisplatform.
-Dit is belangrijk voor het borgen van draagvlak in alle (overheids-)organisaties en andere partijen die standaarden nuttig willen in zetten in hun werkzaamheden.
+Dit is belangrijk voor het borgen van draagvlak in alle (overheids-)organisaties en andere partijen die standaarden nuttig willen inzetten in hun werkzaamheden.
 Hoe meer input van verschillende partijen, developers en andere belanghebbenden, hoe groter de waarde van de gemaakte afspraken die vastgelegd zijn in de standaard.
 
 Het Kennisplatform speelt hier een belangrijke rol in als input "vanuit het werkveld".
