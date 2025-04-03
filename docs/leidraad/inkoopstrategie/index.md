@@ -3,23 +3,25 @@ title: "12. Bepaal je inkoopstrategie"
 sidebar_position: 12
 ---
 
-Je inkoopstrategie moet aantonen dat je zowel commerciële als technologische aspecten, en contractuele beperkingen hebt overwogen.
+Je inkoopstrategie moet aantonen dat je zowel commerciële als technologische aspecten en contractuele beperkingen hebt overwogen.
 
-## PIANOo, Expertisecentrum Aanbesteden van het ministerie van Economische Zaken
+## Belangrijke redenen
 
-Pianoo is een organisatie die organisaties helpt bij digitale transformatie en innovatie. Ze richten zich op:
+- **Vind de beste leverancier** - Wanneer je kwaliteitseisen vastlegt in een aanbesteding voorkom je verrassingen bij de leverancier in kwestie.
+- **Neem waarden op in de aanbesteding** - Alle waarden die worden omschreven in deze leidraad, zoals transparantie en hergebruik, dienen hun weerslag te vinden in overheidsaanbestedingen. Zo worden veelgemaakte fouten voorkomen.
 
-- **Maatwerk IT-oplossingen:** Het ontwikkelen en implementeren van software en digitale diensten die aansluiten bij de specifieke behoeften van een organisatie.
-- **Ondersteuning bij digitale transformatie:** Advies en begeleiding bij het optimaliseren van digitale processen en het versnellen van innovatie.
-- **Samenwerking en kennisdeling:** Het faciliteren van een omgeving waarin organisaties en professionals kennis delen en samen werken aan innovatieve projecten.
-- **Agile en data-gedreven werken:** Het toepassen van agile methodieken en het benutten van data om effectievere en toekomstbestendige oplossingen te realiseren.
+## Communities
 
-Kortom, Pianoo ondersteunt zowel publieke als private organisaties in het realiseren van een efficiëntere, klantgerichte en toekomst
+### PIANOo, Expertisecentrum Aanbesteden van het ministerie van Economische Zaken
+
+PIANOo, Expertisecentrum Aanbesteden van het ministerie van Economische Zaken heeft als taak het inkopen en aanbesteden bij overheden te professionaliseren. Met oog voor rechtmatigheid én doelmatigheid. Professionele inkoop levert een bijdrage aan uw beleid en biedt value for tax payers money.
 
 Direct naar [**pianoo.nl**](https://www.pianoo.nl/nl).
 
-## Opensourcewerken.nl
-[Opensourcewerken](https://opensourcewerken.nl) is de community of practice omtrent open source werken van het Ministerie van Binnenlandse zaken. Je vindt er informatie en een community voor onder andere inkopers die graag informatie willen inwinnen over hoe je open source projecten kunt inkopen /aanbesteden.
+### Opensourcewerken.nl
 
-- Direct naar [**de richtlijnen voor inkopers**](https://opensourcewerken.nl/page/view/82f295bb-9f0b-44d9-89c1-474cf9a5f370/landingspagina-inkoper) open source werken. 
-- Direct naar [**onze communitypagina**](/communities/open-source-werken) an opensourcewerken.nl. 
+- [Open Source Werken](/communities/open-source-werken)
+
+<!-- ## Bronnen
+
+- [Open source ambitieladder in maatwerk aanbesteding of opdracht (Min-VWS)](https://minvws.github.io/beleidsontwikkeling/ambitieladder/#voordelen-van-opensourcewerken) -->
