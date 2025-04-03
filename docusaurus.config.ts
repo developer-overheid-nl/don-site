@@ -298,6 +298,10 @@ const config: Config = {
               label: "Mastodon",
               href: "https://social.overheid.nl/@developer",
             },
+            {
+              label: "LinkedIn",
+              href: "https://nl.linkedin.com/company/developer-overheid-nl",
+            },
           ],
         },
         {
