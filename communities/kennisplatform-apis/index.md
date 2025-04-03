@@ -10,7 +10,7 @@ Geonovum is samen met Bureau Forum Standaardisatie, Kamer van Koophandel, VNG Re
 
 ## Waarom een kennisplatform API's?
 
-Het Kennisplatform API's wil API's beter bij de vraag aan laten sluiten, kennis over het toepassen van API's uitwisselen en de aanpak bij verschillende organisaties op elkaar afstemmen en waar nodig standaardiseren. In het Kennisplatform verkennen we in werkgroepen de verschillende aspecten rond het gebruik en toepassing van API's door de overheid. In het Kennisplatform verkennen we in werkgroepen de verschillende aspecten rond het gebruik en toepassing van API's door de overheid.
+Het Kennisplatform API's wil API's beter bij de vraag aan laten sluiten, kennis over het toepassen van API's uitwisselen en de aanpak bij verschillende organisaties op elkaar afstemmen en waar nodig standaardiseren. In het Kennisplatform verkennen we in werkgroepen de verschillende aspecten rond het gebruik en toepassing van API's door de overheid.
 
 ## API Strategie
 

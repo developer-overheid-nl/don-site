@@ -7,15 +7,12 @@ Gebruik data effectiever door je technologie, infrastructuur en processen te ver
 
 ## Belangrijke redenen
 
-- **Verbeterde besluitvorming** - Betrouwbare en actuele data stelt overheden in staat om gefundeerde beslissingen te nemen, beleidsmaatregelen te verbeteren en de effectiviteit van beleid te meten.  
-
+- **Verbeterde besluitvorming** - Betrouwbare en actuele data stelt overheden in staat om gefundeerde beslissingen te nemen, beleidsmaatregelen te verbeteren en de effectiviteit van beleid te meten.
 - **Efficiëntie in processen** - Door data effectief te gebruiken, kunnen overheidsprocessen geautomatiseerd en geoptimaliseerd worden, wat tijd, middelen en kosten bespaart, en de dienstverlening aan burgers versnelt.  
-
 
 ## Data bij de bron
 
 Het data bij de bron principe betekent dat overheidsdata op de plek van oorsprong wordt beheerd en geraadpleegd. Dit zorgt ervoor dat data actueel en betrouwbaar blijft, duplicatie wordt vermeden en de bronorganisatie de controle behoudt over beveiliging en privacy. Applicaties kunnen via gestandaardiseerde API’s direct de originele gegevens raadplegen, wat bijdraagt aan een transparante en efficiënte datagedreven dienstverlening.
-
 
 ## Linkeddata.overheid.nl
 
@@ -35,7 +32,6 @@ Met [linkeddata.overheid.nl](https://linkeddata.overheid.nl) krijg je als develo
 
 - **Uitgebreide documentatie en community:**  
   Maak gebruik van de beschikbare documentatie en voorbeelden om snel aan de slag te gaan. Daarnaast kun je ervaringen delen en vragen stellen binnen de developer community.
-
 
 ## De DCAT-standaard
 

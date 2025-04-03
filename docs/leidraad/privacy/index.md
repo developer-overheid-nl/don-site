@@ -10,7 +10,6 @@ Het waarborgen van de privacy van de gebruiker zou in elke stap van het proces e
 
 - **Wettelijke verplichting** - Overheidsinstanties moeten voldoen aan strikte privacywetgeving, zoals de AVG (Algemene Verordening Gegevensbescherming). Dit betekent dat gegevens alleen mogen worden verwerkt als daar een legitieme grondslag voor is, en dat burgers controle moeten hebben over hun eigen gegevens.
 
-
 - **Beperken van risico's** - Een datalek of privacyschending kan enorme gevolgen hebben, zoals identiteitsfraude, discriminatie of andere vormen van misbruik. Door privacy vanaf het begin in te bouwen (Privacy by Design) worden deze risico's geminimaliseerd.
 
 - **Minder juridische en financiële consequenties** -  Het niet naleven van privacyregels kan leiden tot boetes van toezichthouders zoals de Autoriteit Persoonsgegevens. Daarnaast kunnen schadeclaims van burgers financiële en reputatieschade opleveren.
@@ -37,13 +36,12 @@ Is de toezichthouder op privacywetgeving in Nederland. Ze handhaven de **AVG (GD
 
 - [Naar autoriteitpersoonsgegevens.nl](https://autoriteitpersoonsgegevens.nl)
 
-### Centrum Informatiebeveiliging en Privacybescherming (CIP) 
+### Centrum Informatiebeveiliging en Privacybescherming (CIP)
 
-Het Centrum Informatiebeveiliging en Privacybescherming (CIP) is een publiek-private netwerkorganisatie die zich richt op het verbeteren van de informatieveiligheid en privacybescherming binnen de Nederlandse overheid en aanverwante sectoren.
+Het Centrum Informatiebeveiliging en Privacybescherming (CIP) is een publiek-private organisatie die zich richt op het verbeteren van de informatieveiligheid en privacybescherming binnen de Nederlandse overheid en aanverwante sectoren.
 
 - [Naar cip-overheid.nl](https://www.cip-overheid.nl)
 - [Naar de handleiding "Privacy by Design" van het CIP](https://www.cip-overheid.nl/producten-en-diensten/handleiding-privacy-by-design)
-
 
 ### Het Blauwe Boekje
 

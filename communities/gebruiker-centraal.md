@@ -10,11 +10,11 @@ title: "Gebruiker Centraal"
 
 De community richt zich op verschillende thema’s:
 
-- **Begrijpelijke tekst en beeldtaal**: Communiceren in begrijpelijke woorden, iconen en beelden met de doelgroep.
-- **Onderzoeken, testen en meten**: Onderzoeken wat de doelgroep wil en meten of testen wat de bedachte oplossing doet.
-- **Mensgericht denken en ontwerpen**: Niet interne processen, maar de gebruiker centraal zetten in de dienstverlening.
-- **Inclusie en digitale toegankelijkheid**: Dienstverlening en communicatie toegankelijk en herkenbaar maken voor iedereen.
-- **Draagvlak en bewustwording**: Draagvlak creëren om als organisatie de gebruiker centraal te stellen, beginnend met bewustwording.
+- **Begrijpelijke tekst en beeldtaal**: communiceren in begrijpelijke woorden, iconen en beelden met de doelgroep.
+- **Onderzoeken, testen en meten**: onderzoeken wat de doelgroep wil en meten of testen wat de bedachte oplossing doet.
+- **Mensgericht denken en ontwerpen**: niet interne processen, maar de gebruiker centraal zetten in de dienstverlening.
+- **Inclusie en digitale toegankelijkheid**: dienstverlening en communicatie toegankelijk en herkenbaar maken voor iedereen.
+- **Draagvlak en bewustwording**: draagvlak creëren om als organisatie de gebruiker centraal te stellen, beginnend met bewustwording.
 
 ### Activiteiten en hulpmiddelen
 

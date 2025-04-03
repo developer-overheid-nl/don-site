@@ -5,7 +5,7 @@ tags:
   - "ux"
 ---
 
-"Zorg ervoor dat je begrijpt wat je gebruikers drijft en wat dit betekent voor je project."
+Zorg ervoor dat je begrijpt wat je gebruikers drijft en wat dit betekent voor je project.
 
 ## Belangrijke redenen
 

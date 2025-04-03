@@ -1,7 +1,7 @@
 ---
 title: "13. Denk na over duurzaamheid"
 sidebar_position: 13
-tags: ["logging","monitoring"]
+tags: ["logging","monitoring","security"]
 ---
 
 Duurzaam beheer betekent dat je ervoor zorgt dat je web-applicatie veilig, efficiënt en schaalbaar blijft over de gehele levenscyclus.
@@ -15,9 +15,6 @@ Duurzaam beheer betekent dat je ervoor zorgt dat je web-applicatie veilig, effic
 - **Veiligheid en privacy** - De overheid behandelt vaak gevoelige informatie, zoals persoonlijke gegevens van burgers. Duurzaam beheer waarborgt dat de software voortdurend beveiligingsupdates ontvangt en kwetsbaarheden tijdig worden opgelost, zodat de privacy en veiligheid van data gewaarborgd blijven. Dit is van cruciaal belang om het vertrouwen van de burger te behouden.
 
 - **Wet- en regelgeving** - De wetgeving verandert regelmatig, en dit geldt ook voor wetgeving rondom privacy, gegevensbeveiliging en digitale toegankelijkheid. Duurzaam beheer houdt in dat de software kan worden aangepast aan nieuwe wettelijke vereisten zonder grote herzieningen, waardoor de overheid compliant blijft met wet- en regelgeving.
-
-- **Klimaatopgave**  - Duurzaam beheer houdt ook in dat de software op een verantwoorde manier wordt onderhouden en beheerd, rekening houdend met ethische principes zoals gelijke toegang, inclusiviteit en milieu-impact.
-
 
 ## Monitor applicaties
 

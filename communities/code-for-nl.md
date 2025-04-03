@@ -11,4 +11,4 @@ Code for NL is een netwerk van developers, designers en andere experts die samen
 De stichting richt zich op het organiseren van bijeenkomsten en het helpen overheden bij het bouwen van publieke digitale infrastructuur.
 
 - [Naar de website van Code for NL](https://codefor.nl)
-- [Slack Code for NL](https://praatmee.codefor.nl/)
+- [Naar de Slack van Code for NL](https://praatmee.codefor.nl/)
