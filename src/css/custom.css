@@ -136,6 +136,14 @@
   padding: 0 var(--ifm-spacing-horizontal);
 }
 
+.navbar__icon-link {
+  line-height: 1;
+}
+
+.navbar__icon-link:hover {
+  fill: var(--ifm-navbar-link-hover-color);
+}
+
 @media (min-width: 1440px) {
   .navbar__inner {
       max-width: var(--ifm-container-width-xl);

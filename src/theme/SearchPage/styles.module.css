@@ -1,0 +1,6 @@
+.searchPage {
+  outline: 1mm dashed salmon;
+  --ifm-toc-border-color: var(--ifm-color-black);
+  --ifm-global-radius: var(--utrecht-textbox-border-radius);
+  --docsearch-primary-color: var(--utrecht-textbox-focus-border-color);
+}

@@ -19,6 +19,7 @@
 
 .heroSearch {
   display: flex;
+  max-width: 60rem;
   color: var(--ifm-color-white);
   --utrecht-focus-inverse-outline-color: var(--ifm-hero-background-color);
 }
@@ -28,6 +29,7 @@
   border-bottom-right-radius: 0;
   border-width: 2px;
   border-color: var(--ifm-color-black);
+  min-width: 90%;
 }
 
 .heroSearchInput:focus-visible {
@@ -64,6 +66,10 @@
   max-width: 60rem;
   color: var(--don-lichtblauw-200);
   margin-block-end: 1rem;
+}
+
+.intro:only-child {
+  margin-block-end: 0;
 }
 
 .intro__highlight {
