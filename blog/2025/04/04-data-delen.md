@@ -154,9 +154,9 @@ Er zijn al veel technische bouwstenen beschikbaar:
 
 Maar deze onderdelen moeten wel **samenwerken in een ecosysteem** waar:
 
-​-De burger controle en overzicht ervaart,
--De afnemer zeker weet dat data authentiek is,
-​-En de bronhouder verzekerd is van rechtmatige toegang.
+- De burger controle en overzicht ervaart,
+- De afnemer zeker weet dat data authentiek is,
+- En de bronhouder verzekerd is van rechtmatige toegang.
 
 Daarom is het zaak dat niet alleen technisch wordt geïnvesteerd, maar ook in **afsprakenstelsels, gebruiksvriendelijke interfaces en governance**. Alleen dan kunnen we van data delen een breed gedragen, veilig en schaalbaar fundament maken voor publieke en private dienstverlening.
 
