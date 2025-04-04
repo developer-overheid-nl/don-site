@@ -1,6 +1,8 @@
 name: Build & Link Check
 
-on: push
+on:
+  pull_request:
+  push:
     
 jobs:
   build-site:
@@ -62,7 +64,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           target: serve
           tags: |
             ghcr.io/developer-overheid-nl/don-site:latest
