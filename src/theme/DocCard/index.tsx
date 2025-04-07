@@ -68,7 +68,7 @@ function CardLayout({
   return (
     <CardContainer href={href}>
       <Heading
-        as="h2"
+        as="h3"
         className={clsx('text--truncate', styles.cardTitle)}
         title={title}>
         {icon} {title}
