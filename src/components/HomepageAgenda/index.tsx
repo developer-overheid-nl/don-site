@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import { LinkListCard, LinkListLink } from "@rijkshuisstijl-community/components-react";
+import { LinkListCard, LinkListLink, type HeadingProps } from "@rijkshuisstijl-community/components-react";
 import styles from './styles.module.css';
 import IconKalenderInline from '@site/src/theme/icons/IconKalenderInline';
 import IconLocatiemarkerInline from '@site/src/theme/icons/IconLocatiemarkerInline';
 
 const NUM_EVENTS = 4;
+const HEADING_LEVEL = 2;
 
-function formatDate(start_dateString, end_dateString) {
+function formatDate(start_dateString: string, end_dateString: string) {
   const start_date = new Date(start_dateString);
   const end_date = new Date(end_dateString);
 
@@ -31,7 +32,7 @@ function formatDate(start_dateString, end_dateString) {
   return `${new Intl.DateTimeFormat('nl-NL', {dateStyle: "long"}).format(start_date)} - ${new Intl.DateTimeFormat('nl-NL', {dateStyle: "long"}).format(end_date)}`;
 }
 
-function filterDate(dateString) {
+function filterDate(dateString: string) {
   const date = new Date(dateString);
 
   if (Number.isNaN(date.valueOf())) {
@@ -45,8 +46,18 @@ function filterDate(dateString) {
   return false;
 }
 
-export default function HomepageAgenda(): JSX.Element {
+function sortDates(a: Partial<{ start_date: string }>, b: Partial<{ start_date: string }>) {
+  return new Date(a.start_date).valueOf() - new Date(b.start_date).valueOf()
+}
+
+type HomepageAgendaProps = {
+  numEvents?: number;
+  headingLevel?: HeadingProps['level'];
+}
+
+export default function HomepageAgenda(props: HomepageAgendaProps): JSX.Element {
   const [agenda, setAgenda] = useState<Record<string, any>[] | null>(null);
+  const { numEvents = NUM_EVENTS, headingLevel = HEADING_LEVEL } = props;
 
   useEffect(function fetchFeed() {
     fetch('/agenda/events.json')
@@ -56,6 +67,7 @@ export default function HomepageAgenda(): JSX.Element {
       }))
       .then((list) => {
         const events = list.filter(({ end_date }) => filterDate(end_date))
+          .sort(sortDates)
           .map(({ title, summary, start_date, end_date, place, url }) => ({
             title,
             summary,
@@ -63,16 +75,16 @@ export default function HomepageAgenda(): JSX.Element {
             place,
             url
           }))
-          .slice(0, NUM_EVENTS);
+          .slice(0, numEvents);
 
         setAgenda(events);
       });
-  }, []);
+  }, [numEvents]);
 
   return (
     <LinkListCard
       heading="Aankomende evenementen"
-      headingLevel={2}
+      headingLevel={headingLevel}
     >
       { agenda && ((agenda.length > 0) ?
         agenda.map(({ title, summary, date, place, url }, index) => (
