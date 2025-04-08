@@ -4,17 +4,15 @@ tags:
   - "community"
   - "security"
   - "monitoring"
+  - "owasp"
 title: "Quality Time"
 organization: "https://community.developer.overheid.nl/g/ictu"
 ---
-
-
 
 :::info[Bijdrage van ICTU]
 Dit artikel is geschreven door **Frank Niessink**, Quality Manager bij ICTU
 :::
 
-### 
 **tl;dr:** Quality-time is een open source tool die je kan helpen de kwaliteit van je maatwerksoftware te bewaken en technical debt te managen.
 
 Mijn werkgever, ICTU, doet projecten met/voor andere overheden om de digitale dienstverlening door de overheid te verbeteren. Vaak ontwikkelen we daarbij maatwerksoftware. Voorbeelden die je misschien kent zijn het [Landelijk Register Kinderopvang](https://www.landelijkregisterkinderopvang.nl) of het [Leeroverzicht](https://www.leeroverzicht.nl).

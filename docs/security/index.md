@@ -1,27 +1,17 @@
 ---
-title: "6. Beveilig systemen en data"
-sidebar_position: 6
+title: "Security"
+sidebar_position: 1
 ---
-
-import { Card } from "@rijkshuisstijl-community/components-react";
 
 In een wereld die snel verandert en waar geopolitieke verschuivingen plaatsvinden, wordt security een steeds crucialer thema. Het is daarom belangrijker dan ooit om proactief kwetsbaarheden te monitoren en ervoor te zorgen dat software altijd up-to-date is. In dit thema vind je een overzicht van relevante securitystandaarden en beschikbare tools.
 
-## Belangrijke redenen
 
-- **Bescherming van gevoelige gegevens** - Overheden verwerken enorme hoeveelheden vertrouwelijke informatie van burgers, bedrijven en nationale veiligheid. Een datalek kan desastreuze gevolgen hebben.
-- **Continuïteit van dienstverlening** - Overheidsdiensten zijn essentieel voor het functioneren van de samenleving. Uitval door cyberaanvallen kan leiden tot verstoring van cruciale diensten.
-- **Toenemende dreiging cyberaanvallen** - Geopolitieke spanningen leiden tot meer gerichte aanvallen op overheidsinstanties door andere landen.
-- **Naleving van wetgeving** - Overheden moeten voldoen aan strikte wetgeving zoals de AVG/GDPR en sectorspecifieke regelgeving.
 
 ## Monitoring met OpenKAT
 
 OpenKAT is ontwikkeld om de (beveiligings-)status van informatiesystemen te monitoren, analyseren en op te slaan.
 
-- Lees meer over [**OpenKAT**](/kennisbank/security/tools/openkat)
-
-## Bronnen
-
+- Lees meer over [**OpenKAT**](./tools/openkat.md)
 
 ## Bronnen
 
@@ -45,13 +35,3 @@ Nicpet verzamelt en deelt kennis en ervaring om PETs effectief in te zetten om v
 
 
 - [Nationaal innovatie centrum privacy-enhancing technologies (nicpet)](https://nicpet.nl)
-<br />
-<br />
-
-<Card
-  appearance="default"
-  description="In dit hoofdstuk van onze kennisbank vind je tools, standaarden en tutorials over Security."
-  heading="Meer over Security"
-  href="/kennisbank/security"
-  linkLabel="Naar hoofdstuk over Security"
-/>

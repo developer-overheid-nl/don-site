@@ -1,7 +1,7 @@
 # Bijdragerichtlijnen
 
 :::info[Naar het artikel over CONTRIBUTING.md]
-Raadpleeg [ons artikel over CONTRIBUTING.md](/kennisbank/leidraad/open-source/standaarden/contributing-md) voor meer info over het zelf opstellen van bijdragerichtlijnen.
+Raadpleeg [ons artikel over CONTRIBUTING.md](/kennisbank/open-source/standaarden/contributing-md) voor meer info over het zelf opstellen van bijdragerichtlijnen.
 :::
 
 ## Introductie
