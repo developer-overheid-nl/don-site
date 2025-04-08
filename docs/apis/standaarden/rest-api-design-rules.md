@@ -18,3 +18,8 @@ De REST API Design Rules (ADR) schrijven voor waar een REST API van de overheid 
 Het actuele overzicht van de REST API Design Rules vind je hier: [API Design Rules](https://logius-standaarden.github.io/API-Design-Rules/#normative-design-rules).
 
 Een van de belangrijkste redenen om de API Design Rules te volgen is interoperabiliteit. API’s worden gebruikt om verschillende informatiesystemen met elkaar te laten communiceren, vaak over de grenzen van teams of organisaties heen. Door gemeenschappelijke conventies te volgen kunnen verschillende systemen, mogelijk van verschillende leveranciers, beter met elkaar communiceren omdat ze dezelfde verwachtingen hebben over de structuur en werking van de API. Dit leidt uiteindelijk tot minder maatwerk, hogere kwaliteit en betere samenwerking.
+
+## Tools
+
+- [API Design Rules Linter](/docs/apis/tools/api-design-rules-linter)
+- [API Design Rules Validator](/docs/apis/tools/api-design-rules-validator)
