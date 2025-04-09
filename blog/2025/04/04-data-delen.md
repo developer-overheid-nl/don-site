@@ -5,7 +5,7 @@ draft: true
 ---
 # Waarom is data delen zo'n uitdaging?
 
-Als burger wordt je regelmatig gevraagd om jouw persoonlijke data te delen. Denk aan je naam en e-mailadres bij digitale dienstverlening, of je adres en geboortedatum bij het aanvragen van een product of dienst, denk aan online winkels of financiële dienstverleners.
+Als burger word je regelmatig gevraagd om jouw persoonlijke data te delen. Denk aan je naam en e-mailadres bij digitale dienstverlening, of je adres en geboortedatum bij het aanvragen van een product of dienst, denk aan online winkels of financiële dienstverleners.
 
 In het verleden vulde je deze gegevens handmatig in op een (digitaal) formulier, en moest de ontvanger vertrouwen op de juistheid ervan. Andersom moest jij als burger erop vertrouwen dat de ontvangende partij zorgvuldig omging met jouw data.
 
@@ -37,7 +37,7 @@ Toegang tot onder andere Belastingdienst, DUO, gemeenten en zorginstellingen.
 
 ### 🧾 eHerkenning
 
-eHerkenning is het zakelijke inlog middel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten. Het werkt vergelijkbaar met DigiD, maar is bedoeld voor organisaties.
+eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten. Het werkt vergelijkbaar met DigiD, maar is bedoeld voor organisaties.
 
 **Waarvoor wordt het gebruikt?**
 
@@ -107,7 +107,7 @@ Feit is dat de bron van de data niet bij de burger of eigenaar staat maar dat de
 
 Naast de voor de hand liggende voorzieningen als een database bij de bronhouder en een applicatie bij de marktpartij zijn er ook specifieke technische voorzieningen die goed passen in deze context van datadelen.
 
-Enkele algemene en bestaande inlog voorzieningen zoals DigiD, eHerkenning en eIDAS zijn hierboven al benoemd. Burgers kunnen gebruik maken van bijvoorbeeld DigiD om zich the identificeren en authenticeren. Marktpartijen kunnen gebruik maken van eHerkenning om zich te identificeren en authenticeren wanneer ze zich registreren als client applicatie en instemmen met de voorwaarden van het stelsel.
+Enkele algemene en bestaande inlog voorzieningen zoals DigiD, eHerkenning en eIDAS zijn hierboven al benoemd. Burgers kunnen gebruik maken van bijvoorbeeld DigiD om zich te identificeren en authenticeren. Marktpartijen kunnen gebruik maken van eHerkenning om zich te identificeren en authenticeren wanneer ze zich registreren als client applicatie en instemmen met de voorwaarden van het stelsel.
 
 De uitdaging is om deze verschillende technieken en voorzieningen onderling te laten samenwerken zonder technisch grootschalige veranderingen door te hoeven voeren. De oplossing is in mijn optiek de inzet van [API's](https://developer.overheid.nl/kennisbank/apis/) en [Open Authorization](https://logius-standaarden.github.io/OAuth-NL-profiel/) in combinatie met bestaande inlog voorzieningen.
 
@@ -128,7 +128,7 @@ De plaats en eigenaar van de Authorization Server (AS) doet er in technische zin
 
 ### API Gateway
 
-Behalve een dataset en een API is het ook gebruikelijk een API Gateway in te zetten voor het controleren van de toegang tot de API. Op basis van een vooraf gedefinieerde policy bepaald de API Gateway of requests voldoen aan de voorwaarden en worden doorgelaten naar de API. De Gateway fungeert dan als zogenaamd Policy Enforcement Point ofwel PeP. Daarnaast kunnen er nog veel meer functies door de API Gateway worden ingevuld. Dit is uitgebreid beschreven in [de architectuur van de NL API Strategie](https://docs.geostandaarden.nl/api/API-Strategie-architectuur/#api-security-architectuur).
+Behalve een dataset en een API is het ook gebruikelijk een API Gateway in te zetten voor het controleren van de toegang tot de API. Op basis van een vooraf gedefinieerde policy bepaalt de API Gateway of requests voldoen aan de voorwaarden en worden doorgelaten naar de API. De Gateway fungeert dan als zogenaamd Policy Enforcement Point ofwel PeP. Daarnaast kunnen er nog veel meer functies door de API Gateway worden ingevuld. Dit is uitgebreid beschreven in [de architectuur van de NL API Strategie](https://docs.geostandaarden.nl/api/API-Strategie-architectuur/#api-security-architectuur).
 
 ### Front-end
 
@@ -140,7 +140,7 @@ Vaak onderbelicht maar cruciaal voor het vertrouwen en de onderhoudbaarheid van 
 
 ### Logging en verantwoording
 
-Verantwoording afleggen is belangrijk voor het instandhouden van het vertrouwen wat nodig is voor het kunnen delen van data. Om verantwoording af te kunnen leggen is (meta)data nodig, hoogstwaarschijnlijk in de vorm van logging. Dit is mede de rede dat een project is gestart om te komen tot een logging standaard. De Logboek Data Verwerkingen (LDV) standaard is gebaseerd op technieken als [OpenTelemetry](https://opentelemetry.io/) en [W3C Trace](https://w3c.github.io/trace-context/). Meer informatie over de ontwikkeling van de standaard en de concepten zijn beschikbaar op [de github omgeving van Logius](https://github.com/search?q=topic%3Alogboek+org%3ALogius-standaarden+fork%3Atrue&type=repositories)
+Verantwoording afleggen is belangrijk voor het instandhouden van het vertrouwen wat nodig is voor het kunnen delen van data. Om verantwoording af te kunnen leggen is (meta)data nodig, hoogstwaarschijnlijk in de vorm van logging. Dit is mede de reden dat een project is gestart om te komen tot een logging standaard. De Logboek Data Verwerkingen (LDV) standaard is gebaseerd op technieken als [OpenTelemetry](https://opentelemetry.io/) en [W3C Trace](https://w3c.github.io/trace-context/). Meer informatie over de ontwikkeling van de standaard en de concepten zijn beschikbaar op [de github omgeving van Logius](https://github.com/search?q=topic%3Alogboek+org%3ALogius-standaarden+fork%3Atrue&type=repositories)
 
 ## Praktijkvoorbeelden
 
@@ -186,4 +186,4 @@ Daarom is het zaak dat niet alleen technisch wordt geïnvesteerd, maar ook in **
 - [OpenID Connect](https://openid.net/connect/)
 - [Logius Standaarden op GitHub](https://github.com/Logius-standaarden)
 
-Wij horen graag tegen welke uitdagingen jij nog meer oploopt bij gesprekken met over het delen van data!
+Wij horen graag tegen welke uitdagingen jij nog meer oploopt bij gesprekken over het delen van data!
