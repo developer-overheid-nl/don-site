@@ -110,11 +110,11 @@ Naast de voor de hand liggende voorzieningen als een database bij de bronhouder 
 
 Enkele algemene en bestaande inlog voorzieningen zoals DigiD, eHerkenning en eIDAS zijn hierboven al benoemd. Burgers kunnen gebruik maken van bijvoorbeeld DigiD om zich te identificeren en authenticeren. Marktpartijen kunnen gebruik maken van eHerkenning om zich te identificeren en authenticeren wanneer ze zich registreren als client applicatie en instemmen met de voorwaarden van het stelsel.
 
-De uitdaging is om deze verschillende technieken en voorzieningen onderling te laten samenwerken zonder technisch grootschalige veranderingen door te hoeven voeren. De oplossing is in mijn optiek de inzet van [API's](https://developer.overheid.nl/kennisbank/apis/) en [Open Authorization](https://logius-standaarden.github.io/OAuth-NL-profiel/) in combinatie met bestaande inlog voorzieningen.
+De uitdaging is om deze verschillende technieken en voorzieningen onderling te laten samenwerken zonder technisch grootschalige veranderingen door te hoeven voeren. De oplossing is in mijn optiek de inzet van [API's](https://developer.overheid.nl/kennisbank/apis/) en [Open Authorization](https://logius-standaarden.github.io/OAuth-NL-profiel/) in combinatie met bestaande inlogvoorzieningen.
 
 ### Identity Providers en Trust Service Providers
 
-Deze inlog voorzieningen fungeren als IdP ([Identity Provider](https://en.wikipedia.org/wiki/Identity_provider)) voor de burgers en bedrijven. Bronhouders identificeren en authenticeren zich in de regel met een PKOverheid certificaat uitgegeven door een TSP ([Trust Service Provider](https://www.logius.nl/domeinen/toegang/pkioverheid/wat-een-pkioverheidcertificaat)).
+Deze inlogvoorzieningen fungeren als IdP ([Identity Provider](https://en.wikipedia.org/wiki/Identity_provider)) voor de burgers en bedrijven. Bronhouders identificeren en authenticeren zich in de regel met een PKIOverheid certificaat uitgegeven door een TSP ([Trust Service Provider](https://www.logius.nl/domeinen/toegang/pkioverheid/wat-een-pkioverheidcertificaat)).
 
 ### Open Authorization
 
