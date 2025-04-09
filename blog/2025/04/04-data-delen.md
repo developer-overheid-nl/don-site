@@ -4,7 +4,7 @@ tags: [data-bij-de-bron, fds, api,  oauth, digid, pkio, eherkenning, eidas, oidc
 draft: true
 toc_max_heading_level: 2
 ---
-# Waarom is data delen zo'n uitdaging?
+# Data delen - uitdagingen en oplossingen
 
 Als burger word je regelmatig gevraagd om jouw persoonlijke data te delen. Denk aan je naam en e-mailadres bij digitale dienstverlening, of je adres en geboortedatum bij het aanvragen van een product of dienst, denk aan online winkels of financiële dienstverleners.
 
@@ -187,4 +187,4 @@ Daarom is het zaak dat niet alleen technisch wordt geïnvesteerd, maar ook in **
 - [OpenID Connect](https://openid.net/connect/)
 - [Logius Standaarden op GitHub](https://github.com/Logius-standaarden)
 
-Wij horen graag tegen welke uitdagingen jij nog meer oploopt bij gesprekken over het delen van data!
+Wij leveren graag [implementatieondersteuning](https://developer.overheid.nl/implementatie-ondersteuning) wanneer je tegen deze uitdagingen oploopt. Neem gerust [contact](https://developer.overheid.nl/implementatie-ondersteuning#hoe-bereik-je-ons) op om verder invulling te geven aan deze oplossingen voor jouw organisatie.
