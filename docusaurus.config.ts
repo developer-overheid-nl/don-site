@@ -338,6 +338,9 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: [
+        "turtle",
+      ],
     },
     colorMode: {
       defaultMode: "light",
