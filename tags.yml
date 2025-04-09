@@ -10,6 +10,8 @@ api-design:
   label: API Design
 azure:
   label: Azure
+changelog:
+  label: Changelog
 ci/cd:
   label: CI/CD
   description: Continuous Integration / Continuous Deployment
@@ -30,6 +32,8 @@ dcat:
   label: DCAT
 design-system:
   label: Design System
+developer.overheid.nl:
+  label: developer.overheid.nl
 development:
   label: Development
 digikoppeling:
@@ -94,6 +98,8 @@ publiccode:
   label: PublicCode
 publiccode-yml:
   label: publiccode.yml
+release:
+  label: Release
 rest:
   label: REST API design
 security:
@@ -119,3 +125,30 @@ ospo:
 foss:
   label: FOSS
   description: Free and Open Source Software
+ux:
+  label: UX
+  description: "UX: User experience"
+kiesraad:
+  label: Kiesraad
+  description: "De Kiesraad: de nationale Kiesraad."
+rust:
+  label: Rust
+  description: "Rust"
+devops:
+  label: DevOps
+  description: DevOps (een samentrekking van "development" en "operations") is een gebruik en een praktijk binnen softwareontwikkeling die tot doel heeft softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen. 
+owasp:
+  label: OWASP
+  description: "OWASP: Open Web Application Security Project"
+logging:
+  label: Logging
+  description: "Logging"
+fieldlab:
+  label: "Fieldlab"
+  description: "Fieldlab"
+avg:
+  label: "AVG"
+  description: "Algemene verordening gegevensbescherming (AVG)"
+gdpr:
+  label: "GDPR"
+  description: "General Data Protection Regulation (GDPR) "

@@ -10,7 +10,7 @@ Geonovum is samen met Bureau Forum Standaardisatie, Kamer van Koophandel, VNG Re
 
 ## Waarom een kennisplatform API's?
 
-Het Kennisplatform API's wil API's beter bij de vraag aan laten sluiten, kennis over het toepassen van API's uitwisselen en de aanpak bij verschillende organisaties op elkaar afstemmen en waar nodig standaardiseren. In het Kennisplatform verkennen we in werkgroepen de verschillende aspecten rond het gebruik en toepassing van API's door de overheid. In het Kennisplatform verkennen we in werkgroepen de verschillende aspecten rond het gebruik en toepassing van API's door de overheid.
+Het Kennisplatform API's wil API's beter bij de vraag aan laten sluiten, kennis over het toepassen van API's uitwisselen en de aanpak bij verschillende organisaties op elkaar afstemmen en waar nodig standaardiseren. In het Kennisplatform verkennen we in werkgroepen de verschillende aspecten rond het gebruik en toepassing van API's door de overheid.
 
 ## API Strategie
 
@@ -23,10 +23,10 @@ De verschillende onderdelen van de NL API Strategie bevatten de volgende documen
 | Algemeen | [Inleiding NL API Strategie](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Inleiding/) |
 | Algemeen | 	[Architectuur NL API Strategie](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Architectuur/) |
 | Algemeen | [Gebruikerswensen NL API Strategie](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Gebruikerswensen/) |
-| Normatief | [API Design Rules (ADR)](https://publicatie.centrumvoorstandaarden.nl/api/adr/) |
+| Normatief | [API Design Rules (ADR)](https://gitdocumentatie.logius.nl/publicatie/api/adr/) |
 | Normatief | [Open API Specification (OAS)](https://forumstandaardisatie.nl/open-standaarden/openapi-specification) |
-| Normatief | [NL GOV OAuth profiel](https://publicatie.centrumvoorstandaarden.nl/api/oauth/) |
-| Normatief | [Digikoppeling REST API koppelvlak specificatie](https://publicatie.centrumvoorstandaarden.nl/dk/restapi/) |
+| Normatief | [NL GOV OAuth profiel](https://gitdocumentatie.logius.nl/publicatie/api/oauth/) |
+| Normatief | [Digikoppeling REST API koppelvlak specificatie](https://gitdocumentatie.logius.nl/publicatie/dk/restapi/) |
 | Functionele module | [GEO module](https://docs.geostandaarden.nl/api/API-Strategie-mod-geo/) |
 | Technische module | [Transport Security module](https://geonovum.github.io/KP-APIs/API-strategie-modules/transport-security/) |
 | Technische module | [Access control module](https://geonovum.github.io/KP-APIs/API-strategie-modules/access-control/) |

@@ -39,7 +39,7 @@
   --don-grijs-600: #475569;
   --don-grijs-500: #64748B;
   --don-grijs-400: #94A3B8;
-  --don-grijs-300: #CBD5E1;
+  --don-grijs-300: #cbd5e1;
   --don-grijs-200: #E2E8F0;
   --don-grijs-100: #F1F5F9;
   --don-grijs-50: #F8FAFC;
@@ -117,6 +117,8 @@
   --ifm-breadcrumb-color-active: var(--don-robijnrood-500);
   --ifm-toc-border-color: var(--don-robijnrood-200);
 
+  --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 3);
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -176,6 +178,12 @@
   margin: 0;
 }
 
+.ro-header a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: inherit;
+}
+
 .ro-header__ro-logo {
   display: contents;
 }
@@ -184,7 +192,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .sponsors__logo {
@@ -204,6 +212,30 @@
 
 .table-of-contents__link--active {
   color: var(--don-robijnrood-500);
+}
+
+/* Search */
+.DocSearch {
+  --docsearch-searchbox-background: var(--ifm-color-white);
+  --docsearch-searchbox-shadow: 0 0 0 2px var(--docsearch-primary-color);
+  --docsearch-key-gradient: linear-gradient(-225deg, var(--ifm-color-gray-200), var(--ifm-color-gray-100));
+  --docsearch-key-shadow: inset 0 -2px 0 0 var(--ifm-color-gray-300), inset 0 0 1px 1px var(--ifm-color-gray-100), 0 1px 2px 1px rgba(203, 213, 225, 0.2);
+  --docsearch-muted-color: var(--ifm-color-gray-800);
+}
+
+.DocSearch-Button.DocSearch-Button {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-pagination-nav-border-radius);
+  color: var(--ifm-navbar-link-color);
+}
+
+.DocSearch-Button-Key.DocSearch-Button-Key,
+.DocSearch-Commands-Key.DocSearch-Commands-Key {
+  color: var(--ifm-color-gray-500);
+}
+
+.hidden {
+  display: none !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -366,4 +398,16 @@
 .ro-serif-italic {
   font-family: "RijksoverheidSerifWeb", serif;
   font-style: italic;
+}
+
+blockquote{
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+/* Prevent some unordered-list-items from having a margin */
+.theme-doc-markdown ul li p {
+  margin-bottom: 0;
+  margin-top: 0;
 }

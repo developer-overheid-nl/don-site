@@ -26,3 +26,18 @@
 .intro__highlight {
   color: var(--ifm-color-white);
 }
+
+.twoColumns {
+  display: block;
+  padding-block-end: 2rem;
+}
+
+@media (min-width: 768px) {
+  .twoColumns {
+    display: flex;
+  }
+
+  .twoColumns > * {
+    flex: 0 0 50%;
+  }
+}
