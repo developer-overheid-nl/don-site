@@ -36,10 +36,22 @@ developer.overheid.nl:
   label: developer.overheid.nl
 development:
   label: Development
+digid:
+  label: DigiD
+  description: Met uw DigiD laat u zien wie u bent als u op internet iets regelt.
 digikoppeling:
   label: Digikoppeling
+eidas:
+  label: eIDAS
+  description: eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning van elektronische identiteiten
+eherkenning:
+  label: eHerkenning
+  description: eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten. 
 eu:
   label: Europe
+fds:
+  label: Federatief Data Stelsel
+  description: Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties.  
 forum-standaardisatie:
   label: Forum Standaardisatie
 front-end:
@@ -84,12 +96,18 @@ nvm:
   label: NVM
 oas:
   label: OpenAPI Specification
+oidc:
+  label: OpenID Connect
+  description: OpenID Connect is een identity layer bovenop OAuth 2.0
 open-source:
   label: Open Source
 openapi:
   label: OpenAPI
 orkestratie:
   label: Orkestratie
+pkio:
+  label: PKIOverheid
+  description: PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid.
 portal:
   label: Portal
 privacy:
@@ -102,6 +120,9 @@ release:
   label: Release
 rest:
   label: REST API design
+saml:
+  label: SAML
+  description: SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
 security:
   label: Security
 security-by-design:
