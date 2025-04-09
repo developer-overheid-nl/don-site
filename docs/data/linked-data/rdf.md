@@ -1,6 +1,5 @@
 ---
-tags: []
-description: testassadasdsa
+tags: [rdf, rdfa, rdfs, linked-data]
 ---
 
 # RDF

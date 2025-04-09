@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [skos, linked-data]
 ---
 
 # SKOS

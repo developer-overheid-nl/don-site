@@ -1,3 +1,7 @@
+---
+tags: [linked-data]
+---
+
 # Linked Data
 
 Linked Data is een methode om gestructureerde gegevens op het web te publiceren en te verbinden, zodat deze machine-leesbaar en semantisch betekenisvol zijn. Het maakt gebruik van standaarden zoals RDF (Resource Description Framework), URIs (Uniform Resource Identifiers) en HTTP om gegevens te identificeren, te beschrijven en te koppelen aan andere datasets.

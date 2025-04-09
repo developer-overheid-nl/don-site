@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [shacl, linked-data]
 ---
 
 # SHACL

@@ -1,5 +1,5 @@
 ---
-tags: [dcat]
+tags: [dcat, linked-data]
 ---
 
 # DCAT
