@@ -2,9 +2,6 @@
     "theme.SearchBar.label": {
         "message": "Zoeken"
     },
-    "theme.SearchPage.inputLabel": {
-        "message": "Zoeken"
-    },
     "theme.SearchModal.searchBox.resetButtonTitle": {
         "message": "Maak de zoekopdracht leeg"
     },
@@ -71,10 +68,31 @@
     "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
         "message": "Laat het ons weten."
     },
-    "leeg": {
-        "message": "leeg"
-    },
     "theme.SearchModal.placeholder": {
         "message": "Typ hier uw zoekopdracht"
+    },
+    "theme.SearchPage.documentsFound.plurals": {
+        "message": "Één document gevonden|{count} documenten gevonden"
+    },
+    "theme.SearchPage.existingResultsTitle": {
+        "message": "Zoek resultaten voor ‘{query}’"
+    },
+    "theme.SearchPage.emptyResultsTitle": {
+        "message": "Zoek in de Kennisbank, API- en OSS-register"
+    },
+    "theme.SearchPage.inputLabel": {
+        "message": "Zoeken"
+    },
+    "theme.SearchPage.inputPlaceholder": {
+        "message": "Typ hier uw zoekopdracht"
+    },
+    "theme.SearchPage.typesenseLabel": {
+        "message": "Je zoekt via Typesense"
+    },
+    "theme.SearchPage.noResultsText": {
+        "message": "Geen resultaten gevonden"
+    },
+    "theme.SearchPage.fetchingNewResults": {
+        "message": "Nieuwe resutaten ophalen..."
     }
 }
