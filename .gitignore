@@ -133,4 +133,4 @@ build
 
 # We will use pnpm instead
 package-lock.json
-blog/2025/.DS_Store
+.DS_Store
