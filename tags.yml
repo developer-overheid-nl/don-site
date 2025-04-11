@@ -76,6 +76,8 @@ interoperability:
   label: Interoperability
 ipv6:
   label: IPv6
+json:
+  label: JSON
 json-schema:
   label: JSON Schema
 jwt:
@@ -84,6 +86,8 @@ kubernetes:
   label: Kubernetes
 license:
   label: License
+linked-data:
+  label: Linked Data
 meetups:
   label: Meetups
 monitoring:
@@ -109,6 +113,8 @@ open-source:
   label: Open Source
 openapi:
   label: OpenAPI
+owl:
+  label: OWL
 orkestratie:
   label: Orkestratie
 pkio:
@@ -122,6 +128,15 @@ publiccode:
   label: PublicCode
 publiccode-yml:
   label: publiccode.yml
+rdf:
+  label: RDF
+  description: Resource Description Framework
+rdfa:
+  label: RDFa
+  description: Resource Description Framework in Attributes
+rdfs:
+  label: RDFS
+  description: RDF Schema
 release:
   label: Release
 rest:
@@ -133,6 +148,12 @@ security:
   label: Security
 security-by-design:
   label: Security By Design
+shacl:
+  label: SHACL
+  description: Shapes Constraint Language
+skos:
+  label: SKOS
+  description: Simple Knowledge Organization System
 tutorial:
   label: Tutorial
 vng:
@@ -146,6 +167,8 @@ vscode:
 wcag:
   label: WCAG
   description: Web Content Accessibility Guidelines
+yaml:
+  label: YAML
 ospo:
   label: OSPO
   description: Open Source Program Office
