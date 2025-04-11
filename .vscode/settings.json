@@ -1,5 +1,18 @@
 {
     "[markdown]":{
         "editor.formatOnSave": false
-    }
+    },
+    "cSpell.words": [
+        "bsnk",
+        "digid",
+        "digitaltrustcenter",
+        "eherkenning",
+        "eidas",
+        "Justis",
+        "mijnoverheid",
+        "oidc",
+        "pkio",
+        "pkioverheid",
+        "securitytxt"
+    ]
 }
