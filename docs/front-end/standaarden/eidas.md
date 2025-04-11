@@ -48,7 +48,7 @@ In Nederland worden systemen als **DigiD** en **eHerkenning** aangesloten op eID
 
 ## eIDAS 2.0: de Europese Digitale Identiteit
 
-De nieuwe verordening **eIDAS 2.0** (in ontwikkeling) introduceert:
+Met de komst van eIDAS 2.0 verandert er veel. Er komt o.a. een EU Digital Identity Wallet, en in dat kader wordt er nagedacht over modernere standaarden zoals OAuth 2.0 en OpenID Connect (OIDC). De nieuwe verordening **eIDAS 2.0** (in ontwikkeling) introduceert:
 
 - **Europese Digitale Identiteit Wallets**: apps waarmee burgers hun ID, diploma’s, rijbewijs en andere gegevens digitaal kunnen beheren.
 - Meer macht aan gebruikers om zelf te bepalen wie welke gegevens mag zien.
@@ -56,7 +56,16 @@ De nieuwe verordening **eIDAS 2.0** (in ontwikkeling) introduceert:
 
 Dit betekent nieuwe kansen én verplichtingen voor developers die digitale identiteiten verwerken.
 
+Hoewel OAuth/OIDC (nog) geen officieel deel is van de bestaande eIDAS specificatie, is het waarschijnlijk dat deze standaarden in eIDAS 2.0 gebruikt gaan worden voor:
+
+- toestemming geven op attribuutniveau (consent),
+- mobiele authenticatie via apps (wallets),
+- en bredere integratie met moderne web-API’s.
+
 ## Meer informatie
 
+- [Technische Specificatie](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32015R0806)
+- [eIDAS Building blocs](https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Documentation+eID)
+- [Irish eIDAS node provides OAuth 2.0 API that can be used for authentication](https://demo.eidasnode.gov.ie/doc/usage.html)
 - EU-info: [eIDAS Regulation – Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 - Nederlandse uitleg (Logius): [Logius.nl - Vertrouwensdiensten](https://www.logius.nl/domeinen/toegang/vertrouwensdiensten)
