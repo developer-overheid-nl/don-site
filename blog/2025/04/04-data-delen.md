@@ -24,7 +24,7 @@ PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nede
 
 Voor het beveiligen van websites (SSL/TLS), ondertekenen van documenten en authenticatie tussen organisaties en diensten.
 
-**Meer informatie:**  [PKIOverheid bij Logius](https://www.logius.nl/diensten/pkioverheid)
+**Meer informatie:**  [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [PKIOverheid bij Logius](https://www.logius.nl/diensten/pkioverheid)
 
 ### 🔑 DigiD
 
@@ -34,7 +34,7 @@ DigiD is het digitale identificatiesysteem waarmee burgers kunnen inloggen bij o
 
 Toegang tot onder andere Belastingdienst, DUO, gemeenten en zorginstellingen.
 
-**Meer informatie:**  [DigiD voor professionals (Logius)](https://www.logius.nl/diensten/digid)
+**Meer informatie:**  Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar[DigiD voor professionals (Logius)](https://www.logius.nl/diensten/digid)
 
 ### 🧾 eHerkenning
 
@@ -44,7 +44,7 @@ eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te kri
 
 Inloggen bij KvK, Belastingdienst, UWV en meer.
 
-**Meer informatie:** [eHerkenning (eherkenning.nl)](https://www.eherkenning.nl/)
+**Meer informatie:** Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eHerkenning (eherkenning.nl)](https://www.eherkenning.nl/)
 
 ### 🌍 eIDAS (electronic IDentification, Authentication and trust Services)
 
@@ -54,7 +54,7 @@ eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning
 
 Om met een nationaal inlogmiddel ook in andere EU-landen te kunnen inloggen op overheidsdiensten.
 
-**Meer informatie:** [eIDAS bij de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
+**Meer informatie:** Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eIDAS bij de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 
 ### 🛡 SAML (Security Assertion Markup Language)
 
@@ -72,7 +72,7 @@ OAuth 2.0 is een open standaard voor autorisatie. Hiermee kunnen applicaties toe
 
 **Waarvoor wordt het gebruikt?**
 
-Voor toegang tot API’s zoals bij MijnOverheid of eHerkenning, vaak in combinatie met toegangstokens (JWT's).
+Voor toegang tot API’s zoals bij MijnOverheid of eHerkenning, vaak in combinatie met JSON Web Tokens (JWT's).
 
 **Meer informatie:** [OAuth 2.0 bij IETF (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
 
