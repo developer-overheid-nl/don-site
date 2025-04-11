@@ -34,7 +34,7 @@ DigiD is het digitale identificatiesysteem waarmee burgers kunnen inloggen bij o
 
 Toegang tot onder andere Belastingdienst, DUO, gemeenten en zorginstellingen.
 
-**Meer informatie:**  Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar[DigiD voor professionals (Logius)](https://www.logius.nl/diensten/digid)
+**Meer informatie:**  [Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar[DigiD voor professionals (Logius)](https://www.logius.nl/diensten/digid)
 
 ### 🧾 eHerkenning
 
@@ -44,7 +44,7 @@ eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te kri
 
 Inloggen bij KvK, Belastingdienst, UWV en meer.
 
-**Meer informatie:** Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eHerkenning (eherkenning.nl)](https://www.eherkenning.nl/)
+**Meer informatie:** [Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eHerkenning (eherkenning.nl)](https://www.eherkenning.nl/)
 
 ### 🌍 eIDAS (electronic IDentification, Authentication and trust Services)
 
@@ -54,7 +54,7 @@ eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning
 
 Om met een nationaal inlogmiddel ook in andere EU-landen te kunnen inloggen op overheidsdiensten.
 
-**Meer informatie:** Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eIDAS bij de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
+**Meer informatie:** [Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eIDAS bij de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 
 ### 🛡 SAML (Security Assertion Markup Language)
 
@@ -64,7 +64,7 @@ SAML is een XML-gebaseerde standaard voor federatieve authenticatie. Het maakt h
 
 Bijvoorbeeld bij eHerkenning of enterprise identiteitsfederaties.
 
-**Meer informatie:** [SAML bij OASIS (standaardisatie-orgaan)](https://docs.oasis-open.org/security/saml/v2.0/)
+**Meer informatie:** [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [SAML bij OASIS (standaardisatie-orgaan)](https://docs.oasis-open.org/security/saml/v2.0/)
 
 ### 🔓 OAuth 2.0 (Open Authorization)
 
@@ -74,7 +74,7 @@ OAuth 2.0 is een open standaard voor autorisatie. Hiermee kunnen applicaties toe
 
 Voor toegang tot API’s zoals bij MijnOverheid of eHerkenning, vaak in combinatie met JSON Web Tokens (JWT's).
 
-**Meer informatie:** [OAuth 2.0 bij IETF (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
+**Meer informatie:** [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OAuth 2.0 bij IETF (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
 
 ### 🔐 OIDC (OpenID Connect)
 
@@ -84,7 +84,7 @@ OpenID Connect is een identity layer bovenop OAuth 2.0. Het voegt identificatie 
 
 Voor Single Sign-On en federatieve login in moderne webapplicaties.
 
-**Meer informatie:** [OpenID Connect specificatie](https://openid.net/connect/)
+**Meer informatie:** [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OpenID Connect specificatie](https://openid.net/connect/)
 
 ## Verschillende invalshoeken
 
