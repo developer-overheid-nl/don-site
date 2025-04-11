@@ -78,6 +78,8 @@ ipv6:
   label: IPv6
 json-schema:
   label: JSON Schema
+jwt:
+  label: JSON Web Tokens (JWT of JWT's)
 kubernetes:
   label: Kubernetes
 license:
@@ -96,6 +98,10 @@ nvm:
   label: NVM
 oas:
   label: OpenAPI Specification
+oauth:
+  label: OAuth 2.0
+  description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
+  link: 
 oidc:
   label: OpenID Connect
   description: OpenID Connect is een identity layer bovenop OAuth 2.0

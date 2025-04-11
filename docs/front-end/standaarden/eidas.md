@@ -58,7 +58,7 @@ Dit betekent nieuwe kansen én verplichtingen voor developers die digitale ident
 
 Hoewel OAuth/OIDC (nog) geen officieel deel is van de bestaande eIDAS specificatie, is het waarschijnlijk dat deze standaarden in eIDAS 2.0 gebruikt gaan worden voor:
 
-- toestemming geven op attribuutniveau (consent),
+- toestemming geven op attribuut niveau (consent),
 - mobiele authenticatie via apps (wallets),
 - en bredere integratie met moderne web-API’s.
 
