@@ -175,3 +175,15 @@ avg:
 gdpr:
   label: "GDPR"
   description: "General Data Protection Regulation (GDPR) "
+containerization:
+  label: "Containerization"
+  description: "Containerization is het proces waarbij applicaties en hun afhankelijkheden worden geïsoleerd in gestandaardiseerde eenheden (containers)."
+tool:
+  label: "Tool"
+  description: "Tool"
+helm:
+  label: "Helm"
+  description: "Helm is een package manager voor Kubernetes"
+docker:
+  label: "Docker"
+  description: "Docker is een platform voor het bouwen, distribueren en draaien van applicaties in individuele containers"
