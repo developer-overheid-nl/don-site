@@ -324,8 +324,8 @@ const config: Config = {
               to: "/privacy",
             },
             {
-              label: "Toegankelijkheidsverklaring",
-              href: "https://www.toegankelijkheidsverklaring.nl/register/17963",
+              label: "Toegankelijkheid",
+              href: "/toegankelijkheid",
             },
             {
               label: "Sitearchief",
@@ -338,9 +338,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: [
-        "turtle",
-      ],
+      additionalLanguages: ["turtle"],
     },
     colorMode: {
       defaultMode: "light",
