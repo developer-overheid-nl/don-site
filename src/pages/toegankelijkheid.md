@@ -1,6 +1,6 @@
 # Toegankelijkheid
 
-developer.overheid.nl wil dat iedereen deze website kan gebruiken. Komt u toch een pagina tegen die niet toegankelijk is? Dan kunt u dit aan ons melden.
+developer.overheid.nl wil dat iedereen deze website kan gebruiken. Kom je toch een pagina tegen die niet toegankelijk is? Dan kun je dit aan ons melden.
 
 ## Wat is een toegankelijke website?
 
