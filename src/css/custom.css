@@ -113,6 +113,7 @@
   --ifm-link-color: var(--ifm-color-primary);
 
   --ifm-navbar-shadow: none;
+  --ifm-navbar-item-padding-horizontal: 0.5rem;
 
   --ifm-breadcrumb-color-active: var(--don-robijnrood-500);
   --ifm-toc-border-color: var(--don-robijnrood-200);
@@ -135,6 +136,14 @@
   margin: 0 auto;
   max-width: var(--ifm-container-width);
   padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.navbar__icon-link {
+  line-height: 1;
+}
+
+.navbar__icon-link:hover {
+  fill: var(--ifm-navbar-link-hover-color);
 }
 
 @media (min-width: 1440px) {
@@ -236,6 +245,16 @@
 
 .hidden {
   display: none !important;
+}
+
+.visual-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: clip;
+  inline-size: 1px;
+  block-size: 1px;
+  white-space: nowrap;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
