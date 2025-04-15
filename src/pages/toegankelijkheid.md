@@ -14,4 +14,4 @@ Wij borgen een goede toegankelijkheid van onze website door diverse maatregelen 
 
 ## Problemen met toegankelijkheid melden
 
-Heeft u vragen of opmerkingen? Of wilt u een pagina gebruiken die niet toegankelijk blijkt? [Neem dan contact op met developer.overheid.nl](./contact).
+Heb je vragen of opmerkingen? Of wil je een pagina gebruiken die niet toegankelijk blijkt? [Neem dan contact op met developer.overheid.nl](./contact).
