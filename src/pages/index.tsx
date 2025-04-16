@@ -35,7 +35,7 @@ function HomepageHeader() {
       ></script>
       <div className="container">
         <p className={styles.intro}>
-          Eén plek met informatie, bronnen, tools en code voorbeelden van de <strong className={styles.intro__highlight}>overheid voor developers</strong> over 
+          Eén plek met informatie, bronnen, tools en codevoorbeelden van de <strong className={styles.intro__highlight}>overheid voor developers</strong> over 
           privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.
         </p>
         {
@@ -50,7 +50,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Ontwikkelaarsportaal van de Nederlandse Overheid`}
-      description="Eén plek met informatie, bronnen, tools en code voorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.">
+      description="Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.">
       <main>
         <HomepageHeader />
         <HomepageFeatures />

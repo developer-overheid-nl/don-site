@@ -171,7 +171,7 @@ const config: Config = {
       {
         name: "twitter:image:alt",
         content:
-          "Ontwikkelaarsportaal van de Nederlandse overheid; Eén plek met informatie, bronnen, tools en code voorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.",
+          "Ontwikkelaarsportaal van de Nederlandse overheid; Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.",
       },
     ],
     navbar: {
