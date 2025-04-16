@@ -1,16 +1,11 @@
 ---
 authors: [martin-van-der-plas]
 tags: [data-bij-de-bron, fds, api,  oauth, digid, pkio, eherkenning, eidas, oidc, saml]
-draft: true
-toc_max_heading_level: 2
+toc_max_heading_level: 3
 ---
 # Data delen - uitdagingen en oplossingen
 
-Als burger word je regelmatig gevraagd om jouw persoonlijke data te delen. Denk aan je naam en e-mailadres bij digitale dienstverlening, of je adres en geboortedatum bij het aanvragen van een product of dienst, denk aan online winkels of financiële dienstverleners.
-
-In het verleden vulde je deze gegevens handmatig in op een (digitaal) formulier, en moest de ontvanger vertrouwen op de juistheid ervan. Andersom moest jij als burger erop vertrouwen dat de ontvangende partij zorgvuldig omging met jouw data.
-
-De kern van het delen van data is daarom ook vertrouwen en vertrouwen is nu eenmaal niet zo eenvoudig als delen. Gelukkig zijn er inmiddels veel technieken en patronen die digitaal vertrouwen mogelijk maken.
+Als burger word je regelmatig gevraagd om jouw persoonlijke data te delen. Denk aan je naam en e-mailadres bij digitale dienstverlening, of je adres en geboortedatum bij het aanvragen van een product of dienst, denk aan online winkels of financiële dienstverleners. In het verleden vulde je deze gegevens handmatig in op een (digitaal) formulier, en moest de ontvanger vertrouwen op de juistheid ervan. Andersom moest jij als burger erop vertrouwen dat de ontvangende partij zorgvuldig omging met jouw data. De kern van het delen van data is daarom ook vertrouwen en vertrouwen is nu eenmaal niet zo eenvoudig als delen. Gelukkig zijn er inmiddels veel technieken en patronen die digitaal vertrouwen mogelijk maken.
 
 <!-- truncate -->
 
@@ -18,93 +13,69 @@ De kern van het delen van data is daarom ook vertrouwen en vertrouwen is nu eenm
 
 ### 🔐 PKIOverheid
 
-PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid. Deze certificaten worden gebruikt voor veilige communicatie (zoals HTTPS), digitale handtekeningen en authenticatie van systemen.
+PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid. Deze certificaten worden gebruikt voor veilige communicatie (zoals HTTPS), digitale handtekeningen en authenticatie van systemen. Het wordt gebruikt voor het beveiligen van websites (SSL/TLS), ondertekenen van documenten en authenticatie tussen organisaties en diensten.
 
-**Waarvoor wordt het gebruikt?**
-
-Voor het beveiligen van websites (SSL/TLS), ondertekenen van documenten en authenticatie tussen organisaties en diensten.
-
-**Meer informatie:**  Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [PKIOverheid bij Logius](https://www.logius.nl/diensten/pkioverheid)
+Lees meer over [PKIOverheid in de kennisbank](/kennisbank/security/standaarden/pkioverheid).
 
 ### 🔑 DigiD
 
-DigiD is het digitale identificatiesysteem waarmee burgers kunnen inloggen bij overheidsdiensten in Nederland. Het koppelt een identiteit aan een authenticatiemiddel zoals een wachtwoord, app of ID-check.
+DigiD is het digitale identificatiesysteem waarmee burgers kunnen inloggen bij overheidsdiensten in Nederland. Het koppelt een identiteit aan een authenticatiemiddel zoals een wachtwoord, app of ID-check. Het wordt gebruikt voor toegang tot onder andere Belastingdienst, DUO, gemeenten en zorginstellingen.
 
-**Waarvoor wordt het gebruikt?**
-
-Toegang tot onder andere Belastingdienst, DUO, gemeenten en zorginstellingen.
-
-**Meer informatie:**  Kijk op [de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar[DigiD voor professionals (Logius)](https://www.logius.nl/diensten/digid)
+Lees meer over [DigiD in de kennisbank](/kennisbank/security/standaarden/digid).
 
 ### 🧾 eHerkenning
 
-eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten. Het werkt vergelijkbaar met DigiD, maar is bedoeld voor organisaties.
+eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten. Het werkt vergelijkbaar met DigiD, maar is bedoeld voor organisaties. Het wordt gebruikt om in te loggen bij KvK, Belastingdienst, UWV en meer.
 
-**Waarvoor wordt het gebruikt?**
-
-Inloggen bij KvK, Belastingdienst, UWV en meer.
-
-**Meer informatie:** Kijk op [de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eHerkenning (eherkenning.nl)](https://www.eherkenning.nl/)
+Lees meer over [eHerkenning in de kennisbank](/kennisbank/security/standaarden/eherkenning).
 
 ### 🌍 eIDAS (electronic IDentification, Authentication and trust Services)
 
-eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning van elektronische identiteiten en vertrouwensdiensten, zoals digitale handtekeningen.
+eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning van elektronische identiteiten en vertrouwensdiensten, zoals digitale handtekeningen. Het wordt gebruikt om met een nationaal inlogmiddel ook in andere EU-landen te kunnen inloggen op overheidsdiensten.
 
-**Waarvoor wordt het gebruikt?**
-
-Om met een nationaal inlogmiddel ook in andere EU-landen te kunnen inloggen op overheidsdiensten.
-
-**Meer informatie:** Kijk op [de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eIDAS bij de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
+Lees meer over [eIDAS in de kennisbank](/kennisbank/security/standaarden/eidas).
 
 ### 🛡 SAML (Security Assertion Markup Language)
 
-SAML is een XML-gebaseerde standaard voor federatieve authenticatie. Het maakt het mogelijk dat een gebruiker zich één keer aanmeldt (Single Sign-On) en toegang krijgt tot meerdere diensten.
+SAML is een XML-gebaseerde standaard voor federatieve authenticatie. Het maakt het mogelijk dat een gebruiker zich één keer aanmeldt (Single Sign-On) en toegang krijgt tot meerdere diensten. Het wordt gebruikt bij bijvoorbeeld eHerkenning of enterprise identiteitsfederaties.
 
-**Waarvoor wordt het gebruikt?**
-
-Bijvoorbeeld bij eHerkenning of enterprise identiteitsfederaties.
-
-**Meer informatie:** Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [SAML bij OASIS (standaardisatie-orgaan)](https://docs.oasis-open.org/security/saml/v2.0/)
+Lees meer over [SAML in de kennisbank](/kennisbank/security/standaarden/saml).
 
 ### 🔓 OAuth 2.0 (Open Authorization)
 
-OAuth 2.0 is een open standaard voor autorisatie. Hiermee kunnen applicaties toegang krijgen tot gegevens van een gebruiker, zonder dat het wachtwoord gedeeld hoeft te worden.
+OAuth 2.0 is een open standaard voor autorisatie. Hiermee kunnen applicaties toegang krijgen tot gegevens van een gebruiker, zonder dat het wachtwoord gedeeld hoeft te worden. Het wordt gebruikt voor toegang tot API’s zoals bij MijnOverheid of eHerkenning, vaak in combinatie met JSON Web Tokens (JWT's).
 
-**Waarvoor wordt het gebruikt?**
-
-Voor toegang tot API’s zoals bij MijnOverheid of eHerkenning, vaak in combinatie met JSON Web Tokens (JWT's).
-
-**Meer informatie:** Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OAuth 2.0 bij IETF (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
+Lees meer over [OAuth 2.0 in de kennisbank](/kennisbank/security/standaarden/oauth).
 
 ### 🔐 OIDC (OpenID Connect)
 
-OpenID Connect is een identity layer bovenop OAuth 2.0. Het voegt identificatie en authenticatie toe aan OAuth, maakt het mogelijk om gebruikersinformatie (claims) op te vragen, en het laat gebruikers veilig inloggen bij applicaties met behulp van een externe identiteitsprovider.
+OpenID Connect is een identity layer bovenop OAuth 2.0. Het voegt identificatie en authenticatie toe aan OAuth, maakt het mogelijk om gebruikersinformatie (claims) op te vragen, en het laat gebruikers veilig inloggen bij applicaties met behulp van een externe identiteitsprovider. Het wordt gebruikt voor Single Sign-On en federatieve login in moderne webapplicaties.
 
-**Waarvoor wordt het gebruikt?**
+Lees meer over [OpenID Connect in de kennisbank](/kennisbank/security/standaarden/oidc).
 
-Voor Single Sign-On en federatieve login in moderne webapplicaties.
-
-**Meer informatie:** Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OpenID Connect specificatie](https://openid.net/connect/)
-
-> In de praktijk zal altijd een combinatie van technieken nodig zijn omdat het data delen geen eenzijdige uitwisseling is tussen 2 partijen.
+:::tip
+In de praktijk zal altijd een combinatie van technieken nodig zijn omdat het data delen geen eenzijdige uitwisseling is tussen 2 partijen.
+:::
 
 ## Verschillende invalshoeken
 
 Ongetwijfeld zijn er meer invalshoeken te bedenken maar voor de leesbaarheid en het overzicht beperken we ons tot de drie belangrijkste partijen bij het delen van data:
 
-### **1. De burger of eigenaar;**
+### 1. De burger of eigenaar
 
 Het belang van de burger staat voorop, deze is immers waar de overheid voor werkt. Het is dan ook van belang dat de burger een vertrouwde gebruikersinterface wordt aangeboden bijvoorbeeld [mijnoverheid.nl](https://mijnoverheid.nl) of de ["mijn gegevens app"](https://apps.apple.com/nl/app/mijngegevens/id1504052262?l=en-GB) en dat de burger veilig kan inloggen met DigiD of eIDAS. In essentie is de burger vaak ook de **resource owner** en het betreft zijn/haar persoonsgegevens zoals een geboortedatum of diploma die worden gedeeld. In specifieke gevallen kan dit echter ook een burger zijn die namens een organisatie handelt en uit naam van die organisatie bijvoorbeeld de KvK data deelt met een andere organisatie.
 
-### **2. De marktpartij of afnemer;**
+### 2. De marktpartij of afnemer
 
 Kern van het delen van data is vaak het verkrijgen van een product of dienst van een marktpartij. Naast registratie en / of betaling is het aanleveren van aanvullende data een steeds belangrijker aspect. Denk bijvoorbeeld aan het aanleveren van financiële data bij het aanvragen van een hypotheek. Wanneer de marktpartij de data van een authentieke bron kan verkrijgen en er op kan vertrouwen dat de data correct zijn is dit een grote meerwaarde voor zowel de marktpartij als de burger. Uiteraard dient een marktpartij zich eerst te registreren voordat hij toestemming krijgt tot deelname aan een stelsel van datadelers. Ook dient de marktpartij een bewijs te verkrijgen van de burger dat deze toestemming verleent. bijvoorbeeld in de vorm van een **token** (JWT).
 
-### **3. De bronhouder of aanbieder;**
+### 3. De bronhouder of aanbieder
 
 Feit is dat de bron van de data niet bij de burger of eigenaar staat maar dat de data die gedeeld dienen te worden veelal staan in een [basisregistratie](https://data.overheid.nl/datasets?facet_classification%5B0%5D=basis_register&sort=popularity%20desc) of andere dataset bij 1 van de meer dan 1600 [organisaties.](https://data.overheid.nl/community/organisaties) Voor het ontsluiten van de data dient de bronhouder erop te kunnen vertrouwen dat de burger instemt met het delen van de data en dat de marktpartij instemt met de voorwaarden waaronder de data worden gedeeld.
 
-> Kortom, in de meest eenvoudige situatie zijn er minimaal 3 partijen nodig die moeten kunnen vertrouwen op de technische voorzieningen die bij de 2 andere partijen in gebruik zijn.
+:::tip
+In de meest eenvoudige situatie zijn er dus minimaal 3 partijen nodig die moeten kunnen vertrouwen op de technische voorzieningen die bij de 2 andere partijen in gebruik zijn.
+:::
 
 ## Ondersteunende voorzieningen
 
@@ -135,7 +106,7 @@ Behalve een dataset en een API is het ook gebruikelijk een API Gateway in te zet
 
 ### Front-end
 
-Voor velen wellicht een open deur maar het vertrouwen van de burger in de werking van een dergelijk data delen stelsel is een betrouwbare en intuitieve interface met heldere stappen en duidelijk en herkenbaar proces. Om dit te faciliteren zijn onder andere het [NL Design System](https://developer.overheid.nl/kennisbank/frontend/nl-design-system/) en [DigiToegankelijk](https://developer.overheid.nl/kennisbank/frontend/standaarden/digitoegankelijk) beschikbaar.
+Voor velen wellicht een open deur maar het vertrouwen van de burger in de werking van een dergelijk data delen stelsel is een betrouwbare en intuitieve interface met heldere stappen en duidelijk en herkenbaar proces. Om dit te faciliteren zijn onder andere het [NL Design System](/kennisbank/frontend/nl-design-system/) en [DigiToegankelijk](/kennisbank/frontend/standaarden/digitoegankelijk) beschikbaar.
 
 ### Registry
 
@@ -183,7 +154,7 @@ Maar deze onderdelen moeten wel **samenwerken in een ecosysteem** waar:
 
 Daarom is het zaak dat niet alleen technisch wordt geïnvesteerd, maar ook in **afsprakenstelsels, gebruiksvriendelijke interfaces en governance**. Alleen dan kunnen we van data delen een breed gedragen, veilig en schaalbaar fundament maken voor publieke en private dienstverlening.
 
-### 📚 Verder lezen
+### Verder lezen
 
 - [NL API Strategie - Architectuur](https://docs.geostandaarden.nl/api/API-Strategie-architectuur/)
 - [NLGov OAuth profiel](https://gitdocumentatie.logius.nl/publicatie/api/oauth/)
@@ -191,4 +162,4 @@ Daarom is het zaak dat niet alleen technisch wordt geïnvesteerd, maar ook in **
 - [API Register - op developer.overheid.nl](https://apis.developer.overheid.nl/)
 - [Logius Standaarden - op GitHub](https://github.com/Logius-standaarden)
 
-Wij leveren graag [implementatieondersteuning](https://developer.overheid.nl/implementatie-ondersteuning) wanneer je tegen deze uitdagingen oploopt. Neem gerust [contact](https://developer.overheid.nl/implementatie-ondersteuning#hoe-bereik-je-ons) op om verder invulling te geven aan deze oplossingen voor jouw organisatie.
+Wij leveren graag [implementatieondersteuning](/implementatie-ondersteuning) wanneer je tegen deze uitdagingen oploopt. Neem gerust [contact](/implementatie-ondersteuning#hoe-bereik-je-ons) op om verder invulling te geven aan deze oplossingen voor jouw organisatie.
