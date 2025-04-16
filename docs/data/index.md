@@ -10,8 +10,3 @@ Data vormt de kern van elke applicatie en technologie. Het omvat gestructureerde
 ## Gezamenlijk datamodel als strategie
 
 In sommige projecten is het cruciaal dat verschillende organisaties op den duur informatie met elkaar gaan uitwisselen. In zo'n geval is het raadzaam om gezamenlijk met deze organisaties samen te werken aan een datamodel. Een voorbeeld van een project dat dit heeft gedaan is VO Rijk. VO Rijk vatte de informatie die belangrijk is voor haar gebruiker (data over openstaande betalingen van burgers) in een model genaamd [`financial claim`](https://vorijk.nl/docs/financiele-verplichtingen/document_types/financial_claims_information_document/). 
-
-### Datamodel ontsluiten als Open API Specificatie
-Door dit datamodel aan te bieden als [Open Api Specificatie](/kennisbank/apis/standaarden/open-api-specification) werd het makkelijk voor data-aanbieders om te toetsen of hun data voldoet.
-
-<br/>
