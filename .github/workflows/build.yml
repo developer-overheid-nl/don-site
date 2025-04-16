@@ -1,7 +1,7 @@
 name: Build & Link Check
 
 on: push
-    
+
 jobs:
   build-site:
     runs-on: ubuntu-latest
@@ -63,7 +63,7 @@ jobs:
         with:
           context: .
           push: true
-          target: serve
+          target: caddy
           tags: |
             ghcr.io/developer-overheid-nl/don-site:latest
             ghcr.io/developer-overheid-nl/don-site:${{ github.sha }}
