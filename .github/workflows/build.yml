@@ -22,7 +22,7 @@ jobs:
       - name: Build image
         uses: docker/build-push-action@v6
         with:
-          target: caddy
+          target: serve
           tags: |
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
