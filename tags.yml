@@ -36,10 +36,22 @@ developer.overheid.nl:
   label: developer.overheid.nl
 development:
   label: Development
+digid:
+  label: DigiD
+  description: Met uw DigiD laat u zien wie u bent als u op internet iets regelt.
 digikoppeling:
   label: Digikoppeling
+eidas:
+  label: eIDAS
+  description: eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning van elektronische identiteiten
+eherkenning:
+  label: eHerkenning
+  description: eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten. 
 eu:
   label: Europe
+fds:
+  label: Federatief Data Stelsel
+  description: Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties.  
 forum-standaardisatie:
   label: Forum Standaardisatie
 front-end:
@@ -68,6 +80,8 @@ json:
   label: JSON
 json-schema:
   label: JSON Schema
+jwt:
+  label: JSON Web Tokens (JWT of JWT's)
 kubernetes:
   label: Kubernetes
 license:
@@ -88,6 +102,12 @@ nvm:
   label: NVM
 oas:
   label: OpenAPI Specification
+oauth:
+  label: OAuth 2.0
+  description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie 
+oidc:
+  label: OpenID Connect
+  description: OpenID Connect is een identity layer bovenop OAuth 2.0
 open-source:
   label: Open Source
 openapi:
@@ -96,6 +116,9 @@ owl:
   label: OWL
 orkestratie:
   label: Orkestratie
+pkio:
+  label: PKIOverheid
+  description: PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid.
 portal:
   label: Portal
 privacy:
@@ -117,6 +140,9 @@ release:
   label: Release
 rest:
   label: REST API design
+saml:
+  label: SAML
+  description: SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
 security:
   label: Security
 security-by-design:
@@ -167,11 +193,11 @@ logging:
   label: Logging
   description: "Logging"
 fieldlab:
-  label: "Fieldlab"
+  label: Fieldlab
   description: "Fieldlab"
 avg:
-  label: "AVG"
+  label: AVG
   description: "Algemene verordening gegevensbescherming (AVG)"
 gdpr:
-  label: "GDPR"
+  label: GDPR
   description: "General Data Protection Regulation (GDPR) "
