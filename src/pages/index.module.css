@@ -24,7 +24,7 @@
   --utrecht-focus-inverse-outline-color: var(--ifm-hero-background-color);
 }
 
-.heroSearchInput {
+.heroSearchInput.heroSearchInput {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-width: 2px;
@@ -32,11 +32,11 @@
   min-width: 90%;
 }
 
-.heroSearchInput:focus-visible {
+.heroSearchInput.heroSearchInput:focus-visible {
   z-index: var(--utrecht-stack-focus-z-index, 1);
 }
 
-.heroSearchButton {
+.heroSearchButton.heroSearchButton {
   --utrecht-button-border-width: 2px;
   --utrecht-button-subtle-background-color: var(--ifm-color-black);
   --utrecht-button-subtle-color: var(--ifm-color-white);
@@ -51,7 +51,7 @@
   border-bottom-left-radius: 0;
 }
 
-.heroSearchButton svg {
+.heroSearchButton.heroSearchButton svg {
   width: 1.5rem;
   height: 1.5rem;
 }
