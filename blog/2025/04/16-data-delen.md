@@ -3,7 +3,7 @@ authors: [martin-van-der-plas]
 tags: [data-bij-de-bron, fds, api,  oauth, digid, pkio, eherkenning, eidas, oidc, saml]
 toc_max_heading_level: 3
 ---
-# Data delen - uitdagingen en oplossingen
+# Data delen: uitdagingen en oplossingen
 
 Als burger word je regelmatig gevraagd om jouw persoonlijke data te delen. Denk aan je naam en e-mailadres bij digitale dienstverlening, of je adres en geboortedatum bij het aanvragen van een product of dienst, denk aan online winkels of financiële dienstverleners. In het verleden vulde je deze gegevens handmatig in op een (digitaal) formulier, en moest de ontvanger vertrouwen op de juistheid ervan. Andersom moest jij als burger erop vertrouwen dat de ontvangende partij zorgvuldig omging met jouw data. De kern van het delen van data is daarom ook vertrouwen en vertrouwen is nu eenmaal niet zo eenvoudig als delen. Gelukkig zijn er inmiddels veel technieken en patronen die digitaal vertrouwen mogelijk maken.
 
