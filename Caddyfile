@@ -1,0 +1,14 @@
+
+{
+  auto_https off
+}
+
+:3000 {
+  root * /var/docusaurus
+  encode gzip
+  try_files {path} /index.html
+  file_server
+  header -Server
+  header /blog/feed.json Cache-Control "no-cache"
+  header /agenda/events.json Cache-Control "no-cache"
+}
