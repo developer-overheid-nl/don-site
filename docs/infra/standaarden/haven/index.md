@@ -14,10 +14,7 @@ Haven is een standaard voor platform-onafhankelijke cloud hosting. Het is een pr
 ## Voordelen
 
 ### Stimuleert hergebruik
-Haven maakt het makkelijker voor gemeentes om open source applicaties van elkaar her te gebruiken. Van demo- tot productieomgevingen, alles is sneller uit te rollen.
-
-### Makkelijk Haven compliant applicaties uitrollen
-Applicaties die zijn aangemerkt als "geschikt voor Haven" kunnen makkelijk op Haven Compliant Clusters worden uitgerold. Dit bevordert de samenwerking tussen organisaties omdat ze makkelijker elkaars projecten kunnen hergebruiken.
+Haven maakt het makkelijker om open source applicaties tussen organisaties te hergebruiken. Door dat Haven een specificatie biedt voor hoe die applicaties precies opgezet moeten zijn ontstaat er een gezamenlijk referentiekader.
 
 Voorbeelden van applicaties die geschikt zijn voor Haven:
 - [Signalen](https://github.com/signalen)
@@ -27,8 +24,11 @@ Voorbeelden van applicaties die geschikt zijn voor Haven:
 ### Correct gebruik van Kubernetes
 De learning curve van Kubernetes is behoorlijk stijl. De Haven standaard zorgt ervoor dat je belangrijke principes volgt. Voorbeelden hiervan zijn het verzamelen van metrics maar ook dat je een recente versie van Kubernetes draait.
 
-### Duidelijkheid voor leveranciers
+### Duidelijkheid voor inkopers en leveranciers
 Bij aanbestedingen is duidelijkheid cruciaal. Wanneer een gemeentelijke inkoper om een "Haven Compliant" applicatie of cluster vraagt, weet de leverancier precies wat er opgeleverd moet worden, wat leidt tot efficiëntere offertes en betere afstemming.
+
+### Security
+De checks waaruit de Haven standaard bestaat, bestaan voor een deel uit security-checks. 
 
 ### Voorkomen van vendor lock-in
 Omdat Haven open source is kan elke leverancier die daar oren naar heeft een Haven Compliant Kubernetes Cluster opleveren. 
