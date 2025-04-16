@@ -21,8 +21,8 @@ jobs:
         with:
           target: caddy
           tags: |
-            ${IMAGE_NAME}:latest
-            ${IMAGE_NAME}:${{ github.sha }}
+            $IMAGE_NAME:latest
+            $IMAGE_NAME:${{ github.sha }}
           outputs: type=docker,dest=${{ runner.temp }}/image.tar
 
       - name: Upload artifact
@@ -57,4 +57,4 @@ jobs:
 
       - name: Push image
         run: |
-          docker push --all-tags ${IMAGE_NAME}
+          docker push --all-tags $IMAGE_NAME
