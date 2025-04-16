@@ -21,5 +21,5 @@ Een van de belangrijkste redenen om de API Design Rules te volgen is interoperab
 
 ## Tools
 
-- [API Design Rules Linter](/docs/apis/tools/api-design-rules-linter)
-- [API Design Rules Validator](/docs/apis/tools/api-design-rules-validator)
+- [API Design Rules Linter](/kennisbank/apis/tools/api-design-rules-linter)
+- [API Design Rules Validator](/kennisbank/apis/tools/api-design-rules-validator)
