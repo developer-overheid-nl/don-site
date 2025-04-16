@@ -1,0 +1,31 @@
+name: Check external links
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Docusaurus site
+        run: pnpm run build
+
+      - name: Run Linkinator to check external links
+        uses: JustinBeckwith/linkinator-action@v1
+        continue-on-error: true
+        with:
+          paths: "build"
+          recurse: true
+          config: "./linkinator.config.json"
+          verbosity: "ERROR"
+          timeout: 5000
+          retry: 3
