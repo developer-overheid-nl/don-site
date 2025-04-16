@@ -106,7 +106,7 @@ Behalve een dataset en een API is het ook gebruikelijk een API Gateway in te zet
 
 ### Front-end
 
-Voor velen wellicht een open deur maar het vertrouwen van de burger in de werking van een dergelijk data delen stelsel is een betrouwbare en intuitieve interface met heldere stappen en duidelijk en herkenbaar proces. Om dit te faciliteren zijn onder andere het [NL Design System](/kennisbank/frontend/nl-design-system/) en [DigiToegankelijk](/kennisbank/frontend/standaarden/digitoegankelijk) beschikbaar.
+Voor velen wellicht een open deur maar het vertrouwen van de burger in de werking van een dergelijk data delen stelsel is een betrouwbare en intuitieve interface met heldere stappen en duidelijk en herkenbaar proces. Om dit te faciliteren zijn onder andere het [NL Design System](/kennisbank/front-end/nl-design-system/) en [DigiToegankelijk](/kennisbank/front-end/standaarden/digitoegankelijk) beschikbaar.
 
 ### Registry
 
