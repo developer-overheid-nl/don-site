@@ -14,7 +14,7 @@ De kern van het delen van data is daarom ook vertrouwen en vertrouwen is nu eenm
 
 <!-- truncate -->
 
-## Welke standaarden, stelsels en technieken zijn er voor vertrouwen
+## Welke standaarden, stelsels en technieken zijn er voor vertrouwen?
 
 ### 🔐 PKIOverheid
 
@@ -24,7 +24,7 @@ PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nede
 
 Voor het beveiligen van websites (SSL/TLS), ondertekenen van documenten en authenticatie tussen organisaties en diensten.
 
-**Meer informatie:**  [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [PKIOverheid bij Logius](https://www.logius.nl/diensten/pkioverheid)
+**Meer informatie:**  Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [PKIOverheid bij Logius](https://www.logius.nl/diensten/pkioverheid)
 
 ### 🔑 DigiD
 
@@ -34,7 +34,7 @@ DigiD is het digitale identificatiesysteem waarmee burgers kunnen inloggen bij o
 
 Toegang tot onder andere Belastingdienst, DUO, gemeenten en zorginstellingen.
 
-**Meer informatie:**  [Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar[DigiD voor professionals (Logius)](https://www.logius.nl/diensten/digid)
+**Meer informatie:**  Kijk op [de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar[DigiD voor professionals (Logius)](https://www.logius.nl/diensten/digid)
 
 ### 🧾 eHerkenning
 
@@ -44,7 +44,7 @@ eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te kri
 
 Inloggen bij KvK, Belastingdienst, UWV en meer.
 
-**Meer informatie:** [Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eHerkenning (eherkenning.nl)](https://www.eherkenning.nl/)
+**Meer informatie:** Kijk op [de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eHerkenning (eherkenning.nl)](https://www.eherkenning.nl/)
 
 ### 🌍 eIDAS (electronic IDentification, Authentication and trust Services)
 
@@ -54,7 +54,7 @@ eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning
 
 Om met een nationaal inlogmiddel ook in andere EU-landen te kunnen inloggen op overheidsdiensten.
 
-**Meer informatie:** [Kijk op de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eIDAS bij de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
+**Meer informatie:** Kijk op [de kennisbank bij Front-end](https://developer.overheid.nl/kennisbank/front-end/standaarden/) of ga naar [eIDAS bij de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 
 ### 🛡 SAML (Security Assertion Markup Language)
 
@@ -64,7 +64,7 @@ SAML is een XML-gebaseerde standaard voor federatieve authenticatie. Het maakt h
 
 Bijvoorbeeld bij eHerkenning of enterprise identiteitsfederaties.
 
-**Meer informatie:** [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [SAML bij OASIS (standaardisatie-orgaan)](https://docs.oasis-open.org/security/saml/v2.0/)
+**Meer informatie:** Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [SAML bij OASIS (standaardisatie-orgaan)](https://docs.oasis-open.org/security/saml/v2.0/)
 
 ### 🔓 OAuth 2.0 (Open Authorization)
 
@@ -74,7 +74,7 @@ OAuth 2.0 is een open standaard voor autorisatie. Hiermee kunnen applicaties toe
 
 Voor toegang tot API’s zoals bij MijnOverheid of eHerkenning, vaak in combinatie met JSON Web Tokens (JWT's).
 
-**Meer informatie:** [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OAuth 2.0 bij IETF (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
+**Meer informatie:** Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OAuth 2.0 bij IETF (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
 
 ### 🔐 OIDC (OpenID Connect)
 
@@ -84,7 +84,9 @@ OpenID Connect is een identity layer bovenop OAuth 2.0. Het voegt identificatie 
 
 Voor Single Sign-On en federatieve login in moderne webapplicaties.
 
-**Meer informatie:** [Kijk op de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OpenID Connect specificatie](https://openid.net/connect/)
+**Meer informatie:** Kijk op [de kennisbank bij security](https://developer.overheid.nl/kennisbank/security/standaarden/) of ga naar [OpenID Connect specificatie](https://openid.net/connect/)
+
+> In de praktijk zal altijd een combinatie van technieken nodig zijn omdat het data delen geen eenzijdige uitwisseling is tussen 2 partijen.
 
 ## Verschillende invalshoeken
 
@@ -102,11 +104,11 @@ Kern van het delen van data is vaak het verkrijgen van een product of dienst van
 
 Feit is dat de bron van de data niet bij de burger of eigenaar staat maar dat de data die gedeeld dienen te worden veelal staan in een [basisregistratie](https://data.overheid.nl/datasets?facet_classification%5B0%5D=basis_register&sort=popularity%20desc) of andere dataset bij 1 van de meer dan 1600 [organisaties.](https://data.overheid.nl/community/organisaties) Voor het ontsluiten van de data dient de bronhouder erop te kunnen vertrouwen dat de burger instemt met het delen van de data en dat de marktpartij instemt met de voorwaarden waaronder de data worden gedeeld.
 
-> Kortom, in de meest eenvoudige situatie zijn altijd al minimaal 3 partijen nodig die ieder op zich moeten kunnen vertrouwen op de technische voorzieningen die bij de 2 andere partijen in gebruik zijn.
+> Kortom, in de meest eenvoudige situatie zijn er minimaal 3 partijen nodig die moeten kunnen vertrouwen op de technische voorzieningen die bij de 2 andere partijen in gebruik zijn.
 
 ## Ondersteunende voorzieningen
 
-Naast de voor de hand liggende voorzieningen als een database bij de bronhouder en een applicatie bij de marktpartij zijn er ook specifieke technische voorzieningen die goed passen in deze context van datadelen.
+Naast de voor de hand liggende voorzieningen als een database bij de bronhouder en een applicatie bij de marktpartij zijn er ook specifieke technische voorzieningen die goed passen in deze context van data delen.
 
 Enkele algemene en bestaande inlog voorzieningen zoals DigiD, eHerkenning en eIDAS zijn hierboven al benoemd. Burgers kunnen gebruik maken van bijvoorbeeld DigiD om zich te identificeren en authenticeren. Marktpartijen kunnen gebruik maken van eHerkenning om zich te identificeren en authenticeren wanneer ze zich registreren als client applicatie en instemmen met de voorwaarden van het stelsel.
 
@@ -148,27 +150,30 @@ Verantwoording afleggen is belangrijk voor het instandhouden van het vertrouwen 
 ### Logius Delen van MijnGegevens
 
 Voor organisaties die niet mogen aansluiten op DigiD, maar voor de uitvoering van een wettelijke taak of toets wel gebruik moeten maken van authentieke gegevens die de overheid over burgers registreert, kan er aangesloten worden op de functionaliteit Delen van MijnGegevens via MijnOverheid. Pas na expliciete toestemming van de burger kunnen specifieke gegevens voor een specifiek doel gedeeld worden.
+
 **Meer informatie:** [Logius](https://www.logius.nl/domeinen/interactie/mijnoverheid/documentatie/api-documentatie-delen-van-mijngegevens)
 
 ### Vorderingenoverzicht Rijk
 
 Het verzamelen van gegevens over actuele betalingsverplichtingen is voor burgers die in schuldhulpverlening terecht komen een grote drempel. Met het project Vorderingenoverzicht Rijk leveren we een bijdrage aan het verlagen van die drempel, zodat problemen met betalingen en schulden sneller kunnen worden opgelost of worden voorkomen. Het is daarom onze missie om burgers in staat te stellen gemakkelijk een overzicht van hun financiële verplichtingen aan overheidsorganisaties te verkrijgen.
+
 **Meer informatie:** [VO Rijk](https://www.vorijk.nl/docs/introductie)
 
 ### Inkomen Ouders
 
 DUO vraagt het inkomen van uw ouders automatisch op bij de Belastingdienst. Als uw ouders aangifte doen, gebruiken we hun verzamelinkomen.
+
 **Meer informatie:** [DUO](https://duo.nl/particulier/aanvullende-beurs-of-toelage/inkomen-ouders.jsp)
 
 ## Conclusie: De uitdaging zit in afspraken en onderling vertrouwen
 
-Hoewel de technologische basis voor het veilig en betrouwbaar delen van data inmiddels stevig staat, met standaarden als **OAuth 2.0**, **OIDC**,**SAML**, en voorzieningen zoals **DigiD**, **eHerkenning** en **PKIOverheid** – ligt de werkelijke uitdaging elders. Het succes van datadelen is vooral afhankelijk van **onderling vertrouwen** en **duidelijke afspraken** tussen de betrokken partijen.
+Hoewel de technologische basis voor het veilig en betrouwbaar delen van data inmiddels stevig staat, met standaarden als **OAuth 2.0**, **OIDC**, **SAML**, en voorzieningen zoals **DigiD**, **eHerkenning** en **PKIOverheid** – ligt de werkelijke uitdaging elders. Het succes van data delen is vooral afhankelijk van **onderling vertrouwen** en **duidelijke afspraken** tussen de betrokken partijen.
 
 Er zijn al veel technische bouwstenen beschikbaar:
 
 - **API’s en API Gateways** maken veilige en gecontroleerde toegang tot gegevens mogelijk.
 - **Identity Providers (IdP)** en **Authorization Servers (AS)** zorgen voor betrouwbare identificatie en autorisatie.
-- **Registries en logging** brengen transparantie en controle in het stelsel.
+- **Registry's en logging** brengen transparantie en controle in het stelsel.
 
 Maar deze onderdelen moeten wel **samenwerken in een ecosysteem** waar:
 
@@ -181,10 +186,9 @@ Daarom is het zaak dat niet alleen technisch wordt geïnvesteerd, maar ook in **
 ### 📚 Verder lezen
 
 - [NL API Strategie - Architectuur](https://docs.geostandaarden.nl/api/API-Strategie-architectuur/)
-- [NLGov OAuth](https://gitdocumentatie.logius.nl/publicatie/api/oauth/)
-- [NLGov OpenID Connect](https://gitdocumentatie.logius.nl/publicatie/api/oidc/)
-- [API Register](https://developer.overheid.nl/)
-- [OpenID Connect](https://openid.net/connect/)
-- [Logius Standaarden op GitHub](https://github.com/Logius-standaarden)
+- [NLGov OAuth profiel](https://gitdocumentatie.logius.nl/publicatie/api/oauth/)
+- [NLGov OpenID Connect profiel](https://gitdocumentatie.logius.nl/publicatie/api/oidc/)
+- [API Register - op developer.overheid.nl](https://apis.developer.overheid.nl/)
+- [Logius Standaarden - op GitHub](https://github.com/Logius-standaarden)
 
 Wij leveren graag [implementatieondersteuning](https://developer.overheid.nl/implementatie-ondersteuning) wanneer je tegen deze uitdagingen oploopt. Neem gerust [contact](https://developer.overheid.nl/implementatie-ondersteuning#hoe-bereik-je-ons) op om verder invulling te geven aan deze oplossingen voor jouw organisatie.

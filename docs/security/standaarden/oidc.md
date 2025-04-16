@@ -7,7 +7,7 @@ tags:
 title: "OpenID Connect (OIDC)"
 ---
 
-**OpenID Connect (OIDC)** is een identiteitslaag bovenop **OAuth 2.0**. Waar OAuth toegang regelt tot API’s (autorisatie), voegt OIDC daar **authenticatie** aan toe — oftewel: wie is de gebruiker?
+**OpenID Connect (OIDC)** is een authenticatielaag bovenop **OAuth 2.0**. Waar OAuth toegang regelt tot API’s (autorisatie), voegt OIDC daar **authenticatie** aan toe — oftewel: wie is de gebruiker?
 
 Met OIDC kan een applicatie (Relying Party) betrouwbaar de identiteit van een gebruiker vaststellen op basis van een login bij een Identity Provider (IdP), zoals een overheidssysteem of commerciële aanbieder.
 
@@ -16,10 +16,10 @@ Met OIDC kan een applicatie (Relying Party) betrouwbaar de identiteit van een ge
 De flow van OIDC lijkt sterk op OAuth, maar voegt o.a. deze elementen toe:
 
 - **ID Token**: een JWT (JSON Web Token) met gebruikersinfo
-- **UserInfo endpoint**: optionele API om aanvullende gegevens op te halen
+- **UserInfo endpoint**: een optionele API om aanvullende gegevens op te halen
 - **Standard scopes**: zoals `openid`, `profile`, `email`
 
-Stappen:
+Een typische OIDC flow verloopt als volgt:
 
 1. Gebruiker wordt doorgestuurd naar de IdP.
 2. Gebruiker logt in en geeft toestemming.

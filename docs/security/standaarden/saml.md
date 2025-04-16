@@ -68,16 +68,20 @@ Bron: [eIDAS Technical Specs - Europa.eu](https://digital-strategy.ec.europa.eu/
 - [eHerkenning en SAML - eherkenning.nl](https://www.eherkenning.nl/)
 - [eIDAS en federatieve authenticatie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 
+## Een typische SAML flow
+
+Een typische SAML flow verloopt als volgt:
+
 ```mermaid
 sequenceDiagram
     autonumber
-    participant Gebruiker
+    participant Gebruiker(client)
     participant ServiceProvider
     participant IdentityProvider
 
-    Gebruiker->>ServiceProvider: Bezoek beschermde pagina
-    ServiceProvider->>Gebruiker: "Redirect naar IdP (SAML Request)
-    Gebruiker->>IdentityProvider: Login (gebruikersnaam + wachtwoord)
-    IdentityProvider-->>Gebruiker: SAML Response met assertie
-    Gebruiker->>ServiceProvider: POST SAML Response
-    ServiceProvider-->>Gebruiker: Toegang verleend tot dienst
+    Gebruiker(client)->>ServiceProvider: Bezoek beschermde pagina
+    ServiceProvider->>Gebruiker(client): "Redirect naar IdP (SAML Request)
+    Gebruiker(client)->>IdentityProvider: Login (gebruikersnaam + wachtwoord)
+    IdentityProvider-->>Gebruiker(client): SAML Response met assertie
+    Gebruiker(client)->>ServiceProvider: POST SAML Response
+    ServiceProvider-->>Gebruiker(client): Toegang verleend tot dienst
