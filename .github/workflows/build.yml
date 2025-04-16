@@ -36,9 +36,10 @@ jobs:
           retention-days: 1
 
   publish:
-    if: |
-      github.organization == 'developer-overheid-nl' &&
-      (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch')
+    if: github.organization == 'developer-overheid-nl'
+    # if: |
+    #   github.organization == 'developer-overheid-nl' &&
+    #   (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     needs: build
     steps:
