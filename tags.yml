@@ -187,3 +187,9 @@ helm:
 docker:
   label: "Docker"
   description: "Docker is een platform voor het bouwen, distribueren en draaien van applicaties in individuele containers"
+argo-cd:
+  label: "Argo CD"
+  description: "Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor Kubernetes."
+flux:
+  label: "Flux"
+  description: "Flux CD is een GitOps tool voor Kubernetes die automatische deployment en synchronisatie van applicaties mogelijk maakt."

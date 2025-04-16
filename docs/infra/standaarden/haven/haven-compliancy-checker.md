@@ -1,5 +1,5 @@
 ---
-title: "Haven compliancy checker"
+title: "Haven compliancy checker (CLI)"
 sidebar_position: 1
 tags:
     - "kubernetes"
@@ -50,3 +50,6 @@ Een Haven Compliant cluster is de basis waarop verder gebouwd kan worden. Zorgvu
 3. Goed beheer voeren op de toegangsrechten tot het cluster.
 
 Ontwikkelaars zullen voorts het cluster in gebruik gaan nemen, voor hen hebben we ter illustratie ook de [Ontwikkelen op Haven](/techniek/voorbereiding) documentatie pagina's.
+
+## Links
+- [Readme Haven CLI](https://gitlab.com/commonground/haven/haven/-/tree/main/haven/cli?ref_type=heads)
