@@ -43,7 +43,7 @@ Als organisatie is het goed om na te denken over digitale soevereiniteit. Hoe me
 
 De volgende casus illustreert een situatie waarin je Haven compliant bent, maar toch afhankelijk bent van platform-specifieke functionaliteit:
 
-Op je cluster wil je een container hebben waar je bestanden kan wegschrijven. Binnen Kubernetes is het dan raadzaam om te werken met een `StorageClass`. Die StorageClass mag vervolgens wel geïmplementeerd zijn met een Azure driver voor Azure Blob Storage of AWS S3 of wat dan ook. Op dat moment maak je zelf de keuze om iets vendor-specifieks te gebruiken. De Haven standaard dwingt niet af dat je dit niet doet.
+Op je cluster wil je een container hebben waar je bestanden kan wegschrijven. Binnen Kubernetes is het dan raadzaam om te werken met een `StorageClass`. Die StorageClass mag vervolgens wel geïmplementeerd zijn met een Azure driver voor Azure Blob Storage of AWS S3 Bucket. Op dat moment maak je zelf de keuze om een vendor-specifiek product te gebruiken. De Haven standaard dwingt niet af dat je dit niet doet.
 
 ## Hoe maak ik mijn applicatie geschikt voor een Haven Cluster?
 De voorwaarden voor een project om op een Haven Cluster te kunnen draaien zijn:
