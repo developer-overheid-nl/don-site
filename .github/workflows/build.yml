@@ -1,69 +1,64 @@
-name: Build & Link Check
+name: Build
 
-on: push
-    
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch name."
+        required: true
+        default: "main"
+
+env:
+  IMAGE_NAME: ghcr.io/developer-overheid-nl/don-site
+
 jobs:
-  build-site:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          target: caddy
+          tags: |
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          outputs: type=docker,dest=${{ runner.temp }}/image.tar
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Build Docusaurus site
-        run: npm run build
-
-      - name: Upload build artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: docusaurus-build
-          path: build
+          name: image
+          path: ${{ runner.temp }}/image.tar
+          retention-days: 1
 
-  check-links:
+  publish:
+    if: |
+      github.repository == 'developer-overheid-nl/don-site' &&
+      (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
-    needs: build-site
+    needs: build
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Download build artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: docusaurus-build
-          path: build
+          name: image
+          path: ${{ runner.temp }}
 
-      - name: Run Linkinator to check external links
-        uses: JustinBeckwith/linkinator-action@v1
-        continue-on-error: true
-        with:
-          paths: "build"
-          recurse: true
-          config: "./linkinator.config.json"
-          verbosity: "ERROR"
-          timeout: 5000
-          retry: 3
+      - name: Load image
+        run: |
+          docker load --input ${{ runner.temp }}/image.tar
 
-  build-and-push:
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-    steps:
-      - uses: actions/checkout@v4
       - name: Login to container registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build & push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          target: serve
-          tags: |
-            ghcr.io/developer-overheid-nl/don-site:latest
-            ghcr.io/developer-overheid-nl/don-site:${{ github.sha }}
+
+      - name: Push image
+        run: |
+          docker push --all-tags ${{ env.IMAGE_NAME }}

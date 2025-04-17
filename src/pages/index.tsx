@@ -6,9 +6,26 @@ import HomepageBlogposts from "../components/HomepageBlogposts";
 import HomepageAgenda from "../components/HomepageAgenda";
 
 import styles from "./index.module.css";
+import { IconButton, TextInput } from "@rijkshuisstijl-community/components-react";
+import IconZoekInline from "../theme/icons/IconZoekInline";
+import { ThemeConfig } from "docusaurus-theme-search-typesense";
+
+function Search() {
+  return (
+    <form action="/zoeken" method="get" className={styles.heroSearch}>
+      <label className="visual-hidden" htmlFor="banner-search">Zoek in de Kennisbank, API- en OSS-register</label>
+      <TextInput type="search" name="q" id="banner-search" className={styles.heroSearchInput} placeholder="Zoek in de Kennisbank, API- en OSS-register" />
+      <IconButton label="Zoeken" type="submit" className={styles.heroSearchButton}>
+        <IconZoekInline />
+      </IconButton>
+    </form>
+  );
+}
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const { searchPagePath } = siteConfig.themeConfig.typesense as ThemeConfig['typesense'] || { searchPagePath: false };
+
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <script
@@ -18,9 +35,12 @@ function HomepageHeader() {
       ></script>
       <div className="container">
         <p className={styles.intro}>
-          Informatie, bronnen en tools van de <strong className={styles.intro__highlight}>overheid voor ontwikkelaars</strong> door 
-          Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.
+          Eén plek met informatie, bronnen, tools en codevoorbeelden van de <strong className={styles.intro__highlight}>overheid voor developers</strong> over 
+          privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.
         </p>
+        {
+          searchPagePath ? <Search /> : null
+        }
       </div>
     </header>
   );
@@ -30,7 +50,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Ontwikkelaarsportaal van de Nederlandse Overheid`}
-      description="Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API\'s, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.">
+      description="Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.">
       <main>
         <HomepageHeader />
         <HomepageFeatures />

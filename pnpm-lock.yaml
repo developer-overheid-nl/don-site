@@ -29,18 +29,18 @@ importers:
       '@rijkshuisstijl-community/components-react':
         specifier: 1.0.4
         version: 1.0.4(@babel/runtime@7.26.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      algoliasearch-helper:
+        specifier: ^3.24.3
+        version: 3.24.3(algoliasearch@5.20.1)
+      client:
+        specifier: link:@docusaurus/plugin-content-docs/client
+        version: link:@docusaurus/plugin-content-docs/client
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
       docusaurus-theme-search-typesense:
         specifier: 0.23.1-0
         version: 0.23.1-0(@algolia/client-search@5.20.1)(@babel/runtime@7.26.7)(@docusaurus/core@3.7.0(@mdx-js/react@3.1.0(@types/react@19.0.8)(react@18.3.1))(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@docusaurus/theme-common@3.7.0(@docusaurus/plugin-content-docs@3.7.0(@mdx-js/react@3.1.0(@types/react@19.0.8)(react@18.3.1))(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mdx-js/react@3.1.0(@types/react@19.0.8)(react@18.3.1))(@types/react@19.0.8)(acorn@8.14.0)(algoliasearch@5.20.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
-      i:
-        specifier: ^0.3.7
-        version: 0.3.7
-      npm:
-        specifier: ^11.1.0
-        version: 11.1.0
       prism-react-renderer:
         specifier: ^2.4.1
         version: 2.4.1(react@18.3.1)
@@ -53,6 +53,9 @@ importers:
       remark-directive-sugar:
         specifier: ^1.0.0
         version: 1.0.0(remark-directive@3.0.1)
+      typesense-instantsearch-adapter:
+        specifier: ^2.9.0
+        version: 2.9.0(@babel/runtime@7.26.7)
     devDependencies:
       '@docusaurus/module-type-aliases':
         specifier: 3.7.0
@@ -1915,8 +1918,8 @@ packages:
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
 
-  algoliasearch-helper@3.24.1:
-    resolution: {integrity: sha512-knYRACqLH9UpeR+WRUrBzBFR2ulGuOjI2b525k4PNeqZxeFMHJE7YcL7s6Jh12Qza0rtHqZdgHMfeuaaAkf4wA==}
+  algoliasearch-helper@3.24.3:
+    resolution: {integrity: sha512-3QKg5lzSfUiPN8Hn1ViHEGv6PjK7i4SFEDLzwlSzPO/4mVOsyos7B7/AsEtFQW5KHHPiCq6DyJl+mzg7CYlEgw==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
 
@@ -2019,6 +2022,9 @@ packages:
 
   axios@1.8.1:
     resolution: {integrity: sha512-NN+fvwH/kV01dYUQ3PTOZns4LWtWhOFCAhQ/pHb88WQ1hNe5V/dvFwc4VJcDL11LT9xSX0QtsR8sWUuyOuOq7g==}
+
+  axios@1.8.4:
+    resolution: {integrity: sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==}
 
   babel-loader@9.2.1:
     resolution: {integrity: sha512-fqe8naHt46e0yIdkjUZYqddSXfej3AHajX+CSO5X7oy0EmPc6o5Xh+RClNoHjnieWz9AW4kZxW9yyFMhVB1QLA==}
@@ -3479,10 +3485,6 @@ packages:
     resolution: {integrity: sha512-Y93lCzHYgGWdrJ66yIktxiaGULYc6oGiABxhcO5AufBeOyoIdZF7bIfLaOrbM0iGIOXQQgxxRrFEnb+Y6w1n4A==}
     engines: {node: '>=10.18'}
 
-  i@0.3.7:
-    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
-    engines: {node: '>=0.4'}
-
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -4380,78 +4382,6 @@ packages:
   npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
-
-  npm@11.1.0:
-    resolution: {integrity: sha512-rPMBrZud26lI/LcjQeLw/K5Hf1apXMKgkpNNEzp0YQYmM877+T1ZNKPcB2hnTi7e6fBNz8xLtMMn/w46fVUqGw==}
-    engines: {node: ^20.17.0 || >=22.9.0}
-    hasBin: true
-    bundledDependencies:
-      - '@isaacs/string-locale-compare'
-      - '@npmcli/arborist'
-      - '@npmcli/config'
-      - '@npmcli/fs'
-      - '@npmcli/map-workspaces'
-      - '@npmcli/package-json'
-      - '@npmcli/promise-spawn'
-      - '@npmcli/redact'
-      - '@npmcli/run-script'
-      - '@sigstore/tuf'
-      - abbrev
-      - archy
-      - cacache
-      - chalk
-      - ci-info
-      - cli-columns
-      - fastest-levenshtein
-      - fs-minipass
-      - glob
-      - graceful-fs
-      - hosted-git-info
-      - ini
-      - init-package-json
-      - is-cidr
-      - json-parse-even-better-errors
-      - libnpmaccess
-      - libnpmdiff
-      - libnpmexec
-      - libnpmfund
-      - libnpmorg
-      - libnpmpack
-      - libnpmpublish
-      - libnpmsearch
-      - libnpmteam
-      - libnpmversion
-      - make-fetch-happen
-      - minimatch
-      - minipass
-      - minipass-pipeline
-      - ms
-      - node-gyp
-      - nopt
-      - normalize-package-data
-      - npm-audit-report
-      - npm-install-checks
-      - npm-package-arg
-      - npm-pick-manifest
-      - npm-profile
-      - npm-registry-fetch
-      - npm-user-validate
-      - p-map
-      - pacote
-      - parse-conflict-json
-      - proc-log
-      - qrcode-terminal
-      - read
-      - semver
-      - spdx-expression-parse
-      - ssri
-      - supports-color
-      - tar
-      - text-table
-      - tiny-relative-date
-      - treeverse
-      - validate-npm-package-name
-      - which
 
   nprogress@0.2.0:
     resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
@@ -6001,6 +5931,12 @@ packages:
     peerDependencies:
       '@babel/runtime': ^7.17.2
 
+  typesense-instantsearch-adapter@2.9.0:
+    resolution: {integrity: sha512-ZSgpi9T/S70Zs2eYIv0VmD0o4+VfBN9jz97Rhbf9Bj+gpUAbjmm46XAobEE2TGs2Wo04hpzCrXifXNJecalC/w==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@babel/runtime': ^7.24.1
+
   typesense-instantsearch-adapter@2.9.0-6:
     resolution: {integrity: sha512-o+lPtBnrGaHLdw9g2WGJ7V1INRSKUno6T12cAp1jcMS0b9zhdZWtqe+ESlveK0hfAnd+mKeTVauc9oM5Ytafxw==}
     engines: {node: '>=18'}
@@ -6009,6 +5945,12 @@ packages:
 
   typesense@1.8.2:
     resolution: {integrity: sha512-aBpePjA99Qvo+OP2pJwMpvga4Jrm1Y2oV5NsrWXBxlqUDNEUCPZBIksPv2Hq0jxQxHhLLyJVbjXjByXsvpCDVA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@babel/runtime': ^7.23.2
+
+  typesense@2.1.0-3:
+    resolution: {integrity: sha512-/RHgarvw0CZVE+e6bG9N37KeX2zjJC4nojwbsIKhRzGt7FKNakgwJXDh1CdSp2QjlMlqf75z8YBa9ffNYThbdg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@babel/runtime': ^7.23.2
@@ -8501,7 +8443,7 @@ snapshots:
       '@docusaurus/utils': 3.7.0(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@docusaurus/utils-validation': 3.7.0(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       algoliasearch: 5.20.1
-      algoliasearch-helper: 3.24.1(algoliasearch@5.20.1)
+      algoliasearch-helper: 3.24.3(algoliasearch@5.20.1)
       clsx: 2.1.1
       eta: 2.2.0
       fs-extra: 11.3.0
@@ -9465,7 +9407,7 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
-  algoliasearch-helper@3.24.1(algoliasearch@5.20.1):
+  algoliasearch-helper@3.24.3(algoliasearch@5.20.1):
     dependencies:
       '@algolia/events': 4.0.1
       algoliasearch: 5.20.1
@@ -9575,6 +9517,14 @@ snapshots:
       possible-typed-array-names: 1.0.0
 
   axios@1.8.1:
+    dependencies:
+      follow-redirects: 1.15.9
+      form-data: 4.0.2
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
+  axios@1.8.4:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.2
@@ -10472,7 +10422,7 @@ snapshots:
       '@docusaurus/theme-translations': 3.6.3
       '@docusaurus/utils': 3.6.3(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
       '@docusaurus/utils-validation': 3.6.3(acorn@8.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
-      algoliasearch-helper: 3.24.1(algoliasearch@5.20.1)
+      algoliasearch-helper: 3.24.3(algoliasearch@5.20.1)
       clsx: 2.1.1
       eta: 2.2.0
       fs-extra: 11.3.0
@@ -11379,8 +11329,6 @@ snapshots:
   human-signals@2.1.0: {}
 
   hyperdyperid@1.2.0: {}
-
-  i@0.3.7: {}
 
   iconv-lite@0.4.24:
     dependencies:
@@ -12516,8 +12464,6 @@ snapshots:
   npm-run-path@4.0.1:
     dependencies:
       path-key: 3.1.1
-
-  npm@11.1.0: {}
 
   nprogress@0.2.0: {}
 
@@ -14299,6 +14245,13 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  typesense-instantsearch-adapter@2.9.0(@babel/runtime@7.26.7):
+    dependencies:
+      '@babel/runtime': 7.26.7
+      typesense: 2.1.0-3(@babel/runtime@7.26.7)
+    transitivePeerDependencies:
+      - debug
+
   typesense-instantsearch-adapter@2.9.0-6(@babel/runtime@7.26.7):
     dependencies:
       '@babel/runtime': 7.26.7
@@ -14311,6 +14264,15 @@ snapshots:
       '@babel/runtime': 7.26.7
       axios: 1.8.1
       loglevel: 1.9.2
+    transitivePeerDependencies:
+      - debug
+
+  typesense@2.1.0-3(@babel/runtime@7.26.7):
+    dependencies:
+      '@babel/runtime': 7.26.7
+      axios: 1.8.4
+      loglevel: 1.9.2
+      tslib: 2.8.1
     transitivePeerDependencies:
       - debug
 
