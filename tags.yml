@@ -207,6 +207,3 @@ common-ground:
 build-for-failure:
   label: "Build for Failure"
   description: "Build for Failure"
-digid:
-  label: "DigiD"
-  description: "DigiD"
