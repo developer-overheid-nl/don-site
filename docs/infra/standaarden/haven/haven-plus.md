@@ -27,6 +27,8 @@ Op dit moment is het Haven+ project nog in beta en kan het zijn dat je tegen bug
 ## Aan de slag
 Als je zelf lokaal met Haven+ aan de gang wilt dan zijn er twee implementaties die je kunt gebruiken.
 
+[Naar de Haven+ Gitlab](https://gitlab.com/commonground/haven/havenplus)
+
 ### Implementatie met Flux
 
 

@@ -9,6 +9,11 @@ tags:
     - "containerization"
 ---
 
+<!---
+Copyright © VNG Realisatie 2019-2023
+Licensed under EUPL v1.2
+-->
+
 In deze sectie laten we zien hoe je met de Haven Compliancy Checker een bestaand cluster kan controleren op Haven Compliancy.
 
 ## Voorbereiding
@@ -49,7 +54,8 @@ Een Haven Compliant cluster is de basis waarop verder gebouwd kan worden. Zorgvu
 2. Het up-to-date houden van de deployments op het cluster.
 3. Goed beheer voeren op de toegangsrechten tot het cluster.
 
-Ontwikkelaars zullen voorts het cluster in gebruik gaan nemen, voor hen hebben we ter illustratie ook de [Ontwikkelen op Haven](/techniek/voorbereiding) documentatie pagina's.
+Ontwikkelaars zullen voorts het cluster in gebruik gaan nemen, voor hen hebben we ter illustratie ook de [Ontwikkelen op Haven](https://haven.commonground.nl/techniek/voorbereiding) documentatie pagina's.
 
 ## Links
 - [Readme Haven CLI](https://gitlab.com/commonground/haven/haven/-/tree/main/haven/cli?ref_type=heads)
+
