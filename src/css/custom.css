@@ -419,10 +419,14 @@
   font-style: italic;
 }
 
-blockquote{
-  padding: 1rem;
-  margin: 1.5rem 0;
-  font-size: 1.5rem;
+/* Prevent border from showing within rhc blockquote */
+.rhc-blockquote--pink-background-variation blockquote{
+  border-left: 0;
+}
+
+/* Set bold font in quote name */
+.rhc-blockquote figcaption{
+  font-weight: 600;
 }
 
 /* Prevent some unordered-list-items from having a margin */

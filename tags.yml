@@ -201,3 +201,12 @@ avg:
 gdpr:
   label: GDPR
   description: "General Data Protection Regulation (GDPR) "
+common-ground:
+  label: Common Ground
+  description: Common Ground is een initiatief van de Vereniging van Nederlandse Gemeenten (VNG) dat leidde tot een toekomstbestendige architectuurvisie .
+build-for-failure:
+  label: "Build for Failure"
+  description: "Build for Failure"
+digid:
+  label: "DigiD"
+  description: "DigiD"

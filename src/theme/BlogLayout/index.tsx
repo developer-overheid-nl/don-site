@@ -17,11 +17,11 @@ export default function BlogLayout(props: Props): ReactNode {
           <main
             className={clsx('col', {
               'col--6': hasSidebar,
-              'col--9': !hasSidebar,
+              'col--7': !hasSidebar,
             })}>
             {children}
           </main>
-          {toc && <div className="col col--3">{toc}</div>}
+          {toc && <div className="col col--4 col--offset-1" >{toc}</div>}
         </div>
       </div>
     </Layout>
