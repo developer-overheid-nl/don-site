@@ -1,4 +1,5 @@
-import { themes as prismThemes } from "prism-react-renderer";
+// import { themes as prismThemes } from "prism-react-renderer";
+import docusaurusTheme from "./src/utils/prismLight"
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import remarkDirectiveSugar from "remark-directive-sugar";
@@ -337,8 +338,7 @@ const config: Config = {
       ],
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: docusaurusTheme, // better contrast
       additionalLanguages: ["turtle"],
     },
     colorMode: {
