@@ -11,7 +11,7 @@
   --utrecht-focus-outline-color: var(--ifm-color-white);
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 62.25rem) { /* 996px */
   .heroBanner {
     padding: 2rem;
   }
@@ -81,7 +81,7 @@
   padding-block-end: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) { /* 768px */
   .twoColumns {
     display: flex;
   }

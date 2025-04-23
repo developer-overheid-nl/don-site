@@ -126,6 +126,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+html {
+  scroll-padding-top: calc(var(--ifm-navbar-height) + 4px);
+}
+
 .theme-doc-sidebar-container {
   --ifm-toc-border-color: var(--ifm-color-primary);
 }
@@ -170,7 +174,15 @@
   --ifm-link-decoration: underline;
 }
 
-@media (min-width: 1440px) {
+.alert a {
+  --ifm-alert-border-color: var(--ifm-color-gray-700);
+}
+
+.markdown p a, .markdown li a, .markdown table a {
+  --ifm-link-decoration: underline;
+}
+
+@media (min-width: 90rem) { /* 1440px */
   .navbar__inner {
       max-width: var(--ifm-container-width-xl);
   }
@@ -182,7 +194,7 @@
   align-items: center;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) { /* 800px */
   .ro-header {
     display: grid;
     grid-template-columns: calc(50% - 25px) 50px calc(50% - 25px);
