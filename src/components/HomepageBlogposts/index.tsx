@@ -15,7 +15,7 @@ function formatDate(dateString) {
   return new Intl.DateTimeFormat('nl-NL', {dateStyle: "long"}).format(date);
 }
 
-export default function HomepageBlogposts(): JSX.Element {
+export default function HomepageBlogposts(): React.JSX.Element {
   const [feed, setFeed] = useState<Record<string, any>[] | null>(null);
 
   useEffect(function fetchFeed() {

@@ -10,7 +10,7 @@ import IconZoek from "./icons/IconZoek";
 import { type ThemeConfig } from 'docusaurus-theme-search-typesense'
 import styles from "./searchBar.module.css";
 
-export default function SearchBar(): ReactNode {
+export default function SearchBar(): React.ReactNode {
   const {siteConfig} = useDocusaurusContext();
   const { searchPagePath } = siteConfig.themeConfig.typesense as ThemeConfig['typesense'] || { searchPagePath: false };
 

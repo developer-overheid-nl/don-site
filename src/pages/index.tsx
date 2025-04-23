@@ -15,6 +15,7 @@ function Search() {
     <form action="/zoeken" method="get" className={styles.heroSearch}>
       <label className="visual-hidden" htmlFor="banner-search">Zoek in de Kennisbank, API- en OSS-register</label>
       <TextInput type="search" name="q" id="banner-search" className={styles.heroSearchInput} placeholder="Zoek in de Kennisbank, API- en OSS-register" />
+      {/* @ts-ignore RHC component bug `label` not in type */}
       <IconButton label="Zoeken" type="submit" className={styles.heroSearchButton}>
         <IconZoekInline />
       </IconButton>
@@ -46,7 +47,7 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): JSX.Element {
+export default function Home(): React.JSX.Element {
   return (
     <Layout
       title={`Ontwikkelaarsportaal van de Nederlandse Overheid`}

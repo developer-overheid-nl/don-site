@@ -7,7 +7,7 @@ type FeatureItem = {
   title: string;
   image?: string;
   alt?: string;
-  description: JSX.Element;
+  description: React.JSX.Element;
   link: string;
   label?: string;
 };
@@ -69,7 +69,7 @@ function Feature({title, image, alt, description, link, label}: FeatureItem) {
   );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
