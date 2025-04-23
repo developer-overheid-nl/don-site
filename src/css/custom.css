@@ -119,6 +119,7 @@
   --ifm-breadcrumb-color-active: var(--don-robijnrood-500);
   --ifm-toc-border-color: var(--don-robijnrood-200);
 
+  --ifm-footer-link-hover-color: var(--ifm-color-primary-lightest);
   --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 3);
 
   --ifm-code-font-size: 95%;
