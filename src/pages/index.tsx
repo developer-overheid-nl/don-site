@@ -35,7 +35,7 @@ function HomepageHeader() {
       ></script>
       <div className="container">
         <p className={styles.intro}>
-          Eén plek met informatie, bronnen, tools en codevoorbeelden van de <strong className={styles.intro__highlight}>overheid voor developers</strong> over 
+          Eén plek met informatie, bronnen, tools en codevoorbeelden van de&nbsp;<strong className={styles.intro__highlight}>overheid voor developers</strong> over 
           privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.
         </p>
         {
