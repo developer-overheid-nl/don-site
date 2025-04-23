@@ -112,12 +112,14 @@
 
   --ifm-link-color: var(--ifm-color-primary);
 
+  --ifm-navbar-height: auto;
   --ifm-navbar-shadow: none;
   --ifm-navbar-item-padding-horizontal: 0.5rem;
 
   --ifm-breadcrumb-color-active: var(--don-robijnrood-500);
   --ifm-toc-border-color: var(--don-robijnrood-200);
 
+  --ifm-footer-link-hover-color: var(--ifm-color-primary-lightest);
   --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical)* 3);
 
   --ifm-code-font-size: 95%;
@@ -134,12 +136,17 @@ html {
 
 .navbar {
   border-bottom: 1px solid var(--ifm-color-primary);
+  padding-bottom: 0;
 }
 
 .navbar__inner {
   margin: 0 auto;
   max-width: var(--ifm-container-width);
-  padding: 0 var(--ifm-spacing-horizontal);
+  padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-spacing-horizontal);
+}
+
+.navbar__brand {
+  padding: var(--ifm-navbar-item-padding-vertical) 0;
 }
 
 .navbar__icon-link {
@@ -148,6 +155,15 @@ html {
 
 .navbar__icon-link:hover {
   fill: var(--ifm-navbar-link-hover-color);
+}
+
+.navbar__items {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.navbar__items--right {
+  flex: 1;
 }
 
 @media (min-width: 90rem) { /* 1440px */

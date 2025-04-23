@@ -91,19 +91,20 @@ Voorbeeld van een geldig `info.servers` object:
 
 ### HTTP methods
 
-| Method | Wanneer te gebruiken |
-| - | - |
-| POST | Nieuwe resource maken |
-| GET | Resource of collectie ophalen |
-| PUT | Resource in zijn geheel vervangen |
-| PATCH | Resource gedeeltelijk vervangen |
-| DELETE | Resource verwijderen|
+| Method | Wanneer te gebruiken | Voorbeeld | Omschrijving |
+| - | - | - | - |
+| GET | Collectie ophalen | `GET /rijksmonumenten` | Lijst van rijksmonumenten ophalen |
+| GET | Resource ophalen | `GET /rijksmonumenten/12` | Rijksmonument #12 ophalen |
+| POST | Nieuwe resource maken | `POST /rijksmonumenten` | Nieuw rijksmonument maken |
+| PUT | Resource in zijn geheel vervangen | `PUT /rijksmonumenten/12` | Rijksmonument #12 in zijn geheel vervangen |
+| PATCH | Resource gedeeltelijk vervangen | `PATCH /rijksmonumenten/12` | Rijksmonument #12 gedeeltelijk vervangen |
+| DELETE | Resource verwijderen | `DELETE /rijksmonumenten/12` | Rijksmonument #12 verwijderen |
 
 ### Status codes
 
 | Status code | Omschrijving | Wanneer te gebruiken |
 | - | - | - |
-| 200 | OK | GET, PUT, PATCH, DELETE, als de request succesvol is uitgevoerd |
+| 200 | Ok | GET, PUT, PATCH, DELETE, als de request succesvol is uitgevoerd |
 | 201 | Created | POST, als nieuwe resource direct wordt teruggegeven |
 | 202 | Accepted | Als de request een asynchrone response triggert, bijvoorbeeld een POST die niet direct verwerkt wordt |
 | 400 | Bad request  | Als de request invalid is, meestal bij een POST, PUT of PATCH met een invalid body |
@@ -122,7 +123,6 @@ Voorbeeld van een geldig `info.servers` object:
   - ⛔️**Fout**: `https://api/v1/personen?bsn=123234345456`
 
 ## Tools
-
 
 - [API Design Rules Linter](../tools/api-design-rules-linter)
 - [API Design Rules Validator](../tools/api-design-rules-validator)
