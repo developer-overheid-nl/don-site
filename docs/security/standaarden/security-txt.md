@@ -11,7 +11,7 @@ De security.txt standaard zorgt ervoor dat ethische hackers laagdrempelig kwetsb
 
 Het bestandje wordt op de volgende plek geplaatst:
 
-`https://voorbeeld.nl/.well_known/security.txt`
+`https://voorbeeld.nl/.well-known/security.txt`
 
 ## Genereren met een tool
 
