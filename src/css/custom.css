@@ -166,6 +166,22 @@ html {
   flex: 1;
 }
 
+.alert a {
+  --ifm-alert-border-color: var(--ifm-color-gray-700);
+}
+
+.markdown p a, .markdown li a, .markdown table a {
+  --ifm-link-decoration: underline;
+}
+
+.alert a {
+  --ifm-alert-border-color: var(--ifm-color-gray-700);
+}
+
+.markdown p a, .markdown li a, .markdown table a {
+  --ifm-link-decoration: underline;
+}
+
 @media (min-width: 90rem) { /* 1440px */
   .navbar__inner {
       max-width: var(--ifm-container-width-xl);
