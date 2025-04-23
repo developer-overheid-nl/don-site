@@ -124,6 +124,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+html {
+  scroll-padding-top: calc(var(--ifm-navbar-height) + 4px);
+}
+
 .theme-doc-sidebar-container {
   --ifm-toc-border-color: var(--ifm-color-primary);
 }
