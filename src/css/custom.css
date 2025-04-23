@@ -150,7 +150,7 @@ html {
   fill: var(--ifm-navbar-link-hover-color);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 90rem) { /* 1440px */
   .navbar__inner {
       max-width: var(--ifm-container-width-xl);
   }
@@ -162,7 +162,7 @@ html {
   align-items: center;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) { /* 800px */
   .ro-header {
     display: grid;
     grid-template-columns: calc(50% - 25px) 50px calc(50% - 25px);

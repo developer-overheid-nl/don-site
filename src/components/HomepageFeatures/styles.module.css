@@ -1,4 +1,6 @@
 .features {
+  --rhc-card-as-link-inline-size: 20.5rem; /* Firefox needs rem */
+
   display: flex;
   align-items: center;
   padding: 3rem 0;
