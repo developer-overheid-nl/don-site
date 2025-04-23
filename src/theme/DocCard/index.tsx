@@ -4,7 +4,8 @@ import Link from '@docusaurus/Link';
 import {
   useDocById,
   findFirstSidebarItemLink,
-} from '@docusaurus/plugin-content-docs/src/client';
+  // @ts-ignore
+} from '@docusaurus/plugin-content-docs/client';
 import {usePluralForm} from '@docusaurus/theme-common';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import {translate} from '@docusaurus/Translate';
