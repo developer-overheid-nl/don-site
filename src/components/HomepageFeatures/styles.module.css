@@ -11,14 +11,14 @@
   gap: 0.5rem;
 }
 
-@media (min-width: 381px) {
+@media (min-width: 23.813rem) { /* 381px */
   .row {
     gap: 1rem;
     align-items: center;
   }
 }
 
-@media (min-width: 721px) {
+@media (min-width: 45.063rem) { /* 721px */
   .row {
     flex-direction: row;
     align-items: stretch;
@@ -27,7 +27,7 @@
   }
 }
 
-@media (min-width: 1065px) {
+@media (min-width: 66.563rem) { /* 1065px */
   .row {
     justify-content: space-between;
     flex-wrap: nowrap;
