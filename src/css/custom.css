@@ -166,6 +166,24 @@ html {
   flex: 1;
 }
 
+.pagination-nav__link {
+  fill: var(--ifm-link-color);
+}
+
+.pagination-nav__label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-nav__link--next .pagination-nav__label {
+  justify-content: flex-end;
+}
+
+.pagination-nav__link--prev .pagination-nav__label::before,
+.pagination-nav__link--next .pagination-nav__label::after {
+  content: none;
+}
+
 .alert a {
   --ifm-alert-border-color: var(--ifm-color-gray-700);
 }
