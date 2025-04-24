@@ -1,6 +1,5 @@
 import Layout from "@theme/Layout";
 import { ActiveTeam } from "../components/TeamProfileCards";
-import { HomepageHeader } from ".";
 
 export default function TeamPage(): React.JSX.Element {
   return (
