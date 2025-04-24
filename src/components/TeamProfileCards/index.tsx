@@ -61,7 +61,7 @@ function TeamProfileCard({
             )}
             {mastadonUrl && (
               <Link className="button button--secondary" href={mastadonUrl}>
-                Mastadon
+                Mastodon
               </Link>
             )}
           </div>
