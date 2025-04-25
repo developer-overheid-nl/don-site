@@ -27,7 +27,7 @@ function TeamProfileCard({
   githubUrl,
   linkedInUrl,
   mastadonUrl,
-  icon
+  icon,
 }: ProfileProps) {
   return (
     <div className={className}>
@@ -77,8 +77,9 @@ function TeamProfileCardCol(props: ProfileProps) {
   );
 }
 function getAvatarUrl(githubUrl?: string, icon?: string) {
-  if (githubUrl) return `${githubUrl}.png`;
-  return icon;
+  if (icon) return icon;
+  else if (githubUrl) return `${githubUrl}.png`;
+  return "";
 }
 
 export function ActiveTeam(): ReactNode {
@@ -90,35 +91,32 @@ export function ActiveTeam(): ReactNode {
         linkedInUrl="https://www.linkedin.com/in/dimitrivanhees/"
       >
         <Translate id="team.profile.Joel Marcey.body">
-          Product owner van Developer overheid.
+          Product owner van Developer Overheid
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Tom Ootes"
-        githubUrl="https://github.com/tomootes"
-        linkedInUrl="https://www.linkedin.com/in/tootes/"
-        mastadonUrl="https://hostux.social/@tomootes"
+        name="Frank Terpstra"
+        linkedInUrl="https://www.linkedin.com/in/frank-terpstra-1bb5096/"
+        githubUrl="https://github.com/fterpstra"
+        icon="/img/team/frank-terpstra.jpg"
       >
-        <Translate id="team.profile.Alexey Pyltsyn.body">
-          Content creator bij Developer overheid
-        </Translate>
+        <Translate>Architect Standaarden bij Developer Overheid</Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Jaap-Hein Wester"
         githubUrl="https://github.com/MrSkippy"
         linkedInUrl="https://www.linkedin.com/in/jaapheinwester/"
       >
-        <Translate id="team.profile.Alexey Pyltsyn.body">
-          Front-end developer bij Developer overheid
-        </Translate>
+        <Translate>Front-end developer bij Developer Overheid</Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Matthijs Hovestad"
-        githubUrl="https://github.com/pasibun"
-        linkedInUrl="https://www.linkedin.com/in/matthijs-hovestad-a123898b/"
+        name="Joost Farla"
+        linkedInUrl="https://www.linkedin.com/in/joostfarla/"
+        githubUrl="https://github.com/joostfarla"
+        icon="/img/team/joost-farla.jpg"
       >
-        <Translate id="team.profile.Alexey Pyltsyn.body">
-          Backend developer bij Developer overheid
+        <Translate>
+          Architect en Implementatieondersteuner bij Developer Overheid
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
@@ -126,18 +124,30 @@ export function ActiveTeam(): ReactNode {
         githubUrl="https://github.com/mrtn78"
         linkedInUrl="https://www.linkedin.com/in/martinvanderplas/"
       >
-        <Translate id="team.profile.Alexey Pyltsyn.body">
-          Architect APIs bij Developer overheid
-        </Translate>
+        <Translate>Architect APIs bij Developer Overheid</Translate>
+      </TeamProfileCardCol>
+      <TeamProfileCardCol
+        name="Matthijs Hovestad"
+        githubUrl="https://github.com/pasibun"
+        linkedInUrl="https://www.linkedin.com/in/matthijs-hovestad-a123898b/"
+      >
+        <Translate>Backend developer bij Developer Overheid</Translate>
+      </TeamProfileCardCol>
+      <TeamProfileCardCol
+        name="Tom Ootes"
+        githubUrl="https://github.com/tomootes"
+        linkedInUrl="https://www.linkedin.com/in/tootes/"
+        mastadonUrl="https://hostux.social/@tomootes"
+        icon="/img/team/tom-ootes.png"
+      >
+        <Translate>Developer Advocate bij Developer Overheid</Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Vivian van der Heijden-Hanssen"
         linkedInUrl="https://www.linkedin.com/in/vivianvanderheydenhanssen/"
-        icon="https://ca.slack-edge.com/T055ZJ26M-U088PG4EAMT-64600c8cfa33-192"
+        icon="/img/team/vivian-van-der-heijden-hanssen.jpg"
       >
-        <Translate id="team.profile.Alexey Pyltsyn.body">
-          Program Manager bij Developer overheid
-        </Translate>
+        <Translate>Program Manager bij Developer Overheid</Translate>
       </TeamProfileCardCol>
     </div>
   );
