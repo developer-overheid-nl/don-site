@@ -106,6 +106,7 @@ export function ActiveTeam(): ReactNode {
         name="Jaap-Hein Wester"
         githubUrl="https://github.com/MrSkippy"
         linkedInUrl="https://www.linkedin.com/in/jaapheinwester/"
+        icon="/img/team/jaap-hein-wester.jpg"
       >
         <Translate>Front-end developer bij Developer Overheid</Translate>
       </TeamProfileCardCol>
