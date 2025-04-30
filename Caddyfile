@@ -18,7 +18,7 @@
 		Content-Security-Policy "
 			default-src 'self';
       		script-src 'self' 'sha256-pBkmluod9Ko4GzDfbWgKM/wxzujFXUdGVOePkwOQT+c=' https://gc.zgo.at/count.js;
-			img-src 'self' https://www.geonovum.nl https://github.com https://social.overheid.nl https://hostux.social https://i.vimeocdn.com;
+			img-src 'self' data: https://www.geonovum.nl https://github.com https://social.overheid.nl https://hostux.social https://i.vimeocdn.com;
 			frame-src https://player.vimeo.com;"
       	Cross-Origin-Opener-Policy: "same-origin"
         Cross-Origin-Resource-Policy: "same-site"
