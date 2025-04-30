@@ -12,7 +12,7 @@ import type { SVGProps } from "react";
  * daarvoor gebruik mogen maken van de huisstijl en het logo hebben 
  * toestemming. Maar in alle andere gevallen is ieder gebruik verboden. 
  */
-const IconRollerdexkalenderMetVlakken = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" id="Laag_1" viewBox="0 0 64 64" width="1em" height="1em" data-icon-name="rollerdexkalender-met-vlakken" {...props}><defs><clipPath id="clippath"><path d="M0 0h64v64H0z" className="cls-1" /></clipPath><clipPath id="clippath-1"><path d="M0 0h64v64H0z" className="cls-1" /></clipPath><style>{".cls-1{fill:none}"}</style></defs><g style={{
+const IconRollerdexkalenderMetVlakken = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" id="Laag_1" viewBox="0 0 64 64" width="1em" height="1em" data-icon-name="rollerdexkalender-met-vlakken" {...props}><defs><clipPath id="clippath"><path d="M0 0h64v64H0z" fill="none" /></clipPath><clipPath id="clippath-1"><path d="M0 0h64v64H0z" fill="none" /></clipPath></defs><g style={{
     clipPath: "url(#clippath)"
   }}><g style={{
       clipPath: "url(#clippath-1)"

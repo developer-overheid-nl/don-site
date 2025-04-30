@@ -40,7 +40,9 @@ EXPOSE 3000
 CMD ["pnpm", "serve", "--host", "0.0.0.0", "--no-open"]
 
 # Stage 3b: Serve with Caddy.
-FROM caddy:2.9.1-alpine AS caddy
+FROM caddy:2.10.0-alpine AS caddy
+## Expose the port that Docusaurus will run on.
+EXPOSE 3000
 ## Copy the Caddyfile.
 COPY --from=prod /opt/docusaurus/Caddyfile /etc/caddy/Caddyfile
 ## Copy the Docusaurus build output.
