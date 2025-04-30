@@ -27,8 +27,8 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0(@types/react@19.1.2)(react@18.3.1)
       '@rijkshuisstijl-community/components-react':
-        specifier: 1.0.4
-        version: 1.0.4(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       algoliasearch-helper:
         specifier: ^3.24.3
         version: 3.24.3(algoliasearch@5.20.1)
@@ -67,8 +67,8 @@ importers:
         specifier: 3.7.0
         version: 3.7.0(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@rijkshuisstijl-community/design-tokens':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -79,8 +79,8 @@ importers:
   proprietary/design-tokens:
     devDependencies:
       '@rijkshuisstijl-community/design-tokens':
-        specifier: ^1.1.0
-        version: 1.1.0
+        specifier: ^1.2.0
+        version: 1.2.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1358,14 +1358,14 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@rijkshuisstijl-community/components-react@1.0.4':
-    resolution: {integrity: sha512-mowLPKScycy43GMMt3vOabzO5VrxS6EkagsB5teBzO0Y9dZT1Y+b+Um4jEnQCle06eb/Fnin2SUPHm0XBcPeJw==}
+  '@rijkshuisstijl-community/components-react@1.1.0':
+    resolution: {integrity: sha512-7HY/yyiLygkB1s2ehjDWySjChlXis+6pZgOY4XFXzPgLme0yDF797HjZPeUpMVvs2Nv+zV5qOpVoZ+E2Y6miiw==}
     peerDependencies:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
 
-  '@rijkshuisstijl-community/design-tokens@1.1.0':
-    resolution: {integrity: sha512-5nBchMOM/LSa9Dky9A12UGhPNXSToU4F1dPeniIAVgIypWKQ3PRFlat9MCY0tsWGyUZ/yloUHWtPUjJLR0BR4g==}
+  '@rijkshuisstijl-community/design-tokens@1.2.0':
+    resolution: {integrity: sha512-RhNvfTtWiqpENxM8wzF9f8b6XWWFnZ0IBnpDD/Sx8J1LgpzYjV1itEYN5Abp1HXhsR/PaQBdtYs8FJEt+hstaA==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -8426,7 +8426,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@rijkshuisstijl-community/components-react@1.0.4(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@rijkshuisstijl-community/components-react@1.1.0(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nl-design-system-candidate/link-react': 1.1.1(@babel/runtime@7.27.0)(react@18.3.1)
       '@nl-design-system-candidate/skip-link-react': 1.1.1(@babel/runtime@7.27.0)(react@18.3.1)
@@ -8435,7 +8435,7 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/runtime'
 
-  '@rijkshuisstijl-community/design-tokens@1.1.0': {}
+  '@rijkshuisstijl-community/design-tokens@1.2.0': {}
 
   '@sideway/address@4.1.5':
     dependencies:
