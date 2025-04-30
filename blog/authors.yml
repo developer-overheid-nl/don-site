@@ -78,7 +78,7 @@ digilab:
 kennisplatform-apis:
   name: Kennisplatform API's
   title: Strategische en tactische vraagstukken rond het ontwikkelen van API's
-  image_url: https://developer.overheid.nl/static/images/logo_icon_kpa.1787d5b5302a.png
+  image_url: /static/images/logo_icon_kpa.1787d5b5302a.png
   page: true
   socials:
     url: https://apigov.nl
