@@ -67,8 +67,8 @@ importers:
         specifier: 3.7.0
         version: 3.7.0(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@rijkshuisstijl-community/design-tokens':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -79,8 +79,8 @@ importers:
   proprietary/design-tokens:
     devDependencies:
       '@rijkshuisstijl-community/design-tokens':
-        specifier: ^1.1.0
-        version: 1.1.0
+        specifier: ^1.2.0
+        version: 1.2.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1364,8 +1364,8 @@ packages:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
 
-  '@rijkshuisstijl-community/design-tokens@1.1.0':
-    resolution: {integrity: sha512-5nBchMOM/LSa9Dky9A12UGhPNXSToU4F1dPeniIAVgIypWKQ3PRFlat9MCY0tsWGyUZ/yloUHWtPUjJLR0BR4g==}
+  '@rijkshuisstijl-community/design-tokens@1.2.0':
+    resolution: {integrity: sha512-RhNvfTtWiqpENxM8wzF9f8b6XWWFnZ0IBnpDD/Sx8J1LgpzYjV1itEYN5Abp1HXhsR/PaQBdtYs8FJEt+hstaA==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -8435,7 +8435,7 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/runtime'
 
-  '@rijkshuisstijl-community/design-tokens@1.1.0': {}
+  '@rijkshuisstijl-community/design-tokens@1.2.0': {}
 
   '@sideway/address@4.1.5':
     dependencies:
