@@ -19,7 +19,7 @@
 			default-src 'self';
       		script-src 'self' 'sha256-pBkmluod9Ko4GzDfbWgKM/wxzujFXUdGVOePkwOQT+c=' https://gc.zgo.at/count.js;
 			img-src 'self' data: https://www.geonovum.nl https://social.overheid.nl https://github.com https://avatars.githubusercontent.com https://hostux.social https://i.vimeocdn.com;
-			style-src 'self' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' 'sha256-oGHRcJrO0KPrO3JnY8jb+V/gP5xqLcRO05mdZ4I7IIk=';
+			style-src 'self' 'sha256-DPptftRbDC0ow/ZdJW8fpmEcrpsn75dOuGlyzJJwTgc=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=';
 			frame-src https://player.vimeo.com;"
       	Cross-Origin-Opener-Policy: "same-origin"
         Cross-Origin-Resource-Policy: "same-site"
