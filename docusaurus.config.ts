@@ -241,7 +241,7 @@ const config: Config = {
               html: `
               <div class="sponsors">
                 <!-- temporary forced-colors fix untill good BZK svg-logo -->
-                <img class="sponsors__logo" src="/img/logo-bzk.png" alt="Logo van Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" style="forced-color-adjust: none; background-color: var(--ifm-footer-background-color);" />
+                <img class="sponsors__logo bzk" src="/img/logo-bzk.png" alt="Logo van Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" />
                 <svg class="sponsors__logo vng" viewBox="150 15 96 50" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fill-rule="evenodd">
                     <g class="brdr" transform="translate(187.931 15)">

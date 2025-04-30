@@ -277,6 +277,11 @@ html {
   max-width: 16rem;
   max-height: 4rem;
 
+  &.bzk {
+    forced-color-adjust: none;
+    background-color: var(--ifm-footer-background-color);
+  }
+
   &.vng {
     .abbr { color: #f5f5f5; }
     .brdr { color: #009FE4; }
