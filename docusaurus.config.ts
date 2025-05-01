@@ -163,7 +163,7 @@ const config: Config = {
       externalUrlRegex:
         "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
       contextualSearch: false,
-      searchPagePath: 'zoeken', // DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
+      searchPagePath: false, // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
     },
     // Replace with your project's social card
     image: "img/don-social-card.png",
