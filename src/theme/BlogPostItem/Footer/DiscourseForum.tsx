@@ -16,8 +16,8 @@ export default function DiscourseForum({ discourseEmbedUrl }: { discourseEmbedUr
 
   return (
     <>
-      <meta name='discourse-username' content='developer.overheid' />
       <div id="discourse-comments"></div>
+      <meta name='discourse-username' content='developer.overheid' />
     </>
   );
 }

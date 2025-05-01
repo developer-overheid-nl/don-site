@@ -11,11 +11,15 @@ type Props = WrapperProps<typeof FooterType>;
 
 export default function FooterWrapper(props: Props): ReactNode {
   const { siteConfig } = useDocusaurusContext();
-  const location = useLocation();
+  const { pathname } = useLocation();
+  const blogItemRegex = /\/blog\/\d{4}\/\d{2}\/\d{2}\//g;
   
   return (
     <>
-      <DiscourseForum discourseEmbedUrl={`${siteConfig.url}${useBaseUrl(location.pathname)}`} />
+      { blogItemRegex.test(pathname) ? 
+        <DiscourseForum discourseEmbedUrl={`${siteConfig.url}${useBaseUrl(pathname)}`} /> :
+        null
+      }
       <Footer {...props} />
     </>
   );
