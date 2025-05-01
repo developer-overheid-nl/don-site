@@ -11,3 +11,13 @@
 .lowbar {
   color: #8FCAE7;
 }
+
+@media (forced-colors: active) {
+  .rsaquo { color: #0F172A }
+  .lowbar { color: #475569 }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+  .rsaquo { color: #E2E8F0 }
+  .lowbar { color: #F8FAFC }
+}
