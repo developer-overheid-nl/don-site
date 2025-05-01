@@ -1,8 +1,9 @@
 // import { themes as prismThemes } from "prism-react-renderer";
-import docusaurusTheme from "./src/utils/prismLight"
-import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import type { Config } from "@docusaurus/types";
 import remarkDirectiveSugar from "remark-directive-sugar";
+import mermaidPlugin from "./src/plugins/mermaid";
+import docusaurusTheme from "./src/utils/prismLight";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -68,10 +69,7 @@ const config: Config = {
     defaultLocale: "nl",
     locales: ["nl"],
   },
-  markdown: {
-    mermaid: true,
-  },
-  themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
+  themes: ["docusaurus-theme-search-typesense"],
   plugins: [
     [
       "@docusaurus/plugin-content-docs",
@@ -100,6 +98,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/developer-overheid-nl/don-site/tree/main/",
+          rehypePlugins: [mermaidPlugin],
         },
         blog: {
           blogSidebarCount: 0,
@@ -119,6 +118,7 @@ const config: Config = {
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "throw",
+          rehypePlugins: [mermaidPlugin],
         },
         pages: {},
         sitemap: {},
