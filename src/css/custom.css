@@ -290,14 +290,20 @@ html {
   background-color: var(--ifm-footer-background-color);
 }
 
-.sponsors__logo__vng {
-  .abbr { color: #f5f5f5; }
-  .brdr { color: #009FE4; }
+.sponsors__logo__vng .abbr {
+  color: #f5f5f5;
 }
 
-.sponsors__logo__forum {
-  .cls-1{ fill: #e1710d; }
-  .cls-2{ fill: #fefdfd; }
+.sponsors__logo__vng .brdr {
+  color: #009FE4;
+}
+
+.sponsors__logo__forum .cls-1 {
+  fill: #e1710d;
+}
+
+.sponsors__logo__forum .cls-2 {
+  fill: #fefdfd;
 }
 
 @media (forced-colors: active) {
