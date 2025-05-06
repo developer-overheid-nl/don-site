@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@rijkshuisstijl-community/components-react@1.1.0':
+    hash: hfzy6ewnpwd6ilxoudutqhnefi
+    path: patches/@rijkshuisstijl-community__components-react@1.1.0.patch
+
 importers:
 
   .:
@@ -28,7 +33,7 @@ importers:
         version: 3.1.0(@types/react@19.1.2)(react@18.3.1)
       '@rijkshuisstijl-community/components-react':
         specifier: 1.1.0
-        version: 1.1.0(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 1.1.0(patch_hash=hfzy6ewnpwd6ilxoudutqhnefi)(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       algoliasearch-helper:
         specifier: ^3.24.3
         version: 3.24.3(algoliasearch@5.20.1)
@@ -8426,7 +8431,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@rijkshuisstijl-community/components-react@1.1.0(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@rijkshuisstijl-community/components-react@1.1.0(patch_hash=hfzy6ewnpwd6ilxoudutqhnefi)(@babel/runtime@7.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nl-design-system-candidate/link-react': 1.1.1(@babel/runtime@7.27.0)(react@18.3.1)
       '@nl-design-system-candidate/skip-link-react': 1.1.1(@babel/runtime@7.27.0)(react@18.3.1)
