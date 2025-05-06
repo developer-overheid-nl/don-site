@@ -49,7 +49,7 @@ Op je cluster wil je een container hebben waar je bestanden kan wegschrijven. Bi
 De voorwaarden voor een project om op een Haven Cluster te kunnen draaien zijn:
 
 - De opzet moet containerized zijn (bijvoorbeeld met Docker)
-- Het project moet Helm charts bevatten
+- Het project moet Kubernetes manifests bevatten (bijvoorbeeld op basis van Helm)
 - Er moet een endpoint beschikbaar zijn voor metrics
 - De applicaties moeten kunnen schalen naar meerdere replica's
 
