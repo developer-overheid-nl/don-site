@@ -1,0 +1,26 @@
+diff --git a/dist/index.cjs.js b/dist/index.cjs.js
+index 6f963339365453a0376edadc2f315e2482b40089..65fe187f5540fea78e8157b3e43e02f2286bb9af 100644
+--- a/dist/index.cjs.js
++++ b/dist/index.cjs.js
+@@ -3802,7 +3802,7 @@ const Image = ({
+   className,
+   alt,
+   ...restProps
+-}) => alt && jsxRuntime.jsx(Image$1, {
++}) => jsxRuntime.jsx(Image$1, {
+   alt: alt,
+   ...restProps,
+   photo: true,
+diff --git a/dist/index.esm.js b/dist/index.esm.js
+index 2d238c9bddf783e68c217b05c8cafd8e6f410fcf..7840ec0ca57a0322879b6c9b7a27ab9e616c51d7 100644
+--- a/dist/index.esm.js
++++ b/dist/index.esm.js
+@@ -3800,7 +3800,7 @@ const Image = ({
+   className,
+   alt,
+   ...restProps
+-}) => alt && jsx(Image$1, {
++}) => jsx(Image$1, {
+   alt: alt,
+   ...restProps,
+   photo: true,
