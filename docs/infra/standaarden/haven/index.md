@@ -30,20 +30,29 @@ De learning curve van Kubernetes is behoorlijk steil. De Haven-standaard waarbor
 Bij aanbestedingen is duidelijkheid cruciaal. Wanneer een gemeentelijke inkoper om een "Haven Compliant" applicatie of cluster vraagt, weet de leverancier precies wat er opgeleverd moet worden, wat leidt tot efficiëntere offertes en betere afstemming.
 
 ### ✅ Security
-De checks waaruit de Haven standaard bestaat, bestaan voor een deel uit security-checks. 
+De checks waaruit de Haven-standaard bestaat, bestaan voor een deel uit security-checks. 
 
 ### ✅ Voorkomen van vendor lock-in
-Omdat Haven open source is kan elke leverancier die daar oren naar heeft een Haven Compliant Kubernetes Cluster opleveren. 
+Omdat de Haven-standaard open source is en er een [compliancy-checker](./haven-compliancy-checker.md) voor handen is, kan elke leverancier die daar oren naar heeft een Haven-compliant Kubernetes Cluster opleveren.
 
 ### ✅ Haven is een levende standaard
-Haven is een standaard die door verschillende gemeentes en leveranciers van gemeentes in de praktijk wordt gebruikt. Veel Leveranciers geven aan dat ze blij zijn met de Haven standaard omdat het ze duidelijkheid geeft bij de communicatie met gemeenten. 
+Haven is een standaard die door verschillende gemeentes en leveranciers van gemeentes in de praktijk wordt gebruikt. Veel Leveranciers geven aan dat ze blij zijn met de Haven-standaard omdat het ze duidelijkheid geeft bij de communicatie met gemeenten.
 
-## Kan ik met Haven altijd pijnloos overstappen van bijvoorbeeld AWS naar Azure?
-Als organisatie is het goed om na te denken over digitale soevereiniteit. Hoe meer gebruik je maakt van componenten waar je geen controle over hebt, hoe minder wendbaar je bent. Door je Kubernetes clusters op basis van de Haven standaard in te richten zet je een stap in de goede richting. Echter is het **geen keurmerk voor totale soevereiniteit**.
+## Haven-compliant !== direct compleet soeverein
 
-De volgende casus illustreert een situatie waarin je Haven compliant bent, maar toch afhankelijk bent van platform-specifieke functionaliteit:
+Als organisatie is het goed om na te denken over digitale soevereiniteit. Hoe meer gebruik je maakt van componenten waar je geen controle over hebt, hoe minder wendbaar je bent. Door je Kubernetes clusters op basis van de Haven-standaard in te richten zet je een stap in de goede richting. Echter is het **geen keurmerk voor totale soevereiniteit**.
 
-Op je cluster wil je een container hebben waar je bestanden kan wegschrijven. Binnen Kubernetes is het dan raadzaam om te werken met een `StorageClass`. Die StorageClass mag vervolgens wel geïmplementeerd zijn met een Azure driver voor Azure Blob Storage of AWS S3 Bucket. Op dat moment maak je zelf de keuze om een vendor-specifiek product te gebruiken. De Haven standaard dwingt niet af dat je dit niet doet.
+De volgende casus illustreert een situatie waarin je Haven-compliant bent, maar toch afhankelijk bent van platform-specifieke functionaliteit:
+
+- Op je cluster wil je een container hebben waar je bestanden kan wegschrijven. Binnen Kubernetes is het dan raadzaam om te werken met een `StorageClass`.
+- Die StorageClass mag volgens de Haven-standaard prima geïmplementeerd zijn met een Azure driver voor Azure Blob Storage of een AWS S3 Bucket.
+- Op dat moment maak je zelf de keuze om een vendor-specifiek product te gebruiken, de Haven-standaard dwingt niet af dat je dit niet doet.
+
+:::info[Met Haven niet direct compleet soeverein]
+
+Als je Haven-compliant bent, betekent dit niet direct dat je volledig platform-agnostisch bezig bent. De standaard staat het namelijk toe om platform specifieke functionaliteiten te gebruiken zoals `Azure Blob Storage` of `AWS S3 Buckets` voor file storage.
+
+:::
 
 ## Hoe maak ik mijn applicatie geschikt voor een Haven Cluster?
 De voorwaarden voor een project om op een Haven Cluster te kunnen draaien zijn:
@@ -56,7 +65,7 @@ De voorwaarden voor een project om op een Haven Cluster te kunnen draaien zijn:
 Op dit moment is er nog geen tooling of validator die checkt of je applicatie voldoet aan de voorwaarden om te draaien op een Haven Cluster.
 
 ## Haven Compliancy Checker
-Deze CLI Tool stelt je in staat om pro-actief je Kubernetes cluster Haven Compliant te houden.
+Deze CLI Tool stelt je in staat om pro-actief je Kubernetes cluster Haven-compliant te houden.
 
 - [Meer info over Haven Compliancy Checker](./haven-compliancy-checker)
 
