@@ -38,7 +38,7 @@ Omdat de Haven-standaard open source is en er een [compliancy-checker](./haven-c
 ### ✅ Haven is een levende standaard
 Haven is een standaard die door verschillende gemeentes en leveranciers van gemeentes in de praktijk wordt gebruikt. Veel Leveranciers geven aan dat ze blij zijn met de Haven-standaard omdat het ze duidelijkheid geeft bij de communicatie met gemeenten.
 
-## Haven-compliant !== direct compleet soeverein
+## Haven-compliant != direct compleet soeverein
 
 Als organisatie is het goed om na te denken over digitale soevereiniteit. Hoe meer gebruik je maakt van componenten waar je geen controle over hebt, hoe minder wendbaar je bent. Door je Kubernetes clusters op basis van de Haven-standaard in te richten zet je een stap in de goede richting. Echter is het **geen keurmerk voor totale soevereiniteit**.
 
