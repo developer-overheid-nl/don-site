@@ -50,9 +50,13 @@ De volgende casus illustreert een situatie waarin je Haven-compliant bent, maar 
 
 :::info[Met Haven niet direct compleet soeverein]
 
-Als je Haven-compliant bent, betekent dit niet direct dat je volledig platform-agnostisch bezig bent. De standaard staat het namelijk toe om platform specifieke functionaliteiten te gebruiken zoals `Azure Blob Storage` of `AWS S3 Buckets` voor file storage.
+Als je Haven-compliant bent, betekent dit niet direct dat je volledig platform-agnostisch bezig bent. De standaard staat het namelijk nog steeds toe om bijvoorbeeld platform specifieke functionaliteiten te gebruiken zoals `Azure Blob Storage` of `AWS S3 Buckets` voor file storage.
 
 :::
+
+### [Haven+](./haven-plus): meer soevereiniteit door componenten als vervanging voor Azure/ AWS services
+
+Gelukkig biedt het Haventeam een oplossing voor het bovenstaande probleem: een suite van componenten die functionaliteiten zoals `monitoring`, `authenticatie`, `databases`, `certificaatbeheer` en `secret management` voor je regelen. Hierdoor hoef je geen AWS- of Azure-specifieke functionaliteit te gebruiken.
 
 ## Hoe maak ik mijn applicatie geschikt voor een Haven Cluster?
 De voorwaarden voor een project om op een Haven Cluster te kunnen draaien zijn:
