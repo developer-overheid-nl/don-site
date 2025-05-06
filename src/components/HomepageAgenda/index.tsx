@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 import IconKalenderInline from '@site/src/theme/icons/IconKalenderInline';
 import IconLocatiemarkerInline from '@site/src/theme/icons/IconLocatiemarkerInline';
 
-const NUM_EVENTS = 4;
+const NUM_EVENTS = 6;
 const HEADING_LEVEL = 2;
 
 function formatDate(start_dateString: string, end_dateString: string) {
