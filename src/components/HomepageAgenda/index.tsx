@@ -55,7 +55,7 @@ type HomepageAgendaProps = {
   headingLevel?: HeadingProps['level'];
 }
 
-export default function HomepageAgenda(props: HomepageAgendaProps): JSX.Element {
+export default function HomepageAgenda(props: HomepageAgendaProps): React.JSX.Element {
   const [agenda, setAgenda] = useState<Record<string, any>[] | null>(null);
   const { numEvents = NUM_EVENTS, headingLevel = HEADING_LEVEL } = props;
 

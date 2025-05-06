@@ -34,6 +34,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "data/index",
+          label: "Data",
+        },
+        {
+          type: "doc",
           id: "open-source/index",
           label: "Open Source",
         },

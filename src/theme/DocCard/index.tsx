@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import {
   useDocById,
   findFirstSidebarItemLink,
+  // @ts-ignore
 } from '@docusaurus/plugin-content-docs/client';
 import {usePluralForm} from '@docusaurus/theme-common';
 import isInternalUrl from '@docusaurus/isInternalUrl';
@@ -70,13 +71,13 @@ function CardLayout({
       <Heading
         as="h3"
         className={clsx('text--truncate', styles.cardTitle)}
-        title={title}>
+      >
         {icon} {title}
       </Heading>
       {description && (
         <p
           className={clsx('text--truncate', styles.cardDescription)}
-          title={description}>
+        >
           {description}
         </p>
       )}

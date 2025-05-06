@@ -8,19 +8,68 @@
   text-align: start;
   position: relative;
   overflow: hidden;
+  --utrecht-focus-outline-color: var(--ifm-color-white);
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 62.25rem) { /* 996px */
   .heroBanner {
     padding: 2rem;
   }
+}
+
+.heroSearch {
+  display: flex;
+  max-width: 60rem;
+  color: var(--ifm-color-white);
+  --utrecht-focus-inverse-outline-color: var(--ifm-hero-background-color);
+}
+
+.heroSearchInput.heroSearchInput {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-width: 2px;
+  border-color: var(--ifm-color-black);
+  min-width: 90%;
+}
+
+.heroSearchInput.heroSearchInput:focus-visible {
+  z-index: var(--utrecht-stack-focus-z-index, 1);
+}
+
+.heroSearchButton.heroSearchButton {
+  --utrecht-button-border-width: 2px;
+  --utrecht-button-subtle-background-color: var(--ifm-color-black);
+  --utrecht-button-subtle-color: var(--ifm-color-white);
+  --utrecht-button-subtle-border-color: var(--ifm-color-black);
+  fill: var(--utrecht-button-subtle-color);
+  --utrecht-button-subtle-hover-background-color: var(--ifm-color-gray-700);
+  --utrecht-button-subtle-hover-border-color: var(--utrecht-button-subtle-border-color);
+  --utrecht-button-subtle-focus-background-color: var(--ifm-color-gray-800);
+  --utrecht-button-subtle-focus-border-color: var(--utrecht-button-subtle-border-color);
+  block-size: unset;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.heroSearchButton.heroSearchButton svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroSearchButton.heroSearchButton:hover, 
+.heroSearchButton.heroSearchButton:focus {
+  border-inline-start-color: transparent;
 }
 
 .intro {
   font-size: clamp(1.2rem, 3.333vw, 2rem);
   max-width: 60rem;
   color: var(--don-lichtblauw-200);
-  margin: 0;
+  margin-block-end: 1rem;
+}
+
+.intro:only-child {
+  margin-block-end: 0;
 }
 
 .intro__highlight {
@@ -32,7 +81,7 @@
   padding-block-end: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) { /* 768px */
   .twoColumns {
     display: flex;
   }
