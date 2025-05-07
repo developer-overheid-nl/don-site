@@ -85,7 +85,7 @@ Haven+ is een set aan componenten die gezamenlijk de volgende dingen voor je doe
 
 - [Gemeente Utrecht](https://utrecht.nl)
 - [WIGO4IT](https://www.wigo4it.nl/nieuws/haven-compliancy-bij-wigo4it/)
-- [Surf](https://www.surf.nl/files/2024-10/surf-cloud-sourcing-strategie.pdf)
+- [SURF](https://www.surf.nl/files/2024-10/surf-cloud-sourcing-strategie.pdf)
 
 ## Links
 - [Gitlab Haven](https://gitlab.com/commonground/haven/haven)
