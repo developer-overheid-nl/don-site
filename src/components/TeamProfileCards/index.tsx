@@ -144,8 +144,7 @@ export function ActiveTeam(): ReactNode {
           Jaap-Hein is een ervaren front-end developer met een sterke focus op
           toegankelijkheid. Hij zet zich in om digitale producten voor iedereen
           bruikbaar te maken, ongeacht beperking of apparaat. Buiten werktijd is
-          hij vaak te vinden op zijn motor of brengt hij graag tijd door met
-          zijn gezin.
+          hij te vinden in een kano, op een sup board of samen met zijn gezin.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
