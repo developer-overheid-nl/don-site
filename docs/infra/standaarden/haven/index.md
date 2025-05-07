@@ -84,7 +84,7 @@ Haven+ is een set aan componenten die gezamenlijk de volgende dingen voor je doe
 ## Welke organisaties werken met Haven?
 
 - [Gemeente Utrecht](https://utrecht.nl)
-- [WIGO4IT](https://www.wigo4it.nl/nieuws/haven-compliancy-bij-wigo4it/)
+- [Wigo4it](https://www.wigo4it.nl/nieuws/haven-compliancy-bij-wigo4it/)
 - [SURF](https://www.surf.nl/files/2024-10/surf-cloud-sourcing-strategie.pdf)
 
 ## Links
