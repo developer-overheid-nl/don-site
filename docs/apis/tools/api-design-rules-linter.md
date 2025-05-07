@@ -5,7 +5,11 @@ tags:
 title: "API Design Rules Linter"
 ---
 
-api-design-rulesDe ADR Linter controleert of een OpenAPI Specificatie compliant is met de API Design Rules. De linter is gebaseerd op het Open Source project [Spectral](https://github.com/stoplightio/spectral).
+De ADR Linter controleert of een OpenAPI Specificatie compliant is met de API Design Rules. De linter is gebaseerd op het Open Source project [Spectral](https://github.com/stoplightio/spectral).
+
+## Browser
+
+Een OpenAPI Specificatie kan online getest worden via onze online OAS Checker: [https://developer-overheid-nl.github.io/oas-checker](https://developer-overheid-nl.github.io/oas-checker)
 
 ## CLI
 
