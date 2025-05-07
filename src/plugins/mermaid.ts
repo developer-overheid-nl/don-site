@@ -6,7 +6,7 @@ import puppeteer, { Browser } from "puppeteer";
 import { Plugin } from "unified";
 import { visit } from "unist-util-visit";
 
-const DIAGRAMS_FOLDER = path.resolve(__dirname,  "../../.mermaid/diagrams");
+const DIAGRAMS_FOLDER = path.resolve(__dirname,  "../../.docusaurus/mermaid/diagrams");
 const DOCUSAURUS_SCRIPT = path.resolve(__dirname,  "../../node_modules/mermaid/dist/mermaid.min.js");
 
 const mermaidPlugin: Plugin<[], Root> = () => async (tree) => {

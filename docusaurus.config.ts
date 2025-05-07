@@ -58,7 +58,7 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
 
-  staticDirectories: ['static', '.mermaid'],
+  staticDirectories: ['static', '.docusaurus/mermaid'],
 
   // Disable because of inline scripts (due to CSP)
   // @see https://docusaurus.io/docs/api/docusaurus-config#baseUrlIssueBanner
