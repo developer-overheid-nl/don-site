@@ -2,7 +2,7 @@ import { createHash } from "crypto";
 import { access, mkdir, readFile } from "fs/promises";
 import { Root } from "hast";
 import path from "path";
-import puppeteer from "puppeteer";
+import puppeteer, { Browser } from "puppeteer";
 import { Plugin } from "unified";
 import { visit } from "unist-util-visit";
 
@@ -37,10 +37,17 @@ const mermaidPlugin: Plugin<[], Root> = () => async (tree) => {
 
       promises.push(
         new Promise(async (resolve) => {
-          const browser = await puppeteer.launch({
-            headless: true,
-            args: ["--no-sandbox"],
-          });
+          let browser: Browser;
+
+          try {
+            browser = await puppeteer.launch({
+              headless: true,
+              args: ["--no-sandbox"],
+            });
+          } catch (e) {
+            console.warn('Mermaid rendering is disabled due to missing dependencies.')
+            return resolve();
+          }
         
           const page = await browser.newPage();
           await page.setViewport({ width: 1920, height: 1080 });
