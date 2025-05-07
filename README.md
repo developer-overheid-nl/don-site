@@ -21,3 +21,6 @@ Daarna kan je de website lokaal draaien.
 
 Daarna kan je de lokale versie van de site bekijken op `http://localhost:3000/`.   
 Maak je aanpassingen aan de design tokens, draai `pnpm run build` om de CSS te builden.
+
+Werk je op Windows (WSL) en wil je Mermaid-diagrammen lokaal laten renderen, dan dien je de volgende instructies te volgen:
+https://pptr.dev/troubleshooting#running-puppeteer-on-wsl-windows-subsystem-for-linux

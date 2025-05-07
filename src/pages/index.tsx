@@ -32,7 +32,7 @@ function HomepageHeader() {
       <script
         data-goatcounter="https://donv1.goatcounter.com/count"
         async
-        src="//gc.zgo.at/count.js"
+        src="https://gc.zgo.at/count.js"
       ></script>
       <div className="container">
         <p className={styles.intro}>

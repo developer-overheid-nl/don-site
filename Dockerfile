@@ -5,6 +5,13 @@
 FROM node:lts AS base
 ## Disable colour output from yarn to make logs easier to read.
 ENV FORCE_COLOR=0
+## Install Chromium for Puppeteer
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    chromium \
+    && rm -rf /var/lib/apt/lists/*
+# Puppeteer settings
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 ## Update Corepack
 RUN npm install -g corepack@latest
 ## Enable corepack.
@@ -40,7 +47,9 @@ EXPOSE 3000
 CMD ["pnpm", "serve", "--host", "0.0.0.0", "--no-open"]
 
 # Stage 3b: Serve with Caddy.
-FROM caddy:2.9.1-alpine AS caddy
+FROM caddy:2.10.0-alpine AS caddy
+## Expose the port that Caddy will run on.
+EXPOSE 3000
 ## Copy the Caddyfile.
 COPY --from=prod /opt/docusaurus/Caddyfile /etc/caddy/Caddyfile
 ## Copy the Docusaurus build output.
