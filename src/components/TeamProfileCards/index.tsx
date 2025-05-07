@@ -176,7 +176,7 @@ export function ActiveTeam(): ReactNode {
           richt zich op het creëren van verbindingen tussen burgers en overheden
           via data. Zijn passie ligt in het toegankelijk en bruikbaar maken van
           informatie voor iedereen. In zijn vrije tijd gaat hij graag hardlopen
-          of geniet hij van de rust tijdens het vissen.
+          of op vakantie met zijn gezin.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
