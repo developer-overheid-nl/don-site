@@ -36,7 +36,7 @@ De checks waaruit de Haven-standaard bestaat, bestaan voor een deel uit security
 Omdat de Haven-standaard open source is en er een [compliancy-checker](./haven-compliancy-checker.md) voor handen is, kan elke leverancier die daar oren naar heeft een Haven-compliant Kubernetes Cluster opleveren.
 
 ### ✅ Haven is een levende standaard
-Haven is een standaard die door verschillende gemeentes en leveranciers van gemeentes in de praktijk wordt gebruikt. Veel Leveranciers geven aan dat ze blij zijn met de Haven-standaard omdat het ze duidelijkheid geeft bij de communicatie met gemeenten.
+Haven is een standaard die door verschillende gemeentes en leveranciers van gemeentes in de praktijk wordt gebruikt. Veel leveranciers geven aan dat ze blij zijn met de Haven-standaard omdat het ze duidelijkheid geeft bij de communicatie met gemeenten.
 
 ## Haven-compliant != direct compleet soeverein
 
