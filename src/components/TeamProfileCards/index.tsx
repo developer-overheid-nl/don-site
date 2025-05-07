@@ -112,8 +112,8 @@ export function ActiveTeam(): ReactNode {
           Met zijn achtergrond als architect, gespecialiseerd in API's, bewaakt
           hij de technische lijn van het product. Hij is gepassioneerd over het
           creëren van robuuste oplossingen die schaalbaar en toekomstbestendig
-          zijn. In zijn vrije tijd staat hij graag op het voetbalveld of brouwt
-          hij speciaalbier in zijn eigen brouwerij.
+          zijn. In zijn vrije tijd gaat hij graag zaalvoetballen of brouwt hij
+          speciaalbier in zijn eigen brouwerij.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
@@ -191,8 +191,8 @@ export function ActiveTeam(): ReactNode {
           Matthijs ontwikkelt robuuste back-endoplossingen en heeft een scherp
           oog voor het maken van herbruikbare, generieke componenten. Hij
           streeft naar code die niet alleen werkt, maar ook lang meegaat en
-          breed toepasbaar is. Buiten werktijd is hij vaak aan het klussen of op
-          het voetbalveld te vinden.
+          breed toepasbaar is. Buiten werktijd is hij vaak aan het klussen of
+          aan het reizen.
         </Translate>
       </TeamProfileCardCol>
 
