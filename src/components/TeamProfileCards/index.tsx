@@ -125,7 +125,7 @@ export function ActiveTeam(): ReactNode {
         email="f.terpstra@geonovum.nl"
       >
         <Translate>
-          Frank werkt als architect binnen het implementatie-ondersteuningsteam
+          Frank werkt als expert standaarden binnen het implementatie-ondersteuningsteam
           en heeft een grote passie voor standaarden. Hij gelooft in de kracht
           van heldere afspraken en consistente structuren om samenwerking en
           innovatie te versnellen. In zijn vrije tijd is hij een fanatiek
