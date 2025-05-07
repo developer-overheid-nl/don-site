@@ -1,0 +1,23 @@
+import { useEffect } from 'react';
+
+export default function DiscourseForum({ discourseEmbedUrl }: { discourseEmbedUrl: string }) {
+  useEffect(() => {
+    window.DiscourseEmbed = {
+      discourseUrl: 'https://community.developer.overheid.nl/',
+      discourseEmbedUrl,
+    };
+
+    const d = document.createElement('script');
+    d.type = 'text/javascript';
+    d.async = true;
+    d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  }, []);
+
+  return (
+    <>
+      <div id="discourse-comments"></div>
+      <meta name='discourse-username' content='developer.overheid' />
+    </>
+  );
+}
