@@ -129,7 +129,7 @@ export function ActiveTeam(): ReactNode {
           en heeft een grote passie voor standaarden. Hij gelooft in de kracht
           van heldere afspraken en consistente structuren om samenwerking en
           innovatie te versnellen. In zijn vrije tijd is hij een fanatiek
-          mountainbiker en gaat hij graag kamperen in de natuur.
+          mountainbiker en gaat hij graag schaatsen.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
