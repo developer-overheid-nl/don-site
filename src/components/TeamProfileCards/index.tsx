@@ -208,8 +208,10 @@ export function ActiveTeam(): ReactNode {
           Tom zorgt ervoor dat developers zich gehoord en ondersteund voelen.
           Vanuit zijn rol als Developer Advocate deelt hij kennis, stimuleert
           hij community engagement en promoot hij het gebruik van open source.
-          Zijn liefde voor technologie gaat verder dan werk: hij klust graag en
-          speelt in een band waarin hij zijn creativiteit kwijt kan.
+          Naast zijn werk is hij een man van vele hobbies: hij klust graag, en
+          speelt in een band waarin hij zijn creativiteit kwijt kan. Ook is 
+          hij geïnteresseerd in hoe we het internet op een meer ethische 
+          manier kunnen vormgeven.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
