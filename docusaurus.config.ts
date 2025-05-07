@@ -14,6 +14,7 @@ const config: Config = {
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
   organizationName: "developer.overheid.nl",
   favicon: "favicon.svg",
+  trailingSlash: true,
   headTags: [
     {
       tagName: "link",
