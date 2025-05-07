@@ -41,26 +41,34 @@
   },
   {
     "title": "Kennissessie Kennisplatform API's",
-    "start_date": "2025-06-05T12:00:00+01:00",
-    "end_date": "2025-06-05T16:30:00+01:00",
+    "start_date": "2025-06-05T12:00:00+02:00",
+    "end_date": "2025-06-05T16:30:00+02:00",
     "place": "Meetup (boven het Beatrixtheater), Utrecht",
     "summary": "Het Kennisplatform API's heet je van harte welkom voor een nieuwe kennissessie in Meetup Utrecht.",
     "url": "https://www.formdesk.com/geonovum/API2025"
   },
   {
     "title": "Digitale Autonomie Unconference 2025",
-    "start_date": "2025-05-23T10:00:00+01:00",
-    "end_date": "2025-05-23T15:00:00+01:00",
+    "start_date": "2025-05-23T10:00:00+02:00",
+    "end_date": "2025-05-23T15:00:00+02:00",
     "place": "Marineterrein, Amsterdam",
     "summary": "We willen de Public Tech community in Nederland samenbrengen. Voor ontmoeting; een overzicht te krijgen van initiatieven; nieuwe samenwerkingen op te zetten; en digitale autonomie in Nederland te versterken!",
     "url": "https://www.meetup.com/code-for-nl/events/307437589/"
   },
   {
     "title": "Technisch Overleg API Design Rules",
-    "start_date": "2025-05-13T09:30:00+01:00",
-    "end_date": "2025-05-13T10:30:00+01:00",
+    "start_date": "2025-05-13T09:30:00+02:00",
+    "end_date": "2025-05-13T10:30:00+02:00",
     "place": "Online",
     "summary": "Beslis mee over de API Design Rules. Dit overleg is bedoeld voor iedereen die betrokken is bij het ontwikkelen van API's en wil bijdragen aan de kwaliteit en consistentie van API's.",
     "url": "https://github.com/Logius-standaarden/Overleg/tree/main/API/2025-05-13"
-  }
+  },
+  {
+    "title": "Opensourcewerken: Hoe werkt dat bij NL Design System?",
+    "start_date": "2025-05-22T16:00:00+02:00",
+    "end_date": "2025-05-22T17:00:00+02:00",
+    "place": "Dev.loer Utrecht, Catharijnesingel 55 te Utrecht",
+    "summary": "Elke maand organiseren we een kenissessie met een professional die vertelt over een interessante opensource-casus. Het onderwerp van deze kennissessie is NL Design System.",
+    "url": "https://opensourcewerken.nl/events/view/b6685a32-b9ff-48d6-99f3-82fa711e6675/opensourcewerken-hoe-werkt-dat-bij-nl-design-system"
+  },
 ]

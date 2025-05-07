@@ -307,6 +307,10 @@ const config: Config = {
               to: "/contact",
             },
             {
+              label: "Het team",
+              to: "/team",
+            },
+            {
               label: "Privacyverklaring",
               to: "/privacy",
             },
