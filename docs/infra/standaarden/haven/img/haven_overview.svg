@@ -1,0 +1,2546 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="795"
+  height="526"
+  font-family="Fira Sans, Arial, Verdana, sans-serif"
+>
+  <title></title>
+  <defs>
+    <radialGradient
+      cx="33.084698%"
+      cy="30.7020471%"
+      fx="33.084698%"
+      fy="30.7020471%"
+      r="54.037542%"
+      id="radialGradient-vnqymd1ste-1"
+    >
+      <stop stop-color="#FFFFFF" offset="0%"></stop>
+      <stop stop-color="#767676" offset="100%"></stop>
+    </radialGradient>
+    <radialGradient
+      cx="11.8063337%"
+      cy="0%"
+      fx="11.8063337%"
+      fy="0%"
+      r="141.773508%"
+      id="radialGradient-vnqymd1ste-2"
+    >
+      <stop stop-color="#575757" offset="0%"></stop>
+      <stop stop-color="#D2D2D2" offset="100%"></stop>
+    </radialGradient>
+    <circle id="path-vnqymd1ste-3" cx="37.5" cy="155.5" r="4.5"></circle>
+    <circle id="path-vnqymd1ste-4" cx="37.5" cy="155.5" r="4.5"></circle>
+    <circle id="path-vnqymd1ste-5" cx="37.5" cy="155.5" r="4.5"></circle>
+    <circle id="path-vnqymd1ste-6" cx="37.5" cy="155.5" r="4.5"></circle>
+    <linearGradient
+      x1="52.6686106%"
+      y1="55.2612469%"
+      x2="39.0155257%"
+      y2="77.9387465%"
+      id="linearGradient-vnqymd1ste-7"
+    >
+      <stop stop-color="#000000" offset="0%"></stop>
+      <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+    </linearGradient>
+    <polygon
+      id="path-vnqymd1ste-8"
+      points="47.6903786 0 100.841629 0 100.427131 60.6841421 161.690331 96 91.8120604 180 2.2977578e-12 127 1.18253746e-12 60.6841421"
+    ></polygon>
+    <filter
+      x="-31.0%"
+      y="-24.4%"
+      width="162.0%"
+      height="148.8%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-10"
+    >
+      <feOffset
+        dx="0"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetOuter1"
+      ></feOffset>
+      <feGaussianBlur
+        stdDeviation="8"
+        in="shadowOffsetOuter1"
+        result="shadowBlurOuter1"
+      ></feGaussianBlur>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0"
+        type="matrix"
+        in="shadowBlurOuter1"
+        result="shadowMatrixOuter1"
+      ></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-11"
+      points="0 51.8814574 4 46.7237082 4 101.167612 0 106.881457"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-12"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-13"
+      points="14 33.529761 18 28.2323339 18 81.3653275 14 87.2879704"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-14"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-15"
+      points="28 14.8814574 32 9.51335615 32 60.8423357 28 66.7634388"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-16"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-17"
+      points="7 42.8728076 11 37.5720089 11 91.0290268 7 96.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-18"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-19"
+      points="21 24.2626797 25 18.961881 25 71.0290268 21 76.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-20"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-21"
+      points="35 5.37974035 39 -4.10371583e-14 39 50.4721198 35 56.3245504"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.8%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-22"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-23"
+      points="47.6903786 0 100.841629 0 100.427131 60.6841421 161.690331 96 91.8120604 180 2.2977578e-12 127 1.18253746e-12 60.6841421"
+    ></polygon>
+    <filter
+      x="-31.0%"
+      y="-24.4%"
+      width="162.0%"
+      height="148.8%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-25"
+    >
+      <feOffset
+        dx="0"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetOuter1"
+      ></feOffset>
+      <feGaussianBlur
+        stdDeviation="8"
+        in="shadowOffsetOuter1"
+        result="shadowBlurOuter1"
+      ></feGaussianBlur>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0"
+        type="matrix"
+        in="shadowBlurOuter1"
+        result="shadowMatrixOuter1"
+      ></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-26"
+      points="0 51.8814574 4 46.7237082 4 101.167612 0 106.881457"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-27"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-28"
+      points="14 33.529761 18 28.2323339 18 81.3653275 14 87.2879704"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-29"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-30"
+      points="28 14.8814574 32 9.51335615 32 60.8423357 28 66.7634388"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-31"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-32"
+      points="7 42.8728076 11 37.5720089 11 91.0290268 7 96.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-33"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-34"
+      points="21 24.2626797 25 18.961881 25 71.0290268 21 76.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-35"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-36"
+      points="35 5.37974035 39 -4.10371583e-14 39 50.4721198 35 56.3245504"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.8%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-37"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-38"
+      points="47.6903786 0 100.841629 0 100.427131 60.6841421 161.690331 96 91.8120604 180 2.2977578e-12 127 1.18253746e-12 60.6841421"
+    ></polygon>
+    <polygon
+      id="path-vnqymd1ste-40"
+      points="47.6903786 0 100.841629 0 100.427131 60.6841421 161.690331 96 91.8120604 180 2.2977578e-12 127 1.18253746e-12 60.6841421"
+    ></polygon>
+    <filter
+      x="-31.0%"
+      y="-24.4%"
+      width="162.0%"
+      height="148.8%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-42"
+    >
+      <feOffset
+        dx="0"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetOuter1"
+      ></feOffset>
+      <feGaussianBlur
+        stdDeviation="8"
+        in="shadowOffsetOuter1"
+        result="shadowBlurOuter1"
+      ></feGaussianBlur>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0"
+        type="matrix"
+        in="shadowBlurOuter1"
+        result="shadowMatrixOuter1"
+      ></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-43"
+      points="0 51.8814574 4 46.7237082 4 101.167612 0 106.881457"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-44"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-45"
+      points="14 33.529761 18 28.2323339 18 81.3653275 14 87.2879704"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-46"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-47"
+      points="28 14.8814574 32 9.51335615 32 60.8423357 28 66.7634388"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-48"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-49"
+      points="7 42.8728076 11 37.5720089 11 91.0290268 7 96.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-50"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-51"
+      points="21 24.2626797 25 18.961881 25 71.0290268 21 76.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-52"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-53"
+      points="35 5.37974035 39 -4.10371583e-14 39 50.4721198 35 56.3245504"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.8%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-54"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-55"
+      points="0 51.8814574 4 46.7237082 4 101.167612 0 106.881457"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-56"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-57"
+      points="14 33.529761 18 28.2323339 18 81.3653275 14 87.2879704"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-58"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-59"
+      points="28 14.8814574 32 9.51335615 32 60.8423357 28 66.7634388"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-60"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-61"
+      points="7 42.8728076 11 37.5720089 11 91.0290268 7 96.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.8%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-62"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-63"
+      points="21 24.2626797 25 18.961881 25 71.0290268 21 76.8814574"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.7%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-64"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <polygon
+      id="path-vnqymd1ste-65"
+      points="35 5.37974035 39 -4.10371583e-14 39 50.4721198 35 56.3245504"
+    ></polygon>
+    <filter
+      x="-12.5%"
+      y="-0.9%"
+      width="125.0%"
+      height="101.8%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-66"
+    >
+      <feOffset
+        dx="-1"
+        dy="0"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+    <rect id="path-vnqymd1ste-67" x="0" y="0" width="17" height="32"></rect>
+    <polygon id="path-vnqymd1ste-69" points="14 59 17 58 17 90 14 90"></polygon>
+    <polygon
+      id="path-vnqymd1ste-71"
+      points="387.5 265 439.5 265 476.5 327 429.5 327"
+    ></polygon>
+    <filter
+      x="-1.1%"
+      y="-1.6%"
+      width="102.2%"
+      height="103.2%"
+      filterUnits="objectBoundingBox"
+      id="filter-vnqymd1ste-72"
+    >
+      <feOffset
+        dx="2"
+        dy="2"
+        in="SourceAlpha"
+        result="shadowOffsetInner1"
+      ></feOffset>
+      <feComposite
+        in="shadowOffsetInner1"
+        in2="SourceAlpha"
+        operator="arithmetic"
+        k2="-1"
+        k3="1"
+        result="shadowInnerInner1"
+      ></feComposite>
+      <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"
+        type="matrix"
+        in="shadowInnerInner1"
+      ></feColorMatrix>
+    </filter>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Home" transform="translate(-341.000000, -3438.000000)">
+      <g id="Group-43" transform="translate(-1.000000, 3184.000000)">
+        <g id="Group-10" transform="translate(343.000000, 254.000000)">
+          <g id="Group-9" transform="translate(0.500000, 0.000000)">
+            <path
+              d="M235,480 C186.287536,454.665362 146.80726,450.332029 116.559174,467 C101.49647,475.300185 197.833344,486.638306 161.356842,497 C137.039174,503.907796 97.113444,509.963388 41.5796509,515.166774"
+              id="Line-4-Copy-5"
+              stroke="#000000"
+              stroke-linecap="square"
+            ></path>
+            <path
+              d="M436,407.278714 C380.146993,412.916502 324.812558,420.135391 269.996697,428.935382 C215.180835,437.735373 125.181936,445.449722 0,452.078428"
+              id="Line-4-Copy-6"
+              stroke="#000000"
+              stroke-linecap="square"
+            ></path>
+            <g id="Group" transform="translate(198.500000, 329.000000)">
+              <rect
+                id="Rectangle"
+                fill="#A9A6A6"
+                x="0"
+                y="60"
+                width="75"
+                height="137"
+              ></rect>
+              <rect
+                id="Rectangle-Copy"
+                fill="#A9A6A6"
+                x="12"
+                y="72"
+                width="51"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-2"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="2"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-3"
+                fill="#C9C9C9"
+                x="62"
+                y="72"
+                width="1"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-26"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="51"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-29"
+                fill="#8D8686"
+                x="12"
+                y="82"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-30"
+                fill="#8D8686"
+                x="12"
+                y="94"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-31"
+                fill="#8D8686"
+                x="12"
+                y="107"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-33"
+                fill="#8D8686"
+                x="23"
+                y="167"
+                width="29"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-34"
+                fill="#8D8686"
+                x="26"
+                y="172"
+                width="23"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-35"
+                fill="#8D8686"
+                x="27"
+                y="177"
+                width="21"
+                height="1"
+              ></rect>
+              <polygon
+                id="Rectangle-Copy-28"
+                fill="#C9C9C9"
+                points="14 116 63 116 63 118 12 118"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-25"
+                fill="#686868"
+                transform="translate(100.500000, 98.500000) scale(-1, 1) translate(-100.500000, -98.500000) "
+                points="75 1.62019183e-12 126 60 126 197 75 121"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-5"
+                fill="#C9C9C9"
+                transform="translate(63.000000, 30.000000) scale(1, -1) translate(-63.000000, -30.000000) "
+                points="0 0 75 0 126 60 51 60"
+              ></polygon>
+              <path
+                d="M29.3426749,128 L52,128 L52,133 L41,133 C39.2326888,135.209139 36.009139,135.567311 33.8,133.8 C33.5046126,133.56369 33.2363099,133.295387 33,133 L33,133 L33,133 L24,133 L29.3426749,128 Z"
+                id="Rectangle-Copy-32"
+                fill="#C9C9C9"
+              ></path>
+              <path
+                d="M24,128 L52,128 L52,131 L42,131 C40.2326888,133.209139 37.009139,133.567311 34.8,131.8 C34.5046126,131.56369 34.2363099,131.295387 34,131 L34,131 L34,131 L26.0336411,131 L24,133 L24,128 Z"
+                id="Rectangle"
+                fill="#545454"
+              ></path>
+              <g id="Oval">
+                <use
+                  fill="url(#radialGradient-vnqymd1ste-1)"
+                  fill-rule="evenodd"
+                  xlink:href="#path-vnqymd1ste-3"
+                ></use>
+                <circle
+                  stroke="url(#radialGradient-vnqymd1ste-2)"
+                  stroke-width="2"
+                  cx="37.5"
+                  cy="155.5"
+                  r="5.5"
+                ></circle>
+                <circle
+                  stroke="#686767"
+                  stroke-width="2"
+                  stroke-linejoin="square"
+                  cx="37.5"
+                  cy="155.5"
+                  r="3.5"
+                ></circle>
+              </g>
+            </g>
+            <g id="Group" transform="translate(290.500000, 329.000000)">
+              <rect
+                id="Rectangle"
+                fill="#A9A6A6"
+                x="0"
+                y="60"
+                width="75"
+                height="137"
+              ></rect>
+              <rect
+                id="Rectangle-Copy"
+                fill="#A9A6A6"
+                x="12"
+                y="72"
+                width="51"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-2"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="2"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-3"
+                fill="#C9C9C9"
+                x="62"
+                y="72"
+                width="1"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-26"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="51"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-29"
+                fill="#8D8686"
+                x="12"
+                y="82"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-30"
+                fill="#8D8686"
+                x="12"
+                y="94"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-31"
+                fill="#8D8686"
+                x="12"
+                y="107"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-33"
+                fill="#8D8686"
+                x="23"
+                y="167"
+                width="29"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-34"
+                fill="#8D8686"
+                x="26"
+                y="172"
+                width="23"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-35"
+                fill="#8D8686"
+                x="27"
+                y="177"
+                width="21"
+                height="1"
+              ></rect>
+              <polygon
+                id="Rectangle-Copy-28"
+                fill="#C9C9C9"
+                points="14 116 63 116 63 118 12 118"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-25"
+                fill="#686868"
+                transform="translate(100.500000, 98.500000) scale(-1, 1) translate(-100.500000, -98.500000) "
+                points="75 1.62019183e-12 126 60 126 197 75 121"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-5"
+                fill="#C9C9C9"
+                transform="translate(63.000000, 30.000000) scale(1, -1) translate(-63.000000, -30.000000) "
+                points="0 0 75 0 126 60 51 60"
+              ></polygon>
+              <path
+                d="M29.3426749,128 L52,128 L52,133 L41,133 C39.2326888,135.209139 36.009139,135.567311 33.8,133.8 C33.5046126,133.56369 33.2363099,133.295387 33,133 L33,133 L33,133 L24,133 L29.3426749,128 Z"
+                id="Rectangle-Copy-32"
+                fill="#C9C9C9"
+              ></path>
+              <path
+                d="M24,128 L52,128 L52,131 L42,131 C40.2326888,133.209139 37.009139,133.567311 34.8,131.8 C34.5046126,131.56369 34.2363099,131.295387 34,131 L34,131 L34,131 L26.0336411,131 L24,133 L24,128 Z"
+                id="Rectangle"
+                fill="#545454"
+              ></path>
+              <g id="Oval">
+                <use
+                  fill="url(#radialGradient-vnqymd1ste-1)"
+                  fill-rule="evenodd"
+                  xlink:href="#path-vnqymd1ste-4"
+                ></use>
+                <circle
+                  stroke="url(#radialGradient-vnqymd1ste-2)"
+                  stroke-width="2"
+                  cx="37.5"
+                  cy="155.5"
+                  r="5.5"
+                ></circle>
+                <circle
+                  stroke="#686767"
+                  stroke-width="2"
+                  stroke-linejoin="square"
+                  cx="37.5"
+                  cy="155.5"
+                  r="3.5"
+                ></circle>
+              </g>
+            </g>
+            <g id="Group" transform="translate(382.500000, 329.000000)">
+              <rect
+                id="Rectangle"
+                fill="#A9A6A6"
+                x="0"
+                y="60"
+                width="75"
+                height="137"
+              ></rect>
+              <rect
+                id="Rectangle-Copy"
+                fill="#A9A6A6"
+                x="12"
+                y="72"
+                width="51"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-2"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="2"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-3"
+                fill="#C9C9C9"
+                x="62"
+                y="72"
+                width="1"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-26"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="51"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-29"
+                fill="#8D8686"
+                x="12"
+                y="82"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-30"
+                fill="#8D8686"
+                x="12"
+                y="94"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-31"
+                fill="#8D8686"
+                x="12"
+                y="107"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-33"
+                fill="#8D8686"
+                x="23"
+                y="167"
+                width="29"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-34"
+                fill="#8D8686"
+                x="26"
+                y="172"
+                width="23"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-35"
+                fill="#8D8686"
+                x="27"
+                y="177"
+                width="21"
+                height="1"
+              ></rect>
+              <polygon
+                id="Rectangle-Copy-28"
+                fill="#C9C9C9"
+                points="14 116 63 116 63 118 12 118"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-25"
+                fill="#686868"
+                transform="translate(100.500000, 98.500000) scale(-1, 1) translate(-100.500000, -98.500000) "
+                points="75 1.62019183e-12 126 60 126 197 75 121"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-5"
+                fill="#C9C9C9"
+                transform="translate(63.000000, 30.000000) scale(1, -1) translate(-63.000000, -30.000000) "
+                points="0 0 75 0 126 60 51 60"
+              ></polygon>
+              <path
+                d="M29.3426749,128 L52,128 L52,133 L41,133 C39.2326888,135.209139 36.009139,135.567311 33.8,133.8 C33.5046126,133.56369 33.2363099,133.295387 33,133 L33,133 L33,133 L24,133 L29.3426749,128 Z"
+                id="Rectangle-Copy-32"
+                fill="#C9C9C9"
+              ></path>
+              <path
+                d="M24,128 L52,128 L52,131 L42,131 C40.2326888,133.209139 37.009139,133.567311 34.8,131.8 C34.5046126,131.56369 34.2363099,131.295387 34,131 L34,131 L34,131 L26.0336411,131 L24,133 L24,128 Z"
+                id="Rectangle"
+                fill="#545454"
+              ></path>
+              <g id="Oval">
+                <use
+                  fill="url(#radialGradient-vnqymd1ste-1)"
+                  fill-rule="evenodd"
+                  xlink:href="#path-vnqymd1ste-5"
+                ></use>
+                <circle
+                  stroke="url(#radialGradient-vnqymd1ste-2)"
+                  stroke-width="2"
+                  cx="37.5"
+                  cy="155.5"
+                  r="5.5"
+                ></circle>
+                <circle
+                  stroke="#686767"
+                  stroke-width="2"
+                  stroke-linejoin="square"
+                  cx="37.5"
+                  cy="155.5"
+                  r="3.5"
+                ></circle>
+              </g>
+            </g>
+            <g id="Group" transform="translate(474.500000, 329.000000)">
+              <rect
+                id="Rectangle"
+                fill="#A9A6A6"
+                x="0"
+                y="60"
+                width="75"
+                height="137"
+              ></rect>
+              <rect
+                id="Rectangle-Copy"
+                fill="#A9A6A6"
+                x="12"
+                y="72"
+                width="51"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-2"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="2"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-3"
+                fill="#C9C9C9"
+                x="62"
+                y="72"
+                width="1"
+                height="46"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-26"
+                fill="#8D8686"
+                x="12"
+                y="72"
+                width="51"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-29"
+                fill="#8D8686"
+                x="12"
+                y="82"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-30"
+                fill="#8D8686"
+                x="12"
+                y="94"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-31"
+                fill="#8D8686"
+                x="12"
+                y="107"
+                width="39"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-33"
+                fill="#8D8686"
+                x="23"
+                y="167"
+                width="29"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-34"
+                fill="#8D8686"
+                x="26"
+                y="172"
+                width="23"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-35"
+                fill="#8D8686"
+                x="27"
+                y="177"
+                width="21"
+                height="1"
+              ></rect>
+              <polygon
+                id="Rectangle-Copy-28"
+                fill="#C9C9C9"
+                points="14 116 63 116 63 118 12 118"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-25"
+                fill="#686868"
+                transform="translate(100.500000, 98.500000) scale(-1, 1) translate(-100.500000, -98.500000) "
+                points="75 1.62019183e-12 126 60 126 197 75 121"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-5"
+                fill="#C9C9C9"
+                transform="translate(63.000000, 30.000000) scale(1, -1) translate(-63.000000, -30.000000) "
+                points="0 0 75 0 126 60 51 60"
+              ></polygon>
+              <path
+                d="M29.3426749,128 L52,128 L52,133 L41,133 C39.2326888,135.209139 36.009139,135.567311 33.8,133.8 C33.5046126,133.56369 33.2363099,133.295387 33,133 L33,133 L33,133 L24,133 L29.3426749,128 Z"
+                id="Rectangle-Copy-32"
+                fill="#C9C9C9"
+              ></path>
+              <path
+                d="M24,128 L52,128 L52,131 L42,131 C40.2326888,133.209139 37.009139,133.567311 34.8,131.8 C34.5046126,131.56369 34.2363099,131.295387 34,131 L34,131 L34,131 L26.0336411,131 L24,133 L24,128 Z"
+                id="Rectangle"
+                fill="#545454"
+              ></path>
+              <g id="Oval">
+                <use
+                  fill="url(#radialGradient-vnqymd1ste-1)"
+                  fill-rule="evenodd"
+                  xlink:href="#path-vnqymd1ste-6"
+                ></use>
+                <circle
+                  stroke="url(#radialGradient-vnqymd1ste-2)"
+                  stroke-width="2"
+                  cx="37.5"
+                  cy="155.5"
+                  r="5.5"
+                ></circle>
+                <circle
+                  stroke="#686767"
+                  stroke-width="2"
+                  stroke-linejoin="square"
+                  cx="37.5"
+                  cy="155.5"
+                  r="3.5"
+                ></circle>
+              </g>
+            </g>
+            <g id="Group-3" transform="translate(180.500000, 249.000000)">
+              <polygon
+                id="Rectangle-Copy-36"
+                fill="#000000"
+                opacity="0.200000003"
+                points="18 109 369 109 369 157 294.083453 157 294 167.119261 277.246321 157 202.026132 157 202 167.119261 185.029949 157 110.022313 157 110 167.119261 93 157 18 157"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-37"
+                fill="url(#linearGradient-vnqymd1ste-7)"
+                opacity="0.200000003"
+                transform="translate(394.500000, 124.095410) scale(-1, 1) translate(-394.500000, -124.095410) "
+                points="420 109 420 157 383.923356 178.5 369 157 369 69.6908195"
+              ></polygon>
+              <rect
+                id="Rectangle-Copy-6"
+                fill="#FFBC2C"
+                x="0"
+                y="97"
+                width="387"
+                height="48"
+              ></rect>
+              <polygon
+                id="Rectangle-Copy-21"
+                fill="#C38E1D"
+                transform="translate(419.000000, 72.500000) scale(-1, 1) translate(-419.000000, -72.500000) "
+                points="387 5.15143483e-12 451 97 451 145 387 42"
+              ></polygon>
+              <polygon
+                id="Rectangle-Copy-7"
+                fill="#F3D593"
+                transform="translate(225.500000, 48.500000) scale(1, -1) translate(-225.500000, -48.500000) "
+                points="7.36206235e-13 0 387 0 451 97 66 97"
+              ></polygon>
+            </g>
+            <g id="Group-41-Copy" transform="translate(239.072869, 200.000000)">
+              <mask id="mask-vnqymd1ste-9" fill="white">
+                <use xlink:href="#path-vnqymd1ste-8"></use>
+              </mask>
+              <use
+                id="Rectangle"
+                fill="#D8D8D8"
+                opacity="0"
+                xlink:href="#path-vnqymd1ste-8"
+              ></use>
+              <g id="Group" mask="url(#mask-vnqymd1ste-9)">
+                <g
+                  transform="translate(0.427131, 0.000000)"
+                  id="Container-Copy-3"
+                  filter="url(#filter-vnqymd1ste-10)"
+                >
+                  <g id="Group-6" transform="translate(54.000000, 0.000000)">
+                    <polygon
+                      id="Rectangle-Copy-309"
+                      fill="#005282"
+                      transform="translate(23.000000, 63.500000) scale(-1, 1) translate(-23.000000, -63.500000) "
+                      points="0 1.41174572e-12 46 60 46 127 0 61"
+                    ></polygon>
+                    <g id="Group-8" transform="translate(4.000000, 8.862132)">
+                      <g id="Rectangle-Copy-311">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-11"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-12)"
+                          xlink:href="#path-vnqymd1ste-11"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-313">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-13"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-14)"
+                          xlink:href="#path-vnqymd1ste-13"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-315">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-15"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-16)"
+                          xlink:href="#path-vnqymd1ste-15"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-312">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-17"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-18)"
+                          xlink:href="#path-vnqymd1ste-17"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-314">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-19"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-20)"
+                          xlink:href="#path-vnqymd1ste-19"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-316">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-21"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-22)"
+                          xlink:href="#path-vnqymd1ste-21"
+                        ></use>
+                      </g>
+                    </g>
+                  </g>
+                  <rect
+                    id="Rectangle-Copy-5"
+                    fill="#0B82B5"
+                    x="0"
+                    y="60"
+                    width="54"
+                    height="67"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    x="2"
+                    y="63"
+                    width="49"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-3"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(26.500000, 93.500000) rotate(-270.000000) translate(-26.500000, -93.500000) "
+                    x="-3"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-4"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(2.500000, 93.500000) rotate(-270.000000) translate(-2.500000, -93.500000) "
+                    x="-27"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-6"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(50.500000, 93.500000) rotate(-270.000000) translate(-50.500000, -93.500000) "
+                    x="21"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <polygon
+                    id="Rectangle-Copy-21"
+                    fill="#56BCDF"
+                    transform="translate(50.000000, 30.000000) scale(1, -1) translate(-50.000000, -30.000000) "
+                    points="0 0 54 0 100 60 47 60"
+                  ></polygon>
+                  <rect
+                    id="Rectangle-Copy-2"
+                    fill="#000000"
+                    opacity="0.600000024"
+                    x="2"
+                    y="123"
+                    width="49"
+                    height="1"
+                  ></rect>
+                  <text
+                    id="Appli--catie"
+                    font-size="16"
+                    font-weight="normal"
+                    line-spacing="15"
+                    fill="#FFFFFF"
+                  >
+                    <tspan x="8" y="94">Appli-</tspan>
+                    <tspan x="11.6" y="109">catie</tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+            <g
+              id="Group-41-Copy-2"
+              transform="translate(313.072869, 200.000000)"
+            >
+              <mask id="mask-vnqymd1ste-24" fill="white">
+                <use xlink:href="#path-vnqymd1ste-23"></use>
+              </mask>
+              <use
+                id="Rectangle"
+                fill="#D8D8D8"
+                opacity="0"
+                xlink:href="#path-vnqymd1ste-23"
+              ></use>
+              <g id="Group" mask="url(#mask-vnqymd1ste-24)">
+                <g
+                  transform="translate(0.427131, 0.000000)"
+                  id="Container-Copy-3"
+                  filter="url(#filter-vnqymd1ste-25)"
+                >
+                  <g id="Group-6" transform="translate(54.000000, 0.000000)">
+                    <polygon
+                      id="Rectangle-Copy-309"
+                      fill="#B81A1A"
+                      transform="translate(23.000000, 63.500000) scale(-1, 1) translate(-23.000000, -63.500000) "
+                      points="0 1.41174572e-12 46 60 46 127 0 61"
+                    ></polygon>
+                    <g id="Group-8" transform="translate(4.000000, 8.862132)">
+                      <g id="Rectangle-Copy-311">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-26"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-27)"
+                          xlink:href="#path-vnqymd1ste-26"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-313">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-28"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-29)"
+                          xlink:href="#path-vnqymd1ste-28"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-315">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-30"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-31)"
+                          xlink:href="#path-vnqymd1ste-30"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-312">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-32"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-33)"
+                          xlink:href="#path-vnqymd1ste-32"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-314">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-34"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-35)"
+                          xlink:href="#path-vnqymd1ste-34"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-316">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-36"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-37)"
+                          xlink:href="#path-vnqymd1ste-36"
+                        ></use>
+                      </g>
+                    </g>
+                  </g>
+                  <rect
+                    id="Rectangle-Copy-5"
+                    fill="#E64444"
+                    x="0"
+                    y="60"
+                    width="54"
+                    height="67"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    x="2"
+                    y="63"
+                    width="49"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-3"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(26.500000, 93.500000) rotate(-270.000000) translate(-26.500000, -93.500000) "
+                    x="-3"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-4"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(2.500000, 93.500000) rotate(-270.000000) translate(-2.500000, -93.500000) "
+                    x="-27"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-6"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(50.500000, 93.500000) rotate(-270.000000) translate(-50.500000, -93.500000) "
+                    x="21"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <polygon
+                    id="Rectangle-Copy-21"
+                    fill="#F47474"
+                    transform="translate(50.000000, 30.000000) scale(1, -1) translate(-50.000000, -30.000000) "
+                    points="0 0 54 0 100 60 47 60"
+                  ></polygon>
+                  <rect
+                    id="Rectangle-Copy-2"
+                    fill="#000000"
+                    opacity="0.600000024"
+                    x="2"
+                    y="123"
+                    width="49"
+                    height="1"
+                  ></rect>
+                  <text
+                    id="Appli--catie"
+                    font-size="16"
+                    font-weight="normal"
+                    line-spacing="15"
+                    fill="#FFFFFF"
+                  >
+                    <tspan x="8" y="94">Appli-</tspan>
+                    <tspan x="11.6" y="109">catie</tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+            <g id="Group-42" transform="translate(313.072869, 200.000000)">
+              <mask id="mask-vnqymd1ste-39" fill="white">
+                <use xlink:href="#path-vnqymd1ste-38"></use>
+              </mask>
+              <use
+                id="Rectangle"
+                fill="#D8D8D8"
+                opacity="0"
+                xlink:href="#path-vnqymd1ste-38"
+              ></use>
+            </g>
+            <g id="Group-41" transform="translate(478.072869, 200.000000)">
+              <mask id="mask-vnqymd1ste-41" fill="white">
+                <use xlink:href="#path-vnqymd1ste-40"></use>
+              </mask>
+              <use
+                id="Rectangle"
+                fill="#D8D8D8"
+                opacity="0"
+                xlink:href="#path-vnqymd1ste-40"
+              ></use>
+              <g id="Group" mask="url(#mask-vnqymd1ste-41)">
+                <g
+                  transform="translate(0.427131, 0.000000)"
+                  id="Container-Copy-3"
+                  filter="url(#filter-vnqymd1ste-42)"
+                >
+                  <g id="Group-6" transform="translate(54.000000, 0.000000)">
+                    <polygon
+                      id="Rectangle-Copy-309"
+                      fill="#C38E1D"
+                      transform="translate(23.000000, 63.500000) scale(-1, 1) translate(-23.000000, -63.500000) "
+                      points="0 1.41174572e-12 46 60 46 127 0 61"
+                    ></polygon>
+                    <g id="Group-8" transform="translate(4.000000, 8.862132)">
+                      <g id="Rectangle-Copy-311">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-43"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-44)"
+                          xlink:href="#path-vnqymd1ste-43"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-313">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-45"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-46)"
+                          xlink:href="#path-vnqymd1ste-45"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-315">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-47"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-48)"
+                          xlink:href="#path-vnqymd1ste-47"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-312">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-49"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-50)"
+                          xlink:href="#path-vnqymd1ste-49"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-314">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-51"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-52)"
+                          xlink:href="#path-vnqymd1ste-51"
+                        ></use>
+                      </g>
+                      <g id="Rectangle-Copy-316">
+                        <use
+                          fill-opacity="0.2"
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          xlink:href="#path-vnqymd1ste-53"
+                        ></use>
+                        <use
+                          fill="black"
+                          fill-opacity="1"
+                          filter="url(#filter-vnqymd1ste-54)"
+                          xlink:href="#path-vnqymd1ste-53"
+                        ></use>
+                      </g>
+                    </g>
+                  </g>
+                  <rect
+                    id="Rectangle-Copy-5"
+                    fill="#FFBC2C"
+                    x="0"
+                    y="60"
+                    width="54"
+                    height="67"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    x="2"
+                    y="63"
+                    width="49"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-3"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(26.500000, 93.500000) rotate(-270.000000) translate(-26.500000, -93.500000) "
+                    x="-3"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-4"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(2.500000, 93.500000) rotate(-270.000000) translate(-2.500000, -93.500000) "
+                    x="-27"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <rect
+                    id="Rectangle-Copy-6"
+                    fill="#000000"
+                    opacity="0.300000012"
+                    transform="translate(50.500000, 93.500000) rotate(-270.000000) translate(-50.500000, -93.500000) "
+                    x="21"
+                    y="93"
+                    width="59"
+                    height="1"
+                  ></rect>
+                  <polygon
+                    id="Rectangle-Copy-21"
+                    fill="#F3D593"
+                    transform="translate(50.000000, 30.000000) scale(1, -1) translate(-50.000000, -30.000000) "
+                    points="0 0 54 0 100 60 47 60"
+                  ></polygon>
+                  <rect
+                    id="Rectangle-Copy-2"
+                    fill="#000000"
+                    opacity="0.600000024"
+                    x="2"
+                    y="123"
+                    width="49"
+                    height="1"
+                  ></rect>
+                  <text
+                    id="CG-appli--catie"
+                    font-size="16"
+                    font-weight="normal"
+                    line-spacing="15"
+                    fill="#212121"
+                  >
+                    <tspan x="18.636" y="86">CG</tspan>
+                    <tspan x="8.5" y="101">appli-</tspan>
+                    <tspan x="11.78" y="116">catie</tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+            <g id="Group" transform="translate(387.500000, 120.000000)">
+              <g id="Group-6" transform="translate(54.000000, 0.000000)">
+                <polygon
+                  id="Rectangle-Copy-309"
+                  fill="#C38E1D"
+                  transform="translate(23.000000, 63.500000) scale(-1, 1) translate(-23.000000, -63.500000) "
+                  points="0 1.41174572e-12 46 60 46 127 0 61"
+                ></polygon>
+                <g id="Group-8" transform="translate(4.000000, 8.862132)">
+                  <g id="Rectangle-Copy-311">
+                    <use
+                      fill-opacity="0.2"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      xlink:href="#path-vnqymd1ste-55"
+                    ></use>
+                    <use
+                      fill="black"
+                      fill-opacity="1"
+                      filter="url(#filter-vnqymd1ste-56)"
+                      xlink:href="#path-vnqymd1ste-55"
+                    ></use>
+                  </g>
+                  <g id="Rectangle-Copy-313">
+                    <use
+                      fill-opacity="0.2"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      xlink:href="#path-vnqymd1ste-57"
+                    ></use>
+                    <use
+                      fill="black"
+                      fill-opacity="1"
+                      filter="url(#filter-vnqymd1ste-58)"
+                      xlink:href="#path-vnqymd1ste-57"
+                    ></use>
+                  </g>
+                  <g id="Rectangle-Copy-315">
+                    <use
+                      fill-opacity="0.2"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      xlink:href="#path-vnqymd1ste-59"
+                    ></use>
+                    <use
+                      fill="black"
+                      fill-opacity="1"
+                      filter="url(#filter-vnqymd1ste-60)"
+                      xlink:href="#path-vnqymd1ste-59"
+                    ></use>
+                  </g>
+                  <g id="Rectangle-Copy-312">
+                    <use
+                      fill-opacity="0.2"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      xlink:href="#path-vnqymd1ste-61"
+                    ></use>
+                    <use
+                      fill="black"
+                      fill-opacity="1"
+                      filter="url(#filter-vnqymd1ste-62)"
+                      xlink:href="#path-vnqymd1ste-61"
+                    ></use>
+                  </g>
+                  <g id="Rectangle-Copy-314">
+                    <use
+                      fill-opacity="0.2"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      xlink:href="#path-vnqymd1ste-63"
+                    ></use>
+                    <use
+                      fill="black"
+                      fill-opacity="1"
+                      filter="url(#filter-vnqymd1ste-64)"
+                      xlink:href="#path-vnqymd1ste-63"
+                    ></use>
+                  </g>
+                  <g id="Rectangle-Copy-316">
+                    <use
+                      fill-opacity="0.2"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      xlink:href="#path-vnqymd1ste-65"
+                    ></use>
+                    <use
+                      fill="black"
+                      fill-opacity="1"
+                      filter="url(#filter-vnqymd1ste-66)"
+                      xlink:href="#path-vnqymd1ste-65"
+                    ></use>
+                  </g>
+                </g>
+              </g>
+              <rect
+                id="Rectangle-Copy-5"
+                fill="#FFBC2C"
+                x="0"
+                y="60"
+                width="54"
+                height="67"
+              ></rect>
+              <rect
+                id="Rectangle-Copy"
+                fill="#000000"
+                opacity="0.300000012"
+                x="2"
+                y="63"
+                width="49"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-3"
+                fill="#000000"
+                opacity="0.300000012"
+                transform="translate(26.500000, 93.500000) rotate(-270.000000) translate(-26.500000, -93.500000) "
+                x="-3"
+                y="93"
+                width="59"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-4"
+                fill="#000000"
+                opacity="0.300000012"
+                transform="translate(2.500000, 93.500000) rotate(-270.000000) translate(-2.500000, -93.500000) "
+                x="-27"
+                y="93"
+                width="59"
+                height="1"
+              ></rect>
+              <rect
+                id="Rectangle-Copy-6"
+                fill="#000000"
+                opacity="0.300000012"
+                transform="translate(50.500000, 93.500000) rotate(-270.000000) translate(-50.500000, -93.500000) "
+                x="21"
+                y="93"
+                width="59"
+                height="1"
+              ></rect>
+              <polygon
+                id="Rectangle-Copy-21"
+                fill="#F3D593"
+                transform="translate(50.000000, 30.000000) scale(1, -1) translate(-50.000000, -30.000000) "
+                points="0 0 54 0 100 60 47 60"
+              ></polygon>
+              <rect
+                id="Rectangle-Copy-2"
+                fill="#000000"
+                opacity="0.600000024"
+                x="2"
+                y="123"
+                width="49"
+                height="1"
+              ></rect>
+              <text
+                id="CG-appli--catie"
+                font-size="16"
+                font-weight="normal"
+                line-spacing="15"
+                fill="#212121"
+              >
+                <tspan x="18.636" y="86">CG</tspan>
+                <tspan x="8.5" y="101">appli-</tspan>
+                <tspan x="11.78" y="116">catie</tspan>
+              </text>
+            </g>
+            <g id="Group-33" transform="translate(389.000000, 0.000000)">
+              <line
+                x1="3.97826828e-13"
+                y1="179.5"
+                x2="52"
+                y2="102.5"
+                id="Line-4"
+                stroke="#000000"
+                stroke-linecap="square"
+              ></line>
+              <g id="Group-39" transform="translate(44.500000, 0.000000)">
+                <line
+                  x1="4.5"
+                  y1="7.19565217"
+                  x2="4.5"
+                  y2="59.8043478"
+                  id="Line-4-Copy-4"
+                  stroke="#000000"
+                  stroke-linecap="square"
+                ></line>
+                <line
+                  x1="11.5"
+                  y1="0.5"
+                  x2="11.5"
+                  y2="59.8043478"
+                  id="Line-4-Copy-7"
+                  stroke="#000000"
+                  stroke-linecap="square"
+                ></line>
+                <path
+                  d="M6.54212914,93.9997119 L6.54212914,90 L8.39039599,90 C8.39039599,92.8811925 8.39039599,94.3334316 8.39039599,94.3567174 C8.39039599,95.0679275 7.77430704,95.5528499 6.54212914,95.8114847 C4.11221341,96.1074317 2.84737638,97.5306237 2.84737638,99.984818 C2.84737638,102.642325 4.43735165,104.195445 7.15792127,104.195445 C8.29652092,104.195445 9.34398332,104.419812 10.1789974,103.786413 C11.0132506,102.702547 11.6760612,101.975219 12.1674291,101.604427 C12.7965714,101.129669 13.9527922,100.970771 13.991599,101.008678 C14.1020565,101.116575 13.1232801,102.327807 11.0552696,104.642373 C9.99364402,105.490514 8.63582238,106 7.15792127,106 C3.75690135,106 1,103.307003 1,99.984818 C1,96.8659461 3.43053153,94.3010725 6.54212914,93.9997119 Z"
+                  id="Shape"
+                  fill="#000000"
+                  fill-rule="nonzero"
+                  transform="translate(7.500000, 98.000000) scale(-1, 1) translate(-7.500000, -98.000000) "
+                ></path>
+                <g id="Group-38" transform="translate(0.000000, 58.000000)">
+                  <g id="Group-37">
+                    <mask id="mask-vnqymd1ste-68" fill="white">
+                      <use xlink:href="#path-vnqymd1ste-67"></use>
+                    </mask>
+                    <use
+                      id="Rectangle"
+                      fill="#424242"
+                      xlink:href="#path-vnqymd1ste-67"
+                    ></use>
+                    <g
+                      id="Group-29"
+                      mask="url(#mask-vnqymd1ste-68)"
+                      fill="#FFBC2C"
+                    >
+                      <g
+                        transform="translate(7.941987, 13.961697) rotate(-30.000000) translate(-7.941987, -13.961697) translate(-21.187178, -28.349192)"
+                      >
+                        <polygon
+                          id="Rectangle"
+                          transform="translate(28.000000, 24.382686) rotate(30.000000) translate(-28.000000, -24.382686) "
+                          points="4.1173141 37.0166605 50.8826859 10.0166605 51.8826859 11.7487113 5.1173141 38.7487113"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-38"
+                          transform="translate(27.866025, 28.614737) rotate(30.000000) translate(-27.866025, -28.614737) "
+                          points="3.9833395 41.2487113 50.7487113 14.2487113 51.7487113 15.9807621 4.9833395 42.9807621"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-39"
+                          transform="translate(28.598076, 33.346788) rotate(30.000000) translate(-28.598076, -33.346788) "
+                          points="4.71539031 45.9807621 51.4807621 18.9807621 52.4807621 20.7128129 5.71539031 47.7128129"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-40"
+                          transform="translate(28.464102, 37.578838) rotate(30.000000) translate(-28.464102, -37.578838) "
+                          points="4.58141571 50.2128129 51.3467875 23.2128129 52.3467875 24.9448637 5.58141571 51.9448637"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-41"
+                          transform="translate(29.196152, 42.310889) rotate(30.000000) translate(-29.196152, -42.310889) "
+                          points="5.31346652 54.9448637 52.0788383 27.9448637 53.0788383 29.6769145 6.31346652 56.6769145"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-42"
+                          transform="translate(29.062178, 46.542940) rotate(30.000000) translate(-29.062178, -46.542940) "
+                          points="5.17949192 59.1769145 51.9448637 32.1769145 52.9448637 33.9089653 6.17949192 60.9089653"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-43"
+                          transform="translate(29.794229, 51.274991) rotate(30.000000) translate(-29.794229, -51.274991) "
+                          points="5.91154273 63.9089653 52.6769145 36.9089653 53.6769145 38.6410162 6.91154273 65.6410162"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-44"
+                          transform="translate(29.660254, 55.507042) rotate(30.000000) translate(-29.660254, -55.507042) "
+                          points="5.77756814 68.1410162 52.5429399 41.1410162 53.5429399 42.873067 6.77756814 69.873067"
+                        ></polygon>
+                        <polygon
+                          id="Rectangle-Copy-45"
+                          transform="translate(30.392305, 60.239092) rotate(30.000000) translate(-30.392305, -60.239092) "
+                          points="6.50961894 72.873067 53.2749907 45.873067 54.2749907 47.6051178 7.50961894 74.6051178"
+                        ></polygon>
+                      </g>
+                    </g>
+                  </g>
+                  <rect
+                    id="Rectangle"
+                    fill="#D8D8D8"
+                    x="0"
+                    y="0"
+                    width="14"
+                    height="1"
+                  ></rect>
+                </g>
+                <polygon
+                  id="Rectangle-Copy-46"
+                  fill="#9B9B9B"
+                  points="0 58 17 58 17 59 0 59"
+                ></polygon>
+                <mask id="mask-vnqymd1ste-70" fill="white">
+                  <use xlink:href="#path-vnqymd1ste-69"></use>
+                </mask>
+                <use
+                  id="Rectangle"
+                  fill="#212121"
+                  xlink:href="#path-vnqymd1ste-69"
+                ></use>
+              </g>
+              <line
+                x1="53"
+                y1="179.5"
+                x2="52"
+                y2="102.5"
+                id="Line-4-Copy"
+                stroke="#000000"
+                stroke-linecap="square"
+              ></line>
+              <line
+                x1="97.8268514"
+                y1="120.737319"
+                x2="52"
+                y2="102.5"
+                id="Line-4-Copy-2"
+                stroke="#000000"
+                stroke-linecap="square"
+              ></line>
+              <line
+                x1="50.5312832"
+                y1="120"
+                x2="52"
+                y2="102.5"
+                id="Line-4-Copy-3"
+                stroke="#000000"
+                stroke-linecap="square"
+              ></line>
+            </g>
+            <g
+              id="Rectangle-Copy-22"
+              opacity="0.100000001"
+              transform="translate(432.000000, 296.000000) scale(1, -1) translate(-432.000000, -296.000000) "
+            >
+              <use
+                fill="#000000"
+                fill-rule="evenodd"
+                xlink:href="#path-vnqymd1ste-71"
+              ></use>
+              <use
+                fill="black"
+                fill-opacity="1"
+                filter="url(#filter-vnqymd1ste-72)"
+                xlink:href="#path-vnqymd1ste-71"
+              ></use>
+            </g>
+            <polygon
+              id="Rectangle-Copy-24"
+              fill="#000000"
+              opacity="0.200000003"
+              transform="translate(453.000000, 267.500000) scale(1, -1) translate(-453.000000, -267.500000) "
+              points="429.5 265 474.72004 265 476.5 270 429.5 270"
+            ></polygon>
+            <polygon
+              id="Rectangle-Copy-23"
+              fill="#000000"
+              opacity="0.300000012"
+              transform="translate(408.500000, 296.000000) scale(1, -1) translate(-408.500000, -296.000000) "
+              points="387.5 265 391.526222 265 429.5 321.958743 429.5 327"
+            ></polygon>
+            <text
+              id="Haven"
+              font-size="16"
+              font-weight="500"
+              fill="#000000"
+            >
+              <tspan x="352.5" y="376">Haven</tspan>
+            </text>
+          </g>
+          <text
+            id="Bestaande-IT-infrast"
+            font-size="14"
+            font-weight="normal"
+            fill="#000000"
+          >
+            <tspan x="687.665" y="486">Bestaande IT<!-- --></tspan>
+            <tspan x="665.517" y="504">infrastructuur, zowel<!-- --></tspan>
+            <tspan x="664.544" y="522">cloud als on-premise</tspan>
+          </text>
+          <text
+            id="(Common-Ground)-appl"
+            font-size="14"
+            font-weight="normal"
+            fill="#000000"
+          >
+            <tspan x="604.844" y="62">(Common Ground)<!-- --></tspan>
+            <tspan x="627.65" y="80">applicaties</tspan>
+          </text>
+          <path
+            id="Line-2"
+            d="M650.841564,95.2484162 L652.751584,95.8415641 L652.45501,96.7965739 C648.10074,110.817936 640.257876,122.484324 628.939995,131.775122 C620.586141,138.632763 610.345078,144.191543 598.221616,148.454951 L598.199,148.462 L599.90615,154.26596 L584.5,151.5 L595.956458,140.834656 L597.634673,146.541268 C609.513261,142.355778 619.52378,136.917288 627.671008,130.229265 C638.486179,121.35114 646.028377,110.263082 650.310451,96.945581 L650.54499,96.2034261 L650.841564,95.2484162 Z"
+            fill="#9E9E9E"
+            fill-rule="nonzero"
+          ></path>
+          <text
+            id="Haven-zorgt-ervoor-d"
+            font-size="14"
+            font-weight="normal"
+            fill="#000000"
+          >
+            <tspan x="10.942" y="232">Haven zorgt ervoor dat de<!-- --></tspan>
+            <tspan x="9.983" y="250">applicaties werken met de<!-- --></tspan>
+            <tspan x="16.493" y="268">bestaande IT infrastruur</tspan>
+          </text>
+          <path
+            id="Line"
+            d="M80.4458283,281.448894 L80.4983122,282.447516 C81.4541677,300.634782 88.0223501,316.812075 100.218906,331.011051 C109.435861,341.741237 120.531408,349.786103 133.515897,355.153307 L135.342556,349.522229 L146.5,360.5 L131.023317,362.839293 L132.897639,357.061733 C119.559909,351.574493 108.157797,343.322746 98.7017671,332.314234 C86.4001204,317.992914 79.676836,301.665166 78.5472731,283.36129 L78.5010686,282.552484 L78.4485848,281.553862 L80.4458283,281.448894 Z"
+            fill="#9E9E9E"
+            fill-rule="nonzero"
+          ></path>
+          <path
+            id="Line-5"
+            d="M646.297487,420.108833 L646.468,426.172 L646.495902,426.173095 C657.270851,426.621826 667.392072,428.738354 676.854775,432.523435 C690.077723,437.812614 702.002694,446.35485 712.62463,458.139299 L713.247947,458.836241 L713.911705,459.584188 L712.415812,460.911705 L711.752053,460.163759 C701.174672,448.244792 689.29644,439.654167 676.111994,434.380388 C666.895559,430.693814 657.034679,428.625464 646.524614,428.176087 L646.691426,434.10329 L632.5,427.5 L646.297487,420.108833 Z"
+            fill="#9E9E9E"
+            fill-rule="nonzero"
+          ></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
