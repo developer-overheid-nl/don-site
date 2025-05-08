@@ -225,3 +225,35 @@ common-ground:
 build-for-failure:
   label: "Build for Failure"
   description: "Build for Failure"
+ogc:
+  label: "Open Geospatial Consortium"
+  description: "Open Geospatial Consortium is de internationale standaarden organisatie voor interoperabele open Geo standaarden"
+seo:
+  label: "Search Engine Optimalization"
+  description: "Search Engine Optimalization is het doen van aanpassingen die er voor zorgen dat jouw content (on)vindbaar is in zoekmachines op het internet"
+ai:
+  label: "Artificial Intelligence"
+  description: "Artificial Intelligence oftewel Kunstmatige Intelligentie"
+llm:
+  label: "Large Language Model"
+  description: "Large Language Models zijn generatieve AI die natuurlijke of niet natuurlijke (programmeer) taal kunnen genereren"
+geo:
+  label: "Geografisch"
+  description: "Informatie met een ruimtelijke component"  
+notificaties:
+  label: "Notificaties"
+asyncapi:
+  label: "AsyncAPI"
+  description: "AsyncAPI is een standaard om asynchrone berichtuitwisselingen te beschrijven analoog aan hoe Open API Specification(OAS) dit doet voor REST APIs" 
+websub:
+  label: "Websub"
+  description: "Websub is een W3C standaard voor het maken van abonnementen op (veranderingen) in resources op het web"
+beveiliging:
+  label: "Beveiliging"
+provenance:
+  label: "Provenance"
+  description: "Provenance is de beschrijving hoe informatie tot stand is gekomen"
+ldv:
+  label: "Logboek Data Verwerkingen"
+  description: "Logboek Data Verwerkingen is een standaard die beschrijft hoe je logging kan vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen"
+  
