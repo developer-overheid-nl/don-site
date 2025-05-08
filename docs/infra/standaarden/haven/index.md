@@ -7,6 +7,7 @@ tags:
     - "containerization"
     - "helm"
     - "docker"
+    - "haven"
 ---
 
 Haven is een standaard voor platform-onafhankelijke cloud hosting. Het is een project dat is ontstaan vanuit de wens van Nederlandse gemeenten om op een uniforme manier hun Kubernetes cloud hosting te organiseren. Het project is onderdeel van de Common Ground architectuurvisie. Common Ground is een initiatief van de Vereniging van Nederlandse Gemeenten (VNG) waarin samengewerkt wordt aan principes voor een toekomstbestendige digitale architectuur.
