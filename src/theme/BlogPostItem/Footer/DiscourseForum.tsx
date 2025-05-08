@@ -5,6 +5,7 @@ export default function DiscourseForum({ discourseEmbedUrl }: { discourseEmbedUr
     window.DiscourseEmbed = {
       discourseUrl: 'https://community.developer.overheid.nl/',
       discourseEmbedUrl,
+      className: 'margin-top--lg padding--sm shadow--lw',
     };
 
     const d = document.createElement('script');
