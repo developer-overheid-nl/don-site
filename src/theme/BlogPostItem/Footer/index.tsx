@@ -17,7 +17,7 @@ export default function FooterWrapper(props: Props): ReactNode {
   return (
     <>
       { siteConfig.customFields.discourseCommentsInBlog && blogItemRegex.test(pathname) ? 
-        <DiscourseForum discourseEmbedUrl={`${siteConfig.url}${useBaseUrl(pathname)}/index.html`} /> :
+        <DiscourseForum discourseEmbedUrl={`${siteConfig.url}${useBaseUrl(pathname)}`} /> :
         null
       }
       <Footer {...props} />
