@@ -110,6 +110,9 @@ golang:
   label: Golang
 gouden-api:
   label: Gouden API
+haven:
+  label: "Haven"
+  description: "Haven is een open source standaard met criteria met beste practices voor hoe je Kubernetes gebruikt."
 helm:
   description: Helm is een package manager voor Kubernetes
   label: Helm
@@ -255,3 +258,4 @@ websub:
   label: Websub
 yaml:
   label: YAML
+
