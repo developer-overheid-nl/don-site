@@ -225,3 +225,6 @@ common-ground:
 build-for-failure:
   label: "Build for Failure"
   description: "Build for Failure"
+haven:
+  label: "Haven"
+  description: "Haven is een open source standaard met criteria met beste practices voor hoe je Kubernetes gebruikt."

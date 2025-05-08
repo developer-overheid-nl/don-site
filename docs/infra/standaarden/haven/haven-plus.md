@@ -8,6 +8,7 @@ tags:
     - "flux"
     - "argo-cd"
     - "ci/cd"
+    - "haven"
 ---
 
 Haven+ is een set aan componenten die gezamenlijk de volgende dingen voor je doen:
