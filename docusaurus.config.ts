@@ -10,7 +10,7 @@ const config: Config = {
   title: "developer.overheid.nl",
   customFields: {
     siteName: "developer.overheid.nl",
-    discourseCommentsInBlog: false,
+    discourseCommentsInBlog: true,
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
   organizationName: "developer.overheid.nl",
