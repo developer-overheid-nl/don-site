@@ -1,6 +1,6 @@
 ---
 authors: [frank-terpstra]
-tags: [integrity, provenance, trust, ldv, lineage, geo, geospatial]
+tags: [provenance, ldv, geo]
 ---
  
 # Integrity Provenance & Trust - OGC Meeting Deel 1

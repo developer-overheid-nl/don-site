@@ -1,6 +1,6 @@
 ---
 authors: [frank-terpstra]
-tags: [ogc, notificaties, notifications, AsyncAPI, Websub, PubSub, geo, geospatial]
+tags: [ogc, notificaties, asyncapi, websub, geo]
 ---
 
 # Notificaties voor geo informatie - OGC meeting deel 4

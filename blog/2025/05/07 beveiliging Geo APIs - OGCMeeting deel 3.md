@@ -1,6 +1,6 @@
 ---
 authors: [frank-terpstra]
-tags: [ogc, security, beveiliging, OAuth, OAS, OpenIDConnect, geo, geospatial]
+tags: [ogc, beveiliging, oauth, openapi, oidc, geo]
 ---
 
 # Beveiliging van Geo APIs - OGC meeting deel 3

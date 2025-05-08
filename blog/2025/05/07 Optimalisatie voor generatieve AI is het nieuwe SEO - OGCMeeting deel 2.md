@@ -1,6 +1,6 @@
 ---
 authors: [frank-terpstra]
-tags: [ogc, ai, seo, llm, geo, geospatial]
+tags: [ogc, ai, seo, llm, geo]
 ---
 
 # Optimaliseren voor generatieve AI is het nieuwe SEO - OGC meeting deel 2
