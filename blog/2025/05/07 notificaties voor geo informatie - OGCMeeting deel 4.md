@@ -1,8 +1,15 @@
+---
+authors: [frank-terpstra]
+tags: [ogc, notificaties, notifications, AsyncAPI, Websub, PubSub, geo, geospatial]
+---
+
 # Notificaties voor geo informatie - OGC meeting deel 4
 
 ## Open Geospatial Consortium(OGC) meeting
 
 De 131ste Open Geospatial Consortium(OGC)-Technical Committee(TC) meeting vond plaats van 3 tot 6 maart 2025 in Rome, Italië. Het was een evenement voor professionals in de GIS industrie om samen te werken aan de toekomst van Geo- standaarden en technologieën. 
+
+<!-- truncate -->
 
 Namens Geonovum waren Frank Terpstra en Linda van den Brink aanwezig en hebben zij verslag gedaan van de belangrijkste inzichten.  
 
