@@ -120,7 +120,7 @@ const config: Config = {
         pages: {},
         sitemap: {},
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: ["./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css", "./src/css/custom.css"],
         },
       } satisfies Preset.Options,
     ],
