@@ -1,33 +1,55 @@
+---
 accessibility:
-  label: Accessibility
   description: Accessibility / toegankelijkheid.
+  label: Accessibility
 adr:
   label: API Design Rules
+ai:
+  description: Artificial Intelligence oftewel Kunstmatige Intelligentie
+  label: Artificial Intelligence
 api:
-  label: API
   description: Application Programming Interface
+  label: API
 api-design:
   label: API Design
+argo-cd:
+  description: Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor Kubernetes.
+  label: Argo CD
+asyncapi:
+  description: AsyncAPI is een standaard om asynchrone berichtuitwisselingen te beschrijven analoog aan hoe Open API Specification(OAS) dit doet voor REST APIs
+  label: AsyncAPI
+avg:
+  description: Algemene verordening gegevensbescherming (AVG)
+  label: AVG
 azure:
   label: Azure
+build-for-failure:
+  description: Build for Failure
+  label: Build for Failure
 changelog:
   label: Changelog
 ci/cd:
-  label: CI/CD
   description: Continuous Integration / Continuous Deployment
+  label: CI/CD
 ciso:
-  label: Ciso
   description: Chief information security officer
+  label: Ciso
 cli:
-  label: CLI
   description: Command line interface
+  label: CLI
 cloudevents:
   label: CloudEvents
+common-ground:
+  description: Common Ground is een initiatief van de Vereniging van Nederlandse Gemeenten (VNG) dat leidde tot een toekomstbestendige architectuurvisie.
+  label: Common Ground
 community:
   label: Community
+containerization:
+  description: Containerization is het proces waarbij applicaties en hun afhankelijkheden worden geïsoleerd in gestandaardiseerde eenheden (containers).
+  label: Containerization
 data-bij-de-bron:
-  label: Data bij de Bron
   description: Het principe Data bij de Bron
+  label: Data bij de Bron
 dcat:
   label: DCAT
 design-system:
@@ -36,37 +58,61 @@ developer.overheid.nl:
   label: developer.overheid.nl
 development:
   label: Development
+devops:
+  description: DevOps (een samentrekking van "development" en "operations") is een gebruik en een praktijk binnen softwareontwikkeling die tot doel heeft softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen.
+  label: DevOps
 digid:
-  label: DigiD
   description: Met uw DigiD laat u zien wie u bent als u op internet iets regelt.
+  label: DigiD
 digikoppeling:
   label: Digikoppeling
-eidas:
-  label: eIDAS
-  description: eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning van elektronische identiteiten
+docker:
+  description: Docker is een platform voor het bouwen, distribueren en draaien van applicaties in individuele containers
+  label: Docker
 eherkenning:
+  description: eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten.
   label: eHerkenning
-  description: eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten. 
+eidas:
+  description: eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning van elektronische identiteiten
+  label: eIDAS
 eu:
   label: Europe
 fds:
+  description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties. \_"
   label: Federatief Data Stelsel
-  description: Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties.  
+fieldlab:
+  description: Fieldlab
+  label: Fieldlab
+flux:
+  description: Flux CD is een GitOps tool voor Kubernetes die automatische deployment en synchronisatie van applicaties mogelijk maakt.
+  label: Flux
 forum-standaardisatie:
   label: Forum Standaardisatie
+foss:
+  description: Free and Open Source Software
+  label: FOSS
 front-end:
   label: Front-end
 fsc:
-  label: FSC
   description: Federated Service Connectivity
+  label: FSC
+gdpr:
+  description: 'General Data Protection Regulation (GDPR) '
+  label: GDPR
 gegevensuitwisseling:
   label: Gegevensuitwisseling
+geo:
+  description: Informatie met een ruimtelijke component
+  label: Geografisch
 git:
   label: Git
 golang:
   label: Golang
 gouden-api:
   label: Gouden API
+helm:
+  description: Helm is een package manager voor Kubernetes
+  label: Helm
 html:
   description: HTML.
   label: HTML
@@ -82,12 +128,24 @@ json-schema:
   label: JSON Schema
 jwt:
   label: JSON Web Tokens (JWT of JWT's)
+kiesraad:
+  description: 'De Kiesraad: de nationale Kiesraad.'
+  label: Kiesraad
 kubernetes:
   label: Kubernetes
+ldv:
+  description: Logboek Data Verwerkingen is een standaard die beschrijft hoe je logging kan vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen
+  label: Logboek Data Verwerkingen
 license:
   label: License
 linked-data:
   label: Linked Data
+llm:
+  description: Large Language Models zijn generatieve AI die natuurlijke of niet natuurlijke (programmeer) taal kunnen genereren
+  label: Large Language Model
+logging:
+  description: Logging
+  label: Logging
 meetups:
   label: Meetups
 monitoring:
@@ -98,162 +156,102 @@ nl-design-system:
   label: NL Design System
 nodejs:
   label: Node.js
+notificaties:
+  label: Notificaties
 nvm:
   label: NVM
 oas:
   label: OpenAPI Specification
 oauth:
+  description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
   label: OAuth 2.0
-  description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie 
+ogc:
+  description: Open Geospatial Consortium is de internationale standaarden organisatie voor interoperabele open Geo standaarden
+  label: Open Geospatial Consortium
 oidc:
-  label: OpenID Connect
   description: OpenID Connect is een identity layer bovenop OAuth 2.0
+  label: OpenID Connect
 open-source:
   label: Open Source
 openapi:
   label: OpenAPI
-owl:
-  label: OWL
 orkestratie:
   label: Orkestratie
+ospo:
+  description: Open Source Program Office
+  label: OSPO
+owasp:
+  description: 'OWASP: Open Web Application Security Project'
+  label: OWASP
+owl:
+  label: OWL
 pkio:
-  label: PKIOverheid
   description: PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid.
+  label: PKIOverheid
 portal:
   label: Portal
 privacy:
   label: Privacy
+provenance:
+  description: Provenance is de beschrijving hoe informatie tot stand is gekomen
+  label: Provenance
 publiccode:
   label: PublicCode
 publiccode-yml:
   label: publiccode.yml
 rdf:
-  label: RDF
   description: Resource Description Framework
+  label: RDF
 rdfa:
-  label: RDFa
   description: Resource Description Framework in Attributes
+  label: RDFa
 rdfs:
-  label: RDFS
   description: RDF Schema
+  label: RDFS
 release:
   label: Release
 rest:
   label: REST API design
+rust:
+  description: Rust
+  label: Rust
 saml:
-  label: SAML
   description: SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
+  label: SAML
 security:
   label: Security
 security-by-design:
   label: Security By Design
+seo:
+  description: Search Engine Optimalization is het doen van aanpassingen die er voor zorgen dat jouw content (on)vindbaar is in zoekmachines op het internet
+  label: Search Engine Optimalization
 shacl:
-  label: SHACL
   description: Shapes Constraint Language
+  label: SHACL
 skos:
-  label: SKOS
   description: Simple Knowledge Organization System
+  label: SKOS
+tool:
+  description: Tool
+  label: Tool
 tutorial:
   label: Tutorial
-vng:
-  label: VNG
+ux:
+  description: 'UX: User experience'
+  label: UX
 validator:
   label: Validator
 vite:
   label: Vite
+vng:
+  label: VNG
 vscode:
   label: VS Code
 wcag:
-  label: WCAG
   description: Web Content Accessibility Guidelines
+  label: WCAG
+websub:
+  description: Websub is een W3C standaard voor het maken van abonnementen op (veranderingen) in resources op het web
+  label: Websub
 yaml:
   label: YAML
-ospo:
-  label: OSPO
-  description: Open Source Program Office
-foss:
-  label: FOSS
-  description: Free and Open Source Software
-ux:
-  label: UX
-  description: "UX: User experience"
-kiesraad:
-  label: Kiesraad
-  description: "De Kiesraad: de nationale Kiesraad."
-rust:
-  label: Rust
-  description: "Rust"
-devops:
-  label: DevOps
-  description: DevOps (een samentrekking van "development" en "operations") is een gebruik en een praktijk binnen softwareontwikkeling die tot doel heeft softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen. 
-owasp:
-  label: OWASP
-  description: "OWASP: Open Web Application Security Project"
-logging:
-  label: Logging
-  description: "Logging"
-fieldlab:
-  label: Fieldlab
-  description: "Fieldlab"
-avg:
-  label: AVG
-  description: "Algemene verordening gegevensbescherming (AVG)"
-gdpr:
-  label: GDPR
-  description: "General Data Protection Regulation (GDPR) "
-containerization:
-  label: "Containerization"
-  description: "Containerization is het proces waarbij applicaties en hun afhankelijkheden worden geïsoleerd in gestandaardiseerde eenheden (containers)."
-tool:
-  label: "Tool"
-  description: "Tool"
-helm:
-  label: "Helm"
-  description: "Helm is een package manager voor Kubernetes"
-docker:
-  label: "Docker"
-  description: "Docker is een platform voor het bouwen, distribueren en draaien van applicaties in individuele containers"
-argo-cd:
-  label: "Argo CD"
-  description: "Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor Kubernetes."
-flux:
-  label: "Flux"
-  description: "Flux CD is een GitOps tool voor Kubernetes die automatische deployment en synchronisatie van applicaties mogelijk maakt."
-common-ground:
-  label: Common Ground
-  description: "Common Ground is een initiatief van de Vereniging van Nederlandse Gemeenten (VNG) dat leidde tot een toekomstbestendige architectuurvisie."
-build-for-failure:
-  label: "Build for Failure"
-  description: "Build for Failure"
-ogc:
-  label: "Open Geospatial Consortium"
-  description: "Open Geospatial Consortium is de internationale standaarden organisatie voor interoperabele open Geo standaarden"
-seo:
-  label: "Search Engine Optimalization"
-  description: "Search Engine Optimalization is het doen van aanpassingen die er voor zorgen dat jouw content (on)vindbaar is in zoekmachines op het internet"
-ai:
-  label: "Artificial Intelligence"
-  description: "Artificial Intelligence oftewel Kunstmatige Intelligentie"
-llm:
-  label: "Large Language Model"
-  description: "Large Language Models zijn generatieve AI die natuurlijke of niet natuurlijke (programmeer) taal kunnen genereren"
-geo:
-  label: "Geografisch"
-  description: "Informatie met een ruimtelijke component"  
-notificaties:
-  label: "Notificaties"
-asyncapi:
-  label: "AsyncAPI"
-  description: "AsyncAPI is een standaard om asynchrone berichtuitwisselingen te beschrijven analoog aan hoe Open API Specification(OAS) dit doet voor REST APIs" 
-websub:
-  label: "Websub"
-  description: "Websub is een W3C standaard voor het maken van abonnementen op (veranderingen) in resources op het web"
-beveiliging:
-  label: "Beveiliging"
-provenance:
-  label: "Provenance"
-  description: "Provenance is de beschrijving hoe informatie tot stand is gekomen"
-ldv:
-  label: "Logboek Data Verwerkingen"
-  description: "Logboek Data Verwerkingen is een standaard die beschrijft hoe je logging kan vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen"
-  
