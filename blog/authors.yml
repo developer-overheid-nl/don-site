@@ -1,7 +1,7 @@
 joost-farla:
   name: Joost Farla
   title: Implementatie ondersteuner - developer.overheid.nl
-  image_url: https://github.com/joostfarla.png
+  image_url: https://developer.overheid.nl/img/team/joost-farla.jpg
   page: true
   socials:
     linkedin: joostfarla
@@ -30,7 +30,7 @@ matthijs-hovestad:
 tom-ootes:
   name: Tom Ootes
   title: Developer Advocate - developer.overheid.nl
-  image_url: https://hostux.social/system/accounts/avatars/109/449/185/673/235/504/original/04278dc16bb36f0d.jpg
+  image_url: https://developer.overheid.nl/img/team/tom-ootes.png
   page: true
   socials:
     linkedin: tootes
@@ -49,7 +49,7 @@ martin-van-der-plas:
 frank-terpstra:
   name: Frank Terpstra
   title: Implementatie ondersteuner - developer.overheid.nl
-  image_url: https://github.com/fterpstra.png
+  image_url: https://developer.overheid.nl/img/team/frank-terpstra.jpg
   page: true
   socials:
     linkedin: frank-terpstra-1bb5096
@@ -58,7 +58,7 @@ frank-terpstra:
 jaap-hein-wester:
   name: Jaap-Hein Wester
   title: Senior Frontend Developer - developer.overheid.nl
-  image_url: https://github.com/MrSkippy.png
+  image_url: https://developer.overheid.nl/img/team/jaap-hein-wester.jpg
   page: true
   socials:
     linkedin: jaapheinwester
