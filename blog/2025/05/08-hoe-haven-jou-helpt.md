@@ -2,53 +2,52 @@
 authors: [tom-ootes]
 tags: [haven, kubernetes, common-ground]
 ---
-# Met Haven wordt je écht Digitaal Autonoom, en kan je uiteindelijk zonder Amerikaanse cloudproviders
-<!-- # Hoe Haven jou heel concreet helpt bij het bereiken van Digitale Autonomie, weg van Amerikaanse cloudproviders -->
-<!-- # Word echt Digitaal Autonoom met de Haven-standaard -->
-<!-- # Met de Haven Standaard word je écht Digitaal Autonoom: in de praktijk -->
-
-
+# Met Haven(+) word je écht digitaal autonoom, en kan je uiteindelijk zonder Amerikaanse cloudproviders
 
 Door alle perikelen die zich op het moment voltrekken in de Verenigde Staten staat het thema *Digitale Autonomie* ineens overal boven aan de agenda in overheids-it-land. Er wordt veel over gesproken, maar over hoe we precies onafhankelijk gaan worden lijkt nog geen consensus te bestaan.
 
-Voor complexe problemen als deze is nooit een silver bullet.  Echter is er een project dat je helpt voorsorteren op de nooduitgang: de Kubernetes-standaard [Haven](https://haven.commonground.nl/). In dit artikel omschrijf ik welke rol ik voor Haven(+) zie als **oplossing** voor **Digitale Autonomie**.
+Voor complexe problemen als deze bestaat er nooit een silver bullet. Echter is er wel een project dat je helpt voorsorteren op de nooduitgang: de Kubernetes-standaard [Haven](https://haven.commonground.nl/). In dit artikel omschrijf ik welke rol ik voor Haven(+) zie als **oplossing** voor **Digitale Autonomie**. Haven is een standaard die bestaat uit [checks](https://haven.commonground.nl/techniek/checks) voor het correct en secure opzetten van Kubernetes clusters.
 
 <!-- truncate -->
 
-
-Door alle perikelen die zich op het moment voltrekken in de Verenigde Staten staat het thema Digitale Autonomie ineens overal boven aan de agenda in overheids-it-land. Er wordt veel over gesproken maar over hoe we precies onafhankelijk gaan worden is nog geen consensus.
-
-Voor complexe problemen als deze is nooit een silver bullet. Toch heb ik sinds ik aan developer.overheid.nl werk ontdekt dat er allerlei open source projecten en standaarden binnen onze overheid klaar staan om gebruikt te worden, die ons kunnen helpen bij het oplossen van dit vraagstuk. Mijn mening is dat deze praktische initiatieven die direct gebruikt kunnen worden in het IT-landschap van organisaties, niet genoeg aandacht krijgen te midden van al het gepraat.
-
-Een van deze projecten is in mijn optiek Haven: een standaard die bestaat uit criteria voor het correct en secure opzetten van Kubernetes clusters. In dit artikel omschrijf ik hoe veel organisaties en bedrijven in de armen van hyperscalers zoals AWS, Azure en Google Cloud zijn gelopen en wat de nadelen daarvan zijn. Vervolgens schets ik welke rol ik voor Haven(+) zie als oplossing voor dit probleem.
-
-
-
 :::success[**TL;DR**]
 
-Logius werkt toe naar een 2.1 versie op basis van de input van API experts en werkt hierbij samen met developer.overheid.nl en het Kennisplatform API's.
-Wijzigingen worden behandeld in een technisch overleg, waarbij beheerorganisaties het draagvlak borgen en extra tooling (zoals een linter) aanleveren ter implementatieondersteuning.
-Alle genoemde partijen, tooling en documenten zijn openbaar en input wordt zeer gewaardeerd, dus doe mee!
+Met de Haven-standaard heeft de Nederlandse overheid een praktisch instrument als stap naar Digitale Autonomie. Door Kubernetes-clusters volgens de Haven-checks in te richten, wordt migratie naar Europese cloudproviders uiteindelijk eenvoudiger. Specifieke AWS/Azure services zoals `Object Storage` en `Databases` kunnen op termijn vervangen worden door open-source [Haven+](https://gitlab.com/commonground/haven/havenplus) alternatieven. Hoewel deze transitie een cloud-native infrastructuur vereist, biedt Haven een duidelijk pad richting digitale zelfstandigheid.
 
 :::
 
-### De massale migratie naar Amerikaanse cloudproviders
+## De massale migratie naar Amerikaanse cloudproviders
 
-Amerikaanse cloudproviders zijn het afgelopen decennium uitgegroeid tot extreem winstgevende bedrijven, waar inmiddels het grootste deel van het internet opdraait. De top 3 grootste public cloud service providers (Amazon Web Services, Microsoft en Google) hebben momenteel gezamenlijk meer dan 72% van de wereldwijde markt in handen.[^1]. In Nederland ontstond er dit jaar in de politiek gelukkig een nieuwe geluid op dit gebied. Zo nam de Tweede Kamer in maart acht moties aan 
+Amerikaanse cloudproviders zijn het afgelopen decennium uitgegroeid tot extreem winstgevende bedrijven, waar inmiddels het grootste deel van het internet opdraait. De top 3 grootste public cloud service providers (Amazon Web Services, Microsoft Azure en Google Cloud Platform) hebben momenteel gezamenlijk meer dan 72% van de wereldwijde markt in handen[^1]. Specifieke cijfers over het marktaandeel AWS/Azure/GCP bij de Nederlandse overheid zijn er niet, maar uit een rapport van Autoriteit Consument en Markt blijkt dat een marktaandeel geldt van 40-45% voor Azure en 30-35% voor AWS. GCP en Oracle hebben na AWS en Azure het grootste marktaandeel met een marktaandeel tussen de 5 en 10 procent.[^2]
+
+## Politiek draagvlak voor een Europese cloud
+Gelukkig klonk er dit jaar in de Nederlandse politiek een nieuw geluid op dit gebied. Zo nam de Tweede Kamer op 13 maart 2025 acht moties aan tijdens een plenair debat over migraties van overheids-ICT naar het buitenland [^3].
+De belangrijkste punten die werden besloten;
+
+1. De Tweede Kamer heeft acht moties aangenomen tijdens het plenaire debat (13 maart 2025) over migraties van overheids-ICT naar het buitenland.
+2. De Kamer wil onnodige ICT-migraties naar Amerikaanse techreuzen stopzetten. Volgens de motie van Barbara Kathmann (GroenLinks-PvdA) moeten alle geplande verhuizingen van overheids-ICT worden gestopt, tenzij de continuïteit van dienstverlening aan burgers aantoonbaar in gevaar komt (dan is toestemming van de staatssecretaris voor digitalisering nodig).
+3. Er moet een Rijkscloud komen in volledig Nederlands beheer, met functionaliteit voor vertrouwelijke communicatie tussen departementen en veilige dataopslag.
+4. Het .nl-domein moet weer volledig in Nederlandse handen komen. Recent is besloten dat een beperkt deel naar AWS (Amazon Web Services) mag verhuizen, maar volgens de aangenomen motie moet dit in overleg met SIDN en nationale cloudaanbieders weer terug naar Nederland.
+5. Er moet een risicoanalyse en exitstrategie komen voor alle clouddiensten van Amerikaanse techbedrijven. Momenteel beschikt twee derde van de clouddiensten van de overheid hier nog niet over.
+6. De regering moet in EU-verband pleiten voor versnelde investeringen in Europese cloudalternatieven, met maximale benutting van Europese begrotingsmiddelen en investeringsfondsen.
+7. Als doelstelling moet gelden dat de continuïteit van de Nederlandse digitale overheid niet rechtstreeks afhankelijk is van partijen uit de Verenigde Staten.
+8. Bij aanbestedingen van vitale ICT-diensten moeten Europese bedrijven voorrang krijgen door soevereiniteitseisen te stellen voor de opslag van gevoelige gegevens.
+
 
 ![Haven](./img/stadskantoor_2.jpg)
 *Stadskantoor in Utrecht, onder andere hier wordt de Haven-standaard ontwikkeld. Mede door de gemeente Utrecht. Foto door [Stefan van E](https://www.flickr.com/photos/stefanve/26230670274). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
 
 
-
-### Dit nadeel bestond al: hyperscalers zijn snel duur als je veel opschaalt
+## Nadeel: hyperscalers zijn duur als je veel opschaalt
 Voordat er zorgen ontstonden over de omvang van de migratie naar de Amerikaanse cloud, waren er in principe ook al redenen om niet met deze "hyperscalers" in zee te gaan. Zo kunnen de kosten van dergelijke platforms op de lange termijn, wanneer er meer resources nodig zijn, flink uit de klauwen lopen.
 
-### Makkelijk beschikbare resources: weinig reden tot optimalisatie infra/ software
-Nog een interessante dynamiek hierbij is dat hyperscalers je erg goed kunnen helpen bij het sneller maken van software die eigenlijk inefficiënt is. Doordat deze platforms zo goed zijn in schalen is het een peulenschil om meer resources toe te wijzen aan een slecht geoptimaliseerde applicatie. Hierdoor zal deze toch weer iets beter gaan presteren. Op deze manier wordt het dus wel erg aantrekkelijk om een korte-termijn keuze te maken en dus niet te kiezen voor het verbeteren van software maar het op te lossen door er maar weer meer resources tegenaan te gooien. Het resultaat is makkelijk in te vullen; de kosten blijven oplopen.
+Dit is een bewuste strategie die vooral AWS toepast. Beginnen kost niks en wordt je heel gemakkelijk gemaakt. Echter, als je de services opschaalt beginnen de kosten snel te groeien.
 
-### Waarom zijn Amerikaanse cloudproviders zo aantrekkelijk?
-Amerikaanse cloudproviders zijn heel goed in één ding: het creëren van een hele goede developer experience. Ze hebben de afgelopen jaren veel geïnvesteerd in het ontwikkelen van services die dagelijkse problemen van developers op een effectieve manier oplossen. Daarnaast heeft de introductie van het pay-as-you-go prijsmodel de toegangsdrempel verlaagt om operationele uitgaven te verruilen voor directe kapitaaluitgaven. De meest populaire clouddiensten zijn op het moment:
+## Onbeperkte resources: geen reden tot optimalisatie
+Daarnaast is er nog een interessante dynamiek van toepassing. Namelijk dat deze bedrijven je erg goed kunnen helpen bij het sneller maken van software die eigenlijk inefficiënt is. Doordat deze platforms zo goed zijn in schalen is het een peulenschil om meer resources toe te wijzen aan een slecht geoptimaliseerde applicatie. Door deze dynamiek ontstaat een sterke prikkel om de weg van de minste weerstand te kiezen: extra resources toevoegen in plaats van te investeren in fundamentele software-optimalisatie, waardoor technische schuld zich ophoopt terwijl de cloud-factuur gestaag blijft groeien.
+
+## Waarom zijn Amerikaanse cloudproviders zo aantrekkelijk?
+Amerikaanse cloudproviders zijn heel goed in één ding: het creëren van een hele goede developer experience. Ze hebben de afgelopen jaren veel geïnvesteerd in het ontwikkelen van services die dagelijkse problemen van developers op een effectieve manier oplossen. Daarnaast heeft de introductie van het pay-as-you-go prijsmodel de toegangsdrempel verlaagd om operationele uitgaven te verruilen voor directe kapitaaluitgaven. De meest populaire clouddiensten zijn op het moment:
 
 **Basisdiensten:**
 
@@ -63,35 +62,38 @@ Amerikaanse cloudproviders zijn heel goed in één ding: het creëren van een he
 - AI/ML: AWS SageMaker, Azure ML, Google Vertex AI
 - Data analytics: AWS Redshift, Azure Synapse, Google BigQuery
 
-
-
 ![Haven](./img/stadskantoor_4.jpg)
 *Stadskantoor in Utrecht. Foto door [Eric de Redelijkheid](https://www.flickr.com/photos/ericdere/36957944765/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
 
-### Microsoft Azure/ AWS werden de defacto standaard
-Door het brede scala aan services en de schaalbaarheid werden Azure en AWS extreem populaire cloudproviders. Doordat deze bedrijven vroeg zijn begonnen met het investeren in deze sector en er in Amerika makkelijk toegang was tot tech-talent hadden ze grote voordelen. Ook hadden deze bedrijven het voordeel dat kapitaal des tijds goedkoop voor handen was en maakten ze slim gebruik van ecosystemen van partner-bedrijven. 
+## Microsoft Azure/ AWS werden de defacto standaard
+Door het brede scala aan services en de schaalbaarheid werden Azure en AWS extreem populaire cloudproviders. Doordat deze bedrijven vroeg zijn begonnen met het investeren in deze sector en er in Amerika makkelijk toegang was tot tech-talent hadden ze grote voordelen. Ook hadden deze bedrijven het voordeel dat kapitaal des tijds goedkoop voorhanden was en maakten ze slim gebruik van ecosystemen van partner-bedrijven. 
 
-Doordat Microsoft al jaren dé grote it-leverancier is voor de Nederlandse overheid, was de overstap op Microsoft Azure een logische. Echter rijst nu de vraag: is het handig om strategisch zo afhankelijk te zijn van een Amerikaans bedrijf? Het is bekend dat de Amerikaanse overheid mee mag kijken in de infrastructuur van Amerikaanse bedrijven als zij dat wil, ook als de servers daarvan op Europees grondgebied staan. Servers op Europees grondgebied zijn dus ook geen oplossing voor dit probleem.
+Doordat Microsoft al jaren dé grote it-leverancier is voor de Nederlandse overheid, was de overstap op Microsoft Azure een logische. Echter rijst nu de vraag: is het handig om strategisch zo afhankelijk te zijn van een Amerikaans bedrijf? Het is bekend dat de Amerikaanse overheid mee mag kijken in de infrastructuur van Amerikaanse bedrijven als zij dat wil, ook als de servers daarvan op Europees grondgebied staan [^4]. Servers op Europees grondgebied zijn dus ook geen oplossing voor dit probleem, zolang het Amerikaanse bedrijven betreft.
 
-### De Haven-criteria als handvatten voor de overstap naar Europese cloudproviders
-Dan de oplossing voor dit problemen. Als je als organisatie toe beweegt naar een situatie waarin je er voor zorgt dat je Kubernetes clusters allemaal Haven-compliant zijn werk je toe naar een gestandaardiseerde situatie. Dit zorgt er voor dat het **makkelijker wordt** om vervolgens later de boel te migreren naar een **Europese cloudprovider**. Naar welke cloudproviders je precies allemaal kunt overstappen heeft het team van Haven netjes voor je [opgesomt in een lijstje](https://haven.commonground.nl/techniek/aan-de-slag).
+## De Haven-checks als handvatten voor de overstap naar Europese cloudproviders
+Dan naar de oplossing. Als je als organisatie toe beweegt naar een situatie waarin je er voor zorgt dat je Kubernetes clusters allemaal Haven-compliant zijn werk je toe naar een gestandaardiseerde situatie. Dit zorgt er voor dat het **makkelijker wordt** om vervolgens later de boel te migreren naar een **Europese cloudprovider**.
 
-### Maar dan heb ik toch nog geen vervanging van mijn mooie Azure/AWS services? Toch wel: met Haven+
-Je hebt inderdaad niet direct vervanging voor je mooie glimmende Azure/AWS services. Maar je kan ze wel langzamerhand gaan vervangen door Open Source componenten die je zelf opzet. En het mooie is; een aantal van deze Open Source componenten heeft het Haven-team al voor je beschikbaar gemaakt in de vorm van een project genaamd [**Haven+**](https://gitlab.com/commonground/haven/havenplus).
+## Maar dan heb ik toch nog geen vervanging van mijn mooie Azure/AWS services? Toch wel: met Haven+
+Je hebt inderdaad niet direct vervanging voor je mooie glimmende Azure/AWS services. Maar je kan ze wel langzamerhand gaan vervangen door open source componenten die je zelf opzet. En het mooie is; een aantal van deze open source componenten heeft het Haven-team al voor je beschikbaar gemaakt in de vorm van een project genaamd [**Haven+**](https://gitlab.com/commonground/haven/havenplus).
 
 Dit project bevat misschien nog niet alles wat je nodig hebt als organisatie, maar gelukkig staat niets je in de weg om mee te bouwen aan deze componenten met het Haven team!
 
 ![Haven](./img/stadskantoor_6.jpg)
 *Stadskantoor in Utrecht. Foto door [Gerard Stolk](https://www.flickr.com/photos/gerardstolk/39472632000/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
 
-### Toegegeven vereiste: je hele infra moet cloud-native zijn
-Dan is er nog wel middelgrote olifant in de kamer. Sommige organisaties zijn nog verre van cloud-native. Er zullen organisaties zijn die nog steeds met VPS'en werken, en een infrastructuur hebben die zich her en der verspreid over de organisatie bevindt. 
+## Toegegeven: je infra moet cloud-native zijn
+Toegegeven: om gebruik te maken van de Haven standaard moet je infra natuurlijk wel cloud-native zijn. En sommige organisaties zijn nog verre van cloud-native. Er zullen vast nog organisaties zijn die stiekem nog steeds met VPS'en werken, en een infrastructuur hebben die zich her en der verspreidt over de organisatie bevindt.
 
-Feit is dat Kubernetes heden ten dage met goede redenen de marktstandaard is. Dit vanwege de goede schaalbaarheid en de grip op security die je erdoor kunt krijgen. Mij lijkt het dus sowieso slim om als organisatie te koersen op het omzetten van je infra naar cloud-native.
+Feit is dat Kubernetes heden ten dage met goede redenen de marktstandaard is. Dit vanwege de goede schaalbaarheid en de grip op security die je erdoor kunt krijgen. Het is dus sowieso raadzaam om als organisatie te koersen op het omzetten van je infra naar cloud-native.
 
-### Dankwoord
+## Conclusie
 
-Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met mij te voeren over dit onderwerp. Zo voerde ik een goed gesprek met **Dian van Heijningen** van **Wigo4it** over hun infrastructuur. Ook hield ik met **Pauline van Rotterdam (Technisch PO)** en **Sander van Thillo (Developer)** van het **Haven** team een interview. Dit interview zal hier later trouwens ook gepubliceerd worden.
+Met de Haven-standaard heeft de Nederlandse overheid een praktisch instrument voor het bereiken van digitale autonomie. Door Kubernetes-clusters volgens Haven-criteria in te richten, wordt migratie naar Europese cloudproviders eenvoudiger. Specifieke services zoals `Object Storage` en `Databases` kunnen op termijn vervangen worden door open-source [Haven+](https://gitlab.com/commonground/haven/havenplus)  alternatieven. Hoewel deze transitie een cloud-native infrastructuur vereist, biedt Haven een duidelijk pad richting digitale zelfstandigheid.
+
+
+## Dankwoord
+
+Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met mij te voeren over dit onderwerp. Zo voerde ik een goed gesprek met **Dian van Heijningen (Product Owner Cloud Engineering)** van **Wigo4it** over hun infrastructuur. Ook hield ik met **Pauline van Rotterdam (Technisch PO)** en **Sander van Thillo (Developer)** van het **Haven** team een interview. Dit interview zal hier later trouwens ook gepubliceerd worden.
 
 ## Handige links
 
@@ -100,6 +102,7 @@ Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met 
 * [Mattermost kanaal van Haven+](https://digilab.overheid.nl/chat/digilab/channels/havenplus)
 * [Naar de lijst met checks van Haven](https://haven.commonground.nl/techniek/checks)
 
-
 [^1]: Marktstudie Cloud Services: voortdurende consolidatie, aanhoudende groei (https://www.bdo.nl/nl-nl/actueel/marktstudie-cloud-services-voortdurende-consolidatie-aanhoudende-groei)
-[^2]: https://ibestuur.nl/artikel/kamer-zet-inhaalspurt-digitale-autonomie-in/
+[^2]: ACM: aanpassingen in Data Act nodig om concurrentie tussen cloudaanbieders te stimuleren (https://www.acm.nl/nl/publicaties/acm-aanpassingen-data-act-nodig-om-concurrentie-tussen-cloudaanbieders-te-stimuleren)
+[^3]: Kamer zet inhaalspurt digitale autonomie in https://ibestuur.nl/artikel/kamer-zet-inhaalspurt-digitale-autonomie-in/
+[^4]: De werking van de CLOUD-Act bij dataopslag in Europa https://www.ncsc.nl/actueel/weblog/weblog/2022/de-werking-van-de-cloud-act-bij-dataopslag-in-europa
