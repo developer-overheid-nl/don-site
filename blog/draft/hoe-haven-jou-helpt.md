@@ -1,6 +1,7 @@
 ---
 authors: [tom-ootes]
 tags: [haven, kubernetes, common-ground]
+draft: true
 ---
 # Met Haven(+) word je écht digitaal autonoom, en kan je uiteindelijk zonder Amerikaanse cloudproviders
 
@@ -18,7 +19,7 @@ Met de Haven-standaard heeft de Nederlandse overheid een praktisch instrument al
 
 ## De massale migratie naar Amerikaanse cloudproviders
 
-Amerikaanse cloudproviders zijn het afgelopen decennium uitgegroeid tot extreem winstgevende bedrijven, waar inmiddels het grootste deel van het internet opdraait. De top 3 grootste public cloud service providers (Amazon Web Services, Microsoft Azure en Google Cloud Platform) hebben momenteel gezamenlijk meer dan 72% van de wereldwijde markt in handen[^1]. Specifieke cijfers over het marktaandeel AWS/Azure/GCP bij de Nederlandse overheid zijn er niet, maar uit een rapport van Autoriteit Consument en Markt blijkt dat een marktaandeel geldt van 40-45% voor Azure en 30-35% voor AWS. GCP en Oracle hebben na AWS en Azure het grootste marktaandeel met een marktaandeel tussen de 5 en 10 procent.[^2]
+Amerikaanse cloudproviders zijn het afgelopen decennium uitgegroeid tot extreem winstgevende bedrijven, waar inmiddels het grootste deel van het internet opdraait. De top 3 grootste public cloud service providers (Amazon Web Services, Microsoft Azure en Google Cloud Platform) hebben momenteel gezamenlijk meer dan 72% van de wereldwijde markt in handen[^1]. Specifieke cijfers over het marktaandeel AWS/Azure/GCP bij de Nederlandse overheid zijn er niet, maar uit een rapport van Autoriteit Consument en Markt naar de gehele Nederlandse cloudprovider-markt (dus het gehele speelveld) blijkt dat Azure de markt voor 40-45% in handen heeft en AWS voor 30-35%. GCP en Oracle hebben na AWS en Azure het grootste marktaandeel met beiden een marktaandeel tussen de 5 en 10 procent.[^2]
 
 ## Politiek draagvlak voor een Europese cloud
 Gelukkig klonk er dit jaar in de Nederlandse politiek een nieuw geluid op dit gebied. Zo nam de Tweede Kamer op 13 maart 2025 acht moties aan tijdens een plenair debat over migraties van overheids-ICT naar het buitenland [^3].
@@ -33,6 +34,7 @@ De belangrijkste punten die werden besloten;
 7. Als doelstelling moet gelden dat de continuïteit van de Nederlandse digitale overheid niet rechtstreeks afhankelijk is van partijen uit de Verenigde Staten.
 8. Bij aanbestedingen van vitale ICT-diensten moeten Europese bedrijven voorrang krijgen door soevereiniteitseisen te stellen voor de opslag van gevoelige gegevens.
 
+Wat hier de gevolgen van zullen zijn in de praktijk is nog niet helemaal uitgekristalliseerd. Echter is het wel raadzaam hierop voor te sorteren.
 
 ![Haven](./img/stadskantoor_2.jpg)
 *Stadskantoor in Utrecht, onder andere hier wordt de Haven-standaard ontwikkeld. Mede door de gemeente Utrecht. Foto door [Stefan van E](https://www.flickr.com/photos/stefanve/26230670274). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
@@ -65,15 +67,16 @@ Amerikaanse cloudproviders zijn heel goed in één ding: het creëren van een he
 ![Haven](./img/stadskantoor_4.jpg)
 *Stadskantoor in Utrecht. Foto door [Eric de Redelijkheid](https://www.flickr.com/photos/ericdere/36957944765/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
 
-## Microsoft Azure/ AWS werden de defacto standaard
+## Azure/ AWS werden de defacto standaard
 Door het brede scala aan services en de schaalbaarheid werden Azure en AWS extreem populaire cloudproviders. Doordat deze bedrijven vroeg zijn begonnen met het investeren in deze sector en er in Amerika makkelijk toegang was tot tech-talent hadden ze grote voordelen. Ook hadden deze bedrijven het voordeel dat kapitaal des tijds goedkoop voorhanden was en maakten ze slim gebruik van ecosystemen van partner-bedrijven. 
 
+## Strategisch slim?
 Doordat Microsoft al jaren dé grote it-leverancier is voor de Nederlandse overheid, was de overstap op Microsoft Azure een logische. Echter rijst nu de vraag: is het handig om strategisch zo afhankelijk te zijn van een Amerikaans bedrijf? Het is bekend dat de Amerikaanse overheid mee mag kijken in de infrastructuur van Amerikaanse bedrijven als zij dat wil, ook als de servers daarvan op Europees grondgebied staan [^4]. Servers op Europees grondgebied zijn dus ook geen oplossing voor dit probleem, zolang het Amerikaanse bedrijven betreft.
 
-## De Haven-checks als handvatten voor de overstap naar Europese cloudproviders
+## De Haven-checks als handvatten
 Dan naar de oplossing. Als je als organisatie toe beweegt naar een situatie waarin je er voor zorgt dat je Kubernetes clusters allemaal Haven-compliant zijn werk je toe naar een gestandaardiseerde situatie. Dit zorgt er voor dat het **makkelijker wordt** om vervolgens later de boel te migreren naar een **Europese cloudprovider**.
 
-## Maar dan heb ik toch nog geen vervanging van mijn mooie Azure/AWS services? Toch wel: met Haven+
+## Haven+ als vervanging voor Azure/AWS services
 Je hebt inderdaad niet direct vervanging voor je mooie glimmende Azure/AWS services. Maar je kan ze wel langzamerhand gaan vervangen door open source componenten die je zelf opzet. En het mooie is; een aantal van deze open source componenten heeft het Haven-team al voor je beschikbaar gemaakt in de vorm van een project genaamd [**Haven+**](https://gitlab.com/commonground/haven/havenplus).
 
 Dit project bevat misschien nog niet alles wat je nodig hebt als organisatie, maar gelukkig staat niets je in de weg om mee te bouwen aan deze componenten met het Haven team!
