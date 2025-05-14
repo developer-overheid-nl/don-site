@@ -2,7 +2,6 @@
 authors: [tom-ootes]
 tags: [rust, kiesraad, development]
 image: ./img/ellen_mark_landscape.jpg
-date: 2025-03-26
 toc_max_heading_level: 2
 ---
 # Deze goede redenen heeft de Kiesraad om Rust te gebruiken
