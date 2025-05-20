@@ -3,14 +3,29 @@
   display: grid;
   grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
   gap: 1rem;
-  /* align-items: center; */
   padding: 3rem 0;
-  /* width: 100%; */
   list-style: none;
 }
 
+@media (max-width: 1200px) {
+  .tiles {
+    --columns: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .tiles {
+    --columns: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .tiles {
+    --columns: 1;
+  }
+}
+
 .tile {
-  /* outline: 1mm dashed salmon; */
   word-break: break-word;
   hyphens: auto;
 }
