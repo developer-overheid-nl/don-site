@@ -13,7 +13,10 @@ Voor complexe problemen als deze bestaat er nooit een silver bullet. Echter is e
 
 :::success[**TL;DR**]
 
-Met de Haven-standaard heeft de Nederlandse overheid een praktisch instrument als stap naar Digitale Autonomie. Door Kubernetes-clusters volgens de Haven-checks in te richten, wordt migratie naar Europese cloudproviders uiteindelijk eenvoudiger. Specifieke AWS/Azure services zoals `Object Storage` en `Databases` kunnen op termijn vervangen worden door open-source [Haven+](https://gitlab.com/commonground/haven/havenplus) alternatieven. Hoewel deze transitie een cloud-native infrastructuur vereist, biedt Haven een duidelijk pad richting digitale zelfstandigheid.
+- Met de Haven-standaard heeft de Nederlandse overheid een praktisch instrument als stap naar Digitale Autonomie.
+- Door Kubernetes-clusters volgens de Haven-checks in te richten, wordt migratie naar Europese cloudproviders uiteindelijk eenvoudiger.
+- Specifieke AWS/Azure services zoals `Object Storage` en `Databases` kunnen op termijn vervangen worden door open-source [Haven+](https://gitlab.com/commonground/haven/havenplus) alternatieven.
+- Hoewel de transitie een cloud-native infrastructuur vereist, biedt Haven een duidelijk pad richting digitale zelfstandigheid.
 
 :::
 
@@ -75,12 +78,14 @@ Door het brede scala aan services en de schaalbaarheid werden Azure en AWS extre
 Doordat Microsoft al jaren dé grote it-leverancier is voor de Nederlandse overheid, was de overstap op Microsoft Azure een logische. Echter rijst nu de vraag: is het handig om strategisch zo afhankelijk te zijn van een Amerikaans bedrijf? Het is bekend dat de Amerikaanse overheid mee mag kijken in de infrastructuur van Amerikaanse bedrijven als zij dat wil, ook als de servers daarvan op Europees grondgebied staan [^4]. Servers op Europees grondgebied zijn dus ook geen oplossing voor dit probleem, zolang het Amerikaanse bedrijven betreft.
 
 ## De Haven-checks als handvatten
-Dan naar de oplossing. Als je als organisatie toe beweegt naar een situatie waarin je er voor zorgt dat je Kubernetes clusters allemaal Haven-compliant zijn werk je toe naar een gestandaardiseerde situatie. Dit zorgt er voor dat het **makkelijker wordt** om vervolgens later de boel te migreren naar een **Europese cloudprovider**.
+Dan naar de oplossing. Als je als organisatie toe beweegt naar een situatie waarin je er voor zorgt dat je Kubernetes-clusters allemaal Haven-compliant zijn, werk je toe naar een gestandaardiseerde situatie. Dit zorgt er voor dat het een stuk **makkelijker wordt** om vervolgens later de boel te migreren naar een **Europese cloudprovider**.
 
 ## Haven+ als vervanging voor Azure/AWS services
 Je hebt inderdaad niet direct vervanging voor je mooie glimmende Azure/AWS services. Maar je kan ze wel langzamerhand gaan vervangen door open source componenten die je zelf opzet. En het mooie is; een aantal van deze open source componenten heeft het Haven-team al voor je beschikbaar gemaakt in de vorm van een project genaamd [**Haven+**](https://gitlab.com/commonground/haven/havenplus).
 
 Dit project bevat misschien nog niet alles wat je nodig hebt als organisatie, maar gelukkig staat niets je in de weg om mee te bouwen aan deze componenten met het Haven team!
+
+[Praat mee over Haven+](https://digilab.overheid.nl/chat/digilab/channels/havenplus)
 
 ![Haven](./img/stadskantoor_6.jpg)
 *Stadskantoor in Utrecht. Foto door [Gerard Stolk](https://www.flickr.com/photos/gerardstolk/39472632000/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
