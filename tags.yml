@@ -3,7 +3,7 @@ accessibility:
   description: Accessibility / toegankelijkheid.
   label: Accessibility
 adr:
-  label: API Design Rules
+  label: API Design Rules (ADR)
 ai:
   description: Artificial Intelligence oftewel Kunstmatige Intelligentie
   label: Artificial Intelligence
