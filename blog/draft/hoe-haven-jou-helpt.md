@@ -3,7 +3,7 @@ authors: [tom-ootes]
 tags: [haven, kubernetes, common-ground]
 draft: true
 ---
-# Met Haven(+) word je écht digitaal autonoom, en kan je uiteindelijk zonder Amerikaanse cloudproviders
+# Digitale Autonomie zonder Amerikaanse cloud met Haven(+)
 
 Nu de diplomatieke relatie met de Verenigde Staten onder druk staat, prijkt het thema Digitale Autonomie ineens overal bovenaan de agenda in overheids-IT-land. Er wordt veel over gesproken, maar over hoe we precies onafhankelijk gaan worden lijkt nog geen consensus te bestaan.
 
@@ -19,6 +19,8 @@ Voor complexe problemen als deze bestaat er nooit een silver bullet. Echter is e
 - Hoewel de transitie een cloud-native infrastructuur vereist, biedt Haven een duidelijk pad richting digitale zelfstandigheid.
 
 :::
+
+*Update: doordat Microsoft *
 
 ## De massale migratie naar Amerikaanse cloudproviders
 
