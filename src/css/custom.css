@@ -505,15 +505,15 @@ html {
 }
 
 .pagination-nav__link--next {
-  background-color: var(--ifm-color-primary) !important;
+  background-color: var(--ifm-color-primary);
 }
 
 .pagination-nav__link--next .pagination-nav__label,
 .pagination-nav__link--next .pagination-nav__sublabel {
-  color: #fff !important;
+  color: #fff;
 }
 
 .pagination-nav__link--next svg,
 .pagination-nav__link--next svg path {
-  fill: #fff !important;
+  fill: #fff;
 }
