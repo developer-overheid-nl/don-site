@@ -5,7 +5,7 @@ draft: true
 ---
 # Digitale Autonomie zonder Amerikaanse cloud met Haven(+)
 
-Nu de diplomatieke relatie met de Verenigde Staten onder druk staat, prijkt het thema Digitale Autonomie ineens overal bovenaan de agenda in overheids-IT-land. Er wordt veel over gesproken, maar over hoe we precies onafhankelijk gaan worden lijkt nog geen consensus te bestaan.
+Door het veranderde huidige geopolitieke klimaat, prijkt het thema Digitale Autonomie ineens overal bovenaan de agenda in overheids-IT-land. Er wordt veel over gesproken, maar over hoe we precies onafhankelijk gaan worden lijkt nog geen consensus te bestaan.
 
 Voor complexe problemen als deze bestaat er nooit een silver bullet. Echter is er wel een project dat je helpt voorsorteren op de (nood)uitgang: de Kubernetes-standaard [Haven](https://haven.commonground.nl/). In dit artikel omschrijf ik welke rol ik voor Haven(+) zie als **oplossing** voor **Digitale Autonomie**. Haven is een standaard die bestaat uit [checks](https://haven.commonground.nl/techniek/checks) voor het correct en secure opzetten van Kubernetes clusters.
 
@@ -72,8 +72,9 @@ Amerikaanse cloudproviders zijn heel goed in één ding: het creëren van een he
 - AI/ML: AWS SageMaker, Azure ML, Google Vertex AI
 - Data analytics: AWS Redshift, Azure Synapse, Google BigQuery
 
-![Haven](./img/stadskantoor_4.jpg)
-*Stadskantoor in Utrecht. Foto door [Eric de Redelijkheid](https://www.flickr.com/photos/ericdere/36957944765/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
+![Haven](./img/stadskantoor_6.jpg)
+*Stadskantoor in Utrecht. Foto door [Gerard Stolk](https://www.flickr.com/photos/gerardstolk/39472632000/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
+
 
 ## Azure/ AWS werden de defacto standaard
 Door het brede scala aan services en de schaalbaarheid werden Azure en AWS extreem populaire cloudproviders. Doordat deze bedrijven vroeg zijn begonnen met het investeren in deze sector en er in Amerika makkelijk toegang was tot tech-talent hadden ze grote voordelen. Ook hadden deze bedrijven het voordeel dat kapitaal destijds goedkoop voorhanden was en maakten ze slim gebruik van ecosystemen van partner-bedrijven. 
@@ -89,10 +90,12 @@ Je hebt inderdaad niet direct vervanging voor je mooie glimmende Azure/AWS servi
 
 Dit project bevat misschien nog niet alles wat je nodig hebt als organisatie, maar gelukkig staat niets je in de weg om mee te bouwen aan deze componenten met het Haven team!
 
-[Praat mee over Haven+](https://digilab.overheid.nl/chat/digilab/channels/havenplus)
+[![Haven](./img/overview_haven_+.png)](https://gitlab.com/commonground/haven/havenplus/gitlab-profile/-/raw/main/Haven+_HLD_Ref_Impl.jpg)
 
-![Haven](./img/stadskantoor_6.jpg)
-*Stadskantoor in Utrecht. Foto door [Gerard Stolk](https://www.flickr.com/photos/gerardstolk/39472632000/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
+*Overzicht van het Haven+ project*
+
+- [Praat mee over Haven+](https://digilab.overheid.nl/chat/digilab/channels/havenplus)
+- [Git Haven+](https://gitlab.com/commonground/haven/havenplus/)
 
 ## Toegegeven: je infra moet cloud-native zijn
 Toegegeven: om gebruik te maken van de Haven standaard moet je infra natuurlijk wel cloud-native zijn. En sommige organisaties zijn nog verre van cloud-native. Er zullen vast nog organisaties zijn die stiekem nog steeds met VPS'en werken, en een infrastructuur hebben die zich her en der verspreidt over de organisatie bevindt.
@@ -114,6 +117,7 @@ Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met 
 * [Slack-kanaal van Haven](https://samenorganiseren.slack.com/archives/CGCPJE599)
 * [Mattermost kanaal van Haven+](https://digilab.overheid.nl/chat/digilab/channels/havenplus)
 * [Naar de lijst met checks van Haven](https://haven.commonground.nl/techniek/checks)
+* [Git Haven+](https://gitlab.com/commonground/haven/havenplus/)
 
 [^1]: Marktstudie Cloud Services: voortdurende consolidatie, aanhoudende groei (https://www.bdo.nl/nl-nl/actueel/marktstudie-cloud-services-voortdurende-consolidatie-aanhoudende-groei)
 [^2]: ACM: aanpassingen in Data Act nodig om concurrentie tussen cloudaanbieders te stimuleren (https://www.acm.nl/nl/publicaties/acm-aanpassingen-data-act-nodig-om-concurrentie-tussen-cloudaanbieders-te-stimuleren)
