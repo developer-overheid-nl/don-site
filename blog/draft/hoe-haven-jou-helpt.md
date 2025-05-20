@@ -5,7 +5,7 @@ draft: true
 ---
 # Met Haven(+) word je écht digitaal autonoom, en kan je uiteindelijk zonder Amerikaanse cloudproviders
 
-Door alle perikelen die zich op het moment voltrekken in de Verenigde Staten staat het thema *Digitale Autonomie* ineens overal boven aan de agenda in overheids-it-land. Er wordt veel over gesproken, maar over hoe we precies onafhankelijk gaan worden lijkt nog geen consensus te bestaan.
+Nu de diplomatieke relatie met de Verenigde Staten onder druk staat, prijkt het thema Digitale Autonomie ineens overal bovenaan de agenda in overheids-IT-land. Er wordt veel over gesproken, maar over hoe we precies onafhankelijk gaan worden lijkt nog geen consensus te bestaan.
 
 Voor complexe problemen als deze bestaat er nooit een silver bullet. Echter is er wel een project dat je helpt voorsorteren op de (nood)uitgang: de Kubernetes-standaard [Haven](https://haven.commonground.nl/). In dit artikel omschrijf ik welke rol ik voor Haven(+) zie als **oplossing** voor **Digitale Autonomie**. Haven is een standaard die bestaat uit [checks](https://haven.commonground.nl/techniek/checks) voor het correct en secure opzetten van Kubernetes clusters.
 
