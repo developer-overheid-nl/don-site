@@ -28,6 +28,7 @@
 .tile {
   word-break: break-word;
   hyphens: auto;
+  position: relative;
 }
 
 .title {
@@ -37,6 +38,18 @@
 .icon {
   width: 3rem;
   height: 3rem;
+}
+
+.highlight {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.875rem;
+  background-color: var(--don-robijnrood-50);
+  color: var(--don-grijs-900);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .link {

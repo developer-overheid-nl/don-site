@@ -3,8 +3,7 @@ import tiles from "./tiles";
 import styles from './styles.module.css';
 
 export default function HomepageTiles(): React.JSX.Element {
-  const tileItems = tiles.map(({icon, title, link, description}, index) => {
-    console.log({icon, title, link, description}, index);
+  const tileItems = tiles.map(({icon, title, link, description, highlight}, index) => {
     const Description = 
       typeof description === 'string' ? <p>{description}</p> : (
         <p>
@@ -22,14 +21,13 @@ export default function HomepageTiles(): React.JSX.Element {
 
     return (
       <li key={index} className={styles.tile}>
-        {cloneElement(icon, { className: styles.icon })}
+        {cloneElement(icon, { className: styles.icon, 'aria-hidden': true, focusable: false })}
+        { highlight ? <span className={styles.highlight}>{highlight}</span> : null}
         <h2 className={styles.title}><a href={link}>{title}</a></h2>
         {Description}
       </li>
     );
   });
-
-  console.log(tiles, tileItems);
 
   return (
     <section className="container">

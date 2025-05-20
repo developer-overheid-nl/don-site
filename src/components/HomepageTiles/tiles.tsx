@@ -37,6 +37,7 @@ export default [
     title: 'Implementatie-ondersteuning',
     description: 'Heb je hulp nodig bij het ontwikkelen of aanbieden van API\'s? Ons implementatie-ondersteuningsteam staat voor je klaar!',
     link: '/implementatie-ondersteuning',
+    highlight: 'uitgelicht',
   },
   {
     icon: <IconComputercode />,
