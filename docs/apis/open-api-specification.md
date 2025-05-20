@@ -4,7 +4,7 @@ tags:
   - "api"
 ---
 
-# OpenAPI Specification
+# OpenAPI Specification (OAS)
 
 :::info[Verplichte standaard]
 
