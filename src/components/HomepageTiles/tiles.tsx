@@ -5,14 +5,14 @@ import IconDocumentMetGolvendeLijnenEnLint from "@site/src/theme/icons/IconDocum
 import IconKlembordMetVinkjesEnLijnen from "@site/src/theme/icons/IconKlembordMetVinkjesEnLijnen";
 import IconComputer from "@site/src/theme/icons/IconComputer";
 import IconManMetLaptop from "@site/src/theme/icons/IconManMetLaptop";
-import IconLadeArchiefkast from "@site/src/theme/icons/IconLadeArchiefkast";
+import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
 
 export default [
   {
     icon: <IconTekstballonnenMetPunten />,
     title: 'Doe mee',
-    description: 'Lorum ipsum dolor sit amet',
-    link: '/bijdragen',
+    description: 'Kom er achter op welke manieren je kan bijdragen aan ons platform?',
+    link: '/contributing',
   },
   {
     icon: <IconIct />,
@@ -21,14 +21,22 @@ export default [
       { link: '/kennisbank/apis/aan-de-slag/bouw-een-api', label: 'Bouw een API' }, 
       { link: '/kennisbank/apis/aan-de-slag/maak-een-oas', label: 'Maak een OpenAPI specificatie' },
       { link: '/kennisbank/apis/standaarden/problem-json', label: 'Problem JSON' },
+      { link: 'https://apis.developer.overheid.nl/', external: true, label: 'API\'s van Nederlandse overheidsorganisaties'}
     ],
-    link: '/api',
+    link: '/kennisbank/apis/',
   },
   {
     icon: <IconComputercode />,
     title: 'Aan de slag met Open Source',
-    description: 'Lorum ipsum dolor sit amet',
-    link: '/bijdragen',
+    description: [
+      { link: '/blog/2025/03/17/hoe-overtuig-ik-mijn-manager', label: 'Blog: Hoe overtuig ik mijn manager?' }, 
+      { link: '/kennisbank/open-source/tutorials/os-checklist', label: 'Project Launch Checklist' },
+      { link: '/kennisbank/open-source/tutorials/open-source-software-licenties', label: 'Een licentie kiezen' },
+      { link: '/kennisbank/open-source/standaarden/readme-md', label: 'README.md' },
+      { link: '/kennisbank/open-source/standaarden/publiccode-yml', label: 'Publiccode.yml' },
+      { link: 'https://oss.developer.overheid.nl/', external: true, label: 'Open source software register'}
+    ],
+    link: '/kennisbank/open-source/',
   },
   {
     icon: <IconDocumentMetGolvendeLijnenEnLint />,
@@ -37,14 +45,15 @@ export default [
       { link: '/kennisbank/apis/tools/api-design-rules-linter', label: 'API Design Rules Linter' }, 
       { link: '/kennisbank/apis/tools/api-design-rules-validator', label: 'API Design Rules Validator' },
       { link: '/kennisbank/apis/tools/open-api-spec-generator', label: 'OpenAPI Spec Generator' },
+      { link: '/blog/2023/09/20/waarom-zijn-api-design-rules-zo-belangrijk', label: 'Blog: Waarom zijn API design rules zo belangrijk?' },
     ],
-    link: '/kennisbank/apis/tools',
+    link: '/kennisbank/apis/tools/',
   },
   {
     icon: <IconKlembordMetVinkjesEnLijnen />,
     title: 'Leidraad verantwoorde software ontwikkeling',
     description: 'Lijst met principes voor overheidsbreed beleid voor softwareontwikkeling',
-    link: '/kennisbank/leidraad',
+    link: '/kennisbank/leidraad/',
   },
   {
     icon: <IconManMetLaptop />,
@@ -55,13 +64,22 @@ export default [
   {
     icon: <IconComputer />,
     title: 'Aan de slag met front-end',
-    description: [{ link: '/kennisbank/front-end/nl-design-system/', label: 'NL Design System' }, { link: '/kennisbank/front-end/standaarden/digitoegankelijk', label: 'DigiToegankelijk' }],
+    description: [
+      { link: '/kennisbank/front-end/nl-design-system/', label: 'NL Design System' }, 
+      { link: '/kennisbank/front-end/standaarden/digitoegankelijk', label: 'DigiToegankelijk' }
+    ],
     link: '/kennisbank/front-end/',
   },
   {
-    icon: <IconLadeArchiefkast />,
-    title: 'TBD',
-    description: 'Lorum ipsum dolor sit amet',
-    link: '/api',
+    icon: <IconCybersecurity />,
+    title: 'Security',
+    description: [
+      { link: '/kennisbank/security/standaarden/digid', label: 'DigiD' }, 
+      { link: '/kennisbank/security/standaarden/eherkenning', label: 'eHerkenning' },
+      { link: '/kennisbank/security/standaarden/eidas', label: 'eIDAS' },
+      { link: '/kennisbank/security/standaarden/oauth', label: 'OAuth 2.0' },
+      { link: '/kennisbank/security/standaarden/pkioverheid', label: 'PKIoverheid' },
+    ],
+    link: '/kennisbank/security/',
   },
 ];

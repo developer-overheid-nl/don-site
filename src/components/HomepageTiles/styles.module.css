@@ -27,3 +27,13 @@
 .link {
   color: inherit;
 }
+
+.spacer {
+  margin-inline-end: 0.25rem;
+}
+
+.externalLinkIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.25rem;
+}
