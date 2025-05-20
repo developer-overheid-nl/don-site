@@ -11,19 +11,32 @@ export default [
   {
     icon: <IconTekstballonnenMetPunten />,
     title: 'Doe mee',
-    description: 'Kom er achter op welke manieren je kan bijdragen aan ons platform?',
+    description: 'Dit project is continu in ontwikkeling. Ontbreekt er iets of zie je een fout? Of heb jij nog artikelen, tools of andere bronnen die je graag wilt delen? Laat het ons weten!',
     link: '/contributing',
   },
   {
+    icon: <IconKlembordMetVinkjesEnLijnen />,
+    title: 'Leidraad verantwoorde software ontwikkeling',
+    description: 'Starten met een IT project voor de overheid? Deze lijst met principes en voorbeelden is een eerste aanzet tot overheidsbreed beleid voor development.',
+    link: '/kennisbank/leidraad/',
+  },
+  {
     icon: <IconIct />,
-    title: 'Aan de slag met API design',
-    description: [
-      { link: '/kennisbank/apis/aan-de-slag/bouw-een-api', label: 'Bouw een API' }, 
-      { link: '/kennisbank/apis/aan-de-slag/maak-een-oas', label: 'Maak een OpenAPI specificatie' },
-      { link: '/kennisbank/apis/standaarden/problem-json', label: 'Problem JSON' },
-      { link: 'https://apis.developer.overheid.nl/', external: true, label: 'API\'s van Nederlandse overheidsorganisaties'}
-    ],
+    title: 'Aan de slag met API development',
+    description: 'Moet je een API bouwen die voldoet aan de standaarden van de NL API Strategie? Volg onze tutorial en ontwikkel stap-voor-stap een compliant API.',
+    // description: [
+    //   { link: '/kennisbank/apis/aan-de-slag/bouw-een-api', label: 'Bouw een API' }, 
+    //   { link: '/kennisbank/apis/aan-de-slag/maak-een-oas', label: 'Maak een OpenAPI specificatie' },
+    //   { link: '/kennisbank/apis/standaarden/problem-json', label: 'Problem JSON' },
+    //   { link: 'https://apis.developer.overheid.nl/', external: true, label: 'API\'s van Nederlandse overheidsorganisaties'}
+    // ],
     link: '/kennisbank/apis/',
+  },
+  {
+    icon: <IconManMetLaptop />,
+    title: 'Implementatie-ondersteuning',
+    description: 'Heb je hulp nodig bij het ontwikkelen of aanbieden van API\'s? Ons implementatie-ondersteuningsteam staat voor je klaar!',
+    link: '/implementatie-ondersteuning',
   },
   {
     icon: <IconComputercode />,
@@ -48,18 +61,6 @@ export default [
       { link: '/blog/2023/09/20/waarom-zijn-api-design-rules-zo-belangrijk', label: 'Blog: Waarom zijn API design rules zo belangrijk?' },
     ],
     link: '/kennisbank/apis/tools/',
-  },
-  {
-    icon: <IconKlembordMetVinkjesEnLijnen />,
-    title: 'Leidraad verantwoorde software ontwikkeling',
-    description: 'Lijst met principes voor overheidsbreed beleid voor softwareontwikkeling',
-    link: '/kennisbank/leidraad/',
-  },
-  {
-    icon: <IconManMetLaptop />,
-    title: 'Implementatieondersteuning',
-    description: 'Verkennen van standaarden, ondersteuning bij casussen, proces naar doelarchitectuur? Wij staan klaar met advies, praktische ondersteuning en support',
-    link: '/implementatie-ondersteuning',
   },
   {
     icon: <IconComputer />,
