@@ -503,3 +503,17 @@ html {
   margin-bottom: 0;
   margin-top: 0;
 }
+
+.pagination-nav__link--next {
+  background-color: var(--ifm-color-primary) !important;
+}
+
+.pagination-nav__link--next .pagination-nav__label,
+.pagination-nav__link--next .pagination-nav__sublabel {
+  color: #fff !important;
+}
+
+.pagination-nav__link--next svg,
+.pagination-nav__link--next svg path {
+  fill: #fff !important;
+}
