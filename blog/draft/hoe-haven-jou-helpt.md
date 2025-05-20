@@ -20,8 +20,6 @@ Voor complexe problemen als deze bestaat er nooit een silver bullet. Echter is e
 
 :::
 
-*Update: doordat Microsoft*
-
 ## De massale migratie naar Amerikaanse cloudproviders
 
 Amerikaanse cloudproviders zijn het afgelopen decennium uitgegroeid tot extreem winstgevende bedrijven, waar inmiddels het grootste deel van het internet op draait. De top 3 grootste public cloud service providers (Amazon Web Services, Microsoft Azure en Google Cloud Platform) hebben momenteel gezamenlijk meer dan 72% van de wereldwijde markt in handen[^1]. Specifieke cijfers over het marktaandeel AWS/Azure/GCP bij de Nederlandse overheid zijn er niet, maar uit een rapport van Autoriteit Consument en Markt naar de gehele Nederlandse cloudprovider-markt (dus het gehele speelveld) blijkt dat Azure de markt voor 40-45% in handen heeft en AWS voor 30-35%. GCP en Oracle hebben na AWS en Azure het grootste marktaandeel met beiden een marktaandeel tussen de 5 en 10 procent.[^2]
