@@ -1,0 +1,29 @@
+.tiles {
+  --columns: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+  gap: 1rem;
+  /* align-items: center; */
+  padding: 3rem 0;
+  /* width: 100%; */
+  list-style: none;
+}
+
+.tile {
+  /* outline: 1mm dashed salmon; */
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.title {
+  margin-block-end: 0.25rem;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.link {
+  color: inherit;
+}
