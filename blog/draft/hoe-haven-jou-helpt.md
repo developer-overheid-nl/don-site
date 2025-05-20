@@ -23,16 +23,17 @@ Amerikaanse cloudproviders zijn het afgelopen decennium uitgegroeid tot extreem 
 
 ## Politiek draagvlak voor een Europese cloud
 Gelukkig klonk er dit jaar in de Nederlandse politiek een nieuw geluid op dit gebied. Zo nam de Tweede Kamer op 13 maart 2025 acht moties aan tijdens een plenair debat over migraties van overheids-ICT naar het buitenland [^3].
-De belangrijkste punten die werden besloten;
+De belangrijkste punten die werden [vastgesteld](https://www.tweedekamer.nl/debat_en_vergadering/plenaire_vergaderingen/details/activiteit?id=2025A02077);
 
-1. De Tweede Kamer heeft acht moties aangenomen tijdens het plenaire debat (13 maart 2025) over migraties van overheids-ICT naar het buitenland.
-2. De Kamer wil onnodige ICT-migraties naar Amerikaanse techreuzen stopzetten. Volgens de motie van Barbara Kathmann (GroenLinks-PvdA) moeten alle geplande verhuizingen van overheids-ICT worden gestopt, tenzij de continuïteit van dienstverlening aan burgers aantoonbaar in gevaar komt (dan is toestemming van de staatssecretaris voor digitalisering nodig).
-3. Er moet een Rijkscloud komen in volledig Nederlands beheer, met functionaliteit voor vertrouwelijke communicatie tussen departementen en veilige dataopslag.
-4. Het .nl-domein moet weer volledig in Nederlandse handen komen. Recent is besloten dat een beperkt deel naar AWS (Amazon Web Services) mag verhuizen, maar volgens de aangenomen motie moet dit in overleg met SIDN en nationale cloudaanbieders weer terug naar Nederland.
-5. Er moet een risicoanalyse en exitstrategie komen voor alle clouddiensten van Amerikaanse techbedrijven. Momenteel beschikt twee derde van de clouddiensten van de overheid hier nog niet over.
-6. De regering moet in EU-verband pleiten voor versnelde investeringen in Europese cloudalternatieven, met maximale benutting van Europese begrotingsmiddelen en investeringsfondsen.
-7. Als doelstelling moet gelden dat de continuïteit van de Nederlandse digitale overheid niet rechtstreeks afhankelijk is van partijen uit de Verenigde Staten.
-8. Bij aanbestedingen van vitale ICT-diensten moeten Europese bedrijven voorrang krijgen door soevereiniteitseisen te stellen voor de opslag van gevoelige gegevens.
+1. De Kamer wil onnodige ICT-migraties naar Amerikaanse techreuzen stopzetten. Volgens de motie van Barbara Kathmann (GroenLinks-PvdA) moeten alle geplande verhuizingen van overheids-ICT worden gestopt, tenzij de continuïteit van dienstverlening aan burgers aantoonbaar in gevaar komt (dan is toestemming van de staatssecretaris voor digitalisering nodig).
+2. Er moet een Rijkscloud komen in volledig Nederlands beheer, met functionaliteit voor vertrouwelijke communicatie tussen departementen en veilige dataopslag.
+3. Het .nl-domein moet weer volledig in Nederlandse handen komen. Recent is besloten dat een beperkt deel naar AWS (Amazon Web Services) mag verhuizen, maar volgens de aangenomen motie moet dit in overleg met SIDN en nationale cloudaanbieders weer terug naar Nederland.
+4. Er moet een risicoanalyse en exitstrategie komen voor alle clouddiensten van Amerikaanse techbedrijven. Momenteel beschikt twee derde van de clouddiensten van de overheid hier nog niet over.
+5. De regering moet in EU-verband pleiten voor versnelde investeringen in Europese cloudalternatieven, met maximale benutting van Europese begrotingsmiddelen en investeringsfondsen.
+6. Als doelstelling moet gelden dat de continuïteit van de Nederlandse digitale overheid niet rechtstreeks afhankelijk is van partijen uit de Verenigde Staten.
+7. De VVD vraagt om maatregelen voor het borgen van soevereiniteit, continuïteit en gegevensbescherming in cloudcontracten, in samenwerking met de AIVD en de Autoriteit Persoonsgegevens.
+8. De samenwerking tussen de verschillende CIO's van ministeries moet worden verbetert door het huidige Besluit CIO-stelsel aan te passen.
+9. Bij aanbestedingen van vitale ICT-diensten moeten Europese bedrijven voorrang krijgen door soevereiniteitseisen te stellen voor de opslag van gevoelige gegevens.
 
 Wat hier de gevolgen van zullen zijn in de praktijk is nog niet helemaal uitgekristalliseerd. Echter is het wel raadzaam hierop voor te sorteren.
 
