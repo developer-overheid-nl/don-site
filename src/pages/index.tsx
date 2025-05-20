@@ -56,7 +56,7 @@ export default function Home(): React.JSX.Element {
       <main>
         <HomepageHeader />
         <HomepageTiles />
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
         <div className="container">
           <div className={styles.twoColumns}>
             <HomepageBlogposts />
