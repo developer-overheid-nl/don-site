@@ -83,7 +83,7 @@ Doordat Microsoft al jaren dé grote it-leverancier is voor de Nederlandse overh
 Dan naar de oplossing. Als je als organisatie toe beweegt naar een situatie waarin je er voor zorgt dat je Kubernetes-clusters allemaal Haven-compliant zijn, werk je toe naar een gestandaardiseerde situatie. Dit zorgt er voor dat het een stuk **makkelijker wordt** om vervolgens later de boel te migreren naar een **Europese cloudprovider**.
 
 ## Haven+ als vervanging voor Azure/AWS services
-Je hebt inderdaad niet direct vervanging voor je mooie glimmende Azure/AWS services. Maar je kan ze wel langzamerhand gaan vervangen door open source componenten die je zelf opzet. En het mooie is; een aantal van deze open source componenten heeft het Haven-team al voor je beschikbaar gemaakt in de vorm van een project genaamd [**Haven+**](https://gitlab.com/commonground/haven/havenplus).
+Je hebt inderdaad niet direct vervanging voor je mooie glimmende Azure/AWS services. Maar je kan ze wel langzamerhand gaan vervangen door open source componenten die je zelf opzet. En het mooie is; een aantal van deze open source componenten heeft het Haven-team al voor je beschikbaar gemaakt in de vorm van een project genaamd [**Haven+**](/kennisbank/infra/standaarden/haven/haven-plus).
 
 Dit project bevat misschien nog niet alles wat je nodig hebt als organisatie, maar gelukkig staat niets je in de weg om mee te bouwen aan deze componenten met het Haven team!
 
