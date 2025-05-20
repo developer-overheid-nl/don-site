@@ -20,11 +20,15 @@ Voor complexe problemen als deze bestaat er nooit een silver bullet. Echter is e
 
 :::
 
-*Update: doordat Microsoft *
+*Update: doordat Microsoft*
 
 ## De massale migratie naar Amerikaanse cloudproviders
 
 Amerikaanse cloudproviders zijn het afgelopen decennium uitgegroeid tot extreem winstgevende bedrijven, waar inmiddels het grootste deel van het internet op draait. De top 3 grootste public cloud service providers (Amazon Web Services, Microsoft Azure en Google Cloud Platform) hebben momenteel gezamenlijk meer dan 72% van de wereldwijde markt in handen[^1]. Specifieke cijfers over het marktaandeel AWS/Azure/GCP bij de Nederlandse overheid zijn er niet, maar uit een rapport van Autoriteit Consument en Markt naar de gehele Nederlandse cloudprovider-markt (dus het gehele speelveld) blijkt dat Azure de markt voor 40-45% in handen heeft en AWS voor 30-35%. GCP en Oracle hebben na AWS en Azure het grootste marktaandeel met beiden een marktaandeel tussen de 5 en 10 procent.[^2]
+
+Het risico schuilt in de ontstane grote afhankelijkheid van deze Amerikaanse bedrijven. Een actueel voorbeeld hiervan zagen we vandaag: Microsoft blokkeerde zonder pardon het e-mailaccount van Karim Khan van het Internationaal Strafhof (ICC)[^5]. De ICC-arrestatiebevelen tegen premier Netanyahu en oud-minister Gallant voor vermeende oorlogsmisdaden in Gaza vormden de aanleiding voor de sancties. De regering-Trump reageerde door het hof van politieke motieven te beschuldigen en legde ICC-functionarissen bewegingsbeperkende sancties op.
+
+Een heel duidelijk voorbeeld van hoe Amerika druk kan uitoefenen door middel van het opschorten van diensten.
 
 ## Politiek draagvlak voor een Europese cloud
 Gelukkig klonk er dit jaar in de Nederlandse politiek een nieuw geluid op dit gebied. Zo nam de Tweede Kamer op 13 maart 2025 acht moties aan tijdens een plenair debat over migraties van overheids-ICT naar het buitenland [^3].
@@ -117,3 +121,4 @@ Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met 
 [^2]: ACM: aanpassingen in Data Act nodig om concurrentie tussen cloudaanbieders te stimuleren (https://www.acm.nl/nl/publicaties/acm-aanpassingen-data-act-nodig-om-concurrentie-tussen-cloudaanbieders-te-stimuleren)
 [^3]: Kamer zet inhaalspurt digitale autonomie in https://ibestuur.nl/artikel/kamer-zet-inhaalspurt-digitale-autonomie-in/
 [^4]: De werking van de CLOUD-Act bij dataopslag in Europa https://www.ncsc.nl/actueel/weblog/weblog/2022/de-werking-van-de-cloud-act-bij-dataopslag-in-europa
+[^5]: Wake-up call: Microsoft sluit e-mail ICC zonder pardon af https://www.binnenlandsbestuur.nl/digitaal/wake-up-call-microsoft-sluit-e-mail-icc-zonder-pardon-af
