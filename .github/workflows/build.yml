@@ -17,7 +17,7 @@ env:
   IMAGE_NAME: ghcr.io/developer-overheid-nl/don-site
 
 jobs:
-  markdown-lint:
+  markdown-linter:
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
