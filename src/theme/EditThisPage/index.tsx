@@ -27,14 +27,14 @@ export default function EditThisPage({ editUrl }: Props): ReactNode {
             <span>
               <Link to={editUrl}>
                 <IconEdit />
-                Iets van dit artikel verbeteren?
+                Iets aan dit artikel verbeteren?
               </Link>
             </span>
           </div>
           <div>
             <span>
               <Link to="https://github.com/developer-overheid-nl/don-site/issues/new/choose">
-                <IconLamp width="25px" height="25px" fill="#03679b" />
+                <IconLamp className="lampIcon" fill="#03679b" />
                 Heb je nog andere ideeën of suggesties?
               </Link>
             </span>

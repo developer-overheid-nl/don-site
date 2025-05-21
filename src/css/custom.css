@@ -517,3 +517,10 @@ html {
 .pagination-nav__link--next svg path {
   fill: var(--ifm-color-white);
 }
+
+.lampIcon {
+  display: inline-block;
+  transform: translateX(-0.3rem);
+  width: 24px;
+  height: 24px;
+}
