@@ -1,6 +1,6 @@
 ---
 authors: [tom-ootes]
-tags: [haven, kubernetes, common-ground]
+tags: [haven, kubernetes, common-ground, digitale-autonomie]
 ---
 # Digitale Autonomie zonder Amerikaanse cloud met Haven(+)
 

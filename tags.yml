@@ -66,6 +66,9 @@ digid:
   label: DigiD
 digikoppeling:
   label: Digikoppeling
+digitale-autonomie:
+  description: Digitale autonomie is het principe dat de overheid zelf de regie heeft over haar digitale infrastructuur en data.
+  label: Digitale autonomie
 docker:
   description: Docker is een platform voor het bouwen, distribueren en draaien van applicaties in individuele containers
   label: Docker
