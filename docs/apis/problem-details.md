@@ -4,7 +4,7 @@ tags:
   - "json"
 ---
 
-# Problem JSON
+# Foutmeldingen met Problem Details
 
 :::info[TL;DR]
 Problem JSON (`application/problem+json`) is een krachtige standaard voor het verbeteren van de foutafhandeling in API's en het bieden van een betere ervaring voor zowel developers als eindgebruikers.

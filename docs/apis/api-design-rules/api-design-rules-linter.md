@@ -1,9 +1,8 @@
 ---
-tags:
-  - "adr"
-  - "api"
-title: "API Design Rules Linter"
+tags: [adr, api, tool]
 ---
+
+# ADR Linter
 
 De ADR Linter controleert of een OpenAPI Specificatie compliant is met de API Design Rules. De linter is gebaseerd op het Open Source project [Spectral](https://github.com/stoplightio/spectral).
 

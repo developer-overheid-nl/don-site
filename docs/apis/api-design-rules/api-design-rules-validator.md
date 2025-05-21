@@ -1,11 +1,8 @@
 ---
-tags:
-  - "adr"
-  - "api"
-  - "cli"
-  - "validator"
-title: "API Design Rules Validator"
+tags: [adr, api, validator, tool]
 ---
+
+# ADR Validator
 
 De API Design Rules (ADR) Validator is een command line interface die gebruikt kan worden om te valideren of een API zicht gedraagt conform deze delen van de [NL API Strategie](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Inleiding/):
 
