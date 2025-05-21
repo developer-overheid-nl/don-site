@@ -9,6 +9,7 @@ import styles from "./index.module.css";
 import { IconButton, TextInput } from "@rijkshuisstijl-community/components-react";
 import IconZoekInline from "../theme/icons/IconZoekInline";
 import { ThemeConfig } from "docusaurus-theme-search-typesense";
+import HomepageTiles from "../components/HomepageTiles";
 
 function Search() {
   return (
@@ -54,8 +55,9 @@ export default function Home(): React.JSX.Element {
       description="Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.">
       <main>
         <HomepageHeader />
-        <HomepageFeatures />
-        <div className="container">
+        <HomepageTiles />
+        {/* <HomepageFeatures /> */}
+        <div className="container container--full">
           <div className={styles.twoColumns}>
             <HomepageBlogposts />
             <HomepageAgenda />

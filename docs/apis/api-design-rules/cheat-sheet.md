@@ -6,7 +6,7 @@ tags:
 sidebar_position: 0
 ---
 
-# Cheat Sheet
+# ADR Cheat Sheet
 
 Het actuele en uitgebreide overzicht van de REST API Design Rules vind je hier: [API Design Rules](https://logius-standaarden.github.io/API-Design-Rules/#normative-design-rules). Hieronder vind je echter een extract met de belangrijkste technische regels en best practices om te gebruiken tijdens het ontwerpen van een API.
 
@@ -14,7 +14,7 @@ Het actuele en uitgebreide overzicht van de REST API Design Rules vind je hier: 
 
 :::warning[Verplichte standaard]
 
-Naast dat deze regels onderdeel zijn van de API Design Rules, is het gebruik van de OpenAPI Specification ook een eigen verplichte standaard op de pas-toe-leg-uit-lijst bij Forum Standaardisatie: https://www.forumstandaardisatie.nl/open-standaarden/openapi-specification
+Naast dat deze regels onderdeel zijn van de API Design Rules, is het gebruik van de OpenAPI Specification ook een eigen verplichte standaard op de pas-toe-leg-uit-lijst bij Forum Standaardisatie: [https://www.forumstandaardisatie.nl/open-standaarden/openapi-specification](https://www.forumstandaardisatie.nl/open-standaarden/openapi-specification)
 
 :::
 
@@ -34,8 +34,8 @@ Voor zowel de documentatie als de interface zelf geldt dat de Nederlandse taal l
 Het OpenAPI document moet een geldig `contact` object bevatten:
 
 - `name`: naam van het verantwoordelijke team/afdeling.
-- `url`: nuttige URL om contact op te kunnen nemen, dus bijvoorbeeld een issuetracker in plaats van www.ministerie.nl.
-- `email`: nuttig e-mailadres om contact op te kunnen nemen, dus bijvoorbeeld een team in plaats van info@ministerie.nl.
+- `url`: nuttige URL om contact op te kunnen nemen, dus bijvoorbeeld een issuetracker in plaats van `www.ministerie.nl`.
+- `email`: nuttig e-mailadres om contact op te kunnen nemen, dus bijvoorbeeld een team in plaats van `info@ministerie.nl`.
 
 Voorbeeld van een geldig `info.contact` object:
 
