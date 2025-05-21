@@ -66,6 +66,9 @@ digid:
   label: DigiD
 digikoppeling:
   label: Digikoppeling
+digitale-autonomie:
+  description: Digitale autonomie is het principe dat de overheid zelf de regie heeft over haar digitale infrastructuur en data.
+  label: Digitale autonomie
 docker:
   description: Docker is een platform voor het bouwen, distribueren en draaien van applicaties in individuele containers
   label: Docker
@@ -110,6 +113,9 @@ golang:
   label: Golang
 gouden-api:
   label: Gouden API
+haven:
+  label: "Haven"
+  description: "Haven is een open source standaard met criteria en best practices voor hoe je Kubernetes gebruikt."
 helm:
   description: Helm is een package manager voor Kubernetes
   label: Helm
@@ -255,3 +261,4 @@ websub:
   label: Websub
 yaml:
   label: YAML
+
