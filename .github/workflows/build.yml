@@ -2,6 +2,10 @@ name: Build
 
 on:
   push:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '**/*.mdx'
   workflow_dispatch:
     inputs:
       branch:
@@ -13,6 +17,18 @@ env:
   IMAGE_NAME: ghcr.io/developer-overheid-nl/don-site
 
 jobs:
+  markdown-lint:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Lint Markdown
+        uses: github/super-linter@v7
+        env:
+          VALIDATE_MARKDOWN: true
+          FILTER_REGEX_EXCLUDE: '^(?!.*\.(md|mdx)$).*'
   build:
     runs-on: ubuntu-latest
     steps:
