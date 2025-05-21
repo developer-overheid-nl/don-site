@@ -1,7 +1,6 @@
 ---
 authors: [tom-ootes]
 tags: [haven, kubernetes, common-ground]
-draft: true
 ---
 # Digitale Autonomie zonder Amerikaanse cloud met Haven(+)
 
@@ -72,10 +71,6 @@ Amerikaanse cloudproviders zijn heel goed in één ding: het creëren van een he
 - AI/ML: AWS SageMaker, Azure ML, Google Vertex AI
 - Data analytics: AWS Redshift, Azure Synapse, Google BigQuery
 
-![Haven](./img/stadskantoor_6.jpg)
-*Stadskantoor in Utrecht. Foto door [Gerard Stolk](https://www.flickr.com/photos/gerardstolk/39472632000/). [Licentie: Deed - Attribution 2.0 Generic - Creative Commons ](https://creativecommons.org/licenses/by/2.0/deed.en)*
-
-
 ## Azure/ AWS werden de defacto standaard
 Door het brede scala aan services en de schaalbaarheid werden Azure en AWS extreem populaire cloudproviders. Doordat deze bedrijven vroeg zijn begonnen met het investeren in deze sector en er in Amerika makkelijk toegang was tot tech-talent hadden ze grote voordelen. Ook hadden deze bedrijven het voordeel dat kapitaal destijds goedkoop voorhanden was en maakten ze slim gebruik van ecosystemen van partner-bedrijven. 
 
@@ -106,10 +101,19 @@ Feit is dat Kubernetes heden ten dage met goede redenen de marktstandaard is. Di
 
 Met de Haven-standaard heeft de Nederlandse overheid een praktisch instrument voor het bereiken van digitale autonomie. Door Kubernetes-clusters volgens Haven-criteria in te richten, wordt migratie naar Europese cloudproviders eenvoudiger. Specifieke services zoals `Object Storage` en `Databases` kunnen op termijn vervangen worden door open-source [Haven+](https://gitlab.com/commonground/haven/havenplus)  alternatieven. Hoewel deze transitie een cloud-native infrastructuur vereist, biedt Haven een duidelijk pad richting digitale zelfstandigheid.
 
+## Aan de slag?
+
+Doordat Haven een standaard is voor het redundant opzetten van Kubernetes clusters, is het een uitdaging dit lokaal op te zetten. Wel is het mogelijk om bij [verschillende providers](https://haven.commonground.nl/techniek/aan-de-slag) een cluster af te nemen en in te richten middels de bijbehorende [referentie-implementaties](https://gitlab.com/commonground/haven/haven/-/tree/main/reference?ref_type=heads). 
+
+Deze drempel zet wel aan tot nadenken; in de toekomst zou het mooi zijn als je als overheidsorganisatie laagdrempelig een sandbox-havencluster af zou kunnen nemen. Zo zou je eerst eens kunnen uitproberen of een Haven-compliant oplossing iets voor je organisatie is.
+
+Wil je de Haven+ componenten zelf lokaal draaien? Dit kan met zowel Flux als ArgoCD.
+- [Naar de Flux implementatie van Haven+](https://gitlab.com/commonground/haven/havenplus/gitops-flux)
+- [Naar de ArgoCD implementatie van Haven+](https://gitlab.com/commonground/haven/havenplus/gitops-argocd)
 
 ## Dankwoord
 
-Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met mij te voeren over dit onderwerp. Zo voerde ik een goed gesprek met **Dian van Heijningen (Product Owner Cloud Engineering)** van **Wigo4it** over hun infrastructuur. Ook hield ik met **Pauline van Rotterdam (Technisch PO)** en **Sander van Thillo (Developer)** van het **Haven** team een interview. Dit interview zal hier later trouwens ook gepubliceerd worden.
+Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met mij te voeren over dit onderwerp. Zo voerde ik een goed gesprek met **Dian van Heijningen (Product Owner Cloud Engineering)** van **Wigo4it** over hun infrastructuur. Ook hield ik met **Pauline van Rotterdam (Technisch PO)** en **Sander van Thillo (Developer)** van het **Haven** team een interview. Dit interview zal hier later ook gepubliceerd worden.
 
 ## Handige links
 
@@ -117,6 +121,7 @@ Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met 
 * [Slack-kanaal van Haven](https://samenorganiseren.slack.com/archives/CGCPJE599)
 * [Mattermost kanaal van Haven+](https://digilab.overheid.nl/chat/digilab/channels/havenplus)
 * [Naar de lijst met checks van Haven](https://haven.commonground.nl/techniek/checks)
+* [Git Haven](https://gitlab.com/commonground/haven/)
 * [Git Haven+](https://gitlab.com/commonground/haven/havenplus/)
 
 [^1]: Marktstudie Cloud Services: voortdurende consolidatie, aanhoudende groei (https://www.bdo.nl/nl-nl/actueel/marktstudie-cloud-services-voortdurende-consolidatie-aanhoudende-groei)
