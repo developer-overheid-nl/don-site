@@ -28,7 +28,7 @@ export default function HomepageTiles(): React.ReactNode {
     return (
       <li key={index} className={styles.tile}>
         {React.cloneElement(icon, { className: styles.icon, 'aria-hidden': true, focusable: false })}
-        { highlight ? <span className={styles.highlight}>{highlight}</span> : null}
+        { highlight ? <span className={`${styles.highlight} highlight--${highlight}`}>{highlight}</span> : null}
         <h2 className={styles.title}>{link ? <a href={link}>{title}{external && <ExternalLinkIcon />}</a> : title}</h2>
         {Description}
       </li>

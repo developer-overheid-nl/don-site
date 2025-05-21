@@ -48,10 +48,18 @@
   /* right: 0.25rem; */
   margin-inline-start: 0.25rem;
   font-size: 0.875rem;
-  background-color: var(--don-robijnrood-50);
+  background-color: var(--don-lichtblauw-100);
   color: var(--don-grijs-900);
   padding: 0.125rem 0.25rem;
   border-radius: 0.25rem;
+}
+
+:global(.highlight--tutorial) {
+  background-color: var(--don-robijnrood-50);
+}
+
+:global(.highlight--nieuw) {
+  background-color: var(--ifm-color-warning-lighter);
 }
 
 .link {
