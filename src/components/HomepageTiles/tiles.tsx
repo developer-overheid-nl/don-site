@@ -1,4 +1,4 @@
-import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten"; 
+import type React from "react";
 import IconIct from "@site/src/theme/icons/IconIct";
 import IconComputercode from "@site/src/theme/icons/IconComputercode";
 import IconDocumentMetGolvendeLijnenEnLint from "@site/src/theme/icons/IconDocumentMetGolvendeLijnenEnLint";
@@ -6,10 +6,21 @@ import IconKlembordMetVinkjesEnLijnen from "@site/src/theme/icons/IconKlembordMe
 import IconComputer from "@site/src/theme/icons/IconComputer";
 import IconManMetLaptop from "@site/src/theme/icons/IconManMetLaptop";
 import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
+import IconTekstballonMetPotlood from "@site/src/theme/icons/IconTekstballonMetPotlood";
+import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten";
 
-export default [
+export type HomepageTile = {
+  icon: React.ReactNode;
+  title: string;
+  description: string | { link: string; label: string; external?: boolean }[];
+  link?: string;
+  highlight?: 'uitgelicht' | 'nieuw';
+  external?: boolean;
+};
+
+const tiles: HomepageTile[] = [
   {
-    icon: <IconTekstballonnenMetPunten />,
+    icon: <IconTekstballonMetPotlood />,
     title: 'Doe mee',
     description: 'Dit project is continu in ontwikkeling. Ontbreekt er iets of zie je een fout? Of heb jij nog artikelen, tools of andere bronnen die je graag wilt delen? Laat het ons weten!',
     link: '/contributing',
@@ -22,7 +33,7 @@ export default [
   },
   {
     icon: <IconIct />,
-    title: 'Aan de slag met API development',
+    title: 'API development',
     description: 'Moet je een API bouwen die voldoet aan de standaarden van de NL API Strategie? Volg onze tutorial en ontwikkel stap-voor-stap een compliant API.',
     // description: [
     //   { link: '/kennisbank/apis/aan-de-slag/bouw-een-api', label: 'Bouw een API' }, 
@@ -34,8 +45,8 @@ export default [
   },
   {
     icon: <IconManMetLaptop />,
-    title: 'Implementatie-ondersteuning',
-    description: 'Heb je hulp nodig bij het ontwikkelen of aanbieden van API\'s? Ons implementatie-ondersteuningsteam staat voor je klaar!',
+    title: 'Implementatieondersteuning',
+    description: 'Heb je hulp nodig bij het ontwikkelen of aanbieden van API\'s? Ons implementatieondersteuningsteam staat voor je klaar!',
     link: '/implementatie-ondersteuning',
     highlight: 'uitgelicht',
   },
@@ -54,7 +65,7 @@ export default [
   },
   {
     icon: <IconDocumentMetGolvendeLijnenEnLint />,
-    title: 'Hoe voldoe ik aan de API Design Rules',
+    title: 'Voldoen aan de API Design Rules',
     description: [
       { link: '/kennisbank/apis/tools/api-design-rules-linter', label: 'API Design Rules Linter' }, 
       { link: '/kennisbank/apis/tools/api-design-rules-validator', label: 'API Design Rules Validator' },
@@ -65,7 +76,7 @@ export default [
   },
   {
     icon: <IconComputer />,
-    title: 'Aan de slag met front-end',
+    title: 'Front-end development',
     description: [
       { link: '/kennisbank/front-end/nl-design-system/', label: 'NL Design System' }, 
       { link: '/kennisbank/front-end/standaarden/digitoegankelijk', label: 'DigiToegankelijk' }
@@ -74,7 +85,7 @@ export default [
   },
   {
     icon: <IconCybersecurity />,
-    title: 'Security',
+    title: 'Authenticatie en autorisatie',
     description: [
       { link: '/kennisbank/security/standaarden/digid', label: 'DigiD' }, 
       { link: '/kennisbank/security/standaarden/eherkenning', label: 'eHerkenning' },
@@ -84,4 +95,18 @@ export default [
     ],
     link: '/kennisbank/security/',
   },
+  {
+    icon: <IconTekstballonnenMetPunten />,
+    title: '& meer...',
+    description: [
+      { link: '/kennisbank/', label: 'Artikelen in de Kennisbank' },
+      { link: 'https://community.developer.overheid.nl/', external: true, label: 'Community' },
+      { link: '/blog/', label: 'Lees onze Blog' },
+      { link: 'https://social.overheid.nl/@developer', external: true, label: 'Volg ons op Mastodon' },
+    ],
+    // link: 'https://community.developer.overheid.nl/',
+    // external: true,
+  }
 ];
+
+export default tiles;
