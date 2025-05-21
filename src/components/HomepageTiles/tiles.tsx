@@ -72,7 +72,7 @@ const tiles: HomepageTile[] = [
     //   { link: '/kennisbank/front-end/nl-design-system/', label: 'NL Design System' }, 
     //   { link: '/kennisbank/front-end/standaarden/digitoegankelijk', label: 'DigiToegankelijk' }
     // ],
-    link: '/front-end/nl-design-system/aan-de-slag-met-nl-design-system',
+    link: '/kennisbank/front-end/nl-design-system/aan-de-slag-met-nl-design-system',
     highlight: 'tutorial'
   },
   {

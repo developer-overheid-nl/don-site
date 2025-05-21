@@ -130,6 +130,10 @@ html {
   scroll-padding-top: calc(var(--ifm-navbar-height) + 4px);
 }
 
+.container--full {
+  padding: 0;
+}
+
 .theme-doc-sidebar-container {
   --ifm-toc-border-color: var(--ifm-color-primary);
 }
@@ -218,6 +222,24 @@ html {
   --rhc-card-as-link-border-color: var(--don-grijs-300);
   --rhc-card-as-link-link-color: var(--don-donkerblauw-500);
   --nl-link-visited-color: var(--don-donkerblauw-500);
+  --nl-heading-level-1-font-size: var(--ifm-h1-font-size);
+  --nl-heading-level-2-font-size: var(--ifm-h2-font-size);
+  --nl-heading-level-3-font-size: var(--ifm-h3-font-size);
+  --nl-heading-level-4-font-size: var(--ifm-h4-font-size);
+  --nl-heading-level-5-font-size: var(--ifm-h5-font-size);
+  --nl-heading-level-6-font-size: var(--ifm-h6-font-size);
+  --nl-heading-level-1-color: var(--ifm-color-content);
+  --nl-heading-level-2-color: var(--ifm-color-content);
+  --nl-heading-level-3-color: var(--ifm-color-content);
+  --nl-heading-level-4-color: var(--ifm-color-content);
+  --nl-heading-level-5-color: var(--ifm-color-content);
+  --nl-heading-level-6-color: var(--ifm-color-content);
+  --nl-heading-level-1-font-family: var(--ifm-heading-font-family);
+  --nl-heading-level-2-font-family: var(--ifm-heading-font-family);
+  --nl-heading-level-3-font-family: var(--ifm-heading-font-family);
+  --nl-heading-level-4-font-family: var(--ifm-heading-font-family);
+  --nl-heading-level-5-font-family: var(--ifm-heading-font-family);
+  --nl-heading-level-6-font-family: var(--ifm-heading-font-family);
   --utrecht-link-visited-color: var(--nl-link-visited-color); /* rhc heeft er nog wat utrecht in zitten */
 }
 

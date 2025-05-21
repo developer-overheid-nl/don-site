@@ -9,16 +9,16 @@ const ExternalLinkIcon = () => (
 );
 
 export default function HomepageTiles(): React.ReactNode {
-  const tileItems = tiles.map(({icon, title, link, external, description, highlight}, index) => {
+  const tileItems = tiles.map(({icon, title, link, external, description, highlight}, i) => {
     const Description = 
       typeof description === 'string' ? <p>{description}</p> : (
         <p>
-          {description.map(({link, external, label}, i) => {
+          {description.map(({link, external, label}, j) => {
             return (
-              <>
-                <a key={i} href={link} className={styles.link}>{label}{external && <ExternalLinkIcon />}</a>
-                <span className={styles.spacer}>, </span>
-              </>
+              <React.Fragment key={j}>
+                <a href={link} className={styles.link}>{label}{external && <ExternalLinkIcon />}</a>
+                <span  className={styles.spacer}>, </span>
+              </React.Fragment>
             );
           })}
           <span>…</span>
@@ -26,7 +26,7 @@ export default function HomepageTiles(): React.ReactNode {
       );
 
     return (
-      <li key={index} className={styles.tile}>
+      <li key={i} className={styles.tile}>
         {React.cloneElement(icon, { className: styles.icon, 'aria-hidden': true, focusable: false })}
         { highlight ? <span className={`${styles.highlight} highlight--${highlight}`}>{highlight}</span> : null}
         <h2 className={styles.title}>{link ? <a href={link}>{title}{external && <ExternalLinkIcon />}</a> : title}</h2>
