@@ -115,4 +115,4 @@ Voorbeeld van een geldig `info.servers` object:
 
 - [API Design Rules Linter](./api-design-rules-linter)
 - [API Design Rules Validator](./api-design-rules-validator)
-- [OpenAPI Spec generator](../open-api-spec-generator)
+- [OpenAPI Spec generator](../openapi-spec-generator)

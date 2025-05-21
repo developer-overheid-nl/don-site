@@ -1,3 +1,7 @@
+---
+tags: [adr, api]
+---
+
 # /core/http-methods
 
 Deze regel schrijft voor dat alleen de standaard HTTP methods `GET`, `POST`, `PATCH`, `PUT`, `DELETE`, `HEAD`, `TRACE` en `OPTIONS` toegestaan zijn.

@@ -1,7 +1,5 @@
 ---
-tags:
-  - "adr"
-  - "api"
+tags: [adr, api, tool]
 ---
 
 # ADR Linter

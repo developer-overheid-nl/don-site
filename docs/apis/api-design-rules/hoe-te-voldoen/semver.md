@@ -1,3 +1,7 @@
+---
+tags: [adr, api]
+---
+
 # /core/semver
 
 Deze regel schrijft voor dat versionering van API's via Semantic Versioning (`major.minor.patch` formaat) moet geschieden.

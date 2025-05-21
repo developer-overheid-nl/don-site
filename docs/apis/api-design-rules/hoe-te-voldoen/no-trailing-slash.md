@@ -1,3 +1,7 @@
+---
+tags: [adr, api]
+---
+
 # /core/no-trailing-slash
 
 Deze regel schrijft voor dat een path geen trailing slash mag bevatten, met uitzondering van de root.

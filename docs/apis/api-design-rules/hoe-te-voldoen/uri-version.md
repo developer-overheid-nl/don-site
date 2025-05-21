@@ -1,3 +1,7 @@
+---
+tags: [adr, api]
+---
+
 # /core/uri-version
 
 Deze regel schrijft voor dat de major versie, voorafgegaan door de letter `v`, opgenomen moet zijn in de URI van het endpoint. In OAS mag deze niet gespecificeerd worden op `path` niveau; dit zou impliceren dat er binnen hetzelfde endpoint meerdere (major versies van) API's beschikbaar zijn, terwijl elke API vergezeld moet worden van een eigen `/openapi.json`.

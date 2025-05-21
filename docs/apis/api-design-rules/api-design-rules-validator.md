@@ -1,9 +1,5 @@
 ---
-tags:
-  - "adr"
-  - "api"
-  - "cli"
-  - "validator"
+tags: [adr, api, validator, tool]
 ---
 
 # ADR Validator

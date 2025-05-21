@@ -1,8 +1,5 @@
 ---
-tags:
-  - "oas"
-  - "api"
-  - "adr"
+tags: [adr, api]
 ---
 
 # /core/publish-openapi

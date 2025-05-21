@@ -1,3 +1,7 @@
+---
+tags: [adr, api]
+---
+
 # /core/version-header
 
 Deze regel schrijft voor dat iedere API response een `API-Version` response header moet bevatten met daarin het volledige versienummer van de API.

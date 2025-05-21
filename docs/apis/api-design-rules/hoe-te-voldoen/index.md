@@ -1,8 +1,5 @@
 ---
-tags:
-  - "api"
-  - "adr"
-  - "rest"
+tags: [adr, api]
 ---
 
 # Hoe te voldoen
