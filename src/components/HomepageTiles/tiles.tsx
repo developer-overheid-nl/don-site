@@ -109,7 +109,7 @@ const tiles: HomepageTile[] = [
       { link: '/communities/kennisplatform-apis', label: 'Kennisplatform API\'s' },
       { link: '/communities/code-for-nl', label: 'Code for NL' },
       { link: '/communities/digilab', label: 'Digilab' },
-      { link: '/communities/opensourcewerken', label: 'Opensourcewerken' },
+      { link: '/communities/open-source-werken', label: 'Opensourcewerken' },
       { link: '/communities/federatief-datastelsel', label: 'Federatief Datastelsel' },
       { link: '/communities/gebruiker-centraal', label: 'Gebruiker Centraal' },
       { link: 'https://community.developer.overheid.nl/', external: true, label: 'developer.overheid.nl Forum' },
