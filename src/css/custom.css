@@ -206,6 +206,21 @@ html {
   }
 }
 
+/* Rijkshuistijl community overrides */
+.rhc-theme {
+  --rhc-font-family-primary: RijksoverheidSansWebText, Arial, sans-serif;
+  --rhc-link-list-card-padding-block-start: 1rem;
+  --rhc-link-list-card-padding-block-end: 1rem;
+  --rhc-link-list-card-padding-inline-start: 1rem;
+  --rhc-link-list-card-padding-inline-end: 1rem;
+  --utrecht-blockquote-content-font-family: RijksoverheidSerifWeb, serif;
+  --utrecht-blockquote-caption-font-family: RijksoverheidSansWebText, serif;
+  --rhc-card-as-link-border-color: var(--don-grijs-300);
+  --rhc-card-as-link-link-color: var(--don-donkerblauw-500);
+  --nl-link-visited-color: var(--don-donkerblauw-500);
+  --utrecht-link-visited-color: var(--nl-link-visited-color); /* rhc heeft er nog wat utrecht in zitten */
+}
+
 .ro-header {
   display: flex;
   flex-direction: column-reverse;
@@ -487,4 +502,18 @@ html {
 .theme-doc-markdown ul li p {
   margin-bottom: 0;
   margin-top: 0;
+}
+
+.pagination-nav__link--next {
+  background-color: var(--ifm-color-primary);
+}
+
+.pagination-nav__link--next .pagination-nav__label,
+.pagination-nav__link--next .pagination-nav__sublabel {
+  color: var(--ifm-color-white);
+}
+
+.pagination-nav__link--next svg,
+.pagination-nav__link--next svg path {
+  fill: var(--ifm-color-white);
 }
