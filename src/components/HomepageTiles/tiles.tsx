@@ -95,9 +95,10 @@ const tiles: HomepageTile[] = [
     icon: <IconDocumentMetGolvendeLijnenEnLint />,
     title: 'API Design Rules',
     description: [
-      { link: '/kennisbank/apis/tools/api-design-rules-linter', label: 'API Design Rules Linter' }, 
-      { link: '/kennisbank/apis/tools/api-design-rules-validator', label: 'API Design Rules Validator' },
-      { link: '/kennisbank/apis/tools/open-api-spec-generator', label: 'OpenAPI Spec Generator' },
+      { link: '/kennisbank/apis/api-design-rules/cheat-sheet', label: 'ADR Cheat Sheet' },
+      { link: '/kennisbank/apis/api-design-rules/api-design-rules-linter', label: 'API Design Rules Linter' }, 
+      { link: '/kennisbank/apis/api-design-rules/api-design-rules-validator', label: 'API Design Rules Validator' },
+      { link: '/kennisbank/apis/openapi-specification/openapi-specification-generator', label: 'OpenAPI Spec Generator' },
       { link: '/blog/2023/09/20/waarom-zijn-api-design-rules-zo-belangrijk', label: 'Blog: Waarom zijn API design rules zo belangrijk?' },
     ],
     link: '/kennisbank/apis/tools/',
