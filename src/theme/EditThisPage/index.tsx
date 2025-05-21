@@ -4,7 +4,7 @@ import IconEdit from "@theme/Icon/Edit";
 import { useLocation } from "@docusaurus/router";
 import type { Props } from "@theme/EditThisPage";
 import { ThemeClassNames } from "@docusaurus/theme-common";
-import IconLampBrand from "../icons/IconLampBrand";
+import IconLamp from "../icons/IconLamp";
 
 export default function EditThisPage({ editUrl }: Props): ReactNode {
   const { pathname } = useLocation();
@@ -34,7 +34,7 @@ export default function EditThisPage({ editUrl }: Props): ReactNode {
           <div>
             <span>
               <Link to="https://github.com/developer-overheid-nl/don-site/issues/new/choose">
-                <IconLampBrand width="25px" height="25px" />
+                <IconLamp width="25px" height="25px" fill="#03679b"/>
                 Heb je nog andere ideeën of suggesties?
               </Link>
             </span>
