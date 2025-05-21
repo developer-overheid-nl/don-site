@@ -16,7 +16,7 @@ export default function EditThisPage({ editUrl }: Props): ReactNode {
         <>
           <span>
             <Link to="https://github.com/developer-overheid-nl/don-site/issues/new/choose">
-              <IconEdit />
+              <IconLamp width="25px" height="25px" fill="#03679b" />
               Heb jij ook een idee voor een blog?
             </Link>
           </span>
@@ -34,7 +34,7 @@ export default function EditThisPage({ editUrl }: Props): ReactNode {
           <div>
             <span>
               <Link to="https://github.com/developer-overheid-nl/don-site/issues/new/choose">
-                <IconLamp width="25px" height="25px" fill="#03679b"/>
+                <IconLamp width="25px" height="25px" fill="#03679b" />
                 Heb je nog andere ideeën of suggesties?
               </Link>
             </span>
