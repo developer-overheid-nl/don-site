@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
  * Rijkshuisstijl icoon
  *
  * @param {SVGProps<SVGSVGElement>} props SVG Attributes
- * @returns {*} SVG Element
+ * @returns {JSX.Element} SVG Element
  *
  * Copyright Rijksoverheid
  *
