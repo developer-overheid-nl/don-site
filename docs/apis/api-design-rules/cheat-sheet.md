@@ -76,7 +76,7 @@ Voorbeeld van een geldig `info.servers` object:
 
 - Gebruik `application/json` voor response bodies.
 - Gebruik `lowerCamelCase` voor properties, bijvoorbeeld `organisatieNaam`.
-- Gebruik [Problem Details](./problem-details) voor foutmeldingen.
+- Gebruik [Problem Details](../problem-details) voor foutmeldingen.
 
 ## HTTP methods
 
@@ -115,4 +115,4 @@ Voorbeeld van een geldig `info.servers` object:
 
 - [API Design Rules Linter](./api-design-rules-linter)
 - [API Design Rules Validator](./api-design-rules-validator)
-- [OpenAPI Spec generator](../openapi-spec-generator)
+- [OpenAPI Spec generator](../openapi-specification/openapi-specification-generator)

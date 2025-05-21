@@ -11,7 +11,7 @@ Hier leggen we uit welke stappen je kunt doorlopen om snel en efficiënt een nie
 
 ### 1. Genereer een OpenAPI Specification (OAS)
 
-Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [OpenAPI Specification Generator](../openapi-spec-generator) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/#list-of-technical-rules) voldoet.
+Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [OpenAPI Specification Generator](../openapi-specification/openapi-specification-generator) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/#list-of-technical-rules) voldoet.
 
 ### 2. Pas de OAS aan naar jouw specifieke usecase
 
