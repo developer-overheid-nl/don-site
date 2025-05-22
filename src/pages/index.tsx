@@ -30,11 +30,6 @@ function HomepageHeader() {
 
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <script
-        data-goatcounter="https://donv1.goatcounter.com/count"
-        async
-        src="//gc.zgo.at/count.js"
-      ></script>
       <div className="container">
         <p className={styles.intro}>
           Eén plek met informatie, bronnen, tools en codevoorbeelden van de&nbsp;<strong className={styles.intro__highlight}>overheid voor developers</strong> over 
