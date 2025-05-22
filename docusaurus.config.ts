@@ -47,6 +47,14 @@ const config: Config = {
         href: "/site.webmanifest",
       },
     },
+    {
+      tagName: "script",
+      attributes: {
+        "data-goatcounter": "https://donv1.goatcounter.com/count",
+        async: "true",
+        src: "https://gc.zgo.at/count.js"
+      },
+    },
   ],
 
   // Set the production url of your site here
