@@ -5,6 +5,8 @@ import type {Props} from '@theme/PaginatorNavLink';
 import IconDeltaNaarLinksInline from '../icons/IconDeltaNaarLinksInline';
 import IconDeltaNaarRechtsInline from '../icons/IconDeltaNaarRechtsInline';
 
+import styles from "./index.module.css";
+
 export default function PaginatorNavLink(props: Props): ReactNode {
   const {permalink, title, subLabel, isNext} = props;
   return (

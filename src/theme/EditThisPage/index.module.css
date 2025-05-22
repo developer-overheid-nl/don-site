@@ -1,0 +1,9 @@
+.callToActionLink{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: .5rem;
+    span{
+        margin-left: 0.25rem;
+        line-height: 1;
+    }
+}   
