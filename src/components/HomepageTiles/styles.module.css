@@ -13,13 +13,13 @@
   }
 } */
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .tiles {
     --columns: 2;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .tiles {
     --columns: 1;
   }
