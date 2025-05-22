@@ -101,7 +101,7 @@ const tiles: HomepageTile[] = [
       { link: '/kennisbank/apis/openapi-specification/openapi-specification-generator', label: 'OpenAPI Spec Generator' },
       { link: '/blog/2023/09/20/waarom-zijn-api-design-rules-zo-belangrijk', label: 'Blog: Waarom zijn API design rules zo belangrijk?' },
     ],
-    link: '/kennisbank/apis/tools/',
+    link: '/kennisbank/apis/api-design-rules/',
   },
   {
     icon: <IconTekstballonnenMetPunten />,
