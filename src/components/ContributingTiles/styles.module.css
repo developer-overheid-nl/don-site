@@ -1,0 +1,80 @@
+.tiles {
+  --columns: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+  margin: 3rem 0;
+}
+
+@media (max-width: 56.25rem) {
+  .tiles {
+    --columns: 2;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .tiles {
+    --columns: 1;
+  }
+}
+
+.tile {
+  word-break: break-word;
+  hyphens: auto;
+  position: relative;
+  p {
+    margin: 0;
+  }
+}
+
+.title {
+  margin-block-end: 0.25rem;
+  color: var(--don-donkerblauw-500);
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.highlight {
+  display: inline-block;
+  position: absolute;
+  top: 0.25rem;
+  /* right: 0.25rem; */
+  margin-inline-start: 0.25rem;
+  font-size: 0.875rem;
+  background-color: var(--don-lichtblauw-100);
+  color: var(--don-grijs-900);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+:global(.highlight--tutorial) {
+  background-color: var(--don-robijnrood-50);
+}
+
+:global(.highlight--nieuw) {
+  background-color: var(--ifm-color-warning-lighter);
+}
+
+.link {
+  color: inherit;
+}
+
+.spacer {
+  margin-inline-end: 0.25rem;
+}
+
+.externalLinkIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.25rem;
+}
+
+.title .externalLinkIcon {
+  width: 1rem;
+  height: 1rem;
+}
