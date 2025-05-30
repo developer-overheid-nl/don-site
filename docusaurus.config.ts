@@ -85,6 +85,10 @@ const config: Config = {
         path: "communities",
         routeBasePath: "communities",
         sidebarPath: "./sidebarsCommunities.ts",
+        sidebarItemsGenerator: async ({docs}) => {
+          // this way we can filter out the index doc
+          return docs.map(doc => ({type: 'doc', id: doc.id})).filter(item => item.id !== 'index');
+        },
         tags: "../tags.yml",
         onInlineTags: "throw",
         // ... other options
