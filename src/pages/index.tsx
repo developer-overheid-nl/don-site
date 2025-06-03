@@ -45,8 +45,6 @@ function HomepageHeader() {
   );
 }
 
-console.log(HomepageTiles);
-
 
 export default function Home(): React.JSX.Element {
   return (
