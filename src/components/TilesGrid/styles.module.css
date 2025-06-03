@@ -3,9 +3,14 @@
   display: grid;
   grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
   gap: 2rem;
-  padding: 0;
   list-style: none;
-  margin: 3rem 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tiles--padding-y{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 @media (max-width: 56.25rem) {
@@ -25,7 +30,7 @@
   hyphens: auto;
   position: relative;
   p {
-    margin: 0;
+    margin-bottom: 0;
   }
 }
 
