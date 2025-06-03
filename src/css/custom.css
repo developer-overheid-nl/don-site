@@ -127,7 +127,7 @@
 }
 
 html {
-  scroll-padding-top: calc(var(--ifm-navbar-height) + 4px);
+  scroll-padding-top: 100px; /* good middle ground */
 }
 
 .container--full {
