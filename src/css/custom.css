@@ -183,6 +183,11 @@ html {
   justify-content: flex-end;
 }
 
+.pagination-nav__link--next:focus, .pagination-nav__link--prev:focus {
+  outline-offset: 2px;
+  outline: 2px solid #000000;
+}
+
 .pagination-nav__link--prev .pagination-nav__label::before,
 .pagination-nav__link--next .pagination-nav__label::after {
   content: none;
