@@ -33,7 +33,6 @@ function HomepageHeader(): React.JSX.Element {
     const handleSkipClick = (event: MouseEvent) => {
       event.preventDefault();
       const searchInput = document.getElementById("banner-search") as HTMLInputElement;
-      console.log("searchInput", searchInput);
       if (searchInput) {
         searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
         // Focus the search input after scrolling
