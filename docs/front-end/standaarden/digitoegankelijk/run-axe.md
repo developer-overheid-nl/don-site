@@ -27,9 +27,12 @@ jobs:
       - run: npm install @axe-core/cli browser-driver-manager -g
         # Installeer Chrome. Kan ook een andere browser zijn
       - run: npx browser-driver-manager install chrome
-        # Vereist om een apart proces te runnen voor het serveren van files. Dat
-        # kan niet in dezelfde job. De HTTP server wordt ook netjes opgeruimd als
-        # deze job klaar is
+        # Om Axe te runnen moeten de bestanden worden gehost. Deze step gaat er
+        # vanuit dat de bestanden ofwel gebouwd zijn, of op zichzelf staand te
+        # laden zijn in de browser. De bestanden worden op localhost:8080 gehost.
+        # De reden dat de bestanden apart moeten worden geserveerd in een action
+        # is omdat GitHub actions maar 1 proces in principe heeft. Axe kan niet
+        # in hetzelfde proces als een file server draaien.
       - name: Serve Files
         uses: Eun/http-server-action@v1
         with:
@@ -47,6 +50,9 @@ jobs:
               "txt": "text/plain",
               "xml": "text/xml"
             }
+          # De directory waar de bestanden staan. Zet dit op de output folder van
+          # de gebouwde bestanden als er een build step in het project zit.
+          directory: frontend/ 
         # Het daadwerkelijk runnen van Axe. Hier wijst het naar `localhost:8080` wat
         # de files servert middels de HTTP server. Hier is `/index.html` geopend, maar
         # dit kan je veranderen door elke andere pagina die je wilt gebruiken.
