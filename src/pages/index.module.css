@@ -79,7 +79,7 @@
 
 .twoColumns {
   display: block;
-  padding-block-end: 2rem;
+  padding-block-end: 4rem;
 }
 
 @media (min-width: 48rem) { /* 768px */

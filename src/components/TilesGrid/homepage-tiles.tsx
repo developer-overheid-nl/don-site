@@ -9,16 +9,9 @@ import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
 import IconTekstballonMetPotlood from "@site/src/theme/icons/IconTekstballonMetPotlood";
 import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten";
 
-export type HomepageTile = {
-  icon: React.ReactNode;
-  title: string;
-  description: string | { link: string; label: string; external?: boolean }[];
-  link?: string;
-  highlight?: 'uitgelicht' | 'nieuw' | 'tutorial';
-  external?: boolean;
-};
+import { GridTile } from ".";
 
-const tiles: HomepageTile[] = [
+const tiles: GridTile[] = [
   {
     icon: <IconTekstballonMetPotlood />,
     title: 'Doe mee',
