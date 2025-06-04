@@ -104,10 +104,9 @@ _Let op: het werk van NL Design System is work in progress, nog niet alle tekstj
 
 ## Tools
 
-### Axe DevTools
+### Axe
 
-Axe DevTools is een browserplugin die voor zowel Chrome als Firefox beschikbaar is. Meer informatie over de plugin vind je hier:
-[Axe DevTools](https://www.deque.com/axe/devtools)
+Voor Axe is een specifiek artikel met instructies en gelijk te gebruiken configuratie: [Axe accessibility checker](./run-axe.md).
 
 ### Playwright
 
