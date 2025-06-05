@@ -2,10 +2,11 @@
   --columns: 3;
   display: grid;
   grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
-  gap: 2rem;
+  gap: 4rem;
   list-style: none;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0rem 0 2rem;
+  /* Reset UL native bottom margin */
+  margin-bottom: 0;
 }
 
 .tiles--padding-y{

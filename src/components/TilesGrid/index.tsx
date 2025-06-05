@@ -25,7 +25,6 @@ export default function TilesGrid({ tiles, paddingY }): React.ReactNode {
           {description.map(({ link, external, label }, j) => {
             return (
               <React.Fragment key={j}>
-
                 <a href={link} className={styles.link}>{label}{external && <ExternalLinkIcon />}</a>
                 <span className={styles.spacer}>, </span>
               </React.Fragment>

@@ -8,7 +8,7 @@ const tiles: GridTile[] = [
         // PNG_verzenden_Zwart.png
         icon: <IconIct />,
         title: 'Dien een issue in',
-        description: ' Heb je een idee voor een artikel of feature? Heb je een bug gevonden? Dien een issue in.',
+        description: 'Heb je een idee voor een artikel of feature? Of heb je een bug gevonden? Dien een issue in op onze Github.',
         link: 'https://github.com/developer-overheid-nl/don-site/issues/new',
         external: true
     },
@@ -16,7 +16,7 @@ const tiles: GridTile[] = [
         // PNG_tekstballon-met-potlood_Zwart.png
         icon: <IconIct />,
         title: 'Schrijf een gastblog',
-        description: ' Het schrijven van een gastblog is een effectieve manier om je kennis te delen met de community.',
+        description: 'Het schrijven van een gastblog is een effectieve manier om je kennis te delen met de community.',
         link: '/contributing/gastblog-schrijven',
     },
     {
@@ -43,8 +43,8 @@ const tiles: GridTile[] = [
     {
         // 'PNG_tekstballonnen-met-vraagteken_Zwart.png' 
         icon: <IconIct />,
-        title: 'Word lid van onze Slack',
-        description: 'Een inhoudelijke vraag over onze tools of standaarden? Stel deze in onze Slack-groep.',
+        title: 'Naar onze Slack',
+        description: 'Heb je een inhoudelijke vraag over onze tools of standaarden? Stel deze in onze Slack-groep.',
         link: 'https://codefornl.slack.com/archives/CFV4B3XE2',
         external: true
     },
