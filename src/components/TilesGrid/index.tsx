@@ -45,7 +45,7 @@ export default function TilesGrid({ tiles, paddingY }): React.ReactNode {
   });
 
   return (
-    <ul className={clsx(styles.tiles, paddingY && styles['tiles--padding-y'])}>
+    <ul className={clsx(styles.tiles, paddingY && styles['tiles--sparse'])}>
       {tileItems}
     </ul>
   );
