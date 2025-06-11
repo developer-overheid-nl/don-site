@@ -16,7 +16,8 @@ export default function DiscourseForum({ discourseEmbedUrl }: { discourseEmbedUr
 
   return (
     <>
-      <div id="discourse-comments" className='margin-top--lg padding--sm shadow--lw'></div>
+      <h2 className='margin-top--lg'>Reacties</h2>
+      <div id="discourse-comments" className='margin-top--md'></div>
       <meta name='discourse-username' content='developer.overheid' />
     </>
   );

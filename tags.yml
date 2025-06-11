@@ -23,6 +23,8 @@ avg:
   label: AVG
 azure:
   label: Azure
+axe:
+  label: Accessibility engine voor geautomatiseerde web UI tests
 build-for-failure:
   description: Build for Failure
   label: Build for Failure

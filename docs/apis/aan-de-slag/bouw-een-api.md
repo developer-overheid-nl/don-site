@@ -11,7 +11,7 @@ Hier leggen we uit welke stappen je kunt doorlopen om snel en efficiënt een nie
 
 ### 1. Genereer een OpenAPI Specification (OAS)
 
-Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [OpenAPI Specification Generator](../openapi-specification/openapi-specification-generator) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/#list-of-technical-rules) voldoet.
+Elk REST API Design dient beschreven te worden middels OAS. Je kunt de [OpenAPI Specification Generator](../openapi-specification/openapi-specification-generator.md) gebruiken om automatisch een start template te genereren die reeds aan de [REST API Design Rules](../api-design-rules) voldoet.
 
 ### 2. Pas de OAS aan naar jouw specifieke usecase
 
@@ -31,7 +31,7 @@ Zodra het API Design final is, kan de ontwikkeling van de API beginnen. Afhankel
 
 #### 5.1 Publiceer de endpoints
 
-Een stapje verder dan een mocking service is het daadwerkelijk publiceren van de endpoints. Hoewel misschien nog geen business logic aanwezig is, kan hiermee de verbinding en eventuele authenticatie getest worden. Met de [ADR Validator](../api-design-rules/api-design-rules-validator) kan zo ook al gevalideerd worden of er issues zijn met bepaalde API Design Rules en security.
+Een stapje verder dan een mocking service is het daadwerkelijk publiceren van de endpoints. Hoewel misschien nog geen business logic aanwezig is, kan hiermee de verbinding en eventuele authenticatie getest worden. Met de [ADR Validator](../api-design-rules/api-design-rules-validator.md) kan zo ook al gevalideerd worden of er issues zijn met bepaalde API Design Rules en security.
 
 #### 5.2 Publiceer de business logic
 

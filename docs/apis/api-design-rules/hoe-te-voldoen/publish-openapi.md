@@ -38,25 +38,40 @@ import TabItem from "@theme/TabItem";
     import (
       "fmt"
 
-        "github.com/gin-gonic/gin"
-        cors "github.com/rs/cors/wrapper/gin" // hiermee voldoe je aan /core/open-api
+      "github.com/gin-gonic/gin"
+      cors "github.com/rs/cors/wrapper/gin" // hiermee voldoe je aan /core/open-api
 
-        "github.com/wI2L/fizz"
-        "github.com/wI2L/fizz/openapi"
-
+      "github.com/wI2L/fizz"
+      "github.com/wI2L/fizz/openapi"
     )
 
     func NewRouter() (\*fizz.Fizz, error) {
-      g := gin.Default()
-      f := fizz.NewFromEngine(g)
+      r := gin.Default()
+      r.Use(func(c *gin.Context) {
+          c.Header("API-Version", "1.0.0")
+          c.Next()
+      })
+      f := fizz.NewFromEngine(r)
+  
       infos := &openapi.Info{
-        Title: "<title>",
-        Description: `<description>`,
-        Version: "<version>",
+          Title: "Example API",
+          Description: "Voorbeeldproject",
+          Version: "1.0.0",
+          Contact: &openapi.Contact{
+              Name: "API Team",
+              URL: "https://example.com/support",
+              Email: "support@example.com",
+          },
       }
-      f.GET("/openapi.json", []fizz.OperationOption{
-        fizz.WithoutSecurity(),
-      }, cors.default(), f.OpenAPI(infos, "json"))
+      f.Generator().SetServers([]*openapi.Server{
+        {
+          Description: "Production",
+          URL:         "https://api.example.com/v1",
+        },
+      })
+      f.GET("/v1/openapi.json", []fizz.OperationOption{
+          fizz.WithoutSecurity(),
+      }, cors.Default(), f.OpenAPI(infos, "json"))
     }
     ```
   </TabItem>

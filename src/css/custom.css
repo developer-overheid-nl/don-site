@@ -127,7 +127,7 @@
 }
 
 html {
-  scroll-padding-top: calc(var(--ifm-navbar-height) + 4px);
+  scroll-padding-top: 100px; /* good middle ground */
 }
 
 .container--full {
@@ -181,6 +181,11 @@ html {
 
 .pagination-nav__link--next .pagination-nav__label {
   justify-content: flex-end;
+}
+
+.pagination-nav__link--next:focus, .pagination-nav__link--prev:focus {
+  outline-offset: 2px;
+  outline: 2px solid #000000;
 }
 
 .pagination-nav__link--prev .pagination-nav__label::before,

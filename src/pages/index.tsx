@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import HomepageBlogposts from "../components/HomepageBlogposts";
 import HomepageAgenda from "../components/HomepageAgenda";
 
@@ -12,6 +11,8 @@ import { ThemeConfig } from "docusaurus-theme-search-typesense";
 
 import HomepageTiles from "../components/TilesGrid/homepage-tiles";
 import TilesGrid from "../components/TilesGrid";
+import { useEffect } from "react";
+
 
 function Search() {
   return (
@@ -26,7 +27,31 @@ function Search() {
   );
 }
 
-function HomepageHeader() {
+function HomepageHeader(): React.JSX.Element {
+  useEffect(() => {
+    const skipLink = document.querySelector('a[href="#__docusaurus_skipToContent_fallback"]');
+    if (!skipLink) {
+      return;
+    }
+    const handleSkipClick = (event: MouseEvent) => {
+      event.preventDefault();
+      const searchInput = document.getElementById("banner-search") as HTMLInputElement;
+      if (searchInput) {
+        searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Focus the search input after scrolling
+        // Using setTimeout to ensure the scroll has completed before focusing
+        // This is a nessessary workaround for safari
+        setTimeout(() => {
+          searchInput.focus();
+        }, 0);    
+      }
+    };
+    skipLink.addEventListener("click", handleSkipClick);
+    return () => {
+      skipLink.removeEventListener("click", handleSkipClick);
+    };
+  }, []);
+
   const { siteConfig } = useDocusaurusContext();
   const { searchPagePath } = siteConfig.themeConfig.typesense as ThemeConfig['typesense'] || { searchPagePath: false };
 
