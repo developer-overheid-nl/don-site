@@ -8,8 +8,11 @@ import styles from "./index.module.css";
 import { IconButton, TextInput } from "@rijkshuisstijl-community/components-react";
 import IconZoekInline from "../theme/icons/IconZoekInline";
 import { ThemeConfig } from "docusaurus-theme-search-typesense";
-import HomepageTiles from "../components/HomepageTiles";
+
+import HomepageTiles from "../components/TilesGrid/homepage-tiles";
+import TilesGrid from "../components/TilesGrid";
 import { useEffect } from "react";
+
 
 function Search() {
   return (
@@ -56,7 +59,7 @@ function HomepageHeader(): React.JSX.Element {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <p className={styles.intro}>
-          Eén plek met informatie, bronnen, tools en codevoorbeelden van de&nbsp;<strong className={styles.intro__highlight}>overheid voor developers</strong> over 
+          Eén plek met informatie, bronnen, tools en codevoorbeelden van de&nbsp;<strong className={styles.intro__highlight}>overheid voor developers</strong> over
           privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.
         </p>
         {
@@ -67,6 +70,7 @@ function HomepageHeader(): React.JSX.Element {
   );
 }
 
+
 export default function Home(): React.JSX.Element {
   return (
     <Layout
@@ -74,7 +78,9 @@ export default function Home(): React.JSX.Element {
       description="Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.">
       <main>
         <HomepageHeader />
-        <HomepageTiles />
+        <section className="container">
+          <TilesGrid tiles={HomepageTiles} paddingY={true} />
+        </section>
         {/* <HomepageFeatures /> */}
         <div className="container container--full">
           <div className={styles.twoColumns}>
