@@ -40,7 +40,7 @@ Laten we eens kijken wat we van de huidige metadata kunnen verplaatsen naar OAS:
 
 ### Koppeling met organisatie
 
-Een belangrijke wijziging ten opzichte van het huidige API-register is de koppeling met organisatie. Momenteel is organisatie hard gekoppeld aan het [Register van Overheidsorganisaties (ROO)](https://organisaties.overheid.nl/). Op het moment dat een organisatie, zoals [Gouden API winnaar SURF](https://www.geonovum.nl/nieuws/gouden-api-award-voor-open-onderwijs-api-van-surf), niet in dit register voorkomt, kan deze geen API's toevoegen. Daarnaast is het aanmeldproces momenteel volledig open, wat wil zeggen dat iedereen namens een organisatie API's kan toevoegen. Dit is, net als dat een Gouden API niet in het API-register kan staan, onwenselijk, dus dit gaan we aanpassen.
+Een belangrijke wijziging ten opzichte van het huidige API-register is de koppeling met de organisatie. Momenteel is de bijbehorende organisatie hard gekoppeld aan het [Register van Overheidsorganisaties (ROO)](https://organisaties.overheid.nl/). Op het moment dat een organisatie, zoals [Gouden API winnaar SURF](https://www.geonovum.nl/nieuws/gouden-api-award-voor-open-onderwijs-api-van-surf), niet in dit register voorkomt, kan deze geen API's toevoegen. Daarnaast is het aanmeldproces momenteel volledig open, wat wil zeggen dat iedereen namens een organisatie API's kan toevoegen. Dit is, net als dat een Gouden API niet in het API-register kan staan, onwenselijk, dus gaan we dit aanpassen.
 
 #### Nieuwe situatie
 
