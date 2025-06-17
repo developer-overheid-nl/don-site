@@ -72,7 +72,7 @@ flowchart RL
 
 ### API's beheren
 
-Zodra een organisatie API credentials heeft, kan de bovenstaande API gebruikt worden om nieuwe API's toe te voegen of te updaten. Met een eenvoudige `POST` request met de OAS-locatie kan een nieuwe API toegevoegd worden aan het register. Daarna zal het API-register dagelijks checken of er een wijziging in de OAS heeft plaatsgevonden. Als dat zo is wordt het register bijgewerkt met de laatste informatie en wordt de ADR-score opnieuw bepaald.
+Zodra een organisatie API credentials heeft, kan de bovenstaande API gebruikt worden om nieuwe API's toe te voegen of te updaten. Met een eenvoudig `POST` request met de OAS-locatie (URL) kan een nieuwe API toegevoegd worden aan het register. Daarna zal het API-register dagelijks checken of er een wijziging in de OAS heeft plaatsgevonden. Als dat zo is wordt het register bijgewerkt met de laatste informatie en wordt de ADR-score opnieuw bepaald.
 
 #### API updaten
 
