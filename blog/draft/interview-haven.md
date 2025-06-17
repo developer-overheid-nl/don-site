@@ -1,6 +1,7 @@
 ---
 authors: [tom-ootes]
 tags: [haven, kubernetes, common-ground, digitale-autonomie]
+draft: true
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
