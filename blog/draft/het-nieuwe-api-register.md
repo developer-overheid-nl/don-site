@@ -44,7 +44,7 @@ Een belangrijke wijziging ten opzichte van het huidige API-register is de koppel
 
 #### Nieuwe situatie
 
-De identificatie van een organisatie zal voortaan via API credentials gaan. Op deze manier ligt de verantwoordelijkheid van het toevoegen en beheren van een API in het API-register volledig bij de organisatie die de API aanbiedt. Wij zullen deze credentials handmatig gaan uitgeven aan organisaties, waardoor we ook uitzonderingen kunnen maken voor organisaties die wel actief zijn in het publieke domein, maar niet voorkomen in het register van overheidsorganisaties.
+De identificatie van een organisatie zal voortaan via API-credentials gaan. Op deze manier ligt de verantwoordelijkheid van het toevoegen en beheren van een API in het API-register volledig bij de organisatie die de API aanbiedt. Wij zullen deze credentials handmatig uitgeven aan organisaties, waardoor we ook uitzonderingen kunnen maken voor organisaties die wel actief zijn in het publieke domein, maar niet voorkomen in het register van overheidsorganisaties.
 
 #### Koppeling met TOOI
 
