@@ -100,7 +100,7 @@ Hierover zegt Pauline: "Haven is volledig infra-as-code opgezet, zo zorgen we er
 
 Een cruciaal aspect van Haven+ is het bieden van een exit-strategie van Amerikaanse hyperscalers. "Het is een volledige exit strategie," stelt Pauline. Door die extra abstractielaag is de discussie weg van: “ja maar die cloud provider of hyperscaler biedt nog die functionaliteit”. Dat hebben we allemaal niet meer nodig. "We zitten in een agnostisch ecosysteem en de componenten die wij aanbieden kan je kwijt op elk Haven-compliant Kubernetes cluster."
 
-Er zijn al Nederlandse alternatieven beschikbaar. Previder is bijvoorbeeld Haven-compliant en staat in het lijstje met de grote hyperscalers als alternatief voor een compliant cluster in Nederland volgens Europese regelgeving. "Er staat niks in de weg om hier direct mee aan de slag te gaan," concludeert Sander.
+Er zijn al Nederlandse alternatieven beschikbaar. Previder is bijvoorbeeld Haven-compliant en staat in het lijstje met de grote hyperscalers als alternatief die je een compliant cluster in Nederland kan bieden, volgens Europese regelgeving. "Er staat niks in de weg om hier direct mee aan de slag te gaan," concludeert Sander.
 
 <Blockquote
   attribution=" — Pauline, Technisch Product Owner gemeente Utrecht"
