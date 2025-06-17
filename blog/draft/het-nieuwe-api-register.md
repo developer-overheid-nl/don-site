@@ -166,4 +166,4 @@ Het wordt mogelijk om verschillende API's te groeperen, zodat samenhangende API'
 
 ## Het nieuwe API-register uitproberen?
 
-Momenteel zijn we volop bezig met de ontwikkeling van het nieuwe API-register. Om dit goed te kunnen testen zijn we op zoek naar organisaties die wij aan kunnen sluiten op onze testomgeving. De gemeente Amsterdam heeft reeds toegezegd, maar het zou mooi zijn als we meer testcases hebben. Interesse om samen met ons het volgende API-register uit te proberen? Laat het weten in de comments of stuur een mailtje naar [developer.overheid@geonovum.nl](mailto:developer.overheid@geonovum.nl)!
+Momenteel zijn we volop bezig met de ontwikkeling van het nieuwe API-register. Om dit goed te kunnen testen zijn we op zoek naar organisaties die wij aan kunnen sluiten op onze testomgeving. De gemeente Amsterdam doet al mee, maar het zou mooi zijn als we meer testcases hebben. Interesse om samen met ons het volgende API-register uit te proberen? Laat het weten in de comments of stuur een mailtje naar [developer.overheid@geonovum.nl](mailto:developer.overheid@geonovum.nl)!
