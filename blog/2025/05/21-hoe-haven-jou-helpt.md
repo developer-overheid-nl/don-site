@@ -119,7 +119,7 @@ Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met 
 
 * [Ons kennisbank artikel over Haven](/kennisbank/infra/standaarden/haven/)
 * [Slack-kanaal van Haven](https://samenorganiseren.slack.com/archives/CGCPJE599)
-* [Mattermost kanaal van Haven+](https://digilab.overheid.nl/chat/digilab/channels/havenplus)
+* [Mattermost kanaal van Haven+](https://digilab.overheid.nl/chat/haven/channels/town-square)
 * [Naar de lijst met checks van Haven](https://haven.commonground.nl/techniek/checks)
 * [Git Haven](https://gitlab.com/commonground/haven/)
 * [Git Haven+](https://gitlab.com/commonground/haven/havenplus/)

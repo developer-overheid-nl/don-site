@@ -149,3 +149,11 @@ Haven+ toont aan dat Nederlandse overheidsinstellingen niet afhankelijk hoeven t
 Met Haven+ heb je een set aan services tot je beschikking om af te komen van de services van Azure/ AWS. Met bewezen implementaties bij gemeente Utrecht en groeiende adoptie door andere organisaties, bewijst Haven+ dat digitale soevereiniteit niet ten koste hoeft te gaan kwaliteit en snelheid.
 
 "We pakken de best practices die er zijn, die we kennen vanuit de CNCF, plus de ervaring die we hebben van wat ook echt goed werkt," vat Sander de werkwijze samen.
+
+## Handige links
+
+* [Ons kennisbank artikel over Haven](/kennisbank/infra/standaarden/haven/)
+* [Mattermost kanaal van Haven](https://digilab.overheid.nl/chat/haven/channels/town-square)
+* [Naar de lijst met checks van Haven](https://haven.commonground.nl/techniek/checks)
+* [Git Haven](https://gitlab.com/commonground/haven/)
+* [Git Haven+](https://gitlab.com/commonground/haven/havenplus/)
