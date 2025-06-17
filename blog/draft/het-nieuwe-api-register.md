@@ -50,7 +50,7 @@ De identificatie van een organisatie zal voortaan via API-credentials gaan. Op d
 
 Organisaties die wél voorkomen in ROO zullen we koppelen aan [TOOI](https://standaarden.overheid.nl/tooi) (Thesauri en Ontologieën voor Overheidsinformatie), waar de linked data identifiers voor overheidsorganisaties zijn vastgelegd. Voorbeeld:
 
-1. URI van "Directoraat-generaal Belastingdienst": https://identifier.overheid.nl/tooi/id/oorg/oorg12368.
+1. De URI van "Directoraat-generaal Belastingdienst" is: https://identifier.overheid.nl/tooi/id/oorg/oorg12368.
 1. Door deze URI te gebruiken kunnen er eenvoudig links gelegd worden tussen het API-register en andere pagina's; zo kan iemand direct alle API's van een organisatie ophalen zonder onze interne identifiers te weten.
 1. Via de TOOI API is er extra informatie over deze organisatie te vinden, zoals `alternatieveNaam` of `afkorting`. Hierdoor kunnen we gewoon "Belastingdienst" tonen in plaats van "Directoraat-generaal Belastingdienst". Resource van de TOOI API: https://api.standaarden.overheid.nl/v1/overheidsorganisaties/https%3A%2F%2Fidentifier.overheid.nl%2Ftooi%2Fid%2Foorg%2Foorg12368.
 
