@@ -48,13 +48,13 @@ De identificatie van een organisatie zal voortaan via API credentials gaan. Op d
 
 Organisaties die wél voorkomen in ROO zullen we koppelen aan [TOOI](https://standaarden.overheid.nl/tooi) (Thesauri en Ontologieën voor Overheidsinformatie), waar de linked data identifiers voor overheidsorganisaties zijn vastgelegd. Voorbeeld:
 
-1. URI van "Directoraat-generaal Belastingdienst": https://identifier.overheid.nl/tooi/id/oorg/oorg12368
-1. Door deze URI te gebruiken kunnen er eenvoudig links gelegd worden tussen het API-register en andere pagina's; zo kan iemand direct alle API's van een organisatie ophalen zonder onze interne identifiers te weten
-1. Via de TOOI API is er extra informatie over deze organisatie te vinden, zoals `alternatieveNaam` of `afkorting`. Hierdoor kunnen we gewoon "Belastingdienst" tonen in plaats van "Directoraat-generaal Belastingdienst". Resource van de TOOI API: https://api.standaarden.overheid.nl/v1/overheidsorganisaties/https%3A%2F%2Fidentifier.overheid.nl%2Ftooi%2Fid%2Foorg%2Foorg12368
+1. URI van "Directoraat-generaal Belastingdienst": https://identifier.overheid.nl/tooi/id/oorg/oorg12368.
+1. Door deze URI te gebruiken kunnen er eenvoudig links gelegd worden tussen het API-register en andere pagina's; zo kan iemand direct alle API's van een organisatie ophalen zonder onze interne identifiers te weten.
+1. Via de TOOI API is er extra informatie over deze organisatie te vinden, zoals `alternatieveNaam` of `afkorting`. Hierdoor kunnen we gewoon "Belastingdienst" tonen in plaats van "Directoraat-generaal Belastingdienst". Resource van de TOOI API: https://api.standaarden.overheid.nl/v1/overheidsorganisaties/https%3A%2F%2Fidentifier.overheid.nl%2Ftooi%2Fid%2Foorg%2Foorg12368.
 
 ## API-first
 
-Voor het nieuwe API-register hanteren we een API-first approach. Dit betekent dat de hele applicatie via een API te "bedienen" is, waar we een aparte front-end tegenaan laten praten om het gemakkelijker te maken voor menselijke bezoekers. Deze aanpak maakt het makkelijker om automatische synchronisatie met bijvoorbeeld CI/CD pipelines in te richten, eigen front-ends te bouwen, of het register te integreren in bestaande portals. Als de Belastingdienst of een gemeente een overzicht van al hun API's op hun eigen portals willen tonen, inclusief alle benefits die API-register biedt, dan kan dat door onze API te raadplegen en te filteren op de betreffende organisatie. Bovendien wordt onze codebase door de scheiding met de front-end kleiner en dus behapbaarder om te delen met andere organisaties die een eigen API-register willen hebben en willen bijdragen aan de codebase.
+Voor het nieuwe API-register hanteren we een API-first approach. Dit betekent dat de hele applicatie via een API te "bedienen" is, waar we een aparte front-end tegenaan laten praten om het gemakkelijker te maken voor menselijke bezoekers. Deze aanpak maakt het makkelijker om automatische synchronisatie met bijvoorbeeld CI/CD pipelines in te richten, eigen front-ends te bouwen, of het register te integreren in bestaande portals. Als de Belastingdienst of een gemeente een overzicht van al hun API's op hun eigen portals willen tonen, inclusief alle benefits die het API-register biedt, dan kan dat door onze API te raadplegen en te filteren op de betreffende organisatie. Bovendien wordt onze codebase door de scheiding met de front-end kleiner en dus behapbaarder om te delen met andere organisaties die een eigen API-register willen hebben en willen bijdragen aan de codebase.
 
 ```mermaid
 flowchart RL
