@@ -22,7 +22,9 @@ Naast deze dominante groepen zijn er nog enkele uitzonderingen: GraphQL (1), CKA
 
 ## OpenAPI-first
 
-Omdat alle API's in het nieuwe register met OAS te beschrijven zijn, kunnen we maximaal voordeel halen uit alle tooling die er voor OpenAPI beschikbaar is. Tevens wordt OAS dé bron voor informatie die wij aan kunnen bieden in het register. Laten we eens kijken wat we van de huidige metadata kunnen verplaatsen naar OAS:
+Omdat alle API's in het nieuwe register met OAS te beschrijven zijn, kunnen we maximaal voordeel halen uit alle tooling die er voor OpenAPI beschikbaar is. Tevens wordt OAS dé bron voor informatie die wij aan kunnen bieden in het register.
+
+Laten we eens kijken wat we van de huidige metadata kunnen verplaatsen naar OAS:
 
 |Eigenschap|OpenAPI equivalent|
 |-|-|
