@@ -8,7 +8,7 @@ tags:
 title: "DigiToegankelijk"
 ---
 
-[DigiToegankelijk](https://www.digitoegankelijk.nl/) is de officiële website van de Nederlandse overheid over digitale toegankelijkheid. De site biedt richtlijnen, informatie en hulpmiddelen om overheden te helpen te voldoen aan hun wettelijke verplichtingen rondom het toegankelijker maken van hun websites en apps.  
+[DigiToegankelijk](https://www.digitoegankelijk.nl/) is de officiële website van de Nederlandse overheid over digitale toegankelijkheid. De site biedt richtlijnen, informatie en hulpmiddelen om overheidsinstanties te helpen te voldoen aan hun wettelijke verplichtingen rondom het toegankelijker maken van hun websites en apps.  
 
 ## Belangrijke onderwerpen  
 
