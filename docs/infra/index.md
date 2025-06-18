@@ -14,9 +14,6 @@ Infrastructuur vormt de ruggengraat van softwaretoepassingen binnen de overheid.
 - **Schaalbaarheid en flexibiliteit** → Moderne cloud- en containertechnologieën (zoals Kubernetes) zorgen ervoor dat systemen mee kunnen groeien met de vraag.  
 - **Interoperabiliteit** → Systemen moeten naadloos samenwerken via API’s en open standaarden.  
 
-## Blogs
-[Haven Plus: het team dat bouwt aan cloud-soevereiniteit](/blog/draft/interview-haven)
-
 <br />
 <br />
 
