@@ -29,3 +29,4 @@ Meld je aan met een emailadres van de overheid en stel je vragen, overleg met co
 ## Links
 
 - [DigiToegankelijk](https://www.digitoegankelijk.nl/)
+- [DigiToegankelijk Pleio Community](https://digitoegankelijk.pleio.nl)
