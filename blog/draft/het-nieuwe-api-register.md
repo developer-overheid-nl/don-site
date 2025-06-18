@@ -10,7 +10,7 @@ Het [API-register](https://apis.developer.overheid.nl/apis) krijgt een flinke up
 
 ## REST-only
 
-Het overgrote deel van het API-register bestaat uit REST/JSON (171) en REST/XML (27) API's. Omdat API's zowel JSON als XML terug kunnen geven, kunnen deze worden samengevoegd tot simpelweg "REST". Daarnaast zijn er enkele OData API's (4), die ondanks hun eigen protocol in essentie RESTful en bovendien goed te beschrijven zijn met een OpenAPI Specification (OAS). Ook deze voegen we dus toe aan het REST-cluster.
+Het overgrote deel van het API-register bestaat uit REST/JSON (113) en REST/XML (27) API's. Omdat API's zowel JSON als XML terug kunnen geven, kunnen deze worden samengevoegd tot simpelweg "REST". Daarnaast zijn er enkele OData API's (4), die ondanks hun eigen protocol in essentie RESTful en bovendien goed te beschrijven zijn met een OpenAPI Specification (OAS). Ook deze voegen we dus toe aan het REST-cluster.
 
 ### Geoservices
 
@@ -72,7 +72,7 @@ flowchart RL
 
 ### API's beheren
 
-Zodra een organisatie API credentials heeft, kan de bovenstaande API gebruikt worden om nieuwe API's toe te voegen of te updaten. Met een eenvoudig `POST` request met de OAS-locatie (URL) kan een nieuwe API toegevoegd worden aan het register. Daarna zal het API-register dagelijks checken of er een wijziging in de OAS heeft plaatsgevonden. Als dat zo is wordt het register bijgewerkt met de laatste informatie en wordt de ADR-score opnieuw bepaald.
+Zodra een organisatie API credentials heeft, kan de bovenstaande API gebruikt worden om nieuwe API's toe te voegen of te updaten. Met een eenvoudige `POST` request met de OAS-locatie kan een nieuwe API toegevoegd worden aan het register. Daarna zal het API-register dagelijks checken of er een wijziging in de OAS heeft plaatsgevonden. Als dat zo is wordt het register bijgewerkt met de laatste informatie en wordt de ADR-score opnieuw bepaald.
 
 #### API updaten
 
