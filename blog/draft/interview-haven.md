@@ -43,7 +43,7 @@ Het verhaal van Haven+ begint bij de gemeente Utrecht, die op het gebied van inf
 
 Deze stroom van vragen, gecombineerd met de observatie dat andere gemeenten moeite hadden om goed uit de startblokken te komen, leidde tot het voorstel om bij Digilab een project te starten om de Utrecht-aanpak tot een landelijke standaard op te werken. Dit is het project dat uiteindelijk [Haven+](/kennisbank/infra/standaarden/haven/haven-plus) is geworden.
 
-![Haven](./img/sander_pauline_2.jpg)
+![Haven](./img/sander_pauline_1.jpg)
 *Sander van Thillo en Pauline van Rotterdam van Team Haven in het Stadskantoor in Utrecht.*
 
 ## Wat is Haven+?
@@ -93,7 +93,7 @@ De voordelen van Haven+ manifesteren zich op verschillende niveaus:
 
 ## Randvoorwaarde: containerized applicaties
 
-Een randvoorwaarde om applicaties te laten landen op een Haven cluster is dat ze containerized zijn opgezet en dat de codebase Helm-charts bevat. Je bent dan al op het niveau dat je deze applicatie gemakkelijk met de hand zou kunnen opzetten. Haven helpt je om je release-management naar een hoger niveau te tillen.
+Een randvoorwaarde om applicaties te laten landen op een Haven cluster is dat ze containerized zijn opgezet en dat ze verpakt en beheert worden middels Helm charts (package manager voor Kubernetes applicaties, red.). Je bent dan al op het niveau dat je deze applicatie gemakkelijk met de hand zou kunnen opzetten. Haven helpt je om je release-management naar een hoger niveau te tillen.
 
 Hierover zegt Pauline: "Haven is volledig infra-as-code opgezet, zo zorgen we ervoor dat de uitrol van applicaties automatisch gaat. Door hierin een standaard te zetten helpen we je bij het automatisch uitrollen van je applicaties op een cluster."
 
@@ -121,7 +121,7 @@ Haven+ is geen theoretisch project - er draaien al diverse Common Ground applica
 
 Bij gemeente Utrecht zorgt Pauline dat alles wat wordt ge-onboard op een Haven-cluster terecht komt. "Alles wat wij onboarden staat op een havencluster," bevestigt ze.
 
-![Haven](./img/sander_pauline_1.jpg)
+![Haven](./img/sander_pauline_2.jpg)
 *Sander van Thillo en Pauline van Rotterdam van Team Haven in het Stadskantoor in Utrecht.*
 
 
