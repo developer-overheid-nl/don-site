@@ -1,10 +1,14 @@
 ---
 tags:
-  - "security"
+  - "accessibility"
+  - "wcag"
+  - "toegankelijkheid"
+  - "wetgeving"
+  - "en 301 549"
 title: "DigiToegankelijk"
 ---
 
-[DigiToegankelijk](https://www.digitoegankelijk.nl/) is de officiële website van de Nederlandse overheid over digitale toegankelijkheid. De site biedt richtlijnen, informatie en hulpmiddelen om ervoor te zorgen dat websites en apps van de overheid toegankelijk zijn voor iedereen, inclusief mensen met een beperking.  
+[DigiToegankelijk](https://www.digitoegankelijk.nl/) is de officiële website van de Nederlandse overheid over digitale toegankelijkheid. De site biedt richtlijnen, informatie en hulpmiddelen om overheden te helpen te voldoen aan hun wettelijke verplichtingen rondom het toegankelijker maken van hun websites en apps.  
 
 ## Belangrijke onderwerpen  
 
@@ -14,8 +18,14 @@ title: "DigiToegankelijk"
 
 - **Zelftoetsing & monitoring**: tools en adviezen om zelf te controleren of een website of app toegankelijk is.  
 
-- **Handreikingen voor ontwikkelaars en designers**: praktische tips en handleidingen voor het toegankelijk maken van digitale content.  
+- **Handreikingen voor ontwikkelaars en designers**: praktische tips en handleidingen voor het toegankelijk maken van digitale content.
+
+## Community
+
+De [DigiToegankelijk Pleio Community](https://digitoegankelijk.pleio.nl) is er voor iedereen die bij de overheid werkt aan het toegankelijker maken van websites en apps.
+
+Meld je aan met een emailadres van de overheid en stel je vragen, overleg met collega's bij andere overheden en deel kennis.
 
 ## Links
 
-- [Naar de website van DigiToegankelijk](https://www.digitoegankelijk.nl/)
+- [DigiToegankelijk](https://www.digitoegankelijk.nl/)
