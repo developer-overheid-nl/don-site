@@ -1,6 +1,7 @@
 ---
 authors: [kennisplatform-apis]
 tags: [gouden-api]
+description: Application Programming Interfaces (API's) spelen een niet weg te denken rol in het digitale landschap. API's maken het eenvoudiger om verschillende data en diensten te gebruiken in verschillende applicaties. Maar de ene API is de andere API niet... Sommige API's zijn gewoon goed, maar er zijn ook API's die *buitengewoon* goed zijn. En die API's zet het Kennisplatform API's graag in het zonnetje.
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
