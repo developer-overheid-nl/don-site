@@ -1,10 +1,6 @@
 ---
 tags:
-  - "accessibility"
   - "wcag"
-  - "toegankelijkheid"
-  - "wetgeving"
-  - "en 301 549"
 title: "DigiToegankelijk"
 ---
 
