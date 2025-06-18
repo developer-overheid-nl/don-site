@@ -10,7 +10,7 @@ Het [API-register](https://apis.developer.overheid.nl/apis) krijgt een flinke up
 
 ## REST-only
 
-Het overgrote deel van het API-register bestaat uit REST/JSON (113) en REST/XML (27) API's. Omdat API's zowel JSON als XML terug kunnen geven, kunnen deze worden samengevoegd tot simpelweg "REST". Daarnaast zijn er enkele OData API's (4), die ondanks hun eigen protocol in essentie RESTful en bovendien goed te beschrijven zijn met een OpenAPI Specification (OAS). Ook deze voegen we dus toe aan het REST-cluster.
+Het overgrote deel van het API-register bestaat uit REST/JSON (171) en REST/XML (27) API's. Omdat API's zowel JSON als XML terug kunnen geven, kunnen deze worden samengevoegd tot simpelweg "REST". Daarnaast zijn er enkele OData API's (4), die ondanks hun eigen protocol in essentie RESTful en bovendien goed te beschrijven zijn met een OpenAPI Specification (OAS). Ook deze voegen we dus toe aan het REST-cluster.
 
 ### Geoservices
 
