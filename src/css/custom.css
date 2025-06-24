@@ -139,6 +139,7 @@ html {
 }
 
 .navbar {
+  margin-top:2px;
   border-bottom: 1px solid var(--ifm-color-primary);
   padding-bottom: 0;
 }

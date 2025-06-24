@@ -192,16 +192,29 @@ const config: Config = {
       title: "Home",
       items: [
         {
-          to: "/kennisbank",
           label: "Kennisbank",
           position: "left",
-          activeBaseRegex: `/kennisbank`,
+          to: "/kennisbank",
+          items: [
+            { label: "API's", to: "/kennisbank/apis" },
+            { label: "Front-end", to: "/kennisbank/front-end" },
+            { label: "Data", to: "/kennisbank/data" },
+            { label: "Open Source", to: "/kennisbank/open-source" },
+            { label: "Infrastructuur", to: "/kennisbank/infra" },
+            { label: "Security", to: "/kennisbank/security" },
+            { label: "Leidraad", to: "/kennisbank/leidraad" },
+          ],
         },
         {
-          to: "/communities",
           label: "Communities",
           position: "left",
-          activeBaseRegex: `/communities`,
+          to: "/communities",
+          items: [
+            { label: "API's Community", to: "/communities/apis" },
+            { label: "Design System", to: "/communities/design-system" },
+            { label: "Geo", to: "/communities/geo" },
+            { label: "Toegankelijkheid", to: "/communities/toegankelijkheid" },
+          ],
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
@@ -251,7 +264,7 @@ const config: Config = {
               <div class="sponsors">
                 <!-- temporary forced-colors fix untill good BZK svg-logo -->
                 <img class="sponsors__logo" src="/img/logo-bzk.png" alt="Logo van Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" style="forced-color-adjust: none; background-color: var(--ifm-footer-background-color);" />
-                <svg class="sponsors__logo" viewBox="150 15 96 50" xmlns="http://www.w3.org/2000/svg">
+                <svg class="sponsors__logo" role="img" aria-label="Logo van Vereniging van Nederlandse Gemeenten" viewBox="150 15 96 50" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
                       .abbr { color: #f5f5f5; }
@@ -274,7 +287,7 @@ const config: Config = {
                     <path class="abbr" fill="currentColor" d="M176.017 42.116l-4.678-12.401h-5.664l8.14 20.366h3.921l8.401-20.366h-5.363zm26.542.558l-7.928-12.959h-6.413v20.367h4.997V36.787l8.15 13.295h6.19V29.715h-4.996zm19.323-4.94v4.663h3.537v2.677a9.773 9.773 0 0 1-1.414.54c-.652.203-1.443.306-2.354.306-.88 0-1.686-.15-2.394-.448a5.338 5.338 0 0 1-1.824-1.247 5.522 5.522 0 0 1-1.17-1.894c-.272-.729-.41-1.549-.41-2.433 0-.867.138-1.681.41-2.42a5.502 5.502 0 0 1 1.17-1.908 5.374 5.374 0 0 1 1.824-1.246c.709-.298 1.514-.449 2.394-.449 1.064 0 1.959.151 2.657.449.7.297 1.338.74 1.898 1.318l.242.248 3.515-3.835-.237-.221a8.923 8.923 0 0 0-3.627-2.038c-1.35-.386-2.847-.583-4.448-.583-1.572 0-3.044.25-4.373.745a10.139 10.139 0 0 0-3.481 2.143c-.975.928-1.746 2.066-2.29 3.384-.543 1.315-.819 2.8-.819 4.413 0 1.613.276 3.098.82 4.413.545 1.319 1.314 2.457 2.289 3.384.974.926 2.146 1.647 3.48 2.143 1.33.494 2.802.744 4.374.744 1.464 0 2.92-.152 4.33-.452a16.054 16.054 0 0 0 4.09-1.478l.177-.09V37.733h-8.366z"/>
                   </g>
                 </svg>
-                <svg class="sponsors__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 230.61">
+                <svg class="sponsors__logo" role="img" aria-label="Logo van Forum Standaardisatie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 230.61">
                   <defs>
                     <style>
                       .cls-1{ fill: #e1710d; }
