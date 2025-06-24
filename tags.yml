@@ -134,6 +134,8 @@ json:
   label: JSON
 json-schema:
   label: JSON Schema
+javascript:
+  label: JavaScript
 jwt:
   label: JSON Web Tokens (JWT of JWT's)
 kiesraad:
@@ -166,6 +168,8 @@ nodejs:
   label: Node.js
 notificaties:
   label: Notificaties
+npm:
+  label: Node Package Manager
 nvm:
   label: NVM
 oas:
@@ -239,6 +243,8 @@ shacl:
 skos:
   description: Simple Knowledge Organization System
   label: SKOS
+typescript:
+  label: TypeScript
 tool:
   description: Tool
   label: Tool
