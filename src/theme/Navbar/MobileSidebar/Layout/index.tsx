@@ -40,24 +40,32 @@ export default forwardRef(function NavbarMobileSidebarLayout({
   secondaryMenu,
 }: Props, ref: any): ReactNode {
   const {shown: secondaryMenuShown} = useNavbarSecondaryMenu();
-  return (
+  const mobileSidebar = useNavbarSecondaryMenu();
+    return (
     <div
-      className={clsx(
-        ThemeClassNames.layout.navbar.mobileSidebar.container,
-        'navbar-sidebar',
-      )}
-      ref={ref}>
-      {header}
+      className="navbar-sidebar__overlay"
+      onClick={() => mobileSidebar.toggle()}
+    >
       <div
+        className={clsx(
+          ThemeClassNames.layout.navbar.mobileSidebar.container,
+        'navbar-sidebar',
+        )}
+        ref={ref}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {header}
+        <div
         className={clsx('navbar-sidebar__items', {
           'navbar-sidebar__items--show-secondary': secondaryMenuShown,
         })}>
-        <NavbarMobileSidebarPanel inert={secondaryMenuShown}>
-          {primaryMenu}
-        </NavbarMobileSidebarPanel>
-        <NavbarMobileSidebarPanel inert={!secondaryMenuShown}>
-          {secondaryMenu}
-        </NavbarMobileSidebarPanel>
+          <NavbarMobileSidebarPanel inert={secondaryMenuShown}>
+            {primaryMenu}
+          </NavbarMobileSidebarPanel>
+          <NavbarMobileSidebarPanel inert={!secondaryMenuShown}>
+            {secondaryMenu}
+          </NavbarMobileSidebarPanel>
+        </div>
       </div>
     </div>
   );
