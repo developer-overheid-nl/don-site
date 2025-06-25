@@ -128,7 +128,13 @@ En ik geef hem geen ongelijk. Onze package.json bevatte indertijd **`77 packages
 ```
 
 ## NPM: veel kleine packages
-Omdat het NPM ecosysteem rijk is aan kleine packages die 1 dingetje voor je oplossen loopt het aantal snel op. En achter elke package die je installeert bevindt zich ook weer een hele trits aan secundaire, tertiaire en ook soms quaternaire  packages. Op deze manier kan een eenvoudig project snel uitlopen tot een onderhoudsdebacle. 
+Omdat het NPM ecosysteem rijk is aan kleine packages die 1 dingetje voor je oplossen loopt het aantal snel op. En achter elke package die je installeert bevindt zich ook weer een hele trits aan secundaire, tertiaire en ook soms quaternaire  packages. Op deze manier kan een eenvoudig project snel uitlopen tot een onderhoudsdebacle.
 
 ## Een golf van versiebumps
-Elke keer als er een vulnerability wordt gevonden in een onderlig gende dependency dienen de maintainers van de dependencies die deze dependency gebruiken hun package te updaten. Als jij deze package dan weer gebruikt levert dit jou weer een Dependabot-alert op. Zo zorgt een kwetsbaarheid voor een golf aan alerts tot bovenaan de chain. 
+Elke keer als er een vulnerability wordt gevonden in een onderliggende dependency dienen de maintainers van de dependencies die deze dependency gebruiken hun package te updaten. Als jij deze package dan weer gebruikt levert dit jou weer een Dependabot-alert op. Zo zorgt een kwetsbaarheid voor een golf aan alerts tot bovenaan de chain.
+
+## Hoe kan ik het voorkomen?
+- Opknippen front-end apps
+
+@ LINKEDIN
+Tag je collega die de hele tijd nieuwe deps installeert
