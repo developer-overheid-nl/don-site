@@ -48,15 +48,15 @@ function CollapseButton({
         collapsed
           ? translate({
               id: 'theme.navbar.mobileDropdown.collapseButton.expandAriaLabel',
-              message: 'Expand the dropdown',
+              message: 'Dropdown uitvouwen',
               description:
-                'The ARIA label of the button to expand the mobile dropdown navbar item',
+                'Dropdown uitvouw knop voor mobiele navigatiebalk',
             })
           : translate({
               id: 'theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel',
-              message: 'Collapse the dropdown',
+              message: 'Dropdown inklappen',
               description:
-                'The ARIA label of the button to collapse the mobile dropdown navbar item',
+                'Dropdown inklap knop voor mobiele navigatiebalk',
             })
       }
       aria-expanded={!collapsed}
