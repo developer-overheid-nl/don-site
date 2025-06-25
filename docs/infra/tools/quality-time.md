@@ -6,7 +6,6 @@ tags:
   - "monitoring"
   - "owasp"
 title: "Quality Time"
-organization: "https://community.developer.overheid.nl/g/ictu"
 ---
 
 :::info[Bijdrage van ICTU]

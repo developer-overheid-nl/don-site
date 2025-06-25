@@ -10,7 +10,7 @@ const config: Config = {
   title: "developer.overheid.nl",
   customFields: {
     siteName: "developer.overheid.nl",
-    discourseCommentsInBlog: true,
+    discourseCommentsInBlog: false,
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
   organizationName: "developer.overheid.nl",
@@ -218,11 +218,6 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://community.developer.overheid.nl",
-          label: "Forum",
-          position: "right",
-        },
-        {
           href: "https://apis.developer.overheid.nl",
           label: "API's",
           position: "right",
@@ -310,10 +305,6 @@ const config: Config = {
         {
           title: "Community",
           items: [
-            {
-              label: "Discourse",
-              href: "https://community.developer.overheid.nl",
-            },
             {
               label: "Slack",
               href: "https://codefornl.slack.com/archives/CFV4B3XE2",

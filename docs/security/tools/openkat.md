@@ -6,7 +6,6 @@ tags:
   - "community"
   - "monitoring"
 title: "OpenKAT"
-organization: "https://community.developer.overheid.nl/g/VWS"
 ---
 
 :::info[Bijdrage van VWS]
