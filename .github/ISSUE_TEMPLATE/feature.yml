@@ -29,7 +29,6 @@ body:
       label: In welk onderdeel behoort de feature of verbetering?
       options:
         - De website / kennisbank (developer.overheid.nl)
-        - Forum / Discourse (community.developer.overheid.nl)
         - API-register (apis.developer.overheid.nl)
         - OSS-register (oss.developer.overheid.nl)
         - Socials / Github
