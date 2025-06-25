@@ -1,6 +1,6 @@
 ---
 authors: [martin-van-der-plas]
-tags: [data-bij-de-bron, fds, api,  oauth, digid, pkio, eherkenning, eidas, oidc, saml]
+tags: [data-bij-de-bron, fds, api,  oauth, digid, pkio, eherkenning, eidas, oidc, saml, logging]
 toc_max_heading_level: 3
 ---
 # Data delen: uitdagingen en oplossingen

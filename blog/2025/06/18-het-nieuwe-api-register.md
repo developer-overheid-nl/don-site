@@ -1,6 +1,6 @@
 ---
 authors: [dimitri-van-hees]
-tags: [developer.overheid.nl, changelog, release, api]
+tags: [developer.overheid.nl, changelog, release, api, rest, openapi, adr, oas, forum-standaardisatie]
 ---
 # Het nieuwe API-register: REST-only en OpenAPI-first voor maximale Developer Experience
 

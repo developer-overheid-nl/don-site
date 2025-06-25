@@ -1,6 +1,6 @@
 ---
 authors: [kennisplatform-apis]
-tags: [api, oauth, adr]
+tags: [api, oauth, adr, rest, forum-standaardisatie]
 ---
 
 # Informatiehuis Water tekent intentieverklaring Kennisplatform API's
