@@ -24,7 +24,7 @@
     "url": "https://www.hackwerk2025.nl/pre-event"
   },
   {
-    "title": "Hackwerk 2025: een overheid",
+    "title": "Hackwerk 2025: één overheid",
     "start_date": "2025-10-02",
     "end_date": "2025-10-03",
     "place": "KvK Amsterdam",
@@ -49,11 +49,19 @@
   },
   {
     "title": "Workshop: OGC API Intro",
+    "start_date": "2025-07-02T10:00:00+02:00",
+    "end_date": "2025-07-02T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
+    "url": "https://www.formdesk.com/geonovum/OGC_API_Intro_2juli"
+  },
+  {
+    "title": "Workshop: OGC API Intro",
     "start_date": "2025-08-20T10:00:00+02:00",
     "end_date": "2025-08-20T16:00:00+02:00",
     "place": "Geonovum, Amersfoort",
     "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
-    "url": "https://www.formdesk.com/geonovum/OGC_API_Intro_2juli"
+    "url": "https://www.geonovum.nl/agenda/workshop-ogc-api-intro-0"
   },
   {
     "title": "Workshop: OGC API Muteren",
