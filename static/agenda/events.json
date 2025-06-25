@@ -46,5 +46,45 @@
     "place": "Provincie Friesland, Leeuwarden",
     "summary": "Ons bevlogen team praat je in een ochtend bij over het algoritmeregister, het algoritmekader, de implementatie van de AI-verordening bij de overheid, generatieve AI en andere algoritme/AI-gerelateerde ontwikkelingen die relevant zijn voor overheden. We nodigen iedereen die werkt binnen de overheid in de regio uit om langs te komen.",
     "url": "https://aienalgoritmes.pleio.nl/events/view/3889ab94-d098-45aa-b367-d496abf5300d/regiotour-ai-algoritmes-overheid-friesland"
+  },
+  {
+    "title": "Workshop: OGC API Intro",
+    "start_date": "2025-08-20T10:00:00+02:00",
+    "end_date": "2025-08-20T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
+    "url": "https://www.formdesk.com/geonovum/OGC_API_Intro_2juli"
+  },
+  {
+    "title": "Workshop: OGC API Muteren",
+    "start_date": "2025-11-04T10:00:00+02:00",
+    "end_date": "2025-11-04T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
+    "url": "https://www.formdesk.com/geonovum/OGC_API_Muteren_4nov"
+  },
+  {
+    "title": "Workshop: 3D Tiles",
+    "start_date": "2025-10-07T10:00:00+02:00",
+    "end_date": "2025-10-07T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
+    "url": "https://www.formdesk.com/geonovum/OGC_3DTiles_7okt"
+  },
+  {
+    "title": "Workshop: OGC API Features",
+    "start_date": "2025-09-24T10:00:00+02:00",
+    "end_date": "2025-09-24T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
+    "url": "https://www.formdesk.com/geonovum/OGC_API_Features_24sept"
+  },
+  {
+    "title": "Workshop: Internet of Things",
+    "start_date": "2025-08-27T10:00:00+02:00",
+    "end_date": "2025-08-27T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "In deze interactieve workshop bouw je zelf een klein sensornetwerk en maak je kennis met daarbij toepasbare standaarden. Met behulp van een microcontroller (het ding) ga je sensormetingen via het internet delen en bevraagbaar maken.",
+    "url": "https://www.formdesk.com/geonovum/OGC_Internet_of_things_27aug"
   }
 ]
