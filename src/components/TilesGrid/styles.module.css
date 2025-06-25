@@ -68,10 +68,6 @@
   background-color: var(--ifm-color-warning-lighter);
 }
 
-.link {
-  color: inherit;
-}
-
 .spacer {
   margin-inline-end: 0.25rem;
 }

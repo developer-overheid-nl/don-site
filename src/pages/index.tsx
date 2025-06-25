@@ -11,19 +11,35 @@ import { ThemeConfig } from "docusaurus-theme-search-typesense";
 
 import HomepageTiles from "../components/TilesGrid/homepage-tiles";
 import TilesGrid from "../components/TilesGrid";
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
 
 function Search() {
+  const [hasInput, setHasInput] = useState(false);
   return (
-    <form action="/zoeken" method="get" className={styles.heroSearch}>
-      <label className="visual-hidden" htmlFor="banner-search">Zoek in de Kennisbank, API- en OSS-register</label>
-      <TextInput type="search" name="q" id="banner-search" className={styles.heroSearchInput} placeholder="Zoek in de Kennisbank, API- en OSS-register" />
-      {/* @ts-ignore RHC component bug `label` not in type */}
+    <>
+      <form action="/zoeken" method="get" className={styles.heroSearch}>
+        <TextInput
+          type="search"
+          name="q"
+          id="banner-search"
+          className={styles.heroSearchInput}
+          placeholder="Zoek in de Kennisbank, API- en OSS-register"
+          aria-label="Zoek in de Kennisbank, API- en OSS-register"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setHasInput(!!e.target.value)
+          }
+        />
+        {/* @ts-ignore RHC component bug `label` not in type */}
       <IconButton label="Zoeken" type="submit" className={styles.heroSearchButton}>
-        <IconZoekInline />
-      </IconButton>
-    </form>
+          <IconZoekInline />
+        </IconButton>
+      </form>
+      {hasInput && (
+        <label htmlFor="banner-search" aria-label="Zoek in de Kennisbank, API- en OSS-register">
+          Zoek in de Kennisbank, API- en OSS-register
+        </label>
+      )}
+    </>
   );
 }
 
@@ -43,7 +59,7 @@ function HomepageHeader(): React.JSX.Element {
         // This is a nessessary workaround for safari
         setTimeout(() => {
           searchInput.focus();
-        }, 0);    
+        }, 0);
       }
     };
     skipLink.addEventListener("click", handleSkipClick);
