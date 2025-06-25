@@ -7,7 +7,7 @@ import NavbarLogo from '@theme/Navbar/Logo';
 
 function CloseButton() {
   const mobileSidebar = useNavbarMobileSidebar();
-
+  // Toegevoegd vanwege toegankelijkeheid
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
