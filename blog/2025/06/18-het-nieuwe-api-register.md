@@ -2,9 +2,11 @@
 authors: [dimitri-van-hees]
 tags: [developer.overheid.nl, changelog, release, api, rest, openapi, adr, oas, forum-standaardisatie]
 ---
+import AccessibleLink from '@site/src/components/AccessibleLink';
+
 # Het nieuwe API-register: REST-only en OpenAPI-first voor maximale Developer Experience
 
-Het [API-register](https://apis.developer.overheid.nl/apis) krijgt een flinke upgrade. We kiezen bewust voor een REST-only en OpenAPI-first aanpak, zodat we optimaal kunnen profiteren van moderne standaarden en tooling. Dit levert niet alleen voordelen op voor ontwikkelaars, maar zorgt ook voor een eenvoudiger, consistenter en toekomstbestendig register. In deze blog lees je welke keuzes we maken, waarom we daarvoor kiezen en welke nieuwe mogelijkheden het API-register straks biedt.
+Het <AccessibleLink href="https://apis.developer.overheid.nl/apis" ariaLabel="Bekijk de API-register">Haven</AccessibleLink> krijgt een flinke upgrade. We kiezen bewust voor een REST-only en OpenAPI-first aanpak, zodat we optimaal kunnen profiteren van moderne standaarden en tooling. Dit levert niet alleen voordelen op voor ontwikkelaars, maar zorgt ook voor een eenvoudiger, consistenter en toekomstbestendig register. In deze blog lees je welke keuzes we maken, waarom we daarvoor kiezen en welke nieuwe mogelijkheden het API-register straks biedt.
 
 <!-- truncate -->
 
