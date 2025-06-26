@@ -54,7 +54,6 @@
   margin-bottom: 0.25rem;
 }
 
-
 .highlight {
   display: inline-block;
   font-size: 0.875rem;
@@ -87,4 +86,8 @@
 .title .externalLinkIcon {
   width: 1rem;
   height: 1rem;
+}
+
+a {
+  --ifm-link-decoration: underline;
 }
