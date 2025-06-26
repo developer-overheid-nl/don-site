@@ -35,6 +35,9 @@
   p {
     margin-bottom: 0;
   }
+  a {
+    --ifm-link-decoration: underline;
+  }
 }
 
 .title {
@@ -86,8 +89,4 @@
 .title .externalLinkIcon {
   width: 1rem;
   height: 1rem;
-}
-
-a {
-  --ifm-link-decoration: underline;
 }
