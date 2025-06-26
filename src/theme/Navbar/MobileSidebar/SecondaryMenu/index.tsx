@@ -13,7 +13,7 @@ function SecondaryMenuBackButton(props: ComponentProps<'button'>) {
     //   </Translate>
     // </button>
     // toegevoegd vanwege toegankelijkheid
-    <button {...props} type="button" className="clean-btn navbar-sidebar__back" aria-label={"Knop om terug te gaan naar het hoofdmenu"}>
+    <button {...props} type="button" className="clean-btn navbar-sidebar__back" aria-label={"Ga naar het hoofdmenu"}>
       ← Hoofdmenu
     </button>
   );

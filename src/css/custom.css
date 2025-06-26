@@ -5,6 +5,7 @@
  */
 
 :root {
+  --ifm-menu-color-background-active: #cbd5e1;
   /* Basis (Primary) color */
   --don-donkerblauw-500: #01689b;
   --don-donkerblauw-400: #408EB4;
