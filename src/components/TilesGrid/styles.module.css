@@ -29,10 +29,13 @@
 }
 
 .tile {
+  display: flex;
+  flex-direction: column;
   word-break: break-word;
   hyphens: auto;
   position: relative;
   p {
+    order: 2;
     margin-bottom: 0;
   }
   a {
@@ -41,6 +44,7 @@
 }
 
 .title {
+  order: 1;
   margin-block-end: 0.25rem;
   color: var(--don-donkerblauw-500);
 }
@@ -51,10 +55,12 @@
 }
 
 .iconRow {
+  order: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.25rem;
+  margin-top: -0.5rem;
 }
 
 .highlight {
@@ -64,8 +70,6 @@
   color: var(--don-grijs-900);
   padding: 0.125rem 0.25rem;
   border-radius: 0.25rem;
-  position: static;
-  margin: 0;
 }
 
 :global(.highlight--tutorial) {
