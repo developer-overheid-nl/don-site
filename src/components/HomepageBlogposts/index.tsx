@@ -30,7 +30,7 @@ export default function HomepageBlogposts(): React.JSX.Element {
       .then((feed) => {
         const posts = feed.items.map(( {title, summary, date_modified, url} ) => ({
           title,
-          summary,
+          summary:  truncate(summary, 250),
           date: formatDate(date_modified),
           url
         }))
@@ -41,6 +41,11 @@ export default function HomepageBlogposts(): React.JSX.Element {
         console.error("Fetch Error: ", error.message);
       });
   }, []);
+
+  function truncate(str: string, maxLength: number): string {
+    if (str.length <= maxLength) return str;
+      return str.slice(0, maxLength).trimEnd() + '…';
+  }
 
   return (
     <BrowserOnly>

@@ -74,20 +74,28 @@ function CardLayout({
     <CardContainer href={href} className={className}>
       <Heading
         as="h3"
-        className={clsx('text--truncate', styles.cardTitle)}
+        className={clsx(styles.cardTitle)}
       >
         {icon} {title}
       </Heading>
       {description && (
         <p
-          className={clsx('text--truncate', styles.cardDescription)}
+          className={clsx(styles.cardDescription)}
         >
-          {description}
+          {truncate(description, 70)}
         </p>
       )}
     </CardContainer>
   );
 }
+
+function truncate(str: string, maxLength: number): string {
+  if (!str) return '';
+  return str.length <= maxLength
+    ? str
+    : str.slice(0, maxLength).replace(/\s+\S*$/, '').trimEnd() + '…';
+}
+
 
 function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
   const href = findFirstSidebarItemLink(item);
