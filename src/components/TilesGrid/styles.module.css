@@ -47,17 +47,23 @@
   height: 3rem;
 }
 
+.iconRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+
 .highlight {
   display: inline-block;
-  position: absolute;
-  top: 0.25rem;
-  /* right: 0.25rem; */
-  margin-inline-start: 0.25rem;
   font-size: 0.875rem;
   background-color: var(--don-lichtblauw-100);
   color: var(--don-grijs-900);
   padding: 0.125rem 0.25rem;
   border-radius: 0.25rem;
+  position: static;
+  margin: 0;
 }
 
 :global(.highlight--tutorial) {
