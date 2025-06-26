@@ -3,12 +3,10 @@ authors: [tom-ootes]
 tags: [haven, kubernetes, common-ground, digitale-autonomie]
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
-import AccessibleLink from '@site/src/components/AccessibleLink';
-
 
 # Het team achter Haven+: "Onze exit-strategie weg van Big Tech"
 
-Werk jij in de publieke sector en ben je benieuwd hoe je concreet kunt toewerken naar digitale soevereiniteit? In dit interview met **Pauline van Rotterdam** en **Sander van Thillo** van team <AccessibleLink href="/kennisbank/infra/standaarden/haven" ariaLabel="Lees meer over Haven">Haven</AccessibleLink>, kom je er achter hoe je <AccessibleLink href="/kennisbank/infra/standaarden/haven/haven-plus" ariaLabel="Lees meer over Haven+">Haven+</AccessibleLink> gebruikt om minder afhankelijk te worden van Big Tech bedrijven als Microsoft (Azure) en Amazon (AWS).
+Werk jij in de publieke sector en ben je benieuwd hoe je concreet kunt toewerken naar digitale soevereiniteit? In dit interview met **Pauline van Rotterdam** en **Sander van Thillo** van team [Haven](/kennisbank/infra/standaarden/haven), kom je er achter hoe je [Haven+](/kennisbank/infra/standaarden/haven/haven-plus) gebruikt om minder afhankelijk te worden van Big Tech bedrijven als Microsoft (Azure) en Amazon (AWS).
 
 <!-- truncate -->
 
