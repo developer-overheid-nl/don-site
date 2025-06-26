@@ -82,7 +82,7 @@ function CardLayout({
         <p
           className={clsx(styles.cardDescription)}
         >
-          {truncate(description, 70)}
+          {truncate(description, 250)}
         </p>
       )}
     </CardContainer>
@@ -91,9 +91,21 @@ function CardLayout({
 
 function truncate(str: string, maxLength: number): string {
   if (!str) return '';
-  return str.length <= maxLength
-    ? str
-    : str.slice(0, maxLength).replace(/\s+\S*$/, '').trimEnd() + '…';
+
+  if (str.length <= maxLength) return str;
+
+  const sliced = str.slice(0, maxLength);
+
+  const lastEnd = Math.max(
+    sliced.lastIndexOf('.'),
+    sliced.lastIndexOf('!'),
+    sliced.lastIndexOf('?')
+  );
+
+  if (lastEnd !== -1) {
+    return sliced.slice(0, lastEnd + 1).trim();
+  }
+  return sliced.trimEnd() + '…';
 }
 
 
