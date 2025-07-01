@@ -1,0 +1,55 @@
+name: Check WCAG compliance
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch name."
+        required: true
+        default: "main"
+
+jobs:
+  check-wcag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Install Axe dependencies
+        run: npm install -g @axe-core/cli browser-driver-manager
+      
+      - name: Install Chrome driver for Axe
+        run: npx browser-driver-manager install chrome
+
+      - name: Build Docusaurus site
+        run: pnpm run build
+      
+      - name: Serve Files
+        uses: Eun/http-server-action@v1
+        with:
+          content-types: |
+            {
+              "css": "text/css",
+              "html": "text/html",
+              "ico": "image/x-icon",
+              "jpeg": "image/jpeg",
+              "jpg": "image/jpeg",
+              "js": "text/javascript",
+              "json": "application/json",
+              "png": "image/png",
+              "svg": "image/svg+xml",
+              "txt": "text/plain",
+              "xml": "text/xml"
+            }
+          port: 3000
+          directory: build/ 
+
+      - name: Run Axe to check for WCAG compliance
+        run: pnpm run lint:wcag
