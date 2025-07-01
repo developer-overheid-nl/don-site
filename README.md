@@ -21,3 +21,12 @@ Daarna kan je de website lokaal draaien.
 
 Daarna kan je de lokale versie van de site bekijken op `http://localhost:3000/`.   
 Maak je aanpassingen aan de design tokens, draai `pnpm run build` om de CSS te builden.
+
+## WCAG pnpm script
+
+Het `pnpm run lint:wcag` script vereist extra dependencies die niet in de `package.json` staan om het aantal dependencies beperkt te houden.
+
+### Installatie dependencies
+Voer eerst de stappen uit zoals beschreven in `.github/workflows/check-wcag.yml`. Draai daarna:
+``` bash
+pnpm run lint:wcag
