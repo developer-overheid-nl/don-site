@@ -10,11 +10,6 @@ tags:
     - "haven"
 ---
 
-<!---
-Copyright © VNG Realisatie 2019-2023
-Licensed under EUPL v1.2
--->
-
 In deze sectie laten we zien hoe je met de Haven Compliancy Checker een bestaand cluster kan controleren op Haven Compliancy.
 
 ## Voorbereiding
@@ -60,3 +55,8 @@ Ontwikkelaars zullen voorts het cluster in gebruik gaan nemen, voor hen hebben w
 ## Links
 - [Readme Haven CLI](https://gitlab.com/commonground/haven/haven/-/tree/main/haven/cli?ref_type=heads)
 
+<!-- This license was moved to the bottom of the page since it breaks previews in the search mode -->
+<!---
+Copyright © VNG Realisatie 2019-2023
+Licensed under EUPL v1.2 
+-->
