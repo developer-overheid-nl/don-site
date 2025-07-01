@@ -49,7 +49,9 @@ jobs:
               "xml": "text/xml"
             }
           port: 3000
-          directory: build/ 
+          directory: build/
+          index-files: |
+            ["index.html"]
 
       - name: Run Axe to check for WCAG compliance
         run: pnpm run lint:wcag
