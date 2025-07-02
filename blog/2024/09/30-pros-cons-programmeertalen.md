@@ -1,5 +1,4 @@
 ---
-slug: de-pros-en-cons-van-back-end-programmeertalen-bij-de-nederlandse-overheid
 authors: [tom-ootes]
 tags: []
 ---

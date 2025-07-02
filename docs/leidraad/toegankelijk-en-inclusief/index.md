@@ -4,7 +4,7 @@ sidebar_position: 2
 tags: ["accessibility"]
 ---
 
-Toegankelijkheid zorgt ervoor dat iedereen, inclusief mensen met een beperking, overheidsdiensten digitaal kan gebruiken. Dit is niet alleen een wettelijke verplichting (zoals de Europese **Webrichtlijnen** en de **Wet digitale overheid**), maar ook essentieel voor inclusieve dienstverlening.
+Toegankelijkheid zorgt ervoor dat iedereen, inclusief mensen met een beperking, overheidsdiensten digitaal kan gebruiken. Dit is niet alleen een wettelijke verplichting (zoals het [**Besluit Digitale Toegankelijkheid Overheid**](https://wetten.overheid.nl/BWBR0040936/2018-07-01)), maar ook essentieel voor inclusieve dienstverlening.
 
 ## Belangrijke redenen
 
@@ -14,7 +14,8 @@ Toegankelijkheid zorgt ervoor dat iedereen, inclusief mensen met een beperking, 
 
 ## Communities
 
-- [NL Design System](/communities/nl-design-system)
+- [DigiToegankelijk Pleio](/communities/digitoegankelijk#community) (om informatie uit te wisselen over de wettelijke verplichtingen en organisatorische aanpak)
+- [NL Design System](/communities/nl-design-system) (om samen te werken aan de praktische invulling, zoals redactie, ontwerp en code)
 
 ## Standaarden
 

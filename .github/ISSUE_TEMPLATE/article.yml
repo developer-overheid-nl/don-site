@@ -8,21 +8,6 @@ body:
       value: |
         Hartelijk dank voor je interesse om bij te dragen aan ons gezamenlijke Developer Portal voor de hele Nederlandse overheid.
         Lees ook onze [Bijdragerichtlijnen](https://developer.overheid.nl/contributing)pagina.
-  - type: input
-    id: name
-    attributes: 
-      label: Je naam
-      description: Je naam en eventueel je organisatie.
-    validations:
-      required: false
-  - type: input
-    id: contact
-    attributes: 
-      label: Contactdetails
-      description: Hoe kunnen we contact met je opnemen als er nog vragen zijn?
-      placeholder: bijv. email@example.com of Slack-profiel
-    validations:
-      required: false
   - type: textarea
     id: description
     attributes: 

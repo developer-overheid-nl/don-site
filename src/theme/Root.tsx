@@ -1,6 +1,4 @@
 import type { PropsWithChildren } from 'react';
-//import '@rijkshuisstijl-community/design-tokens/dist/index.css'
-import '../../proprietary/design-tokens/dist/theme.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useLocation } from '@docusaurus/router';
 import SiteLogo from './SiteLogo';
@@ -20,7 +18,7 @@ function Root({ children }: PropsWithChildren<object>) {
   pathname = pathname.replace('/', '');
 
   return (
-    <div className="don-theme" data-page={pathname === '' ? 'home' : pathname}>
+    <div className="rhc-theme" data-page={pathname === '' ? 'home' : pathname}>
       <header className='ro-header container'>
         <HomepageLink pathname={pathname} siteName={siteConfig.customFields.siteName} tagline={siteConfig.tagline}>
           <div className='ro-header__word-mark'>

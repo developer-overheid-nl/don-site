@@ -16,7 +16,7 @@ export default function SearchBar(): React.ReactNode {
 
   return (
     searchPagePath ? 
-      <a href={`/${searchPagePath}`} className={ clsx(["navbar__link", "navbar__icon-link", styles.searchLink]) }><IconZoek width={24} height={24} /></a>
+      <a aria-label="Zoek op deze pagina" href={`/${searchPagePath}`} className={ clsx(["navbar__link", "navbar__icon-link", styles.searchLink]) }><IconZoek width={24} height={24} /></a>
     : 
       <SearchBarOriginal />
   );

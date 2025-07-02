@@ -1,8 +1,6 @@
 ---
-slug: emrex-europese-standaard-voor-gegevensuitwisseling-in-het-onderwijs
 authors: [joost-farla]
 tags: []
-date: 2024-12-10
 ---
 # EMREX: Europese standaard voor gegevensuitwisseling in het onderwijs
 

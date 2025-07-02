@@ -32,7 +32,7 @@ Nog een voordeel aan open source werken is dat het uitnodigt tot samenwerking en
 
 Ken jij andere open source projecten waar anderen van moeten weten? Of zie jij nog meer voordelen of nadelen van open source werken binnen organisaties? Reageer dan hieronder!
 
-Zijn er specifieke vragen of ideeën die je hebt over open source software en wil je hierover met anderen in gesprek? Maak dan een topic aan in ons [Ideeën & Feature Requests](https://community.developer.overheid.nl/c/ideeen-feature-requests/22) kanaal.
+Zijn er specifieke vragen of ideeën die je hebt over open source software en wil je hierover met anderen in gesprek? Maak dan een topic aan in ons Ideeën & Feature Requests kanaal.
 
 ## Wordt vervolgd
 

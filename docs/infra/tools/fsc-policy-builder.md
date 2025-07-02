@@ -1,6 +1,5 @@
 ---
 title: "FSC Policy Builder"
-organization: "https://community.developer.overheid.nl/g/digilab-g"
 ---
 
 ![Sreenshot FSC Policy Builder](./img/digilab_1.png)

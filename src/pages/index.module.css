@@ -25,6 +25,7 @@
 }
 
 .heroSearchInput.heroSearchInput {
+  --utrecht-textbox-border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-width: 2px;
@@ -61,6 +62,18 @@
   border-inline-start-color: transparent;
 }
 
+@media (max-width: 768px) {
+  .heroSearchInput::placeholder {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSearchInput::placeholder {
+    font-size: 0.75rem;
+  }
+}
+
 .intro {
   font-size: clamp(1.2rem, 3.333vw, 2rem);
   max-width: 60rem;
@@ -78,7 +91,7 @@
 
 .twoColumns {
   display: block;
-  padding-block-end: 2rem;
+  padding-block-end: 4rem;
 }
 
 @media (min-width: 48rem) { /* 768px */

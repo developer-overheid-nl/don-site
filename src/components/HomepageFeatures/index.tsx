@@ -26,18 +26,6 @@ const FeatureList: FeatureItem[] = [
     label: 'Ga naar de kennisbank',
   },
   {
-    title: 'Onze community',
-    image: '/img/tekstballonnen-met-punten.svg',
-    alt: '',
-    description: (
-      <>
-        Hulp nodig? Ga in gesprek met ons team of andere developers die actief zijn in het publieke domein op ons Discourse forum.
-      </>
-    ),
-    link: 'https://community.developer.overheid.nl/',
-    label: 'Ga naar het forum',
-  },
-  {
     title: 'Vind een API',
     image: '/img/ict.svg',
     alt: '',

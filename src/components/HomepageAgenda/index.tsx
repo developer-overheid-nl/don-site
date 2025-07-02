@@ -3,6 +3,7 @@ import { LinkListCard, LinkListLink, type HeadingProps } from "@rijkshuisstijl-c
 import styles from './styles.module.css';
 import IconKalenderInline from '@site/src/theme/icons/IconKalenderInline';
 import IconLocatiemarkerInline from '@site/src/theme/icons/IconLocatiemarkerInline';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const NUM_EVENTS = 6;
 const HEADING_LEVEL = 2;
@@ -82,25 +83,27 @@ export default function HomepageAgenda(props: HomepageAgendaProps): React.JSX.El
   }, [numEvents]);
 
   return (
-    <LinkListCard
-      heading="Aankomende evenementen"
-      headingLevel={headingLevel}
-    >
-      { agenda && ((agenda.length > 0) ?
-        agenda.map(({ title, summary, date, place, url }, index) => (
-          <LinkListLink href={url} key={index}>
-            <h3 className={styles.agendaTitle}>{title}</h3>
-            <p className={styles.agendaMeta}>
-              { date && (<span className={styles.agendaDate}><IconKalenderInline /> {date}</span>) }
-              { place && (<span className={styles.agendaPlace}><IconLocatiemarkerInline /> {place}</span>) }
-            </p>
-            <p className={styles.agendaIntro}>{summary}</p>
-          </LinkListLink>
-      )) : (
-        <li>Er zijn geen aankomende evenementen in de agenda.</li>
-      )) || (
-        <li><img src='/img/bouncing-squares.svg' width={42} alt='Agenda wordt geladen' /></li>
-      ) }
-    </LinkListCard>
+    <BrowserOnly>
+      {() => <LinkListCard
+        heading="Aankomende evenementen"
+        headingLevel={headingLevel}
+      >
+        { agenda && ((agenda.length > 0) ?
+          agenda.map(({ title, summary, date, place, url }, index) => (
+            <LinkListLink href={url} key={index} target="_blank">
+              <h3 className={styles.agendaTitle}>{title}</h3>
+              <p className={styles.agendaMeta}>
+                { date && (<span className={styles.agendaDate}><IconKalenderInline /> {date}</span>) }
+                { place && (<span className={styles.agendaPlace}><IconLocatiemarkerInline /> {place}</span>) }
+              </p>
+              <p className={styles.agendaIntro}>{summary}</p>
+            </LinkListLink>
+        )) : (
+          <li>Er zijn geen aankomende evenementen in de agenda.</li>
+        )) || (
+          <li><img src='/img/bouncing-squares.svg' width={42} alt='Agenda wordt geladen' /></li>
+        ) }
+      </LinkListCard>}
+    </BrowserOnly>
   );
 }

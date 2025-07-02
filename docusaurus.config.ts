@@ -11,6 +11,7 @@ const config: Config = {
   title: "developer.overheid.nl",
   customFields: {
     siteName: "developer.overheid.nl",
+    discourseCommentsInBlog: false,
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
   organizationName: "developer.overheid.nl",
@@ -47,6 +48,14 @@ const config: Config = {
         href: "/site.webmanifest",
       },
     },
+    {
+      tagName: "script",
+      attributes: {
+        "data-goatcounter": "https://donv1.goatcounter.com/count",
+        async: "true",
+        src: "https://gc.zgo.at/count.js"
+      },
+    },
   ],
 
   // Set the production url of your site here
@@ -80,6 +89,10 @@ const config: Config = {
         path: "communities",
         routeBasePath: "communities",
         sidebarPath: "./sidebarsCommunities.ts",
+        sidebarItemsGenerator: async ({docs}) => {
+          // this way we can filter out the index doc
+          return docs.map(doc => ({type: 'doc', id: doc.id})).filter(item => item.id !== 'index');
+        },
         tags: "../tags.yml",
         onInlineTags: "throw",
         // ... other options
@@ -125,7 +138,7 @@ const config: Config = {
         pages: {},
         sitemap: {},
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: ["./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css", "./src/css/custom.css"],
         },
       } satisfies Preset.Options,
     ],
@@ -165,7 +178,7 @@ const config: Config = {
       externalUrlRegex:
         "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
       contextualSearch: false,
-      searchPagePath: false, // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
+      searchPagePath: 'zoeken', // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
     },
     // Replace with your project's social card
     image: "img/don-social-card.png",
@@ -185,23 +198,37 @@ const config: Config = {
       title: "Home",
       items: [
         {
-          to: "/kennisbank",
           label: "Kennisbank",
           position: "left",
-          activeBaseRegex: `/kennisbank`,
+          to: "/kennisbank",
+          items: [
+            { label: "API's", to: "/kennisbank/apis" },
+            { label: "Front-end", to: "/kennisbank/front-end" },
+            { label: "Data", to: "/kennisbank/data" },
+            { label: "Open Source", to: "/kennisbank/open-source" },
+            { label: "Infrastructuur", to: "/kennisbank/infra" },
+            { label: "Security", to: "/kennisbank/security" },
+            { label: "Leidraad", to: "/kennisbank/leidraad" },
+          ],
         },
         {
-          to: "/communities",
           label: "Communities",
           position: "left",
-          activeBaseRegex: `/communities`,
+          to: "/communities",
+          items: [
+            { label: "Code for NL", to: "/communities/code-for-nl" },
+            { label: "CommonGround", to: "/communities/common-ground" },
+            { label: "Digilab", to: "/communities/digilab" },
+            { label: "DigiToegankelijk", to: "/communities/digitoegankelijk" },
+            { label: "Federatief Datastelsel", to: "/communities/federatief-datastelsel" },
+            { label: "Gebruiker Centraal", to: "/communities/gebruiker-centraal" },
+            { label: "NL Design System", to: "/communities/nl-design-system" },
+            { label: "Opensourcewerken", to: "/communities/open-source-werken" },
+            { label: "Kennisplatform API's", to: "/communities/kennisplatform-apis" },
+            { label: "Intentieverklaring API Strategie", to: "/communities/kennisplatform-apis/intentieverklaring" },
+          ],
         },
         { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://community.developer.overheid.nl",
-          label: "Forum",
-          position: "right",
-        },
         {
           href: "https://apis.developer.overheid.nl",
           label: "API's",
@@ -244,7 +271,7 @@ const config: Config = {
               <div class="sponsors">
                 <!-- temporary forced-colors fix untill good BZK svg-logo -->
                 <img class="sponsors__logo sponsors__logo__bzk" src="/img/logo-bzk.png" alt="Logo van Ministerie van Binnenlandse Zaken en Koninkrijksrelaties" />
-                <svg class="sponsors__logo sponsors__logo__vng" viewBox="150 15 96 50" xmlns="http://www.w3.org/2000/svg">
+                <svg class="sponsors__logo sponsors__logo__vng" role="img" aria-label="Logo van Vereniging van Nederlandse Gemeenten" viewBox="150 15 96 50" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fill-rule="evenodd">
                     <g class="brdr" transform="translate(187.931 15)">
                       <path d="M57.396 24.913c0-13.573-11.004-24.622-24.56-24.7-.024 0-.048-.003-.073-.003H24.75a2.504 2.504 0 1 0 0 5.01h7.945c10.858 0 19.694 8.834 19.694 19.693 0 10.86-8.836 19.694-19.694 19.694H5.289v-4.578H.281v9.587h32.482v-.001c13.59-.04 24.633-11.105 24.633-24.702" fill="currentColor" />
@@ -269,10 +296,6 @@ const config: Config = {
         {
           title: "Community",
           items: [
-            {
-              label: "Discourse",
-              href: "https://community.developer.overheid.nl",
-            },
             {
               label: "Slack",
               href: "https://codefornl.slack.com/archives/CFV4B3XE2",

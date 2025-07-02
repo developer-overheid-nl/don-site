@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import HomepageBlogposts from "../components/HomepageBlogposts";
 import HomepageAgenda from "../components/HomepageAgenda";
 
@@ -10,33 +9,73 @@ import { IconButton, TextInput } from "@rijkshuisstijl-community/components-reac
 import IconZoekInline from "../theme/icons/IconZoekInline";
 import { ThemeConfig } from "docusaurus-theme-search-typesense";
 
+import HomepageTiles from "../components/TilesGrid/homepage-tiles";
+import TilesGrid from "../components/TilesGrid";
+import { useEffect, useState } from "react";
+
 function Search() {
+  const [hasInput, setHasInput] = useState(false);
   return (
-    <form action="/zoeken" method="get" className={styles.heroSearch}>
-      <label className="visual-hidden" htmlFor="banner-search">Zoek in de Kennisbank, API- en OSS-register</label>
-      <TextInput type="search" name="q" id="banner-search" className={styles.heroSearchInput} placeholder="Zoek in de Kennisbank, API- en OSS-register" />
-      {/* @ts-ignore RHC component bug `label` not in type */}
+    <>
+      <form action="/zoeken" method="get" className={styles.heroSearch}>
+        <TextInput
+          type="search"
+          name="q"
+          id="banner-search"
+          className={styles.heroSearchInput}
+          placeholder="Zoek in de Kennisbank, API- en OSS-register"
+          aria-label="Zoek in de Kennisbank, API- en OSS-register"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setHasInput(!!e.target.value)
+          }
+        />
+        {/* @ts-ignore RHC component bug `label` not in type */}
       <IconButton label="Zoeken" type="submit" className={styles.heroSearchButton}>
-        <IconZoekInline />
-      </IconButton>
-    </form>
+          <IconZoekInline />
+        </IconButton>
+      </form>
+      {hasInput && (
+        <label htmlFor="banner-search" aria-label="Zoek in de Kennisbank, API- en OSS-register">
+          Zoek in de Kennisbank, API- en OSS-register
+        </label>
+      )}
+    </>
   );
 }
 
-function HomepageHeader() {
+function HomepageHeader(): React.JSX.Element {
+  useEffect(() => {
+    const skipLink = document.querySelector('a[href="#__docusaurus_skipToContent_fallback"]');
+    if (!skipLink) {
+      return;
+    }
+    const handleSkipClick = (event: MouseEvent) => {
+      event.preventDefault();
+      const searchInput = document.getElementById("banner-search") as HTMLInputElement;
+      if (searchInput) {
+        searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Focus the search input after scrolling
+        // Using setTimeout to ensure the scroll has completed before focusing
+        // This is a nessessary workaround for safari
+        setTimeout(() => {
+          searchInput.focus();
+        }, 0);
+      }
+    };
+    skipLink.addEventListener("click", handleSkipClick);
+    return () => {
+      skipLink.removeEventListener("click", handleSkipClick);
+    };
+  }, []);
+
   const { siteConfig } = useDocusaurusContext();
   const { searchPagePath } = siteConfig.themeConfig.typesense as ThemeConfig['typesense'] || { searchPagePath: false };
 
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <script
-        data-goatcounter="https://donv1.goatcounter.com/count"
-        async
-        src="https://gc.zgo.at/count.js"
-      ></script>
       <div className="container">
         <p className={styles.intro}>
-          Eén plek met informatie, bronnen, tools en codevoorbeelden van de&nbsp;<strong className={styles.intro__highlight}>overheid voor developers</strong> over 
+          Eén plek met informatie, bronnen, tools en codevoorbeelden van de&nbsp;<strong className={styles.intro__highlight}>overheid voor developers</strong> over
           privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.
         </p>
         {
@@ -47,6 +86,7 @@ function HomepageHeader() {
   );
 }
 
+
 export default function Home(): React.JSX.Element {
   return (
     <Layout
@@ -54,8 +94,11 @@ export default function Home(): React.JSX.Element {
       description="Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.">
       <main>
         <HomepageHeader />
-        <HomepageFeatures />
-        <div className="container">
+        <section className="container">
+          <TilesGrid tiles={HomepageTiles} paddingY={true} />
+        </section>
+        {/* <HomepageFeatures /> */}
+        <div className="container container--full">
           <div className={styles.twoColumns}>
             <HomepageBlogposts />
             <HomepageAgenda />

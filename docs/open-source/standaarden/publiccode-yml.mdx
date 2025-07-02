@@ -5,19 +5,32 @@ tags:
 ---
 # Publiccode.yml
 
+import { Card } from "@rijkshuisstijl-community/components-react";
+
 Om inzichtelijk te maken wat de code van een open source project precies doet is het nodig dat er ergens metadata over het project beschikbaar is. Hiervoor is de `publiccode.yml` standaard in het leven geroepen. Deze standaard heeft twee belangrijke doelen:
 
 - Open source projecten vindbaar maken
 - Informatie over een open source project centraliseren
 
-## Vindbaarheid
+## Voordelen
+### Git-platform agnostische oplossing
+
+Veel metadata van open source projecten zit opgeslagen in bijvoorbeeld Gitlab of Github. Op het moment dat je de code wilt migreren is het een hoop werk alle gegevens opnieuw in te voeren. Publiccode.yml lost dit voor je op, het bestandje is namelijk onderdeel van je codebase. 
+
+### Machine-leesbare metadata
+
+Door het publiccode.yml bestand in te vullen voorzie je je project van machine-leesbare metadata. Deze meta-data kan ingelezen worden door Open Source Software Catalogi om jou code zo nog beter vindbaar te maken.
+
+### Vindbaarheid
 
 De publiccode.yml-standaard zorgt op een eenvoudige manier voor vindbaarheid. Op het momet dat een codebase een `publiccode.yml` bestand bevat in de root van het project, kan het project worden gemarkeerd als een open source project. Bots kunnen op die manier makkelijk platforms als Gitlab en Github afstruinen op zoek naar projecten met een `publiccode.yml` bestand.
 
+## Waar voeg ik de `publiccode.yml` toe?
+Je voegt de `publiccode.yml` toe in de root (`./`) van je project.
+
 ## Voorbeelden
 
-<details>
-  <summary>Voorbeeld van developer.overheid.nl</summary>
+### Developer.overheid.nl
 
 ```yaml showLineNumbers title="./publiccode.yml"
 # This repository adheres to the publiccode.yml standard by including this
@@ -151,8 +164,6 @@ maintenance:
       phone: "+31623447230"
 ```
 
-</details>
-
 - [Voorbeelden uit de documentatie van de standaard](https://yml.publiccode.tools/example.html)
 - [Publiccode.yml van Open Zaak](https://github.com/open-zaak/open-zaak/blob/main/publiccode.yaml)
 
@@ -162,10 +173,24 @@ De standaard achter publiccode.yml wordt voortdurend doorontwikkeld. Het team ac
 
 ## Externe links
 
-- [Publiccode.yml editor](https://interoperable-europe.ec.europa.eu/publiccode-editor/)
+- [Publiccode.yml editor](https://publiccode-editor.developers.italia.it/?lang=nl)
 - [De documentatie van de standaard](https://yml.publiccode.tools/index.html)
 - [De documentatie van het `publiccode.yml` schema](https://yml.publiccode.tools/schema.core.html)
 
 ## Gerelateerde artikelen
 
 - [Voeg een publiccode.yml toe aan je project met VSCode](../tutorials/voeg-een-publiccode-yml-bestand-toe)
+
+<br />
+<br />
+
+
+<Card
+  appearance="default"
+  description="Voeg een publiccode.yml toe aan je project met de publiccode.yml editor."
+  heading="Publiccode.yml editor"
+  href="/kennisbank/open-source/tools/publiccode-yml-editor"
+  linkLabel="Naar artikel over de publiccode.yml editor"
+/>
+
+
