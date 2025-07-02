@@ -8,7 +8,7 @@ tags:
 title: "eHerkenning"
 ---
 
-**eHerkenning** is het zakelijke inlogmiddel waarmee organisaties veilig en betrouwbaar kunnen inloggen bij digitale publie en private dienstverleners. Voor het gemak wordt wel eens gezegd dat eHerkenning is de zakelijke tegenhanger van DigiD is. Maar dat klopt niet helemaal omdat je het ook buiten de overheid kan gebruiken en omdat er een machtigingenvoorziening deel uit maakt van de oplossing.  Je kan dan namens een organisatie inloggen en handelen bij andere organisaties. 
+**eHerkenning** is het zakelijke inlogmiddel waarmee organisaties veilig en betrouwbaar kunnen inloggen bij digitale publieke en private dienstverleners. Voor het gemak wordt wel eens gezegd dat eHerkenning is de zakelijke tegenhanger van DigiD is. Maar dat klopt niet helemaal omdat je het ook buiten de overheid kan gebruiken en omdat er een machtigingenvoorziening deel uit maakt van de oplossing.  Je kan dan namens een organisatie inloggen en handelen bij andere organisaties. 
 
 Met eHerkenning toon je aan dat je als natuurlijk persoon namens een bedrijf mag handelen. Dit is belangrijk voor zaken als belastingaangifte, subsidies aanvragen of het doorgeven van personeelsgegevens.
 
