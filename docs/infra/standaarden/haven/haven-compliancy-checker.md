@@ -55,7 +55,7 @@ Ontwikkelaars zullen voorts het cluster in gebruik gaan nemen, voor hen hebben w
 ## Links
 - [Readme Haven CLI](https://gitlab.com/commonground/haven/haven/-/tree/main/haven/cli?ref_type=heads)
 
-<!-- This license was moved to the bottom of the page since it breaks previews in the search mode -->
+<!-- This license was moved to the bottom of the page since it breaks previews in the search mode when its located at the top -->
 <!---
 Copyright © VNG Realisatie 2019-2023
 Licensed under EUPL v1.2 
