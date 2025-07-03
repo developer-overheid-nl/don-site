@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
+  '@docusaurus/theme-classic':
+    hash: vsh43g25b2247p276mlaf3qufq
+    path: patches/@docusaurus__theme-classic.patch
   '@rijkshuisstijl-community/components-react@1.1.0':
     hash: hfzy6ewnpwd6ilxoudutqhnefi
     path: patches/@rijkshuisstijl-community__components-react@1.1.0.patch
@@ -10090,7 +10093,7 @@ snapshots:
       '@docusaurus/plugin-google-tag-manager': 3.8.0(@mdx-js/react@3.1.0(@types/react@19.1.6)(react@18.3.1))(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@docusaurus/plugin-sitemap': 3.8.0(@mdx-js/react@3.1.0(@types/react@19.1.6)(react@18.3.1))(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@docusaurus/plugin-svgr': 3.8.0(@mdx-js/react@3.1.0(@types/react@19.1.6)(react@18.3.1))(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
-      '@docusaurus/theme-classic': 3.8.0(@types/react@19.1.6)(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
+      '@docusaurus/theme-classic': 3.8.0(patch_hash=vsh43g25b2247p276mlaf3qufq)(@types/react@19.1.6)(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@docusaurus/theme-common': 3.8.0(@docusaurus/plugin-content-docs@3.8.0(@mdx-js/react@3.1.0(@types/react@19.1.6)(react@18.3.1))(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@docusaurus/theme-search-algolia': 3.8.0(@algolia/client-search@5.20.1)(@mdx-js/react@3.1.0(@types/react@19.1.6)(react@18.3.1))(@types/react@19.1.6)(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.17.3)(typescript@5.8.3)
       '@docusaurus/types': 3.8.0(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -10123,7 +10126,7 @@ snapshots:
       '@types/react': 19.1.6
       react: 18.3.1
 
-  '@docusaurus/theme-classic@3.8.0(@types/react@19.1.6)(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)':
+  '@docusaurus/theme-classic@3.8.0(patch_hash=vsh43g25b2247p276mlaf3qufq)(@types/react@19.1.6)(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)':
     dependencies:
       '@docusaurus/core': 3.8.0(@mdx-js/react@3.1.0(@types/react@19.1.6)(react@18.3.1))(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       '@docusaurus/logger': 3.8.0
