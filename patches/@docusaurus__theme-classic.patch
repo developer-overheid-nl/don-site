@@ -1,0 +1,13 @@
+diff --git a/lib/index.js b/lib/index.js
+index 5aecec76fc6f8f1e9b433c31d6b690da706b6abc..82c9294f808e7277a6717cec86ad1b3f6766ab1c 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -90,7 +90,7 @@ function themeClassic(context, options) {
+                         tagName: 'svg',
+                         attributes: {
+                             xmlns: 'http://www.w3.org/2000/svg',
+-                            style: 'display: none;',
++                            class: 'hidden',
+                         },
+                         innerHTML: inlineSvgSprites_1.SvgSpriteDefs,
+                     },
