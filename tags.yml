@@ -124,6 +124,9 @@ helm:
 html:
   description: HTML.
   label: HTML
+htmx:
+  description: HTMX.
+  label: HTMX
 infra:
   label: Infra
 interoperability:
@@ -200,6 +203,9 @@ owl:
 pkio:
   description: PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid.
   label: PKIOverheid
+pnpm:
+  label: pnpm
+  description: PNPM (Performant NPM) is een alternatieve package manager voor Node.js, net als NPM en Yarn, maar met een slimmere aanpak.
 portal:
   label: Portal
 privacy:

@@ -1,6 +1,6 @@
 ---
 authors: [tom-ootes]
-tags: [npm, javascript, typescript, nodejs]
+tags: [npm, javascript, typescript, nodejs, pnpm, dependabot, htmx]
 draft: true
 ---
 # Voorkom JavaScript-moeheid: minimaliseer het aantal NPM packages
