@@ -16,17 +16,15 @@ Ruim zeven jaar geleden werd het traject afgerond om de OpenAPI Specification (O
 <!-- truncate -->
 
 :::success[**TL;DR**]
-
-OpenAPI 3.1 komt eindelijk in beeld als nieuwe standaard voor overheids-API’s. De belangrijkste voordelen op een rij:
+OpenAPI 3.1 komt eindelijk in beeld als nieuwe standaard voor overheids-API's. De belangrijkste voordelen op een rij:
 
 - Ondersteuning voor webhooks en mutual TLS
 - Volledige compatibiliteit met JSON Schema
 - Mogelijkheid tot meerdere examples per veld
-- Verbreding van scope: van **REST** naar **HTTP** API’s
-- Beter hergebruik van externe schema’s en tooling
+- Verbreding van scope: van **REST** naar **HTTP** API's
+- Beter hergebruik van externe schema's en tooling
 
 Migratie vanaf 3.0 is meestal eenvoudig en kan grotendeels geautomatiseerd worden. Daarmee is OpenAPI 3.1 een belangrijke stap vooruit voor iedereen die werkt aan API's binnen de overheid.
-
 :::
 
 ## OpenAPI Specification
@@ -84,10 +82,10 @@ OAS 3.0 ondersteunt de beschrijving van de volgende security schemes:
 
 - HTTP Authentication
 - API Keys
-- OAuth 2.0
-- OpenID Connect
+- [OAuth 2.0](https://developer.overheid.nl/kennisbank/security/standaarden/oauth)
+- [OpenID Connect](https://developer.overheid.nl/kennisbank/security/standaarden/oidc)
 
-Wat ontbrak was Mutual TLS (mTLS): authenticatie op basis van certificaten. OAS 3.1 ondersteunt dit wél, waardoor ook HTTP API's van de overheid die op deze manier beveiligd zijn, dit in OAS 3.1 kunnen uitdrukken:
+Wat ontbrak was Mutual TLS (mTLS): authenticatie op basis van certificaten, zoals bij [PKIoverheid](https://developer.overheid.nl/kennisbank/security/standaarden/pkioverheid). OAS 3.1 ondersteunt dit wél, waardoor ook HTTP API's van de overheid die op deze manier beveiligd zijn, dit in OAS 3.1 kunnen uitdrukken:
 
 ```yaml
 security:
