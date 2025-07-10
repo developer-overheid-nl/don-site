@@ -164,6 +164,9 @@ msa:
 mtls:
   label: mTLS
   description: Mutual TLS
+nds:
+  label: Nederlandse Digitaliseringsstrategie
+  description: De NDS is één van de pijlers van het kabinetsbeleid op digitalisering.
 nl-design-system:
   label: NL Design System
 nodejs:
