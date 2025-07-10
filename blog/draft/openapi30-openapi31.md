@@ -15,6 +15,20 @@ Ruim zeven jaar geleden werd het traject afgerond om de OpenAPI Specification (O
 
 <!-- truncate -->
 
+:::success[**TL;DR**]
+
+OpenAPI 3.1 komt eindelijk in beeld als nieuwe standaard voor overheids-API’s. De belangrijkste voordelen op een rij:
+
+- Ondersteuning voor webhooks en mutual TLS
+- Volledige compatibiliteit met JSON Schema
+- Mogelijkheid tot meerdere examples per veld
+- Verbreding van scope: van **REST** naar **HTTP** API’s
+- Beter hergebruik van externe schema’s en tooling
+
+Migratie vanaf 3.0 is meestal eenvoudig en kan grotendeels geautomatiseerd worden. Daarmee is OpenAPI 3.1 een belangrijke stap vooruit voor iedereen die werkt aan API's binnen de overheid.
+
+:::
+
 ## OpenAPI Specification
 
 [OAS](https://www.openapis.org/) is ontstaan uit een samenwerking tussen verschillende API Description Frameworks, zoals Swagger, RAML en API Blueprint, met als doel één standaard te creëren voor het machine-leesbaar beschrijven van REST API's. De eerste versie van OAS werd 3.0 genoemd, omdat het grotendeels voortbouwde op Swagger 2.x. In mei 2018 werd OpenAPI Specification 3.0 verplicht gesteld via de pas-toe-leg-uit lijst. In 2021 verscheen versie 3.1, die volgens het *semver*-principe een minor update zou moeten zijn, maar toch enkele breaking changes bevatte. Door beperkte ondersteuning in tooling besloot de expertgroep van het Forum Standaardisatie op 7 december 2022 de upgrade naar 3.1 tijdelijk te pauzeren. Inmiddels zijn we ruim twee jaar verder en is de situatie duidelijk veranderd. Deze week is dan ook besloten om het standaardisatieproces voor OpenAPI 3.1 opnieuw op te starten.
@@ -22,18 +36,6 @@ Ruim zeven jaar geleden werd het traject afgerond om de OpenAPI Specification (O
 :::note[Semver]
 [Semver](https://semver.org/) staat voor *Semantic Versioning*, een manier om versienummers van software op een gestructureerde manier op te bouwen. Het bestaat uit drie delen: `major.minor.patch`. Een verhoging van het eerste cijfer (`major`) betekent dat er mogelijk breaking changes zijn. Het tweede cijfer (`minor`) wordt verhoogd bij het toevoegen van nieuwe, compatibele functionaliteit. Het derde deel (`patch`) geeft kleine, backwards-compatibele bugfixes aan. Zo kun je aan het versienummer direct zien wat voor soort wijzigingen je kunt verwachten.
 :::
-
-## De wijzigingen in het kort
-
-Voordat we dieper ingaan op de details, volgt hier alvast een overzicht van de belangrijkste nieuwe features in OpenAPI 3.1:
-
-- **HTTP API's in plaats van REST API's**: verbreding van het toepassingsgebied van OAS
-- **Webhooks**: maakt het beschrijven van asynchrone requests mogelijk
-- **Meerdere voorbeelden**: responses kunnen nu meerdere voorbeelden bevatten via een `examples` array
-- **Mutual TLS support**: ondersteuning voor beveiliging met Mutual TLS
-- **Volledig JSON Schema compatible**: volledige compatibiliteit met de officiële [JSON Schema standaard](https://json-schema.org/)
-
-Hieronder lichten we deze wijzigingen verder toe.
 
 ## Van "REST" naar "HTTP"
 
@@ -48,7 +50,7 @@ De termen REST, RESTful en REST-ish worden vaak door elkaar gebruikt, maar wat b
 
 <br/>
 
-Met de komst van OpenAPI 3.1 is het bovendien mogelijk om webhooks (HTTP callbacks) te beschrijven, waardoor het toepassingsgebied van OAS verder wordt verbreed. Daarom wordt er vanaf OAS 3.1 over **HTTP API's** gesproken in plaats van REST API's. [GraphQL](https://graphql.org/) valt hier overigens buiten: hoewel het HTTP als transport gebruikt, volgt het niet het HTTP-model waarop OAS is gebaseerd. OpenAPI is bedoeld voor API's die zich gedragen volgens de principes van HTTP, niet alleen het protocol gebruiken.
+Met de komst van OpenAPI 3.1 is het bovendien mogelijk om webhooks (HTTP callbacks) te beschrijven, waardoor het toepassingsgebied van OAS verder wordt verbreed. Daarom wordt er vanaf versie 3.1 over **HTTP API's** gesproken in plaats van REST API's. [GraphQL](https://graphql.org/) valt hier overigens buiten: hoewel het HTTP als transport gebruikt, volgt het niet het HTTP-model waarop OAS is gebaseerd. OpenAPI is bedoeld voor API's die zich gedragen volgens de principes van HTTP, niet alleen het protocol gebruiken.
 
 ## Webhooks
 
@@ -143,12 +145,23 @@ Op deze manier wordt herbruikbaarheid een stuk eenvoudiger en hoeft niet iederee
 
 Dit kan betekenen dat er, naast de API Design Rules, ook zoiets als "JSON Schema Design Rules" moeten komen. Wij zijn in ieder geval voornemens om alvast een voorzet te doen door goed naar het JSON Schema register van onze Engelse collega's van de "Driver & Vehicle Licensing Agency" te kijken, die eerder deze interessante blogpost schreven over hoe zij het beste uit JSON Schema in combinatie met OpenAPI 3.1 haalden: [https://careers.dft.gov.uk/dvla-software-developers-behind-the-screens](https://careers.dft.gov.uk/dvla-software-developers-behind-the-screens).
 
-## Impact analyse
+## Migratie van 3.0 naar 3.1
 
-Uit een impact analyse op alle API's in het huidige API-register blijkt dat 15% gebruikmaakt van het keyword `nullable`. Dit moet worden aangepast voor volledige compatibiliteit met OpenAPI 3.1, maar veroorzaakt geen breaking change in de meeste tooling. Daarnaast gebruikt 3% van de API's het keyword `exclusiveMaximum`, wat bij een upgrade wel tot breaking changes kan leiden en dus aangepast moet worden. Gelukkig is het mogelijk om deze aanpassingen automatisch door te voeren met bijvoorbeeld [openapi-format](https://www.npmjs.com/package/openapi-format):
+Om te migreren van 3.0 naar 3.1 dienen er een aantal stappen gezet te worden. Een gedetailleerde changelog en migratie-instructies vind je op het officiële blog van de OpenAPI Initiative: [https://www.openapis.org/blog/2021/02/16/migrating-from-openapi-3-0-to-3-1-0](https://www.openapis.org/blog/2021/02/16/migrating-from-openapi-3-0-to-3-1-0).
+
+Uit een impact analyse op het huidige API-register blijkt dat er twee changes van toepassing zijn op de aanwezige API's:
+
+- 15% van de API's maakt gebruik van het keyword `nullable`. Dit moet worden aangepast voor volledige compatibiliteit met OpenAPI 3.1, maar veroorzaakt geen breaking change in de meeste tooling.
+- 3% van de API's gebruikt het keyword `exclusiveMaximum`, wat bij een upgrade wel tot breaking changes kan leiden en dus aangepast moet worden.
+
+Gelukkig is het mogelijk om deze aanpassingen automatisch door te voeren met migratietools zoals bijvoorbeeld [openapi-format](https://www.npmjs.com/package/openapi-format):
 
 ```sh
 openapi-format openapi-3.0.json -o openapi-3.1.json --convertTo "3.1"
 ```
 
-In het [nieuwe API-register](https://developer.overheid.nl/blog/2025/06/18/het-nieuwe-api-register) zullen wij deze conversie standaard toepassen, zodat alle API's probleemloos kunnen overstappen naar OpenAPI 3.1 en iedereen direct profiteert van de vele voordelen van deze nieuwe versie. Wij zullen er in ieder geval alles aan doen om de expertgroep van Forum Standaardisatie ervan te overtuigen dat het tijd is om de volgende stap te zetten.
+In het [nieuwe API-register](https://developer.overheid.nl/blog/2025/06/18/het-nieuwe-api-register) zullen wij deze conversie standaard gaan toepassen, zodat alle API's probleemloos kunnen overstappen naar OpenAPI 3.1.
+
+## Conclusie
+
+De stap naar OpenAPI 3.1 markeert een belangrijke mijlpaal in de verdere professionalisering van API-ontwikkeling binnen de overheid. Dankzij de verbeterde ondersteuning voor moderne API-principes, volledige compatibiliteit met JSON Schema en betere herbruikbaarheid van gegevensstructuren, biedt deze versie een solide basis voor de komende jaren. Door tijdig te migreren en gebruik te maken van de beschikbare tooling, kunnen overheidsorganisaties direct profiteren van deze vooruitgang. Met het vernieuwde API-register gaan wij in ieder geval alvast voorsorteren op het logische vervolg: OpenAPI 3.1 als verplichte standaard voor overheids-API's. Wij kunnen ons in ieder geval niet voorstellen dat de expertgroep anno 2025 en na het lezen van deze blogpost nog steeds tegen is. 😉
