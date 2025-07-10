@@ -261,12 +261,6 @@ html {
   }
 }
 
-.ro-header__site-logo {
-  float: inline-start;
-  height: 1.5rem;
-  margin-inline-end: 0.5rem;
-}
-
 .ro-header__site-name {
   font-size: 1.5rem;
   margin-block-end: -0.25rem;
@@ -297,6 +291,43 @@ html {
 .sponsors__logo {
   max-width: 16rem;
   max-height: 4rem;
+}
+
+.sponsors__logo__bzk {
+  forced-color-adjust: none;
+  background-color: var(--ifm-footer-background-color);
+}
+
+.sponsors__logo__vng .abbr {
+  color: #f5f5f5;
+}
+
+.sponsors__logo__vng .brdr {
+  color: #009FE4;
+}
+
+.sponsors__logo__forum .cls-1 {
+  fill: #e1710d;
+}
+
+.sponsors__logo__forum .cls-2 {
+  fill: #fefdfd;
+}
+
+@media (forced-colors: active) {
+  .sponsors__logo__vng .abbr {
+    color: #004388;
+  }
+
+  .sponsors__logo__forum .cls-2 {
+    fill: CanvasText;
+  }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+  .sponsors__logo__vng {
+    .abbr { color: #f5f5f5; }
+  }
 }
 
 /* fix for aligning rhc card footers */
