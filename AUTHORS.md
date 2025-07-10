@@ -13,6 +13,7 @@ Dit project is mogelijk gemaakt door de volgende bijdragers:
 ## Bijdragers
 
 - **Sicco van Sas ~ Open State Foundation** - Fullstack Developer
+- **Frank Niessink ~ ICTU** - Kwaliteitsmanager
 
 ## Speciale Dank
 
