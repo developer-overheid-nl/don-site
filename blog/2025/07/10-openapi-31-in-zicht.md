@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [dimitri-van-hees]
 tags: [openapi, oas, api, json-schema, rest, webhooks, forum-standaardisatie, api-design, notificaties, mtls]
 description: Ruim zeven jaar geleden werd het traject afgerond om de OpenAPI Specification (OAS) op de pas-toe-leg-uit-lijst van het Forum Standaardisatie te krijgen. Sindsdien is versie 3.0 de verplichte standaard voor overheids-API's. En dat is nu nog steeds zo, ondanks dat de volgende versie 3.1 al lang beschikbaar is. Tot deze week. Het standaardisatieproces voor OpenAPI 3.1 is eindelijk hervat. In deze blogpost leggen we uit waarom dit een belangrijke stap is waar veel ontwikkelaars op hebben gewacht.
@@ -8,7 +7,7 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 # OpenAPI 3.1 eindelijk in zicht: de voordelen op een rijtje
 
-Ruim zeven jaar geleden werd het traject afgerond om de OpenAPI Specification (OAS) op de pas-toe-leg-uit-lijst van het Forum Standaardisatie te krijgen. Sindsdien is versie 3.0 de [verplichte standaard voor overheids-API's](https://www.forumstandaardisatie.nl/open-standaarden/openapi-specification). En dat bleef zo, ook toen [opvolger 3.1](https://spec.openapis.org/oas/v3.1.0.html) al lang beschikbaar was. Tot deze week. Het standaardisatieproces voor OpenAPI 3.1 is eindelijk hervat. In deze blogpost leggen we uit waarom dit een belangrijke stap is waar veel ontwikkelaars op hebben gewacht.
+Ruim zeven jaar geleden werd het traject afgerond om de OpenAPI Specification (OAS) op de pas-toe-leg-uit-lijst van het Forum Standaardisatie te krijgen. Sindsdien is versie 3.0 de [verplichte standaard voor overheids-API's](https://www.forumstandaardisatie.nl/open-standaarden/openapi-specification). En dat is nu nog steeds zo, ondanks dat de [volgende versie 3.1](https://spec.openapis.org/oas/v3.1.0.html) al lang beschikbaar is. Tot deze week. Het standaardisatieproces voor OpenAPI 3.1 is eindelijk hervat. In deze blogpost leggen we uit waarom dit een belangrijke stap is waar veel ontwikkelaars op hebben gewacht.
 
 ![Ondergetekende met het bewijs dat OpenAPI verplicht werd gesteld voor REST API's van de overheid, ruim zeven jaar geleden.](obdo.jpg)
 *Ondergetekende met het bewijs dat OpenAPI verplicht werd gesteld voor REST API's van de overheid, ruim zeven jaar geleden.*
