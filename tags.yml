@@ -103,7 +103,7 @@ fsc:
   description: Federated Service Connectivity
   label: FSC
 gdpr:
-  description: 'General Data Protection Regulation (GDPR) '
+  description: "General Data Protection Regulation (GDPR) "
   label: GDPR
 gegevensuitwisseling:
   label: Gegevensuitwisseling
@@ -138,7 +138,7 @@ json-schema:
 jwt:
   label: JSON Web Tokens (JWT of JWT's)
 kiesraad:
-  description: 'De Kiesraad: de nationale Kiesraad.'
+  description: "De Kiesraad: de nationale Kiesraad."
   label: Kiesraad
 kubernetes:
   label: Kubernetes
@@ -190,7 +190,7 @@ ospo:
   description: Open Source Program Office
   label: OSPO
 owasp:
-  description: 'OWASP: Open Web Application Security Project'
+  description: "OWASP: Open Web Application Security Project"
   label: OWASP
 owl:
   label: OWL
@@ -240,13 +240,16 @@ shacl:
 skos:
   description: Simple Knowledge Organization System
   label: SKOS
+technische-schuld:
+  description: Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in de toekomst moeilijker te wijzigen maken
+  label: Technische schuld
 tool:
   description: Tool
   label: Tool
 tutorial:
   label: Tutorial
 ux:
-  description: 'UX: User experience'
+  description: "UX: User experience"
   label: UX
 validator:
   label: Validator
@@ -264,4 +267,3 @@ websub:
   label: Websub
 yaml:
   label: YAML
-
