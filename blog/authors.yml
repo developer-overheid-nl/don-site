@@ -100,3 +100,12 @@ tim-van-der-lippe:
   socials:
     github: timvdlippe
     mastodon: https://fosstodon.org/@tvanderlippe
+
+forum-standaardisatie:
+  name: Forum Standaardisatie
+  image_url: https://avatars.githubusercontent.com/u/134707812?s=200&v=4
+  page: true
+  socials:
+    github: forumstandaardisatie
+    mastodon: https://social.overheid.nl/@forumstandaardisatie
+    linkedin: https://www.linkedin.com/company/forum-standaardisatie/
