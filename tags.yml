@@ -161,6 +161,9 @@ monitoring:
   label: Monitoring
 msa:
   label: Microservices Architectuur
+mtls:
+  label: mTLS
+  description: Mutual TLS
 nds:
   label: Nederlandse Digitaliseringsstrategie
   description: De NDS is één van de pijlers van het kabinetsbeleid op digitalisering.
@@ -265,6 +268,8 @@ vscode:
 wcag:
   description: Web Content Accessibility Guidelines
   label: WCAG
+webhooks:
+  label: Webhooks
 websub:
   description: Websub is een W3C standaard voor het maken van abonnementen op (veranderingen) in resources op het web
   label: Websub
