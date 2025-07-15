@@ -521,8 +521,18 @@ html {
 
 /* Prevent some unordered-list-items from having a margin */
 .theme-doc-markdown ul li p {
+  background-color: red;
   margin-bottom: 0;
   margin-top: 0;
+  
+}
+
+.theme-doc-markdown p {
+font-size: 1.2rem;
+}
+
+.theme-doc-markdown ul li, ol li {
+  font-size: 1.2rem;
 }
 
 .pagination-nav__link--next {
