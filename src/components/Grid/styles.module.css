@@ -1,6 +1,8 @@
 .grid {
   display: flex;
   flex-direction: column;
+  grid-template-columns: 3;
+  gap: 1rem;
 }
 
 @media (min-width: 45.063rem) {
