@@ -15,9 +15,9 @@ In deze post duiken we wat dieper in het NPM-ecosysteem en lees je hoe je bovens
 
 :::success[**TL;DR**]
 
-Het minimaliseren van het aantal NPM packages mag geen doel op zich zijn, maar is een middel om je ontwikkelproces beheersbaar te houden. Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar een onderhoudsnachtmerrie vol met kwetsbaarheden en conflicterende versies.
+Het minimaliseren van het aantal [NPM](https://www.npmjs.com/)-packages is een effectief middel om je dagelijkse develop-werkzaamheden beheersbaar te houden. Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar een onderhoudsnachtmerrie met kwetsbaarheden en conflicterende versies.
 
-Door projecten op te knippen in kleinere projecten, native API's te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en Dependabot kun je de dependencies die je wél nodig hebt beter beheren.
+Door projecten op te knippen in kleinere projecten, native API's te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) kun je de dependencies die je wél nodig hebt beter beheren.
 
 :::
 
@@ -228,11 +228,11 @@ Dependabot is een tool die codebases kan scannen en pull requests inschiet als h
 - ⚡ Snelle installs
 
 ## NPM-minimalisme betrachten, is kwalitatieve software bouwen
-De keuze voor HTMX bij developer.overheid.nl was misschien niet de ideale oplossing, maar het onderliggende probleem - JavaScript fatigue door een grote hoeveelheid dependencies - is reëel en herkenbaar. Door je toolbox te beperken tot wat je werkelijk nodig hebt, creëer je ruimte om je te focussen op wat echt telt: het bouwen van waardevolle functionaliteit.
+De keuze voor HTMX bij developer.overheid.nl was misschien niet de ideale oplossing, maar het onderliggende probleem - JavaScript fatigue door een grote hoeveelheid dependencies - is reëel en herkenbaar. Door het aantal dependencies te beperken tot wat je werkelijk nodig hebt, creëer je ruimte om je te focussen op wat echt telt: het bouwen van waardevolle features.
 
-Het minimaliseren van het aantal NPM packages mag geen doel op zich zijn, maar is een middel om je ontwikkelproces beheersbaar te houden. Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar een onderhoudsnachtmerrie vol met kwetsbaarheden en conflicterende versies.
+Het minimaliseren van het aantal [NPM](https://www.npmjs.com/)-packages is een effectief middel om je dagelijkse develop-werkzaamheden beheersbaar te houden. Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar een onderhoudsnachtmerrie met kwetsbaarheden en conflicterende versies.
 
-Door projecten op te knippen in kleinere projecten, native API's (bv. Fetch API) te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en Dependabot kun je de dependencies die je wél nodig hebt beter beheren.
+Door projecten op te knippen in kleinere projecten, native API's te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en Dependabot kun je de dependencies die je wél nodig hebt beter beheren.
 
 <!-- 
 @ LINKEDIN
