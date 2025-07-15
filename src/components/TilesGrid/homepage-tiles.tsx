@@ -106,22 +106,9 @@ const tiles: GridTile[] = [
       { link: '/communities/open-source-werken', label: 'Opensourcewerken' },
       { link: '/communities/federatief-datastelsel', label: 'Federatief Datastelsel' },
       { link: '/communities/gebruiker-centraal', label: 'Gebruiker Centraal' },
-      { link: 'https://community.developer.overheid.nl/', external: true, label: 'developer.overheid.nl Forum' },
     ],
     link: '/communities/',
   }
-  // {
-  //   icon: <IconTekstballonnenMetPunten />,
-  //   title: '& meer...',
-  //   description: [
-  //     { link: '/kennisbank/', label: 'Artikelen in de Kennisbank' },
-  //     { link: 'https://community.developer.overheid.nl/', external: true, label: 'Community' },
-  //     { link: '/blog/', label: 'Lees onze Blog' },
-  //     { link: 'https://social.overheid.nl/@developer', external: true, label: 'Volg ons op Mastodon' },
-  //   ],
-  //   // link: 'https://community.developer.overheid.nl/',
-  //   // external: true,
-  // }
 ];
 
 export default tiles;

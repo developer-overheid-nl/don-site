@@ -24,7 +24,8 @@ avg:
 azure:
   label: Azure
 axe:
-  label: Accessibility engine voor geautomatiseerde web UI tests
+  label: Axe
+  description: Accessibility engine voor geautomatiseerde web UI tests
 build-for-failure:
   description: Build for Failure
   label: Build for Failure
@@ -105,7 +106,7 @@ fsc:
   description: Federated Service Connectivity
   label: FSC
 gdpr:
-  description: 'General Data Protection Regulation (GDPR) '
+  description: "General Data Protection Regulation (GDPR) "
   label: GDPR
 gegevensuitwisseling:
   label: Gegevensuitwisseling
@@ -145,7 +146,7 @@ javascript:
 jwt:
   label: JSON Web Tokens (JWT of JWT's)
 kiesraad:
-  description: 'De Kiesraad: de nationale Kiesraad.'
+  description: "De Kiesraad: de nationale Kiesraad."
   label: Kiesraad
 kubernetes:
   label: Kubernetes
@@ -168,6 +169,12 @@ monitoring:
   label: Monitoring
 msa:
   label: Microservices Architectuur
+mtls:
+  label: mTLS
+  description: Mutual TLS
+nds:
+  label: Nederlandse Digitaliseringsstrategie
+  description: De NDS is één van de pijlers van het kabinetsbeleid op digitalisering.
 nl-design-system:
   label: NL Design System
 nodejs:
@@ -200,7 +207,7 @@ ospo:
   description: Open Source Program Office
   label: OSPO
 owasp:
-  description: 'OWASP: Open Web Application Security Project'
+  description: "OWASP: Open Web Application Security Project"
   label: OWASP
 owl:
   label: OWL
@@ -255,13 +262,16 @@ skos:
   label: SKOS
 typescript:
   label: TypeScript
+technische-schuld:
+  description: Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in de toekomst moeilijker te wijzigen maken
+  label: Technische schuld
 tool:
   description: Tool
   label: Tool
 tutorial:
   label: Tutorial
 ux:
-  description: 'UX: User experience'
+  description: "UX: User experience"
   label: UX
 validator:
   label: Validator
@@ -274,9 +284,10 @@ vscode:
 wcag:
   description: Web Content Accessibility Guidelines
   label: WCAG
+webhooks:
+  label: Webhooks
 websub:
   description: Websub is een W3C standaard voor het maken van abonnementen op (veranderingen) in resources op het web
   label: Websub
 yaml:
   label: YAML
-

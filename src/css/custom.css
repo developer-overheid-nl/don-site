@@ -5,6 +5,7 @@
  */
 
 :root {
+  --ifm-menu-color-background-active: #cbd5e1;
   /* Basis (Primary) color */
   --don-donkerblauw-500: #01689b;
   --don-donkerblauw-400: #408EB4;
@@ -139,6 +140,7 @@ html {
 }
 
 .navbar {
+  margin-top:2px;
   border-bottom: 1px solid var(--ifm-color-primary);
   padding-bottom: 0;
 }
@@ -191,14 +193,6 @@ html {
 .pagination-nav__link--prev .pagination-nav__label::before,
 .pagination-nav__link--next .pagination-nav__label::after {
   content: none;
-}
-
-.alert a {
-  --ifm-alert-border-color: var(--ifm-color-gray-700);
-}
-
-.markdown p a, .markdown li a, .markdown table a {
-  --ifm-link-decoration: underline;
 }
 
 .alert a {
@@ -550,4 +544,16 @@ html {
   transform: translateX(-0.3rem);
   width: 24px;
   height: 24px;
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.menu__link--active {
+  font-weight: 700;
 }

@@ -29,15 +29,22 @@
 }
 
 .tile {
+  display: flex;
+  flex-direction: column;
   word-break: break-word;
   hyphens: auto;
   position: relative;
   p {
+    order: 2;
     margin-bottom: 0;
+  }
+  a {
+    --ifm-link-decoration: underline;
   }
 }
 
 .title {
+  order: 1;
   margin-block-end: 0.25rem;
   color: var(--don-donkerblauw-500);
 }
@@ -47,12 +54,17 @@
   height: 3rem;
 }
 
+.iconRow {
+  order: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  margin-top: -0.5rem;
+}
+
 .highlight {
   display: inline-block;
-  position: absolute;
-  top: 0.25rem;
-  /* right: 0.25rem; */
-  margin-inline-start: 0.25rem;
   font-size: 0.875rem;
   background-color: var(--don-lichtblauw-100);
   color: var(--don-grijs-900);
@@ -66,10 +78,6 @@
 
 :global(.highlight--nieuw) {
   background-color: var(--ifm-color-warning-lighter);
-}
-
-.link {
-  color: inherit;
 }
 
 .spacer {

@@ -8,11 +8,11 @@ tags:
 sidebar_position: 1
 ---
 
-# Voeg een publiccode.yml toe en valideer deze met VSCode
+# Voeg een publiccode.yml toe met VSCode
 
 :::tip[**publiccode.yml editor beschikbaar**]
 
-Werk jij liever in een web-editor? Dan kan je gebruik maken van de [Publiccode.yml Editor](https://interoperable-europe.ec.europa.eu/publiccode-editor/)
+Werk jij liever in een web-editor? Dan kan je gebruik maken van de [Publiccode.yml Editor](https://publiccode-editor.developers.italia.it/?lang=nl)
 
 :::
 

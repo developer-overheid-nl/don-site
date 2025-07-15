@@ -6,7 +6,11 @@
 :3000 {
   root * /var/docusaurus
   encode gzip
-  # try_files {path} /index.html
+  try_files {path} {path}/index.html
+  handle_errors 404 {
+	  rewrite * /404.html
+    file_server
+  }
   file_server
   header -Server
   header /blog/feed.json Cache-Control "no-cache"

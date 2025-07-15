@@ -3,36 +3,56 @@ tags:
   - "front-end"
   - "accessibility"
   - "axe"
+  - "tool"
 ---
 
 # Axe accessibility checker
 
-[Axe](https://www.deque.com/axe/) is een veelgebruikte accessibility checker die de WCAG guidelines (grotendeels) automatisch kan checken
+[Axe](https://www.deque.com/axe/) is een veelgebruikte accessibility-checker die de WCAG guidelines (grotendeels) automatisch kan checken.
 
 ## Integratie met DevTools
 
 Axe DevTools is een browserplugin die voor zowel Chrome als Firefox beschikbaar is. Meer informatie over de plugin vind je hier:
-[Axe DevTools](https://www.deque.com/axe/devtools)
+[Axe DevTools](https://www.deque.com/axe/devtools).
 
 ## Integratie met GitHub Actions
 
+Onze [Github action](https://github.com/developer-overheid-nl/don-site/blob/main/.github/workflows/check-wcag.yml).
+
 ```yaml
+name: Check WCAG compliance
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch name."
+        required: true
+        default: "main"
+
 jobs:
-  wcag:
-    name: WCAG
-    runs-on: ubuntu-22.04
+  check-wcag:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        # Installeer de Axe CLI inclusief het installeren van de browser manager
-      - run: npm install @axe-core/cli browser-driver-manager -g
-        # Installeer Chrome. Kan ook een andere browser zijn
-      - run: npx browser-driver-manager install chrome
-        # Om Axe te runnen moeten de bestanden worden gehost. Deze step gaat er
-        # vanuit dat de bestanden ofwel gebouwd zijn, of op zichzelf staand te
-        # laden zijn in de browser. De bestanden worden op localhost:8080 gehost.
-        # De reden dat de bestanden apart moeten worden geserveerd in een action
-        # is omdat GitHub actions maar 1 proces in principe heeft. Axe kan niet
-        # in hetzelfde proces als een file server draaien.
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Install Axe dependencies
+        run: npm install -g @axe-core/cli browser-driver-manager
+      
+      - name: Install Chrome driver for Axe
+        run: npx browser-driver-manager install chrome
+
+      - name: Build Docusaurus site
+        run: pnpm run build
+      
       - name: Serve Files
         uses: Eun/http-server-action@v1
         with:
@@ -50,15 +70,19 @@ jobs:
               "txt": "text/plain",
               "xml": "text/xml"
             }
-          # De directory waar de bestanden staan. Zet dit op de output folder van
-          # de gebouwde bestanden als er een build step in het project zit.
-          directory: frontend/ 
-        # Het daadwerkelijk runnen van Axe. Hier wijst het naar `localhost:8080` wat
-        # de files servert middels de HTTP server. Hier is `/index.html` geopend, maar
-        # dit kan je veranderen door elke andere pagina die je wilt gebruiken.
-        #
-        # Tevens worden de AA WCAG guidelines gebruikt. Voor striktere checks kan ook
-        # de "wcag2aaa" tag worden gebruikt. De volledige lijst is beschikbaar op:
-        # https://www.deque.com/axe/core-documentation/api-documentation/#axecore-tags
-      - run: axe http://localhost:8080/index.html --exit --tags wcag2aa
+          port: 3000
+          directory: build/
+          index-files: |
+            ["index.html"]
+
+      - name: Run Axe to check for WCAG compliance
+        run: pnpm run lint:wcag
+
+```
+
+## NPM script
+
+Het is raadzaam om ook direct een npm script in te richten zodat je Axe ook lokaal kan draaien. **Let op**: onderstaand script vereist dat je lokaal een webserver draait op: `http://localhost:3000`.
+```js
+"lint:wcag": "axe http://localhost:3000/index.html, http://localhost:3000/blog --exit --tags wcag2a"
 ```

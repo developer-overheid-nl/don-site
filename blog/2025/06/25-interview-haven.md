@@ -1,19 +1,18 @@
 ---
 authors: [tom-ootes]
 tags: [haven, kubernetes, common-ground, digitale-autonomie]
-draft: true
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 # Het team achter Haven+: "Onze exit-strategie weg van Big Tech"
 
-Werk jij in de publieke sector aan IT en ben je benieuwd hoe je concreet kan toewerken naar digitale soevereiniteit? In dit interview met **Pauline van Rotterdam** en **Sander van Thillo** van team [Haven](/kennisbank/infra/standaarden/haven), kom je er achter hoe je [Haven+](/kennisbank/infra/standaarden/haven/haven-plus) gebruikt om minder afhankelijk te worden van Big Tech bedrijven als Microsoft (Azure) en Amazon (AWS).
+Werk jij in de publieke sector en ben je benieuwd hoe je concreet kunt toewerken naar digitale soevereiniteit? In dit interview met **Pauline van Rotterdam** en **Sander van Thillo** van team [Haven](/kennisbank/infra/standaarden/haven), kom je er achter hoe je [Haven+](/kennisbank/infra/standaarden/haven/haven-plus) gebruikt om minder afhankelijk te worden van Big Tech bedrijven als Microsoft (Azure) en Amazon (AWS).
 
 <!-- truncate -->
 
 :::success[**TL;DR**]
 
-- Haven+ toont aan dat Nederlandse overheidsinstellingen niet afhankelijk hoeven te blijven van Amerikaanse hyperscalers. Door open source technologie, best practices uit de CNCF-community en Nederlandse innovatie te combineren, ontstaat een platform dat zowel vendor lock-in voorkomt als de snelheid van cloud-native development mogelijk maakt.
+- Haven+ toont aan dat Nederlandse overheidsinstellingen niet afhankelijk hoeven te blijven van Amerikaanse hyperscalers. Door open source services, best practices uit de CNCF-community en Nederlandse innovatie te combineren, ontstaat een platform dat zowel vendor lock-in voorkomt als de snelheid van cloud-native development mogelijk maakt.
 - Met Haven+ heb je een set aan services tot je beschikking om af te komen van de services van Azure/ AWS. Met bewezen implementaties bij gemeente Utrecht en groeiende adoptie door andere organisaties, bewijst Haven+ dat digitale soevereiniteit niet ten koste hoeft te gaan kwaliteit en snelheid.
 
 :::
@@ -101,7 +100,7 @@ Hierover zegt Pauline: "Haven is volledig infra-as-code opgezet, zo zorgen we er
 
 Een cruciaal aspect van Haven+ is het bieden van een exit-strategie van Amerikaanse hyperscalers. "Het is een volledige exit strategie," stelt Pauline. Door die extra abstractielaag is de discussie weg van: “ja maar die cloud provider of hyperscaler biedt nog die functionaliteit”. Dat hebben we allemaal niet meer nodig. "We zitten in een agnostisch ecosysteem en de componenten die wij aanbieden kan je kwijt op elk Haven-compliant Kubernetes cluster."
 
-Er zijn al Nederlandse alternatieven beschikbaar. Previder is bijvoorbeeld Haven-compliant en staat in het lijstje met de grote hyperscalers als alternatief die je een compliant cluster in Nederland kan bieden, volgens Europese regelgeving. "Er staat niks in de weg om hier direct mee aan de slag te gaan," concludeert Sander.
+Er zijn al Nederlandse alternatieven beschikbaar. Previder is bijvoorbeeld Haven-compliant en staat als alternatief in het [lijstje](https://haven.commonground.nl/techniek/aan-de-slag) met de grote hyperscalers. Deze leverancier kan je al een compliant cluster in Nederland bieden. "Er staat niks in de weg om hier direct mee aan de slag te gaan," concludeert Sander.
 
 <Blockquote
   attribution=" — Pauline, Technisch Product Owner gemeente Utrecht"
@@ -129,9 +128,9 @@ Bij gemeente Utrecht zorgt Pauline dat alles wat wordt ge-onboard op een Haven-c
 
 Haven+ neemt security serieus met een gelaagde aanpak:
 
-- **Container security**: Tools zoals Trivy voor container image scanning en runtime monitoring.
+- **Container security**: tools zoals Trivy voor container image scanning en runtime monitoring.
 - **Intrusion detection**: Falco voor het detecteren van anomalieën in gebruik en verkeer.
-- **Policy enforcement**: Automatische controles die voorkomen dat non-compliant containers überhaupt landen op het cluster.
+- **Policy enforcement**: automatische controles die voorkomen dat non-compliant containers überhaupt landen op het cluster.
 
 "Je gaat veel vaker monitoren als je je infra goed opzet. Je doet dit dan gedurende de hele life cycle van een applicatie," legt Pauline uit. Dit gebeurt tijdens ontwikkeling, release én tijdens de runtime van applicaties.
 
@@ -142,6 +141,14 @@ Het grootste knelpunt voor Haven+ is momenteel tijd. "Het grootste probleem zit 
 Er zijn wel ontwikkelingen gaande binnen GDI (Generieke Digitale Infrastructuur) om het project mogelijk te adopteren, wat zou zorgen voor meer structurele financiering en resources.
 
 Voor hosting providers zou het aanbieden van Haven-compliance geen grote stap zijn. "Voor de meeste providers zou het niet een hele grote stap zijn om daar ook te komen," stelt Pauline. Het team praat ook actief met de Dutch Cloud Community om deze stap te zetten.
+
+## Oproep: draag bij vanuit jouw organisatie
+
+Pauline en Sander werken momenteel op best-effort basis aan Haven+, naast hun primaire rollen. Om Haven+ verder uit te bouwen en tot een nog bruikbaarder product te komen, zijn ze op zoek naar meer organisaties die willen bijdragen.
+
+Bovendien zorgt samenwerking met meerdere organisaties ervoor dat Haven+ beter aansluit op de diverse behoeften van de publieke sector. ODC-Noord en WIGO4IT gingen je al voor!
+
+[Praat mee op het Mattermost kanaal van Haven](https://digilab.overheid.nl/chat/haven/channels/town-square)
 
 ## Conclusie
 

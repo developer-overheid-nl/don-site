@@ -90,7 +90,7 @@ export default function HomepageAgenda(props: HomepageAgendaProps): React.JSX.El
       >
         { agenda && ((agenda.length > 0) ?
           agenda.map(({ title, summary, date, place, url }, index) => (
-            <LinkListLink href={url} key={index}>
+            <LinkListLink href={url} key={index} target="_blank">
               <h3 className={styles.agendaTitle}>{title}</h3>
               <p className={styles.agendaMeta}>
                 { date && (<span className={styles.agendaDate}><IconKalenderInline /> {date}</span>) }

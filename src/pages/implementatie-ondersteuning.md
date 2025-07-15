@@ -1,4 +1,4 @@
-# Implementatie ondersteuning API's
+# Implementatie ondersteuning
 
 Bij het implementeren van nieuwe standaarden en het moderniseren van architecturen is de hoeveelheid keuzes overweldigend. Naast het maken van de juiste architectuurkeuzes kan het implementeren ervan veel uitdagingen met zich meebrengen. Daarom bieden wij - naast de [standaarden](https://www.forumstandaardisatie.nl/open-standaarden) en [referentie architecturen](https://www.noraonline.nl/wiki/NORA_Familie) - gerichte implementatieondersteuning om organisaties te helpen deze uitdagingen aan te gaan en hun digitale dienstverlening te verbeteren.  
 

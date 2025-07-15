@@ -12,6 +12,7 @@ De intentieverklaring is opgesteld door het Kennisplatform API's in opdracht van
 
 De Intentieverklaring API Strategie is getekend door onderstaande organisaties:
 
+- Informatiehuis Water (Martin Kuipers, voorzitter Directeurenoverleg)
 - Forum Standaardisatie (Larissa Zegveld, voorzitter)
 - Logius (Ing. P.J. den Held RI, Directeur Digitale Programma's)
 - SVB (Britt van den Berg, CIO)

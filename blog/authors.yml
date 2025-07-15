@@ -46,6 +46,16 @@ martin-van-der-plas:
     linkedin: martinvanderplas
     github: mrtn78
 
+frank-niessink:
+  name: Frank Niessink
+  title: Kwaliteitsmanager - ICTU
+  image_url: https://avatars.githubusercontent.com/u/3530545
+  page: true
+  socials:
+    linkedin: fniessink
+    github: fniessink
+    mastodon: https://fosstodon.org/@Fniessink
+
 frank-terpstra:
   name: Frank Terpstra
   title: Implementatie ondersteuner - developer.overheid.nl
@@ -53,7 +63,7 @@ frank-terpstra:
   page: true
   socials:
     linkedin: frank-terpstra-1bb5096
-    github: fterpstra 
+    github: fterpstra
 
 jaap-hein-wester:
   name: Jaap-Hein Wester
@@ -72,7 +82,7 @@ digilab:
   image_url: https://social.overheid.nl/system/accounts/avatars/112/552/867/348/125/912/original/4a4f714089a5b239.png
   page: true
   socials:
-    url: https://digilab.overheid.nl
+    digilab-overheid: https://digilab.overheid.nl
     mastodon: https://social.overheid.nl/@digilab
 
 kennisplatform-apis:
@@ -81,7 +91,7 @@ kennisplatform-apis:
   image_url: https://developer.overheid.nl/static/images/logo_icon_kpa.1787d5b5302a.png
   page: true
   socials:
-    url: https://apigov.nl
+    apigov: https://apigov.nl
 
 opensourcewerken:
   name: Open Source Werken
@@ -89,7 +99,7 @@ opensourcewerken:
   image_url: https://social.overheid.nl/system/accounts/avatars/112/292/076/020/535/022/original/e0f2ce016250a43d.jpg
   page: true
   socials:
-    url: https://opensource.overheid.nl
+    opensource-overheid: https://opensourcewerken.nl
     mastodon: https://social.overheid.nl/@opensource
 
 tim-van-der-lippe:
@@ -100,3 +110,12 @@ tim-van-der-lippe:
   socials:
     github: timvdlippe
     mastodon: https://fosstodon.org/@tvanderlippe
+
+forum-standaardisatie:
+  name: Forum Standaardisatie
+  image_url: https://avatars.githubusercontent.com/u/134707812?s=200&v=4
+  page: true
+  socials:
+    github: forumstandaardisatie
+    mastodon: https://social.overheid.nl/@forumstandaardisatie
+    linkedin: https://www.linkedin.com/company/forum-standaardisatie/

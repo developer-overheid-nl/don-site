@@ -1,6 +1,6 @@
 ---
 authors: [tim-van-der-lippe]
-tags: [api, adr]
+tags: [api, adr, forum-standaardisatie, developer.overheid.nl, openapi]
 ---
 # Status update API Design Rules
 
