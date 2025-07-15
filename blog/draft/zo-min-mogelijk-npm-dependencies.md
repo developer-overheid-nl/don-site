@@ -31,12 +31,12 @@ In onze casus leidde het gebruik van HTMX in sommige gevallen tot situaties waar
 Afijn, dit artikel is geen deep-dive into HTMX, als je meer wilt weten verwijs ik je graag door naar [dit artikel van contentful](https://www.contentful.com/blog/htmx-react-use-cases/).
 
 ## JavaScript fatigue
-Waarom ik dit artikel begon met het verhaal over onze refactor naar HTMX was vanwege de achterliggende reden: mijn collega developer wilde vooral naar HTMX toe omdat hij slechte ervaringen had met het onderhouden van alle NPM-dependencies waar de React-codebase ondertussen afhankelijk van was. Dit had geleid tot een serieus geval van Javascript-moeheid, In de sector ook wel JavaScript fatigue genoemd. En ik geef hem geen ongelijk.
+Waarom ik dit artikel begon met het verhaal over onze refactor naar HTMX was vanwege de achterliggende reden: mijn collega-developer wilde vooral naar HTMX toe omdat hij slechte ervaringen had met het onderhouden van alle NPM-dependencies waar de React-codebase ondertussen afhankelijk van was. Dit had geleid tot een serieus geval van Javascript-moeheid, in onze sector ook wel "JavaScript fatigue" genoemd. En ik geef hem geen ongelijk.
 
 Onze package.json bevatte indertijd **`77 packages`**. Daaronder hingen weer **`1077 indirecte packages`**.
 
 <details>
-  <summary>Onze `package.json` des tijds</summary>
+  <summary>Onze `package.json` destijds</summary>
 
 ```json showLineNumbers title="package.json"
 {
@@ -156,7 +156,7 @@ Een codebase met veel packages heeft allerlei nadelen die je misschien niet dire
 Het meest dramatische voorbeeld om deze afhankelijkheid te illustreren is het [left-pad incident](https://en.wikipedia.org/wiki/Npm_left-pad_incident). Duizenden prominente NPM packages waren naar aanleiding van dit voorval niet meer te installeren omdat een developer had besloten zijn package `left-pad` te verwijderen. Dit voorval legde de kwetsbaarheid van het JavaScript ecosysteem goed bloot omdat één actor op zichzelf in staat was zand in de raderen van de machine te strooien.
 
 ## NPM: veel kleine packages
-Omdat het NPM ecosysteem rijk is aan kleine packages die 1 dingetje voor je oplossen loopt het aantal snel op. Achter elke package die je installeert bevindt zich weer een hele trits aan secundaire, tertiaire en soms ook quaternaire packages. Op deze manier kan een eenvoudig project snel uitlopen tot een onderhoudsdebacle.
+Omdat het NPM ecosysteem rijk is aan kleine packages die één dingetje voor je oplossen, loopt het aantal snel op. Achter elke package die je installeert bevindt zich weer een hele trits aan secundaire, tertiaire en soms ook quaternaire packages. Op deze manier kan een eenvoudig project snel uitlopen tot een onderhoudsdebacle.
 
 ## 🌊 Een golf van versiebumps
 Elke keer als er een vulnerability wordt gevonden in een onderliggende dependency dienen de maintainers van de dependencies die deze dependency gebruiken hun package te updaten. Als jij deze package dan weer gebruikt levert dit jou weer een Dependabot-alert op. Zo zorgt een kwetsbaarheid voor een golf aan alerts tot bovenaan de chain.
@@ -183,22 +183,24 @@ Updates, security patches, en bijbehorende compatibiliteit-checks kosten tijd. I
 ### ⛓️‍💥 Externe Afhankelijkheid
 Met elke package ben je afhankelijk van de maintainers voor onderhoud, en de beschikbaarheid van de package. Denk nogmaals aan het left-pad incident.
 
-## Hoe doe ik het beter?
+## Hoe kan het beter?
 
 ### ✂️ Knip projecten op
-Sommige web-apps zijn op te knippen in kleinere codebases die een specifiek doel hebben. Bij developer.overheid.nl hebben we dit bijvoorbeeld gedaan met onze OAS generator: https://github.com/developer-overheid-nl/oas-generator. Deze was eerst onderdeel van een grotere codebase. Maar door deze los te knippen zijn we wendbaarder als we bijvoorbeeld besluiten een codebase uit te faseren.
+Sommige web-apps zijn op te knippen in kleinere codebases die een specifiek doel hebben. Bij developer.overheid.nl hebben we dit bijvoorbeeld gedaan met onze [OAS generator](https://github.com/developer-overheid-nl/oas-generator). Dit project was eerst onderdeel van een grotere codebase, maar door deze los te knippen zijn we wendbaarder geworden. Het is nu bijvoorbeeld makkelijker om deze codebase uit te faseren mocht het nodig zijn.
 
 ### 📂 Meerdere package.json-bestanden
 Door meerdere package.json-bestanden in één repository te hanteren ontstaan er verschillende apps en voorkom je onnodige complexiteit.
 
+Een mooi voorbeeld van een project dat precies dit doet is de [NL-Design-System implementatie](https://github.com/nl-design-system/utrecht) van Gemeente Utrecht. Binnen dit project vind je [meerdere packages](https://github.com/nl-design-system/utrecht/tree/main/packages) die allemaal hun eigen functie hebben.
+
 ### 💭 Wees bewust
-Wees je bewust van de gevolgen die het kan hebben als je een npm package installeert. Elke package dient up-to-date te blijven en voegt complexiteit toe aan de codebase.
+Wees je bewust van de gevolgen die het kan hebben als je een NPM-package installeert. Elke package dient up-to-date te blijven en voegt complexiteit toe aan de codebase.
 
 ### 🔩 Schrijf simpele functies zelf
-Als de functionaliteit die je zoekt niet al te complex is, het het overwegen waard om zelf een functie toe te voegen.
+Als de functionaliteit die je zoekt niet al te complex is, is het het overwegen waard om zelf een functie toe te voegen.
 
 ### 🧰 Gebruik browser-native API's 
-Sommige libraries lossen een probleem op dat tegenwoordig al ingebakken zit in de browser of in de programmeertaal NodeJS. Voorbeelden hiervan zijn `Intl.DateTimeFormat` ipv `date-fns` of `Fetch API` ipv `axios`.
+Sommige libraries lossen een probleem op dat tegenwoordig al ingebakken zit in de browser of in de programmeertaal [NodeJS](https://nodejs.org/). Voorbeelden hiervan zijn `Intl.DateTimeFormat` ipv `date-fns` of `Fetch API` ipv `axios`.
 
 ### 📆 Verwerk updates geregeld
 Door op een gezette tijd, bijvoorbeeld elke maand, tijd vrij te maken om bestaande codebases up te daten voorkom je problemen. Door de updates steeds in kleine stapjes uit te voeren is de kans kleiner dat libraries met elkaar in de clinch komen te liggen en zijn bugs die optreden makkelijker herleidbaar.
@@ -232,7 +234,7 @@ De keuze voor HTMX bij developer.overheid.nl was misschien niet de ideale oploss
 
 Het minimaliseren van het aantal [NPM](https://www.npmjs.com/)-packages is een effectief middel om je dagelijkse develop-werkzaamheden beheersbaar te houden. Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar een onderhoudsnachtmerrie met kwetsbaarheden en conflicterende versies.
 
-Door projecten op te knippen in kleinere projecten, native API's te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en Dependabot kun je de dependencies die je wél nodig hebt beter beheren.
+Door projecten op te knippen in kleinere projecten, native API's te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) kun je de dependencies die je wél nodig hebt beter beheren.
 
 <!-- 
 @ LINKEDIN
