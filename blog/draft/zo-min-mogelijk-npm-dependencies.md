@@ -26,7 +26,7 @@ Door projecten op te knippen in kleinere projecten, native API's te gebruiken, e
 Toen ik  als front-end developer begon bij developer.overheid.nl moest ik even wennen aan een bepaalde technische keuze. Er was namelijk besloten dat we de bestaande React front-end zouden refactoren naar een situatie waarbij een Django-app alle templates zou renderen. In de nieuwe situatie zouden we gebruik maken van HTMX om stukken van de HTML-pagina te refreshen om zo interactiviteit te realiseren.
 
 ## Geen silver bullet
-In onze casus leidde het gebruik van HTMX in sommige gevallen tot situaties waarbij front-end logica in [Python code](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/web/templatetags/don_template_functions.py?ref_type=heads) geschreven moest worden. Dit voelde soms behoorlijk gekunsteld. Inmiddels is een groot deel van de developer community er wel over uit dat HTMX vooral erg geschikt is voor rapid-prototyping, en minder voor codebases die later in productie genomen moeten worden.
+In onze casus leidde het gebruik van HTMX in sommige gevallen tot situaties waarbij front-end logica in [Python code](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/web/templatetags/don_template_functions.py?ref_type=heads) geschreven moest worden. Dit voelde soms behoorlijk gekunsteld. Inmiddels is een groot deel van de developer-community er wel over uit dat HTMX vooral erg geschikt is voor rapid-prototyping, en minder voor codebases die later in productie genomen moeten worden.
 
 Afijn, dit artikel is geen deep-dive into HTMX, als je meer wilt weten verwijs ik je graag door naar [dit artikel van contentful](https://www.contentful.com/blog/htmx-react-use-cases/).
 
