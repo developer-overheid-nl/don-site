@@ -5,9 +5,9 @@ draft: true
 ---
 # Voorkom JavaScript-moeheid: minimaliseer het aantal NPM packages
 
-Binnen modern web-development zijn er veel processen waarbij we NPM-packages gebruiken. De meest herkenbare verschijningsvormen van NPM-packages zijn libaries en frameworks, maar in de afgelopen jaren is het scala behoorlijk uitgebreid.
+Binnen modern web-development zijn er veel processen waarbij we NPM-packages gebruiken. De meest herkenbare verschijningsvormen van NPM-packages zijn libraries en frameworks, maar in de afgelopen jaren is het scala behoorlijk uitgebreid.
 
-In veel codebases zie je ook: linters , test-engines, type-definitions en CLI-tools. Deze groei is verklaarbaar maar zorgt wel voor een **stijging van het aantal dependencies** binnen projecten. En dat zorgt weer voor problemen als: de welbekende **dependency-hell**, grote hoeveel heden **onderhoudswerk** en **trage transpile-processen**.
+In veel codebases zie je ook: linters , test-engines, type-definitions en CLI-tools. Deze groei is verklaarbaar maar zorgt wel voor een **stijging van het aantal dependencies** binnen projecten. En dat zorgt weer voor problemen als: de welbekende **dependency-hell**, grote hoeveelheden **onderhoudswerk** en **trage transpile-processen**.
 
 In deze post duiken we wat dieper in het NPM-ecosysteem en lees je hoe je bovenstaande problemen kunt voorkomen.
 
