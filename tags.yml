@@ -54,6 +54,9 @@ data-bij-de-bron:
   label: Data bij de Bron
 dcat:
   label: DCAT
+dependabot:
+  label: dependabot
+  description: Dependabot is een geautomatiseerde service van GitHub die je helpt bij het bijhouden van dependencies in je project.
 design-system:
   label: Design System
 developer.overheid.nl:
@@ -172,7 +175,8 @@ nodejs:
 notificaties:
   label: Notificaties
 npm:
-  label: Node Package Manager
+  label: npm
+  description: NPM staat voor 'Node Package Manager' is het standaard package management systeem voor Node.js.
 nvm:
   label: NVM
 oas:
