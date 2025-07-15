@@ -223,7 +223,7 @@ Door het project te evalueren voorkom je dat je later met een dependency te make
 Dependabot is een tool die codebases kan scannen en pull requests inschiet als hij een library vindt die achterloopt qua versionering. Dependabot is inmiddels geïntegreerd in GitHub en per repository apart aan te zetten. Mocht je niet vast willen zitten aan functionaliteit van GitHub kan je ook self-hosted gaan met behulp van [Dependabot CLI](https://github.com/dependabot/example-cli-usage/?tab=readme-ov-file).
 
 ### 📋 PNPM
-[PNPM](https://pnpm.io) is een npm packager met een aantal features die kunnen voorkomen dat je in een dependency-hell terecht komt. Deze features zijn:
+[PNPM](https://pnpm.io) is een package-manager met een aantal features die kunnen voorkomen dat je in een dependency-hell terecht komt. Deze features zijn:
 - 🚫 Voorkomt "phantom dependencies" (packages die je gebruikt maar niet geïnstalleerd hebt)
 - 📦 Elke package heeft alleen toegang tot eigen dependencies
 - 🔒 Dwingt expliciete dependency declaraties af
