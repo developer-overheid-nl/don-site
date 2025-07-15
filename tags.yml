@@ -55,6 +55,9 @@ data-bij-de-bron:
   label: Data bij de Bron
 dcat:
   label: DCAT
+dependabot:
+  label: dependabot
+  description: Dependabot is een geautomatiseerde service van GitHub die je helpt bij het bijhouden van dependencies in je project.
 design-system:
   label: Design System
 developer.overheid.nl:
@@ -125,6 +128,9 @@ helm:
 html:
   description: HTML.
   label: HTML
+htmx:
+  description: HTMX.
+  label: HTMX
 infra:
   label: Infra
 interoperability:
@@ -135,6 +141,8 @@ json:
   label: JSON
 json-schema:
   label: JSON Schema
+javascript:
+  label: JavaScript
 jwt:
   label: JSON Web Tokens (JWT of JWT's)
 kiesraad:
@@ -173,6 +181,9 @@ nodejs:
   label: Node.js
 notificaties:
   label: Notificaties
+npm:
+  label: npm
+  description: NPM staat voor 'Node Package Manager' is het standaard package management systeem voor Node.js.
 nvm:
   label: NVM
 oas:
@@ -203,6 +214,9 @@ owl:
 pkio:
   description: PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid.
   label: PKIOverheid
+pnpm:
+  label: pnpm
+  description: PNPM (Performant NPM) is een alternatieve package manager voor Node.js, net als NPM en Yarn, maar met een slimmere aanpak.
 portal:
   label: Portal
 privacy:
@@ -246,6 +260,8 @@ shacl:
 skos:
   description: Simple Knowledge Organization System
   label: SKOS
+typescript:
+  label: TypeScript
 technische-schuld:
   description: Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in de toekomst moeilijker te wijzigen maken
   label: Technische schuld
