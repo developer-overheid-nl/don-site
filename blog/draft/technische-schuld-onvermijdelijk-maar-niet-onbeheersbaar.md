@@ -57,4 +57,4 @@ Hier zie je dat de gebruikte versie van Axe-core in de pijplijn van het project 
 
 ## Hoe doe jij dat?
 
-Ik ben benieuwd hoe je in jouw projecten omgaat met technische schuld! Welke tools en processen gebruik je? Is er een rol als kwaliteitsmanager die het specifiek in de gaten houdt? Hoe leg je de gemaakte afspraken vast en hoe bewaak je die? Hoe overtuig je je product owner technische schuld de juiste prioriteit te geven? Laat het me weten op [Mastadon](https://fosstodon.org/@Fniessink) of beter nog: [schrijf ook een blog](https://developer.overheid.nl/contributing/gastblog-schrijven).
+Ik ben benieuwd hoe je in jouw projecten omgaat met technische schuld! Welke tools en processen gebruik je? Is er een rol als kwaliteitsmanager die het specifiek in de gaten houdt? Hoe leg je de gemaakte afspraken vast en hoe bewaak je die? Hoe overtuig je je product owner technische schuld de juiste prioriteit te geven? Laat het me weten op [Mastodon](https://fosstodon.org/@Fniessink) of beter nog: [schrijf ook een blog](https://developer.overheid.nl/contributing/gastblog-schrijven).
