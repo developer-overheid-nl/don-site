@@ -1,7 +1,11 @@
-import { Builder, By, WebDriver } from "selenium-webdriver";
+import { Builder } from "selenium-webdriver";
+import * as chrome from "selenium-webdriver/chrome";
 import { AxeBuilder } from "@axe-core/webdriverjs";
 import axios from "axios";
 import { parseStringPromise } from "xml2js";
+import * as path from "path";
+import * as os from "os";
+import * as fs from "fs";
 
 const SITEMAP_URL = "http://localhost:3000/sitemap.xml";
 
@@ -10,21 +14,36 @@ async function getUrlsFromSitemap(url: string): Promise<string[]> {
   if (res.status !== 200) throw new Error("Failed to fetch sitemap");
   const text = res.data;
   const result = await parseStringPromise(text);
-  // Type cast omdat xml2js een vrij losse structuur teruggeeft
   return (result as any).urlset.url.map((u: any) => u.loc[0]);
+}
+
+function createUniqueUserDataDir(): string {
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "chrome-user-data-"));
+  return tmpDir;
 }
 
 async function runAxeOnUrls(urls: string[]) {
   let errorCount = 0;
   for (const url of urls) {
-    const driver: WebDriver = await new Builder().forBrowser("chrome").build();
+    const userDataDir = createUniqueUserDataDir();
+    const options = new chrome.Options()
+      .headless()
+      .addArguments(
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        `--user-data-dir=${userDataDir}`
+      );
+    const driver = await new Builder()
+      .forBrowser("chrome")
+      .setChromeOptions(options)
+      .build();
     try {
       await driver.get(url);
       const results = await new AxeBuilder(driver).analyze();
       if (results.violations.length > 0) {
         errorCount += results.violations.length;
-        console.log(`❌ WCAG violations at ${url}:`);
-        results.violations.forEach((v) =>
+        console.log(`WCAG violations at ${url}:`);
+        results.violations.forEach((v: any) =>
           console.log(`  [${v.id}] ${v.help}: ${v.nodes.length} elements`)
         );
       } else {
@@ -32,6 +51,7 @@ async function runAxeOnUrls(urls: string[]) {
       }
     } finally {
       await driver.quit();
+      fs.rmSync(userDataDir, { recursive: true, force: true });
     }
   }
   if (errorCount > 0) process.exit(1);
