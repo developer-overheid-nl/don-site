@@ -41,6 +41,7 @@ async function main() {
       report += issueBlock + "\n";
       console.log(issueBlock);
     }
+    break;
   }
 
   if (hasFailures) {

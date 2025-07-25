@@ -59,14 +59,28 @@ jobs:
           SLACK_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
         run: |
+          set -e
+
           sudo apt-get update && sudo apt-get install -y jq
+
+          FILESIZE=$(wc -c < wcag-report.txt)
+
+          echo "File size: $FILESIZE"
 
           UPLOAD_JSON=$(curl -s -X POST "https://slack.com/api/files.getUploadURLExternal" \
             -H "Authorization: Bearer $SLACK_TOKEN" \
             -H 'Content-type: application/json' \
-            --data "{\"filename\":\"wcag-report.txt\",\"length\":$(wc -c < wcag-report.txt)}")
+            --data "{\"filename\":\"wcag-report.txt\",\"length\":$FILESIZE}")
+
+          echo "UPLOAD_JSON: $UPLOAD_JSON"
+
           UPLOAD_URL=$(echo "$UPLOAD_JSON" | jq -r '.upload_url')
           FILE_ID=$(echo "$UPLOAD_JSON" | jq -r '.file_id')
+
+          if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
+            echo "Upload URL ontbreekt! Slack response: $UPLOAD_JSON"
+            exit 1
+          fi
 
           curl -s -X PUT "$UPLOAD_URL" \
             --header "Content-Type: text/plain" \
