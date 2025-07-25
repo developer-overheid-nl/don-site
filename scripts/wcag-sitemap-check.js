@@ -1,6 +1,7 @@
 const axios = require("axios");
 const { parseStringPromise } = require("xml2js");
 const { execSync } = require("child_process");
+const fs = require("fs");
 
 const SITEMAP_URL = "http://localhost:3000/sitemap.xml";
 
@@ -13,6 +14,7 @@ async function main() {
   let hasFailures = false;
 
   for (const url of urls) {
+    let output = "";
     try {
       output = execSync(`npx axe "${url}" --exit`, { encoding: "utf-8" });
     } catch (error) {
@@ -26,25 +28,28 @@ async function main() {
       !/0 violations found!/i.test(output)
     ) {
       hasFailures = true;
-      console.log("\n========================================");
-      console.log(`WCAG issues found on: ${url}`);
-      // Print alleen violation lines
-      output.split("\n").forEach((line) => {
-        if (
+      const issueBlock = [
+        "\n========================================",
+        `WCAG issues found on: ${url}`,
+        ...output.split("\n").filter((line) =>
           !/0 violations found!/i.test(line) &&
-          /violation|issues detected|Accessibility issues|heading-order|Ensure|For details|occurrences/i.test(
-            line
-          )
-        ) {
-          console.log(line);
-        }
-      });
-      console.log("========================================\n");
+          /violation|issues detected|Accessibility issues|heading-order|Ensure|For details|occurrences/i.test(line)
+        ),
+        "========================================\n",
+      ].join("\n");
+      report += issueBlock + "\n";
+      console.log(issueBlock);
     }
   }
 
   if (hasFailures) {
+    fs.writeFileSync("wcag-report.txt", report);
     process.exit(1);
+  } else {
+    fs.writeFileSync(
+      "wcag-report.txt",
+      "🎉 Geen accessibility issues gevonden op enige pagina!"
+    );
   }
 }
 

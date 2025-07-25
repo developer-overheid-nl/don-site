@@ -9,6 +9,9 @@ on:
         description: "Branch name."
         required: true
         default: "main"
+# on:
+#   schedule:
+#     - cron: '0 2 * * 0'
 
 jobs:
   check-wcag:
@@ -49,3 +52,22 @@ jobs:
 
       - name: Run Axe to check for WCAG compliance
         run: node scripts/wcag-sitemap-check.js
+
+      - name: Upload report to Slack
+        if: always()
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: |
+          curl -X POST -H "Authorization: Bearer $SLACK_TOKEN" \
+            -H 'Content-type: application/json' \
+            --data "{\"channel\":\"$CHANNEL_ID\",\"text\":\"WCAG rapport van deze week is zojuist aangemaakt. Zie bijlage voor details.\"}" \
+            https://slack.com/api/chat.postMessage
+
+          if [ -f wcag-report.txt ]; then
+            curl -F file=@wcag-report.txt \
+              -F "channels=$CHANNEL_ID" \
+              -F "token=$SLACK_TOKEN" \
+              -F "initial_comment=WCAG issues gevonden (zie bestand voor details)." \
+              https://slack.com/api/files.upload
+          fi
