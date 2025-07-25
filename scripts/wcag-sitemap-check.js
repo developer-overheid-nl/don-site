@@ -12,6 +12,7 @@ async function main() {
   // Pak alle loc-linkjes
   const urls = result.urlset.url.map((u) => u.loc[0]);
   let hasFailures = false;
+  let report = "";
 
   for (const url of urls) {
     let output = "";
