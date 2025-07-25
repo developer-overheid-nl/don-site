@@ -54,5 +54,5 @@ jobs:
             ["index.html"]
 
       - name: Run Axe to check for WCAG compliance
-        run: pnpm exec ts-node scripts/wcag-sitemap-check.ts
+        run:  NODE_OPTIONS="--loader ts-node/esm" pnpm exec ts-node scripts/wcag-sitemap-check.ts
 
