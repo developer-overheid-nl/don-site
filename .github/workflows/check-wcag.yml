@@ -19,8 +19,8 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
       
-      - name: Install ts-node and typescript globally
-        run: npm install -g ts-node typescript
+      - name: Install ts-node and typescript
+        run: pnpm add -w ts-node typescript
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
