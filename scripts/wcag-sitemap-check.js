@@ -13,7 +13,13 @@ async function main() {
   let hasFailures = false;
 
   for (const url of urls) {
-    let output = execSync(`npx axe "${url}" --exit`, { encoding: "utf-8" });
+    try {
+      output = execSync(`npx axe "${url}" --exit`, { encoding: "utf-8" });
+    } catch (error) {
+      output =
+        (error.stdout ? error.stdout.toString() : "") +
+        (error.stderr ? error.stderr.toString() : "");
+    }
 
     if (
       /violation|issues detected|Accessibility issues/i.test(output) &&
