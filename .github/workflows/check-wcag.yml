@@ -87,7 +87,27 @@ jobs:
             --header "Content-Type: text/plain" \
             --data-binary "@wcag-report.txt"
 
-          curl -s -X POST "https://slack.com/api/files.completeUploadExternal" \
+          COMPLETE_RESPONSE=$(curl --silent -X POST \
             -H "Authorization: Bearer $SLACK_TOKEN" \
-            -H 'Content-type: application/json' \
-            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$CHANNEL_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}"
+            -H "Content-Type: application/json" \
+            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$CHANNEL_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}" \
+            https://slack.com/api/files.completeUploadExternal)
+
+          echo "COMPLETE_RESPONSE: $COMPLETE_RESPONSE"
+          if [ "$(echo "$COMPLETE_RESPONSE" | jq -r '.ok')" != "true" ]; then
+            echo "Error completing upload: $COMPLETE_RESPONSE"
+            exit 1
+          fi
+
+          # 4. (Optioneel) File publiek delen in channel
+          SHARE_RESPONSE=$(curl --silent -X POST \
+            -H "Authorization: Bearer $SLACK_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "{\"channel\":\"$CHANNEL_ID\",\"file\":\"$FILE_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}" \
+            https://slack.com/api/files.sharedPublicURL)
+
+          echo "SHARE_RESPONSE: $SHARE_RESPONSE"
+          if [ "$(echo "$SHARE_RESPONSE" | jq -r '.ok')" != "true" ]; then
+            echo "Error sharing file: $SHARE_RESPONSE"
+            exit 1
+          fi
