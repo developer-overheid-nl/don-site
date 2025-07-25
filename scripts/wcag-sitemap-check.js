@@ -13,14 +13,23 @@ async function main() {
   let hasFailures = false;
 
   for (const url of urls) {
-    console.log('====================================================');
-    console.log(`Testing: ${url}`);
-    console.log('====================================================');
     try {
-      execSync(`npx axe "${url}" --exit`, { stdio: 'inherit' });
+      execSync(`npx axe "${url}" --exit`, { stdio: 'ignore' });
     } catch (error) {
-      console.log('Accessibility issues found on this page');
-      hasFailures = true;
+      const output = error.stdout ? error.stdout.toString() : error.message;
+      const filtered = output
+        .split('\n')
+        .filter(line =>
+          /Violation|Accessibility issues detected|heading-order|Ensure|For details, see|occurrences/.test(line)
+        )
+        .join('\n');
+      if (filtered.trim()) {
+        hasFailures = true;
+        console.log('\n========================================');
+        console.log(`🚨 WCAG issues found on: ${url}`);
+        console.log(filtered);
+        console.log('========================================\n');
+      }
     }
   }
 
