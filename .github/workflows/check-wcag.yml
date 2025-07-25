@@ -67,7 +67,7 @@ jobs:
           if [ -f wcag-report.txt ]; then
             curl -F file=@wcag-report.txt \
               -F "channels=$CHANNEL_ID" \
-              -F "token=$SLACK_TOKEN" \
               -F "initial_comment=WCAG issues gevonden (zie bestand voor details)." \
+              -H "Authorization: Bearer $SLACK_TOKEN" \
               https://slack.com/api/files.upload
           fi
