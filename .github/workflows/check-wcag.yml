@@ -53,6 +53,8 @@ jobs:
           index-files: |
             ["index.html"]
 
-      - name: Run Axe to check for WCAG compliance
-        run: pnpm exec ts-node scripts/wcag-sitemap-check.ts
+      - name: Compile WCAG script
+        run: pnpm exec tsc scripts/wcag-sitemap-check.ts --outDir scripts
 
+      - name: Run Axe to check for WCAG compliance
+        run: node scripts/wcag-sitemap-check.js
