@@ -60,7 +60,6 @@ jobs:
           CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
         run: |
           set -e
-
           sudo apt-get update && sudo apt-get install -y jq
 
           FILESIZE=$(wc -c < wcag-report.txt)
@@ -69,7 +68,7 @@ jobs:
 
           UPLOAD_JSON=$(curl --silent --request POST \
             --url https://slack.com/api/files.getUploadURLExternal \
-            --header "authorization: Bearer $SLACK_TOKEN" \
+            --header "authorization: Bearer $SLACK_BOT_TOKEN" \
             --header "content-type: application/x-www-form-urlencoded; charset=utf-8" \
             --data filename=wcag-report.txt \
             --data length=$FILESIZE)
@@ -89,6 +88,6 @@ jobs:
             --data-binary "@wcag-report.txt"
 
           curl -s -X POST "https://slack.com/api/files.completeUploadExternal" \
-            -H "Authorization: Bearer $SLACK_TOKEN" \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
             -H 'Content-type: application/json' \
-            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$CHANNEL_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}"
+            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$SLACK_CHANNEL_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}"
