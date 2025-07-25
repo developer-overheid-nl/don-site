@@ -18,19 +18,16 @@ jobs:
 
       - name: Install pnpm
         run: npm install -g pnpm
-      
-      - name: Install ts-node and typescript
-        run: pnpm add -w ts-node typescript
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      
-      - name: Install Chrome driver for Axe
-        run: npx browser-driver-manager install chrome
+
+      - name: Install axe-cli
+        run: pnpm add -g @axe-core/cli
 
       - name: Build Docusaurus site
         run: pnpm run build
-      
+
       - name: Serve Files
         uses: Eun/http-server-action@v1
         with:
@@ -52,9 +49,6 @@ jobs:
           directory: build/
           index-files: |
             ["index.html"]
-
-      - name: Compile WCAG script
-        run: pnpm exec tsc scripts/wcag-sitemap-check.ts --outDir scripts
 
       - name: Run Axe to check for WCAG compliance
         run: node scripts/wcag-sitemap-check.js
