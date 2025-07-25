@@ -53,21 +53,26 @@ jobs:
       - name: Run Axe to check for WCAG compliance
         run: node scripts/wcag-sitemap-check.js
 
-      - name: Upload report to Slack
+      - name: Upload WCAG report to Slack
         if: always()
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
         run: |
-          curl -X POST -H "Authorization: Bearer $SLACK_TOKEN" \
-            -H 'Content-type: application/json' \
-            --data "{\"channel\":\"$CHANNEL_ID\",\"text\":\"WCAG rapport van deze week is zojuist aangemaakt. Zie bijlage voor details.\"}" \
-            https://slack.com/api/chat.postMessage
+          sudo apt-get update && sudo apt-get install -y jq
 
-          if [ -f wcag-report.txt ]; then
-            curl -F file=@wcag-report.txt \
-              -F "channels=$CHANNEL_ID" \
-              -F "initial_comment=WCAG issues gevonden (zie bestand voor details)." \
-              -H "Authorization: Bearer $SLACK_TOKEN" \
-              https://slack.com/api/files.upload
-          fi
+          UPLOAD_JSON=$(curl -s -X POST "https://slack.com/api/files.getUploadURLExternal" \
+            -H "Authorization: Bearer $SLACK_TOKEN" \
+            -H 'Content-type: application/json' \
+            --data "{\"filename\":\"wcag-report.txt\",\"length\":$(wc -c < wcag-report.txt)}")
+          UPLOAD_URL=$(echo "$UPLOAD_JSON" | jq -r '.upload_url')
+          FILE_ID=$(echo "$UPLOAD_JSON" | jq -r '.file_id')
+
+          curl -s -X PUT "$UPLOAD_URL" \
+            --header "Content-Type: text/plain" \
+            --data-binary "@wcag-report.txt"
+
+          curl -s -X POST "https://slack.com/api/files.completeUploadExternal" \
+            -H "Authorization: Bearer $SLACK_TOKEN" \
+            -H 'Content-type: application/json' \
+            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$CHANNEL_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}"
