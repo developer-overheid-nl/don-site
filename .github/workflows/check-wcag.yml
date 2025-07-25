@@ -22,10 +22,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install axe-cli
-        run: pnpm add -g @axe-core/cli
-
-      - name: Build Docusaurus site
+        - name: Build Docusaurus site
         run: pnpm run build
 
       - name: Serve Files
