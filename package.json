@@ -19,6 +19,7 @@
     "lint": "npm-run-all lint:*"
   },
   "dependencies": {
+    "@axe-core/webdriverjs": "^4.10.2",
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/plugin-content-docs": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",
@@ -31,11 +32,14 @@
     "clsx": "^2.1.1",
     "docusaurus-theme-search-typesense": "0.24.0",
     "focus-trap-react": "^11.0.4",
+    "node-fetch": "^3.3.2",
     "prism-react-renderer": "^2.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remark-directive-sugar": "^1.0.0",
-    "typesense-instantsearch-adapter": "^2.9.0"
+    "selenium-webdriver": "^4.34.0",
+    "typesense-instantsearch-adapter": "^2.9.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.0",

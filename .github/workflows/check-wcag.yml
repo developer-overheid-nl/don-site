@@ -18,12 +18,12 @@ jobs:
 
       - name: Install pnpm
         run: npm install -g pnpm
+      
+      - name: Install ts-node and typescript globally
+        run: npm install -g ts-node typescript
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      
-      - name: Install Axe dependencies
-        run: npm install -g @axe-core/cli browser-driver-manager
       
       - name: Install Chrome driver for Axe
         run: npx browser-driver-manager install chrome
@@ -54,4 +54,5 @@ jobs:
             ["index.html"]
 
       - name: Run Axe to check for WCAG compliance
-        run: pnpm run lint:wcag
+        run: pnpm exec ts-node scripts/wcag-sitemap-check.ts
+
