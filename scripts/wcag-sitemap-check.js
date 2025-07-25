@@ -15,12 +15,17 @@ async function main() {
   for (const url of urls) {
     let output = execSync(`npx axe "${url}" --exit`, { encoding: "utf-8" });
 
-    if (/violation|issues detected|Accessibility issues/i.test(output)) {
+    if (
+      /violation|issues detected|Accessibility issues/i.test(output) &&
+      !/0 violations found!/i.test(output)
+    ) {
       hasFailures = true;
       console.log("\n========================================");
       console.log(`WCAG issues found on: ${url}`);
+      // Print alleen violation lines
       output.split("\n").forEach((line) => {
         if (
+          !/0 violations found!/i.test(line) &&
           /violation|issues detected|Accessibility issues|heading-order|Ensure|For details|occurrences/i.test(
             line
           )
