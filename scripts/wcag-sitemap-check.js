@@ -17,7 +17,7 @@ async function main() {
     console.log(`Testing: ${url}`);
     console.log('====================================================');
     try {
-      execSync(`axe "${url}" --exit`, { stdio: 'inherit' });
+      execSync(`npx axe "${url}" --exit`, { stdio: 'inherit' });
     } catch (error) {
       console.log('Accessibility issues found on this page');
       hasFailures = true;
