@@ -98,16 +98,3 @@ jobs:
             echo "Error completing upload: $COMPLETE_RESPONSE"
             exit 1
           fi
-
-          # 4. (Optioneel) File publiek delen in channel
-          SHARE_RESPONSE=$(curl --silent -X POST \
-            -H "Authorization: Bearer $SLACK_TOKEN" \
-            -H "Content-Type: application/json" \
-            --data "{\"channel\":\"$CHANNEL_ID\",\"file\":\"$FILE_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}" \
-            https://slack.com/api/files.sharedPublicURL)
-
-          echo "SHARE_RESPONSE: $SHARE_RESPONSE"
-          if [ "$(echo "$SHARE_RESPONSE" | jq -r '.ok')" != "true" ]; then
-            echo "Error sharing file: $SHARE_RESPONSE"
-            exit 1
-          fi
