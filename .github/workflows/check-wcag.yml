@@ -83,10 +83,13 @@ jobs:
             exit 1
           fi
 
-          curl -s -X PUT "$UPLOAD_URL" \
+          UPLOAD_COMPLETE=$(curl -s -X PUT "$UPLOAD_URL" \
             --header "Content-Type: text/plain" \
-            --data-binary "@wcag-report.txt"
+            --data-binary "@wcag-report.txt")
+          echo "UPLOAD_COMPLETE: $UPLOAD_COMPLETE"
 
+          sleep 5;
+   
           COMPLETE_RESPONSE=$(curl --silent -X POST \
             -H "Authorization: Bearer $SLACK_TOKEN" \
             -H "Content-Type: application/json" \
