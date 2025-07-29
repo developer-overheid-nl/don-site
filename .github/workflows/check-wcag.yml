@@ -84,8 +84,8 @@ jobs:
           fi
 
           UPLOAD_HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
-          -F "filename=@wcag-report.txt" \
-          "$UPLOAD_URL")
+            -F "filename=@wcag-report.txt" \
+            "$UPLOAD_URL")
 
           echo "UPLOAD HTTP STATUS: $UPLOAD_HTTP_STATUS"
           sleep 5;
