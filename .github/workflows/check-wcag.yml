@@ -85,7 +85,7 @@ jobs:
           COMPLETE_RESPONSE=$(curl --silent -X POST \
             -H "Authorization: Bearer $SLACK_TOKEN" \
             -H "Content-Type: application/json" \
-            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$CHANNEL_ID\",\"initial_comment\":\"WCAG issues gevonden (zie bestand voor details).\"}" \
+            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$CHANNEL_ID\",\"initial_comment\":\"WCAG rapport:\"}" \
             https://slack.com/api/files.completeUploadExternal)
 
           echo "COMPLETE_RESPONSE: $COMPLETE_RESPONSE"
