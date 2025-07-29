@@ -83,12 +83,13 @@ jobs:
             exit 1
           fi
 
-          UPLOAD_COMPLETE=$(curl -s -X PUT "$UPLOAD_URL" \
+          UPLOAD_HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X PUT "$UPLOAD_URL" \
             --header "Content-Type: text/plain" \
             --data-binary "@wcag-report.txt")
-          echo "UPLOAD_COMPLETE: $UPLOAD_COMPLETE"
 
+          echo "UPLOAD HTTP STATUS: $UPLOAD_HTTP_STATUS"
           sleep 5;
+          echo $CHANNEL_ID
    
           COMPLETE_RESPONSE=$(curl --silent -X POST \
             -H "Authorization: Bearer $SLACK_TOKEN" \
