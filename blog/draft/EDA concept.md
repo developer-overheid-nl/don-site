@@ -2,6 +2,7 @@
 
 Todo
 
+- [ ] API Architectuur pagina
 - [ ] cloudevents pagina kennisbank
 - [ ] webhooks pagina kennisbank
 - [ ] event driven architecture pagina kennisbank

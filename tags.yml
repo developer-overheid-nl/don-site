@@ -86,6 +86,9 @@ eidas:
   label: eIDAS
 eu:
   label: Europe
+eda:
+  description: Event Driven Architecture (EDA) is een architectuurparadigma waarin componenten communiceren door het detecteren, publiceren, en verwerken van events (gebeurtenissen), zodat systemen loosely coupled, schaalbaar en responsief zijn.
+  label: Event Driven Architecture (EDA)
 fds:
   description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties. \_"
   label: Federatief Data Stelsel
