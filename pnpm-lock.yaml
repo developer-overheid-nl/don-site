@@ -16,9 +16,6 @@ importers:
       '@axe-core/cli':
         specifier: ^4.10.2
         version: 4.10.2
-      '@axe-core/webdriverjs':
-        specifier: ^4.10.2
-        version: 4.10.2(selenium-webdriver@4.22.0)
       '@docusaurus/core':
         specifier: ^3.8.1
         version: 3.8.1(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(acorn@8.14.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
