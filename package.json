@@ -15,7 +15,6 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "lint:typecheck": "tsc --noEmit",
-    "lint:wcag": "axe http://localhost:3000/index.html, http://localhost:3000/blog, http://localhost:3000/communities, http://localhost:3000/kennisbank, http://localhost:3000/kennisbank/apis, http://localhost:3000/kennisbank/front-end, http://localhost:3000/kennisbank/data, http://localhost:3000/kennisbank/open-source, http://localhost:3000/kennisbank/infra, http://localhost:3000/kennisbank/security --exit --tags wcag2aa",
     "lint": "npm-run-all lint:*"
   },
   "dependencies": {
