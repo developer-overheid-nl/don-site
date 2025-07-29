@@ -82,7 +82,7 @@ jobs:
             echo "Upload URL ontbreekt! Slack response: $UPLOAD_JSON"
             exit 1
           fi
-
+          echo "UPLOAD_URL: $UPLOAD_URL"
           UPLOAD_HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X PUT "$UPLOAD_URL" \
             --header "Content-Type: text/plain" \
             --data-binary "@wcag-report.txt")
