@@ -36,7 +36,7 @@ export default function TilesGrid({ tiles, paddingY }): React.ReactNode {
 
     return (
       <li key={i} className={styles.tile}>
-        <h2 className={styles.title}>{link ? <a href={link} target={external ? '_blank' : undefined}>{title}{external && <ExternalLinkIcon />}</a> : title}</h2>
+        <h2 className={styles.title}>{link ? <a href={link} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>{title}{external && <ExternalLinkIcon />}</a> : title}</h2>
         <div className={styles.iconRow}>
           {React.cloneElement(icon, { className: styles.icon, 'aria-hidden': true, focusable: false })}
           {highlight ? <span className={`${styles.highlight} highlight--${highlight}`}>{highlight}</span> : null}
