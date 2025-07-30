@@ -25,7 +25,7 @@ export default function TilesGrid({ tiles, paddingY }): React.ReactNode {
           {description.map(({ link, external, label }, j) => {
             return (
               <React.Fragment key={j}>
-                <a href={link} className={styles.link}>{label}{external && <ExternalLinkIcon />}</a>
+                <a href={link} className={styles.link} target={external ? '_blank' : undefined}>{label}{external && <ExternalLinkIcon />}</a>
                 <span className={styles.spacer}>, </span>
               </React.Fragment>
             );
@@ -36,7 +36,7 @@ export default function TilesGrid({ tiles, paddingY }): React.ReactNode {
 
     return (
       <li key={i} className={styles.tile}>
-        <h2 className={styles.title}>{link ? <a href={link}>{title}{external && <ExternalLinkIcon />}</a> : title}</h2>
+        <h2 className={styles.title}>{link ? <a href={link} target={external ? '_blank' : undefined}>{title}{external && <ExternalLinkIcon />}</a> : title}</h2>
         <div className={styles.iconRow}>
           {React.cloneElement(icon, { className: styles.icon, 'aria-hidden': true, focusable: false })}
           {highlight ? <span className={`${styles.highlight} highlight--${highlight}`}>{highlight}</span> : null}
