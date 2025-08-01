@@ -61,6 +61,48 @@ Het API Capability Model beschrijft modulair de functionaliteiten die samenhange
 
 > [Verder lezen](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Architectuur/#api-capability-model)
 
+## API management functionaliteit
+
+In een volwassen API-architectuur is **API-management** onmisbaar voor het goed kunnen beheren, beveiligen en monitoren van API’s. Het hoofdstuk API-management-functionaliteit uit de architectuurdocumentatie van de **NL API Strategie** beschrijft de belangrijkste functies en hun positionering.
+
+### Belangrijkste API-managementfuncties
+
+| Functionaliteit             | Beschrijving                                                                 |
+|-----------------------------|------------------------------------------------------------------------------|
+| **API Gateway**             | Centrale toegangspoort voor inkomend verkeer. Zorgt voor routing, throttling, caching, request logging en validatie. |
+| **Developer Portal**        | Publicatiepunt voor documentatie en registratie van API-gebruikers. Biedt self-service toegang tot API-keys of tokens. |
+| **Beveiligingsservices**.   | Ondersteuning van authenticatie (zoals OAuth2, mTLS), autorisatie (rollen/scopes) en beveiligingsbeleid. |
+| **Monitoring en Analytics** | Dashboarding en alerts voor gebruik, beschikbaarheid, fouten en performance. Helpt bij SLA-bewaking en verbeteringen. |
+| **Rate limiting & Quotas**  | Beschermen van achterliggende systemen tegen overbelasting door limieten op te leggen aan gebruik per client. |
+| **Lifecycle management**    | Versiebeheer, deprecatiebeleid en ondersteuning voor staging (dev, test, prod) om API-evolutie beheerst uit te voeren. |
+
+### Architectonische inbedding
+
+De functionaliteiten kunnen beperkt gecentraliseerd worden aangeboden (bijvoorbeeld via een generiek API-platform binnen een overheidsorganisatie) maar zullen hoofdzakelijk decentraal per API-team worden ingericht conform het Federatief Data Stelsel (FDS). Afstemming over design, logging, beveiliging en lifecycle management blijft essentieel bij decentrale implementaties.
+
+Er wordt benadrukt dat API-management niet alleen een technische aangelegenheid is, maar ook organisatorische en governance vraagstukken omvat. Denk aan:
+
+- Wie bepaalt welke API’s beschikbaar worden gesteld?
+- Hoe wordt versiebeheer uitgevoerd?
+- Wat zijn de voorwaarden voor toegang en gebruik?
+- Voldoen de API's aan de wetten, regels en standaarden die we hebben afgesproken?
+
+### Relatie met andere onderdelen
+
+API-management ondersteunt de **API Capability Model-lagen**, met name:
+
+- Interactie
+- Beveiliging
+- Transparantie
+- Governance
+
+Het gebruik van API-management tooling (zoals Kong, WSO2, Azure API Management, of open source alternatieven) wordt aanbevolen mits deze passen binnen de Nederlandse open-standaardenstrategie.
+
+## Meer informatie
+
+- [Geonovum API Strategie – Architectuur](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Architectuur/)
+- [API Management en Beveiliging – Developer Overheid](https://developer.overheid.nl/apis/beveiliging/)
+- [API Design Rules (ADR)](https://docs.geostandaarden.nl/api/API-Designrules/)
 
 ## Tot slot
 
