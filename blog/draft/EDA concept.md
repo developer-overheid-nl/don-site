@@ -1,3 +1,19 @@
+---
+authors: [martin-van-der-plas,]
+tags: [api, eda, fds, ]
+description: Steeds meer overheidsorganisaties stappen over naar event-driven architecturen (EDA). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als CloudEvents, DigiLevering, DigiMelding, en Webhooks zoals die terugkomen in de NL API Strategie.
+---
+import { Blockquote } from "@rijkshuisstijl-community/components-react";
+
+# De toekomstige API Architectuur is Event Driven Architecture
+
+![Schematisch beeld van de Event Driven Overheid](./img/event-driven-overheid.png)
+*Schematisch beeld van de Event Driven Overheid*
+
+> Steeds meer overheidsorganisaties stappen over naar event-driven architecturen (EDA). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als CloudEvents, DigiLevering, DigiMelding, en Webhooks zoals die terugkomen in de NL API Strategie.
+
+<!-- truncate -->
+
 # EDA
 
 Todo
@@ -6,15 +22,6 @@ Todo
 - [ ] cloudevents pagina kennisbank
 - [ ] webhooks pagina kennisbank
 - [ ] event driven architecture pagina kennisbank
-- [ ] 
-
-
-
-
-
-
-
-
 
 ---
 
@@ -22,117 +29,53 @@ Todo
 
 # **Event-Driven Architecture bij de overheid: van CloudEvents tot Webhooks**
 
-
-
-
-
 Steeds meer overheidsorganisaties stappen over naar **event-driven architecturen (EDA)**. Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling samenwerken op basis van gebeurtenissen, in plaats van logge vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we standaarden als **CloudEvents**, **DigiLevering**, **DigiMelding**, en **Webhooks** zoals die terugkomen in de **NL API Strategie** en de **eDelivery API-standaard**.
 
-
-
-------
-
-
-
-
+---
 
 ## **Wat is Event-Driven Architecture?**
 
-
-
-
-
 Event-driven architectuur is een patroon waarbij systemen reageren op gebeurtenissen (“events”) in plaats van dat ze actief moeten opvragen of “polling” gebruiken. Denk aan:
-
-
 
 - “Een pasgeborene wordt ingeschreven in de BRP”
 - “Een bedrijf wijzigt zijn vestigingsadres”
 - “Een vergunning wordt verleend”
 
-
-
-
-
 In plaats van dat een systeem constant moet vragen: *“Is er iets veranderd?”*, kan het nu **actief geïnformeerd worden wanneer er iets gebeurt**.
 
-
+Net als API's zijn events ook te typeren. Vaak wordt bij de overheid gesproken over life events, gebeurtenissen die in het leven van een burger kunnen voorkomen en vaak voorspelbaar zijn. Naast life events zijn er ook transactionele of processing events. Je schaft een paspoort aan dan krijg je die pas al de uitgever het event van de betaalprovider heeft ontvangen dat de aanvrager heeft betaald voor het product. Ook weet je op basis het creëren van de resource paspoort dat het paspoort ook weer verloopt of kan worden aangemerkt als vermist of gestolen. Kortom events die volgen uit een initiële transactie.
 
 ------
 
-
-
-
-
 ## **CloudEvents: gestandaardiseerd eventformaat**
-
-
-
-
 
 Een belangrijke ontwikkeling is de standaardisering van eventformaat via [**CloudEvents**](https://cloudevents.io/). CloudEvents is een CNCF-standaard die beschrijft hoe events uniform verpakt kunnen worden — onafhankelijk van bron of transportprotocol.
 
-
-
 CloudEvents specificeert onder andere:
-
-
 
 - De **bron** van het event
 - Het **type** event (bijvoorbeeld nl.basisregistratie.persoon.geboorte)
 - De **tijdstip** en **ID**
 - Optioneel: een payload met aanvullende gegevens
 
-
-
-
-
 Deze standaard speelt een steeds grotere rol in het **federatief datastelsel** (zoals benoemd in de NL Digitaal-strategie), waarin verschillende overheidslagen interoperabel met elkaar communiceren via gebeurtenissen.
-
-
 
 📚 Zie ook de uitleg op [developer.overheid.nl: CloudEvents bij de overheid](https://developer.overheid.nl/standaarden/cloudevents).
 
-
-
 ------
-
-
-
-
 
 ## **DigiLevering en DigiMelding: eventgedreven binnen Logius**
 
-
-
-
-
 Binnen het overheidsdomein bestaan al eventgedreven stelsels:
-
-
 
 - **DigiLevering** stuurt meldingen wanneer gegevens in een basisregistratie zijn gewijzigd.
 - **DigiMelding** maakt het mogelijk om fouten in gegevens (bijv. in de BRP) automatisch te melden aan de beheerder van de registratie.
 
-
-
-
-
 Beide werken op basis van events, maar zijn nog grotendeels **bericht-georiënteerd via WUS/ebMS**. De trend is dat deze interfaces op termijn herzien worden richting **API-first** en **eventgedreven interfaces** — bij voorkeur op basis van CloudEvents en REST hooks.
-
-
 
 ------
 
-
-
-
-
 ## **Webhooks in de NL API Strategie**
-
-
-
-
 
 De **NL API Strategie** (onder beheer van Logius) adviseert overheden om webhooks aan te bieden voor eventnotificaties. Dit maakt het mogelijk om een API niet alleen als *pull-interface*, maar ook als *push-mechanisme* in te zetten. Bijvoorbeeld:
 
@@ -150,156 +93,68 @@ x-webhooks:
 
 Het opnemen van x-webhooks in OAS (OpenAPI Specification) maakt het mogelijk dat afnemers zich kunnen abonneren op gebeurtenissen en **automatisch geïnformeerd worden wanneer die plaatsvinden**.
 
-
-
 👉 Zie voor meer uitleg: [NL API Strategie: Webhooks](https://developer.overheid.nl/standaarden/nl-api-strategie/#webhooks)
-
-
 
 ------
 
-
-
-
-
 ## **Webhooks in de eDelivery API-standaard**
 
-
-
-
-
 De [**eDelivery API-standaard**](https://developer.overheid.nl/standaarden/edelivery) maakt gebruik van webhooks om verzend- en ontvangstnotificaties aan te bieden. Bijvoorbeeld:
-
-
 
 - Een gemeente ontvangt een *Webhook* wanneer een burger een aanvraag indient via MijnOverheid.
 - Een organisatie krijgt een *Webhook* wanneer een bericht via eDelivery succesvol is afgeleverd.
 
-
-
-
-
 Door **webhooks in te bouwen in berichtenstandaarden**, ontstaat er een hybride vorm van messaging en EDA — waarin events niet alleen reacties zijn op inkomende berichten, maar ook als op zichzelf staande notificaties functioneren.
-
-
 
 ------
 
-
-
-
-
 ## **Events als reactie op berichten vs. events als registratiegebeurtenissen**
 
-
-
-
-
 Er is een belangrijk onderscheid in soorten events:
-
-
-
-
 
 ### **1.** 
 
 ### **Events als reactie op een bericht (message)**
 
-
-
-
-
 Bijvoorbeeld:
-
-
 
 - Een gebruiker stuurt een aanvraag → het systeem stuurt een “aanvraag ontvangen”-event.
 - Een notificatie over de status van verwerking (“verzonden”, “afgewezen”)
 
-
-
-
-
 ➡️ Dit is een soort *event-after-request*: de gebeurtenis is een gevolg van een actieve handeling.
-
-
-
-
 
 ### **2.** 
 
 ### **Events als registratiegebeurtenis**
 
-
-
-
-
 Bijvoorbeeld:
-
-
 
 - Iemand verhuist, en de BAG registreert een adreswijziging.
 - Een geboorte wordt vastgelegd in de BRP.
 
-
-
-
-
 ➡️ Hier is het event een **feitelijke mutatie in een authentieke registratie**, onafhankelijk van wie het weet of vraagt. Dit is cruciaal voor stelselvoorzieningen, en vereist vaak juridische borging van authenticiteit en volledigheid.
-
-
 
 Deze tweede categorie events vormt de kern van het **federatief datastelsel**: betrouwbare, tijdige en juridisch correcte gegevensdeling tussen basisregistraties en ketenpartners.
 
-
-
 ------
-
-
-
-
 
 ## **Tot slot: de toekomst van eventgedreven overheidsarchitectuur**
 
-
-
-
-
 De beweging naar event-driven werken is onomkeerbaar. Nieuwe generaties API’s combineren REST + Webhooks + CloudEvents. Denk aan:
-
-
 
 - Een **basisregistratie die CloudEvents uitzendt bij mutaties**
 - Een **stelselvoorziening met een publish-subscribe mechanisme**
 - Een **API-ecosysteem met embedded webhooks in OpenAPI**
 
-
-
-
-
 Om dat goed te laten werken, zijn afspraken nodig over:
-
-
 
 - **Standaardisatie** (zoals CloudEvents profielen voor overheden)
 - **Beveiliging** van webhooks (OAuth, retry-strategieën, verificatie)
 - **Beheer** van abonnementen
 
-
-
-
-
 ------
 
-
-
-
-
 ## **Verder lezen**
-
-
-
-
 
 - [NL API Strategie – Webhooks en Events](https://developer.overheid.nl/standaarden/nl-api-strategie/#webhooks)
 - [CloudEvents Specificatie](https://cloudevents.io/)
@@ -307,29 +162,15 @@ Om dat goed te laten werken, zijn afspraken nodig over:
 - [Federatief Datastelsel | Federatief.Datastelsel.nl](https://federatief.datastelsel.nl/)
 - [DigiLevering en DigiMelding | Logius](https://logius.nl/diensten)
 
-
-
-
-
 ------
-
-
 
 💡 **Tip voor developers**: experimenteer eens met CloudEvents in combinatie met een [local webhook listener zoals webhook.site](https://webhook.site/), of gebruik [ngrok](https://ngrok.com/) om een publieke endpoint te creëren voor test-events uit overheidsdomeinen.
 
-
-
 Wil je sparren over hoe jouw organisatie events kan inzetten? Of heb je een vraag over implementatie in je API? Deel je ervaringen op [developer.overheid.nl/community](https://developer.overheid.nl/community).
-
-
 
 ------
 
-
-
 *Door Martin van der Plas – API-specialist en redacteur developer.overheid.nl*
-
-
 
 # Mail Rob Berentsen
 
@@ -338,26 +179,23 @@ Wil je sparren over hoe jouw organisatie events kan inzetten? Of heb je een vraa
 >  eerdere correspondentie:
 
 Asynchrone verwerking heeft inderdaad nog te weinig de aandacht gekregen. Er zijn al wel ontwikkelingen geweest maar er is meer behoefte aan eenduidigheid in dit speelveld en uiteraard praktische afspraken en best practices. Hierbij alvast een korte samenvatting van de ontwikkelingen:
-\- De nieuwe OpenAPI Specificatie versie 3.1 ondersteund ook de mogelijkheid om webhooks te definieren. zie o.a. <https://spec.openapis.org/oas/latest.html>#callback-object . Dit was één van de redenen dat ik OAS3.1 als nieuwe versie heb aangemeld bij het Buro Forum Standaardisatie. De nieuwe versie is echter nog niet op de lijst opgenomen omdat adoptie hiervan bij leveranciers achterloopt. zie ook <https://openapi.tools>/
-\- VNG heeft in 2022 een Nederlands profiel opgesteld voor cloud events. Zie ook <https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents> . Dit profiel is door ons bij Logius in beheer genomen en wacht op verdere doorontwikkeling en toepassing.
-\- vanuit Digilevering en Digimelding is er interesse om meer met api's te gaan doen en hierbij is ook zeker aandacht voor cloud events, event driven architecture en webhooks
-\- vanuit het kennisplatform is event driven design al een aantal keer onder de aandacht geweest:
-\- <https://github.com/Geonovum/KP-APIs/blob/d0f473330ae0a354e7f11aec4176aca39025cb89/overleggen/Werkgroep>%20API%20architectuur/Verslagen/20230508/2023\_05\_08\_Verslag\_Werkgroep\_Architectuur.md?plain=1#L11
-\- <https://github.com/Geonovum/KP-APIs/blob/d0f473330ae0a354e7f11aec4176aca39025cb89/overleggen/Werkgroep>%20API%20architectuur/Verslagen/20230508/notificatieservices\_architectuur.pdf
-\- <https://github.com/Geonovum/KP-APIs/blob/d0f473330ae0a354e7f11aec4176aca39025cb89/overleggen/Werkgroep>%20API%20architectuur/Verslagen/20221110/EDA%20-%20Pubsub%20-%20NORA%20API%20expertgroep.pdf
-\- ook zijn er in de design visie wel verwijzingen naar webhooks en websub maar nog geen verdere uitwerking.
-\- <https://www.asyncapi.com>/ is bezig om 1 standaard te maken waarmee event drive api's kunnen worden gedefinieert voor verschillende protocollen.
-\- bij de BRK notificaties bewust gekozen voor een pull mechanisme met een api. zie ook <https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk/brk-notificaties>
+- De nieuwe OpenAPI Specificatie versie 3.1 ondersteund ook de mogelijkheid om webhooks te definieren. zie o.a. https://spec.openapis.org/oas/latest.html#callback-object . Dit was één van de redenen dat ik OAS3.1 als nieuwe versie heb aangemeld bij het Buro Forum Standaardisatie. De nieuwe versie is echter nog niet op de lijst opgenomen omdat adoptie hiervan bij leveranciers achterloopt. zie ook https://openapi.tools
+- VNG heeft in 2022 een Nederlands profiel opgesteld voor cloud events. Zie ook https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents . Dit profiel is door ons bij Logius in beheer genomen en wacht op verdere doorontwikkeling en toepassing.
+- vanuit Digilevering en Digimelding is er interesse om meer met api's te gaan doen en hierbij is ook zeker aandacht voor cloud events, event driven architecture en webhooks
+- vanuit het kennisplatform is event driven design al een aantal keer onder de aandacht geweest:
+
+- ook zijn er in de design visie wel verwijzingen naar webhooks en websub maar nog geen verdere uitwerking.
+- https://www.asyncapi.com is bezig om 1 standaard te maken waarmee event drive api's kunnen worden gedefinieerd voor verschillende protocollen.
+- bij de BRK notificaties bewust gekozen voor een pull mechanisme met een api. zie ook https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk/brk-notificaties
 
 Verder zijn de best practices erg afhankelijk van de use case die je voor ogen hebt. hierin zou je moeten adresseren:
-\- is het echt realtime of mag er een vertraging zijn en wat is dan acceptabel?
-\- wie bepaald het tempo van verwerking van events (provider of client)
-\- is er wel of geen garantie van aflevering nodig?
-\- hoe vind interne verwerking van events vervolgens plaats bij provider en of client?
-\- welke eisen zijn er aan interne verwerking en standaarden / patronen zoals JMS / Kafka / mq amqp
+- is het echt realtime of mag er een vertraging zijn en wat is dan acceptabel?
+- wie bepaald het tempo van verwerking van events (provider of client)
+- is er wel of geen garantie van aflevering nodig?
+- hoe vind interne verwerking van events vervolgens plaats bij provider en of client?
+- welke eisen zijn er aan interne verwerking en standaarden / patronen zoals JMS / Kafka / mq amqp
 
 Dit is wat ik zo even kan aanreiken en aanraden.
-
 
 # eerdere opzet gpt
 > Event-Driven Architecture en de NL API Strategie: CloudEvents, Webhooks en OAuth
@@ -437,16 +275,12 @@ De **Nederlandse API Strategie (NL API Strategie)** stimuleert het gebruik van *
 
 💡 **Meer leren?** Bekijk de gelinkte bronnen en begin vandaag nog met het bouwen van event-gedreven API’s! 🚀  
 
-
-
 # WG
 
 >  Vormen van Notificeren patronen
 > content op:
 
 https://github.com/Geonovum/KP-APIs/blob/master/overleggen/Werkgroep%20Notificeren/documenten/vormen_notificeren.md
-
-
 
 # Vormen van Notificeren
 
@@ -464,15 +298,9 @@ https://github.com/Geonovum/KP-APIs/blob/master/overleggen/Werkgroep%20Notificer
 - Notificaties worden op basis van de initiele message naar 1 of meerdere eindpoints gedeeld. (bij voorkeur op basis van webhooks - wellicht moet mail ook kunnen)
 - Notificaties zijn in deze opzet altijd een afgeleide van een message. De aanbieder van de service (waard de message wordt afgeleverd) biedt de notificatie functie als aanvullende dienst aan. Merk op dat deze aanvullende notificatie functie gelijk kan zijn aan de notificatie functie binnen het stelsel.
 
-
-
-
-
 # Vragen marktpartijen
 
 > Gert Jan van der Kooij
-
-
 
 Mooie stap en hulde aan het project Notificatieservices dat in de zomer van 2022 in mijn ogen te vroeg werd beeindigd. In de uitvoering en uitwerking een mooi voorbeeldproject voor andere Common Ground initiatieven. Alle lof voor de projectleden destijds 👏
 
