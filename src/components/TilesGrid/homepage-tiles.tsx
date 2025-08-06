@@ -18,7 +18,7 @@ const tiles: GridTile[] = [
     title: 'Techradar',
     description: 'Bekijk onze techradar voor inzicht in de technologieën, tools en concepten die we verkennen, gebruiken of bewust vermijden. Zo houden we koers in een snel veranderend digitaal landschap.',
     link: 'https://radar.thoughtworks.com/?documentId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1mOX2791I5RL688muHsL7LDGqhRoKqUo5Vj3QrjMZXe8%2Fedit%3Fusp%3Dsharing',
-    highlight: 'nieuw',
+    highlight: 'beta',
     external: true,
   },
   {

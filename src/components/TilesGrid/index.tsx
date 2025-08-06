@@ -7,7 +7,7 @@ export type GridTile = {
   title: string;
   description: string | { link: string; label: string; external?: boolean }[];
   link?: string;
-  highlight?: 'uitgelicht' | 'nieuw' | 'tutorial';
+  highlight?: 'uitgelicht' | 'nieuw' | 'tutorial' | 'beta';
   external?: boolean;
 };
 
