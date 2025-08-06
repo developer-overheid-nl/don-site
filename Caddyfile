@@ -1,18 +1,35 @@
-
 {
-  auto_https off
+	auto_https off
 }
 
 :3000 {
-  root * /var/docusaurus
-  encode gzip
-  try_files {path} {path}/index.html
-  handle_errors 404 {
-	  rewrite * /404.html
-    file_server
-  }
-  file_server
-  header -Server
-  header /blog/feed.json Cache-Control "no-cache"
-  header /agenda/events.json Cache-Control "no-cache"
+	root * /var/docusaurus
+	encode gzip
+	try_files {path} {path}/index.html
+	handle_errors 404 {
+		rewrite * /404.html
+		file_server
+	}
+	file_server
+	header -Server
+
+	# Caching policy
+	header /blog/feed.json Cache-Control "no-cache"
+	header /agenda/events.json Cache-Control "no-cache"
+
+	# Security policy
+	header {
+		Content-Security-Policy "
+			default-src 'self';
+      script-src 'self' 'sha256-B3XU3apKRxGUkcZIC2hb7S3n+DLs/vKwgVEnWv1EzR0=' 'sha256-pBkmluod9Ko4GzDfbWgKM/wxzujFXUdGVOePkwOQT+c=' https://gc.zgo.at/count.js;
+			connect-src 'self' https://search.developer.overheid.nl https://donv1.goatcounter.com;
+			img-src 'self' data: https://www.geonovum.nl https://social.overheid.nl https://github.com https://avatars.githubusercontent.com https://hostux.social https://i.vimeocdn.com https://www.toegankelijkheidsverklaring.nl;
+			style-src 'self' 'sha256-biLFinpqYMtWHmXfkA1BPeCY0/fNt46SAZ+BBk5YUog=' 'sha256-DPptftRbDC0ow/ZdJW8fpmEcrpsn75dOuGlyzJJwTgc=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=';
+			frame-src https://player.vimeo.com;"
+		Cross-Origin-Opener-Policy: "same-origin"
+		Cross-Origin-Resource-Policy: "same-site"
+		Referrer-Policy: "strict-origin-when-cross-origin"
+		X-Content-Type-Options: "nosniff"
+		X-Frame-Options: "DENY"
+	}
 }

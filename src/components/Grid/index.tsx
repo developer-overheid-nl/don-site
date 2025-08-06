@@ -11,19 +11,11 @@ export type GridProps = {
 
 // Main Grid component that can embed other components
 export default function Grid({
-  children, 
-  columns = 3, 
-  gap = "1rem", 
-  className 
+  children,
+  className
 }: GridProps): React.ReactNode {
   return (
-    <div 
-      className={clsx(styles.grid, className)}
-      style={{
-        gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        gap: gap,
-      }}
-    >
+    <div className={clsx(styles.grid, className)}>
       {children}
     </div>
   );
