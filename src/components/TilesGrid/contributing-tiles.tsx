@@ -8,6 +8,7 @@ import IconDoosMetPijlenOpZijkantZijaanzicht from "@site/src/theme/icons/IconDoo
 import IconTekstballonnenMetVraagteken from "@site/src/theme/icons/IconTekstballonnenMetVraagteken";
 import IconNetwerk from "@site/src/theme/icons/IconNetwerk";
 import IconMegafoon from "@site/src/theme/icons/IconMegafoon";
+import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten";
 
 const tiles: GridTile[] = [
     {
@@ -62,6 +63,13 @@ const tiles: GridTile[] = [
         link: 'https://www.linkedin.com/company/92926607/',
         external: true
     },
+    {
+        icon: <IconTekstballonnenMetPunten />,
+        title: 'Github Discussions',
+        description: 'Stel een vraag, start een topic of geef je mening op onze Github pagina.',
+        link: 'https://github.com/developer-overheid-nl/don-site/discussions',
+        external: true
+    }
 ];
 
 export default tiles;
