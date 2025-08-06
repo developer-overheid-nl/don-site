@@ -525,14 +525,6 @@ html {
   margin-top: 0;
 }
 
-.theme-doc-markdown p {
-font-size: 1.2rem;
-}
-
-.theme-doc-markdown ul li, ol li {
-  font-size: 1.2rem;
-}
-
 .pagination-nav__link--next {
   background-color: var(--ifm-color-primary);
 }
