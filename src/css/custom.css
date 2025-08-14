@@ -112,7 +112,6 @@
   --ifm-color-content: #0f172a;
 
   --ifm-link-color: var(--ifm-color-primary);
-  --ifm-link-decoration: underline;
 
   --ifm-navbar-height: auto;
   --ifm-navbar-shadow: none;
@@ -198,6 +197,10 @@ html {
 
 .alert a {
   --ifm-alert-border-color: var(--ifm-color-gray-700);
+}
+
+main a {
+  --ifm-link-decoration: underline;
 }
 
 @media (min-width: 90rem) { /* 1440px */
