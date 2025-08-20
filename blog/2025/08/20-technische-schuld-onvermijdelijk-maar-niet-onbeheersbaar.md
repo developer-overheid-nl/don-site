@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [frank-niessink]
 tags: [development, technische-schuld]
 ---
