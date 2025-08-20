@@ -25,14 +25,14 @@ Wat ik interessant vind aan de technische schuld metafoor is dat deze zo breed t
 
 Maar ook zonder veranderingen in je eigen project kan er nieuwe technische schuld ontstaan. Veranderingen in de omgeving leiden ook tot technische schuld:
 
-- Een nieuwe versie van een gebruikte bibliotheek: als deze versie aan het begin van je project beschikbaar was geweest had je die direct gebruikt en had je nu je code niet aan de nieuwe API hoeven aan te passen.
-- Een nieuw ontdekte beveiligingskwetsbaarheid in één van de bibliotheken die je gebruikt. Als je van de kwetsbaarheid had geweten had je maatregelen in je code genomen, een andere bibliotheek gebruikt of de benodigde code zelf ontwikkeld.
+- Een nieuwe versie van een gebruikte bibliotheek: als deze versie aan het begin van je project beschikbaar was geweest, had je die direct gebruikt en had je nu je code niet aan de nieuwe API hoeven aan te passen.
+- Een nieuw ontdekte beveiligingskwetsbaarheid in één van de bibliotheken die je gebruikt. Als je van de kwetsbaarheid had geweten, had je maatregelen in je code genomen, een andere bibliotheek gebruikt of de benodigde code zelf ontwikkeld.
 
 Trouwens, niet alleen in de broncode van de software zelf kan technische schuld aanwezig zijn. Ook je ontwikkelomgeving kan technische schuld oplopen. Denk aan oude versie van linters, trage unit tests, of ongebruikte jobs in Jenkins.
 
 ## Onvermijdbaar
 
-Mijn ervaring is dat technische schuld onvermijdelijk is. Je hoeft maar met je ogen te knipperen of er is een nieuwe versie van één van de bibliotheken die je software gebruikt. De vraag is dus zozeer niet hoe je technische schuld kunt voorkomen, maar hoe je er mee omgaat als het vroeg of laat optreedt. Want niets doen is geen optie als je software nog een tijdje mee moet.
+Mijn ervaring is dat technische schuld onvermijdelijk is. Je hoeft maar met je ogen te knipperen of er is een nieuwe versie van één van de bibliotheken die je software gebruikt. De vraag is dus niet zozeer hoe je technische schuld kunt voorkomen, maar hoe je er mee omgaat als het vroeg of laat optreedt. Want niets doen is geen optie als je software nog een tijdje mee moet.
 
 ## Aanpakken
 
