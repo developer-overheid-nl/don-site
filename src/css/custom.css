@@ -199,7 +199,7 @@ html {
   --ifm-alert-border-color: var(--ifm-color-gray-700);
 }
 
-.markdown p a, .markdown li a, .markdown table a {
+main a {
   --ifm-link-decoration: underline;
 }
 
