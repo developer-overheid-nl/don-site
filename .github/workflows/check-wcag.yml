@@ -1,14 +1,8 @@
 name: Check WCAG compliance
 
 on:
-  push:
-  pull_request:
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: "Branch name."
-        required: true
-        default: "main"
+  schedule:
+    - cron: '0 2 * * 0'
 
 jobs:
   check-wcag:
@@ -21,16 +15,10 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      
-      - name: Install Axe dependencies
-        run: npm install -g @axe-core/cli browser-driver-manager
-      
-      - name: Install Chrome driver for Axe
-        run: npx browser-driver-manager install chrome
 
       - name: Build Docusaurus site
         run: pnpm run build
-      
+
       - name: Serve Files
         uses: Eun/http-server-action@v1
         with:
@@ -54,4 +42,54 @@ jobs:
             ["index.html"]
 
       - name: Run Axe to check for WCAG compliance
-        run: pnpm run lint:wcag
+        run: node scripts/wcag-sitemap-check.js
+
+      - name: Upload WCAG report to Slack
+        if: always()
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: |
+          set -e
+          sudo apt-get update && sudo apt-get install -y jq
+
+          FILESIZE=$(wc -c < wcag-report.txt)
+
+          echo "File size: $FILESIZE"
+
+          UPLOAD_JSON=$(curl --silent --request POST \
+            --url https://slack.com/api/files.getUploadURLExternal \
+            --header "authorization: Bearer $SLACK_TOKEN" \
+            --header "content-type: application/x-www-form-urlencoded; charset=utf-8" \
+            --data filename=wcag-report.txt \
+            --data length=$FILESIZE)
+
+          echo "UPLOAD_JSON: $UPLOAD_JSON"
+
+          UPLOAD_URL=$(echo "$UPLOAD_JSON" | jq -r '.upload_url')
+          FILE_ID=$(echo "$UPLOAD_JSON" | jq -r '.file_id')
+
+          if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
+            echo "Upload URL ontbreekt! Slack response: $UPLOAD_JSON"
+            exit 1
+          fi
+
+          UPLOAD_HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            -F "filename=@wcag-report.txt" \
+            "$UPLOAD_URL")
+
+          echo "UPLOAD HTTP STATUS: $UPLOAD_HTTP_STATUS"
+          sleep 5;
+          echo $CHANNEL_ID
+   
+          COMPLETE_RESPONSE=$(curl --silent -X POST \
+            -H "Authorization: Bearer $SLACK_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "{\"files\":[{\"id\":\"$FILE_ID\"}],\"channel_id\":\"$CHANNEL_ID\",\"initial_comment\":\"WCAG rapport:\"}" \
+            https://slack.com/api/files.completeUploadExternal)
+
+          echo "COMPLETE_RESPONSE: $COMPLETE_RESPONSE"
+          if [ "$(echo "$COMPLETE_RESPONSE" | jq -r '.ok')" != "true" ]; then
+            echo "Error completing upload: $COMPLETE_RESPONSE"
+            exit 1
+          fi

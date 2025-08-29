@@ -80,6 +80,10 @@
   background-color: var(--ifm-color-warning-lighter);
 }
 
+:global(.highlight--beta) {
+  background-color: var(--ifm-color-success-lighter);
+}
+
 .spacer {
   margin-inline-end: 0.25rem;
 }

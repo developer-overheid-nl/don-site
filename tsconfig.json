@@ -14,7 +14,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "scripts/wcag-sitemap-check.js"  ],
   "exclude": [
     ".docusaurus",
     "build"

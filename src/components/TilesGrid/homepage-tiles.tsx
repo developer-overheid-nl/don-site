@@ -1,5 +1,5 @@
 import type React from "react";
-import IconIct from "@site/src/theme/icons/IconIct";
+// import IconIct from "@site/src/theme/icons/IconIct";
 import IconComputercode from "@site/src/theme/icons/IconComputercode";
 import IconDocumentMetGolvendeLijnenEnLint from "@site/src/theme/icons/IconDocumentMetGolvendeLijnenEnLint";
 import IconKlembordMetVinkjesEnLijnen from "@site/src/theme/icons/IconKlembordMetVinkjesEnLijnen";
@@ -8,15 +8,18 @@ import IconManMetLaptop from "@site/src/theme/icons/IconManMetLaptop";
 import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
 import IconTekstballonMetPotlood from "@site/src/theme/icons/IconTekstballonMetPotlood";
 import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten";
+import IconNetwerk from "@site/src/theme/icons/IconNetwerk";
 
 import { GridTile } from ".";
 
 const tiles: GridTile[] = [
   {
-    icon: <IconTekstballonMetPotlood />,
-    title: 'Doe mee',
-    description: 'Dit project is continu in ontwikkeling. Ontbreekt er iets of zie je een fout? Of heb jij nog artikelen, tools of andere bronnen die je graag wilt delen? Laat het ons weten!',
-    link: '/contributing',
+    icon: <IconNetwerk />,
+    title: 'Techradar',
+    description: 'Bekijk onze techradar voor inzicht in de technologieën, tools en concepten die we verkennen, gebruiken of bewust vermijden. Zo houden we koers in een snel veranderend digitaal landschap.',
+    link: 'https://radar.thoughtworks.com/?documentId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1mOX2791I5RL688muHsL7LDGqhRoKqUo5Vj3QrjMZXe8%2Fedit%3Fusp%3Dsharing',
+    highlight: 'beta',
+    external: true,
   },
   {
     icon: <IconKlembordMetVinkjesEnLijnen />,
@@ -32,18 +35,24 @@ const tiles: GridTile[] = [
     highlight: 'uitgelicht',
   },
   {
-    icon: <IconIct />,
-    title: 'Ontwikkel een API',
-    description: 'Moet je een API bouwen die voldoet aan de standaarden van de NL API Strategie? Volg onze tutorial en ontwikkel stap-voor-stap een compliant API.',
-    // description: [
-    //   { link: '/kennisbank/apis/aan-de-slag/bouw-een-api', label: 'Bouw een API' }, 
-    //   { link: '/kennisbank/apis/aan-de-slag/maak-een-oas', label: 'Maak een OpenAPI specificatie' },
-    //   { link: '/kennisbank/apis/standaarden/problem-json', label: 'Problem JSON' },
-    //   { link: 'https://apis.developer.overheid.nl/', external: true, label: 'API\'s van Nederlandse overheidsorganisaties'}
-    // ],
-    link: '/kennisbank/apis/aan-de-slag/bouw-een-api',
-    highlight: 'tutorial',
+    icon: <IconTekstballonMetPotlood />,
+    title: 'Doe mee',
+    description: 'Dit project is continu in ontwikkeling. Ontbreekt er iets of zie je een fout? Of heb jij nog artikelen, tools of andere bronnen die je graag wilt delen? Laat het ons weten!',
+    link: '/contributing',
   },
+  // {
+  //   icon: <IconIct />,
+  //   title: 'Ontwikkel een API',
+  //   description: 'Moet je een API bouwen die voldoet aan de standaarden van de NL API Strategie? Volg onze tutorial en ontwikkel stap-voor-stap een compliant API.',
+  //   // description: [
+  //   //   { link: '/kennisbank/apis/aan-de-slag/bouw-een-api', label: 'Bouw een API' }, 
+  //   //   { link: '/kennisbank/apis/aan-de-slag/maak-een-oas', label: 'Maak een OpenAPI specificatie' },
+  //   //   { link: '/kennisbank/apis/standaarden/problem-json', label: 'Problem JSON' },
+  //   //   { link: 'https://apis.developer.overheid.nl/', external: true, label: 'API\'s van Nederlandse overheidsorganisaties'}
+  //   // ],
+  //   link: '/kennisbank/apis/aan-de-slag/bouw-een-api',
+  //   highlight: 'tutorial',
+  // },
   {
     icon: <IconComputercode />,
     title: 'Open Source',

@@ -1,14 +1,14 @@
 ---
 description: Gastblog schrijven voor developer.overheid.nl
 hide_table_of_contents: true
-title: Hoe schrijf ik een gastblog?
 ---
 
-# Hoe draag ik een gastblog aan?
+# Hoe schrijf ik een gastblog?
 
 Wil jij je stem laten horen via onze blog? Omdat wij het belang zien van een breedgedragen discussie helpen we jou hier graag bij.
 
 ## Markdown
+
 - Een bijdrage aan onze blog dien je in alle gevallen aan te dragen als Markdown bestand.
 - Een markdown bestand heeft de `.md` bestandsextensie.
 - De filename van jouw blog ziet er bijvoorbeeld zo uit: `mijn-blog-over-grafana.md`.
@@ -18,40 +18,46 @@ Wil jij je stem laten horen via onze blog? Omdat wij het belang zien van een bre
 <details>
   <summary>Voorbeeld van correct geformatteerde blogpost in markdown</summary>
 
-```md
----
-authors: [martin-van-der-plas]
-tags: [data-bij-de-bron, fds, api, oauth, digid, pkio, eherkenning, eidas, oidc, saml]
----
-# Titel
+  ```md
+  ---
+  authors: [martin-van-der-plas]
+  draft: true
+  ---
+  # Titel
 
-Dit is de intro met een hele pakkende tekst om op "Lees meer te klikken".
+  Dit is de intro met een hele pakkende tekst om op "Lees meer te klikken".
 
-<!-- truncate -->
+  <!-- truncate -->
 
-## Kop 2
+  ## Kop 2
 
-En hier gaat het verhaal weer verder.
+  En hier gaat het verhaal weer verder.
 
-### Kop 2.1
+  ### Kop 2.1
 
-Lorem ipsum. 
+  Lorem ipsum. 
 
-```
+  ```
+
 </details>
 
 Er zijn verschillende manieren om een gastblog aan te dragen:
 
-## - Stuur ons een e-mail
+## Stuur ons een e-mail
+
 Stuur een e-mail naar [developer.overheid@geonovum.nl](mailto:developer.overheid@geonovum.nl) met het markdown-bestand van jouw blogpost.
 
-## - Maak een Gist en dien een issue in
+## Maak een Gist en dien een issue in
+
 Je kunt een artikel schrijven in Markdown en deze als een [Gist](https://gist.github.com/) opslaan. Zorg ervoor dat je de Gist openbaar maakt en de link naar de Gist deelt in een [issue](https://github.com/developer-overheid-nl/don-site/issues/new).
 
-## - Maak een Pull Request
-Ook is het mogelijk om een blogpost aan te bieden door middel van een pull request. Let er wel op dat je de blogpost in de draft map zet:
+## Maak een Pull Request
 
-`/blog/draft/example.md`
+Ook is het mogelijk om een blogpost aan te bieden door middel van een pull request. Hierbij moet je wel op de volgende zaken letten:
+
+1. Het bestand **moet** in de `draft` map staan: `/blog/draft/example.md`.
+1. In de frontmatter **moet** `draft: true` staan (zie voorbeeld hierboven).
+1. Na de intro **moet** er `<!-- truncate -->` staan (zie voorbeeld hierboven).
+1. De waarden die ingevuld zijn bij `authors` **moeten** voorkomen in het bestand `/blog/authors.yml`. Ben je een nieuwe auteur, dan kun je jezelf hieraan toevoegen.
 
 Als je nog geen lid bent van onze repository, maak dan eerst een [fork](https://github.com/developer-overheid-nl/don-site/fork). Deze fork kun je vervolgens aanbieden als pull request bij ons.
-
