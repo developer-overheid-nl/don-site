@@ -10,6 +10,9 @@ ai:
 api:
   description: Application Programming Interface
   label: API
+amsterdam:
+  description: Amsterdam gemeente gerelateerde content
+  label: Amsterdam
 api-design:
   label: API Design
 argo-cd:
@@ -113,6 +116,9 @@ gegevensuitwisseling:
 geo:
   description: Informatie met een ruimtelijke component
   label: Geografisch
+geodata:
+  description: Geografische datasets en ruimtelijke gegevens
+  label: Geodata
 git:
   label: Git
 golang:
@@ -153,6 +159,9 @@ kubernetes:
 ldv:
   description: Logboek Data Verwerkingen is een standaard die beschrijft hoe je logging kan vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen
   label: Logboek Data Verwerkingen
+leaflet:
+  description: Leaflet JavaScript library voor interactieve kaarten
+  label: Leaflet
 license:
   label: License
 linked-data:
@@ -163,6 +172,9 @@ llm:
 logging:
   description: Logging
   label: Logging
+maps:
+  description: Kaarten, cartografie en mapping technologieën
+  label: Maps
 meetups:
   label: Meetups
 monitoring:
@@ -237,6 +249,9 @@ rdfa:
 rdfs:
   description: RDF Schema
   label: RDFS
+react:
+  description: React JavaScript library voor user interfaces
+  label: React
 release:
   label: Release
 rest:
