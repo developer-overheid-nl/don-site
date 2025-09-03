@@ -8,7 +8,7 @@ type Props = WrapperProps<typeof AuthorType>;
 export default function AuthorWrapper(props: Props): ReactNode {
   return (
     <>
-      <Author {...props} />
+      <Author className="docs-author" {...props} />
     </>
   );
 }
