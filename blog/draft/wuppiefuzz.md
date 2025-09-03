@@ -31,6 +31,17 @@ WuppieFuzz is ontworpen met de eindgebruiker in gedachten:
 - Modulaire opzet voor uitbreiding naar andere programmeertalen.
 - Open source beschikbaarheid en vrij te gebruiken middels een Apache 2.0-licentie.
 
+## Doe Mee: Word Contributor aan WuppieFuzz!
+WuppieFuzz is een community-driven project. We nodigen ontwikkelaars, testers en security-specialisten uit om bij te dragen aan de verdere ontwikkeling van de tool. Of je nu wilt helpen met:
+- Nieuwe mutatiestrategieën,
+- Integratie met andere programmeertalen,
+- Verbetering van het dashboard,
+- Of documentatie en tutorials,
+
+... jouw bijdrage is welkom!
+
+Bekijk de repository op [https://github.com/TNO-S3/WuppieFuzz](https://github.com/TNO-S3/WuppieFuzz) en open een issue of pull request. Samen maken we REST API’s robuuster en veiliger.
+
 ## Conclusie
 WuppieFuzz biedt een krachtige, toegankelijke en uitbreidbare oplossing voor het testen van REST API’s binnen overheidscontexten. Door gebruik te maken van coverage-guided fuzzing en slimme mutatiestrategieën, helpt het ontwikkelaars om robuuste, betrouwbare en veilige digitale diensten te bouwen.
 
