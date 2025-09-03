@@ -11,12 +11,11 @@ In een tijd waarin digitale overheidsdiensten steeds vaker via [REST API’s](..
 
 <!-- truncate -->
 
-## Wat is WuppieFuzz?
+# Hoe werkt WuppieFuzz?
 WuppieFuzz is gebouwd bovenop het [LibAFL-framework](https://github.com/AFLplusplus/LibAFL) en ondersteunt drie testmodi:
 - **Black box**: zonder kennis van de interne werking.
 - **Grey box**: met beperkte kennis en observatie van gedrag.
 - **White box**: met volledige toegang tot de broncode en interne structuur.
-
 
 Op basis van een [OpenAPI-specificatie](../../kennisbank/apis/openapi-specification) genereert WuppieFuzz automatisch zinvolle sequenties van HTTP-requests. Deze sequenties worden vervolgens gemuteerd om diepere logica en edge cases in de API te bereiken. De tool meet test coverage via responscodes en/of via instrumentatie van de backend (bijv. met `JaCoCo` voor Java of `coverage.py` voor Python).
 
