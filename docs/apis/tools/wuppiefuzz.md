@@ -2,10 +2,22 @@
 tags: [rest, api, security, security-by-design, validator, rust, tool, openapi, open-source, development, devops]
 ---
 
-import { Link, Icon } from "@rijkshuisstijl-community/components-react";
+import { Link, Icon, Alert, Heading } from "@rijkshuisstijl-community/components-react";
 import Author from '@theme/Blog/Components/Author';
 
+
 # WuppieFuzz
+
+<Alert type="info">
+  <Author 
+    author={{
+      name: "Bijdrage door: Thomas Rooijakkers",
+      title: "Lead Scientist TNO",
+      imageUrl: "https://avatars.githubusercontent.com/u/49478940",
+      url: "https://github.com/ThomasTNO"
+    }} 
+  />
+</Alert>
 
 
 ## Coverage-Guided REST API Fuzzing voor Veiligere Digitale Overheidsdiensten
@@ -17,7 +29,7 @@ In een tijd waarin digitale overheidsdiensten steeds vaker via [REST API’s](..
 
 ## How to
 
-[![How to use WuppieFuzz? - YouTube](./image/demo_video.png)](https://www.youtube.com/watch?v=-oR4d9aXrqo)
+[![How to use WuppieFuzz? - YouTube](./img/demo_video.png)](https://www.youtube.com/watch?v=-oR4d9aXrqo)
 
 
 ## Wat is WuppieFuzz?
@@ -46,9 +58,7 @@ WuppieFuzz biedt een krachtige, toegankelijke en uitbreidbare oplossing voor het
 
 ---
 
-## Over de auteur
 
-<!-- <Author id="thomas-rooijakkers" /> -->
 
 <Link href="https://github.com/TNO-S3/WuppieFuzz">
   Direct naar Github
