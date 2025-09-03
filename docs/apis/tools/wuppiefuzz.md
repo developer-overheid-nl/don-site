@@ -34,7 +34,7 @@ WuppieFuzz is gebouwd bovenop het [LibAFL-framework](https://github.com/AFLplusp
 - **Grey box**: met beperkte kennis en observatie van gedrag.
 - **White box**: met volledige toegang tot de broncode en interne structuur.
 
-Op basis van een [OpenAPI-specificatie](../openapi-specification) genereert WuppieFuzz automatisch zinvolle sequenties van HTTP-requests. Deze sequenties worden vervolgens gemuteerd om diepere logica en edge cases in de API te bereiken. De tool meet test coverage via responscodes en/of via instrumentatie van de backend (bijv. met `JaCoCo` voor Java of `coverage.py` voor Python).
+Op basis van een [OpenAPI-specificatie](../openapi-specification) genereert WuppieFuzz automatisch zinvolle sequenties van HTTP-requests. Deze sequenties worden vervolgens gemuteerd om diepere logica en edge cases in de API te bereiken. De tool meet test coverage via response codes en/of via instrumentatie van de backend (bijv. met `JaCoCo` voor Java of `coverage.py` voor Python).
 
 ## Waarom is WuppieFuzz Relevant voor de Overheid?
 REST API’s vormen de ruggengraat van veel overheidsapplicaties. Denk aan systemen voor burgerzaken, vergunningverlening of gegevensuitwisseling tussen departementen. WuppieFuzz helpt ontwikkelaars en testers om:
