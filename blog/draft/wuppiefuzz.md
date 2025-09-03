@@ -7,7 +7,7 @@ draft: true
 # WuppieFuzz: Coverage-Guided REST API Fuzzing voor Veiligere Digitale Overheidsdiensten
 In een tijd waarin digitale overheidsdiensten steeds vaker via [REST API’s](../2025/07/10/openapi-31-in-zicht#van-rest-naar-http) communiceren, is het waarborgen van de veiligheid van deze interfaces cruciaal. **[WuppieFuzz](https://github.com/TNO-S3/WuppieFuzz)**, ontwikkeld door [TNO](https://tno.nl), is een open-source, coverage-guided fuzzer die specifiek is ontworpen voor het testen van REST API’s. Het doel: kwetsbaarheden en bugs opsporen voordat ze misbruikt kunnen worden, met een sterke focus op gebruiksvriendelijkheid, modulariteit en inzichtelijkheid.
 
-![Logo of WuppieFuzz](https://raw.githubusercontent.com/TNO-S3/WuppieFuzz/459193a9e423b40b561d24bf2de9d9f85b14b887/assets/WuppieFuzz.svg)
+![Logo of WuppieFuzz](./img/WuppieFuzz.svg)
 
 <!-- truncate -->
 
