@@ -30,7 +30,7 @@ In een tijd waarin digitale overheidsdiensten steeds vaker via [REST API’s](/b
 [![How to use WuppieFuzz? - YouTube](./img/demo_video.png)](https://www.youtube.com/watch?v=-oR4d9aXrqo)
 
 
-## Wat is WuppieFuzz?
+## Hoe werkt WuppieFuzz?
 WuppieFuzz is gebouwd bovenop het [LibAFL-framework](https://github.com/AFLplusplus/LibAFL) en ondersteunt drie testmodi:
 - **Black box**: zonder kennis van de interne werking.
 - **Grey box**: met beperkte kennis en observatie van gedrag.
