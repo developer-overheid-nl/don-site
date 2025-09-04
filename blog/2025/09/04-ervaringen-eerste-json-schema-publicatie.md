@@ -4,7 +4,7 @@ tags: [json-schema, openapi, oas, api-design, uml, geodata]
 ---
 # Ervaringen eerste Geonovum JSON-schema publicatie
 
-Op 31 oktober 2024 publiceerde [Geonovum](https://www.geonovum.nl) voor het eerst een JSON-schema bij een informatiemodel. Het betrof de publicatie van van versie 3.0 van het Informatiemodel Externe Veiligheid: [(IMEV)](https://www.geonovum.nl/geo-standaarden/informatiemodel-externe-veiligheid). Daarnaast is er ook een suggestie voor een OpenApi Specificatie (OAS) gepubliceerd. In deze blog worden de ervaringen gedeeld die Geonovum daarmee heeft opgedaan in de hoop dat anderen daar van kunnen leren.
+Op 31 oktober 2024 publiceerde [Geonovum](https://www.geonovum.nl) voor het eerst een JSON-schema bij een informatiemodel. Het betrof de publicatie van versie 3.0 van het Informatiemodel Externe Veiligheid: [(IMEV)](https://www.geonovum.nl/geo-standaarden/informatiemodel-externe-veiligheid). Daarnaast is er ook een suggestie voor een OpenApi Specificatie (OAS) gepubliceerd. In deze blog worden de ervaringen gedeeld die Geonovum daarmee heeft opgedaan in de hoop dat anderen daar van kunnen leren.
 
 <!-- truncate -->
 
