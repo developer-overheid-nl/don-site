@@ -113,9 +113,6 @@ gdpr:
   label: GDPR
 gegevensuitwisseling:
   label: Gegevensuitwisseling
-geo:
-  description: Informatie met een ruimtelijke component
-  label: Geografisch
 geodata:
   description: Geografische datasets en ruimtelijke gegevens
   label: Geodata
@@ -285,6 +282,9 @@ tool:
   label: Tool
 tutorial:
   label: Tutorial
+uml:
+  description: Unified Modeling Language
+  label: UML
 ux:
   description: "UX: User experience"
   label: UX
