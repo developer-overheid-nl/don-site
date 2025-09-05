@@ -554,6 +554,22 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
+.mb-6{
+  margin-bottom: 1rem !important;
+}
+
 .menu__link--active {
   font-weight: 700;
+}
+
+.docs-author{
+  margin-bottom: 0 !important;
+}
+
+.docs-author .authorSocials_Fg3l{
+  display: none;
+}
+
+.docs-author .avatar__name{
+  margin-bottom: .25rem;
 }
