@@ -1,6 +1,6 @@
 ---
 authors: [tim-van-der-lippe]
-tags: [npm, javascript, nodejs, pnpm]
+tags: [npm, javascript, nodejs, node_modules, techdebt]
 draft: true
 ---
 # Overweeg om `node_modules` in git repositories te zetten
@@ -32,7 +32,9 @@ Dit omdat er vaak lagen op lagen van dependencies worden gebruikt om zo tot een 
 Het is daarom gebruikelijk om Gigabytes aan disk space kwijt te zijn aan de `node_modules` van alle projecten waar je aan werkt.
 Hier zijn al vaker memes van gemaakt, dus deze blog post zal over deze trend niet verder uitwijden.
 
-[INSERT AFBEELDING HIER](Meme van de grootte van een `node_modules` folder).
+![](https://i.redd.it/tfugj4n3l6ez.png)
+
+*Meme van de grootte van een `node_modules` folder. Source: /r/programmerhumor on Reddit*
 
 ## Een grote transitive dependency tree zorgt voor complexiteit
 
@@ -102,7 +104,7 @@ Er zijn uiteraard veel verbeteringen en iteraties op het product gedaan, maar is
 Dat komt grotendeels omdat Chromium dat ook nooit heeft gehad.
 Grote delen van de browser zijn stuk voor stuk herschreven, maar er heeft nooit een complete rewrite plaatsgevonden.
 
-De `node_modules` van DevTools staan in git: https://github.com/ChromeDevTools/devtools-frontend/tree/main/node_modules
+De `node_modules` van DevTools staan in git: [devtools-frontend/node_modules](https://github.com/ChromeDevTools/devtools-frontend/tree/d07984fe8ccf1d14a287af2776ed7395436ebf96/node_modules).
 Ik raad ook zeker aan om de history van deze folder te bekijken en hoe er mee om wordt gegaan.
 Toen ik aan het product werkte deed ik ongeveer een keer per maand een dependency bump van packages en nog steeds is dat (grotendeels) de tendens.
 
@@ -142,4 +144,5 @@ Mooi, dan kan je gelijk ingrijpen.
 
 <!-- 
 @ LINKEDIN
+
 Tag je collega die de hele tijd nieuwe deps toevoegt -->
