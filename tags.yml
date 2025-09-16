@@ -188,6 +188,8 @@ nl-design-system:
   label: NL Design System
 nodejs:
   label: Node.js
+node_modules:
+  label: node_modules
 notificaties:
   label: Notificaties
 npm:
