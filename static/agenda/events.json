@@ -94,5 +94,37 @@
     "place": "Geonovum, Amersfoort",
     "summary": "In deze interactieve workshop bouw je zelf een klein sensornetwerk en maak je kennis met daarbij toepasbare standaarden. Met behulp van een microcontroller (het ding) ga je sensormetingen via het internet delen en bevraagbaar maken.",
     "url": "https://www.formdesk.com/geonovum/OGC_Internet_of_things_27aug"
+  },
+  {
+    "title": "FLEX op Dev.loer",
+    "start_date": "2025-09-25T09:00:00+02:00",
+    "end_date": "2025-09-25T16:00:00+02:00",
+    "place": "Dev.loer, Utrecht",
+    "summary": "Dev.loer te Utrecht biedt jou een flexwerkplek met koffie, wifi en breedbeeldschermen waar je prettig kunt werken. Werk jij als techneut voor een (semi)overheid? Reserveer je beeldscherm en ga -zelfstandig of samen- aan de slag!",
+    "url": "https://opensourcewerken.nl/events/view/a2b41daa-6cee-4851-8372-0e8599619587/flex-op-devloer"
+  },
+  {
+    "title": "Kennissessie opensourcewerken.nl en developer.overheid.nl",
+    "start_date": "2025-09-25T16:00:00+02:00",
+    "end_date": "2025-09-25T17:00:00+02:00",
+    "place": "Dev.loer, Utrecht",
+    "summary": "Elke maand organiseren we een kenissessie met een professional die vertelt over een interessante opensource-casus. Het onderwerp van deze sessie wordt nog bepaald.",
+    "url": "https://opensourcewerken.nl/events/view/a2b41daa-6cee-4851-8372-0e8599619587/flex-op-devloer"
+  },
+    {
+    "title": "FLEX op Dev.loer",
+    "start_date": "2025-10-30T09:00:00+02:00",
+    "end_date": "2025-10-30T16:00:00+02:00",
+    "place": "Dev.loer, Utrecht",
+    "summary": "Dev.loer te Utrecht biedt jou een flexwerkplek met koffie, wifi en breedbeeldschermen waar je prettig kunt werken. Werk jij als techneut voor een (semi)overheid? Reserveer je beeldscherm en ga -zelfstandig of samen- aan de slag!",
+    "url": "https://opensourcewerken.nl/events/view/1e6b8939-9989-43c5-a3cc-17e94f6a9a94/flex-op-devloer"
+  },
+  {
+    "title": "Kennissessie met Frank Niessink over tooling voor het monitoren van software kwaliteit",
+    "start_date": "2025-10-30T16:00:00+02:00",
+    "end_date": "2025-10-30T17:00:00+02:00",
+    "place": "Dev.loer, Utrecht",
+    "summary": "Frank Niessink, kwaliteitsmanager bij ICTU, vertelt over hoe je de kwaliteit van software binnen je organisatie kan monitoren.",
+    "url": "https://opensourcewerken.nl/events/view/a44a2447-1fe5-46ed-8243-033cffdc116e/opensourcewerken-hoe-werkt-dat"
   }
 ]
