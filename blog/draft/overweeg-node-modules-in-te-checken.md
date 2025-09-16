@@ -5,7 +5,7 @@ draft: true
 ---
 # Overweeg om `node_modules` in git repositories te zetten
 
-Een onorthodox statement: `node_modules` worden door package managers geinstalleerd en zijn dus geen source code die in een git repository thuis hoort.
+In de meeste projecten is dit de perceptie: `node_modules` worden door package managers geinstalleerd en zijn dus geen source code die in een git repository thuis hoort.
 Deze blog post probeert je aan het denken te zetten.
 Niet om je te overtuigen dat het altijd een goed idee is om `node_modules` in git repositories te zetten, maar om te realiseren dat in sommige projecten het verstandig kan zijn.
 
@@ -28,6 +28,7 @@ Er zijn heel veel packages op de NPM registry met een groot scala aan functional
 
 Dit is inherent aan de JavaScript community, waar de programmeertaal van nature weinig "out-of-the-box" aanleverde.
 Er is actief gepromoot om kleine packages te publiceren die een oplossing bieden voor een specifiek probleem.
+Het heeft namelijk waarde als ieder package 1 specifiek probleem oplost en zich daar op focust.
 
 Over tijd zagen we een trend: de `node_modules` folder in een regulier frontend project kan groot worden als gevolg van een gigantische dependency tree.
 Dit omdat er vaak lagen op lagen van dependencies worden gebruikt om zo tot een groter geheel te komen.
@@ -38,11 +39,19 @@ Hier zijn al vaker memes van gemaakt, dus deze blog post zal over deze trend nie
 
 *Meme van de grootte van een `node_modules` folder. Source: /r/programmerhumor on Reddit*
 
-## Een grote transitive dependency tree zorgt voor complexiteit
+## Een groot aantal dependencies resulteert in complexiteit
 
 Als we naar aspecten als security en dependency management kijken, dan zijn dat grote opgaven voor frontend projecten.
 
 De hoeveelheid transitive dependencies die (al dan niet onbewust) in een software applicatie terecht komen is dusdanig groot, dat analyse van al die packages lastig is.
+
+:::note
+
+Een transitive dependency is een dependency van een dependency (recursief gedefinieerd).
+Dit zijn dus alle dependencies die je in een project niet direct hebt gespecificeerd, maar die wel nodig zijn voor het geheel.
+
+:::
+
 Tegelijkertijd is de kans op "dependency rot" ook groter naarmate meer dependencies worden meegenomen.
 De kans dat 1 van alle packages in een `node_modules` in het afgelopen jaar niets aan is veranderd is groot.
 Dit zorgt ervoor dat als er een transitive dependency in een stilstaande dependency zit, en deze package niet wordt geupdate, het ook in alle `node_modules` van de afnemers zit.
@@ -62,6 +71,7 @@ Ik verwacht dan ook niet dat het schoonhouden van een dependency tree hoog op he
 Hier is wel een verschil in hoe in een private context en in de publieke sector mee om wordt gegaan.
 Waar in een private context er gekeken wordt of een product nog levensvatbaar is, heeft een publieke sector projecten die een stuk langer lopen uit (wettelijke) noodzaak.
 Als er een paar jaar later er dan vulnerabilities ergens in een transitive dependency tree zitten, kan dat lastiger worden voor deze langlopende projecten.
+Daarom is het uitermate belangrijk om kritisch te kijken naar all dependencies in een langlopend project.
 
 ## Inzicht in `node_modules`
 
@@ -142,6 +152,8 @@ Deze stappen geven de eerste concrete resultaten, waardoor je beter weet hoe je 
 Als je dit vaker aanpakt, dan zal je op een gegeven moment concluderen dat het doenlijk is.
 Dit kan als het enkele honderden Megabytes is, git vindt dat geen probleem.
 
+## Conclusie
+
 Zorg er dan voor dat je frequent (ik raad maandelijks aan), packages up-to-date houdt.
 Voor langdurige projecten is het nieuwste van het nieuwste namelijk niet altijd nodig en in mijn ervaring is maandelijks een goede termijn om het bij te benen.
 
@@ -152,3 +164,4 @@ Mooi, dan kan je gelijk ingrijpen.
 @ LINKEDIN
 
 Tag je collega die de hele tijd nieuwe deps toevoegt -->
+
