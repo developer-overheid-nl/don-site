@@ -1,7 +1,6 @@
 ---
 authors: [tim-van-der-lippe]
-tags: [npm, javascript, nodejs, node_modules, techdebt]
-draft: true
+tags: [npm, javascript, nodejs, node_modules, technische-schuld]
 ---
 # Overweeg om `node_modules` in git repositories te zetten
 
@@ -35,9 +34,9 @@ Dit omdat er vaak lagen op lagen van dependencies worden gebruikt om zo tot een 
 Het is daarom gebruikelijk om Gigabytes aan disk space kwijt te zijn aan de `node_modules` van alle projecten waar je aan werkt.
 Hier zijn al vaker memes van gemaakt, dus deze blog post zal over deze trend niet verder uitwijden.
 
-![](https://i.redd.it/tfugj4n3l6ez.png)
+![](img/npm_meme.png)
 
-*Meme van de grootte van een `node_modules` folder. Source: /r/programmerhumor on Reddit*
+*Meme over van de grootte van een `node_modules` folder. Source: /r/programmerhumor on Reddit*
 
 ## Een groot aantal dependencies resulteert in complexiteit
 
