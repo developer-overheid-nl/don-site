@@ -22,8 +22,10 @@ Met continue opschoonacties is het doenlijk om deze stap te nemen, wat voor lang
 
 ## Wat zijn `node_modules`?
 
-Voor deze en gene die geen frontend software development hebben gedaan, `node_modules` is een folder die JavaScript packages bevat die door andere developers in de [NPM registry](https://www.npmjs.com/) zijn gezet.
-Er zijn heel veel packages op de NPM registry met een groot scala aan functionaliteit en diepgang die ze bieden.
+Voor degenen die geen frontend software development hebben gedaan, `node_modules` is een folder die JavaScript packages bevat die door andere developers in de [NPM registry](https://www.npmjs.com/) zijn gezet.
+
+Er zijn heel veel packages op de NPM registry met een groot scala aan functionaliteit en diepgang.
+
 Dit is inherent aan de JavaScript community, waar de programmeertaal van nature weinig "out-of-the-box" aanleverde.
 Er is actief gepromoot om kleine packages te publiceren die een oplossing bieden voor een specifiek probleem.
 
@@ -38,13 +40,15 @@ Hier zijn al vaker memes van gemaakt, dus deze blog post zal over deze trend nie
 
 ## Een grote transitive dependency tree zorgt voor complexiteit
 
-Als we naar aspecten als security en dependency management kijken, dan is dat een grote opgave voor frontend projecten.
+Als we naar aspecten als security en dependency management kijken, dan zijn dat grote opgaven voor frontend projecten.
+
 De hoeveelheid transitive dependencies die (al dan niet onbewust) in een software applicatie terecht komen is dusdanig groot, dat analyse van al die packages lastig is.
 Tegelijkertijd is de kans op "dependency rot" ook groter naarmate meer dependencies worden meegenomen.
 De kans dat 1 van alle packages in een `node_modules` in het afgelopen jaar niets aan is veranderd is groot.
 Dit zorgt ervoor dat als er een transitive dependency in een stilstaande dependency zit, en deze package niet wordt geupdate, het ook in alle `node_modules` van de afnemers zit.
 
-Het is lastig om dit overzichtelijk te houden, wat in de praktijk resulteert in het vergeten of actief ontwijken van updaten van problematische dependencies.
+Het is lastig om dit overzichtelijk te houden, wat in de praktijk resulteert in het vergeten of actief ontwijken van het updaten van problematische dependencies.
+
 En dat is ook menselijk, want het kost simpelweg veel tijd en energie om hier constant bovenop te zitten.
 Als de problemen dan een dermate grootte hebben dat het niet bij te benen is, dan haakt men af.
 Dit zorgt dus inherent voor dat er meer stilstaande packages komen en het probleem verergert.
@@ -53,7 +57,7 @@ Dit zorgt dus inherent voor dat er meer stilstaande packages komen en het proble
 
 Deze stilstaande packages en resulterende tech debt zullen in elk project voorkomen, daar is ook niet per se iets verkeerds aan.
 Er moeten prioriteiten worden gesteld en met een naderende deadline zullen er scherpe keuzes worden gemaakt.
-Het schoonhouden van een dependency tree verwacht ik niet van dat het hoog op het lijstje staat.
+Ik verwacht dan ook niet dat het schoonhouden van een dependency tree hoog op het prioriteitenlijstje zal staan.
 
 Hier is wel een verschil in hoe in een private context en in de publieke sector mee om wordt gegaan.
 Waar in een private context er gekeken wordt of een product nog levensvatbaar is, heeft een publieke sector projecten die een stuk langer lopen uit (wettelijke) noodzaak.
@@ -61,7 +65,8 @@ Als er een paar jaar later er dan vulnerabilities ergens in een transitive depen
 
 ## Inzicht in `node_modules`
 
-Tot nu toe hebben we het veel gehad over `node_modules` en de problemen, maar nog niks over waarom het dan in een git repository moet worden gezet.
+Tot nu toe hebben we het veel gehad over `node_modules` en de problemen, maar nog niks over waarom het dan in een git repository zou moeten worden gezet.
+
 Het is geen doel op zich om het in een git repository te zetten, maar op basis van mijn eigen ervaring is het wel de makkelijkste manier om inzicht te verkrijgen.
 Vaak is het probleem wel bekend bij developers, maar het moment dat er een `git add node_modules/` wordt gedaan zien developers pas echt hoe groot de schade is.
 
@@ -106,7 +111,8 @@ Grote delen van de browser zijn stuk voor stuk herschreven, maar er heeft nooit 
 
 De `node_modules` van DevTools staan in git: [devtools-frontend/node_modules](https://github.com/ChromeDevTools/devtools-frontend/tree/d07984fe8ccf1d14a287af2776ed7395436ebf96/node_modules).
 Ik raad ook zeker aan om de history van deze folder te bekijken en hoe er mee om wordt gegaan.
-Toen ik aan het product werkte deed ik ongeveer een keer per maand een dependency bump van packages en nog steeds is dat (grotendeels) de tendens.
+Toen ik aan het product werkte deed ik ongeveer een keer per maand een dependency bump van packages en nog steeds is dat (grotendeels) de gang van zaken.
+
 
 Het toevoegen van de `node_modules` gaf ons direct inzicht in problematische packages en ik heb toen zelf met de open source community samengewerkt om packages kleiner te maken.
 
