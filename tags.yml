@@ -111,6 +111,9 @@ front-end:
 fsc:
   description: Federated Service Connectivity
   label: FSC
+ftv:
+  description: Federatieve Toegangsverlening
+  label: FTV
 gdpr:
   description: "General Data Protection Regulation (GDPR) "
   label: GDPR
@@ -151,6 +154,9 @@ javascript:
   label: JavaScript
 jwt:
   label: JSON Web Tokens (JWT of JWT's)
+kennisplatform-apis:
+  description: "Kennisplatform Api's"
+  label: Kennisplatform API's
 kiesraad:
   description: "De Kiesraad: de nationale Kiesraad."
   label: Kiesraad
