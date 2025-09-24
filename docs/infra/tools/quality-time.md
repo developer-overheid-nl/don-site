@@ -8,9 +8,19 @@ tags:
 title: "Quality-time"
 ---
 
-:::info[Bijdrage van ICTU]
-Dit artikel is geschreven door **Frank Niessink**, kwaliteitsmanager bij ICTU
-:::
+
+import { Link, Icon, Alert, Heading } from "@rijkshuisstijl-community/components-react";
+import Author from '@theme/Blog/Components/Author';
+
+<Alert type="info" className="mb-6">
+  <Author 
+    author={{
+      name: "Bijdrage door: Frank Niessink",
+      title: "Kwaliteitsmanager bij ICTU",
+      url: "https://github.com/fniessink"
+    }} 
+  />
+</Alert>
 
 **tl;dr:** Quality-time is een open source tool die je kan helpen de kwaliteit van je maatwerksoftware te bewaken en technical debt te managen.
 
