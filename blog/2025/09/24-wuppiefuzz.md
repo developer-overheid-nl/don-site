@@ -1,7 +1,6 @@
 ---
 authors: [thomas-rooijakkers]
 tags: [rest, api, security, security-by-design, validator, rust, tool, openapi, open-source, development, devops]
-draft: true
 ---
 
 # WuppieFuzz: Coverage-Guided REST API Fuzzing voor veiligere digitale Overheidsdiensten
