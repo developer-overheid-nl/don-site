@@ -128,3 +128,9 @@ forum-standaardisatie:
     github: forumstandaardisatie
     mastodon: https://social.overheid.nl/@forumstandaardisatie
     linkedin: https://www.linkedin.com/company/forum-standaardisatie/
+
+pieter-bresters:
+  name: Pieter Bresters
+  title: Senior Adviseur - Geonovum
+  image_url: /img/authors/pieter-bresters.png
+  page: true

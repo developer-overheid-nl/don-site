@@ -1,6 +1,6 @@
 ---
 authors: [frank-terpstra]
-tags: [provenance, ldv, geo, ogc, ai, seo, llm, security, oauth, openapi, oidc, notificaties, asyncapi, websub]
+tags: [provenance, ldv, geodata, ogc, ai, seo, llm, security, oauth, openapi, oidc, notificaties, asyncapi, websub]
 ---
  
 # Verslag Open Geospatial Consortium (OGC) meeting
