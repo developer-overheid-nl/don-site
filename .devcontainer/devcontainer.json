@@ -1,0 +1,17 @@
+{
+    "name": "developer.overheid.nl",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "postCreateCommand": "pnpm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "davidanson.vscode-markdownlint"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "pnpmVersion": "latest"
+        }
+    }
+}
