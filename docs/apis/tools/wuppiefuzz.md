@@ -23,23 +23,18 @@ import Author from '@theme/Blog/Components/Author';
 ## Coverage-Guided REST API Fuzzing voor Veiligere Digitale Overheidsdiensten
 In een tijd waarin digitale overheidsdiensten steeds vaker via [REST API’s](/blog/2025/07/10/openapi-31-in-zicht#van-rest-naar-http) communiceren, is het waarborgen van de veiligheid van deze interfaces cruciaal. **[WuppieFuzz](https://github.com/TNO-S3/WuppieFuzz)**, ontwikkeld door [TNO](https://tno.nl), is een open-source, coverage-guided fuzzer die specifiek is ontworpen voor het testen van REST API’s. Het doel: kwetsbaarheden en bugs opsporen voordat ze misbruikt kunnen worden, met een sterke focus op gebruiksvriendelijkheid, modulariteit en inzichtelijkheid.
 
+![Logo of WuppieFuzz](./img/WuppieFuzz.svg)
 
-![Logo of WuppieFuzz](https://raw.githubusercontent.com/TNO-S3/WuppieFuzz/459193a9e423b40b561d24bf2de9d9f85b14b887/assets/WuppieFuzz.svg)
-
-
-## How to
+## Hoe werkt WuppieFuzz?
 
 [![How to use WuppieFuzz? - YouTube](./img/demo_video.png)](https://www.youtube.com/watch?v=-oR4d9aXrqo)
 
-
-## Wat is WuppieFuzz?
 WuppieFuzz is gebouwd bovenop het [LibAFL-framework](https://github.com/AFLplusplus/LibAFL) en ondersteunt drie testmodi:
 - **Black box**: zonder kennis van de interne werking.
 - **Grey box**: met beperkte kennis en observatie van gedrag.
 - **White box**: met volledige toegang tot de broncode en interne structuur.
 
-
-Op basis van een [OpenAPI-specificatie](../openapi-specification) genereert WuppieFuzz automatisch zinvolle sequenties van HTTP-requests. Deze sequenties worden vervolgens gemuteerd om diepere logica en edge cases in de API te bereiken. De tool meet test coverage via responscodes en/of via instrumentatie van de backend (bijv. met `JaCoCo` voor Java of `coverage.py` voor Python).
+Op basis van een [OpenAPI-specificatie](../openapi-specification) genereert WuppieFuzz automatisch zinvolle sequenties van HTTP-requests. Deze sequenties worden vervolgens gemuteerd om diepere logica en edge cases in de API te bereiken. De tool meet test coverage via response codes en/of via instrumentatie van de backend (bijv. met `JaCoCo` voor Java of `coverage.py` voor Python).
 
 ## Waarom is WuppieFuzz Relevant voor de Overheid?
 REST API’s vormen de ruggengraat van veel overheidsapplicaties. Denk aan systemen voor burgerzaken, vergunningverlening of gegevensuitwisseling tussen departementen. WuppieFuzz helpt ontwikkelaars en testers om:
