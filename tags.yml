@@ -89,6 +89,10 @@ eidas:
   label: eIDAS
 eu:
   label: Europe
+eudi:
+  label: European Digital Identity Wallet
+edi:
+  label: Europese Digitale Identiteit (EDI)
 fds:
   description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties. \_"
   label: Federatief Data Stelsel
