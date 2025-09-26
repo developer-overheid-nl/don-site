@@ -1,5 +1,5 @@
 ---
-tags: [adr, api, eda]
+tags: [adr, api, eda, webhooks]
 ---
 
 # Webhooks
@@ -53,11 +53,46 @@ Meer informatie hierover vind je ook in de richtlijnen van de [NL API Strategie]
 
 ## Webhooks en de API-strategie
 
-Binnen de Nederlandse API-strategie worden webhooks gezien als een belangrijk **event-driven patroon**. Voor lichte notificaties zijn webhooks vaak de snelste en goedkoopste oplossing. Voor complexere scenario’s, zoals veel events of hoge betrouwbaarheidseisen, kan worden gekeken naar alternatieven als:
+Binnen de Nederlandse API-strategie worden webhooks gezien als het belangrijkste **event-driven patroon**. Voor lichte notificaties zijn webhooks ook de snelste en goedkoopste oplossing. Voor complexere scenario’s, zoals veel events of hoge betrouwbaarheidseisen, kan worden gekeken naar alternatieven als:
 
-- **Server-Sent Events (SSE)**  
-- **WebSockets**  
-- **CloudEvents**-gebaseerde berichtafhandeling  
+- **Server-Sent Events (SSE)** - broadcasting van actuele informatie
+- **WebSockets** - een open kanaal voor streams van data
+- **CloudEvents** - gestructureerde berichtafhandeling  
+
+Webhooks zijn ook eenvoudig op te nemen in de het API ontwerp door ze te specificeren in de Open API Specification (OAS)
+
+```YAML
+openapi: 3.1.0
+info:
+  title: Payment Webhook API
+  version: "1.0.0"
+  description: |
+    Voorbeeld van een webhook definitie in OAS 3.1.
+    Dit webhook wordt aangeroepen wanneer een betaling is geslaagd.
+webhooks:
+  paymentSucceeded:
+    post:
+      summary: "Webhook ontvangen bij succesvolle betaling"
+      description: |
+        Deze webhook wordt door de betalingsprovider aangeroepen
+        en bevat event metadata in CloudEvents headers (binary mode).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: integer
+                  description: Salaris
+                  example: 12345.67
+                currency:
+                  type: string
+                  description: Valuta
+                  example: EUR
+      parameters:
+```
 
 ## Voordelen en aandachtspunten
 

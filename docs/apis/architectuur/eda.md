@@ -14,17 +14,27 @@ Het traditionele model is vergelijkbaar met steeds opnieuw opvragen van je banks
 - Verspilling van resources – veel nutteloze calls.
 - Strakke koppeling – server en client zijn afhankelijk van elkaar.
 
-Met event-driven API’s wordt data gepusht zodra er een event plaatsvindt. "Je salaris betaald, je banksaldo is nu 12345,67" Dit levert drie belangrijke voordelen op:
+Met event-driven API’s wordt data (met een **HTTP POST**) gepusht zodra er een event plaatsvindt. "Je salaris is betaald, je banksaldo is nu 12345,67". Dit levert drie belangrijke voordelen op:
 
 1. Real-time responsiviteit – updates verschijnen direct.
 2. Schaalbaarheid en veerkracht – services kunnen los van elkaar functioneren en schalen.
-3. Agiliteit – nieuwe functionaliteit kan eenvoudig inhaken op bestaande events.
+3. Agility – nieuwe functionaliteit kan eenvoudig inhaken op bestaande events.
+
+```HTTP
+POST /api/notifications HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "message": "Je salaris is betaald, je banksaldo is nu 12345,67"
+}
+```
 
 ## Communicatiepatronen
 
 Afhankelijk van je use case kies je een real-time patroon:
 
-- Webhooks – voor server-to-server notificaties, zoals een betaalprovider die een webshop informeert.
+- [Webhooks](./webhooks.md) – voor server-to-server notificaties, zoals een betaalprovider die een webshop informeert.
 - WebSockets – voor bi-directionele communicatie, geschikt voor chats of games.
 - Server-Sent Events (SSE) – voor éénrichtingsverkeer, zoals nieuwsfeeds of sportuitslagen.
 
@@ -33,7 +43,7 @@ Afhankelijk van je use case kies je een real-time patroon:
 Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 
 - Gebruik rijke payloads zodat consumers niet hoeven na te vragen.
-- pas de cloudevents standaard toe op basis van het NL profiel.
+- Pas de [Cloudevents](./cloudevents.md) standaard toe op basis van het NL profiel.
 - Ontwerp een duidelijke event-taxonomie met logische naamgeving.
 - Houd rekening met idempotentie voor dubbele events.
 - Voorzie in subscription mechanismen en foutafhandeling.
@@ -42,11 +52,11 @@ Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 
 Een moderne API-gateway is onmisbaar bij event-driven API’s denk aan:
 
-- Protocoltranslatie – vertaal bijvoorbeeld WebSockets naar Kafka.
+- Protocoltranslatie – vertaal bijvoorbeeld Webhooks naar Kafka.
 - Beveiliging – handhaaf standaarden als OAuth 2.0 en JWT ook op event-stromen.
 - Observability – verzamel monitoring en logging centraal.
 
-De trend gaat richting event-native API management: REST, gRPC en event-stromen vanuit één platform beheren. Dat biedt consistentie en een betere developer experience.
+De trend gaat richting event-native API management: REST, gRPC en Webhooks vanuit één platform beheren. Dat biedt consistentie en een betere developer experience.
 
 ## Tot slot
 
