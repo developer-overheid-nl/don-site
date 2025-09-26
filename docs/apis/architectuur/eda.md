@@ -52,4 +52,4 @@ De trend gaat richting event-native API management: REST, gRPC en event-stromen 
 
 De stap naar event-driven API’s is een strategische keuze om schaalbare, veerkrachtige en real-time applicaties te bouwen. Ontwerp met best practices, maak gebruik van een moderne gateway en ontwerp niet alleen voor het request, maar voor het nu.
 
-Werk je bij een overheid en wil je experimenteren met event-driven API’s? Deel je ervaringen via developer.overheid.nl of neem deel aan het [Kennisplatform API's](https://developer.overheid.nl/communities/kennisplatform-apis/) en deel onderling ervaringe rond de NL API Strategie en eventoriëntatie. Samen maken we API’s slimmer, robuuster en toekomstbestendig.
+Werk je bij een overheid en wil je experimenteren met event-driven API’s? Deel je ervaringen via developer.overheid.nl of neem deel aan het [Kennisplatform API's](https://developer.overheid.nl/communities/kennisplatform-apis/) en deel onderling ervaringen rond de NL API Strategie en eventoriëntatie. Samen maken we API’s slimmer, robuuster en toekomstbestendig.
