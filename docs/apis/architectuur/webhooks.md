@@ -45,7 +45,8 @@ Een voorbeeld van een payload kan er zo uitzien:
 
 Omdat webhooks vaak publieke endpoints aanspreken, is beveiliging essentieel. Veelgebruikte methoden zijn:
 
-- **Secret tokens**: meegeven van een geheim in de header, zodat de ontvanger de afzender kan verifiëren.  
+- **JWT tokens**: meegeven van gesigned token in de header, zodat de ontvanger de payload kan verifiëren.
+- **Opaque tokens**: meegeven van een geheim in de header, zodat de ontvanger de afzender kan verifiëren.  
 - **Digitale handtekeningen**: de payload wordt ondertekend, waardoor integriteit en authenticiteit kunnen worden gecontroleerd.  
 - **HTTPS**: altijd gebruiken om transportbeveiliging te garanderen.  
 
@@ -116,3 +117,5 @@ Voor meer informatie:
 
 - [NL API Strategie – Eventgedreven werken](https://developer.overheid.nl/communities/kennisplatform-apis/)
 - [CloudEvents standaard bij Geonovum](https://www.gemmaonline.nl/wiki/De_CloudEvents_standaard)
+- [Server-sent events wiki](https://en.wikipedia.org/wiki/Server-sent_events)
+- [WebSocket wiki](https://en.wikipedia.org/wiki/WebSocket)

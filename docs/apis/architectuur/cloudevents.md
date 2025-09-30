@@ -17,7 +17,7 @@ CloudEvents is een internationale standaard voor het uniform beschrijven van eve
 ### Besluitvorming Forum Standaardisatie
 
 - **4 december 2024 – Intakefase**  
-  Het Forum Standaardisatie stemde in met het intakeadvies om het *NL GOV profile for CloudEvents* in procedure te nemen voor plaatsing op de lijst met verplichte standaarden (“Pas toe of leg uit”).  
+  Het Forum Standaardisatie stemde in met het intakeadvies om het *"NL GOV profile for CloudEvents"* in procedure te nemen voor plaatsing op de lijst met verplichte standaarden (“Pas toe of leg uit”).  
   Bron: [intakeadvies NL GOV profile for CloudEvents (PDF)](https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden/cloudevents/20241204-intakeadvies-NL-GOV-profile-for-CloudEvents.pdf).
 
 - **19 juni 2025 – Expertadvies**  
@@ -25,15 +25,15 @@ CloudEvents is een internationale standaard voor het uniform beschrijven van eve
   Bron: [expertadvies NL GOV profile for CloudEvents (PDF)](https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden/cloudevents/20250619-Expertadvies-NL-GOV-profile-for-CloudEvents.pdf).
 
 - **25 september 2025 – Forumadvies**  
-  Het Forum Standaardisatie heeft ingestemd met het advies aan het OBDO om het *NL GOV profile for CloudEvents* verplicht te stellen (“Pas toe of leg uit”). Daarnaast is Logius het predicaat **‘Uitstekend beheer’** toegekend voor deze standaard.  
+  Het Forum Standaardisatie heeft ingestemd met het advies aan het [OBDO](https://pgdi.nl/) om het *"NL GOV profile for CloudEvents"* verplicht te stellen (“Pas toe of leg uit”). Daarnaast is Logius het predicaat **‘Uitstekend beheer’** toegekend voor deze standaard.  
 
 ## Wat is het NL GOV profile for CloudEvents?
 
 Het Nederlandse profiel geeft richtlijnen voor hoe overheidsorganisaties CloudEvents moeten gebruiken, zodat er interoperabiliteit ontstaat tussen systemen en sectoren. Het NL GOV profiel specificeert onder meer:
 
-- uniforme naamgeving en metadata;
-- afspraken over payload en headers;
-- toepassing in notificatieservices van de overheid.
+- Uniforme naamgeving en metadata.
+- Afspraken over payload en headers.
+- Toepassing in notificatieservices van de overheid.
 
 **Een voorbeeld van een cloudevent wat is opgenomen in de standaard:**
 
@@ -74,8 +74,8 @@ Naast het Nederlandse profiel zijn ook een drietal handreikingen gemaakt die toe
 
 Het gebruik van CloudEvents en het NL GOV profiel helpt de overheid om:
 
-- **Realtime** en **event-driven** te werken in ketens en ecosystemen;
-- **Losse koppelingen** te realiseren tussen systemen, waardoor onderhoud en innovatie eenvoudiger worden;
+- **Realtime** en **event-driven** te werken in ketens en ecosystemen.
+- **Losse koppelingen** te realiseren tussen systemen, waardoor onderhoud en innovatie eenvoudiger worden.
 - **Interoperabiliteit** te garanderen, zodat alle overheidsorganisaties dezelfde taal spreken in event-uitwisseling.
 
 ## Meer informatie

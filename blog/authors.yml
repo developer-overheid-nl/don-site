@@ -46,6 +46,15 @@ martin-van-der-plas:
     linkedin: martinvanderplas
     github: mrtn78
 
+stas-mironov:
+  name: Stas Mironov
+  title: Architect/API Adviseur - Logius
+  image_url: https://avatars.githubusercontent.com/u/10722451?v=4
+  page: true
+  socials:
+    linkedin: samironov
+    github: TheBonheurs
+
 frank-niessink:
   name: Frank Niessink
   title: Kwaliteitsmanager - ICTU
