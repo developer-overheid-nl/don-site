@@ -566,7 +566,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 0 !important;
 }
 
-.docs-author .authorSocials_Fg3l{
+.avatar__intro > :last-child{
   display: none;
 }
 
