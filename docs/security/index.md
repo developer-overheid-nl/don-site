@@ -5,14 +5,6 @@ sidebar_position: 1
 
 In een wereld die snel verandert en waar geopolitieke verschuivingen plaatsvinden, wordt security een steeds crucialer thema. Het is daarom belangrijker dan ooit om proactief kwetsbaarheden te monitoren en ervoor te zorgen dat software altijd up-to-date is. In dit thema vind je een overzicht van relevante securitystandaarden en beschikbare tools.
 
-
-
-## Monitoring met OpenKAT
-
-OpenKAT is ontwikkeld om de (beveiligings-)status van informatiesystemen te monitoren, analyseren en op te slaan.
-
-- Lees meer over [**OpenKAT**](./tools/openkat.md)
-
 ## Bronnen
 
 ### Nationaal Cyber Security Centrum (NCSC)

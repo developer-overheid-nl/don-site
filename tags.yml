@@ -89,6 +89,10 @@ eidas:
   label: eIDAS
 eu:
   label: Europe
+eudi:
+  label: European Digital Identity
+edi:
+  label: Europese Digitale Identiteit (EDI)
 fds:
   description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties. \_"
   label: Federatief Data Stelsel
@@ -298,6 +302,8 @@ vng:
   label: VNG
 vscode:
   label: VS Code
+wallet:
+  label: Wallet
 wcag:
   description: Web Content Accessibility Guidelines
   label: WCAG
