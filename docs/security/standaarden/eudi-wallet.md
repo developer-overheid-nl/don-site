@@ -1,5 +1,5 @@
 ---
-tags: [eu, edi, eudi, eidas, interoperability, security-by-design, privacy]
+tags: [eu, edi, eudi, eidas, wallet, interoperability, security-by-design, privacy]
 ---
 
 # EUDI Wallet
@@ -16,7 +16,7 @@ Een **EUDI wallet** (in Nederland ook wel de EDI-wallet of NL-Wallet genoemd) is
 
 Het unieke van een wallet applicatie (in het algemeen) is dat je als gebruiker zelf bepaalt welke gegevens je deelt en met wie. Daarmee krijg je regie over je eigen data. Gebruik van de EUDI wallet is vrijwillig. Huidige kanalen en inlogmiddelen blijven beschikbaar.
 
-De EUDI wallet wordt in alle EU-lidstaten erkend. Publieke organisaties moeten wallets accepteren zodra ze beschikbaar zijn, private partijen een jaar later. In Nederland wordt de **EDI-wallet** ontwikkeld die gratis beschikbaar komt en voldoet aan de eisen van inclusiviteit, toegankelijkheid en veiligheid. De broncode van deze applicatie is als [open source project]((https://oss.developer.overheid.nl/repositories/minbzk-nl-wallet-9632)) gepubliceerd. Naast de publieke wallet kunnen in de toekomst ook private aanbieders toetreden, mits zij voldoen aan de eIDAS-eisen.  
+De EUDI wallet wordt in alle EU-lidstaten erkend. Publieke organisaties moeten wallets accepteren zodra ze beschikbaar zijn, private partijen een jaar later. In Nederland wordt de **EDI-wallet** ontwikkeld die gratis beschikbaar komt en voldoet aan de eisen van inclusiviteit, toegankelijkheid en veiligheid. De broncode van deze applicatie is als [open source project](https://oss.developer.overheid.nl/repositories/minbzk-nl-wallet-9632) gepubliceerd. Naast de publieke wallet kunnen in de toekomst ook private aanbieders toetreden, mits zij voldoen aan de eIDAS-eisen.  
 
 Meer info: [EUDI Architecture and Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/architecture-and-reference-framework-main/)
 

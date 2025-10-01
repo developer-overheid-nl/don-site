@@ -90,7 +90,7 @@ eidas:
 eu:
   label: Europe
 eudi:
-  label: European Digital Identity Wallet
+  label: European Digital Identity
 edi:
   label: Europese Digitale Identiteit (EDI)
 fds:
@@ -302,6 +302,8 @@ vng:
   label: VNG
 vscode:
   label: VS Code
+wallet:
+  label: Wallet
 wcag:
   description: Web Content Accessibility Guidelines
   label: WCAG
