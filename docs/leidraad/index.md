@@ -35,6 +35,7 @@ De leidraad bevat de volgende principes:
 - ### [12. Bepaal je inkoopstrategie](./inkoopstrategie/)
 - ### [13. Denk na over duurzaamheid](./duurzaamheid)
 
+De principes werken we uit in de vorm van één of meerdere richtlijnen per principe. Hiervoor gebruiken we dit [sjabloon](./richtlijn-sjabloon-v1.md).
 
 ### Contact
 
