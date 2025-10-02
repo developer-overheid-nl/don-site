@@ -18,7 +18,7 @@ Duurzaam beheer betekent dat je ervoor zorgt dat je web-applicatie veilig, effic
 
 ## Geautomatiseerd testen
 
-Door te investeren in geautomatiseerde testen, kan je de applicaties veiliger aanpassen en gaan ze langer mee.
+Door te investeren in geautomatiseerde testen, kan je de applicaties met minder risico aanpassen en gaan ze langer mee.
 
 - [Richtlijn geautomatiseerd testen](richtlijn-geautomatiseerd-testen.md).
 
