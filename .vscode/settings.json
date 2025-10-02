@@ -1,6 +1,12 @@
 {
+    "editor.formatOnSave": true,
     "[markdown]":{
-        "editor.formatOnSave": false
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[mdx]":{
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "cSpell.words": [
         "bsnk",
