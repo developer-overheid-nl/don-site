@@ -22,11 +22,17 @@ Het meest gebruikte type API wordt een REST API genoemd. Het gebruik van REST AP
 
 ### Consumers en providers
 
-Binnen een API landschap zijn de **consumer** (of client) en de **provider** (of server) de belangrijkste spelers. Tussen hen wordt een communicatiecontract
+In de NL API Strategie wordt er onderscheid gemaakt tussen een afnemer (**consumer**) en aanbieder (**provider**) van API's. 
+Tussen hen wordt een communicatiecontract
 gesloten, dat we vastleggen in een **OpenAPI specificatie**. 
 
-Zoals de namen al weggeven, is de consumer de afnemer en de provider de aanbieder van een API. Een provider is autoritatief over de informatie die
-het ontsluit. In diagrammen wordt de consumer meestal links getekend en de provider rechts. 
+De term consumer is soms breder dan enkel client; het kan zijn dat de consumer een poort moet openzetten
+   om bijvoorbeeld een webhook te kunnen afhandelen. Dit komt door het afnemen van het API contract
+   van de provider.
+De termen worden internationaal ook veelvuldig gebruikt, zoals bijvoorbeeld in 
+[consumer-driven contract testing](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/cdc-testing/).
+
+In diagrammen wordt de consumer meestal links getekend en de provider rechts. 
 Dit volgt de conventie waarbij we beginnen bij de initiatiefnemer: een verzoek stroomt van links naar rechts, een antwoord van rechts naar links.
 
 ```mermaid
@@ -42,6 +48,14 @@ graph LR
   c1 --"`Contract
         (OpenAPI)`"--- p1
 ```
+
+
+Door onderscheid te maken tussen consumers en providers, kunnen we uitspraken doen over andere API-gerelateerde aspecten, zoals
+
+- Versiebeheer. Welke veranderingen zijn backwards compatible, en welke zijn breaking?
+- Eigenaarschap. Een provider is autoritatief over de API en de informatie die het ontsluit.
+- Data lineage. Bij geschakelde microservices kan de herkomst van data worden herleid 
+  door de keten van consumer-provider relaties te volgen tot aan de oorspronkelijke, autoritatieve bron.
 
 ## Bronnen
 
