@@ -23,9 +23,11 @@ Door de software compositie analyse tools ook periodiek te draaien, kunnen deze 
 
 De volgende doelgroepen kunnen met security tools aan de slag:
 
-Developers richten de tools in en repareren de kwetsbaarheden.
+**Developers** richten de tools in en repareren de kwetsbaarheden.
 
-Security engineers beoordelen de risico's.
+**Security engineers** beoordelen de risico's.
+
+De **Chief Information Security Officer** (CISO) of andere verantwoordelijke bestuurder houdt de statistieken over de openstaande risico's in de gaten.
 
 ## Implementatie: Hoe implementeer je security tools?
 
@@ -93,4 +95,4 @@ Todo
 
 ### Bronnen op developer.overheid.nl
 
-- ?
+- Lees meer over [security in de kennisbank](https://developer.overheid.nl/kennisbank/security/).
