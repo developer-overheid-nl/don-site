@@ -82,7 +82,8 @@ Gebruik van PKIoverheid-certificaten wordt meestal afgedwongen als onderdeel van
 
 ### Beleid
 
-Gebruik van PKIoverheid is vaak verplicht bij het aansluiten op voorzieningen als DigiD en de Basisregitratie Personen (BRP). De beheerders van dergelijke voorzieningen kunnen aanvullende voorwaarden stellen aan informatie in het certificaat. Controleer dit vóór het aanvragen van certificaten.
+Gebruik van PKIoverheid is vaak verplicht bij het aansluiten op voorzieningen als DigiD en de Basisregistratie Personen (BRP). De beheerders van dergelijke voorzieningen kunnen aanvullende voorwaarden stellen aan informatie in het certificaat. Controleer dit vóór het aanvragen van certificaten.
+
 
 ### Standaarden
 
