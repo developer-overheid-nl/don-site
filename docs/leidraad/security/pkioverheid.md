@@ -41,8 +41,10 @@ PKIoverheid-certificaten zijn normale X.509-certificaten die onder een eigen roo
 
 1. Van PKIoverheid moet bij gebruik ook gecontroleerd worden of certificaten niet zijn ingetrokken. De Certificate Revocation Lists (CRLs) van de uitgevende CA's moet dus vanuit de productieomgeving gedownload kunnen worden.
 
-
 1. In veel toepassingen, zoals Digikoppeling, moet het [Organisatie Identificatie Nummer (OIN)](https://www.logius.nl/onze-dienstverlening/toegang/organisatie-identificatienummer) van de organisatie of het organisatieonderdeel in het ```Subject.serialNumber``` veld van het PKIoverheid-certificaat zijn opgenomen. Hiermee moet je rekening houden bij het maken van het Certificate Signing Request (CSR) dat je opstuurt naar je PKIoverheid-certificaatleverancier (CA).
+
+1. Voor testen is het mogelijk om TRIAL PKIoverheid certificaten te gebruiken. Zie [https://github.com/pkioverheid/g4-trial](https://github.com/pkioverheid/g4-trial).
+
 
 ### Methoden en technieken
 
