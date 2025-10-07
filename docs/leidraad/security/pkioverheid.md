@@ -63,7 +63,8 @@ Vraag ook na bij de beheerder of security officer of de organisatie een meer gea
 ### Succescriteria
 
 Wanneer voldoe je aan deze richtlijn?
-- De koppeling met externe systemen gebruiken PKIoverheid-certificaten waar nodig
+- De koppelingen met externe systemen gebruiken PKIoverheid-certificaten waar nodig
+
 - Je voert de relevante controles uit op de certificaten van je communicatiepartner(s), zoals op OIN en revocatiestatus.
 
 Wanneer ben je echt goed bezig?
