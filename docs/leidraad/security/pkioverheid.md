@@ -15,12 +15,11 @@ PKIoverheid-certificaten kunnen gebruikt worden voor:
 1. versleuteling van verbinding (mTLS) of bericht of document, of 
 1. verzegeling/ondertekening van bericht of document.
 
+PKIoverheid-certificaten worden sinds 2022 niet meer gebruikt voor publiek toegankelijke websites.
+
 ## Rationale: Waarom PKIoverheid-certificaten gebruiken?
 
 PKIoverheid is bedoeld voor situaties waarin meer zekerheid over de identiteit van de organisatie waarmee gegevens worden uitgewisseld noodzakelijk of wenselijk is. Bij de uitgifte van certificaten vinden specifieke controles plaats om zeker te zijn dat het certificaat inderdaad wordt aangevraagd door iemand die namens die organisatie mag handelen. De normen hiervoor zijn vastgelegd in het PKIoverheid-afsprakenstelsel.
-
-
-PKIoverheid-certificaten worden sinds 2022 niet meer gebruikt voor publiek toegankelijke websites maar wel voor systeem-systeem koppelingen en versleuteling en verzegeling/ondertekening van berichten en documenten.
 
 ## Doelgroep: Wie zijn betrokken?
 
@@ -58,7 +57,7 @@ Vraag ook na bij de beheerder of security officer of de organisatie een meer gea
 
 ### Gerelateerde richtlijnen
 
-- Gebruik van Digikoppeling-profielen als een [verplichte open standaard van het Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/verplicht).
+&ndash;
 
 ### Succescriteria
 
@@ -87,7 +86,7 @@ Gebruik van PKIoverheid is vaak verplicht bij het aansluiten op voorzieningen al
 
 ### Standaarden
 
-- [Digikoppeling](https://www.logius.nl/onze-dienstverlening/gegevensuitwisseling/digikoppeling)
+- Gebruik van PKIoverheid is verplicht binnen [Digikoppeling](https://www.logius.nl/onze-dienstverlening/gegevensuitwisseling/digikoppeling)
 - [X.509 ITU](https://www.itu.int/rec/T-REC-X.509)
 
 ### Communities
