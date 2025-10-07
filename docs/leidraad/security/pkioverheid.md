@@ -17,7 +17,8 @@ PKIoverheid-certificaten kunnen gebruikt worden voor:
 
 ## Rationale: Waarom PKIoverheid-certificaten gebruiken?
 
-PKIoverheid is bedoeld voor situaties waarin meer zekerheid over de identiteit van de organisatie waarmee gegevens worden uitgewisseld noodzakelijk wenselijk is. Bij de uitgifte van certificaten vinden specifieke controles plaats om zeker te zijn dat het certificaat inderdaad wordt aangevraagd door iemand die namens die organisatie mag handelen. De normen hiervoor zijn vastgelegd in het PKIoverheid-afsprakenstelsel.
+PKIoverheid is bedoeld voor situaties waarin meer zekerheid over de identiteit van de organisatie waarmee gegevens worden uitgewisseld noodzakelijk of wenselijk is. Bij de uitgifte van certificaten vinden specifieke controles plaats om zeker te zijn dat het certificaat inderdaad wordt aangevraagd door iemand die namens die organisatie mag handelen. De normen hiervoor zijn vastgelegd in het PKIoverheid-afsprakenstelsel.
+
 
 PKIoverheid-certificaten worden sinds 2022 niet meer gebruikt voor publiek toegankelijke websites maar wel voor systeem-systeem koppelingen en versleuteling en verzegeling/ondertekening van berichten en documenten.
 
