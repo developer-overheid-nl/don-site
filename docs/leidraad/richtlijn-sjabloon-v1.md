@@ -25,6 +25,8 @@ Vervang in het kopje hierboven "deze richtlijn" door de titel van de richtlijn.
 
 Beschrijf wat betrokken doelgroepen concreet met deze richtlijn kunnen doen. Introduceer eerst de doelgroepen met een zin in de vorm: "De volgende doelgroepen kunnen met geautomatiseerde tests aan de slag: developers en testers.". Vervolgens beschrijf je per doelgroep wat ze kunnen doen: "Developers kunnen...", "Testers beginnen met ...".
 
+Zorg dat de doelgroepen die je gebruikt opgenomen zijn in (./doelgroepen.yml).
+
 ## Implementatie: Hoe implementeer je deze richtlijn?
 
 Vervang in het kopje hierboven "deze richtlijn" door de titel van de richtlijn.
@@ -33,9 +35,15 @@ Vervang in het kopje hierboven "deze richtlijn" door de titel van de richtlijn.
 
 Beschrijf relevante methoden en technieken om de richtlijn te implementeren of uit te voeren. Gebruik per methode of techniek een subparagraaf met de naam van de methode of techniek als kopje. Geef bij elke methode en/of techniek aan of deze verplicht of optioneel is. Verplicht betekent dat je eigenlijk zonder de methode of techniek niet aan de richtlijn kan voldoen.
 
+Een methode of techniek is een beschreven werkwijze met een duidelijk herkenbare naam en een afgebakende scope. "CI/CD pijplijn opzetten" is dus geen methode of techniek, "GitOps" wel. "Unittesten" is geen methode of techniek, "Test-driven development" wel.
+
 ### Tools
 
 Beschrijf relevante categoriën van tools om de richtlijn te implementeren of uit te voeren. Gebruik per categorie een subparagraaf met de categorie als kopje. Per categorie van tools geef je een aantal bekende voorbeelden. Bij voorkeur open source, maar als de meestgebruikte tools commercieel zijn noem je die ook. Geef bij elke categorie van tools aan of deze verplicht of optioneel is. Verplicht betekent dat je eigenlijk zonder de tool niet aan de richtlijn kan voldoen.
+
+### Opleidingen
+
+Beschrijf relevante opleidingen en/of certificaten. Maak onderscheid tussen de doelgroepen waar relevant.
 
 ### Gerelateerde richtlijnen
 
