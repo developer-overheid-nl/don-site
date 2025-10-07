@@ -51,7 +51,8 @@ PKIoverheid-certificaten zijn technisch hetzelfde als "gangbare" X.509-certifica
 
 ### Tools
 
-Gangbare tools voor certificaatbeheer zijn openssl op Linux keytool in Java.
+Gangbare tools voor certificaatbeheer zijn openssl op Linux en keytool in Java.
+
 
 Vraag ook na bij de beheerder of security officer of de organisatie een meer geavanceerde certificaat- en keymanagement tool gebruikt.
 
