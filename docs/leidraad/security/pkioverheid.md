@@ -40,7 +40,8 @@ PKIoverheid-certificaten zijn normale X.509-certificaten die onder een eigen roo
 
 1. Het certificaat van de root CA van PKIoverheid (en afhankelijk van de implementatie ook de certificaten van de intermediate CA's) moet in de trust store geïmporteerd worden. Deze certificaten kun je downloaden van de [site van PKIoverheid](https://cert.pkioverheid.nl/).
 
-1. Van PKIoverheid moet bij gebruik ook gecontroleerd worden of certificaten niet zijn ingetrokken. De Certificate Revocation Lists (CRLs) van de uitgevende CA's moet dus vanuit productieomgeving gedownload kunnen worden.
+1. Van PKIoverheid moet bij gebruik ook gecontroleerd worden of certificaten niet zijn ingetrokken. De Certificate Revocation Lists (CRLs) van de uitgevende CA's moet dus vanuit de productieomgeving gedownload kunnen worden.
+
 
 1. In veel toepassingen, zoals Digikoppeling, moet het [Organisatie Identificatie Nummer (OIN)](https://www.logius.nl/onze-dienstverlening/toegang/organisatie-identificatienummer) van de organisatie of het organisatieonderdeel in het ```Subject.serialNumber``` veld van het PKIoverheid-certificaat zijn opgenomen. Hiermee moet je rekening houden bij het maken van het Certificate Signing Request (CSR) dat je opstuurt naar je PKIoverheid-certificaatleverancier (CA).
 
