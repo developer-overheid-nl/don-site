@@ -202,6 +202,7 @@ const config: Config = {
             { label: "Open Source", to: "/kennisbank/open-source" },
             { label: "Infrastructuur", to: "/kennisbank/infra" },
             { label: "Security", to: "/kennisbank/security" },
+            { label: "Programmeertalen", to: "/kennisbank/programmeertalen" },
             { label: "Leidraad", to: "/kennisbank/leidraad" },
           ],
         },
