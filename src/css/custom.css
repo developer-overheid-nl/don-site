@@ -196,6 +196,31 @@ html {
   align-items: flex-start;
 }
 
+.navbar__link {
+  font-weight: 400;
+  color: var(--don-grijs-700);
+}
+
+.navbar__brand .navbar__title {
+  font-weight: 400;
+  color: var(--don-grijs-700);
+}
+
+.rhc-theme[data-page="home"] .navbar__brand .navbar__title {
+  font-weight: 600;
+  color: var(--don-grijs-900);
+}
+
+.navbar__brand:hover .navbar__title,
+.navbar__brand:focus .navbar__title {
+  color: var(--don-grijs-900);
+}
+
+.navbar__link--active {
+  font-weight: 600;
+  color: var(--don-grijs-900);
+}
+
 .navbar__items--right {
   flex: 1;
 }
