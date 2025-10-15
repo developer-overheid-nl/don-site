@@ -92,6 +92,10 @@ eu:
 eda:
   description: Event Driven Architecture (EDA) is een architectuurparadigma waarin componenten communiceren door het detecteren, publiceren, en verwerken van events (gebeurtenissen), zodat systemen loosely coupled, schaalbaar en responsief zijn.
   label: Event Driven Architecture (EDA)
+eudi:
+  label: European Digital Identity
+edi:
+  label: Europese Digitale Identiteit (EDI)
 fds:
   description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties. \_"
   label: Federatief Data Stelsel
@@ -307,6 +311,8 @@ vng:
   label: VNG
 vscode:
   label: VS Code
+wallet:
+  label: Wallet
 wcag:
   description: Web Content Accessibility Guidelines
   label: WCAG

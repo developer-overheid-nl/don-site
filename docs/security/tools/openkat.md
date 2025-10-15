@@ -8,10 +8,18 @@ tags:
 title: "OpenKAT"
 ---
 
-:::info[Bijdrage van VWS]
-Dit artikel is geschreven door **Jan Klopper**, Leader Developer bij OpenKat (VWS)
-:::
+import { Link, Icon, Alert, Heading } from "@rijkshuisstijl-community/components-react";
+import Author from '@theme/Blog/Components/Author';
 
+<Alert type="info" className="mb-6">
+  <Author 
+    author={{
+      name: "Bijdrage door: Jan Klopper",
+      title: "Lead Developer OpenKAT",
+      url: "https://github.com/underdarknl"
+    }} 
+  />
+</Alert>
 
 
 OpenKAT is ontwikkeld om de (beveiligings-)status van informatiesystemen te monitoren, analyseren en op

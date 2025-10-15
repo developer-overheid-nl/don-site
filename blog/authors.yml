@@ -37,6 +37,15 @@ tom-ootes:
     github: tomootes
     mastodon: https://hostux.social/@tomootes
 
+thomas-rooijakkers:
+  name: Thomas Rooijakkers
+  title: Lead Scientist TNO
+  image_url: https://avatars.githubusercontent.com/u/49478940
+  page: true
+  socials:
+    linkedin: thomas-rooijakkers
+    github: ThomasTNO
+
 martin-van-der-plas:
   name: Martin van der Plas
   title: Implementatie ondersteuner - developer.overheid.nl

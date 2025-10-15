@@ -16,7 +16,7 @@ export default function DropdownNavbarItemDesktop({
 
   useEffect(() => {
     const handleClickOutside = (
-      event: MouseEvent | TouchEvent | FocusEvent
+      event: MouseEvent | TouchEvent | FocusEvent,
     ) => {
       if (
         !dropdownRef.current ||
@@ -44,9 +44,15 @@ export default function DropdownNavbarItemDesktop({
     labelsWithoutDropdown.includes(props.label);
 
   if (isSimpleLink) {
+    const { activeClassName, ...restProps } = props;
+    const simpleLinkActiveClass = activeClassName ?? "navbar__link--active";
     return (
       <div className="navbar__item">
-        <NavbarNavLink className={clsx("navbar__link", className)} {...props}>
+        <NavbarNavLink
+          className={clsx("navbar__link", className)}
+          activeClassName={simpleLinkActiveClass}
+          {...restProps}
+        >
           {props.children ?? props.label}
         </NavbarNavLink>
       </div>
