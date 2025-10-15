@@ -81,8 +81,7 @@ misbruiken om beheerdersrechten te krijgen.
 
 Omdat Rust een jonge taal is zijn er minder packages voor handen dan
 bijvoorbeeld in Python of in Java. Een voorbeeld hiervan noemt ook de Kiesraad
-in het
-[interview dat we met haar hielden](https://developer.overheid.nl/blog/2025/03/26/interview-kiesraad-rust#een-jonger-ecosysteem-betekent-minder-uitgebreide-libraries-voor-legacy-standaarden-bijvoorbeeld-xml).
+in het [interview dat we met haar hielden][kiesraad-interview].
 In het interview komt naar voren dat de libraries die er zijn, niet altijd even
 volwassen of uitgebouwd zijn. Ze noemen bijvoorbeeld de library `quick-xml` voor
 het verwerken van XML en zeggen hierover:
@@ -90,6 +89,9 @@ het verwerken van XML en zeggen hierover:
 "Je merkt dat de meest gebruikte XML library voor Rust (quick-xml) wel voldoet,
 maar minder volwassen en uitgebreid is dan wat je in andere talen vindt.
 Bijvoorbeeld in Java of .NET, die zijn ontwikkeld toen XML in opkomst was."
+
+[kiesraad-interview]:
+https://developer.overheid.nl/blog/2025/03/26/interview-kiesraad-rust#een-jonger-ecosysteem-betekent-minder-uitgebreide-libraries-voor-legacy-standaarden-bijvoorbeeld-xml
 
 ### 2. Steile learning curve
 
@@ -109,17 +111,21 @@ grootste nadelen van Rust.
 
 ### Cargo
 
-Cargo is Rust's officiële build system en package manager, de centrale tool die
+[Cargo] is Rust's officiële build system en package manager, de centrale tool die
 bijna alles rondom Rust development voor je afhandelt.
 
 ### Clippy
 
-Clippy is de linter van Rust en geeft je suggesties hoe je je code netter kan
+[Clippy] is de linter van Rust en geeft je suggesties hoe je je code netter kan
 schrijven. Het geeft je dus ook advies hoe je je functie zou kunnen refactoren.
 
 ### Cargo test
 
-Cargo test is het test-framework dat standaard mee komt met Rust.
+[Cargo test] is het test-framework dat standaard mee komt met Rust.
+
+[Cargo]: https://doc.rust-lang.org/cargo/
+[Clippy]: https://doc.rust-lang.org/clippy/
+[Cargo test]: https://doc.rust-lang.org/rustc/tests/index.html
 
 ## Toekomstbestendigheid
 
@@ -138,6 +144,12 @@ Rust is bijzonder geschikt voor:
 - **Data processing**: efficiënte verwerking van grote datasets
 
 ## Aan de slag
+
+De [Getting started page op rust-lang.org][getting-started] biedt een mooi
+overzicht van de belangrijkste stappen om Rust te installeren en gaan gebruiken,
+inclusief links naar uitgebreidere documentatie.
+
+[getting-started]: https://rust-lang.org/learn/get-started/
 
 <Grid>
   <Card
