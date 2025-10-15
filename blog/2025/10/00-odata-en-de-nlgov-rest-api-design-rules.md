@@ -53,7 +53,7 @@ Een vertaling van CSDL naar OpenAPI is mogelijk – en zelfs [gestandaardiseerd]
 
 ### 3. Beleidsmatige en interoperabiliteitsoverwegingen
 
-Binnen de publieke sector neemt de behoefte toe aan samenhang tussen open standaarden. De Nederlandse overheid streeft dan ook naar een coherent API-stelsel waar open standaarden, profielen en architectuurprincipes samenkomen. Denk hierbij bijvoorbeeld aan interoperabiliteit tussen initiatieven zoals [DCAT-AP-NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/), [OGC API](https://ogcapi.ogc.org/) en modelleringsstandaarden zoals [MIM](https://docs.geostandaarden.nl/mim/mim/#metagegeven-eenheid) en [NL-SBB](https://docs.geostandaarden.nl/nl-sbb/nl-sbb/).
+Binnen de publieke sector neemt de behoefte toe aan samenhang tussen open standaarden. De Nederlandse overheid streeft dan ook naar een coherent API-stelsel waar open standaarden, profielen en architectuurprincipes samenkomen. Denk hierbij bijvoorbeeld aan interoperabiliteit tussen initiatieven zoals [DCAT-AP-NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/), [OGC API](https://ogcapi.ogc.org/) en modelleringsstandaarden zoals [MIM](https://docs.geostandaarden.nl/mim/mim/) en [NL-SBB](https://docs.geostandaarden.nl/nl-sbb/nl-sbb/).
 
 OData vormt in dat opzicht een eigen ecosysteem, met een afwijkend query- en metadatamodel (CSDL) en een eigen set tools. Daardoor sluit het minder goed aan op bestaande Nederlandse en Europese API-profielen en beperkt het de mogelijkheid om gemeenschappelijke tooling of documentatie te hergebruiken. Voor organisaties die streven naar maximale interoperabiliteit binnen publieke stelsels is dit een belangrijk aandachtspunt.
 
