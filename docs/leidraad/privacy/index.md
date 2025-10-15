@@ -28,6 +28,11 @@ Door de Algemene verordening gegevensbescherming (AVG) hebben organisaties die p
 6. **Gebruik privacy by design** – Bouw systemen die vanaf het begin privacyvriendelijk zijn.  
 7. **Sluit verwerkersovereenkomsten** – Zorg dat derde partijen die data verwerken ook compliant zijn.  
 
+
+## In meer detail
+
+- [Verwerken van het burgerservicenummer](bsn.md)
+
 ## Bronnen
 
 ### Autoriteit Persoonsgegevens (AP)
