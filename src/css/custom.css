@@ -640,14 +640,6 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 700;
 }
 
-.docs-author {
-  margin-bottom: 0 !important;
-}
-
-.avatar__intro > :last-child {
-  display: none;
-}
-
-.docs-author .avatar__name {
-  margin-bottom: 0.25rem;
+header.margin-bottom--xl > .avatar + a {
+  text-decoration: underline;
 }
