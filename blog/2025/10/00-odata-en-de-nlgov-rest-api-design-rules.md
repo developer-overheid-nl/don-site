@@ -1,6 +1,7 @@
 ---
 authors: [joost-farla]
 tags: [adr, interoperability, openapi, odata]
+draft: true
 ---
 
 # OData en de NLGov REST API Design Rules: past dat wel?
@@ -40,7 +41,7 @@ OData wordt ondersteund in veel Microsoft-producten, waaronder Excel, Power BI e
 OData is in de kern data-georiënteerd: het beschrijft tabellen en entiteiten die rechtstreeks overeenkomen met een onderliggend datamodel.
 Daarmee verschilt het fundamenteel van de resource-georiënteerde aanpak die in de NLGov REST API Design Rules wordt voorgestaan, waarin endpoints domeinconcepten representeren (zoals zaak, persoon of vergunning), niet technische datatabellen.
 
-In de praktijk leidt dat tot API-ontwerpen waarin de datastructuur het uitgangspunt vormt, in plaats van het functionele of semantische domein. Dit maakt de API minder begrijpelijk en minder consistent met andere publieke API’s die wel volgens de REST-principes zijn ontworpen.
+In de praktijk leidt dat tot API-ontwerpen waarin de datastructuur het uitgangspunt vormt, in plaats van het functionele of semantische domein. Dit maakt de API minder begrijpelijk en minder consistent met andere publieke API's die wel volgens de REST-principes zijn ontworpen.
 
 Hoewel OData zich positioneert als RESTful, wijkt het in de praktijk af van gangbare REST-ontwerpprincipes. De query-syntax (voor `$filter`, `$expand`, enz.) introduceert een eigen mini-taal bovenop HTTP. Dit maakt het moeilijker om de API intuïtief te gebruiken en te documenteren volgens de NLGov REST API Design Rules, die juist eenvoud en voorspelbaarheid benadrukken.
 
@@ -58,7 +59,7 @@ OData vormt in dat opzicht een eigen ecosysteem, met een afwijkend query- en met
 
 ### 4. Vendor-afhankelijkheid in tooling en adoptie
 
-OData is strict genomen een open standaard, maar de praktische adoptie concentreert zich sterk binnen het Microsoft-ecosysteem. De meeste volwassen implementaties, libraries en client-SDK’s zijn Microsoft-georiënteerd. Buiten deze omgeving is de ondersteuning beperkter: veel open source-projecten zijn verouderd of incompleet, en de community is kleiner dan die rond OpenAPI, JSON Schema of andere relevante standaarden.
+OData is strict genomen een open standaard, maar de praktische adoptie concentreert zich sterk binnen het Microsoft-ecosysteem. De meeste volwassen implementaties, libraries en client-SDK's zijn Microsoft-georiënteerd. Buiten deze omgeving is de ondersteuning beperkter: veel open source-projecten zijn verouderd of incompleet, en de community is kleiner dan die rond OpenAPI, JSON Schema of andere relevante standaarden.
 
 Rond de OpenAPI-specificatie bestaat een rijk ecosysteem aan tools – van validators en mockservers tot SDK-generators en testframeworks. Veel daarvan werken echter niet, of slechts beperkt, met OData, omdat een groot deel van de OData-details niet in OpenAPI-formaat kan worden uitgedrukt.
 
@@ -66,19 +67,19 @@ Voor organisaties die streven naar **vendor-neutraliteit** en **technologie-onaf
 
 ### 5. Moeilijk te beheersen expressiviteit
 
-OData biedt krachtige en zeer expressieve querymogelijkheden, waarmee clients complexe filters, sorteringen en uitbreidingen kunnen uitvoeren via `$filter`, `$expand`, `$select` en `$orderby`. Die expressiviteit is aantrekkelijk bij data-analyse, maar brengt in publieke API’s aanzienlijke complexiteit met zich mee, zowel aan de server- als aan de clientzijde.
+OData biedt krachtige en zeer expressieve querymogelijkheden, waarmee clients complexe filters, sorteringen en uitbreidingen kunnen uitvoeren via `$filter`, `$expand`, `$select` en `$orderby`. Die expressiviteit is aantrekkelijk bij data-analyse, maar brengt in publieke API's aanzienlijke complexiteit met zich mee, zowel aan de server- als aan de clientzijde.
 
 **Aan de serverzijde** betekent dit dat de API elke ontvangen query dynamisch moet kunnen interpreteren en vertalen naar een onderliggende database-query. Daarbij kunnen onverwacht zware of inefficiënte combinaties ontstaan, bijvoorbeeld geneste `$expand`-queries of samengestelde `$filter`-expressies met meerdere `or`- en `any`-operatoren. Om dit te beheersen zijn vaak aanvullende maatregelen nodig, zoals query throttling, expressielimieten, caching, of specifieke middleware die de toegestane querypatronen begrenst. Zonder dergelijke beperkingen kan de server onvoorspelbare performance vertonen of zelfs kwetsbaarheden introduceren, zoals _denial-of-service_-achtige situaties.
 
 **Aan de clientzijde** leidt dezelfde flexibiliteit tot hogere implementatiecomplexiteit. Een OData-client moet de volledige querysyntaxis ondersteunen en correct kunnen omgaan met foutmeldingen, datamodelverwijzingen en dynamische metadata uit het `$metadata`-document. Dat vraagt om specifieke libraries en kennis van de OData-taal zelf, wat de drempel verhoogt ten opzichte van eenvoudigere, parametergebaseerde REST-API's. Zelfs kleine implementatieverschillen tussen OData-versies of servers kunnen tot interoperabiliteitsproblemen leiden.
 
-Voor publieke API’s is deze expressieve kracht dus zowel een voordeel als een risico. Het gebruik ervan vraagt om duidelijke ontwerpkeuzes, restricties en beheermaatregelen om de balans te bewaren tussen flexibiliteit en controle.
+Voor publieke API's is deze expressieve kracht dus zowel een voordeel als een risico. Het gebruik ervan vraagt om duidelijke ontwerpkeuzes, restricties en beheermaatregelen om de balans te bewaren tussen flexibiliteit en controle.
 
 ## OData en de NLGov REST API Design Rules
 
-De NLGov REST API Design Rules zijn gebaseerd op internationale best practices voor REST API’s, met nadruk op:
+De NLGov REST API Design Rules zijn gebaseerd op internationale best practices voor REST API's, met nadruk op:
 
-- **Eenvoud**: voorspelbare URL’s en parameters
+- **Eenvoud**: voorspelbare URL's en parameters
 - **Interoperabiliteit**: brede adoptie van OpenAPI
 - **Technologische onafhankelijkheid**: geen afhankelijkheid van specifieke leveranciers of frameworks
 
