@@ -32,10 +32,15 @@ async function main() {
       const issueBlock = [
         "\n========================================",
         `WCAG issues found on: ${url}`,
-        ...output.split("\n").filter((line) =>
-          !/0 violations found!/i.test(line) &&
-          /violation|issues detected|Accessibility issues|heading-order|Ensure|For details|occurrences/i.test(line)
-        ),
+        ...output
+          .split("\n")
+          .filter(
+            (line) =>
+              !/0 violations found!/i.test(line) &&
+              /violation|issues detected|Accessibility issues|heading-order|Ensure|For details|occurrences/i.test(
+                line,
+              ),
+          ),
         "========================================\n",
       ].join("\n");
       report += issueBlock + "\n";
@@ -49,7 +54,7 @@ async function main() {
   } else {
     fs.writeFileSync(
       "wcag-report.txt",
-      "🎉 Geen accessibility issues gevonden op enige pagina!"
+      "🎉 Geen accessibility issues gevonden op enige pagina!",
     );
   }
 }
