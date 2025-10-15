@@ -48,7 +48,8 @@ PKIoverheid-certificaten zijn normale X.509-certificaten die onder een eigen roo
 
 ### Methoden en technieken
 
-PKIoverheid-certificaten zijn technisch hetzelfde als "gangbare" X.509-certificaten, ze maken alleen onderdeel uit van een afzonderlijke certificaathierarchie. Hierdoor zijn de bovenstaande acties meestal voldoende voor implementatie.
+PKIoverheid-certificaten zijn technisch hetzelfde als "gangbare" X.509-certificaten, ze maken alleen onderdeel uit van een afzonderlijke certificaathiërarchie. Hierdoor zijn de bovenstaande acties meestal voldoende voor implementatie.
+
 
 ### Tools
 
