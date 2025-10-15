@@ -1,0 +1,13 @@
+---
+developers:
+  description: Developers maken en onderhouden broncode
+  label: Developers
+testers:
+  description: Testers testen software en maken en onderhouden tests
+  label: Testers
+security-engineers:
+  description: Security engineers testen de veiligheid van software en beoordelen beveiligingsrisico's
+  label: Security engineers
+managers:
+  description: Managers geven leiding aan projecten, teams, afdelingen en/of organisaties
+  label: Managers
