@@ -11,15 +11,13 @@ Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde, interoper
 
 Regelmatig komt de vraag voorbij of OData, een specificatie ontwikkeld binnen het Microsoft-ecosysteem, een slimme keuze kan zijn voor publieke API's. In dit artikel analyseren we de voor- en nadelen van OData, met nadruk op eenvoud, interoperabiliteit en vendor-neutraliteit.
 
----
+<!-- truncate -->
 
 ## Wat is OData?
 
 [OData (Open Data Protocol)](https://www.odata.org/) is een open standaard die definieert hoe data via RESTful API's kan worden bevraagd en gemanipuleerd. Het biedt een gestandaardiseerde manier om queries uit te voeren op resources, met parameters als `$filter`, `$expand`, `$select` en `$orderby`.
 
 OData is oorspronkelijk ontwikkeld door Microsoft en gestandaardiseerd via [OASIS](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=odata) en [ISO/IEC](https://www.oasis-open.org/news/pr/iso-iec-jtc-1-approves-oasis-odata-standard-for-open-data-exchange/), wat betekent dat het formeel gezien niet proprietair is. In de praktijk is de implementatie en tooling echter sterk verweven met Microsoft-technologieën (zoals .NET, Dynamics en Power BI).
-
----
 
 ## De voordelen van OData
 
@@ -34,8 +32,6 @@ OData beschrijft de datastructuur via het [Entity Data Model (EDM)](https://docs
 ### 3. Sterke toolingondersteuning (met name in Microsoft-omgevingen)
 
 OData wordt ondersteund in veel Microsoft-producten, waaronder Excel, Power BI en Azure API Management. Hierdoor kan data eenvoudig worden verbonden met bestaande rapportage- of analysetools.
-
----
 
 ## De nadelen van OData
 
@@ -78,8 +74,6 @@ OData biedt krachtige en zeer expressieve querymogelijkheden, waarmee clients co
 
 Voor publieke API’s is deze expressieve kracht dus zowel een voordeel als een risico. Het gebruik ervan vraagt om duidelijke ontwerpkeuzes, restricties en beheermaatregelen om de balans te bewaren tussen flexibiliteit en controle.
 
----
-
 ## OData en de NLGov REST API Design Rules
 
 De NLGov REST API Design Rules zijn gebaseerd op internationale best practices voor REST API’s, met nadruk op:
@@ -93,8 +87,6 @@ OData sluit hier deels op aan (open standaard, REST-principes), maar wijkt af in
 - Het OData-querymodel past minder goed binnen de pragmatische REST-aanpak die de NLGov REST API Design Rules voorstaan.
 - De tooling sluit niet naadloos aan op het OpenAPI-ecosysteem.
 - De leercurve en complexiteit zijn hoger voor ontwikkelaars die niet binnen het Microsoft-ecosysteem werken.
-
----
 
 ## Slotadvies
 
