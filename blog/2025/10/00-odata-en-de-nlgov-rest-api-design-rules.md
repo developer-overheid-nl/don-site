@@ -10,6 +10,8 @@ Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde, interoper
 
 Regelmatig komt de vraag voorbij of OData, een specificatie ontwikkeld binnen het Microsoft-ecosysteem, een slimme keuze kan zijn voor publieke API's. In dit artikel analyseren we de voor- en nadelen van OData, met nadruk op eenvoud, interoperabiliteit en vendor-neutraliteit. Ook bekijken we hoe OData zich verhoudt tot de NLGov REST API Design Rules, en op welke vlakken deze conflicteren.
 
+![Logo of OData](./img/odata.png)
+
 <!-- truncate -->
 
 ## Wat is OData?
