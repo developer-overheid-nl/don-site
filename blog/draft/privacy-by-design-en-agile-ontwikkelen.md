@@ -71,7 +71,7 @@ de OWASP Top Ten en de SANS 25.
 !["Story Card Security - voorkant"](./img/ictu-2025-storycard-security-front.jpg)
 !["Story Card Security - achterkant"](./img/ictu-2025-storycard-security-back.jpg)
 
-(Een printbare versie van deze 'Story Cards' is [hier](./img/ictu-2025-storycards.pdf) downloaden)
+(Een printbare versie van deze 'Story Cards' is [hier](./img/ictu-2025-storycards.pdf) te downloaden)
 
 ## Hoe doe jij dat?
 
