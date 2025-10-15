@@ -24,15 +24,21 @@ OData is oorspronkelijk ontwikkeld door Microsoft en gestandaardiseerd via [OASI
 
 ### 1. Gestandaardiseerde querytaal
 
-Middels het [OData protocol](https://docs.oasis-open.org/odata/odata/v4.02/csd01/part1-protocol/odata-v4.02-csd01-part1-protocol.html) kan een client complexe queries uitvoeren (zoals filters, joins en sorteringen) zonder dat de API-beheerder expliciet endpoints of parameters hoeft te definiëren voor elk scenario. Dit is efficiënt bij generieke datatoegang, bijvoorbeeld voor rapportages of data-extracties.
+Middels het [OData protocol](https://docs.oasis-open.org/odata/odata/v4.02/csd01/part1-protocol/odata-v4.02-csd01-part1-protocol.html) kan een client complexe queries uitvoeren (zoals filters, joins en sorteringen) zonder dat de API-beheerder expliciet endpoints of parameters hoeft te definiëren voor elk scenario. In plaats van meerdere, specifieke zoek- en filterendpoints aan te bieden, kan een OData-service via één uniforme syntax (`$filter`, `$expand`, `$select`, `$orderby`, enz.) vrijwel elke denkbare bevraging verwerken.
+
+Dat maakt OData efficiënt bij situaties waarin de aard van de query’s niet vooraf bekend is, bijvoorbeeld bij analytische toepassingen, datawarehouses of BI-rapportages. Daarmee biedt OData een zekere mate van zelfbediening voor dataconsumenten – iets wat in interne dataplatforms of onderzoeksomgevingen vaak als voordeel wordt gezien.
 
 ### 2. Rijke semantische laag
 
 OData beschrijft de datastructuur via het [Entity Data Model (EDM)](https://docs.oasis-open.org/odata/odata/v4.02/csd01/part1-protocol/odata-v4.02-csd01-part1-protocol.html#DataModel), vastgelegd in CSDL (Common Schema Definition Language) via [JSON](https://docs.oasis-open.org/odata/odata-csdl-json/v4.02/odata-csdl-json-v4.02.html) of [XML](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.02/odata-csdl-xml-v4.02.html). Dit maakt het mogelijk om data en relaties semantisch te beschrijven.
 
+Clients worden hierdoor in staat gesteld om automatisch metadata te ontdekken en hun gedrag daarop af te stemmen. Een client kan bijvoorbeeld aan de hand van het `$metadata-document` weten welke velden beschikbaar zijn, welke typen of relaties er bestaan en welke query’s toegestaan zijn.
+
+Dit bevordert consistentie en herbruikbaarheid van data binnen een organisatie, en ondersteunt scenario's als automatische codegeneratie, dynamische UI-componenten of semantische validatie. Voor organisaties met sterk gestructureerde domeinmodellen kan dit bijdragen aan uniformiteit en ontwerpdiscipline over verschillende datasets heen.
+
 ### 3. Sterke toolingondersteuning (met name in Microsoft-omgevingen)
 
-OData wordt ondersteund in veel Microsoft-producten, waaronder Excel, Power BI en Azure API Management. Hierdoor kan data eenvoudig worden verbonden met bestaande rapportage- of analysetools.
+OData is wijd geïntegreerd in de Microsoft-stack en wordt ondersteund door veelgebruikte producten zoals Excel, Power BI en Azure API Management. In de praktijk betekent dit dat gegevens uit een OData-service direct bruikbaar zijn in rapportage-, analyse- of dashboardomgevingen, met minimale technische inspanning. 
 
 ## De nadelen van OData
 
