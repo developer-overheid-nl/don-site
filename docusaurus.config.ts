@@ -320,7 +320,8 @@ const config: Config = {
             },
             {
               label: "Statistieken",
-              href: "https://apis.developer.overheid.nl/statistieken",
+              to: "https://apis.developer.overheid.nl/statistieken",
+              target: "_self",
             },
             {
               label: "Sitearchief",
