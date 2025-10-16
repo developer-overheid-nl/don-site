@@ -5,6 +5,10 @@ sidebar_position: 1
 
 In een wereld die snel verandert en waar geopolitieke verschuivingen plaatsvinden, wordt security een steeds crucialer thema. Het is daarom belangrijker dan ooit om proactief kwetsbaarheden te monitoren en ervoor te zorgen dat software altijd up-to-date is. In dit thema vind je een overzicht van relevante securitystandaarden en beschikbare tools.
 
+## Best practices
+
+- [Best practices voor API-toegangsbeheer](./best-practices/) – conceptmigratie van de Geonovum API Access Control-module naar DON.
+
 ## Bronnen
 
 ### Nationaal Cyber Security Centrum (NCSC)

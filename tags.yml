@@ -2,6 +2,9 @@
 accessibility:
   description: Accessibility / toegankelijkheid.
   label: Accessibility
+access-control:
+  description: Toegangsbeheer voor API's en diensten.
+  label: Access control
 adr:
   label: API Design Rules
 ai:
@@ -24,6 +27,9 @@ asyncapi:
 avg:
   description: Algemene verordening gegevensbescherming (AVG)
   label: AVG
+best-practice:
+  description: Praktische richtlijnen met direct toepasbare stappen.
+  label: Best practice
 azure:
   label: Azure
 axe:
