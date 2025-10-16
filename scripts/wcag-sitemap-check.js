@@ -26,7 +26,7 @@ async function main() {
 
     if (
       /violation|issues detected|Accessibility issues/i.test(output) &&
-      !/0 violations found!/i.test(output)
+      !/^\s*0\s+violations\s+found!?$/im.test(output)
     ) {
       hasFailures = true;
       const interestingPatterns = [
@@ -48,7 +48,7 @@ async function main() {
           .split("\n")
           .filter(
             (line) =>
-              !/0 violations found!/i.test(line) &&
+              !/^\s*0\s+violations\s+found!?$/i.test(line) &&
               (line.trim().startsWith("-") ||
                 interestingPatterns.some((pattern) => pattern.test(line))),
           ),

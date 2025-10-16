@@ -1,0 +1,4 @@
+.allTagsLink {
+  --ifm-link-decoration: underline;
+  text-decoration: underline;
+}
