@@ -16,6 +16,12 @@ Duurzaam beheer betekent dat je ervoor zorgt dat je web-applicatie veilig, effic
 
 - **Wet- en regelgeving** - De wetgeving verandert regelmatig, en dit geldt ook voor wetgeving rondom privacy, gegevensbeveiliging en digitale toegankelijkheid. Duurzaam beheer houdt in dat de software kan worden aangepast aan nieuwe wettelijke vereisten zonder grote herzieningen, waardoor de overheid compliant blijft met wet- en regelgeving.
 
+## Geautomatiseerd testen
+
+Door te investeren in geautomatiseerde testen, kan je de applicaties met minder risico aanpassen en gaan ze langer mee.
+
+- [Richtlijn geautomatiseerd testen](richtlijn-geautomatiseerd-testen.md).
+
 ## Monitor applicaties
 
 Door monitoring in te richten voor applicaties die je in beheer hebt krijg je inzicht in technical-debt en andere factoren waar je rekening mee dient te houden als organisatie.
