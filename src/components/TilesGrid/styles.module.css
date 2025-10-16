@@ -9,7 +9,7 @@
   margin-bottom: 3rem;
 }
 
-.tiles--sparse{
+.tiles--sparse {
   padding-top: 4rem;
   padding-bottom: 4rem;
   gap: 4rem;
@@ -47,6 +47,16 @@
   order: 1;
   margin-block-end: 0.25rem;
   color: var(--don-donkerblauw-500);
+}
+
+.title a {
+  --ifm-link-decoration: none;
+  text-decoration: none;
+}
+
+.title a:hover {
+  --ifm-link-decoration: underline;
+  text-decoration: underline;
 }
 
 .icon {
