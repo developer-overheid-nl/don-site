@@ -1,8 +1,9 @@
 name: Check WCAG compliance
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 2 * * 0'
+    - cron: "0 2 * * 0"
 
 jobs:
   check-wcag:
@@ -81,7 +82,7 @@ jobs:
           echo "UPLOAD HTTP STATUS: $UPLOAD_HTTP_STATUS"
           sleep 5;
           echo $CHANNEL_ID
-   
+
           COMPLETE_RESPONSE=$(curl --silent -X POST \
             -H "Authorization: Bearer $SLACK_TOKEN" \
             -H "Content-Type: application/json" \
