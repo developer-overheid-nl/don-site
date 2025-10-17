@@ -26,16 +26,32 @@ async function main() {
 
     if (
       /violation|issues detected|Accessibility issues/i.test(output) &&
-      !/0 violations found!/i.test(output)
+      !/^\s*0\s+violations\s+found!?$/im.test(output)
     ) {
       hasFailures = true;
+      const interestingPatterns = [
+        /violation/i,
+        /issues detected/i,
+        /Accessibility issues/i,
+        /Ensure/i,
+        /Correct invalid elements/i,
+        /For details/i,
+        /occurrences/i,
+        /Fix all of the following/i,
+        /Element/i,
+        /Selector/i,
+      ];
       const issueBlock = [
         "\n========================================",
         `WCAG issues found on: ${url}`,
-        ...output.split("\n").filter((line) =>
-          !/0 violations found!/i.test(line) &&
-          /violation|issues detected|Accessibility issues|heading-order|Ensure|For details|occurrences/i.test(line)
-        ),
+        ...output
+          .split("\n")
+          .filter(
+            (line) =>
+              !/^\s*0\s+violations\s+found!?$/i.test(line) &&
+              (line.trim().startsWith("-") ||
+                interestingPatterns.some((pattern) => pattern.test(line))),
+          ),
         "========================================\n",
       ].join("\n");
       report += issueBlock + "\n";
@@ -49,7 +65,7 @@ async function main() {
   } else {
     fs.writeFileSync(
       "wcag-report.txt",
-      "🎉 Geen accessibility issues gevonden op enige pagina!"
+      "🎉 Geen accessibility issues gevonden op enige pagina!",
     );
   }
 }
