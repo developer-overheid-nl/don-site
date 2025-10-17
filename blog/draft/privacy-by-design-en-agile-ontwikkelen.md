@@ -21,7 +21,7 @@ tegen de tijd dat de software in productie ging.
 
 ## Dat moet toch beter kunnen, zou je denken
 
-Bij ICTU ontwikkelen we software voor opdrachtgevers binnen de overheid. We
+Bij [ICTU] ontwikkelen we software voor opdrachtgevers binnen de overheid. We
 hanteren daarvoor een agile werkwijze, maar we beginnen niet direct met
 programmeren. Eerst zorgen we dat voor duidelijk is wat het probleem van de
 opdrachtgever is, hoe de oplossing er uit zou kunnen zien, zodat we in grote
@@ -66,7 +66,7 @@ we op de achterkant de beslisboom van het _Privacy by Design framework_ overgeno
 !["Story Card Privacy - achterkant"](./img/ictu-2025-storycard-privacy-back.jpg)
 
 Voor _Security by Design_ hebben we net zoiets, met op de achterkant verwijzingen naar
-de OWASP Top Ten en de SANS 25.
+de [OWASP Top 10] en de [SANS 25].
 
 !["Story Card Security - voorkant"](./img/ictu-2025-storycard-security-front.jpg)
 !["Story Card Security - achterkant"](./img/ictu-2025-storycard-security-back.jpg)
@@ -84,3 +84,6 @@ Daarnaast ben ik benieuwd of iemand een idee heeft hoe je _Accessibility by Desi
 Laat het weten me op [Mastodon](https://mastodon.nl/@e_r_nie) of beter nog:
 [schrijf ook een blog](https://developer.overheid.nl/contributing/gastblog-schrijven).
 
+[ICTU]: (https://www.ictu.nl)
+[OWASP Top 10]:(https://owasp.org/Top10/)
+[SANS 25]:(https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html)
