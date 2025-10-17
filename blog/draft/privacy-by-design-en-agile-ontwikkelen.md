@@ -66,7 +66,9 @@ we op de achterkant de beslisboom van het _Privacy by Design framework_ overgeno
 !["Story Card Privacy - achterkant"](./img/ictu-2025-storycard-privacy-back.jpg)
 
 Voor _Security by Design_ hebben we net zoiets, met op de achterkant verwijzingen naar
-de [OWASP Top 10] en de [SANS 25].
+de [OWASP Top 10] en de [SANS 25]. Dit zijn lijsten van veel voorkomende
+beveiligingsgebreken in software. Door die lijsten te koppelen aan de verandering die
+de story brengt, worden ontwikkelaars geholpen niet in bekende valkuilen te stappen.
 
 !["Story Card Security - voorkant"](./img/ictu-2025-storycard-security-front.jpg)
 !["Story Card Security - achterkant"](./img/ictu-2025-storycard-security-back.jpg)
