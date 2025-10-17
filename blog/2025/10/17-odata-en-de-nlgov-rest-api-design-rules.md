@@ -1,7 +1,6 @@
 ---
 authors: [joost-farla]
 tags: [adr, interoperability, openapi, odata]
-draft: true
 ---
 
 # OData en de NLGov REST API Design Rules: past dat wel?
