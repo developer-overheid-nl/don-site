@@ -3,11 +3,11 @@ authors: [joost-farla]
 tags: [adr, interoperability, openapi, odata]
 ---
 
-# OData en de NLGov REST API Design Rules: past dat wel?
+# OData en de REST API Design Rules: past dat wel?
 
-Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde, interoperabele en toekomstbestendige API's. De [NLGov REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/) vormen daarbij een belangrijk referentiekader: ze stimuleren eenvoud, voorspelbaarheid en brede toepasbaarheid door gebruik te maken van open standaarden.
+Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde, interoperabele en toekomstbestendige API's. De [REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/) (ADR) vormen daarbij een belangrijk referentiekader: ze stimuleren eenvoud, voorspelbaarheid en brede toepasbaarheid door gebruik te maken van open standaarden.
 
-Regelmatig komt de vraag voorbij of OData, een specificatie ontwikkeld binnen het Microsoft-ecosysteem, een slimme keuze kan zijn voor publieke API's. In dit artikel analyseren we de voor- en nadelen van OData, met nadruk op eenvoud, interoperabiliteit en vendor-neutraliteit. Ook bekijken we hoe OData zich verhoudt tot de NLGov REST API Design Rules, en op welke vlakken deze conflicteren.
+Regelmatig komt de vraag voorbij of OData, een specificatie ontwikkeld binnen het Microsoft-ecosysteem, een slimme keuze kan zijn voor publieke API's. In dit artikel analyseren we de voor- en nadelen van OData, met nadruk op eenvoud, interoperabiliteit en vendor-neutraliteit. Ook bekijken we hoe OData zich verhoudt tot de ADR, en op welke vlakken deze conflicteren.
 
 ![Logo of OData](./img/odata.png)
 
@@ -44,15 +44,15 @@ OData is wijd geïntegreerd in de Microsoft-stack en wordt ondersteund door veel
 ### 1. Data-georiënteerd in plaats van resource-georiënteerd
 
 OData is in de kern data-georiënteerd: het beschrijft tabellen en entiteiten die rechtstreeks overeenkomen met een onderliggend datamodel.
-Daarmee verschilt het fundamenteel van de resource-georiënteerde aanpak die in de NLGov REST API Design Rules wordt voorgestaan, waarin endpoints domeinconcepten representeren (zoals zaak, persoon of vergunning), niet technische datatabellen.
+Daarmee verschilt het fundamenteel van de resource-georiënteerde aanpak die in de ADR wordt voorgestaan, waarin endpoints domeinconcepten representeren (zoals zaak, persoon of vergunning), niet technische datatabellen.
 
 In de praktijk leidt dat tot API-ontwerpen waarin de datastructuur het uitgangspunt vormt, in plaats van het functionele of semantische domein. Dit maakt de API minder begrijpelijk en minder consistent met andere publieke API's die wel volgens de REST-principes zijn ontworpen.
 
-Hoewel OData zich positioneert als RESTful, wijkt het in de praktijk af van gangbare REST-ontwerpprincipes. De query-syntax (voor `$filter`, `$expand`, enz.) introduceert een eigen mini-taal bovenop HTTP. Dit maakt het moeilijker om de API intuïtief te gebruiken en te documenteren volgens de NLGov REST API Design Rules, die juist eenvoud en voorspelbaarheid benadrukken.
+Hoewel OData zich positioneert als RESTful, wijkt het in de praktijk af van gangbare REST-ontwerpprincipes. De query-syntax (voor `$filter`, `$expand`, enz.) introduceert een eigen mini-taal bovenop HTTP. Dit maakt het moeilijker om de API intuïtief te gebruiken en te documenteren volgens de ADR, die juist eenvoud en voorspelbaarheid benadrukken.
 
 ### 2. Compatibliteit met de OpenAPI Specification
 
-De NLGov REST API Design Rules vereisen een API-beschrijving conform de [OpenAPI Specification](https://spec.openapis.org/oas/latest.html). Hoewel OData services formeel op die manier kunnen worden beschreven, genereren veel OData-servers primair een eigen `$metadata-document` (CSDL) in plaats van een OpenAPI-document.
+De ADR vereisen een API-beschrijving conform de [OpenAPI Specification](https://spec.openapis.org/oas/latest.html). Hoewel OData services formeel op die manier kunnen worden beschreven, genereren veel OData-servers primair een eigen `$metadata-document` (CSDL) in plaats van een OpenAPI-document.
 
 Een vertaling van CSDL naar OpenAPI is mogelijk – en zelfs [gestandaardiseerd](https://docs.oasis-open.org/odata/odata-openapi/v1.0/odata-openapi-v1.0.html) – maar niet zonder verlies van semantiek. Wanneer CSDL naar OpenAPI wordt vertaald, gaan de semantische beperkingen en validatieregels van filters en expressies verloren. OpenAPI kan alleen weergeven dat er query parameters zijn, maar niet wat hun gedrag is; dat is tenslotte vastgelegd in externe OData-specifieke standaarden. Dit beperkt de interoperabiliteit met bestaande ontwikkel- en documentatietools.
 
@@ -80,9 +80,9 @@ OData biedt krachtige en zeer expressieve querymogelijkheden, waarmee clients co
 
 Voor publieke API's is deze expressieve kracht dus zowel een voordeel als een risico. Het gebruik ervan vraagt om duidelijke ontwerpkeuzes, restricties en beheermaatregelen om de balans te bewaren tussen flexibiliteit en controle.
 
-## OData en de NLGov REST API Design Rules
+## OData en de REST API Design Rules
 
-De NLGov REST API Design Rules zijn gebaseerd op internationale best practices voor REST API's, met nadruk op:
+De ADR zijn gebaseerd op internationale best practices voor REST API's, met nadruk op:
 
 - **Eenvoud**: voorspelbare URL's en parameters
 - **Interoperabiliteit**: brede adoptie van OpenAPI
@@ -90,10 +90,10 @@ De NLGov REST API Design Rules zijn gebaseerd op internationale best practices v
 
 OData sluit hier deels op aan (open standaard, REST-principes), maar wijkt af in ontwerpfilosofie:
 
-- Het OData-querymodel past minder goed binnen de pragmatische REST-aanpak die de NLGov REST API Design Rules voorstaan.
+- Het OData-querymodel past minder goed binnen de pragmatische REST-aanpak die de ADR voorstaan.
 - De tooling sluit niet naadloos aan op het OpenAPI-ecosysteem.
 - De leercurve en complexiteit zijn hoger voor ontwikkelaars die niet binnen het Microsoft-ecosysteem werken.
 
 ## Slotadvies
 
-OData kan zinvol zijn binnen gesloten Microsoft-omgevingen of bij interne datasets die veel ad-hoc queryflexibiliteit vereisen, bijvoorbeeld voor analytische doeleinden. Voor publieke, generieke REST API's die dienen te voldoen aan de NLGov REST API Design Rules – waarin eenvoud, interoperabiliteit en technologie-onafhankelijkheid centraal staan – is OData doorgaans niet de meest geschikte keuze.
+OData kan zinvol zijn binnen gesloten Microsoft-omgevingen of bij interne datasets die veel ad-hoc queryflexibiliteit vereisen, bijvoorbeeld voor analytische doeleinden. Voor publieke, generieke REST API's die dienen te voldoen aan de ADR – waarin eenvoud, interoperabiliteit en technologie-onafhankelijkheid centraal staan – is OData doorgaans niet de meest geschikte keuze.
