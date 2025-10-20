@@ -5,7 +5,7 @@ tags: [adr, interoperability, openapi, odata]
 
 # OData en de REST API Design Rules: past dat wel?
 
-Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde, interoperabele en toekomstbestendige API's. De [REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/) (ADR) vormen daarbij een belangrijk referentiekader: ze stimuleren eenvoud, voorspelbaarheid en brede toepasbaarheid door gebruik te maken van open standaarden.
+Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde, interoperabele en toekomstbestendige API's. De [REST API Design Rules](https://developer.overheid.nl/kennisbank/apis/api-design-rules/) (ADR) vormen daarbij een belangrijk referentiekader: ze stimuleren eenvoud, voorspelbaarheid en brede toepasbaarheid door gebruik te maken van open standaarden.
 
 Regelmatig komt de vraag voorbij of OData, een specificatie ontwikkeld binnen het Microsoft-ecosysteem, een slimme keuze kan zijn voor publieke API's. In dit artikel analyseren we de voor- en nadelen van OData, met nadruk op eenvoud, interoperabiliteit en vendor-neutraliteit. Ook bekijken we hoe OData zich verhoudt tot de ADR, en op welke vlakken deze conflicteren.
 
