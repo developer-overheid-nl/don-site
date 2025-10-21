@@ -206,6 +206,8 @@ oas:
 oauth:
   description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
   label: OAuth 2.0
+odata:
+  label: OData
 ogc:
   description: Open Geospatial Consortium is de internationale standaarden organisatie voor interoperabele open Geo standaarden
   label: Open Geospatial Consortium
