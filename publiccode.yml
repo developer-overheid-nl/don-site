@@ -50,19 +50,24 @@ dependsOn:
 description:
   nl:
     longDescription: >
-      Developer Overheid NL is de wegwijzer voor developers die voor of bij de overheid ontwikkelen. Zij vervult deze
-      rol door het aanbieden van standaarden, best practices en tools.
+      Developer Overheid NL is de wegwijzer voor developers die voor of bij de
+      overheid ontwikkelen. Zij vervult deze rol door het aanbieden van
+      standaarden, best practices en tools.
 
-      Een belangrijke feature van het platform is de API catalogus. Deze maakt inzichtelijk welke API's er beschikbaar
-      zijn in het publieke landschap. Tevens kan je hier per API de informatie vinden die je nodig hebt om met de API aan
-      de slag te gaan.
+      Een belangrijke feature van het platform is de API catalogus. Deze maakt
+      inzichtelijk welke API's er beschikbaar zijn in het publieke landschap.
+      Tevens kan je hier per API de informatie vinden die je nodig hebt om met
+      de API aan de slag te gaan.
        
-      Ook biedt het platform inzicht in welke open source software projecten er beschikbaar zijn in het 
-      publieke landschap. Per project krijgt de gebruiker inzicht in de vitaliteit van de repository en andere
-      waardevolle datapunten.
+      Ook biedt het platform inzicht in welke open source software projecten er
+      beschikbaar zijn in het  publieke landschap. Per project krijgt de
+      gebruiker inzicht in de vitaliteit van de repository en andere waardevolle
+      datapunten.
 
     # Mand!
-    shortDescription: Developer Overheid NL is de wegwijzer voor developers die voor of bij de overheid ontwikkelen.
+    shortDescription:
+      Developer Overheid NL is de wegwijzer voor developers die voor of bij de
+      overheid ontwikkelen.
 
 legal:
   # De licentie volgens de identifier van de SPDX standaard: https://spdx.org/licenses/

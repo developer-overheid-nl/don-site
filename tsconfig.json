@@ -11,12 +11,6 @@
     // "strict": true,
     // "verbatimModuleSyntax": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-, "scripts/wcag-sitemap-check.js"  ],
-  "exclude": [
-    ".docusaurus",
-    "build"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", "scripts/wcag-sitemap-check.js"],
+  "exclude": [".docusaurus", "build"]
 }

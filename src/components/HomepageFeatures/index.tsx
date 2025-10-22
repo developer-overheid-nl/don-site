@@ -1,7 +1,7 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
 import { Card } from "@rijkshuisstijl-community/components-react";
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
@@ -14,46 +14,56 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Kennisbank',
-    image: '/img/boek-opengeslagen.svg',
-    alt: '',
+    title: "Kennisbank",
+    image: "/img/boek-opengeslagen.svg",
+    alt: "",
     description: (
       <>
-        Tutorials, tools, code voorbeelden en meer. Alles wat je nodig hebt om aan de slag te gaan met software van en voor de overheid.
+        Tutorials, tools, code voorbeelden en meer. Alles wat je nodig hebt om
+        aan de slag te gaan met software van en voor de overheid.
       </>
     ),
-    link: '/kennisbank',
-    label: 'Ga naar de kennisbank',
+    link: "/kennisbank",
+    label: "Ga naar de kennisbank",
   },
   {
-    title: 'Vind een API',
-    image: '/img/ict.svg',
-    alt: '',
+    title: "Vind een API",
+    image: "/img/ict.svg",
+    alt: "",
     description: (
       <>
-        Bekijk welke API's van de overheid er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten.
+        Bekijk welke API's van de overheid er allemaal zijn en kom er achter hoe
+        je jouw oplossing hier op kan laten aansluiten.
       </>
     ),
-    link: '/apis',
-    label: 'Ga naar het API register',
+    link: "/apis",
+    label: "Ga naar het API register",
   },
   {
-    title: 'Vind een repository',
-    image: '/img/computercode.svg',
-    alt: '',
+    title: "Vind een repository",
+    image: "/img/computercode.svg",
+    alt: "",
     description: (
       <>
-        Vind, verbeter of hergebruik bestaande Open Source projecten van de overheid in het Open Source Software register.
+        Vind, verbeter of hergebruik bestaande Open Source projecten van de
+        overheid in het Open Source Software register.
       </>
     ),
-    link: '/repositories',
-    label: 'Ga naar het OSS register',
+    link: "/repositories",
+    label: "Ga naar het OSS register",
   },
 ];
 
-function Feature({title, image, alt, description, link, label}: FeatureItem) {
+function Feature({ title, image, alt, description, link, label }: FeatureItem) {
   return (
-    <Card href={link} heading={title} description={description} imageSrc={image} imageAlt={alt} linkLabel={label} />
+    <Card
+      href={link}
+      heading={title}
+      description={description}
+      imageSrc={image}
+      imageAlt={alt}
+      linkLabel={label}
+    />
   );
 }
 

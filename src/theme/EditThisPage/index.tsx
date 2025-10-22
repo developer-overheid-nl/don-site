@@ -18,7 +18,10 @@ export default function EditThisPage({ editUrl }: Props): ReactNode {
       {isBlogPost ? (
         <>
           <span>
-            <Link to="https://github.com/developer-overheid-nl/don-site/issues/new/choose"  className={ clsx([styles.callToActionLink])}>
+            <Link
+              to="https://github.com/developer-overheid-nl/don-site/issues/new/choose"
+              className={clsx([styles.callToActionLink])}
+            >
               <IconLamp width="25px" height="25px" fill="#03679b" />
               <span>Heb jij ook een idee voor een blog?</span>
             </Link>
@@ -28,7 +31,7 @@ export default function EditThisPage({ editUrl }: Props): ReactNode {
         <>
           <div>
             <span>
-              <Link to={editUrl}  className={ clsx([styles.callToActionLink])}>
+              <Link to={editUrl} className={clsx([styles.callToActionLink])}>
                 <IconEdit />
                 <span>Iets aan dit artikel verbeteren?</span>
               </Link>
@@ -36,7 +39,10 @@ export default function EditThisPage({ editUrl }: Props): ReactNode {
           </div>
           <div>
             <span>
-              <Link to="https://github.com/developer-overheid-nl/don-site/issues/new/choose"  className={ clsx([styles.callToActionLink])}>
+              <Link
+                to="https://github.com/developer-overheid-nl/don-site/issues/new/choose"
+                className={clsx([styles.callToActionLink])}
+              >
                 <IconLamp className="lampIcon" fill="#03679b" />
                 <span>Heb je nog andere ideeën of suggesties?</span>
               </Link>
