@@ -134,3 +134,13 @@ pieter-bresters:
   title: Senior Adviseur - Geonovum
   image_url: /img/authors/pieter-bresters.png
   page: true
+
+eric-nieuwland:
+  name: Eric Nieuwland
+  title: Security Officer en Solution Architect - ICTU
+  image_url: https://avatars.githubusercontent.com/u/10603975
+  page: true
+  socials:
+    linkedin: ericnieuwland
+    github: eric-nieuwland
+    mastodon: https://mastodon.nl/@e_r_nie
