@@ -16,9 +16,9 @@ Het traditionele model is vergelijkbaar met steeds opnieuw opvragen van je banks
 - Verspilling van resources – veel nutteloze calls.
 - Strakke koppeling – server en client zijn afhankelijk van elkaar.
 
-Met event-driven API’s wordt data (met een **HTTP POST**) gepusht zodra er een event plaatsvindt. "Je salaris is betaald, je banksaldo is nu 12345,67". Dit levert drie belangrijke voordelen op:
+Met event-driven API’s wordt data (bijvoorbeeld via een **HTTP POST** in het geval van Webhooks.) gepusht zodra er een event plaatsvindt. "Je salaris is betaald, je banksaldo is nu 12345,67". Dit levert drie belangrijke voordelen op:
 
-1. Real-time responsiviteit – updates verschijnen direct.
+1. Real-time (asynchrone) responsiviteit – updates verschijnen direct.
 2. Schaalbaarheid en veerkracht – services kunnen los van elkaar functioneren en schalen.
 3. Agility – nieuwe functionaliteit kan eenvoudig inhaken op bestaande events.
 
@@ -54,7 +54,7 @@ Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 
 ## De rol van de API Gateway
 
-Een moderne API-gateway is onmisbaar bij event-driven API’s denk aan:
+Een moderne API-gateway is onmisbaar bij event-driven API’s. Denk aan:
 
 - Protocoltranslatie – vertaal bijvoorbeeld Webhooks naar Kafka.
 - Beveiliging – handhaaf standaarden als OAuth 2.0 en JWT ook op event-stromen.

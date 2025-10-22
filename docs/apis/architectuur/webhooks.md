@@ -10,7 +10,7 @@ Een **webhook** is een beproefde manier om dit te realiseren. Met webhooks kan e
 
 ## Wat zijn webhooks?
 
-Webhooks zijn een eenvoudige manier om systemen real-time te koppelen
+Webhooks zijn een eenvoudige manier om systemen real-time te koppelen.
 
 Een webhook is in feite een **HTTP-callback**. Dat betekent dat een producer (bijvoorbeeld een registratiesysteem) een POST-request verstuurt naar een vooraf opgegeven URL van een consumer. Die URL fungeert als “luisterend eindpunt” en ontvangt de melding zodra er iets gebeurt.  
 
@@ -58,9 +58,10 @@ Binnen de Nederlandse API-strategie worden webhooks gezien als het belangrijkste
 
 - **Server-Sent Events (SSE)** - broadcasting van actuele informatie
 - **WebSockets** - een open kanaal voor streams van data
-- **CloudEvents** - gestructureerde berichtafhandeling  
+Voor interoperabiliteit van berichten is er CloudEvents, een gestandaardiseerd eventformaat dat ook met webhooks gecombineerd kan worden.  
+- **CloudEvents** - gestructureerde berichtafhandeling
 
-Webhooks zijn ook eenvoudig op te nemen in de het API ontwerp door ze te specificeren in de Open API Specification (OAS)
+Webhooks zijn ook eenvoudig op te nemen in het API-ontwerp door ze te specificeren in de Open API Specification (OAS).
 
 ```YAML
 openapi: 3.1.0
@@ -69,7 +70,7 @@ info:
   version: "1.0.0"
   description: |
     Voorbeeld van een webhook definitie in OAS 3.1.
-    Dit webhook wordt aangeroepen wanneer een betaling is geslaagd.
+    Deze webhook wordt aangeroepen wanneer een betaling is geslaagd.
 webhooks:
   paymentSucceeded:
     post:
@@ -80,7 +81,7 @@ webhooks:
       requestBody:
         required: true
         content:
-          application/json:
+          application/cloudevents+json:
             schema:
               type: object
               properties:

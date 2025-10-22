@@ -6,7 +6,7 @@ tags: [adr, api, eda, cloudevents]
 
 ## Van intake tot verplichte standaard
 
-CloudEvents is een internationale standaard voor het uniform beschrijven van events in [event-driven architecturen](./eda.md). Dankzij deze standaard kunnen applicaties eenvoudiger informatie uitwisselen over gebeurtenissen (bijvoorbeeld een adreswijziging of een vergunningaanvraag). In Nederland wordt CloudEvents nu voorzien van een nationaal profiel: het [**NL GOV profile for CloudEvents**](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/).  
+CloudEvents is een internationale standaard voor het uniform beschrijven van events in [eventgedreven architecturen](./eda.md). Dankzij deze standaard kunnen applicaties eenvoudiger informatie uitwisselen over gebeurtenissen (bijvoorbeeld een adreswijziging of een vergunningaanvraag). In Nederland wordt CloudEvents nu voorzien van een nationaal profiel: het [**NL GOV profile for CloudEvents**](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/).  
 
 ---
 
@@ -35,7 +35,7 @@ Het Nederlandse profiel geeft richtlijnen voor hoe overheidsorganisaties CloudEv
 - Afspraken over payload en headers.
 - Toepassing in notificatieservices van de overheid.
 
-**Een voorbeeld van een cloudevent wat is opgenomen in de standaard:**
+**Een voorbeeld van een CloudEvent dat is opgenomen in de standaard:**
 
 ```JSON
 {
