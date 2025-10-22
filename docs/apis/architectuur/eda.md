@@ -6,7 +6,7 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 # Event Driven Architecture
 
-De digitale samenleving vraagt om snelheid en actualiteit. Burgers willen live informatie, bedrijven verwachten actuele datasets en IoT-toepassingen hebben directe feedback nodig. Polling – telkens opnieuw vragen of er nieuws is – is inefficiënt. Event-Driven Architecture (EDA) biedt hier een alternatief: de server pusht events zodra er iets verandert.
+De digitale samenleving vraagt om snelheid en actualiteit. Burgers willen live informatie, bedrijven verwachten actuele datasets en IoT-toepassingen hebben directe feedback nodig. Polling – telkens opnieuw vragen of er nieuws is – is inefficiënt. Event-Driven Architecture (EDA) biedt hier een alternatief: een manier van bouwen waarbij systemen en applicaties reageren op gebeurtenissen. In zo’n opzet kan de server events pushen zodra er iets verandert.
 
 ## Van Polling naar Event-Driven
 
