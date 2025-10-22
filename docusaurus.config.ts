@@ -88,9 +88,9 @@ const config: Config = {
         path: "communities",
         routeBasePath: "communities",
         sidebarPath: "./sidebarsCommunities.ts",
-        sidebarItemsGenerator: async ({docs}) => {
+        sidebarItemsGenerator: async ({ docs }) => {
           // this way we can filter out the index doc
-          return docs.map(doc => ({type: 'doc', id: doc.id})).filter(item => item.id !== 'index');
+          return docs.map(doc => ({ type: 'doc', id: doc.id })).filter(item => item.id !== 'index');
         },
         tags: "../tags.yml",
         onInlineTags: "throw",
@@ -210,6 +210,12 @@ const config: Config = {
           ],
         },
         {
+          to: "https://apis.developer.overheid.nl",
+          label: "API's",
+          position: "left",
+          target: "_self",
+        },
+        {
           label: "Communities",
           position: "left",
           to: "/communities",
@@ -227,11 +233,6 @@ const config: Config = {
           ],
         },
         { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://apis.developer.overheid.nl",
-          label: "API's",
-          position: "right",
-        },
         {
           href: "https://oss.developer.overheid.nl",
           label: "Open Source",
@@ -309,6 +310,25 @@ const config: Config = {
                 </svg>
               </div>
               `,
+            },
+          ],
+        },
+        {
+          title: "API-register",
+          items: [
+            {
+              label: "API toevoegen",
+              to: "https://apis.developer.overheid.nl/apis/toevoegen",
+              target: "_self",
+            },
+            {
+              label: "Statistieken",
+              to: "https://apis.developer.overheid.nl/api-statistieken",
+              target: "_self",
+            },
+            {
+              label: "Sitearchief",
+              href: "https://minbzk.sitearchief.nl/?subsite=devoverheidapis#archive",
             },
           ],
         },

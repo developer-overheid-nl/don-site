@@ -1,7 +1,8 @@
 ---
 authors: [martin-van-der-plas, tom-ootes]
-tags: [nds, api, ai, digitale-autonomie, eu, fds, haven, llm, ]
+tags: [nds, api, ai, digitale-autonomie, eu, fds, haven, llm]
 description: Nederland staat voor grote maatschappelijke opgaven in een sterk veranderende omgeving – en digitalisering is één van de belangrijkste sleutels tot oplossingen. Daarom is investeren in onze digitale basis urgent en belangrijk voor Nederland en de grote opgaven waar de samenleving voor staat. De overheid is één van de grootste afnemers van digitale diensten en daarmee tegelijkertijd aanjager van digitale ontwikkelingen die essentieel zijn voor een weerbare samenleving en een welvarende, toekomstgerichte en productieve economie.
+image: ./img/nederlandse-digitaliseringsstrategie.png
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 

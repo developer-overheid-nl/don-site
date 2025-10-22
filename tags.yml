@@ -89,6 +89,9 @@ eidas:
   label: eIDAS
 eu:
   label: Europe
+eda:
+  description: Event Driven Architecture (EDA) is een architectuurparadigma waarin componenten communiceren door het detecteren, publiceren, en verwerken van events (gebeurtenissen), zodat systemen loosely coupled, schaalbaar en responsief zijn.
+  label: Event Driven Architecture (EDA)
 eudi:
   label: European Digital Identity
 edi:
@@ -112,6 +115,9 @@ front-end:
 fsc:
   description: Federated Service Connectivity
   label: FSC
+ftv:
+  description: Federatieve Toegangsverlening
+  label: FTV
 gdpr:
   description: "General Data Protection Regulation (GDPR) "
   label: GDPR
@@ -152,6 +158,9 @@ javascript:
   label: JavaScript
 jwt:
   label: JSON Web Tokens (JWT of JWT's)
+kennisplatform-apis:
+  description: "Kennisplatform Api's"
+  label: Kennisplatform API's
 kiesraad:
   description: "De Kiesraad: de nationale Kiesraad."
   label: Kiesraad
@@ -206,6 +215,8 @@ oas:
 oauth:
   description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
   label: OAuth 2.0
+odata:
+  label: OData
 ogc:
   description: Open Geospatial Consortium is de internationale standaarden organisatie voor interoperabele open Geo standaarden
   label: Open Geospatial Consortium
