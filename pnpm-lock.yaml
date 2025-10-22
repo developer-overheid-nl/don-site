@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  chromedriver: 140.0.4
+
 patchedDependencies:
   "@rijkshuisstijl-community/components-react@1.1.0":
     hash: hfzy6ewnpwd6ilxoudutqhnefi
@@ -4471,6 +4474,12 @@ packages:
         integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==,
       }
 
+  axios@1.12.2:
+    resolution:
+      {
+        integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==,
+      }
+
   babel-loader@9.2.1:
     resolution:
       {
@@ -4854,10 +4863,10 @@ packages:
       }
     engines: { node: ">=6.0" }
 
-  chromedriver@138.0.4:
+  chromedriver@140.0.4:
     resolution:
       {
-        integrity: sha512-bz67FCiCTCdzUil2DdNVUhLdrOJ7Xws5z0dlSXKTPiLPpVJVWsQR0NXnsZcMX3FPRpmr1qP18hLp+hyeVUJgjw==,
+        integrity: sha512-/NUoxYBNkJeoNj1B5ux3KxGShITlxJctkbApgVAa3ZC8EvCLKaBclwU3/IEj5MJHnBJzqOVDxs/eTyaF9k2fOg==,
       }
     engines: { node: ">=20" }
     hasBin: true
@@ -5765,18 +5774,6 @@ packages:
     resolution:
       {
         integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==,
-      }
-    engines: { node: ">=6.0" }
-    peerDependencies:
-      supports-color: "*"
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  debug@4.4.0:
-    resolution:
-      {
-        integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==,
       }
     engines: { node: ">=6.0" }
     peerDependencies:
@@ -12400,7 +12397,7 @@ snapshots:
     dependencies:
       "@axe-core/webdriverjs": 4.10.2(selenium-webdriver@4.22.0)
       axe-core: 4.10.3
-      chromedriver: 138.0.4
+      chromedriver: 140.0.4
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 16.6.1
@@ -16560,6 +16557,14 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  axios@1.12.2:
+    dependencies:
+      follow-redirects: 1.15.9
+      form-data: 4.0.4
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
   babel-loader@9.2.1(@babel/core@7.26.7)(webpack@5.97.1):
     dependencies:
       "@babel/core": 7.26.7
@@ -16848,10 +16853,10 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@138.0.4:
+  chromedriver@140.0.4:
     dependencies:
       "@testim/chrome-version": 1.1.4
-      axios: 1.11.0
+      axios: 1.12.2
       compare-versions: 6.1.1
       extract-zip: 2.0.1
       proxy-agent: 6.5.0
@@ -17530,10 +17535,6 @@ snapshots:
   debug@4.3.1:
     dependencies:
       ms: 2.1.2
-
-  debug@4.4.0:
-    dependencies:
-      ms: 2.1.3
 
   debug@4.4.1:
     dependencies:
@@ -19632,7 +19633,7 @@ snapshots:
   micromark@4.0.1:
     dependencies:
       "@types/debug": 4.1.12
-      debug: 4.4.0
+      debug: 4.4.1
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.2
