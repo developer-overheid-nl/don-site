@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import Admonition from "@theme/Admonition";
-import { LinkListCard, LinkListLink } from "@rijkshuisstijl-community/components-react";
-import styles from './styles.module.css';
-import BrowserOnly from '@docusaurus/BrowserOnly';
+import {
+  LinkListCard,
+  LinkListLink,
+} from "@rijkshuisstijl-community/components-react";
+import styles from "./styles.module.css";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
 const NUM_POSTS = 4;
 
@@ -13,62 +16,75 @@ function formatDate(dateString) {
     return null;
   }
 
-  return new Intl.DateTimeFormat('nl-NL', {dateStyle: "long"}).format(date);
+  return new Intl.DateTimeFormat("nl-NL", { dateStyle: "long" }).format(date);
 }
 
 export default function HomepageBlogposts(): React.JSX.Element {
   const [feed, setFeed] = useState<Record<string, any>[] | null>(null);
 
   useEffect(function fetchFeed() {
-    fetch('/blog/feed.json')
-      .then((response) => response.json().catch((error) => {
-        console.warn("JSON Error: ", error.message);
-        return {
-          items: []
-        };
-      }))
+    fetch("/blog/feed.json")
+      .then((response) =>
+        response.json().catch((error) => {
+          console.warn("JSON Error: ", error.message);
+          return {
+            items: [],
+          };
+        }),
+      )
       .then((feed) => {
-        const posts = feed.items.map(( {title, summary, date_modified, url} ) => ({
-          title,
-          summary:  truncate(summary, 250),
-          date: formatDate(date_modified),
-          url
-        }))
-        .slice(0, NUM_POSTS);
+        const posts = feed.items
+          .map(({ title, summary, date_modified, url }) => ({
+            title,
+            summary: truncate(summary, 250),
+            date: formatDate(date_modified),
+            url,
+          }))
+          .slice(0, NUM_POSTS);
 
         setFeed(posts);
-      }).catch((error) => {
+      })
+      .catch((error) => {
         console.error("Fetch Error: ", error.message);
       });
   }, []);
 
   function truncate(str: string, maxLength: number): string {
     if (str.length <= maxLength) return str;
-      return str.slice(0, maxLength).trimEnd() + '…';
+    return str.slice(0, maxLength).trimEnd() + "…";
   }
 
   return (
     <BrowserOnly>
-      {() => <LinkListCard
-        heading="Laatste blogposts"
-        headingLevel={2}
-      >
-        { process.env.NODE_ENV === 'development' ? (
-            <Admonition type='caution' title="Let op">De feed wordt niet opgebouwd in development.</Admonition>
-        ) : null
-        }
-        { feed && ((feed.length > 0) ? feed.map(({title, date, summary, url}, index) => (
-          <LinkListLink href={url} key={index}>
-            <h3 className={styles.blogTitle}>{title}</h3>
-            <p className={styles.blogMeta}>{date}</p>
-            <p className={styles.blogIntro}>{summary}</p>
-          </LinkListLink>
-        )) : (
-          <li>De laatste blogposts kunnen niet geladen worden.</li>
-        )) || (
-          <li><img src='/img/bouncing-squares.svg' width={42} alt='Blogposts worden geladen' /></li>
-        )}
-      </LinkListCard>}
+      {() => (
+        <LinkListCard heading="Laatste blogposts" headingLevel={2}>
+          {process.env.NODE_ENV === "development" ? (
+            <Admonition type="caution" title="Let op">
+              De feed wordt niet opgebouwd in development.
+            </Admonition>
+          ) : null}
+          {(feed &&
+            (feed.length > 0 ? (
+              feed.map(({ title, date, summary, url }, index) => (
+                <LinkListLink href={url} key={index}>
+                  <h3 className={styles.blogTitle}>{title}</h3>
+                  <p className={styles.blogMeta}>{date}</p>
+                  <p className={styles.blogIntro}>{summary}</p>
+                </LinkListLink>
+              ))
+            ) : (
+              <li>De laatste blogposts kunnen niet geladen worden.</li>
+            ))) || (
+            <li>
+              <img
+                src="/img/bouncing-squares.svg"
+                width={42}
+                alt="Blogposts worden geladen"
+              />
+            </li>
+          )}
+        </LinkListCard>
+      )}
     </BrowserOnly>
   );
 }

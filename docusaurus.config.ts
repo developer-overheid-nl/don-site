@@ -1,5 +1,5 @@
 // import { themes as prismThemes } from "prism-react-renderer";
-import docusaurusTheme from "./src/utils/prismLight"
+import docusaurusTheme from "./src/utils/prismLight";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import remarkDirectiveSugar from "remark-directive-sugar";
@@ -52,7 +52,7 @@ const config: Config = {
       attributes: {
         "data-goatcounter": "https://donv1.goatcounter.com/count",
         async: "true",
-        src: "https://gc.zgo.at/count.js"
+        src: "https://gc.zgo.at/count.js",
       },
     },
   ],
@@ -75,8 +75,8 @@ const config: Config = {
   markdown: {
     mermaid: true,
     hooks: {
-      onBrokenMarkdownLinks: 'throw',
-      onBrokenMarkdownImages: 'throw'
+      onBrokenMarkdownLinks: "throw",
+      onBrokenMarkdownImages: "throw",
     },
   },
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
@@ -90,7 +90,9 @@ const config: Config = {
         sidebarPath: "./sidebarsCommunities.ts",
         sidebarItemsGenerator: async ({ docs }) => {
           // this way we can filter out the index doc
-          return docs.map(doc => ({ type: 'doc', id: doc.id })).filter(item => item.id !== 'index');
+          return docs
+            .map((doc) => ({ type: "doc", id: doc.id }))
+            .filter((item) => item.id !== "index");
         },
         tags: "../tags.yml",
         onInlineTags: "throw",
@@ -135,7 +137,10 @@ const config: Config = {
         pages: {},
         sitemap: {},
         theme: {
-          customCss: ["./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css", "./src/css/custom.css"],
+          customCss: [
+            "./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css",
+            "./src/css/custom.css",
+          ],
         },
       } satisfies Preset.Options,
     ],
@@ -175,7 +180,7 @@ const config: Config = {
       externalUrlRegex:
         "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
       contextualSearch: false,
-      searchPagePath: 'zoeken', // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
+      searchPagePath: "zoeken", // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
     },
     // Replace with your project's social card
     image: "img/don-social-card.png",
@@ -224,12 +229,27 @@ const config: Config = {
             { label: "CommonGround", to: "/communities/common-ground" },
             { label: "Digilab", to: "/communities/digilab" },
             { label: "DigiToegankelijk", to: "/communities/digitoegankelijk" },
-            { label: "Federatief Datastelsel", to: "/communities/federatief-datastelsel" },
-            { label: "Gebruiker Centraal", to: "/communities/gebruiker-centraal" },
+            {
+              label: "Federatief Datastelsel",
+              to: "/communities/federatief-datastelsel",
+            },
+            {
+              label: "Gebruiker Centraal",
+              to: "/communities/gebruiker-centraal",
+            },
             { label: "NL Design System", to: "/communities/nl-design-system" },
-            { label: "Opensourcewerken", to: "/communities/open-source-werken" },
-            { label: "Kennisplatform API's", to: "/communities/kennisplatform-apis" },
-            { label: "Intentieverklaring API Strategie", to: "/communities/kennisplatform-apis/intentieverklaring" },
+            {
+              label: "Opensourcewerken",
+              to: "/communities/open-source-werken",
+            },
+            {
+              label: "Kennisplatform API's",
+              to: "/communities/kennisplatform-apis",
+            },
+            {
+              label: "Intentieverklaring API Strategie",
+              to: "/communities/kennisplatform-apis/intentieverklaring",
+            },
           ],
         },
         { to: "/blog", label: "Blog", position: "left" },

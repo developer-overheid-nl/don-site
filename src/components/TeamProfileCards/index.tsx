@@ -125,11 +125,12 @@ export function ActiveTeam(): ReactNode {
         email="f.terpstra@geonovum.nl"
       >
         <Translate>
-          Frank werkt als expert standaarden binnen het implementatie-ondersteuningsteam
-          en heeft een grote passie voor standaarden. Hij gelooft in de kracht
-          van heldere afspraken en consistente structuren om samenwerking en
-          innovatie te versnellen. In zijn vrije tijd is hij een fanatiek
-          mountainbiker en gaat hij graag schaatsen.
+          Frank werkt als expert standaarden binnen het
+          implementatie-ondersteuningsteam en heeft een grote passie voor
+          standaarden. Hij gelooft in de kracht van heldere afspraken en
+          consistente structuren om samenwerking en innovatie te versnellen. In
+          zijn vrije tijd is hij een fanatiek mountainbiker en gaat hij graag
+          schaatsen.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
@@ -209,9 +210,9 @@ export function ActiveTeam(): ReactNode {
           Vanuit zijn rol als Developer Advocate deelt hij kennis, stimuleert
           hij community engagement en promoot hij het gebruik van open source.
           Naast zijn werk is hij een man van vele hobbies: hij klust graag, en
-          speelt in een band waarin hij zijn creativiteit kwijt kan. Ook is 
-          hij geïnteresseerd in hoe we het internet op een meer ethische 
-          manier kunnen vormgeven.
+          speelt in een band waarin hij zijn creativiteit kwijt kan. Ook is hij
+          geïnteresseerd in hoe we het internet op een meer ethische manier
+          kunnen vormgeven.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol

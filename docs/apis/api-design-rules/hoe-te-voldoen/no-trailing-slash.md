@@ -4,15 +4,17 @@ tags: [adr, api]
 
 # /core/no-trailing-slash
 
-Deze regel schrijft voor dat een path geen trailing slash mag bevatten, met uitzondering van de root.
+Deze regel schrijft voor dat een path geen trailing slash mag bevatten, met
+uitzondering van de root.
 
-- Regel: https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/no-trailing-slash
-- Linter test: https://logius-standaarden.github.io/API-Design-Rules/#:~:text=%23%2Fcore%2Fno%2Dtrailing%2Dslash
+- Regel:
+  https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/no-trailing-slash
+- Linter test:
+  https://logius-standaarden.github.io/API-Design-Rules/#:~:text=%23%2Fcore%2Fno%2Dtrailing%2Dslash
 
 ## Uitdrukken in OAS
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 <Tabs>
   <TabItem value="yaml" label="YAML" default>
