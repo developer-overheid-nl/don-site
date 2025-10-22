@@ -157,3 +157,13 @@ linda-van-den-brink:
   page: true
   socials: 
     linkedin: https://www.linkedin.com/in/linda-van-den-brink-87494a3
+
+eric-nieuwland:
+  name: Eric Nieuwland
+  title: Security Officer en Solution Architect - ICTU
+  image_url: https://avatars.githubusercontent.com/u/10603975
+  page: true
+  socials:
+    linkedin: ericnieuwland
+    github: eric-nieuwland
+    mastodon: https://mastodon.nl/@e_r_nie
