@@ -74,7 +74,7 @@ Naast het Nederlandse profiel zijn ook een drietal handreikingen gemaakt die toe
 
 Het gebruik van CloudEvents en het NL GOV profiel helpt de overheid om:
 
-- **Realtime** en **event-driven** te werken in ketens en ecosystemen.
+- **Real-time** en **event-driven** te werken in ketens en ecosystemen.
 - **Losse koppelingen** te realiseren tussen systemen, waardoor onderhoud en innovatie eenvoudiger worden.
 - **Interoperabiliteit** te garanderen, zodat alle overheidsorganisaties dezelfde taal spreken in event-uitwisseling.
 

@@ -2,7 +2,7 @@
 draft: true
 authors: [martin-van-der-plas, stas-mironov]
 tags: [api, eda, fds, webhooks, cloudevents, nds]
-description: Steeds meer overheidsorganisaties stappen over naar event-driven architecturen (EDA). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als CloudEvents, DigiLevering, DigiMelding, en Webhooks zoals die terugkomen in de NL API Strategie.
+description: Steeds meer overheidsorganisaties stappen over naar eventgedreven architecturen (EDA). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als CloudEvents, DigiLevering, DigiMelding, en Webhooks zoals die terugkomen in de NL API Strategie.
 image: ./img/event-driven-overheid.png
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
@@ -12,7 +12,7 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 ![Schematisch beeld van de event-driven overheid](./img/event-driven-overheid.png)
 *Schematisch beeld van de event-driven overheid*
 
-Steeds meer overheidsorganisaties stappen over naar [event-driven architecturen (EDA)](/kennisbank/apis/architectuur/eda). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als [CloudEvents](/kennisbank/apis/architectuur/cloudevents), [Webhooks](/kennisbank/apis/architectuur/webhooks) DigiLevering en DigiMelding.
+Steeds meer overheidsorganisaties stappen over naar [eventgedreven architecturen (EDA)](/kennisbank/apis/architectuur/eda). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als [CloudEvents](/kennisbank/apis/architectuur/cloudevents), [Webhooks](/kennisbank/apis/architectuur/webhooks) DigiLevering en DigiMelding.
 
 <!-- truncate -->
 
@@ -104,7 +104,7 @@ Beide werken op basis van events, maar zijn nog grotendeels **bericht-georiënte
 
 In de snel evoluerende digitale wereld zijn real-time interacties en schaalbare systemen essentieel voor moderne applicaties. Event-Driven Architecture is een belangrijk architectuurprincipe dat **asynchrone**, **losgekoppelde** en **schaalbare** oplossingen mogelijk maakt.
 
-- De nieuwe OpenAPI Specificatie versie 3.1 ondersteund ook de mogelijkheid om webhooks te definiëren. zie o.a. [Openapis.org](https://spec.openapis.org/oas/latest.html#callback-object). Deze nieuwe versie is aangemeld bij het Forum Standaardisatie. De nieuwe versie is echter nog niet op de lijst opgenomen. zie ook [OpenAPI.tools](https://openapi.tools) om de adoptie van OAS 3.1, 3.2 en verder te volgen.
+- De nieuwe OpenAPI Specificatie versie 3.1 ondersteunt ook de mogelijkheid om webhooks te definiëren. zie o.a. [Openapis.org](https://spec.openapis.org/oas/latest.html#callback-object). Deze nieuwe versie is aangemeld bij het Forum Standaardisatie. De nieuwe versie is echter nog niet op de lijst opgenomen. zie ook [OpenAPI.tools](https://openapi.tools) om de adoptie van OAS 3.1, 3.2 en verder te volgen.
 - VNG heeft in 2022 [een Nederlands profiel opgesteld voor cloud events.](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents). Dit profiel is bij Logius in beheer genomen en wacht op verdere doorontwikkeling en toepassing.
 - vanuit Digilevering en Digimelding is er interesse om meer met api's te gaan doen en hierbij is ook zeker aandacht voor cloud events, event driven architecture en webhooks.
 - Vanuit het kennisplatform is event driven design al een aantal keer onder de aandacht geweest. Zie ook het [gebruikerswensen document](https://docs.geostandaarden.nl/api/API-Strategie-gebruikerswensen/).
