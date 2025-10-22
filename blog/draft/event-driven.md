@@ -5,7 +5,7 @@ description: Steeds meer overheidsorganisaties stappen over naar event-driven ar
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
-# De toekomstige van de Overheid is Event Driven
+# De toekomst van de Overheid is Event Driven
 
 ![Schematisch beeld van de Event Driven Overheid](./img/event-driven-overheid.png)
 *Schematisch beeld van de Event Driven Overheid*
@@ -45,7 +45,7 @@ Een belangrijke ontwikkeling is de standaardisering van het event formaat via [*
 
 - De **bron** van het event
 - Het **type** event (bijvoorbeeld nl.basisregistratie.persoon.geboorte)
-- De **tijdstip** en **ID**
+- Het **tijdstip** en **ID**
 - Optioneel: een payload met aanvullende gegevens
   
 Deze standaard speelt een steeds grotere rol in het **federatief datastelsel** (zoals benoemd in de Nederlandse Digitaliseringsstrategie), waarin verschillende overheidslagen interoperabel met elkaar communiceren via gebeurtenissen.
