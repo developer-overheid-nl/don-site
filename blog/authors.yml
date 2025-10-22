@@ -6,6 +6,7 @@ joost-farla:
   socials:
     linkedin: joostfarla
     github: joostfarla
+    email: j.farla@geonovum.nl
 
 dimitri-van-hees:
   name: Dimitri van Hees
@@ -17,6 +18,7 @@ dimitri-van-hees:
     github: dvh
     mastodon: https://me.dm/@dvh
     bluesky: dvh.nu
+    email: d.vanhees@geonovum.nl
 
 matthijs-hovestad:
   name: Matthijs Hovestad
@@ -26,6 +28,7 @@ matthijs-hovestad:
   socials:
     linkedin: matthijs-hovestad-a123898b
     github: pasibun
+    email: m.hovestad@geonovum.nl
 
 tom-ootes:
   name: Tom Ootes
@@ -36,6 +39,7 @@ tom-ootes:
     linkedin: tootes
     github: tomootes
     mastodon: https://hostux.social/@tomootes
+    email: t.ootes@geonovum.nl
 
 thomas-rooijakkers:
   name: Thomas Rooijakkers
@@ -82,6 +86,7 @@ frank-terpstra:
   socials:
     linkedin: frank-terpstra-1bb5096
     github: fterpstra
+    email: f.terpstra@geonovum.nl
 
 jaap-hein-wester:
   name: Jaap-Hein Wester
@@ -93,6 +98,7 @@ jaap-hein-wester:
     github: MrSkippy
     mastodon: https://mastodon.nl/@jhwester
     bluesky: jhwester.bsky.social
+    email: j.h.wester@geonovum.nl
 
 digilab:
   name: Digilab
