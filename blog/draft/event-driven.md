@@ -2,15 +2,16 @@
 authors: [martin-van-der-plas,stas-mironov]
 tags: [api, eda, fds, webhooks, cloudevents, nds]
 description: Steeds meer overheidsorganisaties stappen over naar event-driven architecturen (EDA). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als CloudEvents, DigiLevering, DigiMelding, en Webhooks zoals die terugkomen in de NL API Strategie.
+image: ./img/event-driven-overheid.png
 ---
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
-# De toekomst van de Overheid is Event Driven
+# De toekomst van de overheid is event-driven
 
-![Schematisch beeld van de Event Driven Overheid](./img/event-driven-overheid.png)
-*Schematisch beeld van de Event Driven Overheid*
+![Schematisch beeld van de event-driven overheid](./img/event-driven-overheid.png)
+*Schematisch beeld van de event-driven overheid*
 
-Steeds meer overheidsorganisaties stappen over naar [event-driven architecturen (EDA)](../kennisbank/apis/architectuur/eda). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als [CloudEvents](../kennisbank/apis/architectuur/cloudevents), [Webhooks](../kennisbank/apis/architectuur/webhooks) DigiLevering en DigiMelding.
+Steeds meer overheidsorganisaties stappen over naar [event-driven architecturen (EDA)](/kennisbank/apis/architectuur/eda). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als [CloudEvents](/kennisbank/apis/architectuur/cloudevents), [Webhooks](/kennisbank/apis/architectuur/webhooks) DigiLevering en DigiMelding.
 
 <!-- truncate -->
 
@@ -34,7 +35,7 @@ Event-driven architectuur is niet nieuw, in 2021 heeft VNG in opdracht van MinBZ
 
 <Blockquote
   variation="pink-background"
-  attribution="- Forum Standaardisatie -"
+  attribution="— Forum Standaardisatie"
 >
 Op 25 september 2025 heeft het Forum Standaardisatie ingestemd met het advies aan het OBDO om het **NL GOV profile for CloudEvents** verplicht te stellen (“Pas toe of leg uit”). Daarnaast is het predicaat *‘Uitstekend beheer’* toegekend voor deze standaard.
 </Blockquote>
@@ -49,7 +50,7 @@ Een belangrijke ontwikkeling is de standaardisering van het event formaat via [*
 - Optioneel: een payload met aanvullende gegevens
   
 Deze standaard speelt een steeds grotere rol in het **federatief datastelsel** (zoals benoemd in de Nederlandse Digitaliseringsstrategie), waarin verschillende overheidslagen interoperabel met elkaar communiceren via gebeurtenissen.
-> Zie ook de webhooks pagina op de Kennisbank van [developer.overheid.nl](../kennisbank/apis/architectuur/webhooks).
+> Zie ook de webhooks pagina op de Kennisbank van [developer.overheid.nl](/kennisbank/apis/architectuur/webhooks).
 
 ### Webhooks in de NL API Strategie
 
@@ -79,7 +80,7 @@ Date: Fri, 26 Sep 2025 14:00:00 GMT
 
 Het opnemen van Webhooks in OAS (OpenAPI Specification) maakt het mogelijk dat afnemers zich kunnen abonneren op gebeurtenissen en **automatisch geïnformeerd worden wanneer die plaatsvinden**
 
-> Zie ook de cloudevents pagina op de Kennisbank van [developer.overheid.nl](../kennisbank/apis/architectuur/cloudevents)
+> Zie ook de cloudevents pagina op de Kennisbank van [developer.overheid.nl](/kennisbank/apis/architectuur/cloudevents)
 
 ### Webhooks in de eDelivery API-standaard
 
