@@ -1,6 +1,7 @@
 ---
 authors: [joost-farla]
 tags: [adr, interoperability, openapi, odata]
+image: ./img/odata.png
 ---
 
 # OData en de REST API Design Rules: past dat wel?
