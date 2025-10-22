@@ -7,8 +7,6 @@ draft: true
 Ken je dat? Je gaat aan een nieuw project beginnen en dan vraagt iemand
 ‘Doen jullie wel _Privacy by Design_?’
 
-<!-- truncate -->
-
 Uiteraard is het belangrijk om bij de bouw van nieuwe software meteen te
 denken aan privacy – en ook aan security, toegankelijkheid en mogelijk meer.
 Maar hoe past dat binnen een moderne, agile werkwijze?
@@ -18,6 +16,8 @@ nog voor er een letter geprogrammeerd was, konden die ontwerpen vooraf aan
 al deze eisen getoetst worden. In theorie dan, want onder tijdsdruk kwam het
 daar veel te vaak niet of onvoldoende van. Of de wereld was alweer veranderd
 tegen de tijd dat de software in productie ging.
+
+<!-- truncate -->
 
 ## Dat moet toch beter kunnen, zou je denken
 
