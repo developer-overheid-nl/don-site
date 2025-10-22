@@ -1,5 +1,6 @@
 ---
-authors: [martin-van-der-plas,stas-mironov]
+draft: true
+authors: [martin-van-der-plas, stas-mironov]
 tags: [api, eda, fds, webhooks, cloudevents, nds]
 description: Steeds meer overheidsorganisaties stappen over naar event-driven architecturen (EDA). Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past bij een moderne digitale overheid waarin systemen onderling proactief samenwerken op basis van gebeurtenissen, in plaats van reactieve vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als CloudEvents, DigiLevering, DigiMelding, en Webhooks zoals die terugkomen in de NL API Strategie.
 image: ./img/event-driven-overheid.png
