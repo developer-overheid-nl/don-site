@@ -3,29 +3,44 @@ tags:
   - "open-source"
   - "publiccode-yml"
 ---
+
 # Publiccode.yml
 
 import { Card } from "@rijkshuisstijl-community/components-react";
 
-Om inzichtelijk te maken wat de code van een open source project precies doet is het nodig dat er ergens metadata over het project beschikbaar is. Hiervoor is de `publiccode.yml` standaard in het leven geroepen. Deze standaard heeft twee belangrijke doelen:
+Om inzichtelijk te maken wat de code van een open source project precies doet is
+het nodig dat er ergens metadata over het project beschikbaar is. Hiervoor is de
+`publiccode.yml` standaard in het leven geroepen. Deze standaard heeft twee
+belangrijke doelen:
 
 - Open source projecten vindbaar maken
 - Informatie over een open source project centraliseren
 
 ## Voordelen
+
 ### Git-platform agnostische oplossing
 
-Veel metadata van open source projecten zit opgeslagen in bijvoorbeeld Gitlab of Github. Op het moment dat je de code wilt migreren is het een hoop werk alle gegevens opnieuw in te voeren. Publiccode.yml lost dit voor je op, het bestandje is namelijk onderdeel van je codebase. 
+Veel metadata van open source projecten zit opgeslagen in bijvoorbeeld Gitlab of
+Github. Op het moment dat je de code wilt migreren is het een hoop werk alle
+gegevens opnieuw in te voeren. Publiccode.yml lost dit voor je op, het bestandje
+is namelijk onderdeel van je codebase.
 
 ### Machine-leesbare metadata
 
-Door het publiccode.yml bestand in te vullen voorzie je je project van machine-leesbare metadata. Deze meta-data kan ingelezen worden door Open Source Software Catalogi om jou code zo nog beter vindbaar te maken.
+Door het publiccode.yml bestand in te vullen voorzie je je project van
+machine-leesbare metadata. Deze meta-data kan ingelezen worden door Open Source
+Software Catalogi om jou code zo nog beter vindbaar te maken.
 
 ### Vindbaarheid
 
-De publiccode.yml-standaard zorgt op een eenvoudige manier voor vindbaarheid. Op het momet dat een codebase een `publiccode.yml` bestand bevat in de root van het project, kan het project worden gemarkeerd als een open source project. Bots kunnen op die manier makkelijk platforms als Gitlab en Github afstruinen op zoek naar projecten met een `publiccode.yml` bestand.
+De publiccode.yml-standaard zorgt op een eenvoudige manier voor vindbaarheid. Op
+het momet dat een codebase een `publiccode.yml` bestand bevat in de root van het
+project, kan het project worden gemarkeerd als een open source project. Bots
+kunnen op die manier makkelijk platforms als Gitlab en Github afstruinen op zoek
+naar projecten met een `publiccode.yml` bestand.
 
 ## Waar voeg ik de `publiccode.yml` toe?
+
 Je voegt de `publiccode.yml` toe in de root (`./`) van je project.
 
 ## Voorbeelden
@@ -102,19 +117,24 @@ dependsOn:
 description:
   nl:
     longDescription: >
-      Developer Overheid NL is de wegwijzer voor developers die voor of bij de overheid ontwikkelen. Zij vervult deze
-      rol door het aanbieden van standaarden, best practices en tools.
+      Developer Overheid NL is de wegwijzer voor developers die voor of bij de
+      overheid ontwikkelen. Zij vervult deze rol door het aanbieden van
+      standaarden, best practices en tools.
 
-      Een belangrijke feature van het platform is de API catalogus. Deze maakt inzichtelijk welke API's er beschikbaar
-      zijn in het publieke landschap. Tevens kan je hier per API de informatie vinden die je nodig hebt om met de API aan
-      de slag te gaan.
+      Een belangrijke feature van het platform is de API catalogus. Deze maakt
+      inzichtelijk welke API's er beschikbaar zijn in het publieke landschap.
+      Tevens kan je hier per API de informatie vinden die je nodig hebt om met
+      de API aan de slag te gaan.
        
-      Ook biedt het platform inzicht in welke open source software projecten er beschikbaar zijn in het 
-      publieke landschap. Per project krijgt de gebruiker inzicht in de vitaliteit van de repository en andere
-      waardevolle datapunten.
+      Ook biedt het platform inzicht in welke open source software projecten er
+      beschikbaar zijn in het  publieke landschap. Per project krijgt de
+      gebruiker inzicht in de vitaliteit van de repository en andere waardevolle
+      datapunten.
 
     # Mand!
-    shortDescription: Developer Overheid NL is de wegwijzer voor developers die voor of bij de overheid ontwikkelen.
+    shortDescription:
+      Developer Overheid NL is de wegwijzer voor developers die voor of bij de
+      overheid ontwikkelen.
 
     # Welke grote features heeft dit project?
     features:
@@ -169,7 +189,11 @@ maintenance:
 
 ## Een open standaard in ontwikkeling
 
-De standaard achter publiccode.yml wordt voortdurend doorontwikkeld. Het team achter de standaard waardeert het enorm als wij als developers bijdragen door middel van feedback en suggesties. Je kunt input aanleveren door een [issue aan te maken](https://github.com/publiccodeyml/publiccode.yml/issues) op de GitHub-pagina van de standaard.
+De standaard achter publiccode.yml wordt voortdurend doorontwikkeld. Het team
+achter de standaard waardeert het enorm als wij als developers bijdragen door
+middel van feedback en suggesties. Je kunt input aanleveren door een
+[issue aan te maken](https://github.com/publiccodeyml/publiccode.yml/issues) op
+de GitHub-pagina van de standaard.
 
 ## Externe links
 
@@ -184,7 +208,6 @@ De standaard achter publiccode.yml wordt voortdurend doorontwikkeld. Het team ac
 <br />
 <br />
 
-
 <Card
   appearance="default"
   description="Voeg een publiccode.yml toe aan je project met de publiccode.yml editor."
@@ -192,5 +215,3 @@ De standaard achter publiccode.yml wordt voortdurend doorontwikkeld. Het team ac
   href="/kennisbank/open-source/tools/publiccode-yml-editor"
   linkLabel="Naar artikel over de publiccode.yml editor"
 />
-
-

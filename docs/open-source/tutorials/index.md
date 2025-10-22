@@ -1,6 +1,6 @@
 ---
 tags:
-  - 'open-source'
+  - "open-source"
 sidebar_position: 0
 ---
 

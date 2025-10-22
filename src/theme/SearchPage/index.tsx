@@ -1,6 +1,12 @@
 /* eslint-disable jsx-a11y/no-autofocus */
 
-import React, { useCallback, useEffect, useState, useReducer, useRef } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useState,
+  useReducer,
+  useRef,
+} from "react";
 import clsx from "clsx";
 
 import algoliaSearchHelper from "algoliasearch-helper";
@@ -84,16 +90,16 @@ export function useSearchPage(): {
       });
       setSearchQueryState(newSearchQuery);
     },
-    [history]
+    [history],
   );
 
   const generateSearchPageLink = useCallback(
     (targetSearchQuery: string) =>
       // Refer to https://github.com/facebook/docusaurus/pull/2838
       `${baseUrl}search?${SEARCH_PARAM_QUERY}=${encodeURIComponent(
-        targetSearchQuery
+        targetSearchQuery,
       )}`,
-    [baseUrl]
+    [baseUrl],
   );
 
   return {
@@ -116,8 +122,8 @@ function useDocumentsFoundPlural() {
             'Pluralized label for "{count} documents found". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
           message: "One document found|{count} documents found",
         },
-        { count }
-      )
+        { count },
+      ),
     );
 }
 
@@ -134,8 +140,8 @@ function useDocsSearchVersionsHelpers() {
         ...acc,
         [pluginId]: pluginData.versions[0]!.name,
       }),
-      {}
-    )
+      {},
+    ),
   );
 
   // Set the value of a single select menu
@@ -143,7 +149,7 @@ function useDocsSearchVersionsHelpers() {
     setSearchVersions((s) => ({ ...s, [pluginId]: searchVersion }));
 
   const versioningEnabled = Object.values(allDocsData).some(
-    (docsData) => docsData.versions.length > 1
+    (docsData) => docsData.versions.length > 1,
   );
 
   return {
@@ -161,7 +167,7 @@ function SearchVersionSelectList({
   docsSearchVersionsHelpers: ReturnType<typeof useDocsSearchVersionsHelpers>;
 }) {
   const versionedPluginEntries = Object.entries(
-    docsSearchVersionsHelpers.allDocsData
+    docsSearchVersionsHelpers.allDocsData,
   )
     // Do not show a version select for unversioned docs plugin instances
     .filter(([, docsData]) => docsData.versions.length > 1);
@@ -172,7 +178,7 @@ function SearchVersionSelectList({
         "col",
         "col--3",
         "padding-left--none",
-        styles.searchVersionColumn
+        styles.searchVersionColumn,
       )}
     >
       {versionedPluginEntries.map(([pluginId, docsData]) => {
@@ -184,7 +190,7 @@ function SearchVersionSelectList({
             onChange={(e) =>
               docsSearchVersionsHelpers.setSearchVersion(
                 pluginId,
-                e.target.value
+                e.target.value,
               )
             }
             defaultValue={docsSearchVersionsHelpers.searchVersions[pluginId]}
@@ -286,7 +292,7 @@ function SearchPageContent(): React.JSX.Element {
           return prevState;
       }
     },
-    initialSearchResultState
+    initialSearchResultState,
   );
 
   const typesenseInstantSearchAdapter = new TypesenseInstantSearchAdapter({
@@ -315,7 +321,7 @@ function SearchPageContent(): React.JSX.Element {
   const algoliaHelper = algoliaSearchHelper(
     typesenseInstantSearchAdapter.searchClient,
     typesenseCollectionName,
-    searchParams
+    searchParams,
   );
 
   algoliaHelper.on(
@@ -329,7 +335,7 @@ function SearchPageContent(): React.JSX.Element {
       const sanitizeValue = (value: string) =>
         value.replace(
           /algolia-docsearch-suggestion--highlight/g,
-          "search-result-match"
+          "search-result-match",
         );
 
       const items = hits.map(
@@ -362,7 +368,7 @@ function SearchPageContent(): React.JSX.Element {
               : "",
             breadcrumbs: titles,
           };
-        }
+        },
       );
 
       searchResultStateDispatcher({
@@ -377,7 +383,7 @@ function SearchPageContent(): React.JSX.Element {
           loading: false,
         },
       });
-    }
+    },
   );
 
   algoliaHelper.on("error", function (e) {
@@ -401,8 +407,8 @@ function SearchPageContent(): React.JSX.Element {
 
           prevY.current = currentY;
         },
-        { threshold: 1 }
-      )
+        { threshold: 1 },
+      ),
   );
 
   const getTitle = () =>
@@ -415,7 +421,7 @@ function SearchPageContent(): React.JSX.Element {
           },
           {
             query: searchQuery,
-          }
+          },
         )
       : translate({
           id: "theme.SearchPage.emptyResultsTitle",
@@ -532,7 +538,7 @@ function SearchPageContent(): React.JSX.Element {
                 "col",
                 "col--4",
                 "text--right",
-                styles.searchLogoColumn
+                styles.searchLogoColumn,
               )}
             >
               <a
@@ -596,7 +602,7 @@ function SearchPageContent(): React.JSX.Element {
                         <ul
                           className={clsx(
                             "breadcrumbs",
-                            styles.searchResultItemPath
+                            styles.searchResultItemPath,
                           )}
                         >
                           {breadcrumbs.map((html, index) => (
@@ -621,7 +627,7 @@ function SearchPageContent(): React.JSX.Element {
                       />
                     )}
                   </article>
-                )
+                ),
               )}
             </main>
           ) : (

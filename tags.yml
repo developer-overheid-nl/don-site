@@ -16,10 +16,14 @@ amsterdam:
 api-design:
   label: API Design
 argo-cd:
-  description: Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor Kubernetes.
+  description:
+    Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor
+    Kubernetes.
   label: Argo CD
 asyncapi:
-  description: AsyncAPI is een standaard om asynchrone berichtuitwisselingen te beschrijven analoog aan hoe Open API Specification(OAS) dit doet voor REST APIs
+  description:
+    AsyncAPI is een standaard om asynchrone berichtuitwisselingen te beschrijven
+    analoog aan hoe Open API Specification(OAS) dit doet voor REST APIs
   label: AsyncAPI
 avg:
   description: Algemene verordening gegevensbescherming (AVG)
@@ -46,12 +50,16 @@ cli:
 cloudevents:
   label: CloudEvents
 common-ground:
-  description: Common Ground is een initiatief van de Vereniging van Nederlandse Gemeenten (VNG) dat leidde tot een toekomstbestendige architectuurvisie.
+  description:
+    Common Ground is een initiatief van de Vereniging van Nederlandse Gemeenten
+    (VNG) dat leidde tot een toekomstbestendige architectuurvisie.
   label: Common Ground
 community:
   label: Community
 containerization:
-  description: Containerization is het proces waarbij applicaties en hun afhankelijkheden worden geïsoleerd in gestandaardiseerde eenheden (containers).
+  description:
+    Containerization is het proces waarbij applicaties en hun afhankelijkheden
+    worden geïsoleerd in gestandaardiseerde eenheden (containers).
   label: Containerization
 data-bij-de-bron:
   description: Het principe Data bij de Bron
@@ -60,7 +68,9 @@ dcat:
   label: DCAT
 dependabot:
   label: dependabot
-  description: Dependabot is een geautomatiseerde service van GitHub die je helpt bij het bijhouden van dependencies in je project.
+  description:
+    Dependabot is een geautomatiseerde service van GitHub die je helpt bij het
+    bijhouden van dependencies in je project.
 design-system:
   label: Design System
 developer.overheid.nl:
@@ -68,42 +78,62 @@ developer.overheid.nl:
 development:
   label: Development
 devops:
-  description: DevOps (een samentrekking van "development" en "operations") is een gebruik en een praktijk binnen softwareontwikkeling die tot doel heeft softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen.
+  description:
+    DevOps (een samentrekking van "development" en "operations") is een gebruik
+    en een praktijk binnen softwareontwikkeling die tot doel heeft
+    softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen.
   label: DevOps
 digid:
-  description: Met uw DigiD laat u zien wie u bent als u op internet iets regelt.
+  description:
+    Met uw DigiD laat u zien wie u bent als u op internet iets regelt.
   label: DigiD
 digikoppeling:
   label: Digikoppeling
 digitale-autonomie:
-  description: Digitale autonomie is het principe dat de overheid zelf de regie heeft over haar digitale infrastructuur en data.
+  description:
+    Digitale autonomie is het principe dat de overheid zelf de regie heeft over
+    haar digitale infrastructuur en data.
   label: Digitale autonomie
 docker:
-  description: Docker is een platform voor het bouwen, distribueren en draaien van applicaties in individuele containers
+  description:
+    Docker is een platform voor het bouwen, distribueren en draaien van
+    applicaties in individuele containers
   label: Docker
 eherkenning:
-  description: eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te krijgen tot digitale overheidsdiensten.
+  description:
+    eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te
+    krijgen tot digitale overheidsdiensten.
   label: eHerkenning
 eidas:
-  description: eIDAS is een Europese verordening die zorgt voor grensoverschrijdende herkenning van elektronische identiteiten
+  description:
+    eIDAS is een Europese verordening die zorgt voor grensoverschrijdende
+    herkenning van elektronische identiteiten
   label: eIDAS
 eu:
   label: Europe
 eda:
-  description: Event Driven Architecture (EDA) is een architectuurparadigma waarin componenten communiceren door het detecteren, publiceren, en verwerken van events (gebeurtenissen), zodat systemen loosely coupled, schaalbaar en responsief zijn.
+  description:
+    Event Driven Architecture (EDA) is een architectuurparadigma waarin
+    componenten communiceren door het detecteren, publiceren, en verwerken van
+    events (gebeurtenissen), zodat systemen loosely coupled, schaalbaar en
+    responsief zijn.
   label: Event Driven Architecture (EDA)
 eudi:
   label: European Digital Identity
 edi:
   label: Europese Digitale Identiteit (EDI)
 fds:
-  description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden, voorzieningen en  stelselfuncties. \_"
+  description:
+    "Het FDS is een vertrouwensraamwerk met afspraken, standaarden,
+    voorzieningen en  stelselfuncties. \_"
   label: Federatief Data Stelsel
 fieldlab:
   description: Fieldlab
   label: Fieldlab
 flux:
-  description: Flux CD is een GitOps tool voor Kubernetes die automatische deployment en synchronisatie van applicaties mogelijk maakt.
+  description:
+    Flux CD is een GitOps tool voor Kubernetes die automatische deployment en
+    synchronisatie van applicaties mogelijk maakt.
   label: Flux
 forum-standaardisatie:
   label: Forum Standaardisatie
@@ -134,7 +164,9 @@ gouden-api:
   label: Gouden API
 haven:
   label: "Haven"
-  description: "Haven is een open source standaard met criteria en best practices voor hoe je Kubernetes gebruikt."
+  description:
+    "Haven is een open source standaard met criteria en best practices voor hoe
+    je Kubernetes gebruikt."
 helm:
   description: Helm is een package manager voor Kubernetes
   label: Helm
@@ -167,7 +199,9 @@ kiesraad:
 kubernetes:
   label: Kubernetes
 ldv:
-  description: Logboek Data Verwerkingen is een standaard die beschrijft hoe je logging kan vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen
+  description:
+    Logboek Data Verwerkingen is een standaard die beschrijft hoe je logging kan
+    vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen
   label: Logboek Data Verwerkingen
 leaflet:
   description: Leaflet JavaScript library voor interactieve kaarten
@@ -177,7 +211,9 @@ license:
 linked-data:
   label: Linked Data
 llm:
-  description: Large Language Models zijn generatieve AI die natuurlijke of niet natuurlijke (programmeer) taal kunnen genereren
+  description:
+    Large Language Models zijn generatieve AI die natuurlijke of niet
+    natuurlijke (programmeer) taal kunnen genereren
   label: Large Language Model
 logging:
   description: Logging
@@ -196,7 +232,8 @@ mtls:
   description: Mutual TLS
 nds:
   label: Nederlandse Digitaliseringsstrategie
-  description: De NDS is één van de pijlers van het kabinetsbeleid op digitalisering.
+  description:
+    De NDS is één van de pijlers van het kabinetsbeleid op digitalisering.
 nl-design-system:
   label: NL Design System
 nodejs:
@@ -207,18 +244,23 @@ notificaties:
   label: Notificaties
 npm:
   label: npm
-  description: NPM staat voor 'Node Package Manager' is het standaard package management systeem voor Node.js.
+  description:
+    NPM staat voor 'Node Package Manager' is het standaard package management
+    systeem voor Node.js.
 nvm:
   label: NVM
 oas:
   label: OpenAPI Specification
 oauth:
-  description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
+  description:
+    OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
   label: OAuth 2.0
 odata:
   label: OData
 ogc:
-  description: Open Geospatial Consortium is de internationale standaarden organisatie voor interoperabele open Geo standaarden
+  description:
+    Open Geospatial Consortium is de internationale standaarden organisatie voor
+    interoperabele open Geo standaarden
   label: Open Geospatial Consortium
 oidc:
   description: OpenID Connect is een identity layer bovenop OAuth 2.0
@@ -238,11 +280,15 @@ owasp:
 owl:
   label: OWL
 pkio:
-  description: PKIOverheid is de publieke infrastructuur voor digitale certificaten van de Nederlandse overheid.
+  description:
+    PKIOverheid is de publieke infrastructuur voor digitale certificaten van de
+    Nederlandse overheid.
   label: PKIOverheid
 pnpm:
   label: pnpm
-  description: PNPM (Performant NPM) is een alternatieve package manager voor Node.js, net als NPM en Yarn, maar met een slimmere aanpak.
+  description:
+    PNPM (Performant NPM) is een alternatieve package manager voor Node.js, net
+    als NPM en Yarn, maar met een slimmere aanpak.
 portal:
   label: Portal
 privacy:
@@ -274,14 +320,17 @@ rust:
   description: Rust
   label: Rust
 saml:
-  description: SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
+  description:
+    SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
   label: SAML
 security:
   label: Security
 security-by-design:
   label: Security By Design
 seo:
-  description: Search Engine Optimalization is het doen van aanpassingen die er voor zorgen dat jouw content (on)vindbaar is in zoekmachines op het internet
+  description:
+    Search Engine Optimalization is het doen van aanpassingen die er voor zorgen
+    dat jouw content (on)vindbaar is in zoekmachines op het internet
   label: Search Engine Optimalization
 shacl:
   description: Shapes Constraint Language
@@ -292,7 +341,9 @@ skos:
 typescript:
   label: TypeScript
 technische-schuld:
-  description: Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in de toekomst moeilijker te wijzigen maken
+  description:
+    Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in
+    de toekomst moeilijker te wijzigen maken
   label: Technische schuld
 tool:
   description: Tool
@@ -321,7 +372,9 @@ wcag:
 webhooks:
   label: Webhooks
 websub:
-  description: Websub is een W3C standaard voor het maken van abonnementen op (veranderingen) in resources op het web
+  description:
+    Websub is een W3C standaard voor het maken van abonnementen op
+    (veranderingen) in resources op het web
   label: Websub
 yaml:
   label: YAML

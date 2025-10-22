@@ -3,37 +3,74 @@ authors: [tom-ootes]
 tags: [npm, javascript, typescript, nodejs, pnpm, dependabot, htmx]
 draft: true
 ---
+
 # Voorkom JavaScript-moeheid: minimaliseer het aantal NPM packages
 
-Binnen modern web-development zijn er veel processen waarbij we NPM-packages gebruiken. De meest herkenbare verschijningsvormen van NPM-packages zijn libraries en frameworks, maar in de afgelopen jaren is het scala behoorlijk uitgebreid.
+Binnen modern web-development zijn er veel processen waarbij we NPM-packages
+gebruiken. De meest herkenbare verschijningsvormen van NPM-packages zijn
+libraries en frameworks, maar in de afgelopen jaren is het scala behoorlijk
+uitgebreid.
 
-In veel codebases zie je ook: linters , test-engines, type-definitions en CLI-tools. Deze groei is verklaarbaar maar zorgt wel voor een **stijging van het aantal dependencies** binnen projecten. En dat zorgt weer voor problemen als: de welbekende **dependency-hell**, grote hoeveelheden **onderhoudswerk** en **trage transpile-processen**.
+In veel codebases zie je ook: linters , test-engines, type-definitions en
+CLI-tools. Deze groei is verklaarbaar maar zorgt wel voor een **stijging van het
+aantal dependencies** binnen projecten. En dat zorgt weer voor problemen als: de
+welbekende **dependency-hell**, grote hoeveelheden **onderhoudswerk** en **trage
+transpile-processen**.
 
-In deze post duiken we wat dieper in het NPM-ecosysteem en lees je hoe je bovenstaande problemen kunt voorkomen.
+In deze post duiken we wat dieper in het NPM-ecosysteem en lees je hoe je
+bovenstaande problemen kunt voorkomen.
 
 <!-- truncate -->
 
 :::success[**TL;DR**]
 
-Het minimaliseren van het aantal [NPM](https://www.npmjs.com/)-packages is een effectief middel om je dagelijkse develop-werkzaamheden beheersbaar te houden. Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar een onderhoudsnachtmerrie met kwetsbaarheden en conflicterende versies.
+Het minimaliseren van het aantal [NPM](https://www.npmjs.com/)-packages is een
+effectief middel om je dagelijkse develop-werkzaamheden beheersbaar te houden.
+Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar
+een onderhoudsnachtmerrie met kwetsbaarheden en conflicterende versies.
 
-Door projecten op te knippen in kleinere projecten, native API's te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) kun je de dependencies die je wél nodig hebt beter beheren.
+Door projecten op te knippen in kleinere projecten, native API's te gebruiken,
+en frequent bestaande projecten te updaten kan complexiteit worden voorkomen.
+Met tools zoals PNPM en
+[Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide)
+kun je de dependencies die je wél nodig hebt beter beheren.
 
 :::
 
-
 ## Van React naar HTMX?
-Toen ik  als front-end developer begon bij developer.overheid.nl moest ik even wennen aan een bepaalde technische keuze. Er was namelijk besloten dat we de bestaande React front-end zouden refactoren naar een situatie waarbij een Django-app alle templates zou renderen. In de nieuwe situatie zouden we gebruik maken van HTMX om stukken van de HTML-pagina te refreshen om zo interactiviteit te realiseren.
+
+Toen ik als front-end developer begon bij developer.overheid.nl moest ik even
+wennen aan een bepaalde technische keuze. Er was namelijk besloten dat we de
+bestaande React front-end zouden refactoren naar een situatie waarbij een
+Django-app alle templates zou renderen. In de nieuwe situatie zouden we gebruik
+maken van HTMX om stukken van de HTML-pagina te refreshen om zo interactiviteit
+te realiseren.
 
 ## Geen silver bullet
-In onze casus leidde het gebruik van HTMX in sommige gevallen tot situaties waarbij front-end logica in [Python code](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/web/templatetags/don_template_functions.py?ref_type=heads) geschreven moest worden. Dit voelde soms behoorlijk gekunsteld. Inmiddels is een groot deel van de developer-community er wel over uit dat HTMX vooral erg geschikt is voor rapid-prototyping, en minder voor codebases die later in productie genomen moeten worden.
 
-Afijn, dit artikel is geen deep-dive into HTMX, als je meer wilt weten verwijs ik je graag door naar [dit artikel van contentful](https://www.contentful.com/blog/htmx-react-use-cases/).
+In onze casus leidde het gebruik van HTMX in sommige gevallen tot situaties
+waarbij front-end logica in
+[Python code](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/web/templatetags/don_template_functions.py?ref_type=heads)
+geschreven moest worden. Dit voelde soms behoorlijk gekunsteld. Inmiddels is een
+groot deel van de developer-community er wel over uit dat HTMX vooral erg
+geschikt is voor rapid-prototyping, en minder voor codebases die later in
+productie genomen moeten worden.
+
+Afijn, dit artikel is geen deep-dive into HTMX, als je meer wilt weten verwijs
+ik je graag door naar
+[dit artikel van contentful](https://www.contentful.com/blog/htmx-react-use-cases/).
 
 ## JavaScript fatigue
-Waarom ik dit artikel begon met het verhaal over onze refactor naar HTMX was vanwege de achterliggende reden: mijn collega-developer wilde vooral naar HTMX toe omdat hij slechte ervaringen had met het onderhouden van alle NPM-dependencies waar de React-codebase ondertussen afhankelijk van was. Dit had geleid tot een serieus geval van Javascript-moeheid, in onze sector ook wel "JavaScript fatigue" genoemd. En ik geef hem geen ongelijk.
 
-Onze package.json bevatte indertijd **`77 packages`**. Daaronder hingen weer **`1077 indirecte packages`**.
+Waarom ik dit artikel begon met het verhaal over onze refactor naar HTMX was
+vanwege de achterliggende reden: mijn collega-developer wilde vooral naar HTMX
+toe omdat hij slechte ervaringen had met het onderhouden van alle
+NPM-dependencies waar de React-codebase ondertussen afhankelijk van was. Dit had
+geleid tot een serieus geval van Javascript-moeheid, in onze sector ook wel
+"JavaScript fatigue" genoemd. En ik geef hem geen ongelijk.
+
+Onze package.json bevatte indertijd **`77 packages`**. Daaronder hingen weer
+**`1077 indirecte packages`**.
 
 <details>
   <summary>Onze `package.json` destijds</summary>
@@ -137,76 +174,136 @@ Onze package.json bevatte indertijd **`77 packages`**. Daaronder hingen weer **`
     "lint:fix": "npm run lint:js -- --fix",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all"
-  ],
+  "browserslist": [">0.2%", "not dead", "not op_mini all"],
   "proxy": "http://127.0.0.1:8000"
 }
-
 ```
 
 </details>
 
 ## Veel packages, veel gedoe
-Een codebase met veel packages heeft allerlei nadelen die je misschien niet direct in je achterhoofd hebt als je het installeert. Op dat moment wil je "alleen maar even iets oplossen". En dat terwijl je met elke package een afhankelijkheid creëert.
+
+Een codebase met veel packages heeft allerlei nadelen die je misschien niet
+direct in je achterhoofd hebt als je het installeert. Op dat moment wil je
+"alleen maar even iets oplossen". En dat terwijl je met elke package een
+afhankelijkheid creëert.
 
 ## Het left-pad incident
-Het meest dramatische voorbeeld om deze afhankelijkheid te illustreren is het [left-pad incident](https://en.wikipedia.org/wiki/Npm_left-pad_incident). Duizenden prominente NPM packages waren naar aanleiding van dit voorval niet meer te installeren omdat een developer had besloten zijn package `left-pad` te verwijderen. Dit voorval legde de kwetsbaarheid van het JavaScript ecosysteem goed bloot omdat één actor op zichzelf in staat was zand in de raderen van de machine te strooien.
+
+Het meest dramatische voorbeeld om deze afhankelijkheid te illustreren is het
+[left-pad incident](https://en.wikipedia.org/wiki/Npm_left-pad_incident).
+Duizenden prominente NPM packages waren naar aanleiding van dit voorval niet
+meer te installeren omdat een developer had besloten zijn package `left-pad` te
+verwijderen. Dit voorval legde de kwetsbaarheid van het JavaScript ecosysteem
+goed bloot omdat één actor op zichzelf in staat was zand in de raderen van de
+machine te strooien.
 
 ## NPM: veel kleine packages
-Omdat het NPM ecosysteem rijk is aan kleine packages die één dingetje voor je oplossen, loopt het aantal snel op. Achter elke package die je installeert bevindt zich weer een hele trits aan secundaire, tertiaire en soms ook quaternaire packages. Op deze manier kan een eenvoudig project snel uitlopen tot een onderhoudsdebacle.
+
+Omdat het NPM ecosysteem rijk is aan kleine packages die één dingetje voor je
+oplossen, loopt het aantal snel op. Achter elke package die je installeert
+bevindt zich weer een hele trits aan secundaire, tertiaire en soms ook
+quaternaire packages. Op deze manier kan een eenvoudig project snel uitlopen tot
+een onderhoudsdebacle.
 
 ## 🌊 Een golf van versiebumps
-Elke keer als er een vulnerability wordt gevonden in een onderliggende dependency dienen de maintainers van de dependencies die deze dependency gebruiken hun package te updaten. Als jij deze package dan weer gebruikt levert dit jou weer een Dependabot-alert op. Zo zorgt een kwetsbaarheid voor een golf aan alerts tot bovenaan de chain.
+
+Elke keer als er een vulnerability wordt gevonden in een onderliggende
+dependency dienen de maintainers van de dependencies die deze dependency
+gebruiken hun package te updaten. Als jij deze package dan weer gebruikt levert
+dit jou weer een Dependabot-alert op. Zo zorgt een kwetsbaarheid voor een golf
+aan alerts tot bovenaan de chain.
 
 ## Alle nadelen
 
 ### 🔒 Security risico's
-Elke dependency introduceert potentiële kwetsbaarheden. Meer packages betekent een groter aanvalsoppervlak. Misschien denk je: "ach, het draait in de browser, wat kan er mis gaan?". Maar bedenk dan dat jouw development omgeving en build pipeline ook interessante doelwitten kunnen zijn voor aanvallers. Aanvallen die kunnen plaatsvinden zijn:
+
+Elke dependency introduceert potentiële kwetsbaarheden. Meer packages betekent
+een groter aanvalsoppervlak. Misschien denk je: "ach, het draait in de browser,
+wat kan er mis gaan?". Maar bedenk dan dat jouw development omgeving en build
+pipeline ook interessante doelwitten kunnen zijn voor aanvallers. Aanvallen die
+kunnen plaatsvinden zijn:
+
 - Environment variables stelen (API keys, secrets)
 - Source code modificeren of backdoors injecteren
 - Lokale bestanden lezen en verzenden
 - Je ontwikkelomgeving compromitteren
 
 ### 👹 Dependency hell
-Conflicterende versies, broken updates, en onderhoudsproblemen stapelen zich op. Ik zal niet de enige zijn met de ervaring dat een oud JavaScript project niet meer te installeren is, laat staan te upgraden. 
-Packages kunnen deprecated raken of incompatibel worden met elkaar, wat je project onbruikbaar maakt.
+
+Conflicterende versies, broken updates, en onderhoudsproblemen stapelen zich op.
+Ik zal niet de enige zijn met de ervaring dat een oud JavaScript project niet
+meer te installeren is, laat staan te upgraden. Packages kunnen deprecated raken
+of incompatibel worden met elkaar, wat je project onbruikbaar maakt.
 
 ### 🐘 Bundle size
-Elke package die je importeert vergroot je bundle size. Hoe groter je bundle size, hoe langer het duurt deze te downloaden en te parsen, en de user de pagina voor z'n neus heeft.
+
+Elke package die je importeert vergroot je bundle size. Hoe groter je bundle
+size, hoe langer het duurt deze te downloaden en te parsen, en de user de pagina
+voor z'n neus heeft.
 
 ### 🤖 Onderhoudslast
-Updates, security patches, en bijbehorende compatibiliteit-checks kosten tijd. In het NPM-ecosysteem waar veel packages afhankelijk zijn van andere packages heb je hier nog extra veel mee te maken.
+
+Updates, security patches, en bijbehorende compatibiliteit-checks kosten tijd.
+In het NPM-ecosysteem waar veel packages afhankelijk zijn van andere packages
+heb je hier nog extra veel mee te maken.
 
 ### ⛓️‍💥 Externe Afhankelijkheid
-Met elke package ben je afhankelijk van de maintainers voor onderhoud, en de beschikbaarheid van de package. Denk nogmaals aan het left-pad incident.
+
+Met elke package ben je afhankelijk van de maintainers voor onderhoud, en de
+beschikbaarheid van de package. Denk nogmaals aan het left-pad incident.
 
 ## Hoe kan het beter?
 
 ### ✂️ Knip projecten op
-Sommige web-apps zijn op te knippen in kleinere codebases die een specifiek doel hebben. Bij developer.overheid.nl hebben we dit bijvoorbeeld gedaan met onze [OAS generator](https://github.com/developer-overheid-nl/oas-generator). Dit project was eerst onderdeel van een grotere codebase, maar door deze los te knippen zijn we wendbaarder geworden. Het is nu bijvoorbeeld makkelijker om deze codebase uit te faseren mocht het nodig zijn.
+
+Sommige web-apps zijn op te knippen in kleinere codebases die een specifiek doel
+hebben. Bij developer.overheid.nl hebben we dit bijvoorbeeld gedaan met onze
+[OAS generator](https://github.com/developer-overheid-nl/oas-generator). Dit
+project was eerst onderdeel van een grotere codebase, maar door deze los te
+knippen zijn we wendbaarder geworden. Het is nu bijvoorbeeld makkelijker om deze
+codebase uit te faseren mocht het nodig zijn.
 
 ### 📂 Meerdere package.json-bestanden
-Door meerdere package.json-bestanden in één repository te hanteren ontstaan er verschillende apps en voorkom je onnodige complexiteit.
 
-Een mooi voorbeeld van een project dat precies dit doet is de [NL-Design-System implementatie](https://github.com/nl-design-system/utrecht) van Gemeente Utrecht. Binnen dit project vind je [meerdere packages](https://github.com/nl-design-system/utrecht/tree/main/packages) die allemaal hun eigen functie hebben.
+Door meerdere package.json-bestanden in één repository te hanteren ontstaan er
+verschillende apps en voorkom je onnodige complexiteit.
+
+Een mooi voorbeeld van een project dat precies dit doet is de
+[NL-Design-System implementatie](https://github.com/nl-design-system/utrecht)
+van Gemeente Utrecht. Binnen dit project vind je
+[meerdere packages](https://github.com/nl-design-system/utrecht/tree/main/packages)
+die allemaal hun eigen functie hebben.
 
 ### 💭 Wees bewust
-Wees je bewust van de gevolgen die het kan hebben als je een NPM-package installeert. Elke package dient up-to-date te blijven en voegt complexiteit toe aan de codebase.
+
+Wees je bewust van de gevolgen die het kan hebben als je een NPM-package
+installeert. Elke package dient up-to-date te blijven en voegt complexiteit toe
+aan de codebase.
 
 ### 🔩 Schrijf simpele functies zelf
-Als de functionaliteit die je zoekt niet al te complex is, is het het overwegen waard om zelf een functie toe te voegen.
 
-### 🧰 Gebruik browser-native API's 
-Sommige libraries lossen een probleem op dat tegenwoordig al ingebakken zit in de browser of in de programmeertaal [NodeJS](https://nodejs.org/). Voorbeelden hiervan zijn `Intl.DateTimeFormat` ipv `date-fns` of `Fetch API` ipv `axios`.
+Als de functionaliteit die je zoekt niet al te complex is, is het het overwegen
+waard om zelf een functie toe te voegen.
+
+### 🧰 Gebruik browser-native API's
+
+Sommige libraries lossen een probleem op dat tegenwoordig al ingebakken zit in
+de browser of in de programmeertaal [NodeJS](https://nodejs.org/). Voorbeelden
+hiervan zijn `Intl.DateTimeFormat` ipv `date-fns` of `Fetch API` ipv `axios`.
 
 ### 📆 Verwerk updates geregeld
-Door op een gezette tijd, bijvoorbeeld elke maand, tijd vrij te maken om bestaande codebases up te daten voorkom je problemen. Door de updates steeds in kleine stapjes uit te voeren is de kans kleiner dat libraries met elkaar in de clinch komen te liggen en zijn bugs die optreden makkelijker herleidbaar.
+
+Door op een gezette tijd, bijvoorbeeld elke maand, tijd vrij te maken om
+bestaande codebases up te daten voorkom je problemen. Door de updates steeds in
+kleine stapjes uit te voeren is de kans kleiner dat libraries met elkaar in de
+clinch komen te liggen en zijn bugs die optreden makkelijker herleidbaar.
 
 ### 🔍 Evalueer packages
-Voor je een package installeert is het belangrijk te evalueren of deze wel gezond is. Dingen waar je op kan letten: 
+
+Voor je een package installeert is het belangrijk te evalueren of deze wel
+gezond is. Dingen waar je op kan letten:
+
 - Er zijn regelmatig releases
 - Issues worden beantwoord en opgelost
 - Er zijn meer dan 1 actieve contributers
@@ -215,27 +312,50 @@ Voor je een package installeert is het belangrijk te evalueren of deze wel gezon
 - Er wordt een heldere changelog bijgehouden
 - Groeiende/stabiele download statistieken
 
-Door het project te evalueren voorkom je dat je later met een dependency te maken hebt die niet meer onderhouden wordt.
+Door het project te evalueren voorkom je dat je later met een dependency te
+maken hebt die niet meer onderhouden wordt.
 
 ## Tools
 
 ### 🤖 Dependabot
-Dependabot is een tool die codebases kan scannen en pull requests inschiet als hij een library vindt die achterloopt qua versionering. Dependabot is inmiddels geïntegreerd in GitHub en per repository apart aan te zetten. Mocht je niet vast willen zitten aan functionaliteit van GitHub kan je ook self-hosted gaan met behulp van [Dependabot CLI](https://github.com/dependabot/example-cli-usage/?tab=readme-ov-file).
+
+Dependabot is een tool die codebases kan scannen en pull requests inschiet als
+hij een library vindt die achterloopt qua versionering. Dependabot is inmiddels
+geïntegreerd in GitHub en per repository apart aan te zetten. Mocht je niet vast
+willen zitten aan functionaliteit van GitHub kan je ook self-hosted gaan met
+behulp van
+[Dependabot CLI](https://github.com/dependabot/example-cli-usage/?tab=readme-ov-file).
 
 ### 📋 PNPM
-[PNPM](https://pnpm.io) is een package-manager met een aantal features die kunnen voorkomen dat je in een dependency-hell terecht komt. Deze features zijn:
-- 🚫 Voorkomt "phantom dependencies" (packages die je gebruikt maar niet geïnstalleerd hebt)
+
+[PNPM](https://pnpm.io) is een package-manager met een aantal features die
+kunnen voorkomen dat je in een dependency-hell terecht komt. Deze features zijn:
+
+- 🚫 Voorkomt "phantom dependencies" (packages die je gebruikt maar niet
+  geïnstalleerd hebt)
 - 📦 Elke package heeft alleen toegang tot eigen dependencies
 - 🔒 Dwingt expliciete dependency declaraties af
 - ⚡ Snelle installs
 
 ## NPM-minimalisme betrachten, is kwalitatieve software bouwen
-De keuze voor HTMX bij developer.overheid.nl was misschien niet de ideale oplossing, maar het onderliggende probleem - JavaScript fatigue door een grote hoeveelheid dependencies - is reëel en herkenbaar. Door het aantal dependencies te beperken tot wat je werkelijk nodig hebt, creëer je ruimte om je te focussen op wat echt telt: het bouwen van waardevolle features.
 
-Het minimaliseren van het aantal [NPM](https://www.npmjs.com/)-packages is een effectief middel om je dagelijkse develop-werkzaamheden beheersbaar te houden. Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar een onderhoudsnachtmerrie met kwetsbaarheden en conflicterende versies.
+De keuze voor HTMX bij developer.overheid.nl was misschien niet de ideale
+oplossing, maar het onderliggende probleem - JavaScript fatigue door een grote
+hoeveelheid dependencies - is reëel en herkenbaar. Door het aantal dependencies
+te beperken tot wat je werkelijk nodig hebt, creëer je ruimte om je te focussen
+op wat echt telt: het bouwen van waardevolle features.
 
-Door projecten op te knippen in kleinere projecten, native API's te gebruiken, en frequent bestaande projecten te updaten kan complexiteit worden voorkomen. Met tools zoals PNPM en [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) kun je de dependencies die je wél nodig hebt beter beheren.
+Het minimaliseren van het aantal [NPM](https://www.npmjs.com/)-packages is een
+effectief middel om je dagelijkse develop-werkzaamheden beheersbaar te houden.
+Door bewust om te gaan met dependencies voorkom je dat je project evolueert naar
+een onderhoudsnachtmerrie met kwetsbaarheden en conflicterende versies.
 
-<!-- 
+Door projecten op te knippen in kleinere projecten, native API's te gebruiken,
+en frequent bestaande projecten te updaten kan complexiteit worden voorkomen.
+Met tools zoals PNPM en
+[Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide)
+kun je de dependencies die je wél nodig hebt beter beheren.
+
+<!--
 @ LINKEDIN
 Tag je collega die de hele tijd nieuwe deps installeert -->

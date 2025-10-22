@@ -11,11 +11,20 @@ hide_table_of_contents: true
 
 # Leidraad verantwoorde softwareontwikkeling
 
-Deze lijst met principes is een eerste aanzet tot overheidsbreed beleid voor softwareontwikkeling. Het idee van deze lijst is afkomstig van de ["Technology Code of Practice"](https://www.gov.uk/guidance/the-technology-code-of-practice) van de Britse overheid. In deze initiële versie willen we voornamelijk alle relevante informatie en kennis binnen de overheid bundelen en op een centrale plek en toegankelijk maken, zonder hierover een expliciet oordeel te vellen.
+Deze lijst met principes is een eerste aanzet tot overheidsbreed beleid voor
+softwareontwikkeling. Het idee van deze lijst is afkomstig van de
+["Technology Code of Practice"](https://www.gov.uk/guidance/the-technology-code-of-practice)
+van de Britse overheid. In deze initiële versie willen we voornamelijk alle
+relevante informatie en kennis binnen de overheid bundelen en op een centrale
+plek en toegankelijk maken, zonder hierover een expliciet oordeel te vellen.
 
 :::info[**Beta**]
 
-Deze leidraad is een product dat nog in beta is. Mis je een onderwerp, standaard, techniek of principe? Laat het ons weten via [Slack](https://codefornl.slack.com/archives/CFV4B3XE2) of [mail](mailto:developer.overheid@geonovum.nl). Wil je bijdragen aan dit project? Bekijk dan onze [bijdragerichtlijnen](/contributing) voor meer informatie.
+Deze leidraad is een product dat nog in beta is. Mis je een onderwerp,
+standaard, techniek of principe? Laat het ons weten via
+[Slack](https://codefornl.slack.com/archives/CFV4B3XE2) of
+[mail](mailto:developer.overheid@geonovum.nl). Wil je bijdragen aan dit project?
+Bekijk dan onze [bijdragerichtlijnen](/contributing) voor meer informatie.
 
 :::
 
@@ -35,10 +44,10 @@ De leidraad bevat de volgende principes:
 - ### [12. Bepaal je inkoopstrategie](./inkoopstrategie/)
 - ### [13. Denk na over duurzaamheid](./duurzaamheid)
 
-
 ### Contact
 
 Voor feedback of andere handreikingen kan je ons bereiken via:
 
 - Mail: [developer.overheid@geonovum.nl](mailto:developer.overheid@geonovum.nl)
-- Slack: [#developer-overheid.nl](https://codefornl.slack.com/archives/CFV4B3XE2)
+- Slack:
+  [#developer-overheid.nl](https://codefornl.slack.com/archives/CFV4B3XE2)

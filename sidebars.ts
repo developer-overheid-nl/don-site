@@ -54,7 +54,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "programmeertalen/index",
-          label: "Programmeertalen"
+          label: "Programmeertalen",
         },
         {
           type: "doc",
@@ -101,7 +101,7 @@ const sidebars: SidebarsConfig = {
           dirName: "front-end",
         },
       ],
-    }
+    },
   ],
   infra: [
     {
@@ -127,7 +127,7 @@ const sidebars: SidebarsConfig = {
           dirName: "open-source",
         },
       ],
-    }
+    },
   ],
   security: [
     {
@@ -140,7 +140,7 @@ const sidebars: SidebarsConfig = {
           dirName: "security",
         },
       ],
-    }
+    },
   ],
   programmeertalen: [
     {
@@ -153,7 +153,7 @@ const sidebars: SidebarsConfig = {
           dirName: "programmeertalen",
         },
       ],
-    }
+    },
   ],
   leidraad: [
     {
@@ -166,7 +166,7 @@ const sidebars: SidebarsConfig = {
           dirName: "leidraad",
         },
       ],
-    }
+    },
   ],
 };
 

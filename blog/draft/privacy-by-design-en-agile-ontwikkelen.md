@@ -2,20 +2,21 @@
 authors: [eric-nieuwland]
 draft: true
 ---
+
 # Privacy by Design en agile ontwikkelen, kan dat?
 
-Ken je dat? Je gaat aan een nieuw project beginnen en dan vraagt iemand
-‘Doen jullie wel _Privacy by Design_?’
+Ken je dat? Je gaat aan een nieuw project beginnen en dan vraagt iemand ‘Doen
+jullie wel _Privacy by Design_?’
 
-Uiteraard is het belangrijk om bij de bouw van nieuwe software meteen te
-denken aan privacy – en ook aan security, toegankelijkheid en mogelijk meer.
-Maar hoe past dat binnen een moderne, agile werkwijze?
+Uiteraard is het belangrijk om bij de bouw van nieuwe software meteen te denken
+aan privacy – en ook aan security, toegankelijkheid en mogelijk meer. Maar hoe
+past dat binnen een moderne, agile werkwijze?
 
-In vroeger tijden, toen complete, gedetailleerde ontwerpen werden gemaakt
-nog voor er een letter geprogrammeerd was, konden die ontwerpen vooraf aan
-al deze eisen getoetst worden. In theorie dan, want onder tijdsdruk kwam het
-daar veel te vaak niet of onvoldoende van. Of de wereld was alweer veranderd
-tegen de tijd dat de software in productie ging.
+In vroeger tijden, toen complete, gedetailleerde ontwerpen werden gemaakt nog
+voor er een letter geprogrammeerd was, konden die ontwerpen vooraf aan al deze
+eisen getoetst worden. In theorie dan, want onder tijdsdruk kwam het daar veel
+te vaak niet of onvoldoende van. Of de wereld was alweer veranderd tegen de tijd
+dat de software in productie ging.
 
 <!-- truncate -->
 
@@ -43,49 +44,52 @@ Gedurende het hele ontwikkelproject worden stories opgesteld en uitgewerkt
 voordat er software gemaakt wordt. Elke story is niet alleen een stapje in de
 groei van de programmatuur, maar mogelijk ook een doorontwikkeling van ons
 beginpunt. Je zult je tijdens het uitwerken (refinen) van een story moeten
-afvragen: ‘Heeft dit privacy-gevolgen?’ Is het antwoord ‘ja’, dan is er werk
-aan de winkel.
+afvragen: ‘Heeft dit privacy-gevolgen?’ Is het antwoord ‘ja’, dan is er werk aan
+de winkel.
 
-En nu komt het: privacy moet in het proces van de organisatie (daar is ie) geborgd
-zijn. De organisatie zal dus moeten kiezen hoe privacy-borging vorm krijgt. Soms
-zal daarvoor ondersteuning vanuit de applicatie nodig zijn. Zo wordt privacy
-geleidelijk vertaald naar functionele eisen en wensen. Als ontwikkelaars bevinden
-we ons dan weer op bekend terrein.
+En nu komt het: privacy moet in het proces van de organisatie (daar is ie)
+geborgd zijn. De organisatie zal dus moeten kiezen hoe privacy-borging vorm
+krijgt. Soms zal daarvoor ondersteuning vanuit de applicatie nodig zijn. Zo
+wordt privacy geleidelijk vertaald naar functionele eisen en wensen. Als
+ontwikkelaars bevinden we ons dan weer op bekend terrein.
 
 ## Blijft de vraag over: ‘Hoe weet je als ontwikkelaar of iets privacy-gevolgen heeft?’
 
 En hier zit de verrassing, want met een paar vragen kom je al heel ver. Bij ICTU
-hebben we daarvoor een ‘spiekbriefje’ gemaakt. Hierop staan niet alleen de vragen,
-maar ook de eventuele actie(s). Door tijdens een refinement dit briefje als checklist
-te hanteren, beperken we de actie tot wat nodig is. Zo groeit de privacy-inspanning
-mee met de software en het proces dat ermee wordt ondersteund. Als extraatje hebben
-we op de achterkant de beslisboom van het _Privacy by Design framework_ overgenomen
-(met bronvermelding, uiteraard).
+hebben we daarvoor een ‘spiekbriefje’ gemaakt. Hierop staan niet alleen de
+vragen, maar ook de eventuele actie(s). Door tijdens een refinement dit briefje
+als checklist te hanteren, beperken we de actie tot wat nodig is. Zo groeit de
+privacy-inspanning mee met de software en het proces dat ermee wordt
+ondersteund. Als extraatje hebben we op de achterkant de beslisboom van het
+_Privacy by Design framework_ overgenomen (met bronvermelding, uiteraard).
 
 !["Story Card Privacy - voorkant"](./img/ictu-2025-storycard-privacy-front.jpg)
 !["Story Card Privacy - achterkant"](./img/ictu-2025-storycard-privacy-back.jpg)
 
-Voor _Security by Design_ hebben we net zoiets, met op de achterkant verwijzingen naar
-de [OWASP Top 10] en de [SANS 25]. Dit zijn lijsten van veel voorkomende
-beveiligingsgebreken in software. Door die lijsten te koppelen aan de verandering die
-de story brengt, worden ontwikkelaars geholpen niet in bekende valkuilen te stappen.
+Voor _Security by Design_ hebben we net zoiets, met op de achterkant
+verwijzingen naar de [OWASP Top 10] en de [SANS 25]. Dit zijn lijsten van veel
+voorkomende beveiligingsgebreken in software. Door die lijsten te koppelen aan
+de verandering die de story brengt, worden ontwikkelaars geholpen niet in
+bekende valkuilen te stappen.
 
 !["Story Card Security - voorkant"](./img/ictu-2025-storycard-security-front.jpg)
 !["Story Card Security - achterkant"](./img/ictu-2025-storycard-security-back.jpg)
 
-(Een printbare versie van deze 'Story Cards' is [hier](./img/ictu-2025-storycards.pdf) te downloaden)
+(Een printbare versie van deze 'Story Cards' is
+[hier](./img/ictu-2025-storycards.pdf) te downloaden)
 
 ## Hoe doe jij dat?
 
-Ik ben benieuwd hoe je in jouw projecten _XXX by Design_ vormgeeft. Waar begin je en
-met welke hulpmiddelen werk je? Is de (organisatie achter de) product owner erbij
-betrokken?
+Ik ben benieuwd hoe je in jouw projecten _XXX by Design_ vormgeeft. Waar begin
+je en met welke hulpmiddelen werk je? Is de (organisatie achter de) product
+owner erbij betrokken?
 
-Daarnaast ben ik benieuwd of iemand een idee heeft hoe je _Accessibility by Design_
-(toegankelijkheid) op soortgelijke of totaal andere wijze kunt inbedden in de werkwijze.
-Laat het weten me op [Mastodon](https://mastodon.nl/@e_r_nie) of beter nog:
+Daarnaast ben ik benieuwd of iemand een idee heeft hoe je _Accessibility by
+Design_ (toegankelijkheid) op soortgelijke of totaal andere wijze kunt inbedden
+in de werkwijze. Laat het weten me op [Mastodon](https://mastodon.nl/@e_r_nie)
+of beter nog:
 [schrijf ook een blog](https://developer.overheid.nl/contributing/gastblog-schrijven).
 
 [ICTU]: (https://www.ictu.nl)
-[OWASP Top 10]:(https://owasp.org/Top10/)
-[SANS 25]:(https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html)
+[OWASP Top 10]: (https://owasp.org/Top10/)
+[SANS 25]: (https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html)

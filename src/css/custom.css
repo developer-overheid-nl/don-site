@@ -382,7 +382,8 @@ html {
     var(--ifm-color-gray-200),
     var(--ifm-color-gray-100)
   );
-  --docsearch-key-shadow: inset 0 -2px 0 0 var(--ifm-color-gray-300),
+  --docsearch-key-shadow:
+    inset 0 -2px 0 0 var(--ifm-color-gray-300),
     inset 0 0 1px 1px var(--ifm-color-gray-100),
     0 1px 2px 1px rgba(203, 213, 225, 0.2);
   --docsearch-muted-color: var(--ifm-color-gray-800);
@@ -442,7 +443,8 @@ html {
 
 @font-face {
   font-family: "FiraSans-Regular";
-  src: url("../fonts/firasans/FiraSans-Regular.woff2") format("woff2"),
+  src:
+    url("../fonts/firasans/FiraSans-Regular.woff2") format("woff2"),
     url("../fonts/firasans/FiraSans-Regular.woff") format("woff"),
     url("../fonts/firasans/FiraSans-Regular.ttf") format("truetype"),
     url("../fonts/firasans/FiraSans-Regular.eot") format("embedded-opentype");
@@ -450,7 +452,8 @@ html {
 
 @font-face {
   font-family: "FiraSans-Bold";
-  src: url("../fonts/firasans/FiraSans-Bold.woff2") format("woff2"),
+  src:
+    url("../fonts/firasans/FiraSans-Bold.woff2") format("woff2"),
     url("../fonts/firasans/FiraSans-Bold.woff") format("woff"),
     url("../fonts/firasans/FiraSans-Bold.ttf") format("truetype"),
     url("../fonts/firasans/FiraSans-Bold.eot") format("embedded-opentype");
@@ -488,7 +491,8 @@ html {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  src: local("ROsanswebtextregular"),
+  src:
+    local("ROsanswebtextregular"),
     url("../fonts/ro/ROsanswebtextregular.woff") format("woff"),
     url("../fonts/ro/ROsanswebtextregular.eot") format("embedded-opentype"),
     url("../fonts/ro/ROsanswebtextregular.ttf") format("truetype");
@@ -498,7 +502,8 @@ html {
 @font-face {
   font-style: normal;
   font-weight: 700;
-  src: local("ROsanswebtextbold"),
+  src:
+    local("ROsanswebtextbold"),
     url("../fonts/ro/ROsanswebtextbold.woff") format("woff"),
     url("../fonts/ro/ROsanswebtextbold.eot") format("embedded-opentype"),
     url("../fonts/ro/ROsanswebtextbold.ttf") format("truetype");
@@ -508,7 +513,8 @@ html {
 @font-face {
   font-style: italic;
   font-weight: 400;
-  src: local("ROsanswebtextitalic"),
+  src:
+    local("ROsanswebtextitalic"),
     url("../fonts/ro/ROsanswebtextitalic.woff") format("woff"),
     url("../fonts/ro/ROsanswebtextitalic.eot") format("embedded-opentype"),
     url("../fonts/ro/ROsanswebtextitalic.ttf") format("truetype");
@@ -518,7 +524,8 @@ html {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  src: local("ROserifwebregular"),
+  src:
+    local("ROserifwebregular"),
     url("../fonts/ro/ROserifwebregular.woff") format("woff"),
     url("../fonts/ro/ROserifwebregular.eot") format("embedded-opentype"),
     url("../fonts/ro/ROserifwebregular.ttf") format("truetype");
@@ -528,7 +535,8 @@ html {
 @font-face {
   font-style: normal;
   font-weight: 700;
-  src: local("ROserifwebbold"),
+  src:
+    local("ROserifwebbold"),
     url("../fonts/ro/ROserifwebbold.woff") format("woff"),
     url("../fonts/ro/ROserifwebbold.eot") format("embedded-opentype"),
     url("../fonts/ro/ROserifwebbold.ttf") format("truetype");
@@ -538,7 +546,8 @@ html {
 @font-face {
   font-style: italic;
   font-weight: 400;
-  src: local("ROserifwebitalic"),
+  src:
+    local("ROserifwebitalic"),
     url("../fonts/ro/ROserifwebitalic.woff") format("woff"),
     url("../fonts/ro/ROserifwebitalic.eot") format("embedded-opentype"),
     url("../fonts/ro/ROserifwebitalic.ttf") format("truetype");

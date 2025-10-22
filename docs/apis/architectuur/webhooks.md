@@ -43,7 +43,8 @@ publieksportaal) wil altijd direct up-to-date zijn.
 3. Het portaal ontvangt het bericht en kan direct de nieuwe status tonen aan de
    burger.
 
-Een voorbeeld van een payload (`data` attribuut in CloudEvents)  kan er zo uitzien:
+Een voorbeeld van een payload (`data` attribuut in CloudEvents) kan er zo
+uitzien:
 
 ```json
 {

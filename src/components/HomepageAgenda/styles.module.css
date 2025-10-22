@@ -27,7 +27,9 @@
   text-decoration-skip-ink: auto;
 }
 
-.agendaDate, .agendaTime, .agendaPlace {
+.agendaDate,
+.agendaTime,
+.agendaPlace {
   display: inline-block;
   margin-inline-end: 0.5rem;
 }

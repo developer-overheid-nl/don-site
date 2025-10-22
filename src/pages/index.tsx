@@ -5,7 +5,10 @@ import HomepageBlogposts from "../components/HomepageBlogposts";
 import HomepageAgenda from "../components/HomepageAgenda";
 
 import styles from "./index.module.css";
-import { IconButton, TextInput } from "@rijkshuisstijl-community/components-react";
+import {
+  IconButton,
+  TextInput,
+} from "@rijkshuisstijl-community/components-react";
 import IconZoekInline from "../theme/icons/IconZoekInline";
 import { ThemeConfig } from "docusaurus-theme-search-typesense";
 
@@ -30,12 +33,19 @@ function Search() {
           }
         />
         {/* @ts-ignore RHC component bug `label` not in type */}
-      <IconButton label="Zoeken" type="submit" className={styles.heroSearchButton}>
+        <IconButton
+          label="Zoeken"
+          type="submit"
+          className={styles.heroSearchButton}
+        >
           <IconZoekInline />
         </IconButton>
       </form>
       {hasInput && (
-        <label htmlFor="banner-search" aria-label="Zoek in de Kennisbank, API- en OSS-register">
+        <label
+          htmlFor="banner-search"
+          aria-label="Zoek in de Kennisbank, API- en OSS-register"
+        >
           Zoek in de Kennisbank, API- en OSS-register
         </label>
       )}
@@ -45,13 +55,17 @@ function Search() {
 
 function HomepageHeader(): React.JSX.Element {
   useEffect(() => {
-    const skipLink = document.querySelector('a[href="#__docusaurus_skipToContent_fallback"]');
+    const skipLink = document.querySelector(
+      'a[href="#__docusaurus_skipToContent_fallback"]',
+    );
     if (!skipLink) {
       return;
     }
     const handleSkipClick = (event: MouseEvent) => {
       event.preventDefault();
-      const searchInput = document.getElementById("banner-search") as HTMLInputElement;
+      const searchInput = document.getElementById(
+        "banner-search",
+      ) as HTMLInputElement;
       if (searchInput) {
         searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
         // Focus the search input after scrolling
@@ -69,29 +83,33 @@ function HomepageHeader(): React.JSX.Element {
   }, []);
 
   const { siteConfig } = useDocusaurusContext();
-  const { searchPagePath } = siteConfig.themeConfig.typesense as ThemeConfig['typesense'] || { searchPagePath: false };
+  const { searchPagePath } = (siteConfig.themeConfig
+    .typesense as ThemeConfig["typesense"]) || { searchPagePath: false };
 
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <p className={styles.intro}>
-          Eén plek met informatie, bronnen, tools en codevoorbeelden van de&nbsp;<strong className={styles.intro__highlight}>overheid voor developers</strong> over
-          privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.
+          Eén plek met informatie, bronnen, tools en codevoorbeelden van
+          de&nbsp;
+          <strong className={styles.intro__highlight}>
+            overheid voor developers
+          </strong>{" "}
+          over privacy, security, toegankelijkheid, DevOps, infra, data, AI,
+          standaarden, API's, Open Source en meer.
         </p>
-        {
-          searchPagePath ? <Search /> : null
-        }
+        {searchPagePath ? <Search /> : null}
       </div>
     </header>
   );
 }
 
-
 export default function Home(): React.JSX.Element {
   return (
     <Layout
       title={`Ontwikkelaarsportaal van de Nederlandse Overheid`}
-      description="Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer.">
+      description="Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API's, Open Source en meer."
+    >
       <main>
         <HomepageHeader />
         <section className="container">
