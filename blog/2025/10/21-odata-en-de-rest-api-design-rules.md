@@ -106,7 +106,7 @@ enz.) introduceert een eigen mini-taal bovenop HTTP. Dit maakt het moeilijker om
 de API intuïtief te gebruiken en te documenteren volgens de ADR, die juist
 eenvoud en voorspelbaarheid benadrukken.
 
-### 2. Compatibliteit met de OpenAPI Specification
+### 2. Compatibiliteit met de OpenAPI Specification
 
 De ADR vereisen een API-beschrijving conform de
 [OpenAPI Specification](https://spec.openapis.org/oas/latest.html). Hoewel OData
