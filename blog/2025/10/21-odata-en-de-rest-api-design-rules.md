@@ -50,7 +50,7 @@ filterendpoints aan te bieden, kan een OData-service via één uniforme syntax
 (`$filter`, `$expand`, `$select`, `$orderby`, enz.) vrijwel elke denkbare
 bevraging verwerken.
 
-Dat maakt OData efficiënt bij situaties waarin de aard van de query’s niet
+Dat maakt OData efficiënt bij situaties waarin de aard van de queries niet
 vooraf bekend is, bijvoorbeeld bij analytische toepassingen, datawarehouses of
 BI-rapportages. Daarmee biedt OData een zekere mate van zelfbediening voor
 dataconsumenten – iets wat in interne dataplatforms of onderzoeksomgevingen vaak
@@ -69,7 +69,7 @@ Dit maakt het mogelijk om data en relaties semantisch te beschrijven.
 Clients worden hierdoor in staat gesteld om automatisch metadata te ontdekken en
 hun gedrag daarop af te stemmen. Een client kan bijvoorbeeld aan de hand van het
 `$metadata-document` weten welke velden beschikbaar zijn, welke typen of
-relaties er bestaan en welke query’s toegestaan zijn.
+relaties er bestaan en welke queries toegestaan zijn.
 
 Dit bevordert consistentie en herbruikbaarheid van data binnen een organisatie,
 en ondersteunt scenario's als automatische codegeneratie, dynamische
