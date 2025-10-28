@@ -63,6 +63,8 @@ const config: Config = {
         '/* tracker methods like "setCustomDimension" should be called before "trackPageView" */',
         "_paq.push(['trackPageView']);",
         "_paq.push(['enableLinkTracking']);",
+        "_paq.push(['setDomains', ['*.developer.overheid.nl', '*.apis.developer.overheid.nl']]);",
+        "_paq.push(['enableCrossDomainLinking']);",
         "(function() {",
         '  var u="https://overheid.matomo.cloud/";',
         "  _paq.push(['setTrackerUrl', u+'matomo.php']);",
