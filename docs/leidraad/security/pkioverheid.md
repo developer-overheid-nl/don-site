@@ -1,5 +1,5 @@
 ---
-title: "6.2. Gebruik van PKIoverheid-certificaten"
+title: "Gebruik van PKIoverheid-certificaten"
 tags: ["security"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "13.1. Geautomatiseerd testen"
+title: "Geautomatiseerd testen"
 tags: ["development"]
 ---
 
