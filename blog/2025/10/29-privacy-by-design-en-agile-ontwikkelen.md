@@ -1,12 +1,18 @@
 ---
 authors: [eric-nieuwland]
-draft: true
+description:
+  Ken je dat? Je gaat aan een nieuw project beginnen en dan vraagt iemand 'Doen
+  jullie wel _Privacy by Design_?' Uiteraard is het belangrijk om bij de bouw
+  van nieuwe software meteen te denken aan privacy – en ook aan security,
+  toegankelijkheid en mogelijk meer. Maar hoe past dat binnen een moderne, agile
+  werkwijze?
+tags: [privacy, accessibility, security, owasp]
 ---
 
 # Privacy by Design en agile ontwikkelen, kan dat?
 
-Ken je dat? Je gaat aan een nieuw project beginnen en dan vraagt iemand ‘Doen
-jullie wel _Privacy by Design_?’
+Ken je dat? Je gaat aan een nieuw project beginnen en dan vraagt iemand 'Doen
+jullie wel _Privacy by Design_?'
 
 Uiteraard is het belangrijk om bij de bouw van nieuwe software meteen te denken
 aan privacy – en ook aan security, toegankelijkheid en mogelijk meer. Maar hoe
@@ -44,7 +50,7 @@ Gedurende het hele ontwikkelproject worden stories opgesteld en uitgewerkt
 voordat er software gemaakt wordt. Elke story is niet alleen een stapje in de
 groei van de programmatuur, maar mogelijk ook een doorontwikkeling van ons
 beginpunt. Je zult je tijdens het uitwerken (refinen) van een story moeten
-afvragen: ‘Heeft dit privacy-gevolgen?’ Is het antwoord ‘ja’, dan is er werk aan
+afvragen: 'Heeft dit privacy-gevolgen?' Is het antwoord 'ja', dan is er werk aan
 de winkel.
 
 En nu komt het: privacy moet in het proces van de organisatie (daar is ie)
@@ -53,10 +59,10 @@ krijgt. Soms zal daarvoor ondersteuning vanuit de applicatie nodig zijn. Zo
 wordt privacy geleidelijk vertaald naar functionele eisen en wensen. Als
 ontwikkelaars bevinden we ons dan weer op bekend terrein.
 
-## Blijft de vraag over: ‘Hoe weet je als ontwikkelaar of iets privacy-gevolgen heeft?’
+## Blijft de vraag over: 'Hoe weet je als ontwikkelaar of iets privacy-gevolgen heeft?'
 
 En hier zit de verrassing, want met een paar vragen kom je al heel ver. Bij ICTU
-hebben we daarvoor een ‘spiekbriefje’ gemaakt. Hierop staan niet alleen de
+hebben we daarvoor een 'spiekbriefje' gemaakt. Hierop staan niet alleen de
 vragen, maar ook de eventuele actie(s). Door tijdens een refinement dit briefje
 als checklist te hanteren, beperken we de actie tot wat nodig is. Zo groeit de
 privacy-inspanning mee met de software en het proces dat ermee wordt
