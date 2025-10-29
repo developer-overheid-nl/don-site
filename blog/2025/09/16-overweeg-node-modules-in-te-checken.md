@@ -1,6 +1,13 @@
 ---
 authors: [tim-van-der-lippe]
 tags: [npm, javascript, nodejs, node_modules, technische-schuld]
+description:
+  In de meeste projecten is dit de perceptie; node_modules worden door package
+  managers geinstalleerd en zijn dus geen source code die in een git repository
+  thuis hoort. Deze blog post probeert je aan het denken te zetten. Niet om je
+  te overtuigen dat het altijd een goed idee is om `node_modules` in git
+  repositories te zetten, maar om te realiseren dat in sommige projecten het
+  verstandig kan zijn.
 ---
 
 # Overweeg om `node_modules` in git repositories te zetten

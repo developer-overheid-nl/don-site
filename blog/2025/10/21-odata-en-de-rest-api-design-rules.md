@@ -2,6 +2,12 @@
 authors: [joost-farla]
 tags: [adr, interoperability, openapi, odata]
 image: ./img/odata.png
+description:
+  Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde,
+  interoperabele en toekomstbestendige API's. De REST API Design Rules (ADR)
+  vormen daarbij een belangrijk referentiekader; ze stimuleren eenvoud,
+  voorspelbaarheid en brede toepasbaarheid door gebruik te maken van open
+  standaarden.
 ---
 
 # OData en de REST API Design Rules: past dat wel?

@@ -15,6 +15,13 @@ tags:
     devops,
   ]
 image: ./img/WuppieFuzz.svg
+description:
+  In een tijd waarin digitale overheidsdiensten steeds vaker via REST API's
+  communiceren, is het waarborgen van de veiligheid van deze interfaces
+  cruciaal. WuppieFuzz, ontwikkeld door TNO, is een open-source, coverage-guided
+  fuzzer die specifiek is ontworpen voor het testen van REST API's. Het doel;
+  kwetsbaarheden en bugs opsporen voordat ze misbruikt kunnen worden, met een
+  sterke focus op gebruiksvriendelijkheid, modulariteit en inzichtelijkheid.
 ---
 
 # WuppieFuzz: Coverage-Guided REST API Fuzzing voor veiligere digitale Overheidsdiensten
