@@ -2,8 +2,8 @@
 authors: [eric-nieuwland]
 description:
   Ken je dat? Je gaat aan een nieuw project beginnen en dan vraagt iemand 'Doen
-  jullie wel _Privacy by Design_?' Uiteraard is het belangrijk om bij de bouw
-  van nieuwe software meteen te denken aan privacy – en ook aan security,
+  jullie wel Privacy by Design?' Uiteraard is het belangrijk om bij de bouw van
+  nieuwe software meteen te denken aan privacy – en ook aan security,
   toegankelijkheid en mogelijk meer. Maar hoe past dat binnen een moderne, agile
   werkwijze?
 tags: [privacy, accessibility, security, owasp]
