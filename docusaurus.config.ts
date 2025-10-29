@@ -230,7 +230,10 @@ const config: Config = {
             { label: "Infrastructuur", to: "/kennisbank/infra" },
             { label: "Security", to: "/kennisbank/security" },
             { label: "Programmeertalen", to: "/kennisbank/programmeertalen" },
-            { label: "Leidraad", to: "/kennisbank/leidraad" },
+            {
+              label: "NeRDS leidraad softwareontwikkeling",
+              to: "/kennisbank/leidraad",
+            },
           ],
         },
         {

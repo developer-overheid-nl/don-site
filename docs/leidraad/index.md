@@ -7,24 +7,29 @@ tags:
   - "security"
 sidebar_position: 0
 hide_table_of_contents: true
+description:
+  "Starten met een IT project voor de overheid? Deze lijst met principes en
+  voorbeelden is een eerste aanzet tot overheidsbreed beleid voor development."
 ---
 
-# Leidraad verantwoorde softwareontwikkeling
+# NeRDS leidraad softwareontwikkeling
 
-Deze lijst met principes is een eerste aanzet tot overheidsbreed beleid voor
-softwareontwikkeling. Het idee van deze lijst is afkomstig van de
-["Technology Code of Practice"](https://www.gov.uk/guidance/the-technology-code-of-practice)
-van de Britse overheid. In deze initiële versie willen we voornamelijk alle
-relevante informatie en kennis binnen de overheid bundelen en op een centrale
-plek en toegankelijk maken, zonder hierover een expliciet oordeel te vellen.
+De
+[Nederlandse Richtlijn Digitale Systemen (NeRDS)](https://minbzk.github.io/NeRDS)
+bestaat uit een set standaarden, richtlijnen en praktische hulpmiddelen voor het
+verantwoord ontwikkelen, inkopen en gebruiken van digitale systemen binnen de
+Nederlandse overheid. Deze leidraad softwareontwikkeling bevat de NeRDS
+richtlijnen die specifiek van belang zijn voor ontwikkelaars.
 
 :::info[**Beta**]
 
-Deze leidraad is een product dat nog in beta is. Mis je een onderwerp,
+De richtlijnen van NeRDS zijn nog in ontwikkeling. Mis je een onderwerp,
 standaard, techniek of principe? Laat het ons weten via
 [Slack](https://codefornl.slack.com/archives/CFV4B3XE2) of
 [mail](mailto:developer.overheid@geonovum.nl). Wil je bijdragen aan dit project?
-Bekijk dan onze [bijdragerichtlijnen](/contributing) voor meer informatie.
+Bekijk dan de
+[bijdragerichtlijnen van NeRDS](https://minbzk.github.io/NeRDS/production/Over-NeRDS/CONTRIBUTING/)
+voor meer informatie.
 
 :::
 
