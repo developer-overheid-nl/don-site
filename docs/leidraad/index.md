@@ -7,6 +7,9 @@ tags:
   - "security"
 sidebar_position: 0
 hide_table_of_contents: true
+description:
+  "Starten met een IT project voor de overheid? Deze lijst met principes en
+  voorbeelden is een eerste aanzet tot overheidsbreed beleid voor development."
 ---
 
 # NeRDS leidraad softwareontwikkeling

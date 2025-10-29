@@ -59,7 +59,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "leidraad/index",
-          label: "Leidraad",
+          label: "NeRDS leidraad softwareontwikkeling",
         },
       ],
     },
