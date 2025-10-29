@@ -24,7 +24,7 @@ const tiles: GridTile[] = [
   },
   {
     icon: <IconKlembordMetVinkjesEnLijnen />,
-    title: "NeRDS leidraad",
+    title: "NeRDS leidraad softwareontwikkeling",
     description:
       "Starten met een IT project voor de overheid? Deze lijst met principes en voorbeelden is een eerste aanzet tot overheidsbreed beleid voor development.",
     link: "/kennisbank/leidraad/",
