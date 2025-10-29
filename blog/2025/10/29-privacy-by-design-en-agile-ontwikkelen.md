@@ -96,6 +96,6 @@ in de werkwijze. Laat het weten me op [Mastodon](https://mastodon.nl/@e_r_nie)
 of beter nog:
 [schrijf ook een blog](https://developer.overheid.nl/contributing/gastblog-schrijven).
 
-[ICTU]: (https://www.ictu.nl)
-[OWASP Top 10]: (https://owasp.org/Top10/)
-[SANS 25]: (https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html)
+[ICTU]: https://www.ictu.nl
+[OWASP Top 10]: https://owasp.org/Top10/
+[SANS 25]: https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html
