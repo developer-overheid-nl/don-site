@@ -166,21 +166,6 @@ export function ActiveTeam(): ReactNode {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Martin van der Plas"
-        role="Implementatie-ondersteuner"
-        githubUrl="https://github.com/mrtn78"
-        linkedInUrl="https://www.linkedin.com/in/martinvanderplas/"
-        email="m.vanderplas@geonovum.nl"
-      >
-        <Translate>
-          Martin is architect binnen het implementatie-ondersteuningsteam en
-          richt zich op het creëren van verbindingen tussen burgers en overheden
-          via data. Zijn passie ligt in het toegankelijk en bruikbaar maken van
-          informatie voor iedereen. In zijn vrije tijd gaat hij graag hardlopen
-          of op vakantie met zijn gezin.
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
         role="Back-end developer"
         name="Matthijs Hovestad"
         githubUrl="https://github.com/pasibun"
