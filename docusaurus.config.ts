@@ -195,6 +195,8 @@ const config: Config = {
           "hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5",
         filter_by: "",
         multi_search: true,
+        group_by: "url",
+        group_limit: 1,
       },
       externalUrlRegex:
         "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
