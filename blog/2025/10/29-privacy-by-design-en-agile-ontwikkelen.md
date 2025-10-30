@@ -30,7 +30,7 @@ dat de software in productie ging.
 
 Bij [ICTU] ontwikkelen we software voor opdrachtgevers binnen de overheid. We
 hanteren daarvoor een agile werkwijze, maar we beginnen niet direct met
-programmeren. Eerst zorgen we dat voor duidelijk is wat het probleem van de
+programmeren. Eerst zorgen we dat vooraf duidelijk is wat het probleem van de
 opdrachtgever is, hoe de oplossing er uit zou kunnen zien, zodat we in grote
 lijnen weten welke technieken en expertise nodig zijn om de oplossing te
 realiseren. Het meeste hoeft niet 100% af te zijn en wordt ook niet in beton
