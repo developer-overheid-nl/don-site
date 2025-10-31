@@ -1,7 +1,6 @@
 ---
 tags:
-  - "logboek"
-  - "dataverwerkingen"
+  - "ldv"
   - "forum-standaardisatie"
   - "gdpr"
   - "avg"
