@@ -45,7 +45,7 @@ $ code
 ```bash
 $ docker run --rm --entrypoint=sh \
     -v $(pwd)/api:/locale stoplight/spectral:5.9.1 \
-    -c "spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml"
+    -c "spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE"
 ```
 
 ## GitLab
