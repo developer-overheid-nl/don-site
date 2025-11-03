@@ -14,6 +14,14 @@ aspecten en contractuele beperkingen hebt overwogen.
   deze leidraad, zoals transparantie en hergebruik, dienen hun weerslag te
   vinden in overheidsaanbestedingen. Zo worden veelgemaakte fouten voorkomen.
 
+## Open source standaardsoftware aanbesteden
+
+Het Ministerie van VWS biedt een [gereedschapskist voor het aanbesteden van open
+source standaardsoftware](https://minvws.opensourcewerken.nl/open-source-gereedschapskist-voor-het-aanbesteden-van-standaardsoftware/). De
+gereedschapskist laat zien hoe je zorgt dat open source oplossingen in je
+aanbesteding een gelijke kans krijgen en je tegelijkertijd innovatie,
+flexibiliteit en maatschappelijke waarde bevordert.
+
 ## Communities
 
 ### PIANOo, Expertisecentrum Aanbesteden van het ministerie van Economische Zaken
