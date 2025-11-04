@@ -13,6 +13,13 @@ title: "NL Design System"
 
 **[Direct naar NL Design System](https://nldesignsystem.nl/)**
 
+Binnen de overheid is digitale dienstverlening de standaard geworden. Dit
+betekent dat veel organisaties zelf een website of webapplicatie moeten bouwen
+om hun diensten aan te bieden. Om dubbel werk te voorkomen is de NL design
+system community opgericht. Hiermee kunnen publieke organisaties samenwerken aan
+herbruikbare componenten en sneller eigen design systemen opzetten die voldoen
+aan toegankelijkheidseisen.
+
 Door organisatie-overstijgend samen te werken en de krachten te bundelen is het
 mogelijk om web-componenten te bouwen die **consistenter**,
 **gebruiksvriendelijker** en **toegankelijker** zijn.
@@ -36,6 +43,23 @@ onderdelen:
 
 Al deze onderdelen hebben dit gedeelde doel: makkelijk consistente,
 toegankelijke en gebruiksvriendelijke websites en applicaties maken.
+
+## NL Design System en het Estafettemodel
+
+Het [NL Design System](https://nldesignsystem.nl/) is een **framework** waarmee
+organisaties hun eigen design system kunnen bouwen. Het belangrijkste voordeel
+is dat componenten die zijn gebouwd met dit framework eenvoudig kunnen worden
+uitgewisseld tussen verschillende design systems. Door middel van design tokens
+worden white-label componenten voorzien van een eigen huisstijl, waardoor
+dezelfde componentcode herbruikbaar is voor meerdere organisaties.
+
+Het Estafettemodel staat centraal in NL Design System: teams ontwikkelen
+componenten die anderen kunnen hergebruiken en verbeteren. Door samen te werken
+aan herbruikbare componenten maken we het mogelijk om over organisatiegrenzen
+heen consistentie en kwaliteit te bereiken en standaarden te creëren.
+
+Als je zelf een publieke organisatie bent, en je wilt een design systeem
+opzetten is dit waar je wilt beginnen.
 
 ## Van lokaal en specifiek naar centrale hoogwaardige componenten
 
@@ -78,6 +102,22 @@ van het thema. Een voorbeeld is het
 [auteursrecht](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-toestemming-voor-gebruik--docs)
 van het Design System van gemeente Utrecht.
 
+## Rijkshuisstijl Community
+
+De [Rijkshuisstijl Community](https://rijkshuisstijl.community/) is een
+opensource community die een **concrete implementatie** van de Rijkshuisstijl
+heeft ontwikkeld als design system componenten. Een van de vele design systemen
+die is aangesloten bij het NL Design System framework.
+
+**Het verschil:** Waar NL Design System het framework is om een design system te
+bouwen, biedt Rijkshuisstijl Community direct bruikbare componenten die al zijn
+vormgegeven volgens de Rijkshuisstijl. Dit maakt het eenvoudiger om snel aan de
+slag te gaan met projecten die de Rijkshuisstijl moeten volgen.
+
+Als je zelf geen design system wilt opzetten, maar snel wilt bouwen met
+componenten die voldoen aan de Rijkshuisstijl, dan is dit de plek om te
+beginnen.
+
 ## Levende voorbeelden
 
 Een aantal goede voorbeelden van NL Design System implementaties en communities
@@ -89,6 +129,19 @@ zijn:
 
 ## Links
 
-- [Introductie NL Design System](https://nldesignsystem.nl/handboek/introductie/)<br/>
-- [Over NL Design System](https://nldesignsystem.nl/project/over-nl-design-system/)<br/>
+- [Introductie NL Design System](https://nldesignsystem.nl/handboek/introductie/)  
+- [Over NL Design System](https://nldesignsystem.nl/project/over-nl-design-system/)  
 - [Website NL Design System](https://nldesignsystem.nl)
+
+### Op de hoogte blijven
+
+- Praat mee op [Slack van Code for NL](https://praatmee.codefor.nl) in het
+  kanaal #nl-design-system. hier vind je ook de Rijkshuisstijl Community
+  developers.
+- Bezoek de tweewekelijkse NL Design System Heartbeat meetings
+- Sluit je aan bij de
+  [Rijkshuisstijl Community op GitHub](https://github.com/Rijkshuisstijl)
+- Sluit aan bij de wekelijkse
+  [developers meeting van de Rijkshuisstijl Community](https://nldesignsystem.nl/events/developer-open-hour/overzicht/)
+- Schrijf je in voor de nieuwsbrief via
+  [Gebruiker Centraal](https://www.gebruikercentraal.nl/)
