@@ -14,12 +14,13 @@ description:
 # Zo bouwen wij software bij de overheid: samen leren, bouwen en verbeteren
 
 Hoe bouwen we binnen de overheid software die betrouwbaar, open en herbruikbaar
-is en goed aansluit op standaarden en beleid? Tijdens
-_zoBouwenWijSoftwareBijDeOverheid_ laten we zien hoe we dat in de praktijk doen.
-Op **dinsdag 16 december 2025** nodigen we je uit bij Dev.loer in Utrecht voor
-een inspirerende en vooral hands-on middag. Samen met developers, product owners
-en technische leads van verschillende overheden ontdek je hoe bestaande tools,
-richtlijnen en kennisplatforms je direct kunnen helpen bij jouw
+is en goed aansluit op standaarden en beleid?
+
+Tijdens _zoBouwenWijSoftwareBijDeOverheid_ laten we zien hoe we dat in de
+praktijk doen. Op **dinsdag 16 december 2025** nodigen we je uit bij Dev.loer in
+Utrecht voor een inspirerende en vooral hands-on middag. Samen met developers,
+product owners en technische leads van verschillende overheden ontdek je hoe
+bestaande tools, richtlijnen en kennisplatforms je direct kunnen helpen bij jouw
 softwareprojecten.
 
 <!-- truncate -->
