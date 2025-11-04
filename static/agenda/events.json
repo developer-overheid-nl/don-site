@@ -1,45 +1,5 @@
 [
   {
-    "title": "Hackwerk 2025: één overheid",
-    "start_date": "2025-10-02",
-    "end_date": "2025-10-03",
-    "place": "KvK, Amsterdam",
-    "summary": "Hackwerk 2025 gaat op 2 oktober 2025 van start! Schrijf je gratis in en neem deel aan de hackathon van BZK, EZ, DICTU, KVK, NVWA & RVO.",
-    "url": "https://www.hackwerk2025.nl/"
-  },
-  {
-    "title": "Workshop: OGC API Muteren",
-    "start_date": "2025-11-04T10:00:00+02:00",
-    "end_date": "2025-11-04T16:00:00+02:00",
-    "place": "Geonovum, Amersfoort",
-    "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
-    "url": "https://www.formdesk.com/geonovum/OGC_API_Muteren_4nov"
-  },
-  {
-    "title": "Workshop: OGC API 3D Tiles",
-    "start_date": "2025-10-07T10:00:00+02:00",
-    "end_date": "2025-10-07T16:00:00+02:00",
-    "place": "Geonovum, Amersfoort",
-    "summary": "In 2025 organiseert Geonovum een reeks workshops om de kennis en toepassing van OGC API standaarden in Nederland te vergroten. Met behulp van OGC APIs heb je geen specifieke kennis of tooling nodig van geodata om deze goed te kunnen verwerken. Hierdoor kan een veel bredere groep developers geo-informatie in zijn en haar tooling opnemen.",
-    "url": "https://www.formdesk.com/geonovum/OGC_3DTiles_7okt"
-  },
-  {
-    "title": "Digilab goes Dutch Design Week - Digital Futures",
-    "start_date": "2025-10-22T10:30:00+02:00",
-    "end_date": "2025-10-22T12:00:00+02:00",
-    "place": "Natlab, Eindhoven",
-    "summary": "Wat als wetten niet alleen gelezen, maar ook afgespeeld kunnen worden? Wat als je kunt zien hoe levensgebeurtenissen zoals echtscheiding of baanverlies je rechten direct beïnvloeden? Wij prototypen digitale tools die rechten en gevolgen inzichtelijk maken en bestaanszekerheid beschermen.",
-    "url": "https://ddw.nl/programme/machine-law-for-human-life"
-  },
-  {
-    "title": "Digilab goes Dutch Design Week - Equal society",
-    "start_date": "2025-10-24T10:30:00+02:00",
-    "end_date": "2025-10-24T12:00:00+02:00",
-    "place": "Natlab, Eindhoven",
-    "summary": "Wat als wetten niet alleen gelezen, maar ook afgespeeld kunnen worden? Wat als je kunt zien hoe levensgebeurtenissen zoals echtscheiding of baanverlies je rechten direct beïnvloeden? Wij prototypen digitale tools die rechten en gevolgen inzichtelijk maken en bestaanszekerheid beschermen.",
-    "url": "https://ddw.nl/programme/machine-law-for-human-life-28"
-  },
-  {
     "title": "3-daags Fieldlab 'Bestaanszekerheid bij Levensgebeurtenissen",
     "start_date": "2025-11-24T09:00:00+02:00",
     "end_date": "2025-11-26T19:00:00+02:00",
@@ -48,27 +8,19 @@
     "url": "https://digilab.overheid.nl/chat"
   },
   {
-    "title": "FLEX op Dev.loer",
-    "start_date": "2025-10-30T09:00:00+02:00",
-    "end_date": "2025-10-30T16:00:00+02:00",
-    "place": "Dev.loer, Utrecht",
-    "summary": "Dev.loer te Utrecht biedt jou een flexwerkplek met koffie, wifi en breedbeeldschermen waar je prettig kunt werken. Werk jij als techneut voor een (semi)overheid? Reserveer je beeldscherm en ga -zelfstandig of samen- aan de slag!",
-    "url": "https://opensourcewerken.nl/events/view/1e6b8939-9989-43c5-a3cc-17e94f6a9a94/flex-op-devloer"
-  },
-  {
-    "title": "Kennissessie met Frank Niessink over tooling voor het monitoren van software kwaliteit",
-    "start_date": "2025-10-30T16:00:00+02:00",
-    "end_date": "2025-10-30T17:00:00+02:00",
-    "place": "Dev.loer, Utrecht",
-    "summary": "Frank Niessink, kwaliteitsmanager bij ICTU, vertelt over hoe je de kwaliteit van software binnen je organisatie kan monitoren.",
-    "url": "https://opensourcewerken.nl/events/view/a44a2447-1fe5-46ed-8243-033cffdc116e/opensourcewerken-hoe-werkt-dat"
-  },
-  {
     "title": "Kennisplatform API's speciale editie",
     "start_date": "2025-11-05T10:00:00+02:00",
     "end_date": "2025-11-05T16:30:00+02:00",
     "place": "EDSN, Amersfoort",
     "summary": "Op woensdag 5 november 2025 heet het Kennisplatform API je van harte welkom voor een extra uitgebreide kennissessie, gehost bij EDSN in Amersfoort. De bijeenkomsten van het Kennisplatform API's zijn toegankelijk voor iedereen die kennis wil opsnuiven en delen over het ontwikkelen en inzetten van API's bij de overheid.",
     "url": "https://www.formdesk.com/geonovum/API2025"
+  },
+  {
+    "title": "zoBouwenWijSoftwareBijDeOverheid",
+    "start_date": "2025-12-16T12:30:00+02:00",
+    "end_date": "2025-12-16T17:30:00+02:00",
+    "place": "Dev.loer, Utrecht",
+    "summary": "Hoe bouwen we binnen de overheid software die betrouwbaar, open en herbruikbaar is en goed aansluit op standaarden en beleid? Tijdens zoBouwenWijSoftwareBijDeOverheid laten we zien hoe we dat in de praktijk doen. Op dinsdag 16 december 2025 nodigen we je uit bij Dev.loer in Utrecht voor een inspirerende en vooral hands-on middag.",
+    "url": "https://developer.overheid.nl/blog/2025/11/04/zo-bouwen-wij-software-bij-de-overheid"
   }
 ]
