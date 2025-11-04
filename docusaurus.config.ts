@@ -194,6 +194,8 @@ const config: Config = {
         query_by:
           "hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5",
         filter_by: "",
+        group_by: "url",
+        group_limit: 1,
         multi_search: true,
       },
       externalUrlRegex:
