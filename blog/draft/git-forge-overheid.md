@@ -1,7 +1,7 @@
 ---
 authors: [jan-vlug]
 draft: true
-tags: ["Git", "FOSS", "opensource", "digitale soevereiniteit", "digitale autonomie", "GitHub", "GitLab", "Forgejo", "Git-forge", "Git-werkplaats"]
+tags: [git, foss, open-source, digitale-soevereiniteit, digitale-autonomie, github, gitlab, forgejo]
 ---
 
 # Aanbeveling voor de Git-werkplaats van de overheid
