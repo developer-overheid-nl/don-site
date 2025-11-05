@@ -1,16 +1,22 @@
 ---
 authors: [jan-vlug]
 draft: true
+tags: ["Git", "FOSS", "opensource", "digitale soevereiniteit", "digitale autonomie", "GitHub", "GitLab", "Forgejo", "Git-forge", "Git-werkplaats"]
 ---
 
 # Aanbeveling voor de Git-werkplaats van de overheid
 
 De Nederlandse overheid [publiceert een deel van haar
-code](https://oss.developer.overheid.nl/repositories) als [vrije
+broncode](https://oss.developer.overheid.nl/repositories) als [vrije
 opensource
-software](https://fsfe.org/freesoftware/freesoftware.nl.html). Het *de
+software](https://fsfe.org/freesoftware/freesoftware.nl.html). Om software te beheren is een versiebeheersysteem nodig.
+Hiermee kun je veranderingen in de broncode traceren en beheren. Een versiebeheersysteem faciliteert
+ook het samenwerken tussen verschillende software-ontwikkelaars.
+Een gedistribueerd versiebeheersysteem maakt het mogelijk dat ontwikkelaars op verschillende
+locaties toch kunnen samenwerken aan één softwareproduct. Het *de
 facto* versiebeheersysteem voor software is [Git](https://git-scm.com/).
-Git is vrije opensource software.
+Git is vrije opensource software. Voor een interessante en leerzame introductie in Git zie
+[deze presentatie](https://github.com/user-attachments/files/23299017/presentatie-git.pdf).
 
 Er zijn online platforms die werken met Git, en die daaromheen
 toegevoegde functionaliteit bieden om software-development en
@@ -25,6 +31,8 @@ kunnen maken.
 
 <!-- truncate -->
 
+## De huidige situatie
+
 Op dit moment wordt vrije opensource software van de overheid onder
 andere gehost op GitHub en GitLab. Externe Git-forges die niet onder het
 beheer van de overheid vallen. GitHub zelf is bovendien bedrijfseigen
@@ -37,14 +45,30 @@ en is geen vrije software.
 De vraag rijst wáár de Nederlandse overheid het best haar vrije
 opensource software kan publiceren?
 
+## Waarom GitHub afvalt
+
 [GitHub](https://github.com/) valt af omdat [GitHub, als niet vrije,
 niet-opensource software](https://sfconservancy.org/GiveUpGitHub/) niet
 in overeenstemming is met [de
 lijn](https://open.overheid.nl/documenten/ronl-d468e28d-dfbc-43fe-92cc-77b7f861096e/pdf)
 dat bij gelijke geschiktheid open source de voorkeur geniet.
 
-Twee andere Git-forges zijn [Forgejo](https://forgejo.org/) en
-[GitLab](https://gitlab.com/).
+Bovendien is het hosten van broncode een kritiek onderdeel van de infrastructuur
+voor de Nederlandse overheid. De overheid kan zich niet veroorloven dat er gerommeld
+zou kunnen worden met code of binaries in repositories die mensen direct kunnen
+uitvoeren. De overheid moet zeker weten dat deze binaries integer tot stand zijn gekomen.
+Daarom is het belangrijk de volledige beschikking the hebben over een Git-forge.
+
+Daarnaast is er de dreiging dat het platform inzet wordt voor diplomatieke
+doeleinden zoals het geval was bij de
+[hoofdaanklager van het Internationaal Strafhof (ICC)](https://www.computable.nl/2025/05/16/microsoft-blokkeert-e-mail-hoofdaanklager-internationaal-strafhof/).
+
+## De twee overgebleven kandidaten: GitLab en Forgejo
+
+Twee andere Git-forges zijn [GitLab](https://gitlab.com/) en
+[Forgejo](https://forgejo.org/) (spreek uit als [/forˈd͡ʒe.jo/](https://forgejo.org/static/forgejo.mp4)).
+
+## Het probleem met GitLab
 
 GitLab heeft een [*open
 core*](https://en.wikipedia.org/wiki/Open-core_model) */ non-free
@@ -54,6 +78,21 @@ GitLab *Enterprise Edition* functionaliteit hebben een [vendor
 lock-in](https://nl.wikipedia.org/wiki/Vendor_lock-in) bij GitLab. Het
 is niet mogelijk de code naar eigen voorkeur aan te passen en vrij te
 gebruiken.
+
+## Het graduele pad naar vendor lock-in
+
+Organisaties beginnen vaak met de gratis en vrije GitLab *Community Edition* (die wél vrije opensource is).
+Maar naarmate een organisatie groeit en meer geavanceerde functionaliteit nodig heeft,
+wordt ze vaak verleid of gedwongen over te stappen naar GitLab *Enterprise Edition* voor features zoals:
+
+* Geavanceerde security scanning
+* Compliance features
+* Betere performance en schaalbaarheid
+* Enterprise support
+
+Eenmaal afhankelijk van die *Enterprise Edition* features, zit zo'n organisatie vast.
+
+## Digitale soevereiniteit en vrije software (FOSS)
 
 Echte [digitale
 soevereiniteit](https://www.tweedekamer.nl/zoeken?qry=position+paper+digitale+soevereiniteit&form_build_id=form-qdVAkRjc9-ixopjCXk_eYwERCpEpkS2_Zz1uURDIDxk&form_id=tk_external_data_autonomy_search_form)
@@ -91,6 +130,8 @@ FOSS. Dit is een fundamenteel, filosofisch en politiek verschil. Je kunt
 alleen digitale soevereiniteit hebben als er geen vrijheid van je wordt
 ontnomen.
 
+## Het team van Fedora koos ook voor Forgejo
+
 [Fedora](https://www.fedoraproject.org/), een Linux-distributie, stond
 ook voor de keuze welke Git-forge te gebruiken. Fedora koos voor
 Forgejo. Eén van de argumenten van [Fedora om voor Forgejo te
@@ -108,6 +149,8 @@ zichzelf geen vrijheid ontnemen of limiteren.
 
 Merk op dat bij Fedora ongeveer de beste experts op het gebied van vrije
 opensource software (FOSS) werken.
+
+## Licentievergelijking
 
 GitLab maakt [onderscheid tussen tiers, users en
 distributions](https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/tiers/#history-of-ce-and-ee-distributions).
@@ -130,6 +173,8 @@ Forgejo heeft de [GPLv3 licentie](https://forgejo.org/2024-08-gpl/)
 [Git heeft de GPLv2
 licentie](https://git-scm.com/about/free-and-open-source).
 
+## Forgejo als beste keuze voor digitale soevereiniteit op lange termijn
+
 Mijn conclusie: Als de overheid fundamenteel wil kiezen voor digitale
 soevereiniteit dan is een Git-forge die zelf FOSS of copyleft is
 essentieel. GitLab als bedrijf zet in op het *free core / exendend
@@ -141,12 +186,16 @@ democratische non-profitorganisatie, zet
 expliciet vol in op vrije software (FOSS/copyleft). Daarmee is vanuit
 het oogpunt van digitale soevereiniteit Forgejo de beste keuze.
 
+## Public money, public code
+
 Forgejo biedt de mogelijkheid om álle broncode ervan te bestuderen, aan
 te passen en te distribueren. Dat is precies in lijn met de doelen van
 de overheid. Elke investering in Forgejo komt in het publiek domein en
 daarmee ten goede aan belastingbetalende burgers en bedrijven. [Public
 money, public code](https://publiccode.eu/en/). Door te investeren in
 Forgejo investeert de overheid in het publieke domein.
+
+## Schaalbaarheid
 
 Wat betreft schaalbaarheid, de essentie van Git is dat het een
 gedistribueerd, gedecentraliseerd systeem is. Daarmee is Git zelf (de
@@ -158,6 +207,8 @@ opensource projecten van de overheid. Codeberg, een publieke instantie
 van Forgejo host op het moment van schrijven [313.753 projecten en
 202.366 gebruikers](https://codeberg.org/about).
 
+## Hands-on ervaring opdoen met Forgejo
+
 Als je hands-on ervaring wil opdoen met Forgejo, dan kun je bijvoorbeeld
 gebruik maken van [Codeberg](https://codeberg.org/about), een
 non-profit, community-gedreven platform dat draait op Forgejo. Ik heb
@@ -165,6 +216,8 @@ tijdens een hackathon Forgejo inclusief [een Forgejo Actions
 runner](https://forgejo.org/docs/latest/admin/actions/) lokaal
 geïnstalleerd en GitLab CI/CD-pipelines omgezet naar [Forgejo
 Actions](https://forgejo.org/docs/next/user/actions/reference/).
+
+## Self-hosting en federatie
 
 [*Self-hosting*](https://en.wikipedia.org/wiki/Self-hosting_(web_services))
 is ook essentieel voor digitale soevereiniteit en digitale autonomie.
@@ -176,6 +229,8 @@ werken. Dit zou bijvoorbeeld kunnen door
 [federatie](https://forgefed.org/) tussen de Git-forges van deze
 soevereine organisaties. Forgejo heeft ook [federatie op de
 roadmap](https://forgejo.org/2023-01-10-answering-forgejo-federation-questions/).
+
+## Conclusie
 
 Samenvattend, vanuit het oogpunt van digitale soevereiniteit en digitale
 autonomie is een *self-hosted* Forgejo de beste keuze is voor de
