@@ -233,7 +233,7 @@ roadmap](https://forgejo.org/2023-01-10-answering-forgejo-federation-questions/)
 ## Conclusie
 
 Samenvattend, vanuit het oogpunt van digitale soevereiniteit en digitale
-autonomie is een *self-hosted* Forgejo de beste keuze is voor de
+autonomie is een *self-hosted* Forgejo de beste keuze voor de
 overheid. De functionaliteit van Forgejo is ruim voldoende voor
 software-ontwikkeling en elke in Forgejo geïnvesteerde euro komt terecht
 in het publieke domein.
