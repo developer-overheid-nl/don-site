@@ -168,3 +168,11 @@ linda-van-den-brink:
   socials:
     linkedin: linda-van-den-brink-87494a3
     github: lvdbrink
+
+jan-vlug:
+  name: Jan Vlug
+  title: Software Engineer
+  image_url: https://files.mastodon.social/accounts/avatars/000/007/668/original/af32591887b40258.jpeg
+  page: true
+  socials:
+    mastodon: https://mastodon.social/@janvlug

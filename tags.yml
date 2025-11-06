@@ -94,6 +94,11 @@ digitale-autonomie:
     Digitale autonomie is het principe dat de overheid zelf de regie heeft over
     haar digitale infrastructuur en data.
   label: Digitale autonomie
+digitale-soevereiniteit:
+  description:
+    Digitale soevereiniteit is het principe van het beschikken over zeggenschap,
+    invloed, regie en keuzevrijheid over digitale systemen.
+  label: Digitale soevereiniteit
 docker:
   description:
     Docker is een platform voor het bouwen, distribueren en draaien van
@@ -142,6 +147,9 @@ foss:
   label: FOSS
 front-end:
   label: Front-end
+forgejo:
+  description: Een Git-forge
+  label: Forgejo
 fsc:
   description: Federated Service Connectivity
   label: FSC
@@ -158,6 +166,12 @@ geodata:
   label: Geodata
 git:
   label: Git
+github:
+  description: Een Git-forge
+  label: GitHub
+gitlab:
+  description: Een Git-forge
+  label: GitLab
 golang:
   label: Golang
 gouden-api:
