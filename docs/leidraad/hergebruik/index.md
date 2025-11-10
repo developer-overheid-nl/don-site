@@ -69,6 +69,12 @@ gestandaardiseerde manier informatie aan te bieden over een Open Source project.
 
 - [Over de publiccode.yml standaard](/kennisbank/open-source/standaarden/publiccode-yml)
 
+## Maak software overdraagbaar
+
+Voordat je software overdraagt aan een andere developer, een ander team, of een andere organisatie zorg je dat de software goed onderhoudbaar is door de ontvangende partij. Ben jij de ontvangende partij dan controleer je voor de ontvangst dat je de software goed kan onderhouden en indien nodig kan doorontwikkelen.
+
+- [Richtlijn software beheerst overdragen](richtlijn-software-overdragen.md).
+
 ## Communities
 
 - [Code for NL](/communities/code-for-nl)
