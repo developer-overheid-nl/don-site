@@ -43,6 +43,8 @@ Git-forges.
 In deze blog ga ik in op een aantal aspecten van verschillende Git-forges, om zo
 de beste keuze voor een Git-forge voor de overheid te kunnen maken.
 
+<!-- truncate -->
+
 :::info[Relevant vanwege code.overheid.nl]
 
 Dit artikel is extra relevant omdat het Ministerie van Binnenlandse Zaken op dit
