@@ -34,5 +34,6 @@ Proactieve Dienstverlening op 9, 10 en 11 december.
 - Meer informatie over projecten op Digilab vind je op onze
   [projectenpagina](https://digilab.overheid.nl/projecten)
 
-:::note[Dit artikel verscheen eerder op
-[digilab.overheid.nl](https://digilab.overheid.nl/blog/digilab-meetup/)] :::
+<!-- prettier-ignore -->
+:::note[Dit artikel verscheen eerder op [digilab.overheid.nl](https://digilab.overheid.nl/blog/digilab-meetup/)]
+:::

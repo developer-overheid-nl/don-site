@@ -24,7 +24,7 @@ te bereiken.
 
 <!-- truncate -->
 
-:::info[**TL;DR**]
+:::info[TL;DR]
 
 - Vorderingenoverzicht Rijk gebruikt het vijf-lagenmodel van Common Ground om
   haar ecosysteem op te knippen in herbruikbare gestandaardiseerde componenten.

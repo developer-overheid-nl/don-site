@@ -44,8 +44,10 @@ API's van de overheid, ruim zeven jaar geleden._
 
 <!-- truncate -->
 
-:::success[**TL;DR**] OpenAPI 3.1 komt eindelijk in beeld als nieuwe standaard
-voor overheids-API's. De belangrijkste voordelen op een rij:
+:::info[TL;DR]
+
+OpenAPI 3.1 komt eindelijk in beeld als nieuwe standaard voor overheids-API's.
+De belangrijkste voordelen op een rij:
 
 - Ondersteuning voor webhooks en mutual TLS
 - Volledige compatibiliteit met JSON Schema
@@ -55,7 +57,9 @@ voor overheids-API's. De belangrijkste voordelen op een rij:
 
 Migratie vanaf 3.0 is meestal eenvoudig en kan grotendeels geautomatiseerd
 worden. Daarmee is OpenAPI 3.1 een belangrijke stap vooruit voor iedereen die
-werkt aan API's binnen de overheid. :::
+werkt aan API's binnen de overheid.
+
+:::
 
 ## OpenAPI Specification
 
@@ -72,14 +76,18 @@ tijdelijk te pauzeren. Inmiddels zijn we ruim twee jaar verder en is de situatie
 duidelijk veranderd. Deze week is dan ook besloten om het standaardisatieproces
 voor OpenAPI 3.1 opnieuw op te starten.
 
-:::note[Semver] [Semver](https://semver.org/) staat voor _Semantic Versioning_,
-een manier om versienummers van software op een gestructureerde manier op te
-bouwen. Het bestaat uit drie delen: `major.minor.patch`. Een verhoging van het
-eerste cijfer (`major`) betekent dat er mogelijk breaking changes zijn. Het
-tweede cijfer (`minor`) wordt verhoogd bij het toevoegen van nieuwe, compatibele
+:::note[Semver]
+
+[Semver](https://semver.org/) staat voor _Semantic Versioning_, een manier om
+versienummers van software op een gestructureerde manier op te bouwen. Het
+bestaat uit drie delen: `major.minor.patch`. Een verhoging van het eerste cijfer
+(`major`) betekent dat er mogelijk breaking changes zijn. Het tweede cijfer
+(`minor`) wordt verhoogd bij het toevoegen van nieuwe, compatibele
 functionaliteit. Het derde deel (`patch`) geeft kleine, backwards-compatibele
 bugfixes aan. Zo kun je aan het versienummer direct zien wat voor soort
-wijzigingen je kunt verwachten. :::
+wijzigingen je kunt verwachten.
+
+:::
 
 ## Van "REST" naar "HTTP"
 

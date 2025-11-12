@@ -79,6 +79,7 @@ uit om contact op te nemen met het Digilab-team voor projecten.
 
 ::video-vimeo[sfeerimpressie]{id=1025108848}
 
+<!-- prettier-ignore -->
 :::note[Dit artikel verscheen eerder op
 [digilab.overheid.nl](https://digilab.overheid.nl/blog/de-toekomst-van-federatieve-toegang/)]
 :::

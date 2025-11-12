@@ -104,8 +104,12 @@ Sign-On en federatieve login in moderne webapplicaties.
 Lees meer over
 [OpenID Connect in de kennisbank](/kennisbank/security/standaarden/oidc).
 
-:::tip In de praktijk zal altijd een combinatie van technieken nodig zijn omdat
-het data delen geen eenzijdige uitwisseling is tussen 2 partijen. :::
+:::tip
+
+In de praktijk zal altijd een combinatie van technieken nodig zijn omdat het
+data delen geen eenzijdige uitwisseling is tussen 2 partijen.
+
+:::
 
 ## Verschillende invalshoeken
 
@@ -151,9 +155,13 @@ ontsluiten van de data dient de bronhouder erop te kunnen vertrouwen dat de
 burger instemt met het delen van de data en dat de marktpartij instemt met de
 voorwaarden waaronder de data worden gedeeld.
 
-:::tip In de meest eenvoudige situatie zijn er dus minimaal 3 partijen nodig die
-moeten kunnen vertrouwen op de technische voorzieningen die bij de 2 andere
-partijen in gebruik zijn. :::
+:::tip
+
+In de meest eenvoudige situatie zijn er dus minimaal 3 partijen nodig die moeten
+kunnen vertrouwen op de technische voorzieningen die bij de 2 andere partijen in
+gebruik zijn.
+
+:::
 
 ## Ondersteunende voorzieningen
 

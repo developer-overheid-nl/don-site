@@ -66,6 +66,6 @@ Graag tot ziens bij Digilab!
 
 ::video-vimeo[sfeerimpressie]{id=981808944}
 
-:::note[Dit artikel verscheen eerder op
-[digilab.overheid.nl](https://digilab.overheid.nl/blog/dag-van-de-toekomstige-registraties/)]
+<!-- prettier-ignore -->
+:::note[Dit artikel verscheen eerder op [digilab.overheid.nl](https://digilab.overheid.nl/blog/dag-van-de-toekomstige-registraties/)]
 :::

@@ -73,6 +73,7 @@ toekomst.
 Meld je aan op de
 [registratiepagina van dit evenement](https://digilab.pleio.nl/groups/view/fdadad2d-155d-4395-a010-67003d2d9e8a/de-toekomst-van-federatieve-toegang/events/view/80376d03-aef4-4d12-be91-e9c1b5c1fffc/de-toekomst-van-federatieve-toegang).
 
+<!-- prettier-ignore -->
 :::note[Dit artikel verscheen eerder op
 [digilab.overheid.nl](https://digilab.overheid.nl/blog/dynamische-toegang-en-vertrouwen-de-sleutel-tot-federatieve-samenwerking/)]
 :::

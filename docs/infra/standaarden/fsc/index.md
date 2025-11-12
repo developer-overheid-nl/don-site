@@ -9,7 +9,7 @@ title: "FSC (Federated Service Connectivity)"
 sidebar_position: 20
 ---
 
-:::info[**TL;DR**]
+:::info[TL;DR]
 
 De [FSC-standaard](https://fsc-standaard.nl) beschrijft hoe koppelingen voor
 gegevensuitwisseling veilig, transparant en beheersbaar kunnen worden opgezet.

@@ -21,7 +21,7 @@ verantwoord ontwikkelen, inkopen en gebruiken van digitale systemen binnen de
 Nederlandse overheid. Deze leidraad softwareontwikkeling bevat de NeRDS
 richtlijnen die specifiek van belang zijn voor ontwikkelaars.
 
-:::info[**Beta**]
+:::info[Beta]
 
 De richtlijnen van NeRDS zijn nog in ontwikkeling. Mis je een onderwerp,
 standaard, techniek of principe? Laat het ons weten via
