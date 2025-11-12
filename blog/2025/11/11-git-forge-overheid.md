@@ -39,7 +39,7 @@ zie
 [deze presentatie](https://github.com/user-attachments/files/23299017/presentatie-git.pdf).
 
 Er zijn online platforms die werken met Git, en die daaromheen toegevoegde
-functionaliteit bieden om software-development en project-management met Git te
+functionaliteit bieden om softwaredevelopment en projectmanagement met Git te
 ondersteunen. Ik gebruik hieronder de term
 [Git-forge](<https://en.wikipedia.org/wiki/Forge_(software)>) (Git-werkplaats)
 om zulke platforms aan te duiden. GitLab, Forgejo en GitHub zijn allemaal
@@ -53,7 +53,7 @@ de beste keuze voor een Git-forge voor de overheid te kunnen maken.
 :::info[Relevant vanwege code.overheid.nl]
 
 Dit artikel is extra relevant omdat het Ministerie van Binnenlandse Zaken op dit
-moment bezig is met het opzetten van een code.overheid.nl instance. Volg deze
+moment bezig is met het opzetten van een code.overheid.nl instantie. Volg deze
 blog of [Mastodon](https://social.overheid.nl/@developer) voor meer info
 hierover.
 
@@ -64,7 +64,7 @@ hierover.
 Op dit moment wordt vrije opensource software van de overheid onder andere
 gehost op GitHub en GitLab. Externe Git-forges die niet onder het beheer van de
 overheid vallen. GitHub zelf is bovendien bedrijfseigen (_proprietary_), niet
-vrije, niet-opensource software. GitLab _Free_ heeft een open source licentie,
+vrije, niet-opensource software. GitLab _Free_ heeft een open sourcelicentie,
 maar de _Enterprise Edition_ heeft een
 [source-available licentie](https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/tiers/#overview)
 en is geen vrije software.
@@ -84,7 +84,7 @@ Bovendien is het hosten van broncode een kritiek onderdeel van de infrastructuur
 voor de Nederlandse overheid. De overheid kan zich niet veroorloven dat er
 gerommeld zou kunnen worden met code of binaries in repositories die mensen
 direct kunnen uitvoeren. De overheid moet zeker weten dat deze binaries integer
-tot stand zijn gekomen. Daarom is het belangrijk de volledige beschikking the
+tot stand zijn gekomen. Daarom is het belangrijk de volledige beschikking te
 hebben over een Git-forge.
 
 Daarnaast is er de dreiging dat het platform inzet wordt voor diplomatieke
@@ -203,13 +203,13 @@ als Git zelf.
 
 Mijn conclusie: Als de overheid fundamenteel wil kiezen voor digitale
 soevereiniteit dan is een Git-forge die zelf FOSS of copyleft is essentieel.
-GitLab als bedrijf zet in op het _free core / exendend enterprise model_. Dit
+GitLab als bedrijf zet in op het _free core / extendend enterprise model_. Dit
 model heeft in het verleden tot
 [vendor lock-in](https://en.wikipedia.org/wiki/Vendor_lock-in) en andere
 problemen geleid (denk aan
 [Owncloud / Nextcloud](https://itsfoss.com/nextcloud-vs-owncloud/)). Forgejo,
 als democratische non-profitorganisatie, zet expliciet vol in op vrije software
-(FOSS/copyleft). Daarmee is vanuit het oogpunt van digitale soevereiniteit
+(FOSS / copyleft). Daarmee is vanuit het oogpunt van digitale soevereiniteit
 Forgejo de beste keuze.
 
 ## Public money, public code
@@ -225,7 +225,7 @@ Forgejo investeert de overheid in het publieke domein.
 
 Wat betreft schaalbaarheid, de essentie van Git is dat het een gedistribueerd,
 gedecentraliseerd systeem is. Daarmee is Git zelf (de core van Git-forges) als
-het ware van nature schaalbaar. Dat geldt niet perse voor de aanvullende
+het ware van nature schaalbaar. Dat geldt niet per se voor de aanvullende
 functionaliteit van de Git-forges. Ik weet te weinig van Forgejo om sterke
 uitspraken over de schaalbaarheid te kunnen doen. Ik vermoed dat Forgejo op dit
 moment schaalbaar genoeg is voor de opensource projecten van de overheid.
