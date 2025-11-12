@@ -105,6 +105,5 @@ Heb jij in jouw organisatie ook ervaring met een eilandjescultuur, hebben jullie
 manieren gevonden om dit aan te pakken? We horen graag jullie inzichten.
 
 <!-- prettier-ignore -->
-:::note[Dit artikel verscheen eerder op
-[opensourcewerken.nl](https://opensourcewerken.nl/blog/view/588d9a2e-1fba-4b85-b612-59268237c570/5-nadelen-van-eilandjesvorming-en-3-tips-van-developer-overheid)]
+:::note[Dit artikel verscheen eerder op [opensourcewerken.nl](https://opensourcewerken.nl/blog/view/588d9a2e-1fba-4b85-b612-59268237c570/5-nadelen-van-eilandjesvorming-en-3-tips-van-developer-overheid)]
 :::

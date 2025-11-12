@@ -50,6 +50,5 @@ wilt delen? Neem dan contact met ons op:
 [https://digilab.overheid.nl/contact/](https://digilab.overheid.nl/contact/)
 
 <!-- prettier-ignore -->
-:::note[Dit artikel verscheen eerder op
-[digilab.overheid.nl](https://digilab.overheid.nl/blog/haven-en-infra-as-code-samen-naar-een-digitale-standaard-voor-de-publieke-sector/)]
+:::note[Dit artikel verscheen eerder op [digilab.overheid.nl](https://digilab.overheid.nl/blog/haven-en-infra-as-code-samen-naar-een-digitale-standaard-voor-de-publieke-sector/)]
 :::

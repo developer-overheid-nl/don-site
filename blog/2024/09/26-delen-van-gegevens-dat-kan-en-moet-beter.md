@@ -63,5 +63,4 @@ Meld je aan
 
 <!-- prettier-ignore -->
 :::note[Dit artikel verscheen eerder op [digilab.overheid.nl](https://digilab.overheid.nl/blog/delen-van-gegevens-dat-kan-en-moet-beter/)]
-
 :::
