@@ -2,13 +2,16 @@
 tags:
   - "api"
   - "json"
+sidebar_position: 0
 ---
 
 # Foutmeldingen met Problem Details
 
-:::info[TL;DR] Problem JSON (`application/problem+json`) is een krachtige
-standaard voor het verbeteren van de foutafhandeling in API's en het bieden van
-een betere ervaring voor zowel developers als eindgebruikers.
+:::info[TL;DR]
+
+Problem JSON (`application/problem+json`) is een krachtige standaard voor het
+verbeteren van de foutafhandeling in API's en het bieden van een betere ervaring
+voor zowel developers als eindgebruikers.
 
 - Consistentie: Alle foutmeldingen volgen hetzelfde formaat.
 - Uitbreidbaarheid: Je kunt eenvoudig extra velden toevoegen voor specifieke
