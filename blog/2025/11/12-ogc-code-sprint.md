@@ -28,8 +28,6 @@ officieel goedgekeurd. Op basis van de feedback van ontwikkelaars kunnen OGC
 standaarden-experts meteen de standaarden verbeteren en aanvullen. Zo wordt het
 ontwikkelen van standaarden net iets meer agile.
 
-![Deelnemers aan het werk](./img/codesprint-2.JPG) _Deelnemers aan het werk_
-
 <!-- truncate -->
 
 Geonovum en de gemeente Rotterdam hebben de OGC code sprint naar Nederland
@@ -44,6 +42,8 @@ meteen hulp bij krijgen. Vaak leidt dit ook meteen tot een oplossing in de
 standaard zelf. Ook ideeën voor improvements op standaarden worden vaak geboren
 tijdens OGC code sprints en daarna doorontwikkeld tot een nieuwe uitbreiding van
 een van de OGC standaarden.
+
+![Deelnemers aan het werk](./img/codesprint-2.JPG) _Deelnemers aan het werk_
 
 Geonovum is al vaker naar OGC code sprints toegeweest, daar is onder andere de
 [OGC Checker](https://github.com/Geonovum/ogc-checker/) uit geboren, een linter
