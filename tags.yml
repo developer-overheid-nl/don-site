@@ -84,8 +84,7 @@ devops:
     softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen.
   label: DevOps
 digid:
-  description:
-    Met uw DigiD laat u zien wie u bent als u op internet iets regelt.
+  description: Met uw DigiD laat u zien wie u bent als u op internet iets regelt.
   label: DigiD
 digikoppeling:
   label: Digikoppeling
@@ -128,8 +127,7 @@ eudi:
 edi:
   label: Europese Digitale Identiteit (EDI)
 fds:
-  description:
-    "Het FDS is een vertrouwensraamwerk met afspraken, standaarden,
+  description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden,
     voorzieningen en  stelselfuncties. \_"
   label: Federatief Data Stelsel
 fieldlab:
@@ -142,6 +140,9 @@ flux:
   label: Flux
 forum-standaardisatie:
   label: Forum Standaardisatie
+formatting:
+  description: Formatting is het automatisch opmaken van code volgens afgesproken stijlregels
+  label: Formatting
 foss:
   description: Free and Open Source Software
   label: FOSS
@@ -224,9 +225,11 @@ license:
   label: License
 linked-data:
   label: Linked Data
+linting:
+  description: Linting is het automatisch analyseren van code op programmeer- en stijlfouten
+  label: Linting
 llm:
-  description:
-    Large Language Models zijn generatieve AI die natuurlijke of niet
+  description: Large Language Models zijn generatieve AI die natuurlijke of niet
     natuurlijke (programmeer) taal kunnen genereren
   label: Large Language Model
 logging:
@@ -246,8 +249,7 @@ mtls:
   description: Mutual TLS
 nds:
   label: Nederlandse Digitaliseringsstrategie
-  description:
-    De NDS is één van de pijlers van het kabinetsbeleid op digitalisering.
+  description: De NDS is één van de pijlers van het kabinetsbeleid op digitalisering.
 nl-design-system:
   label: NL Design System
 nodejs:
@@ -266,8 +268,7 @@ nvm:
 oas:
   label: OpenAPI Specification
 oauth:
-  description:
-    OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
+  description: OAuth 2.0 (Open Authorization) is een open standaard voor autorisatie
   label: OAuth 2.0
 odata:
   label: OData
@@ -334,8 +335,7 @@ rust:
   description: Rust
   label: Rust
 saml:
-  description:
-    SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
+  description: SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
   label: SAML
 security:
   label: Security
@@ -386,8 +386,7 @@ wcag:
 webhooks:
   label: Webhooks
 websub:
-  description:
-    Websub is een W3C standaard voor het maken van abonnementen op
+  description: Websub is een W3C standaard voor het maken van abonnementen op
     (veranderingen) in resources op het web
   label: Websub
 yaml:
