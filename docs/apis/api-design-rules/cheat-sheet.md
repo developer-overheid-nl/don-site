@@ -91,7 +91,8 @@ Voorbeeld van een geldig `info.servers` object:
 
 - Gebruik `application/json` voor response bodies.
 - Gebruik `lowerCamelCase` voor properties, bijvoorbeeld `organisatieNaam`.
-- Gebruik [Problem Details](../problem-details) voor foutmeldingen.
+- Gebruik [Problem Details](../gedrag-en-implementatie/problem-details) voor
+  foutmeldingen.
 
 ## HTTP methods
 
