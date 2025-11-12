@@ -11,11 +11,16 @@ tags:
     gitlab,
     forgejo,
   ]
+description: |
+  De Nederlandse overheid publiceert een deel van haar broncode als vrije
+  opensource software. Om software te beheren is een versiebeheersysteem nodig.
+  Hiermee kun je veranderingen in de broncode traceren en beheren. Een
+  versiebeheersysteem faciliteert ook het samenwerken tussen verschillende
+  software-ontwikkelaars. Een gedistribueerd versiebeheersysteem maakt het
+  mogelijk dat ontwikkelaars op verschillende locaties toch kunnen samenwerken
+  aan één softwareproduct. Het _de facto_ versiebeheersysteem voor software is
+  Git.
 ---
-
-import { Link, Icon, Alert, Heading } from
-"@rijkshuisstijl-community/components-react"; import Author from
-'@theme/Blog/Components/Author';
 
 # Aanbeveling voor de Git-werkplaats van de overheid
 
