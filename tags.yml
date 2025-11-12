@@ -214,9 +214,9 @@ kubernetes:
   label: Kubernetes
 ldv:
   description:
-    Logboek Data Verwerkingen is een standaard die beschrijft hoe je logging kan
+    Logboek Dataverwerkingen is een standaard die beschrijft hoe je logging kan
     vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen
-  label: Logboek Data Verwerkingen
+  label: Logboek Dataverwerkingen
 leaflet:
   description: Leaflet JavaScript library voor interactieve kaarten
   label: Leaflet
