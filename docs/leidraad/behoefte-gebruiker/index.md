@@ -16,6 +16,12 @@ project.
 - Een team dat werkt aan software met daadwerkelijke maatschappelijke waarde
   voor burgers, ervaart meer zingeving.
 
+## Niet-functionele eisen identificeren
+
+Om vast te leggen welke niet-functionele eigenschappen je software moet hebben, identificeer je de niet-functionele eisen van de gebruikers.
+
+- [Richtlijn niet-functionele eisen identificeren](richtlijn-niet-functionele-eisen-identificeren.md).
+
 ## User stories
 
 Om op gestandaardiseerde wijze vast te leggen wat je software precies moet
