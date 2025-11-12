@@ -66,6 +66,6 @@ _Nieuwsgierig naar de resultaten, of wil je gewoon meer weten over Digilab? Neem
 [contact](https://digilab.overheid.nl/contact/) op of log met je Pleio-account
 in bij onze [online community](https://digilab.overheid.nl/chat/)._
 
-:::note[Dit artikel verscheen eerder op
-[digilab.overheid.nl](https://digilab.overheid.nl/blog/fieldlab-samen-naar-een-nieuwe-architectuur/)]
+<!-- prettier-ignore -->
+:::note[Dit artikel verscheen eerder op [digilab.overheid.nl](https://digilab.overheid.nl/blog/fieldlab-samen-naar-een-nieuwe-architectuur/)]
 :::

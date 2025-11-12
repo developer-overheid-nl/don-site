@@ -6,10 +6,14 @@ tags:
 
 # OAS Generator
 
-:::info Deze tool is enkel bedoeld om je op weg te helpen met het API design,
-inclusief herbruikbare componenten en best practices van de
+:::info
+
+Deze tool is enkel bedoeld om je op weg te helpen met het API design, inclusief
+herbruikbare componenten en best practices van de
 [API Design Rules](../api-design-rules). Eventuele ontbrekende of foutieve
-gegevens dienen handmatig toegevoegd of gewijzigd te worden. :::
+gegevens dienen handmatig toegevoegd of gewijzigd te worden.
+
+:::
 
 De [OAS Generator](https://developer-overheid-nl.github.io/oas-generator)
 genereert een OAS _boilerplate_ op basis van minimale configuratie. Het
