@@ -69,6 +69,10 @@ gestandaardiseerde manier informatie aan te bieden over een Open Source project.
 
 - [Over de publiccode.yml standaard](/kennisbank/open-source/standaarden/publiccode-yml)
 
+## Onboarding nieuwe developers
+
+
+
 ## Communities
 
 - [Code for NL](/communities/code-for-nl)
