@@ -19,6 +19,8 @@ komen zijn:
   een linkje naar de `contributing.md` in het project.
 - **Licentieinformatie**: onder welke licentie is het project uitgebracht en
   welke consequenties heeft dit voor de mogelijkheden van eventueel gebruik?
+- **Links**: links naar belangrijke informatie zoals gebruikersdocumentatie,
+  technische documentatie en pipelines.
 
 ## Example
 
