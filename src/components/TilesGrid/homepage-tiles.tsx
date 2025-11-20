@@ -105,29 +105,24 @@ const tiles: GridTile[] = [
     icon: <IconCybersecurity />,
     title: "Authenticatie en autorisatie",
     description: [
-      { link: "/kennisbank/security/standaarden/digid", label: "DigiD" },
+      { link: "/kennisbank/auth/standaarden/digid", label: "DigiD" },
       {
-        link: "/kennisbank/security/standaarden/eherkenning",
+        link: "/kennisbank/auth/standaarden/eherkenning",
         label: "eHerkenning",
       },
-      { link: "/kennisbank/security/standaarden/eidas", label: "eIDAS" },
-      { link: "/kennisbank/security/standaarden/oauth", label: "OAuth 2.0" },
+      { link: "/kennisbank/auth/standaarden/eidas", label: "eIDAS" },
+      { link: "/kennisbank/auth/standaarden/oauth", label: "OAuth 2.0" },
       {
-        link: "/kennisbank/security/standaarden/pkioverheid",
+        link: "/kennisbank/auth/standaarden/pkioverheid",
         label: "PKIoverheid",
       },
-      { link: "/kennisbank/security/standaarden/saml", label: "SAML" },
+      { link: "/kennisbank/auth/standaarden/saml", label: "SAML" },
       {
-        link: "/kennisbank/security/standaarden/oidc",
+        link: "/kennisbank/auth/standaarden/oidc",
         label: "OpenID Connect (OIDC)",
       },
-      {
-        link: "/kennisbank/security/standaarden/bio",
-        label: "Baseline Informatiebeveiliging Overheid (BIO)",
-      },
-      { link: "/kennisbank/security/standaarden/nis2", label: "NIS2" },
     ],
-    link: "/kennisbank/security/standaarden/",
+    link: "/kennisbank/auth/",
   },
   {
     icon: <IconDocumentMetGolvendeLijnenEnLint />,

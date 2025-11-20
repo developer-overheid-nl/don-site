@@ -92,8 +92,8 @@ specification/OAS) uitbreiden voor dit discovery-proces. De komende tijd zal de
 SWG inventariseren welke best practices al beschikbaar zijn bij onder andere de
 IETF en sectoren als Defensie, Zorg en Financiën. Er wordt daarbij gekeken of de
 well-known text aanpak zoals die er is voor mechanismen als
-[OAuth](/kennisbank/security/standaarden/oauth) en
-[OpenIDconnect](/kennisbank/security/standaarden/oidc) kunnen worden hergebruikt
+[OAuth](/kennisbank/auth/standaarden/oauth) en
+[OpenIDconnect](/kennisbank/auth/standaarden/oidc) kunnen worden hergebruikt
 daar waar de mogelijkheden van OAS alleen te beperkt zijn.
 
 ## Notificaties voor geo informatie

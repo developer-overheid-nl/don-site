@@ -228,6 +228,7 @@ const config: Config = {
             { label: "API's", to: "/kennisbank/apis" },
             { label: "Front-end", to: "/kennisbank/front-end" },
             { label: "Data", to: "/kennisbank/data" },
+            { label: "Authenticatie en autorisatie", to: "/kennisbank/auth" },
             { label: "Open Source", to: "/kennisbank/open-source" },
             { label: "Infrastructuur", to: "/kennisbank/infra" },
             { label: "Security", to: "/kennisbank/security" },

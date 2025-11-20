@@ -167,8 +167,8 @@ OAS 3.0 ondersteunt de beschrijving van de volgende security schemes:
 
 - HTTP Authentication
 - API Keys
-- [OAuth 2.0](https://developer.overheid.nl/kennisbank/security/standaarden/oauth)
-- [OpenID Connect](https://developer.overheid.nl/kennisbank/security/standaarden/oidc)
+- [OAuth 2.0](https://developer.overheid.nl/kennisbank/auth/standaarden/oauth)
+- [OpenID Connect](https://developer.overheid.nl/kennisbank/auth/standaarden/oidc)
 
 Wat ontbrak was Mutual TLS (mTLS): authenticatie op basis van certificaten,
 zoals bij
