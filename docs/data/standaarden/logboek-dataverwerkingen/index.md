@@ -50,7 +50,7 @@ Deze documenten zijn te vinden via [Github](https://github.com/Logius-standaarde
 ## Referentie implementatie
 
 Er is een referentie implementatie beschikbaar die de samenwerking van verscheidene prototype overheidsapplicaties laat zien.
-De code is beschikbaar op [in de organisatie van Digilab op GitLab](https://gitlab.com/digilab.overheid.nl/ecosystem/logboek-dataverwerkingen/ldv-referentie-implementatie).
+De code is beschikbaar [bij Digilab op GitLab](https://gitlab.com/digilab.overheid.nl/ecosystem/logboek-dataverwerkingen/ldv-referentie-implementatie).
 Er zijn instructies toegevoegd hoe de applicatie lokaal te draaien is, alsmede een test omgeving die draait op de Digilab infrastructuur.
 Tevens is de code zelf veelvuldig beschreven met code comments en extra informatie + verwijzingen naar de standaard.
 

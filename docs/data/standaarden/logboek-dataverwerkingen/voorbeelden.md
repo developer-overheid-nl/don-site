@@ -28,7 +28,31 @@ Een persoon heeft bij een gemeente een parkeervergunning in gebruik en wil de da
 
 Schematisch ziet dit proces er als volgt uit:
 
-<img src="/img/logboek-dataverwerkingen/parkeervergunning-inzien.svg" alt="Schematische weergave parkeervergunning inzien" />
+```mermaid
+sequenceDiagram
+    box ivory Burger
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant MO as MijnOmgeving
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory Vergunningsoftware BV
+      participant V as Parkeeradmin
+      participant L2 as Log Vergunning
+    end 
+
+    rect lavender
+    B->>+MO: tonenVergunningenVraag
+    MO->>V: opvragenVergunningenVraag
+    V-->>MO: opvragenVergunningenAntwoord
+    V->>L2: Log gegevensverwerking (opvragenVergunningen)
+    MO-->>B: tonenVergunningenAntwoord
+    MO->>L1: Log gegevensverwerking (tonenVergunningen)
+    end
+```
 
 ### Logging van data
 
@@ -76,7 +100,7 @@ De volgende data worden gelogd in de diverse logmomenten:
 Om uiteindelijk alle data te kunnen rapporteren, is het van belang dat data op een bepaalde manier aan elkaar gekoppeld is.
 In dit voorbeeld is de data op de volgende manier gekoppeld:
 
-![Alt text](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-parkeervergunning-inzien.png)
+![Relatie tussen gegevens parkeervergunning inzien](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-parkeervergunning-inzien.png)
 
 ### Relatie met de standaard Logboek dataverwerkingen
 
@@ -125,7 +149,58 @@ Een persoon heeft bij een gemeente een parkeervergunning in gebruik en wil de da
 
 Schematisch ziet dit proces er als volgt uit:
 
-<img src="/img/logboek-dataverwerkingen/parkeervergunning-wijzigen.svg" alt="Schematische weergave parkeervergunning wijzigen" />
+```mermaid
+sequenceDiagram
+    box ivory Burger
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant MO as MijnOmgeving
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory Vergunningsoftware BV
+      participant V as Parkeeradmin
+      participant L2 as Log Vergunning
+    end 
+
+    box ivory RDW
+      participant BR as BRV
+      participant L3 as Log BRV
+    end 
+
+    rect lavender
+    B->>+MO: tonenVergunningenVraag
+    MO->>V: opvragenVergunningenVraag
+    V-->>MO: opvragenVergunningenAntwoord
+    V->>L2: Log gegevensverwerking (opvragenVergunningen)
+    MO-->>B: tonenVergunningenAntwoord
+    MO->>L1: Log gegevensverwerking (tonenVergunningen)
+    end
+
+    rect lavender
+    B->>+MO: wijzigenKentekenVraag
+    MO->>V: wijzigenKentekenVraag
+    V->>BR: controlerenKentekenVraag
+    BR-->>V: controlerenKentekenAntwoord
+    BR->>L3: Log gegevensverwerking (controlerenKenteken)
+    V->>L2: Log gegevensverwerking (controlerenKenteken)
+    V->>V: wijzigenKenteken
+    V-->>MO: wijzigenKentekenAntwoord
+    V->>L2: Log gegevensverwerking (wijzigenKenteken)
+    MO->>L1: Log gegevensverwerking (wijzigenKenteken)
+    end
+
+    rect lavender
+    B->>+MO: tonenVergunningenVraag
+    MO->>V: opvragenVergunningenVraag
+    V-->>MO: opvragenVergunningenAntwoord
+    V->>L2: Log gegevensverwerking (opvragenVergunningen)
+    MO-->>B: tonenVergunningenAntwoord
+    MO->>L1: Log gegevensverwerking (tonenVergunningen)
+    end
+```
 
 ### Logging van data
 
@@ -286,7 +361,7 @@ De volgende data worden gelogd in de diverse logmomenten:
 Om uiteindelijk alle data te kunnen rapporteren, is het van belang dat data op een bepaalde manier aan elkaar gekoppeld is.
 In dit voorbeeld zijn de data op de volgende manier gekoppeld:
 
-![Alt text](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-parkeervergunning-wijzigen.png)
+![Relatie tussen gegevens parkeervergunning wijzigen](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-parkeervergunning-wijzigen.png)
 
 ### Relatie met de standaard Logboek Dataverwerkingen
 
@@ -336,7 +411,49 @@ Schematisch ziet dit proces er als volgt uit:
 
 Schematisch ziet dit proces er als volgt uit:
 
-<img src="/img/logboek-dataverwerkingen/verhuizing-eenvoudig.svg" alt="Schematische weergave verhuizing" />
+```mermaid
+sequenceDiagram
+    box ivory Baliemedewerker
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant BA as Balieapplicatie
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory BRP Registratie
+      participant BR as BRP
+      participant L2 as Log BRP
+    end 
+
+    rect lavender
+    B->>+BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Log gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Log gegevensverwerking (tonenNAWGegegevens)
+    end
+
+    rect lavender
+    B->>BA: wijzigenNAWGegevensVraag
+    BA->>BR : wijzigenPersoonsgegevensVraag
+    BR-->>BR : wijzigenPersoonsgegevens
+    BR-->>BA: wijzigenPersoonsgegevensAntwoord
+    BR->>L2: Loggen verwerking (wijzigenPersoonsgegevens)
+    BA->>L1: Loggen verwerking (wijzigenPersoonsgegevens)
+    end
+
+    rect lavender
+    B->>BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Loggen gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Loggen gegevensverwerking (tonenNAWGegevens)
+    end
+```
 
 ### Logging van data
 
@@ -460,7 +577,7 @@ De volgende data worden gelogd in de diverse logmomenten:
 Om uiteindelijk alle data te kunnen rapporteren, is het van belang dat data op een bepaalde manier aan elkaar gekoppeld zijn.
 In dit voorbeeld is de data op de volgende manier gekoppeld:
 
-![Alt text](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-registratie-verhuizing-eenvoudig.png)
+![Relatie tussen gegevens registratie verhuizing](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-registratie-verhuizing-eenvoudig.png)
 
 ### Relatie met de standaard Logboek dataverwerkingen
 
@@ -502,7 +619,31 @@ Schematisch ziet dit proces er als volgt uit:
 
 Schematisch ziet dit proces er als volgt uit:
 
-<img src="/img/logboek-dataverwerkingen/verhuizing-registratie.svg" alt="Schematische weergave verhuizing registeren" />
+```mermaid
+sequenceDiagram
+    box ivory Baliemedewerker
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant BA as Balieapplicatie
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory BRP Registratie
+      participant BR as BRP
+      participant L2 as Log BRP
+    end 
+
+    rect lavender
+    B->>+BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Log gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Log gegevensverwerking (tonenNAWGegegevens)
+    end
+```
 
 ### Logging van data
 
@@ -599,7 +740,7 @@ De volgende data worden gelogd in de diverse logmomenten:
 Om uiteindelijk alle data te kunnen rapporteren, is het van belang dat data op een bepaalde manier aan elkaar gekoppeld zijn.
 In dit voorbeeld zijn de data op de volgende manier gekoppeld:
 
-![Alt text](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-registratie-verhuizing.png)
+![Relatie tussen gegevens registratie verhuizing](/img/logboek-dataverwerkingen/relatie-tussen-gegevens-registratie-verhuizing.png)
 
 ### Relatie met de standaard Logboek dataverwerkingen
 
