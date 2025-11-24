@@ -55,6 +55,15 @@ veiligheid. Het verwerken van de business-operatie en het opslaan van de
 transactie plaatsvinden. Zonder deze garantie kan een race condition optreden,
 waarbij een operatie onterecht twee keer wordt uitgevoerd.
 
+## Levensduur van de key
+
+De server bewaart de `Idempotency-Key` en de bijbehorende response voor een
+bepaalde tijd om de garantie te kunnen bieden. De bewaartermijn is afhankelijk
+van het verwachte retry-patroon van clients, waarbij 24 uur een gangbare keuze
+is. De gekozen termijn moet door de API-provider worden gedocumenteerd. Na het
+verlopen van de termijn behandelt de server een request met dezelfde key als een
+nieuwe operatie.
+
 ## Voorbeeld in OpenAPI
 
 ```yaml
@@ -66,7 +75,9 @@ paths:
         - name: Idempotency-Key
           in: header
           required: true
-          description: Een unieke sleutel om de idempotent-garantie te bieden.
+          description:
+            Een unieke sleutel om de idempotent-garantie te bieden. De server
+            bewaart deze sleutel 24 uur.
           schema:
             type: string
             format: uuid
