@@ -1,17 +1,20 @@
 # Veilige retries met volledige idempotency
 
-Het kan gebeuren dat een schrijfoperatie om welke reden dan ook niet slaagt. In
-dat geval is het sterk aanbevolen om een client opnieuw te laten proberen. Een
-ongewenst effect is dat er door het opnieuw proberen meer wijzigingen worden
-doorgevoerd dan de bedoeling was. Om dit te voorkomen is het van belang dat alle
-API-operaties die data wijzigen volledig
+Bij een schrijfoperatie kan het voor een client onduidelijk zijn of deze is
+geslaagd, bijvoorbeeld door een netwerkfout. In dat geval zal de client de
+operatie opnieuw proberen. Een ongewenst effect is dat er door het opnieuw
+proberen meer wijzigingen worden doorgevoerd dan de bedoeling was. Om dit te
+voorkomen is het van belang dat alle API-operaties die data wijzigen volledig
 [_idempotent_](https://en.wikipedia.org/wiki/Idempotence) zijn.
 
 Een operatie is _idempotent_ als het herhalen ervan geen extra effect heeft op
-de toestand van de server. Volgens de HTTP-specificatie zijn `GET`, `PUT` en
-`DELETE` al idempotent, maar `POST` en `PATCH` zijn dat van nature niet. Voor
-deze operaties kan idempotent gedrag worden afgedwongen door een
-`Idempotency-Key` header toe te voegen.
+de toestand van de server. `GET`, `PUT` en `DELETE` zijn volgens de
+HTTP-specificatie idempotent. Een herhaalde `DELETE /items/2` zal bijvoorbeeld
+de tweede keer een `404` geven, maar de toestand van de server blijft
+consistent. `POST` en `PATCH` zijn dit van nature niet: een herhaalde
+`POST /items` zou een duplicaat item aanmaken. Voor deze operaties kan
+idempotent gedrag worden afgedwongen door een `Idempotency-Key` header toe te
+voegen.
 
 | HTTP Verb | Idempotency mechanisme                                                                       |
 | --------- | -------------------------------------------------------------------------------------------- |
