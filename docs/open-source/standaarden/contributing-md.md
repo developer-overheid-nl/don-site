@@ -382,14 +382,10 @@ CONDUCT) !
 </details>
 
 <details>
-  <summary>Voorbeeld: de `CONTRIBUTING.md` van [developer.overheid.nl](https://github.com/developer-overheid-nl/don-site/blob/main/src/pages/contributing.md):</summary>
+  <summary>Voorbeeld: de `CONTRIBUTING.md` van developer.overheid.nl:</summary>
 
 ```markdown showLineNumbers title="./CONTRIBUTING.md"
 # Bijdragerichtlijnen
-
-:::info[Naar het artikel over CONTRIBUTING.md] Raadpleeg
-[ons artikel over CONTRIBUTING.md](https://developer.overheid.nl/kennisbank/leidraad/open-source/standaarden/contributing-md)
-voor meer info over het zelf opstellen van bijdragerichtlijnen. :::
 
 ## Introductie
 
