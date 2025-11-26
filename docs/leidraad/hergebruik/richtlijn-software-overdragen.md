@@ -31,7 +31,7 @@ Om te zorgen dat de software ook na overdracht van de ene naar de andere partij
 efficiënt en effectief kan worden onderhouden en doorontwikkeld is het
 belangrijk dat de kwaliteit van de broncode, documentatie en testmiddelen goed
 is. Daarnaast is het belangrijk dat er voldoende tijd is voor het overdragen van
-kennis ondat het vaak moeilijk is alle relevante kennis van software in
+kennis omdat het vaak moeilijk is alle relevante kennis van software in
 documentatie te vangen.
 
 ## Doelgroep: Wie zijn er betrokken bij het overdragen van software?
