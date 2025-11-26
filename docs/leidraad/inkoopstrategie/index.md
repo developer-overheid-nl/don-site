@@ -1,42 +1,113 @@
 ---
-title: "12. Bepaal je inkoopstrategie"
+title: 12. Bepaal je inkoopstrategie
 sidebar_position: 12
 ---
+
+# Richtlijn: Bepaal je inkoopstrategie
 
 Je inkoopstrategie moet aantonen dat je zowel commerciële als technologische
 aspecten en contractuele beperkingen hebt overwogen.
 
-## Belangrijke redenen
+## Rationale: Waarom een goede inkoopstrategie?
 
-- **Vind de beste leverancier** - Wanneer je kwaliteitseisen vastlegt in een
-  aanbesteding voorkom je verrassingen bij de leverancier in kwestie.
-- **Neem waarden op in de aanbesteding** - Alle waarden die worden omschreven in
-  deze leidraad, zoals transparantie en hergebruik, dienen hun weerslag te
-  vinden in overheidsaanbestedingen. Zo worden veelgemaakte fouten voorkomen.
+Door kwaliteitseisen vast te leggen in een aanbesteding voorkom je verrassingen
+bij de leverancier. Een heldere inkoopstrategie zorgt dat je de beste
+leverancier vindt die past bij je behoeften en eisen.
 
-## Open source standaardsoftware aanbesteden
+Alle waarden die worden omschreven in deze leidraad, zoals transparantie en
+hergebruik, dienen hun weerslag te vinden in overheidsaanbestedingen. Door deze
+principes in de aanbesteding op te nemen, worden veelgemaakte fouten voorkomen
+en wordt gezorgd dat leveranciers aansluiten bij de visie van de overheid op
+softwareontwikkeling.
 
-Het Ministerie van VWS biedt een [gereedschapskist voor het aanbesteden van open
-source standaardsoftware](https://minvws.opensourcewerken.nl/open-source-gereedschapskist-voor-het-aanbesteden-van-standaardsoftware/). De
-gereedschapskist laat zien hoe je zorgt dat open source oplossingen in je
-aanbesteding een gelijke kans krijgen en je tegelijkertijd innovatie,
-flexibiliteit en maatschappelijke waarde bevordert.
+Door open source standaardsoftware gelijke kansen te geven in aanbestedingen,
+bevorder je innovatie, flexibiliteit en maatschappelijke waarde.
 
-## Communities
+## Doelgroep: Wie zijn er betrokken bij de inkoopstrategie?
 
-### PIANOo, Expertisecentrum Aanbesteden van het ministerie van Economische Zaken
+De volgende doelgroepen kunnen met de inkoopstrategie aan de slag:
+inkoopadviseurs, contractmanagers, architects, product owners en security
+officers.
 
-PIANOo, Expertisecentrum Aanbesteden van het ministerie van Economische Zaken
-heeft als taak het inkopen en aanbesteden bij overheden te professionaliseren.
-Met oog voor rechtmatigheid én doelmatigheid. Professionele inkoop levert een
-bijdrage aan uw beleid en biedt value for tax payers money.
+Inkoopadviseurs en contractmanagers stellen de aanbestedingsdocumenten op en
+zorgen dat alle relevante eisen zijn opgenomen. Architecten adviseren over
+technische eisen en architectuurprincipes. Product owners zorgen dat functionele
+eisen goed beschreven zijn. Security officers zorgen dat beveiligingseisen zijn
+opgenomen.
 
-Direct naar [**pianoo.nl**](https://www.pianoo.nl/nl).
+## Implementatie: Hoe bepaal je je inkoopstrategie?
 
-### Opensourcewerken.nl
+### Methoden en technieken
 
+#### Open source gereedschapskist gebruiken
+
+Het Ministerie van VWS biedt een gereedschapskist voor het aanbesteden van open
+source standaardsoftware. Deze laat zien hoe je zorgt dat open source
+oplossingen in je aanbesteding een gelijke kans krijgen.
+
+#### Transparantie- en hergebruikseisen opnemen
+
+Neem in de aanbesteding expliciet eisen op over open source, hergebruik, open
+standaarden en transparantie. Dit zorgt dat leveranciers vanaf het begin
+rekening houden met deze principes.
+
+### Tools
+
+#### Aanbestedingsplatformen
+
+Voor het publiceren en beheren van aanbestedingen gebruik je platforms zoals
+TenderNed of andere Europese aanbestedingsplatformen.
+
+### Gerelateerde richtlijnen
+
+Nog geen.
+
+### Succescriteria
+
+Wanneer voldoe je aan deze richtlijn?
+
+- Je aanbestedingsdocumenten bevatten heldere technische en functionele eisen.
+- Je hebt principes als transparantie, hergebruik en open standaarden opgenomen
+  in de aanbesteding.
+- Je geeft open source oplossingen gelijke kansen in de gunningscriteria.
+
+Wanneer ben je echt goed bezig?
+
+- Je gebruikt de open source gereedschapskist bij elke relevante aanbesteding.
+- Je meet na gunning of de gekozen leverancier voldoet aan de gestelde eisen
+  rondom openheid en hergebruik.
+- Je deelt je aanbestedingsdocumenten met andere overheidsorganisaties voor
+  hergebruik.
+
+## Wanneer is deze richtlijn van toepassing?
+
+Deze richtlijn is van toepassing wanneer je software, IT-diensten of
+IT-gerelateerde producten inkoopt via een aanbestedingsprocedure.
+
+## Bronnen
+
+### Wet- en regelgeving
+
+- Aanbestedingswet
+
+### Beleid
+
+Geen bekend.
+
+### Standaarden
+
+Geen bekend.
+
+### Communities
+
+- [PIANOo, Expertisecentrum Aanbesteden](https://www.pianoo.nl/nl)
 - [Open Source Werken](/communities/open-source-werken)
 
-<!-- ## Bronnen
+### Literatuur
 
-- [Open source ambitieladder in maatwerk aanbesteding of opdracht (Min-VWS)](https://minvws.github.io/beleidsontwikkeling/ambitieladder/#voordelen-van-opensourcewerken) -->
+Geen bekend.
+
+### Bronnen op developer.overheid.nl
+
+- [Gereedschapskist voor het aanbesteden van open source standaardsoftware](https://minvws.opensourcewerken.nl/open-source-gereedschapskist-voor-het-aanbesteden-van-standaardsoftware/)
+  (Ministerie van VWS)

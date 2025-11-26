@@ -1,5 +1,5 @@
 ---
-title: "Verwerken van het burgerservicenummer"
+title: "7.1 Verwerken van het burgerservicenummer"
 tags: ["privacy"]
 ---
 

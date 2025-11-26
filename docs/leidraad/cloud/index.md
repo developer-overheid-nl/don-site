@@ -1,15 +1,17 @@
 ---
-title: "5. Cloud-native softwareontwikkeling"
+title: 5. Cloud-native softwareontwikkeling
 sidebar_position: 5
 tags: ["devops", "kubernetes", "msa"]
 ---
+
+# Richtlijn: Cloud-native softwareontwikkeling
 
 Binnen de overheid wordt steeds vaker gesproken over digitale soevereiniteit,
 wat verwijst naar de controle over digitale infrastructuren en data. Wanneer
 applicaties en de onderliggende infrastructuur goed zijn opgezet, wordt het
 eenvoudiger om services te verplaatsen of nieuwe diensten toe te voegen.
 
-## Belangrijke redenen
+## Rationale: Waarom cloud-native softwareontwikkeling?
 
 - **Schaalbaarheid** - Overheidssoftware moet vaak kunnen omgaan met fluctuaties
   in gebruik, zoals pieken in het aantal gebruikers tijdens belastingaangiftes
@@ -29,14 +31,93 @@ eenvoudiger om services te verplaatsen of nieuwe diensten toe te voegen.
 - **Betrouwbaarheid** - Betere beschikbaarheid van services. Gecontroleerde en
   gestandaardiseerde deploymentprocessen.
 
-## Communities
+## Doelgroep: Wie zijn er betrokken bij cloud-native softwareontwikkeling?
 
-- [Commom Ground](/communities/common-ground)
+De volgende doelgroepen kunnen met cloud-native aan de slag: developers, DevOps
+engineers, platform engineers, architects en security officers.
+
+Developers bouwen applicaties volgens cloud-native principes zoals twelve-factor
+app. DevOps engineers richten CI/CD pipelines in en automatiseren deployment.
+Platform engineers bouwen en beheren het onderliggende platform (zoals
+Kubernetes). Architects ontwerpen de cloud-native architectuur. Security
+officers zorgen dat beveiligingsmaatregelen zijn geïntegreerd in de cloud-native
+omgeving.
+
+## Implementatie: Hoe implementeer je cloud-native softwareontwikkeling?
+
+### Methoden en technieken
+
+#### Containerisatie
+
+Verpak je applicaties in containers (bijvoorbeeld Docker) zodat ze consistent
+draaien op verschillende omgevingen. Containers zorgen voor betere isolatie en
+resource-efficiëntie.
+
+#### Infrastructure as Code
+
+Beheer je infrastructuur met code (bijvoorbeeld Terraform, Ansible) zodat deze
+reproduceerbaar en versioneerbaar is.
+
+### Tools
+
+#### Container orchestratie
+
+Voor het beheren van containers in productie gebruik je orchestratie platforms
+zoals Kubernetes, Docker Swarm of cloud-native oplossingen.
+
+#### CI/CD platforms
+
+Voor continue integratie en deployment gebruik je platforms zoals GitLab CI,
+GitHub Actions, Jenkins of Azure DevOps.
+
+### Gerelateerde richtlijnen
+
+Nog geen.
+
+### Succescriteria
+
+Wanneer voldoe je aan deze richtlijn?
+
+- Je applicaties zijn gecontaineriseerd en draaien op een container orchestratie
+  platform.
+- Je hebt geautomatiseerde CI/CD pipelines.
+
+Wanneer ben je echt goed bezig?
+
+- Je gebruikt Infrastructure as Code voor het beheren van je infrastructuur.
+- Je hebt monitoring en observability geïmplementeerd voor je cloud-native
+  applicaties.
+- Je past chaos engineering toe om de veerkracht van je systeem te testen.
+
+## Wanneer is deze richtlijn van toepassing?
+
+Deze richtlijn is met name van toepassing bij nieuwe applicaties of bij
+modernisering van bestaande applicaties. Het is vooral relevant wanneer
+schaalbaarheid, flexibiliteit en onafhankelijkheid belangrijke eisen zijn.
 
 ## Bronnen
 
+### Wet- en regelgeving
+
+Geen bekend.
+
+### Beleid
+
+Geen bekend.
+
+### Standaarden
+
+Geen bekend.
+
+### Communities
+
+- [Common Ground](/communities/common-ground)
 - [Haven](https://haven.commonground.nl/)
 
-<!-- ## Standaarden
+### Literatuur
 
-- [Haven](/infra/standaarden/haven) -->
+Geen bekend.
+
+### Bronnen op developer.overheid.nl
+
+Geen bekend.

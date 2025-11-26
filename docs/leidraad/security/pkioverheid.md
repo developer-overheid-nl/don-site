@@ -1,6 +1,7 @@
 ---
-title: "Gebruik van PKIoverheid-certificaten"
+title: "6.2 Gebruik van PKIoverheid-certificaten"
 tags: ["security"]
+sidebar_position: 2
 ---
 
 # Richtlijn: gebruik van PKIoverheid-certificaten

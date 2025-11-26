@@ -1,13 +1,15 @@
 ---
-title: "10. Werk agile en verhoog de slagingskans"
+title: 10. Werk agile en verhoog de slagingskans
 sidebar_position: 10
 ---
 
+# Richtlijn: Werk agile en verhoog de slagingskans
+
 IT-projecten zijn vaak complex en vol afhankelijkheden, wat ze uitdagend maakt
-om te managen. Door een agile aanpak toe te passen en risico’s vroegtijdig in
+om te managen. Door een agile aanpak toe te passen en risico's vroegtijdig in
 kaart te brengen, kun je potentiële problemen effectief voorkomen.
 
-## Belangrijke redenen
+## Rationale: Waarom agile werken en risico's vroegtijdig identificeren?
 
 - **Flexibiliteit in veranderende eisen** - De overheid heeft te maken met
   voortdurend veranderende wet- en regelgeving, beleidswijzigingen en
@@ -27,7 +29,6 @@ kaart te brengen, kun je potentiële problemen effectief voorkomen.
 - **Betere grip op complexe projecten** - Overheidsprojecten zijn vaak
   omvangrijk en complex, met veel afhankelijkheden. Agile maakt het mogelijk om
   de voortgang in kleinere, beheersbare stappen te monitoren en aan te passen.
-
 - **Efficiënter gebruik van middelen** - Agile maakt het mogelijk om
   prioriteiten dynamisch aan te passen, waardoor overheidsorganisaties hun
   middelen efficiënter kunnen inzetten op basis van de meest urgente behoeften.
@@ -36,55 +37,93 @@ kaart te brengen, kun je potentiële problemen effectief voorkomen.
   er sneller werkende onderdelen van de software opgeleverd worden. Dit betekent
   dat de overheid sneller waarde kan leveren aan burgers en interne afdelingen.
 
-## Adviescollege ICT-toetsing
+## Doelgroep: Wie zijn er betrokken bij agile werken?
 
-Adviescollege ICT-toetsing is een organisatie die zich richt op het adviseren
-van de overheid en publieke organisaties over de toetsing en evaluatie van
-ICT-projecten. Ze bieden deskundige adviezen over de haalbaarheid, risico's en
-de beheersing van ICT-projecten en -programma's binnen de publieke sector. Dit
-kan onder andere betrekking hebben op het beoordelen van de voortgang en de
-kwaliteit van ICT-projecten, het ondersteunen bij het identificeren van
-knelpunten, en het helpen bij het realiseren van succesvolle ICT-implementaties
-in overheidsorganisaties.
+De volgende doelgroepen kunnen met agile werken aan de slag: product owners,
+scrum masters, developers, testers en stakeholders.
 
-Het doel van dit adviescollege is om ervoor te zorgen dat ICT-projecten goed
-beheerd worden en daadwerkelijk bijdragen aan het verbeteren van de
-dienstverlening van de overheid, door te zorgen voor een effectieve inzet van
-technologie en middelen.
+Product owners bepalen de prioriteiten en zorgen dat het team werkt aan de meest
+waardevolle functionaliteit. Scrum masters faciliteren het agile proces en
+helpen het team obstakels te overwinnen. Developers en testers werken in korte
+iteraties en leveren regelmatig werkende software op. Stakeholders geven
+regelmatig feedback en zorgen dat de software aansluit bij de behoeften van de
+organisatie.
 
-- [Publicaties Adviescollege ICT-toetsing](https://www.adviescollegeicttoetsing.nl/publicaties)
+## Implementatie: Hoe implementeer je agile werken?
 
-## Agile werken
+### Methoden en technieken
 
-Agile werken verhoogt de slagingskans van projecten doordat het flexibiliteit
-biedt, snelle feedback mogelijk maakt en risico's vroegtijdig identificeert.
-Door korte iteraties en regelmatige communicatie kunnen teams snel inspelen op
-veranderingen en verbeteringen doorvoeren. Dit zorgt voor een hogere
-klanttevredenheid, betere samenwerking, en een product dat beter aansluit bij de
-behoeften van de gebruiker. Kortom, Agile maakt het project sneller, efficiënter
-en minder risicovol.
+#### Scrum
 
-Meer info over agile werken vind je op [scrum.org](https://www.scrum.org/).
+Scrum is een agile framework waarbij je in korte iteraties (sprints) werkt,
+meestal van 1-4 weken. Het team plant, ontwikkelt, test en levert software op
+binnen elke sprint. Dagelijkse stand-ups zorgen voor goede communicatie binnen
+het team.
 
-## NEN NPR 5326: Risicobeheersing bij ontwikkeling en onderhoud van maatwerksoftware
+#### Risicobeheersing met NEN NPR 5326
 
-De **NPR 5326** is een Nederlandse Praktijkrichtlijn die helpt bij het beheersen
-van risico’s bij de ontwikkeling en het onderhoud van **maatwerksoftware**. Deze
-richtlijn biedt een gestructureerde aanpak om risico’s te identificeren en te
-minimaliseren gedurende de **volledige levenscyclus** van software, van
-specificatie en ontwikkeling tot beheer en onderhoud.
+De NEN NPR 5326 is een Nederlandse Praktijkrichtlijn die helpt bij het beheersen
+van risico's bij de ontwikkeling en het onderhoud van maatwerksoftware. Deze
+richtlijn biedt een gestructureerde aanpak om risico's te identificeren en te
+minimaliseren gedurende de volledige levenscyclus van software. Er is een
+spreadsheet beschikbaar waarmee inzichtelijk wordt of voldoende maatregelen zijn
+genomen.
 
-### Belangrijke punten:
+### Tools
 
-- **Identificeren van risico’s**: De richtlijn beschrijft veelvoorkomende
-  risico’s in softwareontwikkeling.
-- **Beheersmaatregelen**: Concrete aanbevelingen om risico’s te beperken.
-- **Praktisch hulpmiddel**: Er is een spreadsheet beschikbaar waarmee
-  inzichtelijk wordt of voldoende maatregelen zijn genomen.
-- **Voorkomen van budgetoverschrijdingen en vertragingen**: Helpt ICT-projecten
-  binnen de overheid efficiënter te laten verlopen.
+#### Backlog management tools
 
-### Meer informatie
+Voor het bijhouden van de product backlog en sprints gebruik je tools zoals
+Jira, Azure DevOps, of GitLab. Deze tools helpen bij het plannen, prioriteren en
+volgen van werk.
 
-De **NPR 5326** is **gratis** te downloaden via de
-**[website van NEN](https://www.nen.nl/npr-5326-2019-nl-262885)**.
+### Gerelateerde richtlijnen
+
+Nog geen.
+
+### Succescriteria
+
+Wanneer voldoe je aan deze richtlijn?
+
+- Je werkt in korte iteraties en levert regelmatig werkende software op.
+- Je organiseert stand-ups en retrospectives.
+- Je betrekt stakeholders bij het proces en verwerkt hun feedback.
+
+Wanneer ben je echt goed bezig?
+
+- Je meet de velocity van je team en gebruikt dit voor planning.
+- Je past risicobeheersing toe volgens NEN NPR 5326.
+- Je combineert Scrum met andere agile practices zoals Kanban waar dat zinvol
+  is.
+
+## Wanneer is deze richtlijn van toepassing?
+
+Deze richtlijn is van toepassing op alle softwareontwikkelingsprojecten binnen
+de overheid, met name die met veranderende eisen, complexe afhankelijkheden of
+waar snelle oplevering van waarde belangrijk is.
+
+## Bronnen
+
+### Wet- en regelgeving
+
+Geen bekend.
+
+### Beleid
+
+Geen bekend.
+
+### Standaarden
+
+- [NEN NPR 5326:2019 - Risicobeheersing bij ontwikkeling en onderhoud van maatwerksoftware](https://www.nen.nl/npr-5326-2019-nl-262885)
+
+### Communities
+
+- [Adviescollege ICT-toetsing](https://www.adviescollegeicttoetsing.nl/publicaties)
+
+### Literatuur
+
+Geen bekend.
+
+### Bronnen op developer.overheid.nl
+
+- [Scrum.org](https://www.scrum.org/)
