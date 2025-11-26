@@ -34,7 +34,7 @@ is. Daarnaast is het belangrijk dat er voldoende tijd is voor het overdragen van
 kennis ondat het vaak moeilijk is alle relevante kennis van software in
 documentatie te vangen.
 
-## Doelgroep: Wie zijn er betrokken bij het overdragen van softwarw?
+## Doelgroep: Wie zijn er betrokken bij het overdragen van software?
 
 De volgende doelgroepen kunnen met het beheerst overdragen van software aan de
 slag: de eigenaar van de software, developers en testers van de latende partij
