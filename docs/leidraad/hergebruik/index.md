@@ -75,6 +75,12 @@ Voordat je software overdraagt aan een andere developer, een ander team, of een 
 
 - [Richtlijn software beheerst overdragen](richtlijn-software-overdragen.md).
 
+## Onboarding nieuwe developers
+
+Als je als nieuwe developer start op een project en/of in een team is er veel nieuwe informatie te leren. Een gestructureerde onboarding zorgt ervoor dat je die informatie gedoseerd en op het juiste moment krijgt aangeboden. 
+
+- [Richtlijn onboarding](richtlijn-onboarding.md).
+
 ## Communities
 
 - [Code for NL](/communities/code-for-nl)
