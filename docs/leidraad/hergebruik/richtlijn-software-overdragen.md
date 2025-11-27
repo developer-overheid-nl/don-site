@@ -1,6 +1,7 @@
 ---
 title: "8.1 Software beheerst overdragen"
 tags: ["development"]
+sidebar_position: 1
 ---
 
 # Richtlijn: Software beheerst overdragen
