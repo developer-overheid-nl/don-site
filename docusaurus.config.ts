@@ -434,7 +434,7 @@ const config: Config = {
     },
     prism: {
       theme: docusaurusTheme, // better contrast
-      additionalLanguages: ["turtle"],
+      additionalLanguages: ["java"],
     },
     colorMode: {
       defaultMode: "light",
