@@ -100,5 +100,14 @@ export default {
         color: "#6B6B6B",
       },
     },
+    {
+      types: ["namespace"],
+      style: {
+        // Dit zorgt voor voldoende contrast met light mode.
+        // De base theme zet dit op 0.7 en dat is niet voldoende
+        // om aan de WCAG te voldoen voor Java code snippets.
+        opacity: 1.0,
+      },
+    },
   ],
 } satisfies PrismTheme;
