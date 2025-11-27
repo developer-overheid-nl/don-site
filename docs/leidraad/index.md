@@ -49,6 +49,8 @@ De leidraad bevat de volgende principes:
 - ### [12. Bepaal je inkoopstrategie](./inkoopstrategie/)
 - ### [13. Denk na over duurzaamheid](./duurzaamheid)
 
+Om te kijken in hoeverre je team, project, afdeling of organisatie werkt volgens de leidraad, kun je een self-assessment doen. Gebruik hiervoor de [self-assessment checklist](self-assessment-checklist.ods).
+
 ### Contact
 
 Voor feedback of andere handreikingen kan je ons bereiken via:
