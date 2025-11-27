@@ -122,8 +122,9 @@ Geen bekend.
 
 ### Literatuur
 
-Geen bekend.
+- [Scrum.org](https://www.scrum.org)
+- [Scrum Guides](https://scrumguides.org)
 
 ### Bronnen op developer.overheid.nl
 
-- [Scrum.org](https://www.scrum.org/)
+Geen bekend.
