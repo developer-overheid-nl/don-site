@@ -1,7 +1,11 @@
 ---
 authors: [tom-ootes]
 tags: [npm, javascript, typescript, nodejs, pnpm, dependabot, htmx]
-draft: true
+description: |
+  Binnen modern web-development zijn er veel processen waarbij we NPM-packages
+  gebruiken. De meest herkenbare verschijningsvormen van NPM-packages zijn
+  libraries en frameworks, maar in de afgelopen jaren is het scala behoorlijk
+  uitgebreid.
 ---
 
 # Voorkom JavaScript-moeheid: minimaliseer het aantal NPM packages
@@ -355,7 +359,3 @@ en frequent bestaande projecten te updaten kan complexiteit worden voorkomen.
 Met tools zoals PNPM en
 [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide)
 kun je de dependencies die je wél nodig hebt beter beheren.
-
-<!--
-@ LINKEDIN
-Tag je collega die de hele tijd nieuwe deps installeert -->
