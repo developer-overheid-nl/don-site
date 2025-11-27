@@ -55,7 +55,7 @@ Door te investeren in geautomatiseerde testen kun je de applicaties met minder
 risico aanpassen en gaan ze langer mee. Geautomatiseerde tests vangen regressies
 op en geven ontwikkelaars vertrouwen bij het doorvoeren van wijzigingen.
 
-## Maak organisatiebrede (architectuur)keuzes en draag deze uit
+#### Maak organisatiebrede (architectuur)keuzes en draag deze uit
 
 Door binnen je organisatie een bepaalde mate van standaardisering toe te passen  
 maak je effectiever gebruik van beschikbare middelen en kennis en vergroot je de 
