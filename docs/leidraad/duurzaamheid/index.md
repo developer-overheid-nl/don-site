@@ -41,6 +41,14 @@ risico aanpassen en gaan ze langer mee.
 
 - [Richtlijn geautomatiseerd testen](richtlijn-geautomatiseerd-testen.md).
 
+## Maak organisatiebrede (architectuur)keuzes en draag deze uit
+
+Door binnen je organisatie een bepaalde mate van standaardisering toe te passen  
+maak je effectiever gebruik van beshcikbare middelen en kennis en vergroot je de 
+beheerbaarheid.
+
+- [Richtlijn maak (architectuur)keuzes en draag deze uit](richtlijn-arch-keuzes.md).
+
 ## Monitor applicaties
 
 Door monitoring in te richten voor applicaties die je in beheer hebt krijg je
