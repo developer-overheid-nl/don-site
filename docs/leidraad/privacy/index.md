@@ -33,12 +33,12 @@ lange termijn.
 ## Doelgroep: Wie zijn er betrokken bij privacy?
 
 De volgende doelgroepen kunnen met privacy aan de slag: privacy officers,
-developers, security officers, architects en legal advisors.
+developers, security officers, architecten en legal advisors.
 
 Privacy officers beoordelen de verwerking en maatregelen in de Data Protection
 Impact Assessment (DPIA) en adviseren over privacyvraagstukken. Developers
 implementeren privacy by design principes in de code. Security officers zorgen
-voor de technische beveiligingsmaatregelen. Architects ontwerpen systemen die
+voor de technische beveiligingsmaatregelen. Architecten ontwerpen systemen die
 privacy-vriendelijk zijn. Legal advisors zorgen dat de verwerking voldoet aan de
 wettelijke vereisten.
 

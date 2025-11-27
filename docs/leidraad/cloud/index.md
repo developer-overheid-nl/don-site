@@ -39,7 +39,7 @@ engineers, platform engineers, architecten en security officers.
 Developers bouwen applicaties volgens cloud-native principes zoals twelve-factor
 app. DevOps engineers richten CI/CD pipelines in en automatiseren deployment.
 Platform engineers bouwen en beheren het onderliggende platform (zoals
-Kubernetes). Architects ontwerpen de cloud-native architectuur. Security
+Kubernetes). Architecten ontwerpen de cloud-native architectuur. Security
 officers zorgen dat beveiligingsmaatregelen zijn geïntegreerd in de cloud-native
 omgeving.
 

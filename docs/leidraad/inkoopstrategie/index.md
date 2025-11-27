@@ -26,7 +26,7 @@ bevorder je innovatie, flexibiliteit en maatschappelijke waarde.
 ## Doelgroep: Wie zijn er betrokken bij de inkoopstrategie?
 
 De volgende doelgroepen kunnen met de inkoopstrategie aan de slag:
-inkoopadviseurs, contractmanagers, architects, product owners en security
+inkoopadviseurs, contractmanagers, architecten, product owners en security
 officers.
 
 Inkoopadviseurs en contractmanagers stellen de aanbestedingsdocumenten op en

@@ -26,7 +26,7 @@ veranderingen of leercurves.
 
 ## Doelgroep: Wie zijn er betrokken bij integratie?
 
-De volgende doelgroepen kunnen met integratie aan de slag: architects,
+De volgende doelgroepen kunnen met integratie aan de slag: architecten,
 developers, API-specialisten, beheerders en functioneel beheerders.
 
 Architecten ontwerpen de integratiearchitectuur en bepalen welke

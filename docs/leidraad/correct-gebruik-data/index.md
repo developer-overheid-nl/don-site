@@ -33,9 +33,9 @@ engineers, developers, data stewards, architecten en informatie-analisten.
 Data engineers bouwen en onderhouden data pipelines en zorgen dat data van de
 bron naar de juiste systemen stroomt. Developers gebruiken API's om data bij de
 bron op te halen. Data stewards zijn verantwoordelijk voor de kwaliteit en
-governance van data. Architects ontwerpen de data-architectuur volgens principes
-als data bij de bron. Informatie-analisten analyseren en interpreteren data voor
-beleid en besluitvorming.
+governance van data. Architecten ontwerpen de data-architectuur volgens
+principes als data bij de bron. Informatie-analisten analyseren en interpreteren
+data voor beleid en besluitvorming.
 
 ## Implementatie: Hoe implementeer je correct gebruik van data?
 

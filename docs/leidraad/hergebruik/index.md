@@ -34,10 +34,10 @@ transparantie voor betere controle en publieke verantwoording.
 ## Doelgroep: Wie zijn er betrokken bij delen en hergebruik?
 
 De volgende doelgroepen kunnen met delen en hergebruik aan de slag: developers,
-architects, open source officers, designers en product owners.
+architecten, open source officers, designers en product owners.
 
 Developers zoeken naar herbruikbare componenten en dragen bij aan open source
-projecten. Architects adviseren over hergebruik en standaardisatie. Open source
+projecten. Architecten adviseren over hergebruik en standaardisatie. Open source
 officers faciliteren het open source beleid en helpen bij het publiceren van
 code. Designers delen design patterns en componenten via design systems. Product
 owners nemen hergebruik mee in de productstrategie.
