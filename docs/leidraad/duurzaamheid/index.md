@@ -43,7 +43,7 @@ Developers investeren in geautomatiseerde tests en schrijven onderhoudbare code.
 Testers ontwikkelen en onderhouden de testautomatisering. Beheerders richten
 monitoring en logging in. Security officers zorgen dat beveiligingsupdates
 tijdig worden doorgevoerd. Kwaliteitsmanagers bewaken de kwaliteit van de
-software met tools zoals Quality-Time.
+software met tools zoals Quality-time.
 
 ## Implementatie: Hoe implementeer je duurzaamheid?
 
@@ -81,7 +81,7 @@ Voor monitoring gebruik je tools zoals Prometheus, Grafana, ELK stack
 
 #### Quality management tools
 
-Quality-Time is een open source tool die je kan helpen de kwaliteit van je
+Quality-time is een open source tool die je kan helpen de kwaliteit van je
 maatwerksoftware te bewaken en technical debt te managen.
 
 ### Gerelateerde richtlijnen
@@ -98,7 +98,7 @@ Wanneer voldoe je aan deze richtlijn?
 
 Wanneer ben je echt goed bezig?
 
-- Je meet en bewaakt technical debt structureel met tools zoals Quality-Time.
+- Je meet en bewaakt technical debt structureel met tools zoals Quality-time.
 - Je hebt alerts ingesteld die automatisch waarschuwen bij problemen.
 - Je voert regelmatig dependency updates uit om kwetsbaarheden te voorkomen.
 
@@ -131,5 +131,5 @@ Geen bekend.
 
 ### Bronnen op developer.overheid.nl
 
-- [Quality-Time](https://quality-time.readthedocs.io/en/latest/)
-- [Quality-Time op developer.overheid.nl](/kennisbank/infra/tools/quality-time)
+- [Quality-time](https://quality-time.readthedocs.io/en/latest/)
+- [Quality-time op developer.overheid.nl](/kennisbank/infra/tools/quality-time)

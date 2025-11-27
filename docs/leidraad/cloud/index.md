@@ -34,7 +34,7 @@ eenvoudiger om services te verplaatsen of nieuwe diensten toe te voegen.
 ## Doelgroep: Wie zijn er betrokken bij cloud-native softwareontwikkeling?
 
 De volgende doelgroepen kunnen met cloud-native aan de slag: developers, DevOps
-engineers, platform engineers, architects en security officers.
+engineers, platform engineers, architecten en security officers.
 
 Developers bouwen applicaties volgens cloud-native principes zoals twelve-factor
 app. DevOps engineers richten CI/CD pipelines in en automatiseren deployment.

@@ -14,8 +14,10 @@ project.
 
 Wanneer niet wordt onderzocht welke problemen een gebruiker probeert op te
 lossen, bestaat het risico dat functionaliteiten worden ontwikkeld die
-uiteindelijk niet worden gebruikt. Dit leidt tot verspilling van tijd, geld en
-middelen.
+uiteindelijk niet worden gebruikt. Of het zorgt ervoor dat de software niet 
+voldoende bruikbaar is voor de gebruiker. Bijvoorbeeld omdat de software 
+traag blijkt te werken, complex te bedienen is of zelfs onveilig. Dit leidt tot 
+verspilling van tijd, geld en middelen.
 
 Een team dat werkt aan software met daadwerkelijke maatschappelijke waarde voor
 burgers, ervaart meer zingeving en motivatie. Door te focussen op echte
@@ -23,8 +25,9 @@ gebruikersbehoeften lever je software die echt gebruikt wordt en waarde
 toevoegt.
 
 Door gebruikers centraal te stellen ontdek je vroegtijdig welke functionaliteit
-echt nodig is en welke nice-to-have is. Dit helpt bij het stellen van
-prioriteiten en zorgt voor efficiënter gebruik van beschikbare middelen.
+en welke niet-functionele eigenschappen echt nodig zijn en welke 
+nice-to-have zijn. Dit helpt bij het stellen van prioriteiten en zorgt voor 
+efficiënter gebruik van beschikbare middelen.
 
 ## Doelgroep: Wie zijn er betrokken bij gebruikersbehoeften?
 
