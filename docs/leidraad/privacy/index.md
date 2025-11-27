@@ -1,101 +1,125 @@
 ---
-title: "7. Neem privacy als uitgangspunt"
+title: 7. Neem privacy als uitgangspunt
 sidebar_position: 7
 tags: [privacy, avg, gdpr]
 ---
 
+# Richtlijn: Neem privacy als uitgangspunt
+
 Het waarborgen van de privacy van de gebruiker zou in elke stap van het proces
 een prioriteit moeten zijn.
 
-## Belangrijke redenen
+## Rationale: Waarom privacy als uitgangspunt?
 
-- **Wettelijke verplichting** - Overheidsinstanties moeten voldoen aan strikte
-  privacywetgeving, zoals de AVG (Algemene Verordening Gegevensbescherming). Dit
-  betekent dat gegevens alleen mogen worden verwerkt als daar een legitieme
-  grondslag voor is, en dat burgers controle moeten hebben over hun eigen
-  gegevens.
+Overheidsinstanties moeten voldoen aan strikte privacywetgeving, zoals de AVG
+(Algemene Verordening Gegevensbescherming). Dit betekent dat gegevens alleen
+mogen worden verwerkt als daar een legitieme grondslag voor is, en dat burgers
+controle moeten hebben over hun eigen gegevens.
 
-- **Beperken van risico's** - Een datalek of privacyschending kan enorme
-  gevolgen hebben, zoals identiteitsfraude, discriminatie of andere vormen van
-  misbruik. Door privacy vanaf het begin in te bouwen (Privacy by Design) worden
-  deze risico's geminimaliseerd.
+Een datalek of privacyschending kan enorme gevolgen hebben, zoals
+identiteitsfraude, discriminatie of andere vormen van misbruik. Door privacy
+vanaf het begin in te bouwen (Privacy by Design) worden deze risico's
+geminimaliseerd.
 
-- **Minder juridische en financiële consequenties** - Het niet naleven van
-  privacyregels kan leiden tot boetes van toezichthouders zoals de Autoriteit
-  Persoonsgegevens. Daarnaast kunnen schadeclaims van burgers financiële en
-  reputatieschade opleveren.
+Het niet naleven van privacyregels kan leiden tot boetes van toezichthouders
+zoals de Autoriteit Persoonsgegevens. Daarnaast kunnen schadeclaims van burgers
+financiële en reputatieschade opleveren.
 
-- **Efficiëntere en duurzamere systemen** - Het nemen van privacy als
-  uitgangspunt dwingt ontwikkelaars tot het toepassen van dataminimalisatie:
-  alleen noodzakelijke gegevens worden verwerkt en bewaard. Dit leidt tot betere
-  beveiliging, efficiëntere systemen en lagere kosten op de lange termijn.
+Het nemen van privacy als uitgangspunt dwingt ontwikkelaars tot het toepassen
+van dataminimalisatie: alleen noodzakelijke gegevens worden verwerkt en bewaard.
+Dit leidt tot betere beveiliging, efficiëntere systemen en lagere kosten op de
+lange termijn.
 
-## Hoe word je AVG-compliant?
+## Doelgroep: Wie zijn er betrokken bij privacy?
 
-Door de Algemene verordening gegevensbescherming (AVG) hebben organisaties die
-persoonsgegevens verzamelen en gebruiken meer verantwoordelijkheden gekregen. En
-de mensen van wie zij gegevens gebruiken hebben meer rechten gekregen. Houden
-organisaties zich niet aan de regels? Dan kunnen zij een boete krijgen.
+De volgende doelgroepen kunnen met privacy aan de slag: privacy officers,
+developers, security officers, architecten en legal advisors.
 
-1. **Minimaliseer data** – Verwerk alleen de strikt noodzakelijke
-   persoonsgegevens.
-2. **Vraag om toestemming** – Zorg dat gebruikers expliciet akkoord gaan met
-   dataverwerking.
-3. **Beveilig gegevens** – Gebruik versleuteling, hashing en andere
-   beveiligingsmaatregelen.
-4. **Houd een verwerkingsregister bij** – Documenteer welke data je verwerkt en
-   waarom.
-5. **Bied inzage en verwijderopties** – Gebruikers moeten hun data kunnen
-   inzien, corrigeren of laten verwijderen.
-6. **Gebruik privacy by design** – Bouw systemen die vanaf het begin
-   privacyvriendelijk zijn.
-7. **Sluit verwerkersovereenkomsten** – Zorg dat derde partijen die data
-   verwerken ook compliant zijn.
+Privacy officers beoordelen de verwerking en maatregelen in de Data Protection
+Impact Assessment (DPIA) en adviseren over privacyvraagstukken. Developers
+implementeren privacy by design principes in de code. Security officers zorgen
+voor de technische beveiligingsmaatregelen. Architecten ontwerpen systemen die
+privacy-vriendelijk zijn. Legal advisors zorgen dat de verwerking voldoet aan de
+wettelijke vereisten.
 
-## In meer detail
+## Implementatie: Hoe implementeer je privacy als uitgangspunt?
+
+### Methoden en technieken
+
+#### Privacy by Design toepassen
+
+Privacy by Design betekent dat je privacy vanaf het begin meeneemt in het
+ontwerp van je systeem. De acht privacyontwerpstrategieën uit het Blauwe Boekje
+helpen je concreet invulling te geven aan Privacy by Design.
+
+#### Data Protection Impact Assessment (DPIA) uitvoeren
+
+Bij verwerkingen met hoog privacy-risico ben je wettelijk verplicht een DPIA uit
+te voeren. Hierin analyseer je de risico's en beschrijf je de maatregelen om
+deze te beperken.
+
+#### Dataminimalisatie toepassen
+
+Verwerk alleen de strikt noodzakelijke persoonsgegevens voor het doel waarvoor
+je ze verzamelt. Bewaar gegevens niet langer dan nodig.
+
+### Tools
+
+#### DPIA tools
+
+Voor het uitvoeren van een DPIA kun je tools gebruiken die je helpen de risico's
+systematisch in kaart te brengen.
+
+#### Encryptie en hashing tools
+
+Gebruik encryptie voor opslag en transport van persoonsgegevens en hashing voor
+het pseudonimiseren van identificerende gegevens.
+
+### Gerelateerde richtlijnen
 
 - [Verwerken van het burgerservicenummer](bsn.md)
 
+### Succescriteria
+
+Wanneer voldoe je aan deze richtlijn?
+
+- Je hebt een DPIA uitgevoerd voor verwerkingen met hoog risico.
+- Je past dataminimalisatie toe en bewaart gegevens niet langer dan nodig.
+- Je hebt passende beveiligingsmaatregelen getroffen zoals encryptie.
+
+Wanneer ben je echt goed bezig?
+
+- Je gebruikt Privacy Enhancing Technologies (PETs) waar mogelijk.
+- Je hebt verwerkingsovereenkomsten gesloten met alle verwerkers.
+- Je faciliteert de uitoefening van privacy-rechten van betrokkenen (inzage,
+  correctie, verwijdering).
+
+## Wanneer is deze richtlijn van toepassing?
+
+Deze richtlijn is van toepassing zodra je persoonsgegevens verwerkt in je
+software. Dit is vrijwel altijd het geval bij overheidssoftware.
+
 ## Bronnen
 
-### Autoriteit Persoonsgegevens (AP)
+### Wet- en regelgeving
 
-Is de toezichthouder op privacywetgeving in Nederland. Ze handhaven de **AVG
-(GDPR)**, geven advies over gegevensbescherming en kunnen boetes opleggen bij
-overtredingen.
+- [Algemene Verordening Gegevensbescherming (AVG/GDPR)](https://autoriteitpersoonsgegevens.nl)
 
-- [Naar autoriteitpersoonsgegevens.nl](https://autoriteitpersoonsgegevens.nl)
+### Beleid
 
-### Centrum Informatiebeveiliging en Privacybescherming (CIP)
+Geen bekend.
 
-Het Centrum Informatiebeveiliging en Privacybescherming (CIP) is een
-publiek-private organisatie die zich richt op het verbeteren van de
-informatieveiligheid en privacybescherming binnen de Nederlandse overheid en
-aanverwante sectoren.
+### Standaarden
 
-- [Naar cip-overheid.nl](https://www.cip-overheid.nl)
-- [Naar de handleiding "Privacy by Design" van het CIP](https://www.cip-overheid.nl/producten-en-diensten/handleiding-privacy-by-design)
+Geen bekend.
 
-### Het Blauwe Boekje
+### Communities
 
-Het Blauwe Boekje is een handleiding die de abstracte privacywetgeving vertaalt
-naar concrete technische ontwerpprincipes.
+- [Centrum Informatiebeveiliging en Privacybescherming (CIP)](https://www.cip-overheid.nl)
 
-Het boek biedt een praktische benadering om privacy al in de vroegste fase van
-systeemontwikkeling mee te nemen. Door acht heldere privacyontwerpstrategieën te
-presenteren, helpt het boekje overheids-IT teams om:
+### Literatuur
 
-- Complexe privacywetgeving (zoals de AVG) praktisch te implementeren
-- Principiële ontwerpkeuzes te maken die privacy beschermen
-- Risico's op datalekken en ongewenste gegevensverwerkingen te minimaliseren
-- Privacy te zien als een integraal onderdeel van systeemkwaliteit
+- [Het Blauwe Boekje](https://www.cs.ru.nl/~jhh/blauwe-boekje.html)
+- [Handleiding "Privacy by Design" van het CIP](https://www.cip-overheid.nl/producten-en-diensten/handleiding-privacy-by-design)
 
-De strategieën zijn niet bedoeld als bureaucratische drempels, maar als
-gereedschappen om innovatieve, burgervriendelijke digitale oplossingen te
-creëren. Het boekje daagt developers uit om verder te gaan dan minimale
-wettelijke compliance en privacy actief in te bouwen in overheidsystemen.
-
-Voor een IT-afdeling bij de overheid fungeert dit boekje als een routekaart die
-complexe wetgeving vertaalt naar begrijpelijke, uitvoerbare ontwerprichtlijnen.
-
-- [Meer over het Blauwe Boekje](https://www.cs.ru.nl/~jhh/blauwe-boekje.html)
+### Bronnen op developer.overheid.nl

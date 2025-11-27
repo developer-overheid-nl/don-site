@@ -1,9 +1,10 @@
 ---
-title: "Gebruik van PKIoverheid-certificaten"
+title: "6.2 Gebruik PKIoverheid-certificaten"
 tags: ["security"]
+sidebar_position: 2
 ---
 
-# Richtlijn: gebruik van PKIoverheid-certificaten
+# Richtlijn: Gebruik PKIoverheid-certificaten
 
 Om de vertrouwelijkheid, integriteit en authenticiteit van gegevens te
 waarborgen worden gegevens vaak versleuteld en/of digitaal ondertekend op basis

@@ -1,89 +1,136 @@
 ---
-title: "8. Deel, hergebruik en werk samen"
+title: 8. Deel, hergebruik en werk samen
 sidebar_position: 8
 ---
 
+# Richtlijn: Deel, hergebruik en werk samen
+
 Efficiënte softwareontwikkeling binnen de overheid betekent dat we technologie,
 data en diensten zoveel mogelijk delen en hergebruiken. Dit voorkomt dubbele
-inspanningen, bespaart kosten en versnelt innovatie. Door open standaarden te
-gebruiken en samen te werken, verbeteren we de kwaliteit, veiligheid en
-interoperabiliteit van systemen. Bovendien zorgt meer transparantie voor betere
-controle en publieke verantwoording.
+inspanningen, bespaart kosten en versnelt innovatie.
 
-## Belangrijke redenen
+## Rationale: Waarom delen, hergebruiken en samenwerken?
 
-- **Voorkomen van dubbele inspanningen** - Overheidsorganisaties hebben vaak
-  vergelijkbare behoeften, hergebruik van bestaande oplossingen bespaart tijd en
-  moeite.
-- **Kostenbesparing** - Minder ontwikkel- en onderhoudskosten door gedeelde
-  software en infrastructuur. Publiek geld wordt efficiënter besteed.
-- **Snellere innovatie** - Kennisdeling versnelt de ontwikkeling van nieuwe
-  oplossingen. Overheden kunnen zo voortbouwen op elkaars werk in plaats van
-  vanaf nul te beginnen.
-- **Hogere kwaliteit en veiligheid** - Herbruikbare componenten zijn beter
-  getest en onderhouden. Minder fouten, betere beveiliging en robuustere
-  software.
+Overheidsorganisaties hebben vaak vergelijkbare behoeften. Door bestaande
+oplossingen te hergebruiken bespaar je tijd en moeite die anders besteed zou
+worden aan het opnieuw uitvinden van het wiel.
 
-## Front-end: hergebruik van components
+Minder ontwikkel- en onderhoudskosten door gedeelde software en infrastructuur
+betekent dat publiek geld efficiënter wordt besteed. Door te investeren in
+herbruikbare componenten profiteert de hele overheidssector.
 
-### Organisatiespecifieke design systems
+Kennisdeling versnelt de ontwikkeling van nieuwe oplossingen. Overheden kunnen
+zo voortbouwen op elkaars werk in plaats van vanaf nul te beginnen. Samen kom je
+verder dan alleen.
 
-Binnen de front-end kunnen componenten eenvoudig worden hergebruikt. Sommige
-organisaties hebben hun eigen interne design systems. Voorbeelden hiervan zijn:
+Herbruikbare componenten zijn beter getest en onderhouden door meerdere
+organisaties. Dit leidt tot minder fouten, betere beveiliging en robuustere
+software.
 
-- **[Manon](https://github.com/minvws/nl-rdo-manon)**: Het design framework van
-  het Ministerie van Volksgezondheid, Welzijn en Sport.
-- **[LUX](https://github.com/nl-design-system/lux)**: Het design system van
-  Logius, gebaseerd op de architectuur van het NL Design System.
-- **[Bold](https://www.gebruikercentraal.nl/agenda/design-system-bold-samenwerken-aan-een-betere-gebruikerservaring-belastingdienst/)**:
-  Het design system van de Belastingdienst, gericht op het verbeteren van de
-  gebruikerservaring en toegankelijkheid.
+Door open standaarden te gebruiken en samen te werken, verbeteren we de
+kwaliteit, veiligheid en interoperabiliteit van systemen. Bovendien zorgt meer
+transparantie voor betere controle en publieke verantwoording.
 
-### NL Design System
+## Doelgroep: Wie zijn er betrokken bij delen en hergebruik?
 
-Naast deze design systems is er ook het overheidsbrede initiatief 'NL Design
-System'. De community werkt gezamenlijk aan een systeem om makkelijk themes en
-sets van componenten aan te bieden. Het voordeel van NL Design System is dat je
-makkelijk componenten kunt hergebruiken van andere projecten die ook NL Design
-System gebruiken.
+De volgende doelgroepen kunnen met delen en hergebruik aan de slag: developers,
+architecten, open source officers, designers en product owners.
 
-Bekijk het
-[hoofdstuk over NL Design System](/kennisbank/front-end/nl-design-system/) voor
-meer informatie.
+Developers zoeken naar herbruikbare componenten en dragen bij aan open source
+projecten. Architecten adviseren over hergebruik en standaardisatie. Open source
+officers faciliteren het open source beleid en helpen bij het publiceren van
+code. Designers delen design patterns en componenten via design systems. Product
+owners nemen hergebruik mee in de productstrategie.
 
-## Checklist, vind bestaande software
+## Implementatie: Hoe implementeer je delen en hergebruik?
 
-Om te voorkomen dat je het wiel opnieuw zelf aan het uitvinden bent kun je de
-volgende stappen nemen:
+### Methoden en technieken
 
-- Check onze [API Catalogus](https://apis.developer.overheid.nl/)
-- Check onze
-  [repository Catalogus](https://oss.developer.overheid.nl/repositories)
-- Stel je vraag in de
-  [Slack van Code for NL](https://codefornl.slack.com/archives/C68APRNNP)
+#### NL Design System gebruiken
 
-## Maak projecten vindbaar met een `publiccode.yml`
+Het NL Design System is een overheidsbrede initiatief waarbij organisaties
+gezamenlijk werken aan een systeem om makkelijk themes en sets van componenten
+aan te bieden. Het voordeel is dat je eenvoudig componenten kunt hergebruiken
+van andere projecten.
 
-De publiccode.yml standaard is in het leven geroepen om op een
-gestandaardiseerde manier informatie aan te bieden over een Open Source project.
+#### publiccode.yml toevoegen
 
-- [Over de publiccode.yml standaard](/kennisbank/open-source/standaarden/publiccode-yml)
+De publiccode.yml standaard is bedoeld om op een gestandaardiseerde manier
+informatie aan te bieden over een Open Source project. Dit maakt projecten
+vindbaar en herbruikbaar.
 
-## Maak software overdraagbaar
+#### Software beheerst overdragen
 
-Voordat je software overdraagt aan een andere developer, een ander team, of een andere organisatie zorg je dat de software goed onderhoudbaar is door de ontvangende partij. Ben jij de ontvangende partij dan controleer je voor de ontvangst dat je de software goed kan onderhouden en indien nodig kan doorontwikkelen.
+Als je software overdraagt aan een andere partij zorg je dat de software goed
+onderhoudbaar is. Dit omvat goede documentatie, testautomatisering en overdracht
+van kennis.
 
-- [Richtlijn software beheerst overdragen](richtlijn-software-overdragen.md).
+### Tools
 
-## Onboarding nieuwe developers
+#### Repository catalogus
 
-Als je als nieuwe developer start op een project en/of in een team is er veel nieuwe informatie te leren. Een gestructureerde onboarding zorgt ervoor dat je die informatie gedoseerd en op het juiste moment krijgt aangeboden. 
+Gebruik de
+[repository catalogus](https://oss.developer.overheid.nl/repositories) om
+bestaande open source projecten van de overheid te vinden.
 
-- [Richtlijn onboarding](richtlijn-onboarding.md).
+#### API catalogus
 
-## Communities
+Gebruik de [API catalogus](https://apis.developer.overheid.nl/) om bestaande
+API's van de overheid te vinden die je kunt hergebruiken.
+
+### Gerelateerde richtlijnen
+
+- [Richtlijn software beheerst overdragen](richtlijn-software-overdragen.md)
+- [Richtlijn onboarding](richtlijn-onboarding.md)
+
+### Succescriteria
+
+Wanneer voldoe je aan deze richtlijn?
+
+- Je zoekt actief naar bestaande oplossingen voordat je zelf iets bouwt.
+- Je publiceert je open source code met een publiccode.yml bestand.
+- Je documenteert je code en API's zodat anderen deze kunnen hergebruiken.
+
+Wanneer ben je echt goed bezig?
+
+- Je draagt actief bij aan bestaande open source projecten.
+- Je gebruikt het NL Design System voor front-end componenten.
+- Je deelt je ervaringen en leermomenten met andere overheidsorganisaties.
+
+## Wanneer is deze richtlijn van toepassing?
+
+Deze richtlijn is altijd van toepassing. Of je nu nieuwe software ontwikkelt of
+bestaande software onderhoudt, delen en hergebruik moet altijd onderdeel zijn
+van je overwegingen.
+
+## Bronnen
+
+### Wet- en regelgeving
+
+Geen bekend.
+
+### Beleid
+
+Geen bekend.
+
+### Standaarden
+
+- [publiccode.yml standaard](https://github.com/publiccodeyml/publiccode.yml)
+
+### Communities
 
 - [Code for NL](/communities/code-for-nl)
 - [Digilab](/communities/digilab)
-- [Opensourcewerken](/communities/open-source-werken)
+- [Open Source Werken](/communities/open-source-werken)
 - [NL Design System](/communities/nl-design-system)
+
+### Literatuur
+
+Geen bekend.
+
+### Bronnen op developer.overheid.nl
+
+- [NL Design System hoofdstuk](/kennisbank/front-end/nl-design-system/)
+- [API Catalogus](https://apis.developer.overheid.nl/)
+- [Repository Catalogus](https://oss.developer.overheid.nl/repositories)
+- [publiccode.yml standaard](/kennisbank/open-source/standaarden/publiccode-yml)

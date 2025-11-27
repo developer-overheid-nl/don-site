@@ -1,30 +1,75 @@
 ---
-title: "11. Maak correct gebruik van data"
+title: 11. Maak correct gebruik van data
 sidebar_position: 11
 ---
+
+# Richtlijn: Maak correct gebruik van data
 
 Gebruik data effectiever door je technologie, infrastructuur en processen te
 verbeteren.
 
-## Belangrijke redenen
+## Rationale: Waarom correct gebruik van data?
 
-- **Verbeterde besluitvorming** - Betrouwbare en actuele data stelt overheden in
-  staat om gefundeerde beslissingen te nemen, beleidsmaatregelen te verbeteren
-  en de effectiviteit van beleid te meten.
-- **Efficiëntie in processen** - Door data effectief te gebruiken, kunnen
-  overheidsprocessen geautomatiseerd en geoptimaliseerd worden, wat tijd,
-  middelen en kosten bespaart, en de dienstverlening aan burgers versnelt.
+Betrouwbare en actuele data stelt overheden in staat om gefundeerde beslissingen
+te nemen, beleidsmaatregelen te verbeteren en de effectiviteit van beleid te
+meten. Zonder goede data is het onmogelijk om goed te sturen.
 
-## Data bij de bron
+Door data effectief te gebruiken, kunnen overheidsprocessen geautomatiseerd en
+geoptimaliseerd worden, wat tijd, middelen en kosten bespaart, en de
+dienstverlening aan burgers versnelt.
 
 Het data bij de bron principe betekent dat overheidsdata op de plek van
 oorsprong wordt beheerd en geraadpleegd. Dit zorgt ervoor dat data actueel en
 betrouwbaar blijft, duplicatie wordt vermeden en de bronorganisatie de controle
 behoudt over beveiliging en privacy. Applicaties kunnen via gestandaardiseerde
-API’s direct de originele gegevens raadplegen, wat bijdraagt aan een
+API's direct de originele gegevens raadplegen, wat bijdraagt aan een
 transparante en efficiënte datagedreven dienstverlening.
 
-## Linkeddata.overheid.nl
+## Doelgroep: Wie zijn er betrokken bij correct gebruik van data?
+
+De volgende doelgroepen kunnen met correct gebruik van data aan de slag: data
+engineers, developers, data stewards, architecten en informatie-analisten.
+
+Data engineers bouwen en onderhouden data pipelines en zorgen dat data van de
+bron naar de juiste systemen stroomt. Developers gebruiken API's om data bij de
+bron op te halen. Data stewards zijn verantwoordelijk voor de kwaliteit en
+governance van data. Architecten ontwerpen de data-architectuur volgens
+principes als data bij de bron. Informatie-analisten analyseren en interpreteren
+data voor beleid en besluitvorming.
+
+## Implementatie: Hoe implementeer je correct gebruik van data?
+
+### Methoden en technieken
+
+#### Data bij de bron principe toepassen
+
+Implementeer het principe dat data wordt beheerd en geraadpleegd op de plek van
+oorsprong. Applicaties raadplegen via gestandaardiseerde API's direct de
+originele gegevens in plaats van kopieën te maken.
+
+#### DCAT gebruiken voor metadata
+
+De DCAT (Data Catalog Vocabulary) standaard biedt een uniforme manier om
+metadata over datasets te beschrijven. Hierdoor worden datasets beter vindbaar,
+zowel voor machines als voor gebruikers:
+
+- **Gestandaardiseerde metadata:** DCAT zorgt voor een uniforme manier om
+  metadata over datasets te beschrijven. Hierdoor kun je data consistent en
+  gestructureerd publiceren.
+- **Verbeterde interoperabiliteit:** Door te werken met een gemeenschappelijke
+  vocabulaire wordt het eenvoudiger om data uit verschillende bronnen te
+  integreren en met elkaar te laten samenwerken.
+- **Betere vindbaarheid en toegankelijkheid:** DCAT maakt datasets beter
+  vindbaar, zowel voor machines als voor gebruikers, wat essentieel is voor open
+  data initiatieven.
+- **Voldoen aan Europese standaarden:** Met profielen zoals DCAT-AP sluit je aan
+  bij de Europese open data standaarden, wat de uitwisseling van data tussen
+  overheidsorganisaties vergemakkelijkt.
+- **Efficiëntie in ontwikkeling:** Door gebruik te maken van een standaard
+  metadata schema hoef je niet telkens nieuwe beschrijvingen te maken, wat je
+  ontwikkelingsproces versnelt en vereenvoudigt.
+
+#### Linked data principes toepassen
 
 Met [linkeddata.overheid.nl](https://linkeddata.overheid.nl) krijg je als
 developer toegang tot gestructureerde, semantisch verrijkte overheidsdata. Dit
@@ -52,31 +97,57 @@ geeft diverse mogelijkheden:
   slag te gaan. Daarnaast kun je ervaringen delen en vragen stellen binnen de
   developer community.
 
-## De DCAT-standaard
+### Tools
 
-De **DCAT (Data Catalog Vocabulary)** standaard biedt jou als developer diverse
-voordelen:
+Geen bekend.
 
-- **Gestandaardiseerde metadata:** DCAT zorgt voor een uniforme manier om
-  metadata over datasets te beschrijven. Hierdoor kun je data consistent en
-  gestructureerd publiceren.
-- **Verbeterde interoperabiliteit:** Door te werken met een gemeenschappelijke
-  vocabulaire wordt het eenvoudiger om data uit verschillende bronnen te
-  integreren en met elkaar te laten samenwerken.
-- **Betere vindbaarheid en toegankelijkheid:** DCAT maakt datasets beter
-  vindbaar, zowel voor machines als voor gebruikers, wat essentieel is voor open
-  data initiatieven.
-- **Voldoen aan Europese standaarden:** Met profielen zoals DCAT-AP sluit je aan
-  bij de Europese open data standaarden, wat de uitwisseling van data tussen
-  overheidsorganisaties vergemakkelijkt.
-- **Efficiëntie in ontwikkeling:** Door gebruik te maken van een standaard
-  metadata schema hoef je niet telkens nieuwe beschrijvingen te maken, wat je
-  ontwikkelingsproces versnelt en vereenvoudigt.
+### Gerelateerde richtlijnen
 
-## Communities
+Nog geen.
 
-- [Federatief Datastelsel](/communities/federatief-datastelsel)
+### Succescriteria
+
+Wanneer voldoe je aan deze richtlijn?
+
+- Je past het data bij de bron principe toe waar mogelijk.
+- Je gebruikt gestandaardiseerde API's voor datatoegang.
+- Je documenteert je datasets met metadata.
+
+Wanneer ben je echt goed bezig?
+
+- Je gebruikt DCAT voor het beschrijven van dataset metadata.
+- Je publiceert linked data op linkeddata.overheid.nl.
+- Je hebt data governance processen ingericht om datakwaliteit te waarborgen.
+
+## Wanneer is deze richtlijn van toepassing?
+
+Deze richtlijn is van toepassing zodra je applicatie data gebruikt of
+produceert, wat vrijwel altijd het geval is.
 
 ## Bronnen
 
-- [standaarden.overheid.nl](https://standaarden.overheid.nl/)
+### Wet- en regelgeving
+
+Geen bekend.
+
+### Beleid
+
+Geen bekend.
+
+### Standaarden
+
+- [DCAT (Data Catalog Vocabulary)](https://www.w3.org/TR/vocab-dcat/)
+- [Standaarden.overheid.nl](https://standaarden.overheid.nl/)
+
+### Communities
+
+- [Linkeddata.overheid.nl](https://linkeddata.overheid.nl)
+- [Federatief Datastelsel](/communities/federatief-datastelsel)
+
+### Literatuur
+
+Geen bekend.
+
+### Bronnen op developer.overheid.nl
+
+Geen bekend.
