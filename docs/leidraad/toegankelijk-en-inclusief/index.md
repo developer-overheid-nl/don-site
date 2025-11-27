@@ -15,8 +15,8 @@ Dit is niet alleen een wettelijke verplichting (zoals het
 [Besluit Digitale Toegankelijkheid Overheid](https://wetten.overheid.nl/BWBR0040936/2018-07-01/)),
 maar ook essentieel voor inclusieve dienstverlening.
 
-Overheidsdiensten moeten voor alle burgers bruikbaar zijn, ongeacht fysieke of
-cognitieve beperkingen. Toegankelijke software is vaak voor iedereen prettiger
+Overheidsdiensten moeten voor iedereen bruikbaar zijn, ongeacht fysieke of
+cognitieve beperkingen. Dit geldt óók voor interne applicaties om arbeidsdiscriminatie te voorkomen. Bovendien is toegankelijke software vaak voor iedereen prettiger
 in gebruik, bijvoorbeeld met duidelijke navigatie en goed contrast.
 
 Vroegtijdig rekening houden met toegankelijkheid voorkomt dure aanpassingen
@@ -81,7 +81,7 @@ Wanneer voldoe je aan deze richtlijn?
 Wanneer ben je echt goed bezig?
 
 - Je test met daadwerkelijke gebruikers met verschillende beperkingen.
-- Je streeft naar WCAG 2.1 niveau AAA waar mogelijk.
+- Je streeft naar WCAG 2.2 niveau AAA waar mogelijk.
 - Je documenteert toegankelijkheidskeuzes en houdt een
   toegankelijkheidsverklaring bij.
 

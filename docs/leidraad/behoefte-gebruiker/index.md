@@ -104,7 +104,7 @@ Wanneer ben je echt goed bezig?
 
 Deze richtlijn is van toepassing op alle softwareontwikkelingsprojecten waarbij
 software wordt ontwikkeld voor eindgebruikers, zowel interne medewerkers als
-externe burgers.
+andere burgers.
 
 ## Bronnen
 
