@@ -97,7 +97,7 @@ public class LogboekInterceptor {
         // Deze annotation moet op de service method
         Logboek annotation = invocationContext.getMethod().getAnnotation(Logboek.class);
         if (annotation == null) {
-            throw new IllegalArgumentException("Logboek annotation mist op service method");
+            throw new IllegalArgumentException("Logboek annotation ontbreekt op service method");
         }
 
         // Start een span binnen deze trace. Dit zorgt er onder andere voor dat de `start_time`
@@ -254,7 +254,7 @@ public class LogboekContext {
 ## Handler voor starten van traces
 
 Om traces vast te kunnen leggen moet er ook een `Tracer` worden aangemaakt.
-Dit gebeurd in de `ProcessingHandler.java`.
+Dit gebeurt in de `ProcessingHandler.java`.
 
 ```java
 package nl.gov.logboekdataverwerking;
@@ -301,3 +301,5 @@ public class ProcessingHandler {
     }
 }
 ```
+
+
