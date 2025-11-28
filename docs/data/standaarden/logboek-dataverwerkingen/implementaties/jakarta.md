@@ -254,7 +254,7 @@ public class LogboekContext {
 ## Handler voor starten van traces
 
 Om traces vast te kunnen leggen moet er ook een `Tracer` worden aangemaakt.
-Dit gebeurd in de `ProcessingHandler.java`.
+Dit gebeurt in de `ProcessingHandler.java`.
 
 ```java
 package nl.gov.logboekdataverwerking;
@@ -301,4 +301,5 @@ public class ProcessingHandler {
     }
 }
 ```
+
 
