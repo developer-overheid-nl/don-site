@@ -97,7 +97,7 @@ public class LogboekInterceptor {
         // Deze annotation moet op de service method
         Logboek annotation = invocationContext.getMethod().getAnnotation(Logboek.class);
         if (annotation == null) {
-            throw new IllegalArgumentException("Logboek annotation mist op service method");
+            throw new IllegalArgumentException("Logboek annotation ontbreekt op service method");
         }
 
         // Start een span binnen deze trace. Dit zorgt er onder andere voor dat de `start_time`
@@ -301,3 +301,4 @@ public class ProcessingHandler {
     }
 }
 ```
+
