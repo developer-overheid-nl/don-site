@@ -16,29 +16,6 @@ belangrijke doelen:
 - Open source projecten vindbaar maken
 - Informatie over een open source project centraliseren
 
-## Voordelen
-
-### Git-platform agnostische oplossing
-
-Veel metadata van open source projecten zit opgeslagen in bijvoorbeeld Gitlab of
-Github. Op het moment dat je de code wilt migreren is het een hoop werk alle
-gegevens opnieuw in te voeren. Publiccode.yml lost dit voor je op, het bestandje
-is namelijk onderdeel van je codebase.
-
-### Machine-leesbare metadata
-
-Door het publiccode.yml bestand in te vullen voorzie je je project van
-machine-leesbare metadata. Deze meta-data kan ingelezen worden door Open Source
-Software Catalogi om jou code zo nog beter vindbaar te maken.
-
-### Vindbaarheid
-
-De publiccode.yml-standaard zorgt op een eenvoudige manier voor vindbaarheid. Op
-het momet dat een codebase een `publiccode.yml` bestand bevat in de root van het
-project, kan het project worden gemarkeerd als een open source project. Bots
-kunnen op die manier makkelijk platforms als Gitlab en Github afstruinen op zoek
-naar projecten met een `publiccode.yml` bestand.
-
 ## Waar voeg ik de `publiccode.yml` toe?
 
 Je voegt de `publiccode.yml` toe in de root (`./`) van je project.
@@ -144,6 +121,29 @@ maintenance:
 
 - [Voorbeelden uit de documentatie van de standaard](https://yml.publiccode.tools/example.html)
 - [Publiccode.yml van Open Zaak](https://github.com/open-zaak/open-zaak/blob/main/publiccode.yaml)
+
+## Voordelen
+
+### Git-platform agnostische oplossing
+
+Veel metadata van open source projecten zit opgeslagen in bijvoorbeeld Gitlab of
+Github. Op het moment dat je de code wilt migreren is het een hoop werk alle
+gegevens opnieuw in te voeren. Publiccode.yml lost dit voor je op, het bestandje
+is namelijk onderdeel van je codebase.
+
+### Machine-leesbare metadata
+
+Door het publiccode.yml bestand in te vullen voorzie je je project van
+machine-leesbare metadata. Deze meta-data kan ingelezen worden door Open Source
+Software Catalogi om jou code zo nog beter vindbaar te maken.
+
+### Vindbaarheid
+
+De publiccode.yml-standaard zorgt op een eenvoudige manier voor vindbaarheid. Op
+het momet dat een codebase een `publiccode.yml` bestand bevat in de root van het
+project, kan het project worden gemarkeerd als een open source project. Bots
+kunnen op die manier makkelijk platforms als Gitlab en Github afstruinen op zoek
+naar projecten met een `publiccode.yml` bestand.
 
 ## Een open standaard in ontwikkeling
 
