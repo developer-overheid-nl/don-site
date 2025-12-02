@@ -57,14 +57,16 @@ description:
     shortDescription:
       Developer Overheid NL is de wegwijzer voor developers die voor of bij de
       overheid ontwikkelen.
+    features:
+      - Kennisbank
+      - API catalogus
+      - Open Source catalogus
 
 legal:
   # De licentie volgens de identifier van de SPDX standaard: https://spdx.org/licenses/
   license: EUPL-1.2
   # Wie is de eigenaar van de copyright op de code?
   mainCopyrightOwner: Stichting Geonovum
-  # Wie is de eigenaar van de repository?
-  repoOwner: Stichting Geonovum
 
 # Voor welk publiek is deze repository bedoeld?
 intendedAudience: # optioneel
