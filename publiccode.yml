@@ -70,7 +70,7 @@ legal:
 intendedAudience: # optioneel
   # In welk land?
   countries:
-    - nl
+    - NL
   # En in welke sector?
   # De mogelijke tags vind je hier: https://yml.publiccode.tools/scope-list.html#scope-list
   scope:
@@ -80,7 +80,7 @@ localisation:
   # In welke talen is dit project beschikbaar?
   # Invullen volgens IETF BCP 47 standaard: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
   availableLanguages:
-    - nl
+    - NL
   # Kunnen er meerdere talen geconfigureerd worden?
   localisationReady: false
 
