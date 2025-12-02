@@ -2,7 +2,7 @@
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/publiccodeyml/publiccode.yml
 
-publiccodeYmlVersion: "0.4"
+publiccodeYmlVersion: "0.5"
 
 # Dit veld bevat de korte naam van het project. Kies hier de naam waaronder het
 # project bekend is bij de meeste mensen.
@@ -15,10 +15,6 @@ landingURL: "https://developer.overheid.nl" # optioneel
 
 # Type software zoals te vinden op: https://yml.publiccode.tools/schema.core.html#key-softwaretype
 softwareType: standalone/web
-
-# Dit is een verplicht veld. Als je geen releaseDate hebt omdat je bijvoorbeeld
-# doet aan Continuous Development vul je hier "1970-01-01" in.
-releaseDate: "1970-01-01"
 
 # Vul hier in op welke platforms de gebruiker de applicatie uitendelijk gaat
 # gebruiken. Dus niet op welk platform de software zelf draait.
@@ -39,13 +35,6 @@ categories:
 
 # De beschrijving van de verschillende statussen zijn te vinden op: https://yml.publiccode.tools/schema.core.html#key-developmentstatus
 developmentStatus: beta
-
-# Welke dependencies zijn er nodig om de applicatie te installeren en te gebruiken?
-dependsOn:
-  open:
-    - name: docusaurus
-      optional: false
-      versionMin: "3.8.0"
 
 description:
   nl:
@@ -68,20 +57,22 @@ description:
     shortDescription:
       Developer Overheid NL is de wegwijzer voor developers die voor of bij de
       overheid ontwikkelen.
+    features:
+      - Kennisbank
+      - API catalogus
+      - Open Source catalogus
 
 legal:
   # De licentie volgens de identifier van de SPDX standaard: https://spdx.org/licenses/
   license: EUPL-1.2
   # Wie is de eigenaar van de copyright op de code?
   mainCopyrightOwner: Stichting Geonovum
-  # Wie is de eigenaar van de repository?
-  repoOwner: Stichting Geonovum
 
 # Voor welk publiek is deze repository bedoeld?
 intendedAudience: # optioneel
   # In welk land?
   countries:
-    - nl
+    - NL
   # En in welke sector?
   # De mogelijke tags vind je hier: https://yml.publiccode.tools/scope-list.html#scope-list
   scope:
@@ -91,7 +82,7 @@ localisation:
   # In welke talen is dit project beschikbaar?
   # Invullen volgens IETF BCP 47 standaard: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
   availableLanguages:
-    - nl
+    - NL
   # Kunnen er meerdere talen geconfigureerd worden?
   localisationReady: false
 
