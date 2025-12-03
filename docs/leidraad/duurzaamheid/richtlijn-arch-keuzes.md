@@ -1,9 +1,9 @@
 ---
-title: "Leg organisatiebrede (architectuur)keuzes vast en draag deze uit"
+title: "Leg organisatiebrede architectuurkeuzes vast en draag deze uit"
 tags: ["architectuur"]
 ---
 
-# Richtlijn: Leg organisatiebrede (architectuur)keuzes vast en draag deze uit
+# Richtlijn: Leg organisatiebrede architectuurkeuzes vast en draag deze uit
 
 Overheidsorganisaties hebben te maken met een veelheid aan applicaties om externe gebruikers en medewerkers te ondersteunen. Bij de beheersing van complexiteit van dit applicatielandschap helpt het als er keuzes gemaakt zijn over architectuur(patronen) en technologie.
 
@@ -40,7 +40,6 @@ Houdt bij het proces om te komen rekening met het volgende:
 - Is er voldoende afweging vanuit verschillende perspectieven, zoals toekomstvastheid, beschikbare kennis, beschikbare tooling?
 - Hoe zorg je dat een keuze ook gebruikt wordt (review op bepaalde momenten, expert (tijdelijk) laten meedraaien in een team tijdens de opstartfase, ...)?
 - Wie bekrachtigt welk soort keuzes (architecture board, een rolspecifiek chapter)?
-- ...
 
 Om een keuze te beproeven kun je gebruik maken van een lichtgewicht proces zoals beschreven in [deze (draft) blog](https://github.com/developer-overheid-nl/don-site/blob/main/blog/draft/do-describe-check-act.md).
 
