@@ -50,7 +50,7 @@ de manier waarop we bij ICTU het verbeterproces hebben aangepakt.
 
 Do-Describe-Check-Act is een poging die verbeteraanpak zo te beschrijven dat het
 herbruikbaar en toepasbaar wordt in jouw organisatie, zonder al te veel aannames
-te doen over hoe je organisatie werkt en welke processen, tools en technologiën
+te doen over hoe je organisatie werkt en welke processen, tools en technologieën
 je toepast.
 
 _Here we go..._
