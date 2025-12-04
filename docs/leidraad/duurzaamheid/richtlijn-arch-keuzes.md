@@ -49,7 +49,7 @@ Voorbeelden van aspecten waarop je als organisatie een keuze kunt maken:
 
 ### Proces
 
-Houdt bij het proces om te komen rekening met het volgende:
+Houdt bij het proces rekening met het volgende:
 
 - Is er een mogelijkheid om af te wijken wanneer nodig ("pas toe of leg uit")?
 - Is er voldoende mogelijkheid voor nieuwe ontwikkelingen?
