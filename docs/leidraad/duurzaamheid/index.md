@@ -58,7 +58,7 @@ op en geven ontwikkelaars vertrouwen bij het doorvoeren van wijzigingen.
 #### Maak organisatiebrede architectuurkeuzes en draag deze uit
 
 Door binnen je organisatie een bepaalde mate van standaardisering toe te passen  
-maak je effectiever gebruik van beschikbare middelen en kennis en vergroot je de 
+maak je effectiever gebruik van beschikbare middelen en kennis, en vergroot je de 
 beheerbaarheid.
 
 #### Continuous monitoring
