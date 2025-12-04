@@ -55,6 +55,12 @@ Door te investeren in geautomatiseerde testen kun je de applicaties met minder
 risico aanpassen en gaan ze langer mee. Geautomatiseerde tests vangen regressies
 op en geven ontwikkelaars vertrouwen bij het doorvoeren van wijzigingen.
 
+#### Maak organisatiebrede architectuurkeuzes en draag deze uit
+
+Door binnen je organisatie een bepaalde mate van standaardisering toe te passen  
+maak je effectiever gebruik van beschikbare middelen en kennis, en vergroot je de 
+beheerbaarheid.
+
 #### Continuous monitoring
 
 Door monitoring in te richten voor applicaties die je in beheer hebt krijg je
@@ -87,6 +93,7 @@ maatwerksoftware te bewaken en technical debt te managen.
 ### Gerelateerde richtlijnen
 
 - [Richtlijn geautomatiseerd testen](richtlijn-geautomatiseerd-testen.md)
+- [Richtlijn maak (architectuur)keuzes en draag deze uit](richtlijn-arch-keuzes.md).
 
 ### Succescriteria
 
