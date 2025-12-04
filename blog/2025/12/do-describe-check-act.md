@@ -66,7 +66,7 @@ reviews en passen Scrum toe. Overeenkomsten in tools, bijvoorbeeld iedereen
 gebruikt GitLab voor continous integration. En overeenkomsten in toegepaste
 technologie, bijvoorbeeld veel applicaties zijn geschreven in Java en hebben een
 event-driven architectuur. Voor het gemak noem ik die processen, tools en
-technologiën hier verder "werkwijzes".
+technologieën hier verder "werkwijzes".
 
 ### Describe
 
