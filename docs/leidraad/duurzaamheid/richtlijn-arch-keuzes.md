@@ -41,7 +41,7 @@ Houdt bij het proces om te komen rekening met het volgende:
 - Hoe zorg je dat een keuze ook gebruikt wordt (review op bepaalde momenten, expert (tijdelijk) laten meedraaien in een team tijdens de opstartfase, ...)?
 - Wie bekrachtigt welk soort keuzes (architecture board, een rolspecifiek chapter)?
 
-Om een keuze te beproeven kun je gebruik maken van een lichtgewicht proces zoals beschreven in [deze (draft) blog](https://github.com/developer-overheid-nl/don-site/blob/main/blog/draft/do-describe-check-act.md).
+Om een keuze te beproeven kun je gebruik maken van een lichtgewicht proces zoals beschreven in [deze blog over do-describe-check-act](https://developer.overheid.nl/blog/2025/12/04/do-describe-check-act).
 
 ### Methoden en technieken
 
