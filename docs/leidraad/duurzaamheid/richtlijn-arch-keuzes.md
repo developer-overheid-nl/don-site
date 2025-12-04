@@ -56,7 +56,7 @@ Houdt bij het proces rekening met het volgende:
 - Is er voldoende afweging vanuit verschillende perspectieven, zoals
   toekomstvastheid, beschikbare kennis, beschikbare tooling?
 - Hoe zorg je dat een keuze ook gebruikt wordt (review op bepaalde momenten,
-  expert (tijdelijk) laten meedraaien in een team tijdens de opstartfase, ...)?
+  expert (tijdelijk) laten meedraaien in een team tijdens de opstartfase?
 - Wie bekrachtigt welk soort keuzes (architecture board, een rolspecifiek
   chapter)?
 
