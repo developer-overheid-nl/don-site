@@ -29,7 +29,6 @@ Voorbeelden van aspecten waarop je als organisatie een keuze kunt maken:
 - Infrastructuurcomponenten (b.v. gebruik van een bepaalde identity provider, API gateway, ...)
 - Open source licenties (b.v. open source componenten met welke licenties kunnen zonder meer gebruikt worden, bij welke is even ruggenspraak nodig, ...)
 - Voorkeur voor bepaalde technische standaarden
-- ...
 
 ### Proces
 
