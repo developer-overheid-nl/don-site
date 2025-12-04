@@ -391,3 +391,5 @@ websub:
   label: Websub
 yaml:
   label: YAML
+quality-management:
+  label: Quality Management

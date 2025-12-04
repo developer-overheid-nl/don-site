@@ -1,9 +1,9 @@
 ---
 authors: [frank-niessink]
-tags: [development, devops]
+tags: [development, devops, quality-management]
 ---
 
-# Een les van ICTU: Do-Describe-Check-Act methode
+# Do-Describe-Check-Act: hoe je je ontwikkelproces verbetert zonder wensdenken
 
 Als je je ontwikkelproces wilt verbeteren zijn er veel standaarden en raamwerken
 beschikbaar. Eén van de bekendere is de Plan-Do-Check-Act (PDCA) cyclus om
@@ -224,7 +224,6 @@ Het Do-Describe-Check-Act model is een raamwerk dat je als organisatie kan
 helpen om je ontwikkelproces te verbeteren. Doordat je in verschillende fases
 werkt kan je op een overzichtelijke manier informatie inwinnen over hoe teams
 precies werken en wat de bestaande best-practices zijn. Vervolgens kan je de
-resultaten vergelijken om te kijken wat wel en wat niet werkt. 
-In tegenstelling tot de Plan-Do-Check-Act cyclus neemt 
-Do-Describe-Check-Act je huidige werkwijze als uitgangspunt 
-zodat je die incrementeel en iteratief kunt verbeteren.
+resultaten vergelijken om te kijken wat wel en wat niet werkt. In tegenstelling
+tot de Plan-Do-Check-Act cyclus neemt Do-Describe-Check-Act je huidige werkwijze
+als uitgangspunt zodat je die incrementeel en iteratief kunt verbeteren.
