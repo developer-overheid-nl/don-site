@@ -29,7 +29,9 @@ kunnen maken van overheidsdiensten.
 
 ## Toegankelijkheid voor iedereen
 
-Burgers kunnen bijvoorbeeld te maken hebben met **permanente
+Toegankelijkheid gaat over het geschikt maken van websites, apps en documenten voor gebruikers met een functiebeperking. 
+
+Sommige burgers hebben **permanente
 functiebeperkingen**:
 
 - slechthorendheid en doofheid
@@ -38,16 +40,17 @@ functiebeperkingen**:
 - motorische beperkingen
 - cognitieve beperkingen
 
-Naast permanente functiebeperkingen kunnen gebruikers ook te kampen hebben met:
+Naast permanente functiebeperkingen, zijn er ook:
 
 - **Tijdelijke functiebeperkingen**, zoals een gebroken pols.
 - **Situationele functiebeperkingen**, bijvoorbeeld fel zonlicht op een scherm
   of een gebruiker die een baby op de arm draagt.
 
-De WCAG 2.1 bevat verschillende succescriteria die aansluiten bij de genoemde
-beperkingen. Deze succescriteria zorgen er bijvoorbeeld voor dat een
-kleurenblinde gebruiker alsnog begrijpt dat een bepaalde bewerking "gevaarlijk"
-kan zijn, terwijl deze niet kan zien dat de desbetreffende knop rood is.
+De WCAG 2.1 bevat succescriteria die barrières wegnemen. Denk aan bijvoorbeeld: 
+
+- dat de website goed blijft werken als de gebruiker inzoomt.
+- dat de website niet afhankelijk is van muisgebruik, maar net zo goed werkt met toetsenbord, stem- en touchbediening.
+- dat een bepaalde bewerking duidelijk gemarkeerd is als "gevaarlijk", zonder dat dit afhangt van de rode kleur van de de desbetreffende knop. 
 
 De WCAG 2.1 dient toegepast te worden op:
 
@@ -133,40 +136,47 @@ welke acceptatiecriteria erop van toepassing zijn. Een voorbeeld hiervan is het
 button component:
 [Button documentatie NL Design System](https://nldesignsystem.nl/button)
 
-### Alle acceptatiecriteria vertaald
+### Alle succescriteria uitgelegd
 
-Je kunt alle acceptatiecriteria van de WCAG 2.1 vinden in de documentatie van NL
-Design System. Deze criteria zijn aangevuld met voorbeelden zodat het
+Je kunt uitleg en interpretatie bij alle succescriteria van de WCAG 2.1 vinden in de documentatie van NL
+Design System. De uitleg is aangevuld met voorbeelden zodat het
 makkelijker te begrijpen is hoe je precies aan een criterium kunt voldoen. De
-lijst van criteria vind je hier:
+uitleg per criterium vind je hier:
 [WCAG criteria op NL Design System](https://nldesignsystem.nl/wcag/)
 
-_Let op: het werk van NL Design System is work in progress, nog niet alle
+_Let op: de verplichte norm is DigiToegankelijk zelf, de teksten bij NL Design System geven een praktische interpretatie. Het werk van NL Design System is work in progress, nog niet alle
 tekstjes zijn compleet. Het goede nieuws is dat jij kunt bijdragen aan het
 compleet maken van alle criteria, door bijvoorbeeld een
 [issue](https://github.com/nl-design-system/documentatie/issues) aan te dragen._
 
+## Pleio community
+
+Er is een [DigiToegankelijk Pleio community](https://digitoegankelijk.pleio.nl/), waar iedereen van de overheid met elkaar kan sparren over vragen rondom het implementeren van digitale toegankelijkheid, denk aan projectmanagement, interpretatie van de eisen en verklaringen (emailadres van de overheid verplicht).
+
 ## Links
 
-[DigiToegankelijk.nl](https://www.digitoegankelijk.nl/)<br/>
-[Gebruikercentraal.nl](https://www.gebruikercentraal.nl/)<br/>
+- [DigiToegankelijk.nl](https://www.digitoegankelijk.nl/)
+- [DigiToegankelijk Pleio community](https://digitoegankelijk.pleio.nl/) (beschikbaar voor mensen met een emailadres van de overheid)
 
 ## Tools
 
 ### Axe
 
-Voor Axe is een specifiek artikel met instructies en gelijk te gebruiken
+Met Axe kun je een deel van de WCAG-criteria automatisch testen. Voor Axe is een specifiek artikel met instructies en gelijk te gebruiken
 configuratie: [Axe accessibility checker](./run-axe.md).
+
+### Microsoft Accessibility Insights
+
+[Microsoft Accessibility Insights](https://accessibilityinsights.io/) helpt bij automatisch en handmatig testen, met hulpmiddelen die je direct op pagina's kunt toepassen (zoals visuele weergave van waar je focus naartoe gaat) en uitgebreide uitleg van de criteria.
 
 ### Playwright
 
-Het end-to-end testing framework Playwright kan gebruikt worden om accessibility
-problemen op te sporen. Een link naar de documentatie vind je hier:
+Het end-to-end testing framework Playwright kan gebruikt worden om een deel van je toegankelijkheidsproblemen op te sporen. Een link naar de documentatie vind je hier:
 [Playwright](https://playwright.dev/docs/accessibility-testing)
 
 ### Wave
 
-Wave is een online tool die websites kan scannen op toegankelijkheidsproblemen:
+Wave is een online tool die websites kan scannen op sommige toegankelijkheidsproblemen:
 [Wave](https://wave.webaim.org/)
 
 ## Communities
@@ -175,6 +185,6 @@ Wave is een online tool die websites kan scannen op toegankelijkheidsproblemen:
 
 ## Bronnen
 
-- [Overzicht accessibility standaardcomponenten NL-Design-System](https://nldesignsystem.nl/componenten/)
-- [DigitaalToegankelijk.nl over de European Accessibility Act (2025)](https://digitaaltoegankelijk.nl/nieuws/european-accessibility-act-2025/)
+- [Wetgeving - DigiToegankelijk](https://www.digitoegankelijk.nl/wetgeving)
+- [Overzicht componenten NL Design System](https://nldesignsystem.nl/componenten/)
 - [Forum Standaardisatie: DigiToegankelijk](https://www.forumstandaardisatie.nl/open-standaarden/digitoegankelijk-en-301-549-met-wcag-21)
