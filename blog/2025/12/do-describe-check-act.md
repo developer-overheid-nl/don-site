@@ -224,6 +224,7 @@ Het Do-Describe-Check-Act model is een raamwerk dat je als organisatie kan
 helpen om je ontwikkel-proces te verbeteren. Doordat je in verschillende fases
 werkt kan je op een overzichtelijke manier informatie inwinnen over hoe teams
 precies werken en wat de bestaande best-practices zijn. Vervolgens kan je de
-resultaten over elkaar heen leggen om te kijken wat wel- en niet werkt. Ook kan
-stelt het je in staat om zo te monitoren en te kijken of je trends kan
-ontdekken.
+resultaten vergelijken om te kijken wat wel en wat niet werkt. 
+In tegenstelling tot de Plan-Do-Check-Act cyclus neemt 
+Do-Describe-Check-Act je huidige werkwijze als uitgangspunt 
+zodat je die incrementeel en iteratief kunt verbeteren.
