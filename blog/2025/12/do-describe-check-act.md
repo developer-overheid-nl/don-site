@@ -221,7 +221,7 @@ DDCA toepast en kun je de verbeteraanpak zelf ook verbeteren.
 ## Conclusie
 
 Het Do-Describe-Check-Act model is een raamwerk dat je als organisatie kan
-helpen om je ontwikkel-proces te verbeteren. Doordat je in verschillende fases
+helpen om je ontwikkelproces te verbeteren. Doordat je in verschillende fases
 werkt kan je op een overzichtelijke manier informatie inwinnen over hoe teams
 precies werken en wat de bestaande best-practices zijn. Vervolgens kan je de
 resultaten vergelijken om te kijken wat wel en wat niet werkt. 
