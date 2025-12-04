@@ -139,7 +139,7 @@ Er zijn uiteraard wel wat randvoorwaarden om DDCA goed te laten werken. Je hebt
 iemand nodig die de beschrijving maakt, onderhoudt en deelt met alle teams. En
 die de jaarlijkse gezamenlijke check organiseert. Daarnaast moet in elk team
 iemand, bijvoorbeeld een kwaliteitsmanager, de check uitvoeren en terugkoppelen
-aan de beheerder van de beschrijving. En teams moeten tijd uiteraard vrijmaken
+aan de beheerder van de beschrijving. En teams moeten natuurlijk tijd vrijmaken
 voor het implementeren van verbeteringen.
 
 ## Hoe ziet de beschrijving er uit?
