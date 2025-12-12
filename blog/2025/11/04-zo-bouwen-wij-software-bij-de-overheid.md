@@ -101,6 +101,5 @@ Locatie: Dev.loer, Utrecht
 
 ### Aanmelden
 
-Deelname is gratis,
-[maar je moet je wel eerst even aanmelden](https://www.formdesk.com/geonovum/zoBouwenWijSoftwareBijDeOverheid_16-12-2025)
-😉
+Aanmelden is helaas niet meer mogelijk omdat het maximum aantal deelnemers
+bereikt is.
