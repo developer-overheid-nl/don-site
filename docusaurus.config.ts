@@ -245,6 +245,12 @@ const config: Config = {
           target: "_self",
         },
         {
+          to: "https://oss.developer.overheid.nl",
+          label: "Repositories",
+          position: "left",
+          target: "_self",
+        },
+        {
           label: "Communities",
           position: "left",
           to: "/communities",
@@ -277,11 +283,6 @@ const config: Config = {
           ],
         },
         { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://oss.developer.overheid.nl",
-          label: "Open Source",
-          position: "right",
-        },
         {
           href: "https://data.overheid.nl",
           label: "Open Data",
@@ -358,22 +359,31 @@ const config: Config = {
           ],
         },
         {
-          title: "API-register",
+          title: "Registers",
           items: [
             {
-              label: "API toevoegen",
+              label: "API's toevoegen",
               to: "https://apis.developer.overheid.nl/apis/toevoegen",
               target: "_self",
             },
             {
-              label: "Statistieken",
+              label: "Repositories toevoegen",
+              to: "https://oss.developer.overheid.nl/repositories/toevoegen",
+              target: "_self",
+            },
+            {
+              label: "API-statistieken",
               to: "https://apis.developer.overheid.nl/api-statistieken",
               target: "_self",
             },
             {
-              label: "Sitearchief",
-              href: "https://minbzk.sitearchief.nl/?subsite=devoverheidapis#archive",
+              label: "Sitearchief API-register",
+              href: "https://minbzk.sitearchief.nl/?subsite=devoverheidapis",
             },
+            {
+              label: "Sitearchief OSS-register",
+              href: "https://minbzk.sitearchief.nl/?subsite=ossdevoverheid",
+            }
           ],
         },
         {
