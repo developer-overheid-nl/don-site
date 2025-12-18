@@ -47,13 +47,6 @@ De standaard bestaat uit de volgende openbare documenten, die iedereen kan inzie
 
 Deze documenten zijn te vinden via [Github](https://github.com/Logius-standaarden/logboek-dataverwerkingen?tab=readme-ov-file#overzicht).
 
-## Referentie implementatie
-
-Er is een referentie implementatie beschikbaar die de samenwerking van verscheidene prototype overheidsapplicaties laat zien.
-De code is beschikbaar [bij Digilab op GitLab](https://gitlab.com/digilab.overheid.nl/ecosystem/logboek-dataverwerkingen/ldv-referentie-implementatie).
-Er zijn instructies toegevoegd hoe de applicatie lokaal te draaien is, alsmede een test omgeving die draait op de Digilab infrastructuur.
-Tevens is de code zelf veelvuldig beschreven met code comments en extra informatie + verwijzingen naar de standaard.
-
 ## Meer informatie of vragen?
 
 Deze standaard draagt bij aan een betrouwbare en transparante overheid.
