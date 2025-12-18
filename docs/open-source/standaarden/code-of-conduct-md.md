@@ -9,8 +9,6 @@ Een gedragscode voeg je toe om vooraf duidelijk te maken welke omgangsvormen je
 verwacht. Het helpt bij het creëren van een respectvolle community en geeft
 houvast als er problemen ontstaan.
 
-Voorbeeld van [OSPO-NL](https://github.com/ospo-nl):
-
 ```markdown showLineNumbers title="./CODE_OF_CONDUCT.md"
 # Gedragscode
 
