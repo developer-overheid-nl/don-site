@@ -9,12 +9,6 @@ Een gedragscode voeg je toe om vooraf duidelijk te maken welke omgangsvormen je
 verwacht. Het helpt bij het creëren van een respectvolle community en geeft
 houvast als er problemen ontstaan.
 
-## Beoordelen pull requests
-
-Een van de onderdelen van Open Source werk is het beoordelen van pull requests.
-Omdat de communicatie-stijlen van mensen hierin sterk kunnen verschillen, is het
-extra belangrijk van tevoren vast te stellen welke normen we hanteren.
-
 Voorbeeld van [OSPO-NL](https://github.com/ospo-nl):
 
 ```markdown showLineNumbers title="./CODE_OF_CONDUCT.md"
