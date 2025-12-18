@@ -19,18 +19,18 @@
   },
   "dependencies": {
     "@axe-core/cli": "^4.10.2",
-    "@docusaurus/core": "^3.9.1",
-    "@docusaurus/plugin-content-docs": "^3.9.1",
-    "@docusaurus/preset-classic": "^3.9.1",
-    "@docusaurus/theme-common": "^3.9.1",
-    "@docusaurus/theme-mermaid": "^3.9.1",
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/plugin-content-docs": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/theme-common": "^3.9.2",
+    "@docusaurus/theme-mermaid": "^3.9.2",
     "@mdx-js/react": "^3.1.0",
     "@rijkshuisstijl-community/components-react": "1.1.0",
     "algoliasearch-helper": "^3.25.0",
     "axios": "^1.11.0",
     "client": "link:@docusaurus/plugin-content-docs/client",
     "clsx": "^2.1.1",
-    "docusaurus-theme-search-typesense": "0.24.0",
+    "docusaurus-theme-search-typesense": "0.26.0",
     "focus-trap-react": "^11.0.4",
     "prism-react-renderer": "^2.4.1",
     "react": "^18.3.1",
@@ -40,13 +40,18 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.1",
-    "@docusaurus/tsconfig": "3.9.1",
-    "@docusaurus/types": "3.9.1",
+    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/types": "3.9.2",
     "@rijkshuisstijl-community/design-tokens": "1.2.0",
     "browser-driver-manager": "^2.0.1",
     "npm-run-all": "^4.1.5",
     "typescript": "~5.8.3"
+  },
+  "peerDependencies": {
+    "node-forge": "1.3.3",
+    "react": "^18.3.1 || 19.0.3 || 19.1.4 || 19.2.3",
+    "react-dom": "^18.3.1 || 19.0.3 || 19.1.4 || 19.2.3"
   },
   "browserslist": {
     "production": [
