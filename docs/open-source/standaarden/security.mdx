@@ -5,7 +5,20 @@ tags:
   - "security"
 ---
 
+import Grid from "../../../src/components/Grid";
+import { Card } from "@rijkshuisstijl-community/components-react";
+
 # SECURITY.md
+
+Een SECURITY.md geeft mensen die een kwetsbaarheid in je project hebben gevonden
+handvatten om deze op een verantwoorde manier aan je terug te koppelen.
+
+## Waarom is dit belangrijk?
+
+Een SECURITY.md voorkomt dat kwetsbaarheden direct publiek worden gemaakt en
+toont aan dat je beveiliging serieus neemt. Het geeft securityonderzoekers
+duidelijke instructies voor het melden van problemen, zodat deze kunnen worden
+opgelost voordat ze schade aanrichten.
 
 ```markdown showLineNumbers title="./SECURITY.md"
 # Securitybeleid
@@ -63,5 +76,15 @@ onze [CHANGELOG.md](CHANGELOG.md).
 ## Contact
 
 Voor vragen over dit beleid, neem contact op via:
-[developer.overheid@geonovum.nl](mailto:security@organisatie.nl).
+[security@organisatie.nl](mailto:security@organisatie.nl).
 ```
+
+<Grid>
+  <Card
+    appearance="default"
+    description="Genereer in één keer een README.md, publiccode.yml, SECURITY.md, CONTRIBUTING.md, LICENCE.md en CHANGELOG.md met onze Repository Docs Generator."
+    heading="Repository Docs Generator"
+    href="https://developer-overheid-nl.github.io/repo-docs-generator/#/publiccode.yml"
+    linkLabel="Naar de tool"
+  />
+</Grid>
