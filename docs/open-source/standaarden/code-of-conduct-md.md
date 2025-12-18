@@ -5,8 +5,8 @@ tags:
 
 # CODE_OF_CONDUCT.md
 
-Een gedragscode voeg je toe om vooraf duidelijk te maken welke omgangsvormen je
-verwacht. Het helpt bij het creëren van een respectvolle community en geeft
+Een **gedragscode** voeg je toe om vooraf duidelijk te maken welke omgangsvormen
+je verwacht. Het helpt bij het creëren van een respectvolle community en geeft
 houvast als er problemen ontstaan.
 
 ```markdown showLineNumbers title="./CODE_OF_CONDUCT.md"
