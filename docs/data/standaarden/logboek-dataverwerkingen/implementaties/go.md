@@ -7,7 +7,7 @@ Tevens is de code zelf veelvuldig beschreven met code comments en extra informat
 
 ## Voorbeeldsnippets
 
-Om een indruk te geven hoe een implementatie in Go er uit ziet, zie onderstaand voorbeeld van het ophalen van informatie van een burger ([source code](https://gitlab.com/digilab.overheid.nl/ecosystem/logboek-dataverwerkingen/ldv-referentie-implementatie/-/blob/3a4b2b8bae9272d02731a716a2e8d6cb8b9f2a54/apps/orgb/backend/application/citizen.go#L45-74)).
+Om een indruk te geven hoe een implementatie in Go eruit ziet, zie onderstaand voorbeeld van het ophalen van informatie van een burger ([source code](https://gitlab.com/digilab.overheid.nl/ecosystem/logboek-dataverwerkingen/ldv-referentie-implementatie/-/blob/3a4b2b8bae9272d02731a716a2e8d6cb8b9f2a54/apps/orgb/backend/application/citizen.go#L45-74)).
 
 ```go
 // Get all data from a citizen
