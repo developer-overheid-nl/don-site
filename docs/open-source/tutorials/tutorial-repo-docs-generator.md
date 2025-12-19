@@ -26,8 +26,9 @@ en vul de JSON aan linkerkant in.
 
 ## 2. Kopieer de inhoud van de bestanden
 
-Kopieer de inhoud van de editor aan de recher kant. Selecteren doe je door
-middel van deze dropdown: ![alt text](./img/screenshot-repo-generator.png)
+Kopieer de inhoud van de editor aan de recher kant. Het selecteren van de
+verschillende templates doe je door middel van deze dropdown:
+![alt text](./img/screenshot-repo-generator.png)
 
 ## 3. Pas de inhoud aan
 
