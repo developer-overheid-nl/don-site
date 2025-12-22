@@ -23,7 +23,7 @@ Wanneer een logregel verwijderd moet worden, is afhankelijk van de situatie van 
 Het belangrijkste is dat de organisatie duidelijk kan aantonen (*verantwoordingsplicht*) waarom een bepaalde bewaartermijn is gekozen en dat deze termijn in lijn is met de AVG. Dit betekent dat de keuze van het datatype minder cruciaal is dan de heldere vastlegging en naleving van de bewaartermijn zelf.
 
 Concreet zou de logverwijderingssituatie er als volgt uit kunnen zien:
-![logverwijderingssituatie Use Case 01](static/img/logboek-dataverwerkingen/UseCase01_afbeelding1.png)
+![logverwijderingssituatie Use Case 01](https://raw.githubusercontent.com/Nil-NMB01/don-site/refs/heads/patch-1/static/img/logboek-dataverwerkingen/UseCase01_afbeelding1.png)
 
 **Scenario 1:**
 Als het is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan zou deze kunnen worden vastgelegd in de `envisedTimeLimit` in een profiel. Dagelijks wordt een batch gedraaid om te bepalen of een logregel mag worden verwijderd. Als `Huidige datum – envisedTimeLimit < end_time` dan mag de logregel worden verwijderd.
@@ -62,7 +62,7 @@ Nee, in het Logboek Verwerkingsgegevens worden geen vlaggen gelogd waardoor kan 
 2. De centrale verwerkingsdienst (intermediair) verwerkt de batch en maakt hier individuele bestanden van. Deze individuele bestanden worden verstuurd naar Logius.
 3. Logius verstuurt het individueel bestand naar de juiste inbox van de burger in MijnOverheid.
 
-![intermediairsituatie_UseCase03](./media/UseCase03_afbeelding1.png)
+![intermediairsituatie_UseCase03](https://raw.githubusercontent.com/Nil-NMB01/don-site/refs/heads/patch-1/static/img/logboek-dataverwerkingen/UseCase03_afbeelding1.png)
 
 ### Logging
 
@@ -106,7 +106,7 @@ Als het bericht 1 op 1 zou worden doorgestuurd, zou één logregel kunnen volsta
 2. De centrale verwerkingsdienst verwerkt batch en maakt hier individuele files van. De individuele files worden verstuurd naar een portaaldienst (bijv. Digipoort).
 3. De portaaldienst verstuurt de individuele file naar de juiste dienstverlener.
 
-![intermediairsituatie_UseCase04](./media/UseCase04_afbeelding1.png)
+![intermediairsituatie_UseCase04](https://raw.githubusercontent.com/Nil-NMB01/don-site/refs/heads/patch-1/static/img/logboek-dataverwerkingen/UseCase04_afbeelding1.png)
 
 <div class="note">
 
@@ -122,7 +122,7 @@ Als er geen HTTP protocol wordt gebruikt, moet er  op een bepaalde manier toch h
 2. De overheidsinstantie bundelt persoonsgebeurtenisberichten in een batch en zendt deze naar een centrale verwerkingsdienst (intermediair).
 3. De centrale verwerkingsdienst verwerkt de batch en maakt hier individuele files van en zendt deze naar het juiste EU-land.
 
-![intermediairsituatie_UseCase05](./media/UseCase05_afbeelding1.png)
+![intermediairsituatie_UseCase05](https://raw.githubusercontent.com/Nil-NMB01/don-site/refs/heads/patch-1/static/img/logboek-dataverwerkingen/UseCase05_afbeelding1.png)
 
 Het proces kan ook andersom:
 
@@ -146,7 +146,7 @@ Het proces kan ook andersom:
 2. De centrale verwerkingsdienst stuurt aanpassing naar de RVIG (Rijksdienst voor identiteitsgegevens). In dit voorbeeld maakt de centrale verwerkingsdienst alleen individuele berichten indien aanpassingen in batchvorm zijn aangeleverd.
 3. De RVIG voert de aanpassing uit in de RNI.
 
-![intermediairsituatie_UseCase06](./media/UseCase06_afbeelding1.png)
+![intermediairsituatie_UseCase06](https://raw.githubusercontent.com/Nil-NMB01/don-site/refs/heads/patch-1/static/img/logboek-dataverwerkingen/UseCase06_afbeelding1.png)
 
 ## Use Case 07: Statistische Informatie via een intermediair
 
@@ -156,7 +156,7 @@ Het proces kan ook andersom:
 2. De centrale verwerkingsdienst verwerkt de batch en stuurt individuele berichten naar zowel de overheidsinstantie als het CBS.
 3. Het CBS anonimiseert de aangeleverde data.
 
-![intermediairsituatie_UseCase07](./media/UseCase07_afbeelding1.png)
+![intermediairsituatie_UseCase07](https://raw.githubusercontent.com/Nil-NMB01/don-site/refs/heads/patch-1/static/img/logboek-dataverwerkingen/UseCase07_afbeelding1.png)
 
 <div class="note">
 
