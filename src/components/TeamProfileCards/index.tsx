@@ -166,6 +166,22 @@ export function ActiveTeam(): ReactNode {
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
+        name="Floris Deutekom"
+        role="Implementatie-ondersteuner"
+        linkedInUrl="https://www.linkedin.com/in/floris-deutekom/"
+        githubUrl="https://github.com/Fdeutekom"
+        icon="/img/team/floris-deutekom.jpg"
+        email="f.deutekom@geonovum.nl"
+      >
+        <Translate>
+          Floris werkt als adviseur in het implementatie-ondersteuningsteam, waarin hij
+          diverse technische vraagstukken omzet in praktische oplossingen. Zijn expertise
+          ligt in IAM en API management, hij houdt zich bezig met architectuur, implementatie
+          en standaardisering. Als hij niet aan het werk is ontwerpt hij zelf spellen of
+          staat hij in de keuken bijzondere dingen te maken.
+        </Translate>
+      </TeamProfileCardCol>
+      <TeamProfileCardCol
         role="Back-end developer"
         name="Matthijs Hovestad"
         githubUrl="https://github.com/pasibun"
