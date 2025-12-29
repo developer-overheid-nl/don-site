@@ -68,7 +68,8 @@ een referentiepunt is voor de toekomst.
 ## Met wie doen we dat?
 
 We zijn [Joost Farla](/blog/authors/joost-farla),
-[Martin van der Plas](/blog/authors/martin-van-der-plas) en
+[Floris Deutekom](/blog/authors/floris-deutekom),
+[Jan Klopper](/blog/authors/jan-klopper) en
 [Frank Terpstra](/blog/authors/frank-terpstra). Een team met jarenlange ervaring
 in het implementeren van API standaarden in software, het opstellen van
 (solution) architecturen met API standaarden als ook het opstellen beheren,
