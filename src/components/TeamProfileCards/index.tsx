@@ -170,7 +170,7 @@ export function ActiveTeam(): ReactNode {
         role="Implementatie-ondersteuner"
         linkedInUrl="https://www.linkedin.com/in/floris-deutekom/"
         githubUrl="https://github.com/Fdeutekom"
-        icon="/img/team/floris-deutekom.jpg"
+        icon="/img/team/floris-deutekom.png"
         email="f.deutekom@geonovum.nl"
       >
         <Translate>
