@@ -17,6 +17,16 @@ floris-deutekom:
     linkedin: floris-deutekom
     github: Fdeutekom
     email: f.deutekom@geonovum.nl
+
+Jan Klopper:
+  name: Jan Klopper
+  title: Implementatie ondersteuner - developer.overheid.nl
+  image_url: https://developer.overheid.nl/img/team/jan-klopper.png
+  page: true
+  socials:
+    linkedin: janklopper
+    github: janklopper
+    email: j.klopper@geonovum.nl
     
 dimitri-van-hees:
   name: Dimitri van Hees
