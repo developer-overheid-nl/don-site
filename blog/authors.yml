@@ -8,6 +8,16 @@ joost-farla:
     github: joostfarla
     email: j.farla@geonovum.nl
 
+floris-deutekom:
+  name: Floris Deutekom
+  title: Implementatie ondersteuner - developer.overheid.nl
+  image_url: https://developer.overheid.nl/img/team/floris-deutekom.png
+  page: true
+  socials:
+    linkedin: floris-deutekom
+    github: Fdeutekom
+    email: f.deutekom@geonovum.nl
+    
 dimitri-van-hees:
   name: Dimitri van Hees
   title: Product Owner - developer.overheid.nl
