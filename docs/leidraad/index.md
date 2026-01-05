@@ -29,7 +29,7 @@ standaard, techniek of principe? Laat het ons weten via
 [mail](mailto:developer.overheid@geonovum.nl). Wil je bijdragen aan dit project?
 Bekijk dan de
 [bijdragerichtlijnen van NeRDS](https://minbzk.github.io/NeRDS/production/Over-NeRDS/CONTRIBUTING/)
-voor meer informatie.
+voor meer informatie. Gebruik voor een nieuwe richtlijn het [richtlijnsjabloon](./richtlijnsjabloon-v1.md).
 
 :::
 
