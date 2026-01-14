@@ -193,6 +193,13 @@ html:
 htmx:
   description: HTMX.
   label: HTMX
+iam:
+  description: 
+    "Identity & Access Management is het raamwerk van processen en technologieën dat regelt
+    wie toegang krijgt tot welke digitale informatie e systemen, op welk moment, om welke reden.
+    Het gaat om 'Wie ben je? en 'Wat mag je doen?', in het kader van beveiliging."
+  wie toega
+  label: IAM
 infra:
   label: Infra
 interoperability:
