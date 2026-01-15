@@ -8,7 +8,7 @@ image: ./img/justid.png
 
 ![Logo van Justid](./img/justid.png)
 
-Buiten de Rijksoverheid is het gebruik van (REST) APIs voor het ontsluiten van informatie al jaren gemeengoed. Binnen de Rijksoverheid en specifiek binnen Justitie en Veiligheid neemt de inzet van (REST) API's de afgelopen jaren toe. Zo hebben we als Justid in 2024 de [Gouden API gewonnen voor onze CPA Register API](../../2024/12/11-gouden-api-award-voor-cpa-register-api.md) en in 2025 de Zilveren API voor de API van het Centraal Digitaal Depot (CDD+).
+Buiten de Rijksoverheid is het gebruik van (REST) APIs voor het ontsluiten van informatie al jaren gemeengoed. Binnen de Rijksoverheid en specifiek binnen [Justitie en Veiligheid](https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid) neemt de inzet van (REST) API's de afgelopen jaren toe. Zo hebben we als [Justid](https://www.justid.nl) in 2024 de [Gouden API gewonnen voor onze CPA Register API](../../2024/12/11-gouden-api-award-voor-cpa-register-api.md) en in 2025 de Zilveren API voor de API van het Centraal Digitaal Depot (CDD+).
 
 <!-- truncate -->
 
