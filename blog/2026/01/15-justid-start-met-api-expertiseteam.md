@@ -2,6 +2,7 @@
 authors: [henry-fidder]
 tags: [kennisplatform-apis, api, gegevensuitwisseling]
 image: ./img/justid.png
+draft: true
 ---
 
 # Justid start met API-Expertiseteam Justitie en Veiligheid
@@ -16,8 +17,8 @@ Binnen Justitie en Veiligheid hebben we met elkaar afgesproken om berichtuitwiss
 
 We krijgen binnen gegevensuitwisseling steeds vaker te maken met nieuwe applicaties die enkel nog informatie kunnen uitwisselen via een (REST) API of bestaande applicaties waarbij ondersteuning voor het ebMS protocol stopt. Daarnaast vraagt de inzet van (REST) API's meer aandacht voor zaken als autorisatie, authenticatie, schaalbaarheid en beheersbaarheid. Ook krijgen we vaker vragen zoals; hoe begin ik met het bouwen van een API en waar moet ik rekening mee houden?
 
-Daarom zijn we vanuit Justid (in opdracht van Directie Informatievoorziening en Inkoop) eind 2025 begonnen met een API-expertiseteam. Het API-expertiseteam bestaat uit collega's met expertise op het gebied van toegang, gegevensuitwisseling en semantiek. We werken daarbij ook samen met de collega's van het [Kennisplatform API's](../../../communities/kennisplatform-apis).
+Daarom zijn we vanuit Justid (in opdracht van Directie Informatievoorziening en Inkoop) eind 2025 begonnen met een API-expertiseteam. Het API-expertiseteam bestaat uit collega's met expertise op het gebied van toegang, gegevensuitwisseling en semantiek. We werken daarbij ook samen met de collega's van het [Kennisplatform API's](../../../../communities/kennisplatform-apis).
 
 De ambities zijn onder andere om hier binnen Justitie en Veiligheid een voortrekkersrol te pakken, kennissessies te organiseren, vragen van ketenpartners te beantwoorden en te adviseren. Daarnaast zijn we bezig met opzetten van een API-expertiseportaal (met onder andere een beslisboom ebMS vs API, een F.A.Q en integratie van de reeds bestaande API-Catalogus Justitie en Veiligheid)
 
-Het API-expertiseteam is bereikbaar via [api-expertiseteam@justid.nl](api-expertiseteam@justid.nl)
+Het API-expertiseteam is bereikbaar via [api-expertiseteam@justid.nl](mailto:api-expertiseteam@justid.nl).
