@@ -2,6 +2,10 @@
 authors: [henry-fidder]
 tags: [kennisplatform-apis, api, gegevensuitwisseling]
 image: ./img/justid.png
+description:
+  Buiten de Rijksoverheid is het gebruik van (REST) APIs voor het ontsluiten van informatie al jaren gemeengoed.
+  Binnen de Rijksoverheid en specifiek binnen Justitie en Veiligheid neemt de inzet van (REST) API's de afgelopen jaren toe.
+  Zo hebben we als Justid in 2024 de Gouden API gewonnen voor onze CPA Register API en in 2025 de Zilveren API voor de API van het Centraal Digitaal Depot (CDD+).
 ---
 
 # Justid start met API-Expertiseteam Justitie en Veiligheid

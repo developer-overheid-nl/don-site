@@ -1,6 +1,9 @@
 ---
 authors: [frank-niessink]
 tags: [development, devops, quality-management]
+description:
+  Als je je ontwikkelproces wilt verbeteren zijn er veel standaarden en raamwerken beschikbaar.
+  Eén van de bekendere is de Plan-Do-Check-Act (PDCA) cyclus om continue verbetering te realiseren.
 ---
 
 # Do-Describe-Check-Act: hoe je je ontwikkelproces verbetert zonder wensdenken
