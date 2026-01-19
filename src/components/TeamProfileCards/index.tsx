@@ -230,6 +230,24 @@ export function ActiveTeam(): ReactNode {
           haar vrije tijd komt ze tot rust tijdens een stevige hardloopsessie.
         </Translate>
       </TeamProfileCardCol>
+      <TeamProfileCardCol
+        name="Jan Klopper"
+        linkedInUrl="https://www.linkedin.com/in/janklopper/"
+        icon="/img/team/vivian-van-der-heijden-hanssen.jpg"
+        email="j.klopper@geonovum.nl"
+        role="Implementatieadviseur internetstandaarden."
+      >
+        <Translate>
+          Jan is `de vraagbaak` als het om Internetstandaarden en de daarbij 
+          behorende security en compliancy kaders. Gebruik hiervan stimuleren, 
+          uitleggen hoe, en wat, en vooral ook gemakkelijker maken is wat hem 
+          bezig houdt. Naast zijn werk voor ons verbouwt hij een boerderij en 
+          is hij oprichter van de Stichting Librekat waarlangs OpenKAT wordt 
+          doorontwikkeld en Stichting eth0 voor de Nederlandse Hacker 
+          community.
+        </Translate>
+      </TeamProfileCardCol>
+      
     </div>
   );
 }
