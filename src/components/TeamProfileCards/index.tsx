@@ -233,7 +233,7 @@ export function ActiveTeam(): ReactNode {
       <TeamProfileCardCol
         name="Jan Klopper"
         linkedInUrl="https://www.linkedin.com/in/janklopper/"
-        icon="/img/team/vivian-van-der-heijden-hanssen.jpg"
+        icon="/img/team/jan-klopper.jpg"
         email="j.klopper@geonovum.nl"
         role="Implementatieadviseur internetstandaarden."
       >
