@@ -15,7 +15,7 @@ Diglab is een plek waar verschillende overheidsorganisaties samenwerken aan slim
 
 ## Meedenken?
 
-Sluit ja aan bij de Digilab-community op [Mattermost](https://digilab.overheid.nl/chat/). Ben je nieuw bij Mattermost? Maak dan eerst gratis een Pleio-account aan.
+Sluit je aan bij de Digilab-community op [Mattermost](https://digilab.overheid.nl/chat/). Ben je nieuw bij Mattermost? Maak dan eerst gratis een Pleio-account aan.
 
 ## Op de hoogte blijven?
 
