@@ -6,7 +6,7 @@ tags:
 title: "Digilab"
 ---
 
-Digilab is een plek waar verschillende overheidsorganisaties samenwerken aan slim en verantwoord datadelen. We bouwen en testen technische afspraken en moderne standaarden in de praktijk. Daarbij werken we bijvoorbeeld met Go, Rust, Python en Kubernetes. Eens per jaar organiseren we een fieldlab waar we met zo’n 20 overheidsorganisaties werken aan een praktijkcase en testen hoe we als overheid samen kunnen werken binnen het Federatieve Datastelsel.
+Digilab is een plek waar verschillende overheidsorganisaties samenwerken aan slim en verantwoord datadelen. We bouwen en testen technische afspraken en moderne standaarden in de praktijk. Daarbij werken we bijvoorbeeld met Go, Rust, Python en Kubernetes. Eens per jaar organiseren we een fieldlab waar we met zo'n 20 overheidsorganisaties werken aan een praktijkcase en testen hoe we als overheid samen kunnen werken binnen het Federatieve Datastelsel.
 
 ## Meer informatie?
 
