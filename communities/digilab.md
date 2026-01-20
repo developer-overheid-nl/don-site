@@ -10,7 +10,7 @@ Diglab is een plek waar verschillende overheidsorganisaties samenwerken aan slim
 
 ## Meer informatie?
 
-- Kijk op onze [website](https://digilab.overheid.nl) voor een overzicht van onze projecten, evenementen die we organiseren de puzzels waar we aan werken.
+- Kijk op onze [website](https://digilab.overheid.nl) voor een overzicht van onze projecten, evenementen die we organiseren en de puzzels waar we aan werken.
 - Lees de [whitepaper](https://digilab.overheid.nl/projecten/fieldlab-proactieve-dienstverlening/whitepaper/) over ons Fieldlab Pro-actieve Dienstverlening (2024)
 
 ## Meedenken?
