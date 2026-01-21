@@ -238,7 +238,7 @@ export function ActiveTeam(): ReactNode {
         role="Implementatieadviseur internetstandaarden."
       >
         <Translate>
-          Jan is `de vraagbaak` als het om Internetstandaarden en de daarbij 
+          Jan is 'de vraagbaak' als het om Internetstandaarden en de daarbij 
           behorende security en compliancy kaders. Gebruik hiervan stimuleren, 
           uitleggen hoe, en wat, en vooral ook gemakkelijker maken is wat hem 
           bezig houdt. Naast zijn werk voor ons verbouwt hij een boerderij en 
