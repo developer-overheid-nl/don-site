@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = "Developer.overheid.nl - Ministerie van Binnenlandse zaken"
+SPDX-License-Identifier = "EUPL-1.2"
