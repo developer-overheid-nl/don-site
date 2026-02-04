@@ -88,7 +88,9 @@ op Europese verordeningen zoals de eIDAS 2.0 wallet, die weliswaar geen
 OIDC(4VC/4VP) vereist maar wel erop toegespitst is om hiervan gebruik te gaan
 maken (zie
 [deze](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework)
-publicatie), zullen hierdoor versimpeld worden, wat minder verstoring in gebruik
+publicatie en
+[hier](https://github.com/orgs/eu-digital-identity-wallet/projects/24/views/2)
+de roadmap), zullen hierdoor versimpeld worden, wat minder verstoring in gebruik
 voor burgers oplevert (en natuurlijk een soepeler proces voor de instanties die
 het implementeren). Kortom, er zijn veel voordelen voor iedereen aan verbonden
 om OIDC aan te gaan bieden voor de Nederlandse Identiteitsdiensten.
