@@ -241,8 +241,7 @@ nieuwe standaard is zullen we deze tutorial updaten met JSON Schema voorbeelden.
 ### Update de OAS met de schemas
 
 Kopieer elk schema hierboven naar het corresponderende schema in de Swagger
-editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken. Uiteindelijk
-zou de spec er nu als volgt uit moeten zien:
+editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
 
 <details>
   <summary>De spec zou er op dit moment zo uit moeten zien</summary>
