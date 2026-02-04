@@ -13,6 +13,16 @@ Design Rules. De linter is gebaseerd op het Open Source project
 Een OpenAPI Specificatie kan online getest worden via onze online OAS Checker:
 [https://developer-overheid-nl.github.io/oas-checker](https://developer-overheid-nl.github.io/oas-checker)
 
+### Resultaten interpreteren
+
+De OAS Checker toont drie soorten meldingen:
+
+| Type    | Betekenis                                                                 |
+| ------- | ------------------------------------------------------------------------- |
+| Error   | Moet opgelost worden - de OAS voldoet niet aan een verplichte ADR-regel.  |
+| Warning | Aanbevolen om op te lossen - de OAS voldoet niet aan een aanbevolen regel. |
+| Info    | Ter informatie - suggesties voor verbetering.                             |
+
 ## CLI
 
 Nadat je Spectral geïnstalleerd hebt, kun je een OAS via de commandline op de
@@ -25,8 +35,11 @@ $ spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_UR
 
 ## IDE
 
-Sommige IDEs ondersteunen Spectral via extensies of plugins. Eén daarvan is
-VSCode. Hieronder staat beschreven hoe je de ADR Linter kunt gebruiken met
+Sommige IDEs ondersteunen Spectral via extensies of plugins.
+
+### Visual Studio Code
+
+Hieronder staat beschreven hoe je de ADR Linter kunt gebruiken met
 [de officiele Spectral extensie voor Visual Studio Code](https://github.com/stoplightio/vscode-spectral):
 
 ```bash
@@ -38,6 +51,15 @@ $ curl -L https://static.developer.overheid.nl/adr/ruleset.yaml > .spectral.yml
 
 # Run the IDE
 $ code
+```
+
+### IntelliJ IDEA
+
+Voor IntelliJ-based IDEs (IntelliJ IDEA, WebStorm, etc.) is er de [Spectral plugin](https://plugins.jetbrains.com/plugin/18520-spectral). Na installatie kun je een `.spectral.yaml` bestand in je project root plaatsen met de volgende inhoud:
+
+```yaml
+extends:
+  - https://static.developer.overheid.nl/adr/ruleset.yaml
 ```
 
 ## Docker
