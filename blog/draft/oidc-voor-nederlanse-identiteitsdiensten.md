@@ -39,17 +39,16 @@ basis van simpele, door de eigenaar van de data goedgekeurde “consent”. Ook 
 het API-first en kanaalonafhankelijk, in tegenstelling tot SAML welke echt
 browser-centrisch is; de wereld is dit echter niet meer. Daarnaast is de instap
 voor developers een stuk lager door de lichtgewicht aard van de berichtenstromen
-(JSON en REST i.p.v. XML, zie
-<https://developer.overheid.nl/kennisbank/security/standaarden/oidc> en
-<https://developer.overheid.nl/kennisbank/security/standaarden/saml>) en de
-bekendheid van de techniek over de gehele wereld. Het is ook flexibel en
-toekomstvast; door OIDC flows als Authorization Code (met PKCE) voor web en apps
-en Device Code voor beperkte apparaten is OIDC veilig in te zetten voor vele
-gebruiksscenario’s, zonder protocoluitbreidingen of workarounds. Tot slot is er
-een sterkere aansluiting mogelijk op basis van “zero trust”, omdat elke aparte
-request in OIDC expliciet geautoriseerd is, tokens context afhankelijk en
-slechts van korte duur zijn, en er minder afhankelijkheid is van sessies. SAML
-is daar nooit voor ontworpen, OIDC wel.
+(JSON en REST i.p.v. XML, zie </kennisbank/security/standaarden/oidc> en
+</kennisbank/security/standaarden/saml>) en de bekendheid van de techniek over
+de gehele wereld. Het is ook flexibel en toekomstvast; door OIDC flows als
+Authorization Code (met PKCE) voor web en apps en Device Code voor beperkte
+apparaten is OIDC veilig in te zetten voor vele gebruiksscenario’s, zonder
+protocoluitbreidingen of workarounds. Tot slot is er een sterkere aansluiting
+mogelijk op basis van “zero trust”, omdat elke aparte request in OIDC expliciet
+geautoriseerd is, tokens context afhankelijk en slechts van korte duur zijn, en
+er minder afhankelijkheid is van sessies. SAML is daar nooit voor ontworpen,
+OIDC wel.
 
 ## Voordelen van SAML
 
