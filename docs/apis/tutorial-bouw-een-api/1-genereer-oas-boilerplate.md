@@ -1,6 +1,10 @@
 # 1. Genereer boilerplate OAS
 
-In deze stap gebruiken we de [OAS Generator](https://developer-overheid-nl.github.io/oas-generator) om een basis OpenAPI Specification te genereren. We voeren wat metadata en resources in, en de generator maakt een complete OAS die al voldoet aan de API Design Rules.
+In deze stap gebruiken we de
+[OAS Generator](https://developer-overheid-nl.github.io/oas-generator) om een
+basis OpenAPI Specification te genereren. We voeren wat metadata en resources
+in, en de generator maakt een complete OAS die al voldoet aan de API Design
+Rules.
 
 ## Verplichte metadata
 
@@ -134,13 +138,17 @@ De volgende zaken zijn nu automatisch gegenereerd:
 
 ## Wat hebben we geleerd?
 
-- Hoe we de **OAS Generator** gebruiken om snel een basis OpenAPI Specification te maken
-- Welke **metadata** verplicht is volgens de ADR (titel, omschrijving, contactgegevens)
+- Hoe we de **OAS Generator** gebruiken om snel een basis OpenAPI Specification
+  te maken
+- Welke **metadata** verplicht is volgens de ADR (titel, omschrijving,
+  contactgegevens)
 - Hoe we **resources** definiëren met enkelvoud/meervoud en readonly-opties
 - Welke **operaties** automatisch gegenereerd worden (GET, POST, PUT, DELETE)
 
 ## Volgende stap
 
-We hebben nu een basis OAS die voldoet aan de ADR, maar de schemas bevatten alleen een `id` property. In de volgende stap gaan we de schemas uitbreiden met alle velden die we nodig hebben voor onze Bier API.
+We hebben nu een basis OAS die voldoet aan de ADR, maar de schemas bevatten
+alleen een `id` property. In de volgende stap gaan we de schemas uitbreiden met
+alle velden die we nodig hebben voor onze Bier API.
 
-[Ga naar stap 2: Modelleer de schemas](./2-schemas.md)
+[Ga naar stap 2: Modelleer de schemas](./2-modelleer-schemas.md)

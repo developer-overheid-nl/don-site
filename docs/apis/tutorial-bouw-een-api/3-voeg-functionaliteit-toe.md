@@ -554,4 +554,4 @@ De OAS is nu functioneel compleet. Voordat we code gaan genereren, is het
 belangrijk om te valideren of onze specificatie nog steeds voldoet aan de API
 Design Rules.
 
-[Ga naar stap 4: Valideer de OAS](./4-validate.md)
+[Ga naar stap 4: Valideer de OAS](./4-valideer-oas.md)

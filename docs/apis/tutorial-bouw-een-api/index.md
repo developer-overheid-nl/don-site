@@ -35,15 +35,16 @@ Meer weten over de standaarden die we in deze tutorial gebruiken? Lees dan:
 
 ## Stappen overzicht
 
-1. [**Genereer boilerplate OAS**](./1-generate.md) - Maak een basis OpenAPI
-   Specification met onze OAS Generator
-2. [**Modelleer de schemas**](./2-schemas.md) - Breid de schemas uit voor onze
-   specifieke usecase
-3. [**Voeg functionaliteit toe**](./3-functionality.md) - Bijvoorbeeld query
-   parameters voor filtering
-4. [**Valideer de OAS**](./4-validate.md) - Check of de specificatie nog steeds
-   voldoet aan de ADR
-5. [**Genereer API code**](./5-codegen.md) - Genereer werkende API code
+1. [**Genereer boilerplate OAS**](./1-genereer-oas-boilerplate.md) - Maak een
+   basis OpenAPI Specification met onze OAS Generator
+2. [**Modelleer de schemas**](./2-modelleer-schemas.md) - Breid de schemas uit
+   voor onze specifieke usecase
+3. [**Voeg functionaliteit toe**](./3-voeg-functionaliteit-toe.md) -
+   Bijvoorbeeld query parameters voor filtering
+4. [**Valideer de OAS**](./4-valideer-oas.md) - Check of de specificatie nog
+   steeds voldoet aan de ADR
+5. [**Genereer API code**](./5-genereer-api-code.md) - Genereer werkende API
+   code
 
 ## Design-first
 
@@ -58,4 +59,4 @@ voordat we code schrijven. De voordelen hiervan zijn:
 
 ## Klaar om te beginnen?
 
-[Start met stap 1: Genereer boilerplate OAS](./1-generate.md)
+[Start met stap 1: Genereer boilerplate OAS](./1-genereer-oas-boilerplate.md)

@@ -543,4 +543,4 @@ voor meer informatie.
 Onze OAS is gevalideerd en voldoet aan de API Design Rules. Nu is het tijd om
 daadwerkelijk code te genereren en onze API tot leven te brengen.
 
-[Ga naar stap 5: Genereer API code](./5-codegen.md)
+[Ga naar stap 5: Genereer API code](./5-genereer-api-code.md)
