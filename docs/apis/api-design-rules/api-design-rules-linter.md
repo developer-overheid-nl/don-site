@@ -19,9 +19,9 @@ De OAS Checker toont drie soorten meldingen:
 
 | Type    | Betekenis                                                                 |
 | ------- | ------------------------------------------------------------------------- |
-| Error   | Moet opgelost worden - de OAS voldoet niet aan een verplichte ADR-regel   |
-| Warning | Aanbevolen om op te lossen - de OAS voldoet niet aan een aanbevolen regel |
-| Info    | Ter informatie - suggesties voor verbetering                              |
+| Error   | Moet opgelost worden - de OAS voldoet niet aan een verplichte ADR-regel.  |
+| Warning | Aanbevolen om op te lossen - de OAS voldoet niet aan een aanbevolen regel. |
+| Info    | Ter informatie - suggesties voor verbetering.                             |
 
 ## CLI
 

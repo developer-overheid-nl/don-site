@@ -77,13 +77,13 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
   </TabItem>
   <TabItem value="HTTPS">
     ```bash
-    git clone https://github.com:developer-overheid-nl/codegen-templates.git
+    git clone https://github.com/developer-overheid-nl/codegen-templates.git
     ```
   </TabItem>
-  <TabItem value="Github CLI">
-  ```bash
+  <TabItem value="GitHub CLI">
+    ```bash
     gh repo clone developer-overheid-nl/codegen-templates
-  ```
+    ```
   </TabItem>
 </Tabs>
 
