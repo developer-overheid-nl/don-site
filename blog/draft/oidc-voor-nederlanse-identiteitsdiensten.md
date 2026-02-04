@@ -39,9 +39,9 @@ basis van simpele, door de eigenaar van de data goedgekeurde “consent”. Ook 
 het API-first en kanaalonafhankelijk, in tegenstelling tot SAML welke echt
 browser-centrisch is; de wereld is dit echter niet meer. Daarnaast is de instap
 voor developers een stuk lager door de lichtgewicht aard van de berichtenstromen
-(JSON en REST i.p.v. XML, zie </kennisbank/security/standaarden/oidc> en
-</kennisbank/security/standaarden/saml>) en de bekendheid van de techniek over
-de gehele wereld. Het is ook flexibel en toekomstvast; door OIDC flows als
+(JSON en REST i.p.v. XML, zie [OIDC](/kennisbank/security/standaarden/oidc) en
+[SAML](/kennisbank/security/standaarden/saml)) en de bekendheid van de techniek
+over de gehele wereld. Het is ook flexibel en toekomstvast; door OIDC flows als
 Authorization Code (met PKCE) voor web en apps en Device Code voor beperkte
 apparaten is OIDC veilig in te zetten voor vele gebruiksscenario’s, zonder
 protocoluitbreidingen of workarounds. Tot slot is er een sterkere aansluiting
@@ -77,20 +77,21 @@ implementatie bij de overheid zorgt ervoor dat de burger betere, diversere
 dienstverlening kan verwachten. Door minder afhankelijk te zijn van sessies en
 gemakkelijke SSO ondersteuning door steeds met te behouden tokens aan te kunnen
 kloppen bij userinfo endpoints komt de burger minder vaak voor “u bent
-uitgelogd” momenten te staan
-(<https://darutk.medium.com/native-sso-0137f9431782>). Met OIDC kan bijv. DigiD
-eenvoudiger native mobiele apps ondersteunen zonder browser-hacks voor speciale
-situaties, zoals nu met app2app nog wel eens wordt gedaan. Er is daarnaast een
-heel duidelijke “consent” laag in OIDC waar de eigenaar van de data toestemming
-kan geven op het gebruik van zijn gegevens, zodat de burger transparantie
-ervaart en zelf in controle blijft. Ook de toekomstige aansluiting op Europese
-verordeningen zoals de eIDAS 2.0 wallet, die weliswaar geen OIDC(4VC/4VP)
-vereist maar wel erop toegespitst is om hiervan gebruik te gaan maken
-(<https://indicio.tech/blog/get-ready-for-eidas-2-0-with-openid/>), zullen
-hierdoor versimpeld worden, wat minder verstoring in gebruik voor burgers
-oplevert (en natuurlijk een soepeler proces voor de instanties die het
-implementeren). Kortom, er zijn veel voordelen voor iedereen aan verbonden om
-OIDC aan te gaan bieden voor de Nederlandse Identiteitsdiensten.
+uitgelogd” momenten te staan (zie bijv.
+[blogpost]https://darutk.medium.com/native-sso-0137f9431782). Met OIDC kan bijv.
+DigiD eenvoudiger native mobiele apps ondersteunen zonder browser-hacks voor
+speciale situaties, zoals nu met app2app nog wel eens wordt gedaan. Er is
+daarnaast een heel duidelijke “consent” laag in OIDC waar de eigenaar van de
+data toestemming kan geven op het gebruik van zijn gegevens, zodat de burger
+transparantie ervaart en zelf in controle blijft. Ook de toekomstige aansluiting
+op Europese verordeningen zoals de eIDAS 2.0 wallet, die weliswaar geen
+OIDC(4VC/4VP) vereist maar wel erop toegespitst is om hiervan gebruik te gaan
+maken (zie
+[deze](https://indicio.tech/blog/get-ready-for-eidas-2-0-with-openid/) EU
+publicatie), zullen hierdoor versimpeld worden, wat minder verstoring in gebruik
+voor burgers oplevert (en natuurlijk een soepeler proces voor de instanties die
+het implementeren). Kortom, er zijn veel voordelen voor iedereen aan verbonden
+om OIDC aan te gaan bieden voor de Nederlandse Identiteitsdiensten.
 
 ## Alternatief, geen vervanging
 
@@ -115,5 +116,5 @@ als we DigiD, eHerkenning en eIDAS klaar willen maken voor de komende jaren dan
 is OIDC geen nice-to-have. Het is een logische vervolgstap die we als
 alternatief aan moeten gaan bieden. Het OIDC NLGov profiel is immers op de “Pas
 toe of leg uit” lijst van standaarden gezet
-(<https://gitdocumentatie.logius.nl/publicatie/api/oidc/>); laten we het dan ook
-mogelijk gaan maken om die te gaan gebruiken.
+([hier](https://gitdocumentatie.logius.nl/publicatie/api/oidc/) te vinden);
+laten we het dan ook mogelijk gaan maken om die te gaan gebruiken.
