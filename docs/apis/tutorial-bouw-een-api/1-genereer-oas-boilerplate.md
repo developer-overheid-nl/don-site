@@ -136,6 +136,17 @@ De volgende zaken zijn nu automatisch gegenereerd:
 | Errors      | Voor 4XX statuscodes (404 not found, 400 bad request, etc.) wordt een `problem+json` response teruggegeven. Deze komt direct van `https://static.developer.overheid.nl` en voldoet aan de ADR.                                                                                                                                     |
 | `schemas`   | In `/components` worden de bijbehorende schemas gegenereerd. Deze bevatten standaard een `id` property omdat een leeg schema niet valid is. In de volgende stap gaan we deze schemas aanpassen naar onze behoeften.                                                                                                                |
 
+:::tip Handmatige verbeteringen
+
+De generator levert een prima startpunt, maar er zijn nog wat zaken die
+handmatig verbeterd kunnen worden. Zo staat er bijvoorbeeld "Nieuwe bier
+aanmaken" wat in goed Nederlands "Nieuw bier aanmaken" moet zijn. Ook staan er
+`@TODO` placeholders in sommige omschrijvingen. Voor deze tutorial en voor
+ADR-compliancy maakt dit niet uit, maar in een echte API wil je natuurlijk alles
+nalopen en van correcte omschrijvingen voorzien.
+
+:::
+
 ## Wat hebben we geleerd?
 
 - Hoe we de **OAS Generator** gebruiken om snel een basis OpenAPI Specification
