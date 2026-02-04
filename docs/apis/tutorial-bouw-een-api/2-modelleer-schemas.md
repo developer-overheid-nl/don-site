@@ -738,4 +738,4 @@ voorbeeldwaarden hebben toegevoegd.
 Onze schemas zijn nu compleet. In de volgende stap gaan we functionaliteit
 toevoegen aan de API, zoals het filteren van brouwerijen op grootte.
 
-[Ga naar stap 3: Voeg functionaliteit toe](./3-functionality.md)
+[Ga naar stap 3: Voeg functionaliteit toe](./3-voeg-functionaliteit-toe.md)
