@@ -87,7 +87,7 @@ transparantie ervaart en zelf in controle blijft. Ook de toekomstige aansluiting
 op Europese verordeningen zoals de eIDAS 2.0 wallet, die weliswaar geen
 OIDC(4VC/4VP) vereist maar wel erop toegespitst is om hiervan gebruik te gaan
 maken (zie
-[deze](https://indicio.tech/blog/get-ready-for-eidas-2-0-with-openid/) EU
+[deze](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework)
 publicatie), zullen hierdoor versimpeld worden, wat minder verstoring in gebruik
 voor burgers oplevert (en natuurlijk een soepeler proces voor de instanties die
 het implementeren). Kortom, er zijn veel voordelen voor iedereen aan verbonden
