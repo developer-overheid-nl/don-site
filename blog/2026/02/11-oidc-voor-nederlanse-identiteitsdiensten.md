@@ -1,6 +1,12 @@
 ---
 authors: [floris-deutekom]
 tags: [iam, oidc, digid, eherkenning, eidas]
+description: |
+  Binnen de Nederlandse overheid zijn DigiD, eHerkenning en eIDAS al jaren de
+  ruggengraat van digitale identiteit en toegang. Ze zijn betrouwbaar, veilig,
+  bewezen en breed ingezet door heel Nederland heen. Tegelijkertijd stoelen deze
+  voorzieningen op een technische basis die steeds minder goed afgestemd is op
+  hoe we vandaag digitale diensten bouwen: SAML 2.0.
 ---
 
 # OIDC voor Nederlandse Identiteitsdiensten
@@ -12,7 +18,7 @@ Binnen de Nederlandse overheid zijn
 digitale identiteit en toegang. Ze zijn betrouwbaar, veilig, bewezen en breed
 ingezet door heel Nederland heen. Tegelijkertijd stoelen deze voorzieningen op
 een technische basis die steeds minder goed afgestemd is op hoe we vandaag
-digitale diensten bouwen: SAML 2.0
+digitale diensten bouwen: SAML 2.0.
 
 Eerlijk is eerlijk, SAML werkt. Het is veilig, veel klassieke webapplicaties
 zijn erop ingericht om het te ondersteunen en de techniek is door de experts
