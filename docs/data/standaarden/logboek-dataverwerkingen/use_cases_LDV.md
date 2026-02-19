@@ -116,7 +116,17 @@ Als het bericht 1 op 1 zou worden doorgestuurd, zou één logregel kunnen volsta
 2. De centrale verwerkingsdienst verwerkt batch en maakt hier individuele files van. De individuele files worden verstuurd naar een portaaldienst (bijv. Digipoort).
 3. De portaaldienst verstuurt de individuele file naar de juiste dienstverlener.
 
-![intermediairsituatie_UseCase04](./media/UseCase04_afbeelding1.png)
+```mermaid
+flowchart TB
+    n1["Overheidsinstantie"] --- n2["Centrale verwerkingsdienst"]
+    n2 --- n3["Portaaldienst"]
+    n3 --- n4["Dienstverlener"]
+
+    n1@{ shape: lin-rect}
+    n2@{ shape: lin-rect}
+    n3@{ shape: lin-rect}
+    n4@{ shape: lin-rect}
+```
 
 <div class="note">
 
