@@ -176,7 +176,21 @@ Het proces kan ook andersom:
 2. De centrale verwerkingsdienst stuurt aanpassing naar de RVIG (Rijksdienst voor identiteitsgegevens). In dit voorbeeld maakt de centrale verwerkingsdienst alleen individuele berichten indien aanpassingen in batchvorm zijn aangeleverd.
 3. De RVIG voert de aanpassing uit in de RNI.
 
-![intermediairsituatie_UseCase06](./media/UseCase06_afbeelding1.png)
+```mermaid
+flowchart
+
+	n1@{ shape: "lin-rect", label: "Overheidsinstantie" }
+	n2@{ shape: "lin-rect", label: "Werkgeversdienst" }
+	n3@{ shape: "lin-rect", label: "Uitkeringsinstantie" }
+	n4@{ shape: "lin-rect", label: "Zorginstantie" }
+	n5@{ shape: "lin-rect", label: "Centrale verwerkingsdienst" }
+	n1 --- n5
+	n2 --- n5
+	n3 --- n5
+	n4 --- n5
+	n6@{ shape: "lin-rect", label: "RvIG" }
+	n5 --- n6
+```
 
 ## Use Case 07: Statistische Informatie via een intermediair
 
