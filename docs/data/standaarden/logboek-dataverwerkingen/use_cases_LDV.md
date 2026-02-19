@@ -142,7 +142,17 @@ Als er geen HTTP protocol wordt gebruikt, moet er  op een bepaalde manier toch h
 2. De overheidsinstantie bundelt persoonsgebeurtenisberichten in een batch en zendt deze naar een centrale verwerkingsdienst (intermediair).
 3. De centrale verwerkingsdienst verwerkt de batch en maakt hier individuele files van en zendt deze naar het juiste EU-land.
 
-![intermediairsituatie_UseCase05](./media/UseCase05_afbeelding1.png)
+```mermaid
+flowchart TB
+    n1["Werkgeversdienst"] <--> n2["Overheidsinstantie"]
+    n2 <--> n3["Centrale verwerkingsdienst"]
+    n3 <--> n4["EU landen"]
+
+    n1@{ shape: lin-rect}
+    n2@{ shape: lin-rect}
+    n3@{ shape: lin-rect}
+    n4@{ shape: lin-rect}
+```
 
 Het proces kan ook andersom:
 
