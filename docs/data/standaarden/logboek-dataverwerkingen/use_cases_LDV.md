@@ -62,7 +62,17 @@ Nee, in het Logboek Verwerkingsgegevens worden geen vlaggen gelogd waardoor kan 
 2. De centrale verwerkingsdienst (intermediair) verwerkt de batch en maakt hier individuele bestanden van. Deze individuele bestanden worden verstuurd naar Logius.
 3. Logius verstuurt het individueel bestand naar de juiste inbox van de burger in MijnOverheid.
 
-![intermediairsituatie_UseCase03](./media/UseCase03_afbeelding1.png)
+```mermaid
+flowchart
+
+	n1@{ shape: "lin-rect", label: "Overheidsinstantie" }
+	n2@{ shape: "lin-rect", label: "Centrale verwerkingsdienst" }
+	n3@{ shape: "lin-rect", label: "Logius" }
+	n4@{ shape: "lin-rect", label: "MijnOverheid" }
+	n1 --- n2
+	n2 --- n3
+	n3 --- n4
+```
 
 ### Logging
 
