@@ -23,7 +23,30 @@ Wanneer een logregel verwijderd moet worden, is afhankelijk van de situatie van 
 Het belangrijkste is dat de organisatie duidelijk kan aantonen (*verantwoordingsplicht*) waarom een bepaalde bewaartermijn is gekozen en dat deze termijn in lijn is met de AVG. Dit betekent dat de keuze van het datatype minder cruciaal is dan de heldere vastlegging en naleving van de bewaartermijn zelf.
 
 Concreet zou de logverwijderingssituatie er als volgt uit kunnen zien:
-![logverwijderingssituatie Use Case 01](./media/UseCase01_afbeelding1.png)
+```mermaid
+classDiagram
+    class Profile {
+        envisagedTimeLimit
+    }
+    class Batch_CleanLog
+    class Logboek_dataverwerkingen
+    class Register_van_Verwerkingsactiviteiten
+    class Logregel {
+        trace_id
+        span_id
+        end_time
+        dpl_core_processing_activity_id
+    }
+    class Verwerking {
+        dpl_core_processing_activity_id
+        envisagedTimeLimit
+    }
+    Profile --> Batch_CleanLog
+   Batch_CleanLog --> Logboek_dataverwerkingen
+   Logboek_dataverwerkingen --> Logregel
+   Logregel --> Verwerking
+   Register_van_Verwerkingsactiviteiten <-- Verwerking
+```
 
 **Scenario 1:**
 Als het is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan zou deze kunnen worden vastgelegd in de `envisedTimeLimit` in een profiel. Dagelijks wordt een batch gedraaid om te bepalen of een logregel mag worden verwijderd. Als `Huidige datum – envisedTimeLimit < end_time` dan mag de logregel worden verwijderd.
