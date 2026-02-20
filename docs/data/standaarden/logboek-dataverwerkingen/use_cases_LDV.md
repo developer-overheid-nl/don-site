@@ -200,7 +200,16 @@ flowchart
 2. De centrale verwerkingsdienst verwerkt de batch en stuurt individuele berichten naar zowel de overheidsinstantie als het CBS.
 3. Het CBS anonimiseert de aangeleverde data.
 
-![intermediairsituatie_UseCase07](./media/UseCase07_afbeelding1.png)
+```mermaid
+flowchart
+	n1@{ shape: "lin-rect", label: "Werkgeversdienst" }
+	n2@{ shape: "lin-rect", label: "Centrale verwerkingsdienst" }
+	n3@{ shape: "lin-rect", label: "Overheidsinstantie" }
+	n4@{ shape: "lin-rect", label: "CBS" }
+	n1 --- n2
+	n2 --- n3
+	n2 --- n4
+```
 
 <div class="note">
 
