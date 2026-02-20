@@ -25,27 +25,27 @@ Het belangrijkste is dat de organisatie duidelijk kan aantonen (*verantwoordings
 Concreet zou de logverwijderingssituatie er als volgt uit kunnen zien:
 ```mermaid
 classDiagram
-    class Profile {
+    class Object_Profile {
         envisagedTimeLimit
     }
     class Batch_CleanLog
     class Logboek_dataverwerkingen
     class Register_van_Verwerkingsactiviteiten
-    class Logregel {
+    class Object_Logregel {
         trace_id
         span_id
         end_time
         dpl_core_processing_activity_id
     }
-    class Verwerking {
+    class Object_Verwerking {
         dpl_core_processing_activity_id
         envisagedTimeLimit
     }
-    Profile --> Batch_CleanLog
+    Object_Profile --> Batch_CleanLog
    Batch_CleanLog --> Logboek_dataverwerkingen
-   Logboek_dataverwerkingen --> Logregel
-   Logregel --> Verwerking
-   Register_van_Verwerkingsactiviteiten <-- Verwerking
+   Logboek_dataverwerkingen --> Object_Logregel
+   Object_Logregel --> Object_Verwerking
+   Register_van_Verwerkingsactiviteiten <-- Object_Verwerking
 ```
 
 **Scenario 1:**
