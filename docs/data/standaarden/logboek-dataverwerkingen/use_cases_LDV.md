@@ -7,7 +7,7 @@ Dit hoofdstuk bevat voorbeelden van use cases, gebaseerd op praktijkscenario's u
 In **AVG artikel 30-1f** wordt de volgende maatregel benoemd:
 *Elke verantwoordelijke en, in voorkomend geval, de vertegenwoordiger van de verantwoordelijke houdt een register van de verwerkingsactiviteiten die onder hun verantwoordelijkheid plaatsvinden. Dat register bevat alle volgende gegevens: indien mogelijk, de beoogde termijnen waarbinnen de verschillende categorieën van gegevens moeten worden gewist.*
 
-De concrete datum waarop een dataverwerking moet worden gewist uit het logboek, kan bepaald worden door middel van het bewaartermijn in het register en de eindtijd waarop een dataverwerking is gelogd in het logboek. Daardoor is het onnodig om de concrete verwijderdatum van een dataverwerking te registreren in het logboek.
+De concrete datum waarop een dataverwerking moet worden gewist uit het logboek, kan bepaald worden door middel van de bewaartermijn in het register en de eindtijd waarop een dataverwerking is gelogd in het logboek. Daardoor is het onnodig om de concrete verwijderdatum van een dataverwerking te registreren in het logboek.
 
 Wanneer een logregel verwijderd moet worden, is afhankelijk van de situatie van een organisatie en het beleid van bewaarperiodes:
 
