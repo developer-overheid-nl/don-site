@@ -234,8 +234,8 @@ flowchart
 	n2 --- n4
 ```
 
-<div class="note">
+:::note
 
 Het CBS moet de verwerking loggen van verwerkingen persoonsgegevens om persoonsgegevens te anonimiseren.
 
-</div>
+:::
