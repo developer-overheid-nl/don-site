@@ -49,25 +49,25 @@ classDiagram
 ```
 
 **Scenario 1:**
-Als het is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan zou deze kunnen worden vastgelegd in de `envisedTimeLimit` in een profiel. Dagelijks wordt een batch gedraaid om te bepalen of een logregel mag worden verwijderd. Als `end_time < Huidige datum – envisedTimeLimit` dan mag de logregel worden verwijderd.
+Als het is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan zou deze kunnen worden vastgelegd in de `envisagedTimeLimit` in een profiel. Dagelijks wordt een batch gedraaid om te bepalen of een logregel mag worden verwijderd. Als `end_time < Huidige datum – envisagedTimeLimit` dan mag de logregel worden verwijderd.
 
 **Voorbeeld:**
 
 * Huidige datum: 1-8-2025
-* envisedTimeLimit: 6 maanden
+* envisagedTimeLimit: 6 maanden
 * end_time: 1-1-2025
 
 `1-8-2025 – 6 maanden = 1-2-2025`, de logregel mag dus verwijderd worden.
 
 **Scenario 2:**
-Als het **niet** is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan moet deze worden vastgelegd in de `envisedTimeLimit` in het *Register van Verwerkingsactiviteiten* per activiteit.
-De batch moet nu op basis van `dpl.core.processing_activity_id` de `envisedTimeLimit` opzoeken in het *Register van Verwerkingsactiviteiten* en bepalen of de logregel verwijderd mag worden.
+Als het **niet** is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan moet deze worden vastgelegd in de `envisagedTimeLimit` in het *Register van Verwerkingsactiviteiten* per activiteit.
+De batch moet nu op basis van `dpl.core.processing_activity_id` de `envisagedTimeLimit` opzoeken in het *Register van Verwerkingsactiviteiten* en bepalen of de logregel verwijderd mag worden.
 
 :::note Let op
 
 * De standaard Logboek Dataverwerkingen schrijft **niet** voor hoe het mechanisme van het verwijderen van logregels zou moeten werken. Het ontwerp en de architectuur moeten door de organisatie zelf bepaald worden.  
 * De standaard Logboek Dataverwerkingen schrijft **niet** voor wat de retentietijd is voor activiteiten. Het is de taak van de organisatie om te bepalen (op basis van de wettelijke basis) wat de bewaartijd is van een logregel.  
-* Het veld `envisedTimeLimit` in het Register van Verwerkingsactiviteiten moet **altijd** worden ingevuld, ook al is de bewaartijd voor alle activiteiten hetzelfde.
+* Het veld `envisagedTimeLimit` in het Register van Verwerkingsactiviteiten moet **altijd** worden ingevuld, ook al is de bewaartijd voor alle activiteiten hetzelfde.
 
 :::
 ## Use Case 02: Wordt er een vlag gelogd in de logregel, zodat ik weet dat de gegevens in deze logregel niet getoond mogen worden in het geval van inzageverzoek?
