@@ -136,7 +136,7 @@ Als het bericht 1 op 1 zou worden doorgestuurd, zou één logregel kunnen volsta
 ### Procesbeschrijving Use Case 04
 
 1. Een overheidsinstantie stuurt mededelende berichten in batchvorm naar een centrale verwerkingsdienst (intermediair).
-2. De centrale verwerkingsdienst verwerkt batch en maakt hier individuele files van. De individuele files worden verstuurd naar een portaaldienst (bijv. Digipoort).
+2. De centrale verwerkingsdienst verwerkt de batch en maakt hier individuele files van. De individuele files worden verstuurd naar een portaaldienst (bijv. Digipoort).
 3. De portaaldienst verstuurt de individuele file naar de juiste dienstverlener.
 
 ```mermaid
