@@ -63,16 +63,13 @@ Als het is toegestaan om een vaste retentieperiode voor alle logregels te hanter
 Als het **niet** is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan moet deze worden vastgelegd in de `envisedTimeLimit` in het *Register van Verwerkingsactiviteiten* per activiteit.
 De batch moet nu op basis van `dpl.core.processing_activity_id` de `envisedTimeLimit` opzoeken in het *Register van Verwerkingsactiviteiten* en bepalen of de logregel verwijderd mag worden.
 
-<div class="note">
-
-Let op:
+:::note Let op
 
 * De standaard Logboek Dataverwerkingen schrijft **niet** voor hoe het mechanisme van het verwijderen van logregels zou moeten werken. Het ontwerp en de architectuur moeten door de organisatie zelf bepaald worden.  
 * De standaard Logboek Dataverwerkingen schrijft **niet** voor wat de retentietijd is voor activiteiten. Het is de taak van de organisatie om te bepalen (op basis van de wettelijke basis) wat de bewaartijd is van een logregel.  
 * Het veld `envisedTimeLimit` in het Register van Verwerkingsactiviteiten moet **altijd** worden ingevuld, ook al is de bewaartijd voor alle activiteiten hetzelfde.
 
-</div>
-
+:::
 ## Use Case 02: Wordt er een vlag gelogd in de logregel, zodat ik weet dat de gegevens in deze logregel niet getoond mogen worden in het geval van inzageverzoek?
 
 Nee, in het Logboek Dataverwerkingen (LDV) worden geen vlaggen gelogd waardoor kan worden gezien dat de gegevens niet getoond mogen worden aan een burger. Het is aan de organisatie om procedures op te stellen om te regelen dat in specifieke gevallen data niet getoond mag worden aan een burger.
