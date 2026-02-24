@@ -5,7 +5,6 @@
  */
 
 :root {
-  --ifm-menu-color-background-active: #cbd5e1;
   /* Basis (Primary) color */
   --don-donkerblauw-500: #01689b;
   --don-donkerblauw-400: #408eb4;
@@ -141,6 +140,8 @@
 
   --ifm-link-color: var(--ifm-color-primary);
 
+  --ifm-menu-color-background-active: var(--don-grijs-200);
+
   --ifm-navbar-height: auto;
   --ifm-navbar-shadow: none;
   --ifm-navbar-item-padding-horizontal: 0.5rem;
@@ -153,6 +154,8 @@
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --prism-background-color: var(--don-grijs-50); /* a bit darker than specified by https://github.com/ericwbailey/a11y-syntax-highlighting, but should still work */
 }
 
 html {

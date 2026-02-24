@@ -37,6 +37,9 @@ importers:
       '@rijkshuisstijl-community/components-react':
         specifier: 1.1.0
         version: 1.1.0(patch_hash=hfzy6ewnpwd6ilxoudutqhnefi)(@babel/runtime@7.27.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      a11y-syntax-highlighting:
+        specifier: ^1.1.0
+        version: 1.1.0
       algoliasearch-helper:
         specifier: ^3.25.0
         version: 3.25.0(algoliasearch@5.40.1)
@@ -1839,6 +1842,9 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
+  a11y-syntax-highlighting@1.1.0:
+    resolution: {integrity: sha512-XKqjv/Uc4UAzLUhoRK3GAORhA5OZmAR3GYd8N7Vl63mVA+z7nUn2fJbobHMmUCddlByd66y/xQHK6+tJxQKOFg==}
+
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
@@ -1999,6 +2005,9 @@ packages:
 
   axios@1.12.2:
     resolution: {integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==}
+
+  axios@1.13.5:
+    resolution: {integrity: sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==}
 
   b4a@1.7.3:
     resolution: {integrity: sha512-5Q2mfq2WfGuFp3uS//0s6baOJLMoVduPYVeNmDYxu5OUA1/cBfvr2RIS7vi62LdNj/urk1hfmj867I3qt6uZ7Q==}
@@ -2247,8 +2256,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromedriver@143.0.2:
-    resolution: {integrity: sha512-pNNEf19M10V04JfJBa+W8aEXHfUqpEXQqebspKYntMxP4nwNACnQSFGnV/L3EDpeR/hZx628mDs5kp6KiGMC5Q==}
+  chromedriver@145.0.6:
+    resolution: {integrity: sha512-qobFdfjk7G7U9GKB6RYGBuqQ8L0QG1M30p90sNIWLKdpeobhsedfBhVxRqT4m/nWAtM0PhNb9GDD9qzDwSSGlA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -3220,6 +3229,15 @@ packages:
   focus-trap@7.6.5:
     resolution: {integrity: sha512-7Ke1jyybbbPZyZXFxEftUtxFGLMpE2n6A+z//m4CRDlj0hW+o3iYSmh8nFlYMurOiJVDmJRilUQtJr08KfIxlg==}
 
+  follow-redirects@1.15.11:
+    resolution: {integrity: sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
   follow-redirects@1.15.9:
     resolution: {integrity: sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==}
     engines: {node: '>=4.0'}
@@ -3243,6 +3261,10 @@ packages:
 
   form-data@4.0.4:
     resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
+    engines: {node: '>= 6'}
+
+  form-data@4.0.5:
+    resolution: {integrity: sha512-8RipRLol37bNs2bhoV67fiTEvdTrbMUYcFTiy3+wuuOnUog2QBHCZWXDRijWQfAkhBj2Uf5UnVaiWwA5vdd82w==}
     engines: {node: '>= 6'}
 
   format@0.2.2:
@@ -5078,6 +5100,9 @@ packages:
   proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
+  proxy-from-env@2.0.0:
+    resolution: {integrity: sha512-h2lD3OfRraP3R51rNFKIE8nX+qoLr1mE74X91YhVxtDbt+OD6ntoNZv56+JgI4RCdtwQ5eexsOk1KdOQDfvPCQ==}
+
   pump@3.0.3:
     resolution: {integrity: sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA==}
 
@@ -6355,7 +6380,7 @@ snapshots:
     dependencies:
       '@axe-core/webdriverjs': 4.11.0(selenium-webdriver@4.35.0)
       axe-core: 4.11.0
-      chromedriver: 143.0.2
+      chromedriver: 145.0.6
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 17.2.3
@@ -8952,6 +8977,8 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
+  a11y-syntax-highlighting@1.1.0: {}
+
   accepts@1.3.8:
     dependencies:
       mime-types: 2.1.35
@@ -9116,6 +9143,14 @@ snapshots:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.4
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
+  axios@1.13.5:
+    dependencies:
+      follow-redirects: 1.15.11
+      form-data: 4.0.5
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
@@ -9421,14 +9456,14 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@143.0.2:
+  chromedriver@145.0.6:
     dependencies:
       '@testim/chrome-version': 1.1.4
-      axios: 1.12.2
+      axios: 1.13.5
       compare-versions: 6.1.1
       extract-zip: 2.0.1
       proxy-agent: 6.5.0
-      proxy-from-env: 1.1.0
+      proxy-from-env: 2.0.0
       tcp-port-used: 1.0.2
     transitivePeerDependencies:
       - debug
@@ -10542,6 +10577,8 @@ snapshots:
     dependencies:
       tabbable: 6.2.0
 
+  follow-redirects@1.15.11: {}
+
   follow-redirects@1.15.9: {}
 
   for-each@0.3.4:
@@ -10555,6 +10592,14 @@ snapshots:
   form-data-encoder@2.1.4: {}
 
   form-data@4.0.4:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      es-set-tostringtag: 2.1.0
+      hasown: 2.0.2
+      mime-types: 2.1.35
+
+  form-data@4.0.5:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
@@ -12810,6 +12855,8 @@ snapshots:
       - supports-color
 
   proxy-from-env@1.1.0: {}
+
+  proxy-from-env@2.0.0: {}
 
   pump@3.0.3:
     dependencies:
