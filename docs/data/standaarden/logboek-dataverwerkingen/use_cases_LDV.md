@@ -49,7 +49,7 @@ classDiagram
 ```
 
 **Scenario 1:**
-Als het is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan zou deze kunnen worden vastgelegd in de `envisedTimeLimit` in een profiel. Dagelijks wordt een batch gedraaid om te bepalen of een logregel mag worden verwijderd. Als `Huidige datum – envisedTimeLimit < end_time` dan mag de logregel worden verwijderd.
+Als het is toegestaan om een vaste retentieperiode voor alle logregels te hanteren, dan zou deze kunnen worden vastgelegd in de `envisedTimeLimit` in een profiel. Dagelijks wordt een batch gedraaid om te bepalen of een logregel mag worden verwijderd. Als `end_time < Huidige datum – envisedTimeLimit` dan mag de logregel worden verwijderd.
 
 **Voorbeeld:**
 
