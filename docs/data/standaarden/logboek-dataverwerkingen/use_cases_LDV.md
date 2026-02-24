@@ -196,8 +196,8 @@ Het proces kan ook andersom:
 ### Procesbeschrijving Use Case 06
 
 1. Een overheidsinstantie/werkgeversdienst/uitkeringsinstantie/zorginstantie stuurt aanpassing ten aanzien van RNI naar een centrale verwerkingsdienst.
-2. De centrale verwerkingsdienst stuurt aanpassing naar de RVIG (Rijksdienst voor identiteitsgegevens). In dit voorbeeld maakt de centrale verwerkingsdienst alleen individuele berichten indien aanpassingen in batchvorm zijn aangeleverd.
-3. De RVIG voert de aanpassing uit in de RNI.
+2. De centrale verwerkingsdienst stuurt aanpassing naar de RvIG (Rijksdienst voor identiteitsgegevens). In dit voorbeeld maakt de centrale verwerkingsdienst alleen individuele berichten indien aanpassingen in batchvorm zijn aangeleverd.
+3. De RvIG voert de aanpassing uit in de RNI.
 
 ```mermaid
 flowchart
