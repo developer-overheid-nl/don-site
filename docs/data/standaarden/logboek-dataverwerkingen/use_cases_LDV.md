@@ -148,16 +148,15 @@ flowchart TB
     n4@{ shape: lin-rect}
 ```
 
-<div class="note">
-
+:::note
 Als er geen HTTP protocol wordt gebruikt, moet er  op een bepaalde manier toch headerinformatie worden verzonden.
-
-</div>
+:::
 
 ## Use Case 05: Persoonsgebeurtenisberichten via een intermediair
 
 ### Procesbeschrijving Use Case 05
 
+### Procesbeschrijving Use Case 05
 1. Een werkgeversdienst zendt individuele berichten naar een overheidsinstantie met betrekking tot personen met een werkverleden.
 2. De overheidsinstantie bundelt persoonsgebeurtenisberichten in een batch en zendt deze naar een centrale verwerkingsdienst (intermediair).
 3. De centrale verwerkingsdienst verwerkt de batch en maakt hier individuele files van en zendt deze naar het juiste EU-land.
