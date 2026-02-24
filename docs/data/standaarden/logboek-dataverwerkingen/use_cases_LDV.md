@@ -176,7 +176,7 @@ flowchart TB
 
 Het proces kan ook andersom:
 
-1. EU-land komt een persoonsgebeurtenisbericht (bijvoorbeeld van een persoon in het buitenland) en zendt deze naar de centrale verwerkingsdienst.
+1. Een EU-land ontvangt een persoonsgebeurtenisbericht (bijvoorbeeld over een persoon in het buitenland) en zendt dit naar de centrale verwerkingsdienst.
 2. De centrale verwerkingsdienst bundelt persoonsgebeurtenisberichten van diverse EU-landen en stuurt deze als batch naar de overheidsinstantie.
 3. De overheidsinstantie stuurt de batch door naar de werkgeversdienst.
 
