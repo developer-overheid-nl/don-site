@@ -1,9 +1,9 @@
 ---
 tags:
+  - "privacy"
+  - "interoperabiliteit"
   - "ldv"
   - "forum-standaardisatie"
-  - "gdpr"
-  - "avg"
 ---
 
 # Logboek Dataverwerkingen

@@ -2,6 +2,7 @@
 authors: [dimitri-van-hees]
 tags:
   [
+    interoperabiliteit,
     openapi,
     oas,
     api,
@@ -9,7 +10,6 @@ tags:
     rest,
     webhooks,
     forum-standaardisatie,
-    api-design,
     notificaties,
     mtls,
   ]
@@ -101,7 +101,7 @@ praktijk zijn er echter veel varianten. Zo is
 voorbeeld van een _REST-ish_ API: het is resource-gebaseerd en stateless, maar
 introduceert een eigen querytaal met parameters als `$filter` en `$expand`. Volg
 je de
-[API Design Rules](https://developer.overheid.nl/kennisbank/apis/api-design-rules/),
+[API Design Rules](https://developer.overheid.nl/kennisbank/api-ontwikkeling/standaarden/api-design-rules/),
 dan is je API waarschijnlijk _RESTful_, omdat operaties zoals
 `/v1/gebouwen/_zoek` formeel geen REST zijn, ook al lijken ze er sterk op. Zelfs
 [RPC](https://aws.amazon.com/compare/the-difference-between-rpc-and-rest/)-achtige
@@ -167,12 +167,12 @@ OAS 3.0 ondersteunt de beschrijving van de volgende security schemes:
 
 - HTTP Authentication
 - API Keys
-- [OAuth 2.0](https://developer.overheid.nl/kennisbank/security/standaarden/oauth)
-- [OpenID Connect](https://developer.overheid.nl/kennisbank/security/standaarden/oidc)
+- [OAuth 2.0](https://developer.overheid.nl/kennisbank/security/authenticatie/oauth)
+- [OpenID Connect](https://developer.overheid.nl/kennisbank/security/authenticatie/oidc)
 
 Wat ontbrak was Mutual TLS (mTLS): authenticatie op basis van certificaten,
 zoals bij
-[PKIoverheid](https://developer.overheid.nl/kennisbank/security/standaarden/pkioverheid).
+[PKIoverheid](https://developer.overheid.nl/kennisbank/security/authenticatie/pkioverheid).
 OAS 3.1 ondersteunt dit wél, waardoor ook HTTP API's van de overheid die op deze
 manier beveiligd zijn, dit in OAS 3.1 kunnen uitdrukken:
 

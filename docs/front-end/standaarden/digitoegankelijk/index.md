@@ -1,9 +1,8 @@
 ---
 tags:
+  - "toegankelijkheid"
   - "wcag"
-  - "accessibility"
   - "forum-standaardisatie"
-  - "html"
 ---
 
 # DigiToegankelijk

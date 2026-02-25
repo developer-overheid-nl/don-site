@@ -102,6 +102,7 @@ const config: Config = {
   },
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
+    "./plugins/content-type-index.js",
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -131,6 +132,17 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           tags: "../tags.yml",
           onInlineTags: "throw",
+          sidebarItemsGenerator: async function ({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
+            const items = await defaultSidebarItemsGenerator(args);
+            // Verwijder index-docs van het top-niveau — ze worden al als category link gebruikt
+            return items.filter(
+              (item) =>
+                !(item.type === "doc" && item.id.endsWith("/index")),
+            );
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -228,17 +240,24 @@ const config: Config = {
           position: "left",
           to: "/kennisbank",
           items: [
-            { label: "API's", to: "/kennisbank/apis" },
+            { label: "API Ontwikkeling", to: "/kennisbank/api-ontwikkeling" },
             { label: "Front-end", to: "/kennisbank/front-end" },
-            { label: "Data", to: "/kennisbank/data" },
+            { label: "Data & Interoperabiliteit", to: "/kennisbank/data" },
             { label: "Open Source", to: "/kennisbank/open-source" },
-            { label: "Infrastructuur", to: "/kennisbank/infra" },
+            { label: "DevOps & Platform", to: "/kennisbank/devops" },
             { label: "Security", to: "/kennisbank/security" },
-            { label: "Programmeertalen", to: "/kennisbank/programmeertalen" },
             {
               label: "NeRDS leidraad softwareontwikkeling",
               to: "/kennisbank/leidraad",
             },
+            {
+              type: "html",
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            { label: "Alle Standaarden", to: "/kennisbank/standaarden" },
+            { label: "Alle Tools", to: "/kennisbank/tools" },
+            { label: "Alle Tutorials", to: "/kennisbank/tutorials" },
+            { label: "Alle Artikelen", to: "/kennisbank/alles" },
           ],
         },
         {

@@ -1,6 +1,7 @@
 ---
+content_type: richtlijn
 title: "1.1. Niet-functionele eisen identificeren"
-tags: ["development"]
+tags: ["interoperabiliteit"]
 ---
 
 # Richtlijn: Niet-functionele eisen identificeren

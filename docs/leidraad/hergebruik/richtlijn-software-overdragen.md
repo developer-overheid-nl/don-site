@@ -1,6 +1,7 @@
 ---
+content_type: richtlijn
 title: "8.1 Software beheerst overdragen"
-tags: ["development"]
+tags: ["open-source"]
 sidebar_position: 1
 ---
 

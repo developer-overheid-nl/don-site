@@ -131,7 +131,7 @@ digitaliseringstrategie?
 ### 📑 Adopteer standaarden
 
 Adopteer de standaarden van projecten zoals
-[Haven plus](https://developer.overheid.nl/kennisbank/infra/standaarden/haven/)
+[Haven plus](https://developer.overheid.nl/kennisbank/devops/standaarden/haven/)
 (VNG),
 [SURFCumulus](https://www.surf.nl/en/services/procurement-distribution/surfcumulus)
 (SURF).

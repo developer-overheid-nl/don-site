@@ -1,6 +1,6 @@
 ---
 authors: [linda-van-den-brink]
-tags: [geodata, ogc, openapi, adr, tool, oas, openapi]
+tags: [interoperabiliteit, geodata, ogc, openapi, adr, oas]
 image: ./img/codesprint-2.JPG
 description: |
   Het Open Geospatial Consortium (OGC) is een internationale
@@ -62,7 +62,7 @@ tijdens deze code sprint hernoemd naar 'Standards Checker', omdat we de core van
 de tool hebben losgetrokken van het deel dat checks voor specifieke standaarden
 implementeert. Daardoor is het een framework geworden waarin je ook checks voor
 niet-OGC standaarden kunt implementeren. Zo wordt de linter nu ook als basis van
-de [ADR Linter](/kennisbank/apis/api-design-rules/api-design-rules-linter)
+de [ADR Linter](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter)
 gebruikt.
 
 De linter ondersteunt nu de volgende OGC standaarden:

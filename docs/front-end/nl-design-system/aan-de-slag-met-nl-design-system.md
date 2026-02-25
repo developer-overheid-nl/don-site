@@ -1,12 +1,10 @@
 ---
+content_type: standaard
 tags:
-  - "open-source"
   - "front-end"
-  - "accessibility"
+  - "toegankelijkheid"
+  - "open-source"
   - "nl-design-system"
-  - "vite"
-  - "nvm"
-  - "nodejs"
 title: "Aan de slag met NL Design System"
 ---
 

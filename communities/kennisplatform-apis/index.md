@@ -1,5 +1,5 @@
 ---
-tags: [security]
+tags: [informatiebeveiliging]
 ---
 
 # Kennisplatform API's

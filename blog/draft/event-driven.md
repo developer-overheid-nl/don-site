@@ -22,14 +22,14 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 _Schematisch beeld van de event-driven overheid_
 
 Steeds meer overheidsorganisaties stappen over naar
-[eventgedreven architecturen (EDA)](/kennisbank/apis/architectuur/eda). Waarom?
+[eventgedreven architecturen (EDA)](/kennisbank/api-ontwikkeling/architectuur/eda). Waarom?
 Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past
 bij een moderne digitale overheid waarin systemen onderling proactief
 samenwerken op basis van gebeurtenissen, in plaats van reactieve
 vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de
 Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als
-[CloudEvents](/kennisbank/apis/architectuur/cloudevents),
-[Webhooks](/kennisbank/apis/architectuur/webhooks) DigiLevering en DigiMelding.
+[CloudEvents](/kennisbank/api-ontwikkeling/architectuur/cloudevents),
+[Webhooks](/kennisbank/api-ontwikkeling/architectuur/webhooks) DigiLevering en DigiMelding.
 
 <!-- truncate -->
 
@@ -89,7 +89,7 @@ Deze standaard speelt een steeds grotere rol in het **federatief datastelsel**
 overheidslagen interoperabel met elkaar communiceren via gebeurtenissen.
 
 > Zie ook de webhooks pagina op de Kennisbank van
-> [developer.overheid.nl](/kennisbank/apis/architectuur/webhooks).
+> [developer.overheid.nl](/kennisbank/api-ontwikkeling/architectuur/webhooks).
 
 ### Webhooks in de NL API Strategie
 
@@ -125,7 +125,7 @@ afnemers zich kunnen abonneren op gebeurtenissen en **automatisch geïnformeerd
 worden wanneer die plaatsvinden**
 
 > Zie ook de cloudevents pagina op de Kennisbank van
-> [developer.overheid.nl](/kennisbank/apis/architectuur/cloudevents)
+> [developer.overheid.nl](/kennisbank/api-ontwikkeling/architectuur/cloudevents)
 
 ### Webhooks in de eDelivery API-standaard
 

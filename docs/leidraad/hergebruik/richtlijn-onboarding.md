@@ -1,6 +1,7 @@
 ---
+content_type: richtlijn
 title: "8.2 Onboarding developers"
-tags: ["development"]
+tags: ["open-source"]
 sidebar_position: 2
 ---
 

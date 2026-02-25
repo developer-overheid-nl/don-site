@@ -1,3 +1,11 @@
+---
+content_type: standaard
+tags:
+  - "privacy"
+  - "interoperabiliteit"
+  - "ldv"
+---
+
 # Registratie verhuizing – Opvragen meerdere BSN's
 
 Deze case beschrijft de samenstelling van een huishouding op een bepaald adres.

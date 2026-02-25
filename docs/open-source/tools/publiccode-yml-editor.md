@@ -1,5 +1,7 @@
 ---
+content_type: tool
 tags:
+  - "open-source"
   - "publiccode-yml"
 title: "Publiccode.yml editor"
 ---

@@ -1,5 +1,6 @@
 ---
-tags: [rdf, rdfa, rdfs, linked-data]
+content_type: standaard
+tags: [interoperabiliteit, rdf, linked-data]
 ---
 
 # RDF

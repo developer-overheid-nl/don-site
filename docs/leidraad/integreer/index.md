@@ -114,4 +114,4 @@ Geen bekend.
 
 ### Bronnen op developer.overheid.nl
 
-- [Hoofdstuk over API's](/kennisbank/apis)
+- [Hoofdstuk over API's](/kennisbank/api-ontwikkeling)

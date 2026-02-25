@@ -115,7 +115,7 @@ Developers kunnen hierdoor op een laagdrempelige manier checken of zij voldoen
 aan de standaard en eventuele problemen sneller oplossen.
 
 Voor informatie over hoe de linter te gebruiken is in relevante systemen, bevat
-[de DON kennisbank](/kennisbank/apis/api-design-rules/api-design-rules-linter)
+[de DON kennisbank](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter)
 voorbeelden voor veelgebruikte runtime en CI systemen. Hiermee is de symbiose
 tussen DON en Logius ook zichtbaar: Logius zorgt ervoor dat wijzigingen
 automatisch te verifieren zijn door een linter, DON heeft een kennisbank met

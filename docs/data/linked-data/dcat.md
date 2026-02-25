@@ -1,5 +1,6 @@
 ---
-tags: [dcat, linked-data]
+content_type: standaard
+tags: [interoperabiliteit, dcat, linked-data]
 ---
 
 # DCAT

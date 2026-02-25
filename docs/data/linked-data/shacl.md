@@ -1,5 +1,6 @@
 ---
-tags: [shacl, linked-data]
+content_type: standaard
+tags: [interoperabiliteit, shacl, linked-data]
 ---
 
 # SHACL

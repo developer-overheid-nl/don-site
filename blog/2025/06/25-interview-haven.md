@@ -9,8 +9,8 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 Werk jij in de publieke sector en ben je benieuwd hoe je concreet kunt toewerken
 naar digitale soevereiniteit? In dit interview met **Pauline van Rotterdam** en
-**Sander van Thillo** van team [Haven](/kennisbank/infra/standaarden/haven), kom
-je er achter hoe je [Haven+](/kennisbank/infra/standaarden/haven/haven-plus)
+**Sander van Thillo** van team [Haven](/kennisbank/devops/standaarden/haven), kom
+je er achter hoe je [Haven+](/kennisbank/devops/standaarden/haven/haven-plus)
 gebruikt om minder afhankelijk te worden van Big Tech bedrijven als Microsoft
 (Azure) en Amazon (AWS).
 
@@ -85,7 +85,7 @@ Deze stroom van vragen, gecombineerd met de observatie dat andere gemeenten
 moeite hadden om goed uit de startblokken te komen, leidde tot het voorstel om
 bij Digilab een project te starten om de Utrecht-aanpak tot een landelijke
 standaard op te werken. Dit is het project dat uiteindelijk
-[Haven+](/kennisbank/infra/standaarden/haven/haven-plus) is geworden.
+[Haven+](/kennisbank/devops/standaarden/haven/haven-plus) is geworden.
 
 ![Haven](./img/sander_pauline_1.jpg) _Sander van Thillo en Pauline van Rotterdam
 van Team Haven in het Stadskantoor in Utrecht._
@@ -279,7 +279,7 @@ samen.
 
 ## Handige links
 
-- [Ons kennisbank artikel over Haven](/kennisbank/infra/standaarden/haven/)
+- [Ons kennisbank artikel over Haven](/kennisbank/devops/standaarden/haven/)
 - [Mattermost kanaal van Haven](https://digilab.overheid.nl/chat/haven/channels/town-square)
 - [Naar de lijst met checks van Haven](https://haven.commonground.nl/techniek/checks)
 - [Git Haven](https://gitlab.com/commonground/haven/)

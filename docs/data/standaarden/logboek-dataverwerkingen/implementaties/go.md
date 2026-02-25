@@ -1,3 +1,11 @@
+---
+content_type: standaard
+tags:
+  - "privacy"
+  - "interoperabiliteit"
+  - "ldv"
+---
+
 # Referentie implementatie in Go
 
 Er is een referentie implementatie beschikbaar die de samenwerking van verscheidene prototype overheidsapplicaties laat zien.

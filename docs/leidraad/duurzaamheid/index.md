@@ -1,7 +1,7 @@
 ---
 title: 13. Denk na over duurzaamheid
 sidebar_position: 13
-tags: ["logging", "monitoring", "security"]
+tags: ["logging", "monitoring", "informatiebeveiliging"]
 ---
 
 # Richtlijn: Denk na over duurzaamheid
@@ -139,4 +139,4 @@ Geen bekend.
 ### Bronnen op developer.overheid.nl
 
 - [Quality-time](https://quality-time.readthedocs.io/en/latest/)
-- [Quality-time op developer.overheid.nl](/kennisbank/infra/tools/quality-time)
+- [Quality-time op developer.overheid.nl](/kennisbank/devops/tools/quality-time)

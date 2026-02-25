@@ -1,3 +1,11 @@
+---
+content_type: standaard
+tags:
+  - "privacy"
+  - "interoperabiliteit"
+  - "ldv"
+---
+
 # Registratie Verhuizing - Eenvoudig, traditioneel systeem
 
 Deze case beschrijft de binnengemeentelijke verhuizing van een persoon. De

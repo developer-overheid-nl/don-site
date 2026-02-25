@@ -1,3 +1,11 @@
+---
+content_type: standaard
+tags:
+  - "privacy"
+  - "interoperabiliteit"
+  - "ldv"
+---
+
 # Projectbesluiten bij totstandkoming
 
 Deze pagina bevate (historische) afwegingen die gemaakt zijn tijdens de totstandkoming van de standaard.

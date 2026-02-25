@@ -1,7 +1,4 @@
 ---
-accessibility:
-  description: Accessibility / toegankelijkheid.
-  label: Accessibility
 adr:
   label: API Design Rules
 ai:
@@ -13,10 +10,6 @@ api:
 amsterdam:
   description: Amsterdam gemeente gerelateerde content
   label: Amsterdam
-api-design:
-  label: API Design
-architectuur:
-  label: Architectuur
 argo-cd:
   description:
     Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor
@@ -194,15 +187,20 @@ htmx:
   description: HTMX.
   label: HTMX
 iam:
-  description: 
+  description:
     "Identity & Access Management is het raamwerk van processen en technologieën dat regelt
     wie toegang krijgt tot welke digitale informatie e systemen, op welk moment, om welke reden.
     Het gaat om 'Wie ben je? en 'Wat mag je doen?', in het kader van beveiliging."
   label: IAM
-infra:
-  label: Infra
-interoperability:
-  label: Interoperability
+informatiebeveiliging:
+  description: Security, authenticatie en encryptie
+  label: Informatiebeveiliging
+infrastructuur:
+  description: Kubernetes, deployment, cloud
+  label: Infrastructuur
+interoperabiliteit:
+  description: Data-uitwisseling, API's, standaarden
+  label: Interoperabiliteit
 ipv6:
   label: IPv6
 json:
@@ -345,10 +343,6 @@ rust:
 saml:
   description: SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
   label: SAML
-security:
-  label: Security
-security-by-design:
-  label: Security By Design
 seo:
   description:
     Search Engine Optimalization is het doen van aanpassingen die er voor zorgen
@@ -367,11 +361,9 @@ technische-schuld:
     Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in
     de toekomst moeilijker te wijzigen maken
   label: Technische schuld
-tool:
-  description: Tool
-  label: Tool
-tutorial:
-  label: Tutorial
+toegankelijkheid:
+  description: WCAG, inclusiviteit, UX
+  label: Toegankelijkheid
 uml:
   description: Unified Modeling Language
   label: UML
@@ -391,6 +383,9 @@ wallet:
 wcag:
   description: Web Content Accessibility Guidelines
   label: WCAG
+wetgeving:
+  description: Wet- en regelgeving zoals NIS2, eIDAS, BIO
+  label: Wetgeving
 webhooks:
   label: Webhooks
 websub:

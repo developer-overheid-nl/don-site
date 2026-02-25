@@ -111,7 +111,7 @@ onbeheersbaar groeit en de software onderhoudbaar blijft.
 
 Vaak kun of wil je technische schuld niet direct oplossen. In ons
 kwaliteitssysteem
-[Quality-time](https://developer.overheid.nl/kennisbank/infra/tools/quality-time)
+[Quality-time](https://developer.overheid.nl/kennisbank/devops/tools/quality-time)
 legt de kwaliteitsmanager vast dat er technische schuld is en hoe we hebben
 afgesproken daarmee om te gaan. Inclusief één of meer linkjes naar de
 bijbehorende issues in Jira. Dat ziet er bijvoorbeeld dan zo uit:

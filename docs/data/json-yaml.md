@@ -1,5 +1,5 @@
 ---
-tags: [json, yaml]
+tags: [interoperabiliteit, json, yaml]
 ---
 
 # JSON / YAML

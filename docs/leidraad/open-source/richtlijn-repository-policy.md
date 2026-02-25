@@ -1,7 +1,7 @@
 ---
+content_type: richtlijn
 title: "3.1. Repository policy"
 tags:
-  - "development"
   - "open-source"
 ---
 

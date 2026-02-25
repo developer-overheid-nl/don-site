@@ -164,13 +164,13 @@ middels een _techradar_.
 
 Vanuit het [Kennisplatform API's](https://apigov.nl) en
 [Logius](https://logius.nl), de beheerder van de
-[API Design Rules](https://developer.overheid.nl/kennisbank/apis/standaarden/rest-api-design-rules),
+[API Design Rules](https://developer.overheid.nl/kennisbank/api-ontwikkeling/standaarden/rest-api-design-rules),
 zijn suggesties voor de verbetering van het API register gedaan. Zo gaan we de
 aanleverprocedure aanpassen zodat ook organisaties die niet in het
 [Register van Overheidsorganisaties](https://organisaties.overheid.nl/) staan
 API's kunnen toevoegen, de _developer experience_ verbeteren door te kijken
 welke API tooling we nog meer kunnen integreren en de
-[ADR validator](https://developer.overheid.nl/kennisbank/apis/api-design-rules-validator)
+[ADR validator](https://developer.overheid.nl/kennisbank/api-ontwikkeling/tools/api-design-rules-validator)
 met bijbehorende statistieken uitbreiden. Ook API lifecycle informatie zoals
 welke versie de actuele is moet via het API register inzichtelijk worden.
 

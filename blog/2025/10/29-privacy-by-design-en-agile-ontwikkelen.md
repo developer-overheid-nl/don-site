@@ -6,7 +6,7 @@ description:
   nieuwe software meteen te denken aan privacy – en ook aan security,
   toegankelijkheid en mogelijk meer. Maar hoe past dat binnen een moderne, agile
   werkwijze?
-tags: [privacy, accessibility, security, owasp]
+tags: [privacy, toegankelijkheid, informatiebeveiliging, owasp]
 ---
 
 # Privacy by Design en agile ontwikkelen, kan dat?

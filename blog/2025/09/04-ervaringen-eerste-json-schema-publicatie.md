@@ -1,6 +1,6 @@
 ---
 authors: [pieter-bresters]
-tags: [json-schema, openapi, oas, api-design, uml, geodata]
+tags: [interoperabiliteit, json-schema, openapi, oas, uml, geodata]
 ---
 
 # Ervaringen eerste Geonovum JSON-schema publicatie

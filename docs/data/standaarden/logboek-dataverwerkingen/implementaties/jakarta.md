@@ -1,3 +1,11 @@
+---
+content_type: standaard
+tags:
+  - "privacy"
+  - "interoperabiliteit"
+  - "ldv"
+---
+
 # Jakarta service method interceptor
 
 Met Jakarta kunnen Java applicaties HTTP requests afhandelen.

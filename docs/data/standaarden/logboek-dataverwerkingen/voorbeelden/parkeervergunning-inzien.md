@@ -1,3 +1,11 @@
+---
+content_type: standaard
+tags:
+  - "privacy"
+  - "interoperabiliteit"
+  - "ldv"
+---
+
 # Parkeervergunning - inzien
 
 Een persoon heeft bij een gemeente een parkeervergunning in gebruik en wil de

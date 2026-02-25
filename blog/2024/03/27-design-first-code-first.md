@@ -1,6 +1,6 @@
 ---
 authors: [joost-farla]
-tags: [openapi, adr, api-design]
+tags: [interoperabiliteit, openapi, adr]
 ---
 
 # Design-first of code-first API ontwikkeling?

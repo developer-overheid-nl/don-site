@@ -1,9 +1,8 @@
 ---
+content_type: tool
 tags:
+  - "informatiebeveiliging"
   - "open-source"
-  - "git"
-  - "security"
-  - "community"
   - "monitoring"
 title: "OpenKAT"
 ---

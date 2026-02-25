@@ -2,9 +2,9 @@
 tags:
   - "open-source"
   - "front-end"
-  - "accessibility"
+  - "toegankelijkheid"
   - "nl-design-system"
-  - "security"
+  - "informatiebeveiliging"
 sidebar_position: 0
 hide_table_of_contents: true
 description:

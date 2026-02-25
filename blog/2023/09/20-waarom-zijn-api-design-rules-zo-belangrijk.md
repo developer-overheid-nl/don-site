@@ -1,6 +1,6 @@
 ---
 authors: [joost-farla]
-tags: [adr, api-design]
+tags: [interoperabiliteit, adr]
 ---
 
 # Waarom zijn API design rules zo belangrijk?

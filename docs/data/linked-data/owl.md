@@ -1,5 +1,6 @@
 ---
-tags: [owl, linked-data]
+content_type: standaard
+tags: [interoperabiliteit, owl, linked-data]
 ---
 
 # OWL

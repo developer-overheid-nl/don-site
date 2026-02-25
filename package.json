@@ -46,6 +46,8 @@
     "@docusaurus/types": "3.9.2",
     "@rijkshuisstijl-community/design-tokens": "1.2.0",
     "browser-driver-manager": "^2.0.1",
+    "glob": "^13.0.2",
+    "gray-matter": "^4.0.3",
     "npm-run-all": "^4.1.5",
     "typescript": "~5.8.3"
   },

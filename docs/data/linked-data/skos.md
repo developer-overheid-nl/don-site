@@ -1,5 +1,6 @@
 ---
-tags: [skos, linked-data]
+content_type: standaard
+tags: [interoperabiliteit, skos, linked-data]
 ---
 
 # SKOS
