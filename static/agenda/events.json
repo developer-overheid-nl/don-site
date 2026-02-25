@@ -1,34 +1,154 @@
 [
   {
-    "title": "3-daags Fieldlab 'Bestaanszekerheid bij Levensgebeurtenissen",
-    "start_date": "2025-11-24T09:00:00+02:00",
-    "end_date": "2025-11-26T19:00:00+02:00",
-    "place": "The Social Hub, Den Haag",
-    "summary": "Hoe kunnen burgers inzicht, uitzicht en overzicht krijgen over hun rechten en plichten, door gebruik te maken van verantwoorde gegevensdeling binnen een federatief datastelsel? Ben jij onderdeel van een overheidsorganisatie en wil jij met een team werken aan slim, verantwoorden  met moderne technieken data delen? Misschien is dit fieldlab iets voor een team vanuit jouw organisaties.",
-    "url": "https://digilab.overheid.nl/chat"
+    "title": "Lunchbreaksessie: AI Debat Assistent",
+    "start_date": "2026-01-27T12:00:00+01:00",
+    "end_date": "2026-01-27T13:00:00+01:00",
+    "place": "Online",
+    "summary": "AI lunchbreaksessie met gastspreker Jurriaan Raaijmakers (BZK) over de AI Debat Assistent. Verdiep je in AI en de overheid en ontmoet AI-professionals uit andere overheidsorganisaties.",
+    "url": "https://platformaioverheid.nl/event/ai-lunchbreaksessie-jurriaan-raaijmakers-vanuit-het-ministerie-van-bzk-over-de-ai-debat-assistent/"
   },
   {
-    "title": "Kennisplatform API's speciale editie",
-    "start_date": "2025-11-05T10:00:00+02:00",
-    "end_date": "2025-11-05T16:30:00+02:00",
-    "place": "EDSN, Amersfoort",
-    "summary": "Op woensdag 5 november 2025 heet het Kennisplatform API je van harte welkom voor een extra uitgebreide kennissessie, gehost bij EDSN in Amersfoort. De bijeenkomsten van het Kennisplatform API's zijn toegankelijk voor iedereen die kennis wil opsnuiven en delen over het ontwikkelen en inzetten van API's bij de overheid.",
-    "url": "https://www.formdesk.com/geonovum/API2025"
+    "title": "Webinar: Hoe publiceer je als overheid broncode?",
+    "start_date": "2026-01-28T12:00:00+01:00",
+    "end_date": "2026-01-28T13:00:00+01:00",
+    "place": "Online",
+    "summary": "Webinar over broncode publiceren als overheid vanuit het perspectief van opensourcewerken. Met Anne Jan Brouwer (VWS) en Marlena van Ooijen (Logius).",
+    "url": "https://www.it-academieoverheid.nl/actueel/agenda/2026/01/28/radio-webinar-broncode-publiceren"
   },
   {
-    "title": "HAVEN+ Masterclass: technische implementatie",
-    "start_date": "2025-12-09T15:00:00+01:00",
-    "end_date": "2025-12-09T17:00:00+01:00",
-    "place": "Online, WebinarGeek",
-    "summary": "Een deep-dive sessie voor Dev(Ops) Engineers, Cloud Engineers & Platform Teams. We duiken diep in de keuzes in tooling en implementatiepatronen die HAVEN+ productieklaar maken. Verwacht concrete code, live demos en praktijkervaringen uit productie-omgevingen.",
-    "url": "https://vng.nl/agenda/haven-masterclass-technische-implementatie"
+    "title": "Webinar: De Cyberbeveiligingswet komt eraan",
+    "start_date": "2026-01-29T11:00:00+01:00",
+    "end_date": "2026-01-29T12:00:00+01:00",
+    "place": "Online",
+    "summary": "Webinar van NCSC en NCTV over de Cyberbeveiligingswet. Focus op zorgplicht, bestuurlijke verantwoordelijkheid en opleidingsplicht. Leer hoe je een risicoanalyse maakt en passende technische en organisatorische maatregelen neemt.",
+    "url": "https://www.formdesk.com/ncsc/WebinarCbw2"
   },
   {
-    "title": "zoBouwenWijSoftwareBijDeOverheid",
-    "start_date": "2025-12-16T12:30:00+01:00",
-    "end_date": "2025-12-16T17:30:00+01:00",
-    "place": "Dev.loer, Utrecht",
-    "summary": "Hoe bouwen we binnen de overheid software die betrouwbaar, open en herbruikbaar is en goed aansluit op standaarden en beleid? Tijdens zoBouwenWijSoftwareBijDeOverheid laten we zien hoe we dat in de praktijk doen. Op dinsdag 16 december 2025 nodigen we je uit bij Dev.loer in Utrecht voor een inspirerende en vooral hands-on middag.",
-    "url": "https://developer.overheid.nl/blog/2025/11/04/zo-bouwen-wij-software-bij-de-overheid"
+    "title": "Symposium Digitale Vertalingen",
+    "start_date": "2026-01-29T13:00:00+01:00",
+    "end_date": "2026-01-29T17:15:00+01:00",
+    "place": "Hogeschool van Amsterdam, Amsterdam",
+    "summary": "Middag over het verantwoord, rechtmatig en effectief vertalen van rechtsregels naar digitale systemen in de publieke sector. Uitwisseling tussen praktijk, onderzoek en onderwijs staat centraal.",
+    "url": "https://www.it-academieoverheid.nl/actueel/agenda/2026/01/29/symposium-digitale-vertalingen"
+  },
+  {
+    "title": "Open Dialoog NDS Cloud",
+    "start_date": "2026-01-29T14:45:00+01:00",
+    "end_date": "2026-01-29T18:00:00+01:00",
+    "place": "Rijkswaterstaat, Utrecht",
+    "summary": "Derde Open Dialoog over de vormgeving van een overheidsbrede soevereine clouddienst en bijbehorende marktplaats. Voor cloudleveranciers, integrators, SaaS-leveranciers en adviseurs op cloudgebied.",
+    "url": "https://open-dialoog-nds-cloud-2026.yellenge.nl/registration/#/participants"
+  },
+  {
+    "title": "Workshop OGC API - Intro en Features",
+    "start_date": "2026-02-04T10:00:00+01:00",
+    "end_date": "2026-02-04T16:00:00+01:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Workshop over OGC API standaarden. Je leert hoe je geografische informatie kunt uitwisselen en integreren binnen QGIS-software en gaat aan de slag met de OGC API Features standaard. Met OGC API's heb je geen specifieke geo-kennis of tooling nodig om geodata te verwerken.",
+    "url": "https://www.geonovum.nl/agenda/workshop-ogc-api-intro-en-features"
+  },
+  {
+    "title": "Demodag Digitale Overheid",
+    "start_date": "2026-02-12T10:00:00+01:00",
+    "end_date": "2026-02-12T17:00:00+01:00",
+    "place": "Fokker Terminal, Den Haag",
+    "summary": "Maak kennis met innovatieve projecten die bijdragen aan een slimme digitale overheid. Projecten uit het Innovatiebudget en andere innovatie-instrumenten van BZK krijgen een podium.",
+    "url": "https://demodag-innovatiebudget.yellenge.nl/registration/#/participants"
+  },
+  {
+    "title": "Uitvoering geven aan de Wdo",
+    "start_date": "2026-02-19T10:00:00+01:00",
+    "end_date": "2026-02-19T11:00:00+01:00",
+    "place": "Online",
+    "summary": "Online sessie over uitvoering geven aan de Wet digitale overheid en het veilig gebruiken van het Stelsel Toegang. Leer hoe publieke dienstverleners veilig en eenvoudig gebruik kunnen maken van erkende inlog- en machtigingsdiensten.",
+    "url": "https://stelseltoegang.pleio.nl/events/view/a6ad9fa4-09bd-4ae6-a184-27883628a0d3/online-informatiesessie-uitvoering-geven-aan-de-wdo-de-essentie-van-het-stelsel-toegang"
+  },
+  {
+    "title": "De Digital Twin van de Planketen",
+    "start_date": "2026-03-03T09:30:00+01:00",
+    "end_date": "2026-03-03T17:30:00+01:00",
+    "place": "Prodentfabriek, Amersfoort",
+    "summary": "Community-dag over digitale tweelingen in de planketen. Beleid, praktijk en technologie rond digital twins voor de fysieke leefomgeving komen samen. Georganiseerd door ministerie VRO, DMI, VNG, Geonovum en GeoSquare KennisKring.",
+    "url": "https://www.geonovum.nl/agenda/de-digital-twin-van-de-planketen"
+  },
+  {
+    "title": "Conferentie Rules as Code 2026",
+    "start_date": "2026-03-10T09:00:00+01:00",
+    "end_date": "2026-03-11T17:00:00+01:00",
+    "place": "The Hague Conference Centre, Den Haag",
+    "summary": "Tweedaagse conferentie over Rules as Code: wet- en regelgeving omzetten in machineleesbare vorm. Internationale keynotes, praktische workshops en de nieuwste tools en methoden om regels direct te integreren in digitale systemen.",
+    "url": "https://rules-as-code.yellenge.nl/"
+  },
+  {
+    "title": "RADIO Techpeditie naar SAP (Den Bosch)",
+    "start_date": "2026-03-12T12:30:00+01:00",
+    "end_date": "2026-03-12T17:30:00+01:00",
+    "place": "SAP, Den Bosch",
+    "summary": "Werkbezoek aan SAP over de impact van digitalisering, informatisering en AI op de publieke sector. Inspiratiesessies over AI-waarde en digitale innovatie in de praktijk. Thema's: beleid-naar-uitvoering, grip door digitalisering, internationale best practices.",
+    "url": "https://www.formdesk.com/BZK/Techpeditie_SAP"
+  },
+  {
+    "title": "Kennisplatform API's",
+    "start_date": "2026-03-18T12:00:00+01:00",
+    "end_date": "2026-03-18T16:30:00+01:00",
+    "place": "Meetup Utrecht (boven Beatrixtheater)",
+    "summary": "Kennissessie over het ontwikkelen en inzetten van API's bij de overheid. Updates over de laatste ontwikkelingen, parallelle sessies over specifieke thema's en netwerkmogelijkheden met API-professionals.",
+    "url": "https://www.geonovum.nl/agenda/kennisplatform-apis-0"
+  },
+  {
+    "title": "Demo Day Startup in Residence Intergov",
+    "start_date": "2026-03-26T09:00:00+01:00",
+    "end_date": "2026-03-26T17:00:00+01:00",
+    "place": "Locatie volgt",
+    "summary": "16 start-ups pitchen hun co-creaties met overheidspartners. Ontdek concrete oplossingen voor maatschappelijke opgaven, ervaar publiek-private samenwerking en ontmoet changemakers, innovators en beleidsmakers.",
+    "url": "https://www.intergov.nl/"
+  },
+  {
+    "title": "Conferentie Gebruiker Centraal 2026",
+    "start_date": "2026-03-27T10:00:00+01:00",
+    "end_date": "2026-03-27T17:00:00+01:00",
+    "place": "Koepelgevangenis, Arnhem",
+    "summary": "Conferentie over mensvaardiger werken bij de overheid. Voor iedereen die werkt aan dienstverlening en communicatie van de overheid. Dag vol ontmoeting, interactie en inspiratie over gebruikersgerichte digitale dienstverlening.",
+    "url": "https://www.gebruikercentraal.nl/agenda/conferentie-gebruiker-centraal-2026/"
+  },
+  {
+    "title": "Leveranciersoverleg Wro plansoftware en overgangsrecht",
+    "start_date": "2026-04-21T16:00:00+02:00",
+    "end_date": "2026-04-21T17:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Overleg voor softwareleveranciers over de toepassing van de Wro plansoftware door bevoegde gezagen in het kader van overgangsrecht Omgevingswet.",
+    "url": "https://www.geonovum.nl/agenda/leveranciersoverleg-wro-plansoftware-en-overgangsrecht-0"
+  },
+  {
+    "title": "Open Geodag 2026",
+    "start_date": "2026-05-12T09:00:00+02:00",
+    "end_date": "2026-05-12T17:00:00+02:00",
+    "place": "Locatie volgt",
+    "summary": "Tweejaarlijks event van Geonovum over geo-standaarden en databedreven werken. Kennissessies, workshops over OGC API's, presentaties over Zicht op Nederland en netwerkmogelijkheden voor de geo-community.",
+    "url": "https://www.geonovum.nl/agenda/open-geodag-2026"
+  },
+  {
+    "title": "RADIO Techpeditie naar Netcompany (Den Haag)",
+    "start_date": "2026-06-04T12:30:00+02:00",
+    "end_date": "2026-06-04T17:00:00+02:00",
+    "place": "Netcompany, Den Haag",
+    "summary": "Werkbezoek aan Netcompany, medebouwer van het Europese prototype van de Digitale Wallet. Wissel van gedachten over strategische kansen, nationale en Europese ontwikkelingen en concrete toepassingen voor digitale zelfbeschikking.",
+    "url": "https://www.formdesk.com/BZK/Techpeditie_Netcompany"
+  },
+  {
+    "title": "CIO-dag 2026",
+    "start_date": "2026-06-24T12:00:00+02:00",
+    "end_date": "2026-06-24T17:00:00+02:00",
+    "place": "Amare, Den Haag",
+    "summary": "Vijfde editie van de CIO-dag met interbestuurlijk karakter. Sessies en workshops over NDS-prioriteiten, informatiehuishouding, privacy, innovatie en duurzaamheid. Voor CIO's, CISO's, CTO's en digitaliseringsprofessionals bij de overheid.",
+    "url": "https://www.formdesk.com/AenO/interesse-cio-dag"
+  },
+  {
+    "title": "Leveranciersoverleg Wro plansoftware en overgangsrecht",
+    "start_date": "2026-11-03T16:00:00+01:00",
+    "end_date": "2026-11-03T17:00:00+01:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Overleg voor softwareleveranciers over de toepassing van de Wro plansoftware door bevoegde gezagen in het kader van overgangsrecht Omgevingswet.",
+    "url": "https://www.geonovum.nl/agenda/leveranciersoverleg-wro-plansoftware-en-overgangsrecht"
   }
 ]

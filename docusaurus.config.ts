@@ -1,10 +1,12 @@
 // import { themes as prismThemes } from "prism-react-renderer";
-import docusaurusTheme from "./src/utils/prismLight";
+// import docusaurusTheme from "./src/utils/prismLight";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import remarkDirectiveSugar from "remark-directive-sugar";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+const emptyTheme = { plain: {}, styles: [] };
 
 const config: Config = {
   title: "developer.overheid.nl",
@@ -159,6 +161,7 @@ const config: Config = {
           customCss: [
             "./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css",
             "./src/css/custom.css",
+            "./node_modules/a11y-syntax-highlighting/dist/prism/a11y-light.min.css",
           ],
         },
       } satisfies Preset.Options,
@@ -443,7 +446,7 @@ const config: Config = {
       ],
     },
     prism: {
-      theme: docusaurusTheme, // better contrast
+      theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
       additionalLanguages: ["turtle", "java", "go"],
     },
     colorMode: {
