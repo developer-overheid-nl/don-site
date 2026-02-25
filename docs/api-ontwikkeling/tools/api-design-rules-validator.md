@@ -15,7 +15,15 @@ zich gedraagt conform deze delen van de
 - De Transport Layer Security (TLS) rules van de
   [Transport Security Module](https://docs.geostandaarden.nl/api/API-Strategie-mod-transport-security/#transport-security).
 
-## Hoe kan ik mijn API valideren?
+## Kenmerken
+
+<!-- TODO: vul aan -->
+
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
+## Aan de slag
 
 In de readme van de
 [ADR Validator repository](https://gitlab.com/commonground/don/adr-validator)
@@ -31,3 +39,15 @@ Voorbeelden vind je hier:
 
 - [DockerFile](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/Dockerfile?ref_type=heads)
 - [.gitlab-ci.yml](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/.gitlab-ci.yml?ref_type=heads)
+
+## Waarom deze tool
+
+<!-- TODO: vul aan -->
+
+## Alternatieven
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

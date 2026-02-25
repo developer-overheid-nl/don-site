@@ -23,6 +23,12 @@ import { Link, Icon, Alert, Heading } from
   />
 </Alert>
 
+## Kenmerken
+
+<!-- TODO: vul aan -->
+
+## Hoe werkt het
+
 **tl;dr:** Quality-time is een open source tool die je kan helpen de kwaliteit
 van je maatwerksoftware te bewaken en technical debt te managen.
 
@@ -70,6 +76,18 @@ Quality-time via Docker of Kubernetes.
 Wij hebben al jaren veel plezier van Quality-time in onze projecten. Het zou
 mooi zijn als het ook voor jouw project/organisatie nuttig kan zijn?!
 
-## Externe links
+## Aan de slag
+
+<!-- TODO: vul aan -->
+
+## Waarom deze tool
+
+<!-- TODO: vul aan -->
+
+## Alternatieven
+
+<!-- TODO: vul aan -->
+
+## Bronnen
 
 - [Naar de github van Quality-time](https://github.com/ICTU/quality-time)

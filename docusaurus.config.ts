@@ -181,6 +181,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
     typesense: {
       typesenseCollectionName: "developer_overheid",
       typesenseServerConfig: {
@@ -247,7 +252,7 @@ const config: Config = {
             { label: "DevOps & Platform", to: "/kennisbank/devops" },
             { label: "Security", to: "/kennisbank/security" },
             {
-              label: "NeRDS leidraad softwareontwikkeling",
+              label: "Leidraad softwareontwikkeling",
               to: "/kennisbank/leidraad",
             },
             {

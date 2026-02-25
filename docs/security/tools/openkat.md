@@ -30,3 +30,27 @@ rapporten voor verschillende doelgroepen en gebruikers. OpenKAT is gratis, Open
 Source en self-hosted beschikbaar.
 
 **[Naar de website van OpenKat](https://openkat.nl/)**
+
+## Kenmerken
+
+<!-- TODO: vul aan -->
+
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
+## Aan de slag
+
+<!-- TODO: vul aan -->
+
+## Waarom deze tool
+
+<!-- TODO: vul aan -->
+
+## Alternatieven
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

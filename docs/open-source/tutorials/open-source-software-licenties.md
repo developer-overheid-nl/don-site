@@ -10,6 +10,14 @@ tags:
 De keuze van een licentie voor je project bepaalt wat anderen met jouw code
 mogen en kunnen doen.
 
+## Wat je gaat maken
+
+<!-- TODO: vul aan -->
+
+## Vereisten
+
+<!-- TODO: vul aan -->
+
 ## Veelgebruikt in overheidsland: EUPL
 
 De EUPL (European Union Public License) is een open source-licentie ontwikkeld
@@ -358,7 +366,11 @@ root van je project staat.
 - [Goedgekeurde licenties Open Source Initiative](https://opensource.org/licenses)
 - [Licentiewijzer MinBZK](https://licentiewijzer.org/)
 
-## Verder lezen
+## Resultaat
+
+<!-- TODO: vul aan -->
+
+## Bronnen
 
 - [**Europese Commissie:** What is the EUPL?](https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-strategy-history/european-union-public-licence_en)
 - [**Standaard voor Publieke Code:** Publiceer met een open licentie](https://codefor.nl/community-translations-standard/nl/criteria/publish-with-an-open-license.html)

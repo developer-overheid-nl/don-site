@@ -18,6 +18,14 @@ kopie van de map te maken waar de hele collectie van bestanden in zit.
 Vervolgens werk je verder en af en toe vergelijk je de nieuwe versie met de
 vorige versie. Of zelfs vorige versies ...
 
+## Wat je gaat maken
+
+<!-- TODO: vul aan -->
+
+## Vereisten
+
+<!-- TODO: vul aan -->
+
 ## Commit
 
 Dit is precies de functionaliteit die Git biedt! Zo'n kopie bewaren heet een
@@ -111,3 +119,11 @@ software en documentatie en onbekend blijven of participeren in de omliggende
 community dmv vragen stellen, antwoorden geven, interacties. Op dat moment
 worden deze gebruikers ook wel Contributors genoemd, maar zonder toegevoegde
 wijzigingen.
+
+## Resultaat
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

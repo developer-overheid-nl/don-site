@@ -4,21 +4,21 @@ title: "Richtlijnsjabloon"
 tags: []
 ---
 
-*Dit is het sjabloon voor het opstellen van richtlijnen. Het sjabloon gebruikt 
-een van de bestaande richtlijnen als voorbeeld. Die tekst ga je vervangen door 
-de tekst van de nieuwe richtlijn die je wilt maken. De blokken met schuingedrukte 
-tekst verwijder je als je klaar bent met de nieuwe richtlijn.*
+_Dit is het sjabloon voor het opstellen van richtlijnen. Het sjabloon gebruikt
+een van de bestaande richtlijnen als voorbeeld. Die tekst ga je vervangen door
+de tekst van de nieuwe richtlijn die je wilt maken. De blokken met
+schuingedrukte tekst verwijder je als je klaar bent met de nieuwe richtlijn._
 
-*Gebruik informele taal. Je kan de lezer aanspreken met "je". Afkortingen schrijf 
-je de eerste keer uit met de afkorting tussen haakjes erachter.*
+_Gebruik informele taal. Je kan de lezer aanspreken met "je". Afkortingen
+schrijf je de eerste keer uit met de afkorting tussen haakjes erachter._
 
-*De titel van de richtlijn is bij voorkeur in de gebiedende wijs:*
+_De titel van de richtlijn is bij voorkeur in de gebiedende wijs:_
 
 # Richtlijn: Ontwikkel duurzame software door te investeren in geautomatiseerde tests
 
-*Direct onder de titel beschrijf je de richtlijn en de belangrijkste begrippen daarin. 
-Leg hier nog niet uit waarom de richtlijn een goed idee is, dat komt bij het volgende 
-kopje.*
+_Direct onder de titel beschrijf je de richtlijn en de belangrijkste begrippen
+daarin. Leg hier nog niet uit waarom de richtlijn een goed idee is, dat komt bij
+het volgende kopje._
 
 Bij **handmatige** tests bedient een mens de applicatie en vergelijkt het
 werkelijke gedrag van een applicatie met het verwachte gedrag. Bij
@@ -28,14 +28,14 @@ testscripts bedienen de applicatie (of stukjes daarvan) en vergelijken het
 werkelijke gedrag met het verwachte gedrag van de applicatie. De test runner
 voert de testscripts uit.
 
-*Bij een beschrijving van 'common knowledge' kun je "we" gebruiken:*
+_Bij een beschrijving van 'common knowledge' kun je "we" gebruiken:_
 
 We onderscheiden testscripts die een hele applicatie bedienen en controleren en
 testscripts die een stukje van de applicatie testen. Die eersten heten vaak
 end-to-end tests of systeemtests, de laatsten worden unittests genoemd.
 
-*Het gebruik van de passieve vorm ("worden") is, mits spaarzaam toegepast, prima
-bij het beschrijven van de richtlijn:*
+_Het gebruik van de passieve vorm ("worden") is, mits spaarzaam toegepast, prima
+bij het beschrijven van de richtlijn:_
 
 Bij het draaien van een testscript wordt over het algemeen slechts een deel van
 applicatiecode uitgevoerd. Door een coveragetool te laten bijhouden welke
@@ -44,8 +44,8 @@ testscripts een overzicht worden gemaakt van de testdekking. Zo'n overzicht laat
 zien welke regels code wel, en welke niet zijn uitgevoerd ('geraakt') tijdens
 het testen. Ook laat het zien welke codepaden wel en niet zijn uitgevoerd.
 
-*Bij activiteiten die developers als onderdeel van de richtlijn zouden moeten
-uitvoeren is het prima om de gebiedende wijs te gebruiken:*
+_Bij activiteiten die developers als onderdeel van de richtlijn zouden moeten
+uitvoeren is het prima om de gebiedende wijs te gebruiken:_
 
 Coderegels en -paden die niet zijn geraakt tijdens het draaien van de
 testscripts vertegenwoordigen feitelijk ongeteste functionaliteit. Met je team
@@ -53,13 +53,14 @@ maak je afspraken over hoeveel ongeteste code acceptabel is voor je applicatie.
 Meestal meestal gebeurt dat door af te spreken dat bijvoorbeeld maximaal 5%
 ongeteste code acceptabel is. Oftewel, dat de gewenste testdekking 95% is.
 
-*Het kopje Rationale is van de vorm "Rationale: Waarom 'richtlijn'?":*
+_Het kopje Rationale is van de vorm "Rationale: Waarom 'richtlijn'?":_
 
 ## Rationale: Waarom geautomatiseerde tests?
 
-*Beschrijf waarom het een goed idee is om de richtlijn toe te passen. Motiveer 
-waarom de richtlijn bijdraagt aan het realiseren van het principe waar deze onder 
-valt. Noem ook risico's die optreden als de richtlijn niet wordt toegepast.*
+_Beschrijf waarom het een goed idee is om de richtlijn toe te passen. Motiveer
+waarom de richtlijn bijdraagt aan het realiseren van het principe waar deze
+onder valt. Noem ook risico's die optreden als de richtlijn niet wordt
+toegepast._
 
 Geautomatiseerde tests bieden een aantal voordelen. Ten eerste zijn ze veel
 goedkoper om uit te voeren dan handmatige tests. Als je een test eenmaal hebt
@@ -73,17 +74,18 @@ Je meet de testdekking om te bepalen of alle functionaliteit getest wordt door
 je testscripts. Door er bovendien een norm op te zetten dwing je jezelf de
 testdekking te verhogen als deze te laag is.
 
-*Het kopje Doelgroep is van de vorm "Doelgroep: Wie zijn er betrokken bij 'richtlijn'?":*
+_Het kopje Doelgroep is van de vorm "Doelgroep: Wie zijn er betrokken bij
+'richtlijn'?":_
 
 ## Doelgroep: Wie zijn er betrokken bij geautomatiseerde tests?
 
-*Noem eerst de doelgroepen als een lijstje:*
+_Noem eerst de doelgroepen als een lijstje:_
 
 De volgende doelgroepen kunnen met geautomatiseerde tests aan de slag:
 developers en testers.
 
-*Beschrijf vervolgens per doelgroep met welke activiteit de doelgroep aan de slag 
-kan:*
+_Beschrijf vervolgens per doelgroep met welke activiteit de doelgroep aan de
+slag kan:_
 
 Developers ontwikkelen unittests om te controleren of de code die ze schrijven
 doet wat ze verwachten. Daarnaast meten ze de testdekking van de unittests en
@@ -93,25 +95,28 @@ Testers ontwikkelen end-to-end tests en systeemtests die controleren of de
 applicatie werkt zoals verwacht, meten de testdekking ervan en verhogen de
 testdekking indien nodig door tests toe te voegen.
 
-*Het kopje Implementatie is van de vorm "Implementatie: Hoe implementeer je 'richtlijn'?":*
+_Het kopje Implementatie is van de vorm "Implementatie: Hoe implementeer je
+'richtlijn'?":_
 
 ## Implementatie: Hoe implementeer je geautomatiseerde tests?
 
 ### Methoden en technieken
 
-*Onder het kopje methoden en technieken beschrijf je methoden en technieken die 
-helpen bij het implementeren of uitvoeren van de richtlijn. Maak een subkopje voor elke 
-methode en/of techniek.*
+_Onder het kopje methoden en technieken beschrijf je methoden en technieken die
+helpen bij het implementeren of uitvoeren van de richtlijn. Maak een subkopje
+voor elke methode en/of techniek._
 
-*Een methode of techniek is een beschreven werkwijze met een duidelijk herkenbare naam en 
-een afgebakende scope. "CI/CD pijplijn opzetten" is dus geen methode of techniek, 
-"GitOps" wel. "Unittesten" is geen methode of techniek, "Test-driven development" wel.*
+_Een methode of techniek is een beschreven werkwijze met een duidelijk
+herkenbare naam en een afgebakende scope. "CI/CD pijplijn opzetten" is dus geen
+methode of techniek, "GitOps" wel. "Unittesten" is geen methode of techniek,
+"Test-driven development" wel._
 
 #### Test-driven development
 
-*Houd de beschrijving van de methode of techniek beknopt. De beschrijving hoeft
-niet uitputtend te zijn. Verwijs naar een boek of website voor meer informatie. 
-Houd ook het aantal verwijzingen beperkt. Verwijs het liefst naar één canonieke bron.*
+_Houd de beschrijving van de methode of techniek beknopt. De beschrijving hoeft
+niet uitputtend te zijn. Verwijs naar een boek of website voor meer informatie.
+Houd ook het aantal verwijzingen beperkt. Verwijs het liefst naar één canonieke
+bron._
 
 Test-driven development (TDD) is strikt genomen geen methode om tests te
 ontwikkelen, maar een aanpak om code te ontwikkelen. Het idee is dat je in een
@@ -123,8 +128,8 @@ kortcyclisch proces (denk minuten, niet uren):
    en
 3. de code netjes maakt die je in stap 2 hebt toegevoegd.
 
-*Merk op dat in de volgende alinea een boek wordt gerefereerd met (1). Dit boek 
-staat verderop genoemd in het hoofdstuk Bronnen.*
+_Merk op dat in de volgende alinea een boek wordt gerefereerd met (1). Dit boek
+staat verderop genoemd in het hoofdstuk Bronnen._
 
 Op deze manier ontstaat goed testbare code met een hoge testdekking. Test-driven
 development zoals door Kent Beck beschreven in (1) richt zich vooral op
@@ -173,11 +178,12 @@ Feature: report
 
 ### Tools
 
-*Onder het kopje Tools beschrijf je tools die je kunt gebruiken bij het toepassen
-van de richtlijn. Bij voorkeur zijn dit open source tools, maar als de meestgebruikte 
-tools commercieel zijn noem je die ook. Neem geen links op. Het is niet nodig 
-uitputtend te zijn, een aantal voorbeelden is voldoende. Als er  meerdere soorten 
-tools zijn, zoals in dit voorbeeld, maak dan subkopjes per soort tool.*
+_Onder het kopje Tools beschrijf je tools die je kunt gebruiken bij het
+toepassen van de richtlijn. Bij voorkeur zijn dit open source tools, maar als de
+meestgebruikte tools commercieel zijn noem je die ook. Neem geen links op. Het
+is niet nodig uitputtend te zijn, een aantal voorbeelden is voldoende. Als er
+meerdere soorten tools zijn, zoals in dit voorbeeld, maak dan subkopjes per
+soort tool._
 
 #### Test runners
 
@@ -196,18 +202,19 @@ Python code, en Jest voor Javascript code.
 
 ### Gerelateerde richtlijnen
 
-*Onder het kopje gerelateerde richtlijnen neem je links naar andere richtlijnen 
-uit de NeRDS Leidraad Softwareontwikkeling op indien relevant. Let op, voeg hier
-geen andere standaarden toe, daar is verderop een kopje voor.*
+_Onder het kopje gerelateerde richtlijnen neem je links naar andere richtlijnen
+uit de Leidraad Softwareontwikkeling op indien relevant. Let op, voeg hier geen
+andere standaarden toe, daar is verderop een kopje voor._
 
 - [Richtlijn software beheerst overdragen](hergebruik/richtlijn-software-overdragen.md)
 
 ### Succescriteria
 
-*Onder het kopje successcriteria richtlijnen neem je criteria op voor het succesvol
-toepassen van de richtlijn. Verdeel de criteria in twee groepen: wat is nodig om
-te voldoen en wanneer ben je echt goed bezig. Deze succescriteria moeten ook worden
-toegevoegd aan de [self-assessment checklist](self-assessment-checklist.ods).*
+_Onder het kopje successcriteria richtlijnen neem je criteria op voor het
+succesvol toepassen van de richtlijn. Verdeel de criteria in twee groepen: wat
+is nodig om te voldoen en wanneer ben je echt goed bezig. Deze succescriteria
+moeten ook worden toegevoegd aan de
+[self-assessment checklist](self-assessment-checklist.ods)._
 
 Wanneer voldoe je aan deze richtlijn?
 
@@ -226,7 +233,7 @@ Wanneer ben je echt goed bezig?
 
 ## Wanneer is deze richtlijn van toepassing?
 
-*Beschrijf de situaties waarin de richtlijn al dan niet van toepassing is.*
+_Beschrijf de situaties waarin de richtlijn al dan niet van toepassing is._
 
 Bijna altijd. Er zijn maar weinig uitzonderingen. Een uitzondering zou het
 ontwikkelen van een prototype kunnen zijn, waarbij de investering in
@@ -234,45 +241,49 @@ geautomatiseerde tests zich niet terugverdient.
 
 ## Bronnen
 
-*Noem hieronder bronnen onder de juiste subkopjes. Voeg bij wetten, beleid en standaarden geen links toe. Deze zouden eenvoudig vindbaar moeten zijn op basis van organisatie, naam en jaartal.*
+_Noem hieronder bronnen onder de juiste subkopjes. Voeg bij wetten, beleid en
+standaarden geen links toe. Deze zouden eenvoudig vindbaar moeten zijn op basis
+van organisatie, naam en jaartal._
 
 ### Wetten
 
-*Voeg namen toe van wetten, inclusief jaartal, indien relevant. Denk aan de 
-European Accessibility Act die accessibility requirements voorschrijft. Gebruik 
-"Geen bekend" als er geen relevante wet- en regelgeving bekend is.*
+_Voeg namen toe van wetten, inclusief jaartal, indien relevant. Denk aan de
+European Accessibility Act die accessibility requirements voorschrijft. Gebruik
+"Geen bekend" als er geen relevante wet- en regelgeving bekend is._
 
 Geen bekend.
 
 ### Beleid
 
-*Voeg namen toe van overheidsbeleid, inclusief jaartal, indien relevant.*
+_Voeg namen toe van overheidsbeleid, inclusief jaartal, indien relevant._
 
 Geen bekend.
 
 ### Standaarden
 
-*Voeg namen van standaarden toe, inclusief jaartal en uitgevende organisatie, indien relevant.
-Noem hier standaarden die door deze richtlijn worden gebruikt of welke met behulp van deze 
-richtlijn deels of geheel worden geïmplementeerd. Denk aan ISO-standaarden en de  'Pas toe of 
-leg uit'-standaarden van Forum Standaardisatie. Gebruik "Geen bekend" als er geen 
-relevante standaarden bekend zijn.*
+_Voeg namen van standaarden toe, inclusief jaartal en uitgevende organisatie,
+indien relevant. Noem hier standaarden die door deze richtlijn worden gebruikt
+of welke met behulp van deze richtlijn deels of geheel worden geïmplementeerd.
+Denk aan ISO-standaarden en de 'Pas toe of leg uit'-standaarden van Forum
+Standaardisatie. Gebruik "Geen bekend" als er geen relevante standaarden bekend
+zijn._
 
 - ISO/IEC/IEEE 29119 Software and systems engineering — Software testing series
 
 ### Communities
 
-*Voeg websites van relevante communities toe. Noem hier communities die actief zijn in het 
-werkveld van deze richtlijn. Denk aan een community van testers bij een test-richtlijn. Gebruik 
-"Geen bekend" als er geen relevante communities bekend zijn.*
+_Voeg websites van relevante communities toe. Noem hier communities die actief
+zijn in het werkveld van deze richtlijn. Denk aan een community van testers bij
+een test-richtlijn. Gebruik "Geen bekend" als er geen relevante communities
+bekend zijn._
 
 - [Test automation days](https://www.testautomationdays.com)
 
 ### Literatuur
 
-*Voeg artikelen of boeken toe die hierboven gebruikt zijn in de beschrijving. 
-Gebruik getallen voor de referenties. Link naar de literatuur als deze openbaar is.
-Gebruik "Geen bekend" als er geen relevante literatuur bekend is.* 
+_Voeg artikelen of boeken toe die hierboven gebruikt zijn in de beschrijving.
+Gebruik getallen voor de referenties. Link naar de literatuur als deze openbaar
+is. Gebruik "Geen bekend" als er geen relevante literatuur bekend is._
 
 - (1) Test Driven Development: By Example, Kent Beck, 2002.
 - (2) [Introducing BDD](https://dannorth.net/blog/introducing-bdd/), Daniel
@@ -280,14 +291,15 @@ Gebruik "Geen bekend" als er geen relevante literatuur bekend is.*
 
 ### Bronnen op developer.overheid.nl
 
-*Noem andere bronnen op developer.overheid.nl, zoals blogpost en artikelen. 
-Noem hier geen andere richtlijnen, daarvoor is het kopje "Gerelateerde richtlijnen".
-Gebruik "Geen bekend" als er geen relevante bronnen op developer.overheid.nl bekend zijn.*
+_Noem andere bronnen op developer.overheid.nl, zoals blogpost en artikelen. Noem
+hier geen andere richtlijnen, daarvoor is het kopje "Gerelateerde richtlijnen".
+Gebruik "Geen bekend" als er geen relevante bronnen op developer.overheid.nl
+bekend zijn._
 
 - [Deze goede redenen heeft de Kiesraad om Rust te gebruiken (Over Cargo test-framework voor Rust)](https://developer.overheid.nl/blog/2025/03/26/interview-kiesraad-rust#cargo-test-framework)
 
 ## Colofon
 
-*Noem hier het gebruikte sjabloon inclusief link:*
+_Noem hier het gebruikte sjabloon inclusief link:_
 
 Gebruikt sjabloon: [Richtlijnsjabloon, versie 1](./richtlijnsjabloon-v1.md)."

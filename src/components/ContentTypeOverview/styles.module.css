@@ -1,0 +1,150 @@
+.overview {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filterGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 200px;
+}
+
+.searchInput {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 300px;
+}
+
+.resultCount {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1rem;
+}
+
+.categoryGroup {
+  margin-bottom: 2rem;
+}
+
+.categoryTitle {
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 15%);
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.badge--standaard {
+  background-color: var(--don-donkerblauw-50);
+  color: var(--don-donkerblauw-500);
+}
+
+.badge--tool {
+  background-color: var(--don-groen-50);
+  color: var(--don-groen-500);
+}
+
+.badge--tutorial {
+  background-color: var(--don-robijnrood-50);
+  color: var(--don-robijnrood-500);
+}
+
+.badge--architectuur {
+  background-color: var(--don-lichtblauw-50);
+  color: var(--don-donkerblauw-500);
+}
+
+.badge--richtlijn {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.cardDescription {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.noResults {
+  text-align: center;
+  padding: 2rem;
+  color: var(--ifm-color-emphasis-500);
+  font-style: italic;
+}

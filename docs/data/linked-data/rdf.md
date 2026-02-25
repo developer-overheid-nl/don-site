@@ -14,7 +14,9 @@ machine-leesbare manier te presenteren. RDF wordt vaak gebruikt in combinatie
 met andere standaarden zoals RDFa, RDFS en OWL om het semantische web te
 ondersteunen.
 
-## RDFa
+## Hoe werkt het
+
+### RDFa
 
 RDFa (Resource Description Framework in Attributes) is een uitbreiding van HTML,
 XHTML en XML waarmee metadata en semantische gegevens direct in webpagina's
@@ -45,7 +47,7 @@ beïnvloeden. RDFa maakt gebruik van HTML-attributen zoals `about`, `property` e
 Met RDFa kun je dus semantische gegevens toevoegen aan HTML-documenten, waardoor
 zoekmachines en andere systemen de inhoud beter kunnen begrijpen.
 
-## RDFS
+### RDFS
 
 RDFS (RDF Schema) is een uitbreiding van RDF die een vocabulaire en structuur
 toevoegt aan het basismodel van RDF. Het biedt mechanismen om klassen,
@@ -56,7 +58,7 @@ klasse een subklasse is van een andere. Dit maakt het mogelijk om semantische
 relaties en regels binnen datasets te specificeren, wat essentieel is voor het
 bouwen van rijke en betekenisvolle gegevensmodellen.
 
-## Verschil tussen RDF, RDFa en RDFS
+### Verschil tussen RDF, RDFa en RDFS
 
 - **RDF** is het basismodel voor het beschrijven van gegevens in de vorm van
   subject-predicate-object-triples. Het biedt een generiek framework voor het
@@ -70,3 +72,19 @@ bouwen van rijke en betekenisvolle gegevensmodellen.
 
 Kort gezegd: RDF is het fundament, RDFa is een toepassing ervan in
 webdocumenten, en RDFS biedt een uitbreidbare vocabulaire voor RDF.
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

@@ -5,6 +5,10 @@ tags: [interoperabiliteit, eda, cloudevents, forum-standaardisatie]
 
 # NL GOV Profile for CloudEvents
 
+## Het probleem
+
+<!-- TODO: vul aan -->
+
 ## Van intake tot verplichte standaard
 
 CloudEvents is een internationale standaard voor het uniform beschrijven van
@@ -39,6 +43,10 @@ voorzien van een nationaal profiel: het
   [OBDO](https://pgdi.nl/) om het _"NL GOV profile for CloudEvents"_ verplicht
   te stellen (“Pas toe of leg uit”). Daarnaast is Logius het predicaat
   **‘Uitstekend beheer’** toegekend voor deze standaard.
+
+## De oplossing
+
+<!-- TODO: vul aan -->
 
 ## Wat is het NL GOV profile for CloudEvents?
 
@@ -101,7 +109,23 @@ Het gebruik van CloudEvents en het NL GOV profiel helpt de overheid om:
 - **Interoperabiliteit** te garanderen, zodat alle overheidsorganisaties
   dezelfde taal spreken in event-uitwisseling.
 
-## Meer informatie
+## Kernconcepten
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Best practices
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde patronen
+
+<!-- TODO: vul aan -->
+
+## Bronnen
 
 - [NL GOV profile for CloudEvents – Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents)
 - [CloudEvents NL – Logius documentatie](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/)

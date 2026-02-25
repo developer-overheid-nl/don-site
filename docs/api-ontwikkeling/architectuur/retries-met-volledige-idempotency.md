@@ -29,7 +29,11 @@ voegen.
 | POST      | Header: `Idempotency-Key`                                                                    |
 | PATCH     | Header: `Idempotency-Key`                                                                    |
 
-## Werking
+## Het probleem
+
+<!-- TODO: vul aan -->
+
+## De oplossing
 
 1.  De client genereert een unieke `Idempotency-Key` (bijvoorbeeld een UUID)
     voor een uit te voeren operatie.
@@ -95,3 +99,23 @@ paths:
         "201":
           description: Item aangemaakt
 ```
+
+## Kernconcepten
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Best practices
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde patronen
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

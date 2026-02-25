@@ -55,6 +55,18 @@ Alle properties zijn verplicht. Hieronder een overzicht:
 | **contact**     | `ContactObject`    | Object met contactgegevens van de API.                                                                   |
 | **resources**   | `ResourceObject[]` | Array van resources die de API onsluit. Op basis hiervan worden de paths, methods en models gegenereerd. |
 
+## Kenmerken
+
+<!-- TODO: vul aan -->
+
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
+## Aan de slag
+
+<!-- TODO: vul aan -->
+
 ## `ResourceObject`
 
 | Property     | Type      | Omschrijving                                                                   |
@@ -70,3 +82,15 @@ Alle properties zijn verplicht. Hieronder een overzicht:
 | **name**  | `string` | Naam van de contactpersoon/afdeling die over de API gaat.        |
 | **email** | `string` | E-mailadres van de contactpersoon/afdeling die over de API gaat. |
 | **url**   | `string` | Website van de contactpersoon/afdeling die over de API gaat.     |
+
+## Waarom deze tool
+
+<!-- TODO: vul aan -->
+
+## Alternatieven
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

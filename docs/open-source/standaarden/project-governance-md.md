@@ -69,3 +69,23 @@ vaardigheidsvereisten en geen selectieproces. Om een contributor te worden,
 hoeft een lid van de community alleen maar een of meerdere acties uit te voeren
 die gunstig zijn voor het project.
 ```
+
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

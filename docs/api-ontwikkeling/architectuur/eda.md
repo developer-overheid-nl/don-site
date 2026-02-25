@@ -14,7 +14,7 @@ inefficiënt. Event-Driven Architecture (EDA) biedt hier een alternatief: een
 manier van bouwen waarbij systemen en applicaties reageren op gebeurtenissen. In
 zo’n opzet kan de server events pushen zodra er iets verandert.
 
-## Van Polling naar Event-Driven
+## Het probleem
 
 Het traditionele model is vergelijkbaar met steeds opnieuw opvragen van je
 banksaldo. Vaak krijg je hetzelfde antwoord en dit leidt tot:
@@ -44,7 +44,11 @@ Content-Type: application/json
 }
 ```
 
-## Communicatiepatronen
+## De oplossing
+
+<!-- TODO: vul aan -->
+
+## Kernconcepten
 
 Afhankelijk van je use case kies je een real-time patroon:
 
@@ -55,7 +59,11 @@ Afhankelijk van je use case kies je een real-time patroon:
 - [WebSocket wiki](https://en.wikipedia.org/wiki/WebSocket) – voor
   bi-directionele communicatie, geschikt voor chats of games.
 
-## Best Practices voor ontwerp
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Best practices
 
 Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 
@@ -97,3 +105,11 @@ maken we API’s slimmer, robuuster en toekomstbestendig.
 >
 Lees ook het Blog "De toekomstige van de Overheid is Event Driven" op [Developer.overheid.nl/blog](https://developer.overheid.nl/blog)
 </Blockquote>
+
+## Gerelateerde patronen
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

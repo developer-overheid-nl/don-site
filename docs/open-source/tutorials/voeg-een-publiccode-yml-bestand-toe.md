@@ -22,6 +22,10 @@ hiervoor gebruikt maak je automatisch gebruik van de
 waardoor je inline tips krijgt over welke properties je nog mist, of eventuele
 spelfouten.
 
+## Wat je gaat maken
+
+<!-- TODO: vul aan -->
+
 ## Waarom een publiccode.yml toevoegen aan je project?
 
 ### Groene "flag"
@@ -44,6 +48,8 @@ Voor meer informatie, ga naar de
 
 - VSCode
 
+## Stappen
+
 ### Stap 1 - Voeg een publiccode.yml bestand toe
 
 Open je project in VSCode en voeg een bestand toe aan de root van je project met
@@ -59,3 +65,11 @@ deze in jouw `publiccode.yml`-bestand.
 Pas alle waarden aan met informatie over jouw project. Ben je opzoek naar
 informatie over de properties van de standard? Ga dan naar de
 [documentatie van de standaard](https://yml.publiccode.tools/schema.core.html).
+
+## Resultaat
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

@@ -12,7 +12,7 @@ description:
   voorbeelden is een eerste aanzet tot overheidsbreed beleid voor development."
 ---
 
-# NeRDS leidraad softwareontwikkeling
+# Leidraad softwareontwikkeling
 
 De
 [Nederlandse Richtlijn Digitale Systemen (NeRDS)](https://minbzk.github.io/NeRDS)
@@ -29,7 +29,8 @@ standaard, techniek of principe? Laat het ons weten via
 [mail](mailto:developer.overheid@geonovum.nl). Wil je bijdragen aan dit project?
 Bekijk dan de
 [bijdragerichtlijnen van NeRDS](https://minbzk.github.io/NeRDS/production/Over-NeRDS/CONTRIBUTING/)
-voor meer informatie. Gebruik voor een nieuwe richtlijn het [richtlijnsjabloon](./richtlijnsjabloon-v1.md).
+voor meer informatie. Gebruik voor een nieuwe richtlijn het
+[richtlijnsjabloon](./richtlijnsjabloon-v1.md).
 
 :::
 
@@ -49,7 +50,9 @@ De leidraad bevat de volgende principes:
 - ### [12. Bepaal je inkoopstrategie](./inkoopstrategie/)
 - ### [13. Denk na over duurzaamheid](./duurzaamheid)
 
-Om te kijken in hoeverre je team, project, afdeling of organisatie werkt volgens de leidraad, kun je een self-assessment doen. Gebruik hiervoor de [self-assessment checklist](self-assessment-checklist.ods).
+Om te kijken in hoeverre je team, project, afdeling of organisatie werkt volgens
+de leidraad, kun je een self-assessment doen. Gebruik hiervoor de
+[self-assessment checklist](self-assessment-checklist.ods).
 
 ### Contact
 

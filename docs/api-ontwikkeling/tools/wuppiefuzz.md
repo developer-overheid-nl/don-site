@@ -42,7 +42,11 @@ gebruiksvriendelijkheid, modulariteit en inzichtelijkheid.
 
 ![Logo of WuppieFuzz](./img/WuppieFuzz.svg)
 
-## Hoe werkt WuppieFuzz?
+## Kenmerken
+
+<!-- TODO: vul aan -->
+
+## Hoe werkt het
 
 [![How to use WuppieFuzz? - YouTube](./img/demo_video.png)](https://www.youtube.com/watch?v=-oR4d9aXrqo)
 
@@ -60,7 +64,11 @@ worden vervolgens gemuteerd om diepere logica en edge cases in de API te
 bereiken. De tool meet test coverage via response codes en/of via instrumentatie
 van de backend (bijv. met `JaCoCo` voor Java of `coverage.py` voor Python).
 
-## Waarom is WuppieFuzz Relevant voor de Overheid?
+## Aan de slag
+
+<!-- TODO: vul aan -->
+
+## Waarom deze tool
 
 REST API’s vormen de ruggengraat van veel overheidsapplicaties. Denk aan
 systemen voor burgerzaken, vergunningverlening of gegevensuitwisseling tussen
@@ -85,6 +93,14 @@ WuppieFuzz biedt een krachtige, toegankelijke en uitbreidbare oplossing voor het
 testen van REST API's binnen overheidscontexten. Door gebruik te maken van
 coverage-guided fuzzing en slimme mutatiestrategieën, helpt het ontwikkelaars om
 robuuste, betrouwbare en veilige digitale diensten te bouwen.
+
+## Alternatieven
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+- [WuppieFuzz op GitHub](https://github.com/TNO-S3/WuppieFuzz)
 
 ---
 

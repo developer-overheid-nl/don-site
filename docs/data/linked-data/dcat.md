@@ -16,6 +16,10 @@ titel, beschrijving, publicatiedatum, licentie en distributieformaten. Dit maakt
 het eenvoudiger om datasets te integreren in zoekmachines, data-portalen en
 andere toepassingen.
 
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
 ## Voorbeeld van DCAT
 
 Hier is een voorbeeld in Turtle-syntaxis dat een dataset beschrijft:
@@ -52,3 +56,19 @@ Uitleg:
 DCAT helpt ontwikkelaars om datasets op een gestandaardiseerde manier te
 beschrijven, wat de interoperabiliteit en vindbaarheid van gegevens aanzienlijk
 verbetert.
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

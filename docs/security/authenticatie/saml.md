@@ -18,7 +18,7 @@ SAML is XML-gebaseerd en wordt veel gebruikt in enterprise-omgevingen én bij
 overheidsdiensten. De huidige standaard is **SAML 2.0**, ontwikkeld door
 [OASIS](https://docs.oasis-open.org/security/saml/v2.0/).
 
-## Hoe werkt SAML?
+## Hoe werkt het
 
 SAML regelt de communicatie tussen drie partijen:
 
@@ -30,7 +30,7 @@ Wanneer een gebruiker probeert in te loggen bij een SP, wordt hij doorgestuurd
 naar de IdP. Na succesvolle login stuurt de IdP een zogeheten **SAML-assertie**
 terug, waarmee de SP de gebruiker toegang geeft.
 
-## Waar wordt SAML voor gebruikt?
+## Toepassing in Nederland
 
 SAML is de standaard bij veel publieke en private federatieve inlogsituaties,
 waaronder:
@@ -74,7 +74,7 @@ alternatief, maar SAML blijft voorlopig een kerncomponent.
 Bron:
 [eIDAS Technical Specs - Europa.eu](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 
-## 🧠 Waarom kiezen voor SAML?
+## Wanneer gebruik je dit
 
 - Bewezen en stabiele standaard
 - Breed ondersteund bij overheden en grote organisaties
@@ -82,9 +82,12 @@ Bron:
 - Minder geschikt voor mobiele apps of API-authenticatie (daarvoor is OAuth
   beter)
 
-## Meer informatie
+## Gerelateerde standaarden
 
 - [SAML 2.0 Specificatie bij OASIS](https://docs.oasis-open.org/security/saml/v2.0/)
+
+## Bronnen
+
 - [DigiD en SAML - Logius.nl](https://www.logius.nl/domeinen/toegang/digid)
 - [eHerkenning en SAML - eherkenning.nl](https://www.eherkenning.nl/)
 - [eIDAS en federatieve authenticatie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)

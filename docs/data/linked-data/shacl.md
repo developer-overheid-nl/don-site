@@ -17,6 +17,10 @@ een bepaald type entiteit een verplichte eigenschap moet hebben, dat een
 eigenschap een specifieke datatype moet hebben, of dat een waarde binnen een
 bepaald bereik moet liggen.
 
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
 ## Voorbeeld
 
 Hier is een voorbeeld van een SHACL-shape die valideert dat een `Person` een
@@ -47,3 +51,19 @@ ex:PersonShape
 | **sh:NodeShape**   | Definieert een shape die wordt toegepast op RDF-resources.                                                                                                                                                   |
 | **sh:targetClass** | Geeft aan dat de shape van toepassing is op alle instanties van de klasse `ex:Person`.                                                                                                                       |
 | **sh:property**    | Beschrijft beperkingen voor specifieke eigenschappen: `ex:name` moet een string zijn en is verplicht (`sh:minCount 1`). `ex:age` moet een geheel getal zijn en mag niet negatief zijn (`sh:minInclusive 0`). |
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

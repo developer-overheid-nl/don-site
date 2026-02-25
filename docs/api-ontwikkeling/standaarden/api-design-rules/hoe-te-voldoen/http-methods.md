@@ -1,5 +1,4 @@
 ---
-content_type: standaard
 tags: [interoperabiliteit, adr, api, kennisplatform-apis]
 ---
 

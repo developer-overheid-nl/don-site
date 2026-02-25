@@ -12,7 +12,7 @@ expressiviteit om relaties, regels en beperkingen tussen gegevens te
 beschrijven. OWL wordt vaak gebruikt in toepassingen zoals kennisgrafen,
 semantische zoekmachines en AI-systemen.
 
-## Kenmerken van OWL
+## Hoe werkt het
 
 1. **Klassen en Individuen**:
    - OWL maakt het mogelijk om klassen (categorieën) en individuen (instanties)
@@ -46,3 +46,19 @@ ex:worksFor a owl:ObjectProperty ;
     rdfs:domain ex:Employee ;
     rdfs:range ex:Organization .
 ```
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

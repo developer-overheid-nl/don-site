@@ -16,7 +16,7 @@ een systeem zelf een bericht (event) sturen naar een ander systeem zodra er iets
 verandert, in plaats van dat de afnemer steeds moet "poll-en" of er nieuwe data
 is.
 
-## Wat zijn webhooks?
+## Het probleem
 
 Webhooks zijn een eenvoudige manier om systemen real-time te koppelen.
 
@@ -31,6 +31,14 @@ ontvangt de melding zodra er iets gebeurt.
 - **Push-mechanisme**: de producer “duwt” de melding naar de consumer.
 - **Lichtgewicht**: meestal in de vorm van een kleine JSON-payload.
 - **Eenvoudig te implementeren**: werkt via standaard HTTP.
+
+## De oplossing
+
+<!-- TODO: vul aan -->
+
+## Kernconcepten
+
+<!-- TODO: vul aan -->
 
 ## Voorbeeld
 
@@ -137,6 +145,14 @@ webhooks:
 - **Beveiliging**: endpoints moeten goed beschermd zijn.
 - **Beheer**: documenteer welke events er bestaan en hoe ze eruit zien.
 
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Best practices
+
+<!-- TODO: vul aan -->
+
 ## Tot slot
 
 Webhooks bieden een laagdrempelige manier om systemen real-time te koppelen.
@@ -150,3 +166,11 @@ Voor meer informatie:
 - [CloudEvents standaard bij Geonovum](https://www.gemmaonline.nl/wiki/De_CloudEvents_standaard)
 - [Server-sent events wiki](https://en.wikipedia.org/wiki/Server-sent_events)
 - [WebSocket wiki](https://en.wikipedia.org/wiki/WebSocket)
+
+## Gerelateerde patronen
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

@@ -18,7 +18,7 @@ bedrijven een nieuwe manier om hun identiteit online te bewijzen en gegevens te
 delen. Elke lidstaat moet volgens de verordening eind 2026 minstens één
 gecertificeerde EDI-wallet beschikbaar stellen.
 
-## Wat is een EUDI wallet?
+## Hoe werkt het
 
 Een **EUDI wallet** (in Nederland ook wel de EDI-wallet of NL-Wallet genoemd) is
 een mobiele applicatie waarmee burgers in alle EU-lidstaten, ongeacht het land
@@ -46,7 +46,7 @@ aanbieders toetreden, mits zij voldoen aan de eIDAS-eisen.
 Meer info:
 [EUDI Architecture and Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/architecture-and-reference-framework-main/)
 
-## Voordelen voor burgers en bedrijven
+## Toepassing in Nederland
 
 - **Regie over gegevens**: zelf bepalen welke gegevens je deelt, met wie en voor
   welk doel
@@ -104,7 +104,15 @@ ecosysteem:
 
 ---
 
-## Meer weten?
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
 
 - [edi.pleio.nl](https://edi.pleio.nl) – informatie over de Nederlandse
   EDI-wallet.

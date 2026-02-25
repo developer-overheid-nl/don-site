@@ -1,6 +1,31 @@
+---
+content_type: architectuur
+tags: [privacy, interoperabiliteit, ldv]
+---
+
 # Use Cases
 
 Dit hoofdstuk bevat voorbeelden van use cases, gebaseerd op praktijkscenario's uit workshops. Ze illustreren hoe de standaard Logboek Dataverwerkingen kan worden toegepast in samenwerkingen tussen organisaties. De voorbeelden zijn niet-normatief en dienen ter verduidelijking voor organisaties met vergelijkbare processen.
+
+## Het probleem
+
+<!-- TODO: vul aan -->
+
+## De oplossing
+
+<!-- TODO: vul aan -->
+
+## Kernconcepten
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Best practices
+
+<!-- TODO: vul aan -->
 
 ## Use Case 01: Moet de retentieperiode (bewaartermijn) van de logging in de logregel staan?
 
@@ -235,3 +260,11 @@ flowchart
 Het CBS moet de verwerking loggen van verwerkingen persoonsgegevens om persoonsgegevens te anonimiseren.
 
 :::
+
+## Gerelateerde patronen
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

@@ -1,5 +1,5 @@
 ---
-content_type: standaard
+content_type: tool
 tags:
   - "front-end"
   - "toegankelijkheid"
@@ -12,6 +12,10 @@ tags:
 WCAG‑problemen (grotendeels) automatisch kan opsporen. Binnen DON draait Axe
 dagelijks via een geplande GitHub Actions workflow die ons CLI-script aanroept.
 Desgewenst kun je dezelfde tooling lokaal draaien om resultaten te reproduceren.
+
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
 
 ## Browser: Axe DevTools
 
@@ -137,3 +141,19 @@ faalt de stap.
   }
   ```
   zodat je `pnpm run wcag:check` kunt draaien.
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

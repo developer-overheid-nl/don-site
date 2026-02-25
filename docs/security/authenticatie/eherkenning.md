@@ -35,7 +35,7 @@ De techniek achter eHerkenning is gebaseerd op **SAML 2.0**, net als DigiD.
 Daardoor is het goed integreerbaar in bestaande SSO- en federatieve
 login-oplossingen.
 
-## Waarvoor wordt eHerkenning gebruikt?
+## Toepassing in Nederland
 
 Met eHerkenning log je in bij meer dan 600 publiek en private dienstverleners,
 waaronder:
@@ -53,7 +53,7 @@ dienstverleners omdat deze oplossing is genotificeerd.
 Als developer bouw je bijvoorbeeld integraties waarin een gebruiker namens een
 organisatie inlogt om gegevens aan te leveren of aanvragen te doen.
 
-## Belangrijk voor developers
+## Wanneer gebruik je dit
 
 Bij implementatie van eHerkenning in jouw applicatie of dienst:
 
@@ -81,7 +81,11 @@ eHerkenning werkt met drie hoofd-niveaus (EH2+ t/m EH4):
 
 De dienstverlener bepaalt het betrouwbaarheidsniveau voor de dienst.
 
-## Meer informatie
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
 
 - Algemene info en registratie: [eHerkenning.nl](https://www.eherkenning.nl/) of
   stuur een bericht naar info@eherkenning.nl

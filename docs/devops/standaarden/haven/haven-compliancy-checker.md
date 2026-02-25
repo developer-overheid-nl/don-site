@@ -12,6 +12,10 @@ tags:
 In deze sectie laten we zien hoe je met de Haven Compliancy Checker een bestaand
 cluster kan controleren op Haven Compliancy.
 
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
 ## Voorbereiding
 
 Zorg dat je [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
@@ -65,7 +69,19 @@ we ter illustratie ook de
 [Ontwikkelen op Haven](https://haven.commonground.nl/techniek/voorbereiding)
 documentatie pagina's.
 
-## Links
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
 
 - [Readme Haven CLI](https://gitlab.com/commonground/haven/haven/-/tree/main/haven/cli?ref_type=heads)
 

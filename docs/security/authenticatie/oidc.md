@@ -16,7 +16,7 @@ Met OIDC kan een applicatie (Relying Party) betrouwbaar de identiteit van een
 gebruiker vaststellen op basis van een login bij een Identity Provider (IdP),
 zoals een overheidssysteem of commerciële aanbieder.
 
-## Hoe werkt OIDC?
+## Hoe werkt het
 
 De flow van OIDC lijkt sterk op OAuth, maar voegt o.a. deze elementen toe:
 
@@ -32,7 +32,7 @@ Een typische OIDC flow verloopt als volgt:
    **ID token**.
 4. De app valideert het ID token en weet wie de gebruiker is.
 
-## OIDC in Nederland: NL GOV OIDC-profiel
+## Toepassing in Nederland
 
 Binnen de Nederlandse overheid is er een specifiek profiel ontwikkeld: het **NL
 GOV OpenID Connect profiel**. Dit profiel specificeert hoe OIDC veilig en
@@ -48,14 +48,7 @@ Belangrijke kenmerken:
 🔗
 [NL GOV OIDC profiel (GitHub)](https://github.com/Logius-standaarden/OIDC-NLGOV/)
 
-## Officiële standaarden
-
-- [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)
-- [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html)
-- [OpenID Connect Dynamic Client Registration](https://openid.net/specs/openid-connect-registration-1_0.html)
-- [OAuth 2.0 (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
-
-## Wanneer gebruik je OIDC?
+## Wanneer gebruik je dit
 
 OIDC is ideaal voor:
 
@@ -68,7 +61,14 @@ Niet geschikt voor:
 
 - Pure autorisatie zonder gebruikersidentiteit → gebruik dan alleen OAuth 2.0
 
-## Meer informatie
+## Gerelateerde standaarden
+
+- [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)
+- [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html)
+- [OpenID Connect Dynamic Client Registration](https://openid.net/specs/openid-connect-registration-1_0.html)
+- [OAuth 2.0 (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
+
+## Bronnen
 
 - [NL GOV OIDC profiel](https://gitdocumentatie.logius.nl/publicatie/api/oidc/)
 - [OpenID Connect officiële site](https://openid.net/connect/)

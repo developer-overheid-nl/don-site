@@ -14,6 +14,10 @@ Wil je snel aan de slag met NL Design System? In deze handleiding laten we je
 zien hoe je het lokaal kunt opzetten en hoe je experimenteert met de beschikbare
 componenten.
 
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
 ## Benodigdheden
 
 - [NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
@@ -178,3 +182,19 @@ meedoen zijn de volgende links handig.
 - **_Blijf in contact met de community!_** Word lid van de
   [Code for NL Slack](https://praatmee.codefor.nl/) en join het
   `#nl-design-system` kanaal om samen te werken met de community.
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

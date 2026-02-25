@@ -22,6 +22,12 @@ niet doorgelaten. Daarnaast is er vaak sprake van _authenticatie_: de vragende
 gebruiker of partij wordt gecontroleerd op bevoegdheden om de data te mogen
 inzien.
 
+## Kenmerken
+
+<!-- TODO: vul aan -->
+
+## Hoe werkt het
+
 ## Soorten authenticatie
 
 Voor het authenticeren van een gebruiker of partij zijn de volgende modellen
@@ -132,3 +138,19 @@ De FSC policy builder heeft verschillende limitaties:
 
 De FSC policy builder is te vinden op
 [fsc-policy-builder.apps.digilab.network](https://fsc-policy-builder.apps.digilab.network/).
+
+## Aan de slag
+
+<!-- TODO: vul aan -->
+
+## Waarom deze tool
+
+<!-- TODO: vul aan -->
+
+## Alternatieven
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

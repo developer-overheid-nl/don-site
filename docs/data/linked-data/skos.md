@@ -16,6 +16,25 @@ netwerken. Elk concept kan labels, definities en relaties hebben, zoals bredere
 of nauwere termen. Dit maakt SKOS ideaal voor het structureren van kennis in
 toepassingen zoals zoekmachines, kennisbanken en semantische webtoepassingen.
 
+## Hoe werkt het
+
+1. Concepten
+   - `ex:Fruit`, `ex:Apple`, en `ex:Banana` zijn concepten.
+1. Labels
+   - `skos:prefLabel` geeft het voorkeurslabel van een concept, zoals "Fruit" of
+     "Appel".
+1. Relaties:
+   - `skos:narrower` geeft aan dat Apple en Banana nauwere termen zijn van
+     Fruit.
+   - `skos:broader` geeft aan dat Fruit een bredere term is voor Apple en
+     Banana.
+1. Definities
+   - `skos:definition` biedt een beschrijving van elk concept.
+
+Met SKOS kunnen ontwikkelaars gecontroleerde vocabulaires creëren en beheren,
+wat helpt bij het verbeteren van de semantiek en consistentie van gegevens in
+toepassingen.
+
 ## Voorbeeld
 
 Hier is een voorbeeld van een SKOS-vocabulaire:
@@ -40,21 +59,18 @@ ex:Banana a skos:Concept ;
     skos:definition "Een langwerpige, gele vrucht."@nl .
 ```
 
-### Uitleg
+## Toepassing in Nederland
 
-1. Concepten
-   - `ex:Fruit`, `ex:Apple`, en `ex:Banana` zijn concepten.
-1. Labels
-   - `skos:prefLabel` geeft het voorkeurslabel van een concept, zoals "Fruit" of
-     "Appel".
-1. Relaties:
-   - `skos:narrower` geeft aan dat Apple en Banana nauwere termen zijn van
-     Fruit.
-   - `skos:broader` geeft aan dat Fruit een bredere term is voor Apple en
-     Banana.
-1. Definities
-   - `skos:definition` biedt een beschrijving van elk concept.
+<!-- TODO: vul aan -->
 
-Met SKOS kunnen ontwikkelaars gecontroleerde vocabulaires creëren en beheren,
-wat helpt bij het verbeteren van de semantiek en consistentie van gegevens in
-toepassingen.
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

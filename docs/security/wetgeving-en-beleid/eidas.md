@@ -16,7 +16,7 @@ vertrouwensdiensten in de EU.
 Kort gezegd: eIDAS maakt het mogelijk om veilig en grensoverschrijdend online
 zaken te doen binnen Europa — zowel voor burgers als bedrijven.
 
-## Wat regelt eIDAS?
+## Hoe werkt het
 
 eIDAS zorgt voor:
 
@@ -34,7 +34,7 @@ eIDAS zorgt voor:
 - **Interoperabiliteit**: Een eID uit land A moet bruikbaar zijn bij een
   overheidsdienst in land B.
 
-## Wat betekent eIDAS voor developers?
+## Toepassing in Nederland
 
 Als je werkt aan toepassingen die:
 
@@ -54,7 +54,7 @@ Als je werkt aan toepassingen die:
 In Nederland worden systemen als **DigiD** en **eHerkenning** aangesloten op
 eIDAS via de zogenaamde **eIDAS-node**.
 
-## eIDAS 2.0: de Europese Digitale Identiteit
+## Wanneer gebruik je dit
 
 Met de komst van eIDAS 2.0 verandert er veel. Er komt o.a. een EU Digital
 Identity Wallet, en in dat kader wordt er nagedacht over modernere standaarden
@@ -77,7 +77,11 @@ gaan worden voor:
 - mobiele authenticatie via apps (wallets),
 - en bredere integratie met moderne web-API’s.
 
-## Meer informatie
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
 
 - [Technische Specificatie](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32015R0806)
 - [eIDAS Building blocs](https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Documentation+eID)

@@ -26,7 +26,11 @@ headers aan onderstaande operaties.
 | POST      |                                |
 | PATCH     | Header: `If-Match`             |
 
-## Werking
+## Het probleem
+
+<!-- TODO: vul aan -->
+
+## De oplossing
 
 1.  Elke `GET`-respons voor een resource bevat een `ETag`-header. Deze header
     fungeert als een unieke vingerafdruk voor de specifieke versie van de
@@ -86,3 +90,23 @@ paths:
             Precondition Failed. De ETag in de If-Match header komt niet overeen
             met de huidige ETag van de resource.
 ```
+
+## Kernconcepten
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Best practices
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde patronen
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

@@ -27,6 +27,10 @@ bugs aanloopt.
 
 :::
 
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
 ## Aan de slag
 
 Als je zelf lokaal met Haven+ aan de gang wilt dan zijn er twee implementaties
@@ -41,3 +45,19 @@ die je kunt gebruiken.
 ### Implementatie met Argo CD
 
 [Naar de Haven+ implementatie met Argo CD](https://gitlab.com/commonground/haven/havenplus/gitops-argocd)
+
+## Toepassing in Nederland
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

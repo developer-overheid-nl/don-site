@@ -8,7 +8,7 @@ title: "Security.txt"
 De security.txt standaard zorgt ervoor dat ethische hackers laagdrempelig
 kwetsbaarheden kunnen melden bij de eigenaar/ beheerder van een applicatie.
 
-## Path
+## Hoe werkt het
 
 Het bestandje wordt op de volgende plek geplaatst:
 
@@ -38,8 +38,18 @@ of welk persoon er verantwoordelijk is voor de dienst. Hier moet degene die in
 contact wil komen met de beheerder dan achter komen via de het algemene
 e-mailadres die in het centrale security.txt bestand staat.
 
-## Meer informatie
+## Toepassing in Nederland
 
-Meer informatie over hoe je als organisatie om moet gaan met de security.txt
-standaard vind je hier:
-[www.digitaltrustcenter.nl](https://www.digitaltrustcenter.nl/securitytxt)
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde standaarden
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+- [Digital Trust Center over security.txt](https://www.digitaltrustcenter.nl/securitytxt)

@@ -37,6 +37,14 @@ eenvoudige tekstberichten, bieden vaak onvoldoende context. Met Problem JSON kun
 je extra details toevoegen, zoals een fouttype, een beschrijving en optionele
 aanvullende informatie.
 
+## Het probleem
+
+<!-- TODO: vul aan -->
+
+## De oplossing
+
+<!-- TODO: vul aan -->
+
 ## Content-Type
 
 Als je Problem JSON teruggeeft, dan moet dit vergezeld zijn van een
@@ -108,3 +116,23 @@ app.use((err, req, res, next) => {
   });
 });
 ```
+
+## Kernconcepten
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
+## Best practices
+
+<!-- TODO: vul aan -->
+
+## Gerelateerde patronen
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->

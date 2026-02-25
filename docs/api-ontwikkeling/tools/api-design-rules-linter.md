@@ -9,7 +9,17 @@ De ADR Linter controleert of een OpenAPI Specificatie compliant is met de API
 Design Rules. De linter is gebaseerd op het Open Source project
 [Spectral](https://github.com/stoplightio/spectral).
 
-## Browser
+## Kenmerken
+
+<!-- TODO: vul aan -->
+
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
+## Aan de slag
+
+### Browser
 
 Een OpenAPI Specificatie kan online getest worden via onze online OAS Checker:
 [https://developer-overheid-nl.github.io/oas-checker](https://developer-overheid-nl.github.io/oas-checker)
@@ -24,7 +34,7 @@ De OAS Checker toont drie soorten meldingen:
 | Warning | Aanbevolen om op te lossen - de OAS voldoet niet aan een aanbevolen regel. |
 | Info    | Ter informatie - suggesties voor verbetering.                             |
 
-## CLI
+### CLI
 
 Nadat je Spectral geïnstalleerd hebt, kun je een OAS via de commandline op de
 volgende manier valideren:
@@ -34,7 +44,7 @@ $ npm install -g @stoplight/spectral-cli
 $ spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE
 ```
 
-## IDE
+### IDE
 
 Sommige IDEs ondersteunen Spectral via extensies of plugins.
 
@@ -63,7 +73,7 @@ extends:
   - https://static.developer.overheid.nl/adr/ruleset.yaml
 ```
 
-## Docker
+### Docker
 
 ```bash
 $ docker run --rm --entrypoint=sh \
@@ -71,7 +81,7 @@ $ docker run --rm --entrypoint=sh \
     -c "spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE"
 ```
 
-## GitLab
+### GitLab
 
 ```yaml
 spectral-lint:
@@ -87,3 +97,15 @@ spectral-lint:
       when: always
     - when: manual
 ```
+
+## Waarom deze tool
+
+<!-- TODO: vul aan -->
+
+## Alternatieven
+
+<!-- TODO: vul aan -->
+
+## Bronnen
+
+<!-- TODO: vul aan -->
