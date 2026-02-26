@@ -13,6 +13,11 @@ const config: Config = {
   customFields: {
     siteName: "developer.overheid.nl",
     discourseCommentsInBlog: false,
+    // Exposed to the browser via @generated/docusaurus.config for client modules.
+    piwikPro: {
+      siteId: process.env.PIWIK_PRO_SITE_ID ?? "",
+      accountAddress: process.env.PIWIK_PRO_ACCOUNT_ADDRESS ?? "",
+    },
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
   organizationName: "developer.overheid.nl",
@@ -100,6 +105,7 @@ const config: Config = {
       onBrokenMarkdownImages: "throw",
     },
   },
+  clientModules: ["./src/piwikClientModule.ts"],
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     [
@@ -386,7 +392,7 @@ const config: Config = {
             {
               label: "Sitearchief OSS-register",
               href: "https://minbzk.sitearchief.nl/?subsite=ossdevoverheid",
-            }
+            },
           ],
         },
         {
