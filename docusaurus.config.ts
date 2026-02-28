@@ -54,33 +54,6 @@ const config: Config = {
         href: "/site.webmanifest",
       },
     },
-    {
-      tagName: "script",
-      attributes: {
-        "data-goatcounter": "https://donv1.goatcounter.com/count",
-        async: "true",
-        src: "https://gc.zgo.at/count.js",
-      },
-    },
-    {
-      tagName: "script",
-      attributes: {},
-      innerHTML: [
-        "var _paq = window._paq = window._paq || [];",
-        '/* tracker methods like "setCustomDimension" should be called before "trackPageView" */',
-        "_paq.push(['trackPageView']);",
-        "_paq.push(['enableLinkTracking']);",
-        "_paq.push(['setDomains', ['*.developer.overheid.nl', '*.apis.developer.overheid.nl']]);",
-        "_paq.push(['enableCrossDomainLinking']);",
-        "(function() {",
-        '  var u="https://overheid.matomo.cloud/";',
-        "  _paq.push(['setTrackerUrl', u+'matomo.php']);",
-        "  _paq.push(['setSiteId', '1']);",
-        "  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];",
-        "  g.async=true; g.src='https://cdn.matomo.cloud/overheid.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);",
-        "})();",
-      ].join("\n"),
-    },
   ],
 
   // Set the production url of your site here

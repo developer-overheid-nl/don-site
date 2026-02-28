@@ -1,6 +1,6 @@
 import type { ClientModule } from "@docusaurus/types";
 import siteConfig from "@generated/docusaurus.config";
-import PiwikPro, { PageViews } from "@piwikpro/react-piwik-pro";
+import PiwikPro, { PageViews, SiteSearch } from "@piwikpro/react-piwik-pro";
 
 type PiwikProClientConfig = {
   siteId: string;
@@ -11,7 +11,8 @@ let initialized = false;
 let trackingDisabled = false;
 let warnedMissingConfig = false;
 let warnedInitFailure = false;
-let warnedTrackFailure = false;
+let warnedPageViewTrackFailure = false;
+let warnedSiteSearchTrackFailure = false;
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
@@ -29,7 +30,10 @@ function warnDev(message: string, error?: unknown): void {
 }
 
 function getPiwikConfig(): PiwikProClientConfig | null {
-  const customFields = (siteConfig.customFields ?? {}) as Record<string, unknown>;
+  const customFields = (siteConfig.customFields ?? {}) as Record<
+    string,
+    unknown
+  >;
   const piwikPro = (customFields.piwikPro ?? {}) as Record<string, unknown>;
 
   const siteId =
@@ -51,6 +55,44 @@ function getPiwikConfig(): PiwikProClientConfig | null {
   }
 
   return { siteId, accountAddress };
+}
+
+function normalizePathname(pathname: string | undefined): string {
+  if (!pathname || pathname === "/") {
+    return "/";
+  }
+
+  return pathname.replace(/\/+$/, "") || "/";
+}
+
+function getSearchKeyword(search: string | undefined): string {
+  if (!search) {
+    return "";
+  }
+
+  return new URLSearchParams(search).get("q")?.trim() ?? "";
+}
+
+function getConfiguredSearchPath(): string | null {
+  const themeConfig = (siteConfig.themeConfig ?? {}) as Record<string, unknown>;
+  const typesense = (themeConfig.typesense ?? {}) as Record<string, unknown>;
+  const searchPagePath =
+    typeof typesense.searchPagePath === "string"
+      ? typesense.searchPagePath.trim()
+      : "";
+
+  if (!searchPagePath) {
+    return null;
+  }
+
+  const baseUrl =
+    typeof siteConfig.baseUrl === "string" ? siteConfig.baseUrl : "/";
+  const normalizeSegment = (segment: string) => segment.replace(/^\/+|\/+$/g, "");
+  const pathSegments = [normalizeSegment(baseUrl), normalizeSegment(searchPagePath)]
+    .filter(Boolean)
+    .join("/");
+
+  return normalizePathname(`/${pathSegments}`);
 }
 
 function ensureInitialized(): boolean {
@@ -84,10 +126,35 @@ function ensureInitialized(): boolean {
   }
 }
 
+const configuredSearchPath = getConfiguredSearchPath();
+
 const piwikClientModule: ClientModule = {
   onRouteDidUpdate({ location, previousLocation }) {
-    // Skip anchor/query-only navigation; we only count pathname changes.
-    if (previousLocation && previousLocation.pathname === location.pathname) {
+    const pathname = normalizePathname(location.pathname);
+    const previousPathname = previousLocation
+      ? normalizePathname(previousLocation.pathname)
+      : null;
+    const pathnameChanged = previousPathname !== pathname;
+
+    const searchKeyword =
+      configuredSearchPath && pathname === configuredSearchPath
+        ? getSearchKeyword(location.search)
+        : "";
+    const previousSearchKeyword =
+      configuredSearchPath &&
+      previousLocation &&
+      previousPathname === configuredSearchPath
+        ? getSearchKeyword(previousLocation.search)
+        : "";
+
+    const shouldTrackSiteSearch =
+      Boolean(configuredSearchPath) &&
+      pathname === configuredSearchPath &&
+      searchKeyword.length > 0 &&
+      searchKeyword !== previousSearchKeyword;
+
+    // Skip hash-only/query-only navigation, except new site search queries.
+    if (!pathnameChanged && !shouldTrackSiteSearch) {
       return;
     }
 
@@ -95,14 +162,29 @@ const piwikClientModule: ClientModule = {
       return;
     }
 
-    try {
-      PageViews.trackPageView();
-    } catch (error) {
-      trackingDisabled = true;
+    if (pathnameChanged) {
+      try {
+        PageViews.trackPageView();
+      } catch (error) {
+        trackingDisabled = true;
 
-      if (!warnedTrackFailure) {
-        warnedTrackFailure = true;
-        warnDev("Tracking disabled: failed to send pageview.", error);
+        if (!warnedPageViewTrackFailure) {
+          warnedPageViewTrackFailure = true;
+          warnDev("Tracking disabled: failed to send pageview.", error);
+        }
+
+        return;
+      }
+    }
+
+    if (shouldTrackSiteSearch) {
+      try {
+        SiteSearch.trackSiteSearch(searchKeyword);
+      } catch (error) {
+        if (!warnedSiteSearchTrackFailure) {
+          warnedSiteSearchTrackFailure = true;
+          warnDev("Failed to send site search event.", error);
+        }
       }
     }
   },
