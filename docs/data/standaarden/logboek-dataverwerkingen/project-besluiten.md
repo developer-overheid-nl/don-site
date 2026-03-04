@@ -1,3 +1,7 @@
+---
+content_type: standaard
+---
+
 # Projectbesluiten bij totstandkoming
 
 Deze pagina bevate (historische) afwegingen die gemaakt zijn tijdens de totstandkoming van de standaard.

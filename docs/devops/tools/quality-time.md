@@ -1,4 +1,5 @@
 ---
+content_type: tool
 tags:
   - "open-source"
   - "community"

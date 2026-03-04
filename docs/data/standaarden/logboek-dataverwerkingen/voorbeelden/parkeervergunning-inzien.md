@@ -1,3 +1,7 @@
+---
+content_type: standaard
+---
+
 # Parkeervergunning - inzien
 
 Een persoon heeft bij een gemeente een parkeervergunning in gebruik en wil de

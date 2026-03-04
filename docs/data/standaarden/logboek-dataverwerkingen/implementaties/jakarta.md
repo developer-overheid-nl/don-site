@@ -1,3 +1,7 @@
+---
+content_type: standaard
+---
+
 # Jakarta service method interceptor
 
 Met Jakarta kunnen Java applicaties HTTP requests afhandelen.

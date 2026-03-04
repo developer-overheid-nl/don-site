@@ -1,4 +1,5 @@
 ---
+content_type: tutorial
 tags:
   - "license"
   - "open-source"

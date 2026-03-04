@@ -1,4 +1,5 @@
 ---
+content_type: richtlijn
 title: "Richtlijnsjabloon"
 tags: []
 ---

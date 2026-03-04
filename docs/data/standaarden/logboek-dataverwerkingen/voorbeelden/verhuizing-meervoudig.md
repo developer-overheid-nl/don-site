@@ -1,3 +1,7 @@
+---
+content_type: standaard
+---
+
 # Registratie verhuizing – Opvragen meerdere BSN's
 
 Deze case beschrijft de samenstelling van een huishouding op een bepaald adres.

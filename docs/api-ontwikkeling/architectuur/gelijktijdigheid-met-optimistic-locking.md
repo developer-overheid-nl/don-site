@@ -1,3 +1,7 @@
+---
+content_type: architectuur
+---
+
 # Veilige gelijktijdigheid met optimistic locking
 
 Het kan voorkomen dat er verschillende clients gelijktijdig dezelfde bestaande
