@@ -1,14 +1,15 @@
-import type React from "react";
-// import IconIct from "@site/src/theme/icons/IconIct";
+import IconApiInrichting from "@site/src/theme/icons/IconApiInrichting";
+import IconComputer from "@site/src/theme/icons/IconComputer";
+import IconKetting2Schakels from "@site/src/theme/icons/IconKetting2Schakels";
+import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
+import IconDoosMetPijlenOpZijkantZijaanzicht from "@site/src/theme/icons/IconDoosMetPijlenOpZijkantZijaanzicht";
 import IconComputercode from "@site/src/theme/icons/IconComputercode";
 import IconDocumentMetGolvendeLijnenEnLint from "@site/src/theme/icons/IconDocumentMetGolvendeLijnenEnLint";
+import IconIct from "@site/src/theme/icons/IconIct";
+import Icon3BoekenAchterElkaar from "@site/src/theme/icons/Icon3BoekenAchterElkaar";
 import IconKlembordMetVinkjesEnLijnen from "@site/src/theme/icons/IconKlembordMetVinkjesEnLijnen";
-import IconComputer from "@site/src/theme/icons/IconComputer";
-import IconManMetLaptop from "@site/src/theme/icons/IconManMetLaptop";
-import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
-import IconTekstballonMetPotlood from "@site/src/theme/icons/IconTekstballonMetPotlood";
-import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten";
 import IconNetwerk from "@site/src/theme/icons/IconNetwerk";
+import IconManMetLaptop from "@site/src/theme/icons/IconManMetLaptop";
 
 import { GridTile } from ".";
 
@@ -24,7 +25,7 @@ const tiles: GridTile[] = [
   },
   {
     icon: <IconKlembordMetVinkjesEnLijnen />,
-    title: "NeRDS leidraad softwareontwikkeling",
+    title: "Leidraad softwareontwikkeling",
     description:
       "Starten met een IT project voor de overheid? Deze lijst met principes en voorbeelden is een eerste aanzet tot overheidsbreed beleid voor development.",
     link: "/kennisbank/leidraad/",
@@ -38,32 +39,16 @@ const tiles: GridTile[] = [
     highlight: "uitgelicht",
   },
   {
-    icon: <IconTekstballonMetPotlood />,
-    title: "Doe mee",
-    description:
-      "Dit project is continu in ontwikkeling. Ontbreekt er iets of zie je een fout? Of heb jij nog artikelen, tools of andere bronnen die je graag wilt delen? Laat het ons weten!",
-    link: "/contributing",
-  },
-  // {
-  //   icon: <IconIct />,
-  //   title: 'Ontwikkel een API',
-  //   description: 'Moet je een API bouwen die voldoet aan de standaarden van de NL API Strategie? Volg onze tutorial en ontwikkel stap-voor-stap een compliant API.',
-  //   // description: [
-  //   //   { link: '/kennisbank/apis/aan-de-slag/bouw-een-api', label: 'Bouw een API' },
-  //   //   { link: '/kennisbank/apis/aan-de-slag/maak-een-oas', label: 'Maak een OpenAPI specificatie' },
-  //   //   { link: '/kennisbank/apis/standaarden/problem-json', label: 'Problem JSON' },
-  //   //   { link: 'https://apis.developer.overheid.nl/', external: true, label: 'API\'s van Nederlandse overheidsorganisaties'}
-  //   // ],
-  //   link: '/kennisbank/apis/aan-de-slag/bouw-een-api',
-  //   highlight: 'tutorial',
-  // },
-  {
-    icon: <IconComputercode />,
-    title: "Open Source",
+    icon: <Icon3BoekenAchterElkaar />,
+    title: "Tutorials",
     description: [
       {
-        link: "/blog/2025/03/17/hoe-overtuig-ik-mijn-manager",
-        label: "Blog: Hoe overtuig ik mijn manager?",
+        link: "/kennisbank/api-ontwikkeling/tutorials/bouw-een-api",
+        label: "Bouw een API",
+      },
+      {
+        link: "/kennisbank/front-end/nl-design-system/aan-de-slag-met-nl-design-system",
+        label: "Aan de slag met NL Design System",
       },
       {
         link: "/kennisbank/open-source/tutorials/os-checklist",
@@ -71,109 +56,252 @@ const tiles: GridTile[] = [
       },
       {
         link: "/kennisbank/open-source/tutorials/open-source-software-licenties",
-        label: "Een licentie kiezen",
+        label: "Licenties kiezen",
       },
       {
-        link: "/kennisbank/open-source/standaarden/readme-md",
-        label: "README.md",
+        link: "/kennisbank/open-source/tutorials/git-in-een-open-source-project",
+        label: "Git workflow",
       },
       {
-        link: "/kennisbank/open-source/standaarden/publiccode-yml",
-        label: "Publiccode.yml",
+        link: "/kennisbank/open-source/tutorials/voeg-een-publiccode-yml-bestand-toe",
+        label: "publiccode.yml toevoegen",
       },
       {
-        link: "https://oss.developer.overheid.nl/",
-        external: true,
-        label: "Open source software register",
+        link: "/kennisbank/open-source/tutorials/tutorial-repo-docs-generator",
+        label: "Repo docs generator",
       },
     ],
-    link: "/kennisbank/open-source/",
-  },
-  {
-    icon: <IconComputer />,
-    title: "Aan de slag met NL Design System",
-    description:
-      "Wil je snel aan de slag met NL Design System? In deze handleiding laten we je zien hoe je het lokaal kunt opzetten en hoe je experimenteert met de beschikbare componenten.",
-    // description: [
-    //   { link: '/kennisbank/front-end/nl-design-system/', label: 'NL Design System' },
-    //   { link: '/kennisbank/front-end/standaarden/digitoegankelijk', label: 'DigiToegankelijk' }
-    // ],
-    link: "/kennisbank/front-end/nl-design-system/aan-de-slag-met-nl-design-system",
-    highlight: "tutorial",
-  },
-  {
-    icon: <IconCybersecurity />,
-    title: "Authenticatie en autorisatie",
-    description: [
-      { link: "/kennisbank/security/authenticatie/digid", label: "DigiD" },
-      {
-        link: "/kennisbank/security/authenticatie/eherkenning",
-        label: "eHerkenning",
-      },
-      { link: "/kennisbank/security/wetgeving-en-beleid/eidas", label: "eIDAS" },
-      { link: "/kennisbank/security/authenticatie/oauth", label: "OAuth 2.0" },
-      {
-        link: "/kennisbank/security/authenticatie/pkioverheid",
-        label: "PKIoverheid",
-      },
-      { link: "/kennisbank/security/authenticatie/saml", label: "SAML" },
-      {
-        link: "/kennisbank/security/authenticatie/oidc",
-        label: "OpenID Connect (OIDC)",
-      },
-      {
-        link: "/kennisbank/security/wetgeving-en-beleid/bio",
-        label: "Baseline Informatiebeveiliging Overheid (BIO)",
-      },
-      { link: "/kennisbank/security/wetgeving-en-beleid/nis2", label: "NIS2" },
-    ],
-    link: "/kennisbank/security/",
+    link: "/kennisbank/tutorials",
   },
   {
     icon: <IconDocumentMetGolvendeLijnenEnLint />,
-    title: "API Design Rules",
+    title: "Standaarden",
     description: [
       {
         link: "/kennisbank/api-ontwikkeling/standaarden/api-design-rules/cheat-sheet",
         label: "ADR Cheat Sheet",
       },
       {
+        link: "/kennisbank/security/authenticatie/pkioverheid",
+        label: "PKIoverheid",
+      },
+      {
+        link: "/kennisbank/security/wetgeving-en-beleid/nis1",
+        label: "NIS1",
+      },
+      {
+        link: "/kennisbank/security/wetgeving-en-beleid/eudi-wallet",
+        label: "EUDI Wallet",
+      },
+      {
+        link: "/kennisbank/devops/standaarden/haven-plus",
+        label: "Haven+",
+      },
+      {
+        link: "/kennisbank/open-source/standaarden/code-of-conduct-md",
+        label: "CODE_OF_CONDUCT.md",
+      },
+      {
+        link: "/kennisbank/open-source/standaarden/project-governance-md",
+        label: "PROJECT_GOVERNANCE.md",
+      },
+      {
+        link: "/kennisbank/security/standaarden/security-txt",
+        label: "security.txt",
+      },
+    ],
+    link: "/kennisbank/standaarden",
+  },
+  {
+    icon: <IconIct />,
+    title: "Tools",
+    description: [
+      {
         link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-linter",
-        label: "API Design Rules Linter",
+        label: "ADR Linter",
       },
       {
         link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-validator",
-        label: "API Design Rules Validator",
+        label: "ADR Validator",
       },
       {
         link: "/kennisbank/api-ontwikkeling/tools/openapi-specification-generator",
-        label: "OpenAPI Spec Generator",
+        label: "OAS Generator",
       },
       {
-        link: "/blog/2023/09/20/waarom-zijn-api-design-rules-zo-belangrijk",
-        label: "Blog: Waarom zijn API design rules zo belangrijk?",
+        link: "/kennisbank/open-source/tools/publiccode-yml-editor",
+        label: "publiccode.yml editor",
+      },
+      {
+        link: "/kennisbank/open-source/tools/publiccode-yml-parser",
+        label: "publiccode.yml parser",
       },
     ],
-    link: "/kennisbank/api-ontwikkeling/standaarden/api-design-rules/",
+    link: "/kennisbank/tools",
   },
   {
-    icon: <IconTekstballonnenMetPunten />,
-    title: "Communities",
+    icon: <IconApiInrichting />,
+    title: "API Ontwikkeling",
     description: [
       {
-        link: "/communities/kennisplatform-apis",
-        label: "Kennisplatform API's",
+        link: "/kennisbank/api-ontwikkeling/standaarden/api-design-rules",
+        label: "API Design Rules",
       },
-      { link: "/communities/code-for-nl", label: "Code for NL" },
-      { link: "/communities/digilab", label: "Digilab" },
-      { link: "/communities/open-source-werken", label: "Opensourcewerken" },
       {
-        link: "/communities/federatief-datastelsel",
-        label: "Federatief Datastelsel",
+        link: "/kennisbank/api-ontwikkeling/standaarden/openapi-specification",
+        label: "OpenAPI Specification",
       },
-      { link: "/communities/gebruiker-centraal", label: "Gebruiker Centraal" },
+      {
+        link: "/kennisbank/api-ontwikkeling/standaarden/cloudevents",
+        label: "CloudEvents",
+      },
+      {
+        link: "/kennisbank/api-ontwikkeling/architectuur/eda",
+        label: "Event Driven Architecture",
+      },
+      {
+        link: "/kennisbank/api-ontwikkeling/architectuur/webhooks",
+        label: "Webhooks",
+      },
+      {
+        link: "/kennisbank/api-ontwikkeling/architectuur/problem-details",
+        label: "Problem Details",
+      },
+      {
+        link: "/kennisbank/api-ontwikkeling/architectuur/gelijktijdigheid-met-optimistic-locking",
+        label: "Optimistic Locking",
+      },
+      {
+        link: "/kennisbank/api-ontwikkeling/architectuur/retries-met-volledige-idempotency",
+        label: "Idempotency",
+      },
+      {
+        link: "/kennisbank/api-ontwikkeling/tools/wuppiefuzz",
+        label: "WuppieFuzz",
+      },
     ],
-    link: "/communities/",
+    link: "/kennisbank/api-ontwikkeling/",
+  },
+  {
+    icon: <IconComputer />,
+    title: "Front-end",
+    description: [
+      {
+        link: "/kennisbank/front-end/standaarden/digitoegankelijk",
+        label: "DigiToegankelijk (WCAG)",
+      },
+      {
+        link: "/kennisbank/front-end/nl-design-system",
+        label: "NL Design System",
+      },
+      {
+        link: "/kennisbank/front-end/formatting-linting",
+        label: "Formatting & Linting",
+      },
+      {
+        link: "/kennisbank/front-end/maps-developers-amsterdam",
+        label: "Maps Amsterdam",
+      },
+      {
+        link: "/kennisbank/front-end/tools/gemeente-iconen",
+        label: "Gemeente Iconen",
+      },
+      {
+        link: "/kennisbank/front-end/tools/run-axe",
+        label: "Axe checker",
+      },
+    ],
+    link: "/kennisbank/front-end/",
+  },
+  {
+    icon: <IconKetting2Schakels />,
+    title: "Data & Interoperabiliteit",
+    description: [
+      {
+        link: "/kennisbank/data/standaarden/logboek-dataverwerkingen",
+        label: "Logboek Dataverwerkingen",
+      },
+      { link: "/kennisbank/data/linked-data/rdf", label: "RDF" },
+      { link: "/kennisbank/data/linked-data/dcat", label: "DCAT" },
+      { link: "/kennisbank/data/linked-data/shacl", label: "SHACL" },
+      { link: "/kennisbank/data/linked-data/skos", label: "SKOS" },
+      { link: "/kennisbank/data/linked-data/owl", label: "OWL" },
+      { link: "/kennisbank/data/json-yaml", label: "JSON / YAML" },
+    ],
+    link: "/kennisbank/data/",
+  },
+  {
+    icon: <IconCybersecurity />,
+    title: "Security",
+    description: [
+      { link: "/kennisbank/security/authenticatie/oauth", label: "OAuth 2.0" },
+      {
+        link: "/kennisbank/security/authenticatie/oidc",
+        label: "OpenID Connect",
+      },
+      { link: "/kennisbank/security/authenticatie/digid", label: "DigiD" },
+      {
+        link: "/kennisbank/security/authenticatie/eherkenning",
+        label: "eHerkenning",
+      },
+      { link: "/kennisbank/security/authenticatie/saml", label: "SAML" },
+      { link: "/kennisbank/security/wetgeving-en-beleid/nis2", label: "NIS2" },
+      {
+        link: "/kennisbank/security/wetgeving-en-beleid/eidas",
+        label: "eIDAS",
+      },
+      { link: "/kennisbank/security/wetgeving-en-beleid/bio", label: "BIO" },
+      { link: "/kennisbank/security/tools/openkat", label: "OpenKAT" },
+    ],
+    link: "/kennisbank/security/",
+  },
+  {
+    icon: <IconDoosMetPijlenOpZijkantZijaanzicht />,
+    title: "DevOps & Platform",
+    description: [
+      { link: "/kennisbank/devops/standaarden/haven", label: "Haven" },
+      { link: "/kennisbank/devops/standaarden/fsc", label: "FSC" },
+      {
+        link: "/kennisbank/devops/tools/haven-compliancy-checker",
+        label: "Haven Compliancy Checker",
+      },
+      {
+        link: "/kennisbank/devops/tools/quality-time",
+        label: "Quality-time",
+      },
+      {
+        link: "/kennisbank/devops/tools/fsc-policy-builder",
+        label: "FSC Policy Builder",
+      },
+    ],
+    link: "/kennisbank/devops/",
+  },
+  {
+    icon: <IconComputercode />,
+    title: "Open Source",
+    description: [
+      {
+        link: "/kennisbank/open-source/standaarden/publiccode-yml",
+        label: "publiccode.yml",
+      },
+      {
+        link: "/kennisbank/open-source/standaarden/standaard-voor-publieke-code",
+        label: "Standaard voor Publieke Code",
+      },
+      {
+        link: "/kennisbank/open-source/standaarden/readme-md",
+        label: "README.md",
+      },
+      {
+        link: "/kennisbank/open-source/standaarden/contributing-md",
+        label: "CONTRIBUTING.md",
+      },
+      {
+        link: "/kennisbank/open-source/standaarden/security",
+        label: "SECURITY.md",
+      },
+    ],
+    link: "/kennisbank/open-source/",
   },
 ];
 
