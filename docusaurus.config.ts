@@ -95,6 +95,7 @@ const config: Config = {
   clientModules: ["./src/piwikClientModule.ts"],
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
+    "./plugins/content-type-index.js",
     [
       "@docusaurus/plugin-content-docs",
       {
