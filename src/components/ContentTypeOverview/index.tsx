@@ -37,8 +37,9 @@ const CONTENT_TYPE_LABELS: Record<string, string> = {
 const nlCollator = new Intl.Collator("nl");
 
 function Badge({ contentType }: { contentType: string }) {
+  const modifierClass = styles[`badge--${contentType}`];
   return (
-    <span className={`${styles.badge} ${styles[`badge--${contentType}`]}`}>
+    <span className={`${styles.badge}${modifierClass ? ` ${modifierClass}` : ""}`}>
       {CONTENT_TYPE_LABELS[contentType] || contentType}
     </span>
   );
