@@ -4,8 +4,7 @@ title: "Haven compliancy checker (CLI)"
 sidebar_position: 1
 tags:
   - "kubernetes"
-  - "infra"
-  - "tool"
+  - "infrastructuur"
   - "cli"
   - "containerization"
   - "haven"

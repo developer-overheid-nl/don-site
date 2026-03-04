@@ -9,7 +9,7 @@ tags:
     ai,
     seo,
     llm,
-    security,
+    informatiebeveiliging,
     oauth,
     openapi,
     oidc,

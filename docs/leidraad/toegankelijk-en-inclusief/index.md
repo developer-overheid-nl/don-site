@@ -1,7 +1,7 @@
 ---
 title: 2. Maak producten toegankelijk en inclusief
 sidebar_position: 2
-tags: ["accessibility"]
+tags: ["toegankelijkheid"]
 ---
 
 # Richtlijn: Maak producten toegankelijk en inclusief

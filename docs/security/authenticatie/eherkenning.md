@@ -1,8 +1,7 @@
 ---
 content_type: standaard
 tags:
-  - "security"
-  - "security-by-design"
+  - "informatiebeveiliging"
   - "eherkenning"
   - "saml"
 

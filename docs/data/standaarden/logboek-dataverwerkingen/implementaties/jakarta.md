@@ -1,5 +1,9 @@
 ---
 content_type: standaard
+tags:
+  - ldv
+  - logging
+  - development
 ---
 
 # Jakarta service method interceptor

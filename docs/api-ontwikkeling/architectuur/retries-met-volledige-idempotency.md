@@ -1,5 +1,8 @@
 ---
 content_type: architectuur
+tags:
+  - api
+  - rest
 ---
 
 # Veilige retries met volledige idempotency

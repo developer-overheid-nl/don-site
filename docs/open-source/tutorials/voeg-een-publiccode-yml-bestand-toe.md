@@ -4,7 +4,6 @@ tags:
   - "open-source"
   - "publiccode-yml"
   - "vscode"
-  - "tutorial"
   - "json-schema"
 sidebar_position: 1
 ---

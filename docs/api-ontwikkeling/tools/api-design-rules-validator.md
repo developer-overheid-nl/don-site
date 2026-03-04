@@ -1,6 +1,6 @@
 ---
 content_type: tool
-tags: [adr, api, validator, tool]
+tags: [adr, api, validator]
 ---
 
 # ADR Validator

@@ -1,7 +1,7 @@
 ---
 title: 13. Denk na over duurzaamheid
 sidebar_position: 13
-tags: ["logging", "monitoring", "security"]
+tags: ["logging", "monitoring", "informatiebeveiliging"]
 ---
 
 # Richtlijn: Denk na over duurzaamheid

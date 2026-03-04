@@ -1,5 +1,11 @@
 ---
 authors: [digilab]
+tags:
+  - iam
+  - fsc
+  - gegevensuitwisseling
+  - interoperabiliteit
+  - informatiebeveiliging
 ---
 
 # Dynamische toegang en vertrouwen: de sleutel tot federatieve samenwerking

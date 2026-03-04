@@ -1,6 +1,6 @@
 ---
 content_type: tool
-tags: [adr, api, tool]
+tags: [adr, api]
 ---
 
 # ADR Linter

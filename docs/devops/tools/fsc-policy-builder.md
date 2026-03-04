@@ -1,6 +1,11 @@
 ---
 content_type: tool
 title: "FSC Policy Builder"
+tags:
+  - fsc
+  - iam
+  - gegevensuitwisseling
+  - interoperabiliteit
 ---
 
 ![Sreenshot FSC Policy Builder](./img/digilab_1.png)

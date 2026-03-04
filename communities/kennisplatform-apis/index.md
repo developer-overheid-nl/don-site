@@ -1,5 +1,5 @@
 ---
-tags: [security]
+tags: [api, kennisplatform-apis]
 ---
 
 # Kennisplatform API's

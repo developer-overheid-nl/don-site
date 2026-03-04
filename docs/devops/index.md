@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 title: "DevOps & Platform"
-tags: [kubernetes, ipv6, infra, devops]
+tags: [kubernetes, ipv6, infrastructuur, devops]
 ---
 
 import { Card } from "@rijkshuisstijl-community/components-react";

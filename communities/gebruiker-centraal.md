@@ -1,6 +1,6 @@
 ---
 tags:
-  - "accessibility"
+  - "toegankelijkheid"
 title: "Gebruiker Centraal"
 ---
 
