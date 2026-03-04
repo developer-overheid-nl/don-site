@@ -201,3 +201,12 @@ henry-fidder:
   name: Henry Fidder
   title: Product Manager - Justitiële Informatiedienst
   page: true
+
+pascal-van-der-horst:
+  name: Pascal van der Horst
+  title: Platform & Cloud Engineer - WIGO4IT
+  image_url: https://avatars.githubusercontent.com/u/9113152?v=4
+  page: true
+  socials:
+    linkedin: pascal-van-der-horst
+    github: Passie1982
