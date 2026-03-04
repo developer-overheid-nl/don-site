@@ -1,4 +1,5 @@
 ---
+content_type: richtlijn
 title: "7.1 Verwerken van het burgerservicenummer"
 tags: ["privacy"]
 ---

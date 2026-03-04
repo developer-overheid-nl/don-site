@@ -1,3 +1,7 @@
+---
+content_type: tutorial
+---
+
 # 2. Modelleer de schemas
 
 Nu we een _boilerplate_ OAS hebben, kunnen we deze gaan uitbreiden voor onze

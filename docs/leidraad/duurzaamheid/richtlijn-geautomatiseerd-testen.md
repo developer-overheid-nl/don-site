@@ -1,4 +1,5 @@
 ---
+content_type: richtlijn
 title: "13.1 Geautomatiseerd testen"
 tags: ["development"]
 sidebar_position: 1

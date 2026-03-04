@@ -1,3 +1,7 @@
+---
+content_type: standaard
+---
+
 # Referentie implementatie in Go
 
 Er is een referentie implementatie beschikbaar die de samenwerking van verscheidene prototype overheidsapplicaties laat zien.

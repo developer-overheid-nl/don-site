@@ -1,4 +1,5 @@
 ---
+content_type: architectuur
 tags:
   - "api"
   - "json"

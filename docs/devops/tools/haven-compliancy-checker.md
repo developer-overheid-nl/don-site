@@ -1,4 +1,5 @@
 ---
+content_type: tool
 title: "Haven compliancy checker (CLI)"
 sidebar_position: 1
 tags:

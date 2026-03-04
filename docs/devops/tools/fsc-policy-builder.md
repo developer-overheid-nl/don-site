@@ -1,4 +1,5 @@
 ---
+content_type: tool
 title: "FSC Policy Builder"
 ---
 

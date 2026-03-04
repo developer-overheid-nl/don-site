@@ -1,4 +1,5 @@
 ---
+content_type: tool
 tags: [adr, api, validator, tool]
 ---
 

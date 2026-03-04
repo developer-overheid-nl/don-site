@@ -1,4 +1,5 @@
 ---
+content_type: standaard
 title: "Haven+ (Flux/ Argo CD)"
 sidebar_position: 2
 tags:

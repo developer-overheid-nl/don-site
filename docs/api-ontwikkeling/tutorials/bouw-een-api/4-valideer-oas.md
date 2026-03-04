@@ -1,3 +1,7 @@
+---
+content_type: tutorial
+---
+
 # 4. Valideer de OAS
 
 Voordat we code gaan genereren, is het belangrijk om te controleren of onze

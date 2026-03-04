@@ -1,4 +1,5 @@
 ---
+content_type: standaard
 tags:
   [eu, edi, eudi, eidas, wallet, interoperability, security-by-design, privacy]
 ---

@@ -1,3 +1,7 @@
+---
+content_type: tutorial
+---
+
 # 3. Voeg functionaliteit toe
 
 Nu we de schemas hebben toegevoegd, kunnen we functionaliteit gaan toevoegen.

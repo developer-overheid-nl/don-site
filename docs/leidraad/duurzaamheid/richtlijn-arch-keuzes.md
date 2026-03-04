@@ -1,4 +1,5 @@
 ---
+content_type: richtlijn
 title: "13.2 Leg organisatiebrede architectuurkeuzes vast en draag deze uit"
 tags: ["architectuur"]
 sidebar_position: 2

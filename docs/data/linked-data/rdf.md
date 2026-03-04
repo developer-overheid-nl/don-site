@@ -1,4 +1,5 @@
 ---
+content_type: standaard
 tags: [rdf, rdfa, rdfs, linked-data]
 ---
 

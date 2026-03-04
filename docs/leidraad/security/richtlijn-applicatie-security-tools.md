@@ -1,4 +1,5 @@
 ---
+content_type: richtlijn
 title: "6.1. Applicatie security tools"
 tags: ["security"]
 sidebar_position: 1

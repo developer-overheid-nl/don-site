@@ -1,3 +1,7 @@
+---
+content_type: tutorial
+---
+
 # 5. Genereer API code
 
 Nu we een gevalideerde OpenAPI Specification hebben, kunnen we automatisch

@@ -1,3 +1,7 @@
+---
+content_type: architectuur
+---
+
 # Veilige retries met volledige idempotency
 
 Bij een schrijfoperatie kan het voor een client onduidelijk zijn of deze is

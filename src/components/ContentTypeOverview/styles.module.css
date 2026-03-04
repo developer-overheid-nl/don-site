@@ -1,0 +1,148 @@
+.searchInput {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  margin-bottom: 1.5rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filterSelect {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+}
+
+.categorySection {
+  margin-bottom: 2rem;
+}
+
+.categoryHeading {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  padding: 1rem 1.25rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cardTitle a {
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.cardTitle a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0 0 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge--standaard {
+  background: #e8f0fe;
+  color: #1a56db;
+}
+
+.badge--tool {
+  background: #def7ec;
+  color: #046c4e;
+}
+
+.badge--tutorial {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge--architectuur {
+  background: #ede9fe;
+  color: #6b21a8;
+}
+
+.badge--richtlijn {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.noResults {
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+}
+
+.resultCount {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}

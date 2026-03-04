@@ -1,3 +1,7 @@
+---
+content_type: tutorial
+---
+
 # 1. Genereer boilerplate OAS
 
 In deze stap gebruiken we de

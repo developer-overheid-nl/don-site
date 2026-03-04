@@ -1,4 +1,5 @@
 ---
+content_type: standaard
 tags:
   - "open-source"
 sidebar_position: 99
