@@ -24,11 +24,11 @@ from,to
 /kennisbank/apis/gedrag-en-implementatie/gelijktijdigheid-met-optimistic-locking,/kennisbank/api-ontwikkeling/architectuur/gelijktijdigheid-met-optimistic-locking
 /kennisbank/apis/gedrag-en-implementatie/retries-met-volledige-idempotency,/kennisbank/api-ontwikkeling/architectuur/retries-met-volledige-idempotency
 /kennisbank/apis/tutorial-bouw-een-api/,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/
-/kennisbank/apis/tutorial-bouw-een-api/1-genereer-oas-boilerplate,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/1-genereer-oas-boilerplate
-/kennisbank/apis/tutorial-bouw-een-api/2-modelleer-schemas,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/2-modelleer-schemas
-/kennisbank/apis/tutorial-bouw-een-api/3-voeg-functionaliteit-toe,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/3-voeg-functionaliteit-toe
-/kennisbank/apis/tutorial-bouw-een-api/4-valideer-oas,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/4-valideer-oas
-/kennisbank/apis/tutorial-bouw-een-api/5-genereer-api-code,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/5-genereer-api-code
+/kennisbank/apis/tutorial-bouw-een-api/1-genereer-oas-boilerplate,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/genereer-oas-boilerplate
+/kennisbank/apis/tutorial-bouw-een-api/2-modelleer-schemas,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/modelleer-schemas
+/kennisbank/apis/tutorial-bouw-een-api/3-voeg-functionaliteit-toe,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/voeg-functionaliteit-toe
+/kennisbank/apis/tutorial-bouw-een-api/4-valideer-oas,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/valideer-oas
+/kennisbank/apis/tutorial-bouw-een-api/5-genereer-api-code,/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/genereer-api-code
 /kennisbank/apis/tools/,/kennisbank/api-ontwikkeling/tools/
 /kennisbank/apis/tools/wuppiefuzz,/kennisbank/api-ontwikkeling/tools/wuppiefuzz
 /kennisbank/infra/,/kennisbank/devops/
@@ -41,9 +41,6 @@ from,to
 /kennisbank/infra/tools/,/kennisbank/devops/tools/
 /kennisbank/infra/tools/quality-time,/kennisbank/devops/tools/quality-time
 /kennisbank/infra/tools/fsc-policy-builder,/kennisbank/devops/tools/fsc-policy-builder
-/kennisbank/programmeertalen/,/kennisbank/api-ontwikkeling/
-/kennisbank/programmeertalen/rust/,/kennisbank/api-ontwikkeling/rust/
-/kennisbank/security/standaarden/,/kennisbank/security/
 /kennisbank/security/standaarden/digid,/kennisbank/security/authenticatie/digid
 /kennisbank/security/standaarden/eherkenning,/kennisbank/security/authenticatie/eherkenning
 /kennisbank/security/standaarden/oauth,/kennisbank/security/authenticatie/oauth
@@ -55,5 +52,4 @@ from,to
 /kennisbank/security/standaarden/eudi-wallet,/kennisbank/security/wetgeving-en-beleid/eudi-wallet
 /kennisbank/security/standaarden/nis1,/kennisbank/security/wetgeving-en-beleid/nis1
 /kennisbank/security/standaarden/nis2,/kennisbank/security/wetgeving-en-beleid/nis2
-/kennisbank/security/standaarden/security-txt,/kennisbank/security/standaarden/security-txt
 /kennisbank/front-end/standaarden/digitoegankelijk/run-axe,/kennisbank/front-end/tools/run-axe

@@ -3,6 +3,20 @@
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import remarkDirectiveSugar from "remark-directive-sugar";
+import { readFileSync } from "fs";
+import { resolve } from "path";
+
+function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
+  const csv = readFileSync(resolve(__dirname, "redirects.csv"), "utf-8");
+  return csv
+    .split("\n")
+    .slice(1) // skip header
+    .filter((line) => line.trim())
+    .map((line) => {
+      const [from, to] = line.split(",");
+      return { from: from.trim(), to: to.trim() };
+    });
+}
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -97,6 +111,12 @@ const config: Config = {
         tags: "../tags.yml",
         onInlineTags: "throw",
         // ... other options
+      },
+    ],
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: loadRedirectsFromCsv(),
       },
     ],
   ],
