@@ -399,3 +399,18 @@ yaml:
   label: YAML
 quality-management:
   label: Quality Management
+identity:
+  description: Identity management en toegangsbeheer
+  label: Identity
+keycloak:
+  description: Keycloak open-source identity en access management platform
+  label: Keycloak
+architecture:
+  description: Software en systeem architectuur
+  label: Architectuur
+mim:
+  description: Microsoft Identity Manager
+  label: Microsoft Identity Manager
+migration:
+  description: Migratie van systemen en platformen
+  label: Migratie
