@@ -5,7 +5,19 @@ tags: [adr, api, eda, cloudevents]
 
 # NL GOV Profile for CloudEvents
 
-## Van intake tot verplichte standaard
+## Waarom deze standaard
+
+Het gebruik van CloudEvents en het NL GOV profiel helpt de overheid om:
+
+- **Real-time** en **event-driven** te werken in ketens en ecosystemen.
+- **Losse koppelingen** te realiseren tussen systemen, waardoor onderhoud en
+  innovatie eenvoudiger worden.
+- **Interoperabiliteit** te garanderen, zodat alle overheidsorganisaties
+  dezelfde taal spreken in event-uitwisseling.
+
+<!-- TODO: ## Wanneer gebruik je dit — voeg toe wanneer je CloudEvents moet gebruiken -->
+
+## Hoe werkt het
 
 CloudEvents is een internationale standaard voor het uniform beschrijven van
 events in [eventgedreven architecturen](../architectuur/eda.md). Dankzij deze standaard kunnen
@@ -20,27 +32,7 @@ voorzien van een nationaal profiel: het
 
 ---
 
-### Besluitvorming Forum Standaardisatie
-
-- **4 december 2024 – Intakefase**  
-  Het Forum Standaardisatie stemde in met het intakeadvies om het _"NL GOV
-  profile for CloudEvents"_ in procedure te nemen voor plaatsing op de lijst met
-  verplichte standaarden (“Pas toe of leg uit”).  
-  Bron: [intakeadvies NL GOV profile for CloudEvents (PDF)](https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden/cloudevents/20241204-intakeadvies-NL-GOV-profile-for-CloudEvents.pdf).
-
-- **19 juni 2025 – Expertadvies**  
-  De expertgroep adviseerde positief over opname van de standaard. Het profiel
-  sluit nauw aan op internationale CloudEvents-specificaties, maar maakt ze
-  concreet toepasbaar binnen de Nederlandse overheid.  
-  Bron: [expertadvies NL GOV profile for CloudEvents (PDF)](https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden/cloudevents/20250619-Expertadvies-NL-GOV-profile-for-CloudEvents.pdf).
-
-- **25 september 2025 – Forumadvies**  
-  Het Forum Standaardisatie heeft ingestemd met het advies aan het
-  [OBDO](https://pgdi.nl/) om het _"NL GOV profile for CloudEvents"_ verplicht
-  te stellen (“Pas toe of leg uit”). Daarnaast is Logius het predicaat
-  **‘Uitstekend beheer’** toegekend voor deze standaard.
-
-## Wat is het NL GOV profile for CloudEvents?
+### Wat is het NL GOV profile for CloudEvents?
 
 Het Nederlandse profiel geeft richtlijnen voor hoe overheidsorganisaties
 CloudEvents moeten gebruiken, zodat er interoperabiliteit ontstaat tussen
@@ -74,10 +66,9 @@ systemen en sectoren. Het NL GOV profiel specificeert onder meer:
 }
 ```
 
-De technische specificatie is beschikbaar via Logius: -
-[CloudEvents NL – technische documentatie](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/).  
-Het
-voorbeeld en de toelichting daarop zijn beschikbaar op
+De technische specificatie is beschikbaar via Logius:
+[CloudEvents NL – technische documentatie](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/).
+Het voorbeeld en de toelichting daarop zijn beschikbaar op
 [gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/#example](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/#example).
 
 Naast het Nederlandse profiel zijn ook een drietal handreikingen gemaakt die
@@ -91,17 +82,29 @@ toelichten hoe het NL GOV profiel is toe te passen bij gebruik van het:
 > specificaties. Doel daarvan is om verdergaande standaardisatie te
 > bewerkstelligen en interoperabiliteit te vergroten.
 
-## Waarom belangrijk?
+## Toepassing in Nederland
 
-Het gebruik van CloudEvents en het NL GOV profiel helpt de overheid om:
+### Besluitvorming Forum Standaardisatie
 
-- **Real-time** en **event-driven** te werken in ketens en ecosystemen.
-- **Losse koppelingen** te realiseren tussen systemen, waardoor onderhoud en
-  innovatie eenvoudiger worden.
-- **Interoperabiliteit** te garanderen, zodat alle overheidsorganisaties
-  dezelfde taal spreken in event-uitwisseling.
+- **4 december 2024 – Intakefase**
+  Het Forum Standaardisatie stemde in met het intakeadvies om het _"NL GOV
+  profile for CloudEvents"_ in procedure te nemen voor plaatsing op de lijst met
+  verplichte standaarden ("Pas toe of leg uit").
+  Bron: [intakeadvies NL GOV profile for CloudEvents (PDF)](https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden/cloudevents/20241204-intakeadvies-NL-GOV-profile-for-CloudEvents.pdf).
 
-## Meer informatie
+- **19 juni 2025 – Expertadvies**
+  De expertgroep adviseerde positief over opname van de standaard. Het profiel
+  sluit nauw aan op internationale CloudEvents-specificaties, maar maakt ze
+  concreet toepasbaar binnen de Nederlandse overheid.
+  Bron: [expertadvies NL GOV profile for CloudEvents (PDF)](https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden/cloudevents/20250619-Expertadvies-NL-GOV-profile-for-CloudEvents.pdf).
+
+- **25 september 2025 – Forumadvies**
+  Het Forum Standaardisatie heeft ingestemd met het advies aan het
+  [OBDO](https://pgdi.nl/) om het _"NL GOV profile for CloudEvents"_ verplicht
+  te stellen ("Pas toe of leg uit"). Daarnaast is Logius het predicaat
+  **'Uitstekend beheer'** toegekend voor deze standaard.
+
+## Bronnen
 
 - [NL GOV profile for CloudEvents – Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents)
 - [CloudEvents NL – Logius documentatie](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL/)

@@ -18,7 +18,13 @@ kopie van de map te maken waar de hele collectie van bestanden in zit.
 Vervolgens werk je verder en af en toe vergelijk je de nieuwe versie met de
 vorige versie. Of zelfs vorige versies ...
 
-## Commit
+<!-- @TODO: ## Wat je gaat maken -->
+
+<!-- @TODO: ## Vereisten -->
+
+## Stappen
+
+### Commit
 
 Dit is precies de functionaliteit die Git biedt! Zo'n kopie bewaren heet een
 **git commit**. Je 'commit' bevat al je wijzigingen die je op dat moment hebt
@@ -26,7 +32,7 @@ opgespaard. Vervolgens biedt Git je vele mogelijkheden om te vergelijken
 (_diff_), samen te voegen (_merge_), met verschillende kopieën naast elkaar door
 te werken (_branch_), etc, etc.
 
-## Branches
+### Branches
 
 Er zijn hele workflows om Git heen ontstaan, die helpen om bijdragen op een
 goede manier te reviewen, te accepteren en samen te voegen in de volgende versie
@@ -57,7 +63,7 @@ Een branching workflow met Git ziet er dan (bijvoorbeeld) als volgt uit:
         merge feature
 ```
 
-## Git repo
+### Git repo
 
 Een verzameling bestanden, documenten (of broncode) wordt in Git beheerd in een
 Git **repository**, ook wel afgekort naar _Git repo_. Git biedt uitgebreide
@@ -80,7 +86,7 @@ mogelijkheden om commentaar te geven in het review proces. En dit alles
 inzichtelijk en gedetailleerd. Het niveau van detail kan zelfs wel overweldigend
 ervaren worden 😉
 
-## Contributies
+### Contributies
 
 In GitHub en GitLab zijn de personen die rechten hebben om direct wijzigingen te
 doen, de **Core Committers**. Dit zijn de beheerders en redacteuren van de
@@ -111,3 +117,7 @@ software en documentatie en onbekend blijven of participeren in de omliggende
 community dmv vragen stellen, antwoorden geven, interacties. Op dat moment
 worden deze gebruikers ook wel Contributors genoemd, maar zonder toegevoegde
 wijzigingen.
+
+<!-- @TODO: ## Resultaat -->
+
+<!-- @TODO: ## Bronnen -->

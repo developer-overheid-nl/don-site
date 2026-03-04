@@ -15,14 +15,20 @@ zich gedraagt conform deze delen van de
 - De Transport Layer Security (TLS) rules van de
   [Transport Security Module](https://docs.geostandaarden.nl/api/API-Strategie-mod-transport-security/#transport-security).
 
-## Hoe kan ik mijn API valideren?
+<!-- @TODO: ## Kenmerken -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+## Aan de slag
+
+### Hoe kan ik mijn API valideren?
 
 In de readme van de
 [ADR Validator repository](https://gitlab.com/commonground/don/adr-validator)
 vind je hoe je deze tool lokaal kan installeren en gebruiken. In de repository
 kan je ook de code van vinden.
 
-## Continuous Integration (CI): Hoe kan ik mijn API’s automatisch blijven valideren?
+### Continuous Integration (CI): Hoe kan ik mijn API's automatisch blijven valideren?
 
 Het is mogelijk om de ADR validator toe te voegen aan je Continuous Integration
 (CI) pipeline om je API automatisch elke keer te valideren als deze wordt
@@ -31,3 +37,9 @@ Voorbeelden vind je hier:
 
 - [DockerFile](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/Dockerfile?ref_type=heads)
 - [.gitlab-ci.yml](https://gitlab.com/commonground/don/developer.overheid.nl/-/blob/main/.gitlab-ci.yml?ref_type=heads)
+
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+<!-- @TODO: ## Bronnen -->

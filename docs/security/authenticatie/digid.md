@@ -18,7 +18,11 @@ aanvragen van toeslagen, het raadplegen van medische gegevens of het verlengen
 van een rijbewijs. DigiD is een cruciale schakel in de digitale dienstverlening
 van de overheid.
 
-## Hoe werkt DigiD?
+<!-- @TODO: ## Waarom deze standaard -->
+
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+## Hoe werkt het
 
 DigiD biedt meerdere manieren van inloggen:
 
@@ -30,6 +34,8 @@ DigiD biedt meerdere manieren van inloggen:
 DigiD maakt gebruik van de Nederlandse publieke infrastructuur en gebruikt
 standaarden zoals SAML2.0 voor authenticatie. Dit maakt het ook goed
 integreerbaar in applicaties die met overheidsgegevens werken.
+
+<!-- @TODO: ## Toepassing in Nederland -->
 
 ## Wat betekent dit voor developers?
 
@@ -86,7 +92,7 @@ developers betekent dit:
 - Privacymaatregelen zoals pseudonimisering via BSNk
 - Token exchange om SAML tokens in te wisselen voor een OAuth/OIDC JWT
 
-## Meer informatie
+## Bronnen
 
 - Over DigiD algemeen:
   [Logius - DigiD](https://www.logius.nl/domeinen/toegang/digid)

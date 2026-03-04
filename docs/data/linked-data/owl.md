@@ -5,6 +5,12 @@ tags: [owl, linked-data]
 
 # OWL
 
+<!-- TODO: ## Waarom deze standaard — voeg toe waarom OWL belangrijk is -->
+
+<!-- TODO: ## Wanneer gebruik je dit — voeg toe wanneer je OWL gebruikt -->
+
+## Hoe werkt het
+
 OWL (Web Ontology Language) is een W3C-standaard die wordt gebruikt om rijke en
 complexe kennismodellen (ontologieën) te definiëren en te delen op het
 semantische web. Het is gebaseerd op RDF en RDFS, maar biedt extra
@@ -12,7 +18,7 @@ expressiviteit om relaties, regels en beperkingen tussen gegevens te
 beschrijven. OWL wordt vaak gebruikt in toepassingen zoals kennisgrafen,
 semantische zoekmachines en AI-systemen.
 
-## Kenmerken van OWL
+### Kenmerken van OWL
 
 1. **Klassen en Individuen**:
    - OWL maakt het mogelijk om klassen (categorieën) en individuen (instanties)
@@ -28,7 +34,7 @@ semantische zoekmachines en AI-systemen.
    - OWL ondersteunt inferentie, waardoor nieuwe kennis kan worden afgeleid op
      basis van bestaande gegevens en regels.
 
-## Voorbeeld van OWL
+### Voorbeeld van OWL
 
 Hier is een voorbeeld in Turtle-syntaxis dat een eenvoudige ontologie
 beschrijft:
@@ -46,3 +52,7 @@ ex:worksFor a owl:ObjectProperty ;
     rdfs:domain ex:Employee ;
     rdfs:range ex:Organization .
 ```
+
+<!-- TODO: ## Toepassing in Nederland — voeg toe hoe OWL wordt toegepast in Nederland -->
+
+<!-- TODO: ## Bronnen — voeg relevante bronnen toe -->

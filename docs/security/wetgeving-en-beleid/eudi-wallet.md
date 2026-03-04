@@ -13,7 +13,20 @@ bedrijven een nieuwe manier om hun identiteit online te bewijzen en gegevens te
 delen. Elke lidstaat moet volgens de verordening eind 2026 minstens één
 gecertificeerde EDI-wallet beschikbaar stellen.
 
-## Wat is een EUDI wallet?
+## Waarom deze standaard
+
+- **Regie over gegevens**: zelf bepalen welke gegevens je deelt, met wie en voor
+  welk doel
+- **Dataminimalisatie** alleen delen wat nodig is (bijv. leeftijd >18 i.p.v.
+  volledige geboortedatum)
+- **Gebruiksgemak**: processen die nu vaak papier vereisen (contracten tekenen,
+  auto huren) kunnen digitaal
+- **Betrouwbaarheid**: verifieerbaar dat de gegevens door officiële bronnen zijn
+  uitgegeven
+
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+## Hoe werkt het
 
 Een **EUDI wallet** (in Nederland ook wel de EDI-wallet of NL-Wallet genoemd) is
 een mobiele applicatie waarmee burgers in alle EU-lidstaten, ongeacht het land
@@ -21,7 +34,7 @@ van verblijf/herkomst, op een veilige manier:
 
 - zichzelf online kunnen identificeren
 - persoonlijke gegevens kunnen uitwisselen (bijvoorbeeld naam, geboortedatum,
-  diploma’s, rijbewijs)
+  diploma's, rijbewijs)
 - documenten digitaal kunen ondertekenen
 
 Het unieke van een wallet applicatie (in het algemeen) is dat je als gebruiker
@@ -41,16 +54,7 @@ aanbieders toetreden, mits zij voldoen aan de eIDAS-eisen.
 Meer info:
 [EUDI Architecture and Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/architecture-and-reference-framework-main/)
 
-## Voordelen voor burgers en bedrijven
-
-- **Regie over gegevens**: zelf bepalen welke gegevens je deelt, met wie en voor
-  welk doel
-- **Dataminimalisatie** alleen delen wat nodig is (bijv. leeftijd >18 i.p.v.
-  volledige geboortedatum)
-- **Gebruiksgemak**: processen die nu vaak papier vereisen (contracten tekenen,
-  auto huren) kunnen digitaal
-- **Betrouwbaarheid**: verifieerbaar dat de gegevens door officiële bronnen zijn
-  uitgegeven
+<!-- @TODO: ## Toepassing in Nederland -->
 
 ## Belangrijke begrippen en afkortingen
 
@@ -69,7 +73,7 @@ Meer info:
 | **QEAA (Qualified Electronic Attestation of Attributes)**                       | Een EAA uitgegeven door een QTSP en daardoor in de hele EU rechtsgeldig.                                                                                                                     |
 | **Pub-EEA (Public Body Authentic Source Electronic Attestation of Attributes)** | Een EAA uitgegeven door of namens een overheidsinstantie die fungeert als authentieke bron.                                                                                                  |
 
-## API’s en protocollen binnen de EUDI-architectuur
+## API's en protocollen binnen de EUDI-architectuur
 
 De EUDI wallet gebruikt open (API-)standaarden om interoperabiliteit en
 veiligheid te garanderen. Hieronder een overzicht met directe verwijzingen naar
@@ -99,7 +103,7 @@ ecosysteem:
 
 ---
 
-## Meer weten?
+## Bronnen
 
 - [edi.pleio.nl](https://edi.pleio.nl) – informatie over de Nederlandse
   EDI-wallet.

@@ -7,7 +7,13 @@ sidebar_position: 99
 
 # Communities
 
-## Code for NL
+<!-- TODO: ## Waarom deze standaard — voeg toe waarom open source communities belangrijk zijn -->
+
+<!-- TODO: ## Wanneer gebruik je dit — voeg toe wanneer je een community zoekt -->
+
+## Hoe werkt het
+
+### Code for NL
 
 Code for NL is een netwerk van developers, designers en andere experts die
 samenwerken aan digitale toepassingen voor een open, eerlijke en inclusieve
@@ -17,7 +23,7 @@ source-oplossingen binnen de overheid en maatschappelijke organisaties.
 
 - [Naar codefor.nl](https://codefor.nl)
 
-## Opensourcewerken.nl
+### Opensourcewerken.nl
 
 [Opensourcewerken](https://opensourcewerken.nl) is de community of practice
 omtrent open source werken van het Ministerie van Binnenlandse zaken.
@@ -39,7 +45,7 @@ Naar de website:
 
 - [opensourcewerken.nl](/communities/open-source-werken)
 
-## TODO Group
+### TODO Group
 
 De TODO Group is een open-source programma binnen de Linux Foundation dat zich
 richt op het ondersteunen van bedrijven en organisaties bij het effectief
@@ -57,20 +63,22 @@ Belangrijke activiteiten van de TODO Group:
   open-source management.
 
 TODO Group is met name nuttig voor grote organisaties die open source willen
-inzetten zonder juridische of organisatorische risico’s. Ze helpen bijvoorbeeld
+inzetten zonder juridische of organisatorische risico's. Ze helpen bijvoorbeeld
 met het opstellen van een Open Source Program Office (OSPO), een afdeling binnen
 een bedrijf die open-source beleid beheert.
 
 - [Naar de website van TODO Group](https://todogroup.org/)
 
-## OSPO NL
+### OSPO NL
 
 OSPO NL is het Nederlandse kennisnetwerk van OSPO's. Het netwerk is een publiek-
 private samenwerking dus zowel bedrijven als overheden zijn er welkom.
 
 - [OSPO NL Community](https://ospo-nl.github.io/kennisbank/)
 
-## Verder praten
+<!-- TODO: ## Toepassing in Nederland — voeg toe hoe open source communities worden toegepast -->
+
+## Bronnen
 
 - [Slack Code for NL / #open-werken-best-practices](https://codefornl.slack.com/archives/C01L2643G3W)
 - [**Opensourcewerken.nl** / Community: Stel je vraag](https://opensourcewerken.nl/groups/view/75fc54b2-f4bf-4e67-a931-1d5b5b4c038a/open-source-community)

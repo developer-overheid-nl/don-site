@@ -12,3 +12,15 @@ Deze tool is ontwikkeld en gebouwd door **Developers Italia**, de Open Source
 developer community van de Italiaanse overheid.
 
 - [Naar de publiccode.yml editor](https://publiccode-editor.developers.italia.it/?lang=nl)
+
+<!-- @TODO: ## Kenmerken -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+<!-- @TODO: ## Aan de slag -->
+
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+<!-- @TODO: ## Bronnen -->

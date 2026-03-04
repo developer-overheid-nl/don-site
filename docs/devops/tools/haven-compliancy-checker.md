@@ -13,13 +13,19 @@ tags:
 In deze sectie laten we zien hoe je met de Haven Compliancy Checker een bestaand
 cluster kan controleren op Haven Compliancy.
 
-## Voorbereiding
+<!-- @TODO: ## Kenmerken -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+## Aan de slag
+
+### Voorbereiding
 
 Zorg dat je [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 hebt geïnstalleerd op je lokale computer. Daarnaast heb je cluster admin rechten
 nodig om het cluster te valideren op compliancy.
 
-## Installeren
+### Installeren
 
 De Compliancy Checker is onderdeel van de Haven CLI. We bieden de Haven CLI aan
 voor meerdere besturingssystemen, waaronder macOS, Linux en Windows.
@@ -30,7 +36,7 @@ voor meerdere besturingssystemen, waaronder macOS, Linux en Windows.
 1. Verplaats de binary in de uitgepakte map naar het gewenste pad
    (`mv darwin-amd64/haven /usr/local/bin/haven`)
 
-## Checks uitvoeren
+### Checks uitvoeren
 
 Start de Haven Compliancy Checker als volgt:
 
@@ -45,13 +51,13 @@ Binnen enkele ogenblikken toont het systeem de resultaten:
 Een cluster is Haven-compliant indien alle checks slagen, inclusief de CNCF
 checks. Zie ook `haven check --help`.
 
-## Kubernetes conformance tests
+### Kubernetes conformance tests
 
 Het is ook mogelijk om de Kubernetes conformance tests uit te voeren. Installeer
 eerst [Sonobuoy](https://sonobuoy.io/docs/). Voer daarna de checks uit zoals
 hierboven vermeld staat. Voeg daarbij de flag `--cncf=true` toe.
 
-## De basis
+### De basis
 
 Een Haven Compliant cluster is de basis waarop verder gebouwd kan worden.
 Zorgvuldig beheer is doorlopend van belang voor de operatie en veiligheid, denk
@@ -66,7 +72,11 @@ we ter illustratie ook de
 [Ontwikkelen op Haven](https://haven.commonground.nl/techniek/voorbereiding)
 documentatie pagina's.
 
-## Links
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+## Bronnen
 
 - [Readme Haven CLI](https://gitlab.com/commonground/haven/haven/-/tree/main/haven/cli?ref_type=heads)
 

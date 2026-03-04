@@ -5,6 +5,12 @@ tags: [skos, linked-data]
 
 # SKOS
 
+<!-- TODO: ## Waarom deze standaard — voeg toe waarom SKOS belangrijk is -->
+
+<!-- TODO: ## Wanneer gebruik je dit — voeg toe wanneer je SKOS gebruikt -->
+
+## Hoe werkt het
+
 SKOS (Simple Knowledge Organization System) is een W3C-standaard die wordt
 gebruikt om kennisorganisatiesystemen, zoals thesauri, taxonomieën,
 classificaties en andere gecontroleerde vocabulaires, te modelleren en te delen.
@@ -16,7 +22,7 @@ netwerken. Elk concept kan labels, definities en relaties hebben, zoals bredere
 of nauwere termen. Dit maakt SKOS ideaal voor het structureren van kennis in
 toepassingen zoals zoekmachines, kennisbanken en semantische webtoepassingen.
 
-## Voorbeeld
+### Voorbeeld
 
 Hier is een voorbeeld van een SKOS-vocabulaire:
 
@@ -40,7 +46,7 @@ ex:Banana a skos:Concept ;
     skos:definition "Een langwerpige, gele vrucht."@nl .
 ```
 
-### Uitleg
+#### Uitleg
 
 1. Concepten
    - `ex:Fruit`, `ex:Apple`, en `ex:Banana` zijn concepten.
@@ -58,3 +64,7 @@ ex:Banana a skos:Concept ;
 Met SKOS kunnen ontwikkelaars gecontroleerde vocabulaires creëren en beheren,
 wat helpt bij het verbeteren van de semantiek en consistentie van gegevens in
 toepassingen.
+
+<!-- TODO: ## Toepassing in Nederland — voeg toe hoe SKOS wordt toegepast in Nederland -->
+
+<!-- TODO: ## Bronnen — voeg relevante bronnen toe -->

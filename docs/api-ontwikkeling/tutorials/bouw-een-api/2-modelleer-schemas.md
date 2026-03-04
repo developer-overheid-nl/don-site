@@ -15,7 +15,11 @@ eigen specifieke usecase. Eerst gaan we de schemas van de resources modelleren,
 daarna voegen we extra functionaliteit toe en tenslotte checken we of alles nog
 aan de API Design Rules voldoet.
 
-## OAS wijzigen
+<!-- @TODO: ## Doel -->
+
+## Instructies
+
+### OAS wijzigen
 
 Er zijn verschillende manieren om de OAS te wijzigen, maar voor deze tutorial
 gebruiken we de gratis webversie van Swagger Editor. Hiermee worden aanpassingen
@@ -30,14 +34,14 @@ documentatie.
 ![Swagger editor](./editor.png) _Swagger editor met links de geplakte input en
 rechts de visualisatie van de OAS_
 
-## Schemas uitbreiden
+### Schemas uitbreiden
 
 Zoals gezegd hebben de gegenereerde schemas nu enkel een `id` property in het
 `uuid` format. Laten we deze gaan uitbreiden met meer informatie.
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
-### Tabel
+#### Tabel
 
 <Tabs queryString groupId="schemas">
   <TabItem value="bier" label="Bier">
@@ -91,7 +95,7 @@ concepten, zonder te verdwalen in domeinspecifieke complexiteit.
 
 :::
 
-### OpenAPI Schema
+#### OpenAPI Schema
 
 <Tabs queryString groupId="schemas">
 
@@ -248,7 +252,7 @@ nieuwe standaard is zullen we deze tutorial updaten met JSON Schema voorbeelden.
 
 :::
 
-### Update de OAS met de schemas
+#### Update de OAS met de schemas
 
 Kopieer elk schema hierboven naar het corresponderende schema in de Swagger
 editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
@@ -732,7 +736,7 @@ In Swagger editor zien we nu aan de rechterkant de geüpdatete documentatie. In
 de voorbeeldresponses zien we bovendien waarom we zojuist overal
 voorbeeldwaarden hebben toegevoegd.
 
-## Wat hebben we geleerd?
+## Resultaat
 
 - Hoe we de **Swagger Editor** gebruiken om een OAS te bewerken en te
   visualiseren
@@ -742,9 +746,6 @@ voorbeeldwaarden hebben toegevoegd.
 - Waarom **voorbeeldwaarden** belangrijk zijn voor een goede Developer
   Experience
 
-## Volgende stap
+---
 
-Onze schemas zijn nu compleet. In de volgende stap gaan we functionaliteit
-toevoegen aan de API, zoals het filteren van brouwerijen op grootte.
-
-[Ga naar stap 3: Voeg functionaliteit toe](./3-voeg-functionaliteit-toe.md)
+Vorige: [Stap 1: Genereer boilerplate OAS](./1-genereer-oas-boilerplate.md) | Volgende: [Stap 3: Voeg functionaliteit toe](./3-voeg-functionaliteit-toe.md)

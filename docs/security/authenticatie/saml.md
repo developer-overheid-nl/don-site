@@ -18,19 +18,15 @@ SAML is XML-gebaseerd en wordt veel gebruikt in enterprise-omgevingen én bij
 overheidsdiensten. De huidige standaard is **SAML 2.0**, ontwikkeld door
 [OASIS](https://docs.oasis-open.org/security/saml/v2.0/).
 
-## Hoe werkt SAML?
+## Waarom deze standaard
 
-SAML regelt de communicatie tussen drie partijen:
+- Bewezen en stabiele standaard
+- Breed ondersteund bij overheden en grote organisaties
+- Werkt goed voor browsergebaseerde flows
+- Minder geschikt voor mobiele apps of API-authenticatie (daarvoor is OAuth
+  beter)
 
-1. **Gebruiker** (Subject)
-2. **Identity Provider (IdP)** – verzorgt de authenticatie
-3. **Service Provider (SP)** – biedt de dienst aan
-
-Wanneer een gebruiker probeert in te loggen bij een SP, wordt hij doorgestuurd
-naar de IdP. Na succesvolle login stuurt de IdP een zogeheten **SAML-assertie**
-terug, waarmee de SP de gebruiker toegang geeft.
-
-## Waar wordt SAML voor gebruikt?
+## Wanneer gebruik je dit
 
 SAML is de standaard bij veel publieke en private federatieve inlogsituaties,
 waaronder:
@@ -42,7 +38,19 @@ waaronder:
 - **Enterprise SSO** – toegang tot meerdere apps via één login, bv. Microsoft AD
   FS
 
-## SAML in DigiD, eHerkenning en eIDAS
+## Hoe werkt het
+
+SAML regelt de communicatie tussen drie partijen:
+
+1. **Gebruiker** (Subject)
+2. **Identity Provider (IdP)** – verzorgt de authenticatie
+3. **Service Provider (SP)** – biedt de dienst aan
+
+Wanneer een gebruiker probeert in te loggen bij een SP, wordt hij doorgestuurd
+naar de IdP. Na succesvolle login stuurt de IdP een zogeheten **SAML-assertie**
+terug, waarmee de SP de gebruiker toegang geeft.
+
+## Toepassing in Nederland
 
 ### DigiD
 
@@ -56,8 +64,8 @@ Bron: [Logius.nl/digid](https://www.logius.nl/domeinen/toegang/digid)
 
 Ook eHerkenning werkt met **SAML 2.0**. Het zorgt ervoor dat een gebruiker
 namens een organisatie veilig kan inloggen bij verschillende
-overheidsinstanties. Hierbij zijn meerdere IdP’s (leveranciers) mogelijk die via
-SAML koppelen met SP’s (dienstverleners).
+overheidsinstanties. Hierbij zijn meerdere IdP's (leveranciers) mogelijk die via
+SAML koppelen met SP's (dienstverleners).
 
 Bron: [eHerkenning.nl](https://www.eherkenning.nl/)
 
@@ -74,15 +82,7 @@ alternatief, maar SAML blijft voorlopig een kerncomponent.
 Bron:
 [eIDAS Technical Specs - Europa.eu](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 
-## 🧠 Waarom kiezen voor SAML?
-
-- Bewezen en stabiele standaard
-- Breed ondersteund bij overheden en grote organisaties
-- Werkt goed voor browsergebaseerde flows
-- Minder geschikt voor mobiele apps of API-authenticatie (daarvoor is OAuth
-  beter)
-
-## Meer informatie
+## Bronnen
 
 - [SAML 2.0 Specificatie bij OASIS](https://docs.oasis-open.org/security/saml/v2.0/)
 - [DigiD en SAML - Logius.nl](https://www.logius.nl/domeinen/toegang/digid)
