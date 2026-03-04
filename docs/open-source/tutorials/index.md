@@ -1,13 +1,12 @@
 ---
+title: "Tutorials"
+sidebar_label: "Tutorials"
 tags:
   - "open-source"
-sidebar_position: 0
 ---
 
-# Tutorials
-
-```mdx-code-block
 import DocCardList from '@theme/DocCardList';
 
+Handleidingen voor het opzetten en beheren van open source projecten.
+
 <DocCardList />
-```

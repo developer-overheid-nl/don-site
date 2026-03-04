@@ -7,7 +7,7 @@ tags: [adr, api, eda, cloudevents]
 ## Van intake tot verplichte standaard
 
 CloudEvents is een internationale standaard voor het uniform beschrijven van
-events in [eventgedreven architecturen](./eda.md). Dankzij deze standaard kunnen
+events in [eventgedreven architecturen](../architectuur/eda.md). Dankzij deze standaard kunnen
 applicaties eenvoudiger informatie uitwisselen over gebeurtenissen (bijvoorbeeld
 een adreswijziging of een vergunningaanvraag). In Nederland wordt CloudEvents nu
 voorzien van een nationaal profiel: het

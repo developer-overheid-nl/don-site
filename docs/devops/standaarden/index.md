@@ -1,7 +1,10 @@
-# Standaarden
+---
+title: "Standaarden"
+sidebar_label: "Standaarden"
+---
 
-```mdx-code-block
 import DocCardList from '@theme/DocCardList';
 
+Standaarden voor DevOps en platformbeheer bij de Nederlandse overheid, waaronder Haven en FSC.
+
 <DocCardList />
-```

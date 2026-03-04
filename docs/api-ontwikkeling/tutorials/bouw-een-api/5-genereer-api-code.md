@@ -268,15 +268,15 @@ overheidsstandaarden en om die specificatie om te zetten naar werkende code.
 
 ## Verder lezen
 
-- [API Design Rules](/kennisbank/apis/api-design-rules) - Overzicht van de ADR
+- [API Design Rules](/kennisbank/api-ontwikkeling/standaarden/api-design-rules) - Overzicht van de ADR
   op developer.overheid.nl
 - [API Design Rules (ADR) specificatie](https://gitdocumentatie.logius.nl/publicatie/api/adr/) -
   De volledige ADR specificatie
-- [OpenAPI Specification](/kennisbank/apis/openapi-specification) - Overzicht
+- [OpenAPI Specification](/kennisbank/api-ontwikkeling/standaarden/openapi-specification) - Overzicht
   van OAS op developer.overheid.nl
 - [OpenAPI Specification 3.0](https://spec.openapis.org/oas/v3.0.3) - Officiële
   OAS 3.0 documentatie
 - [OpenAPI Generator](https://openapi-generator.tech/) - Documentatie en
   beschikbare generators
-- [ADR Linter](/kennisbank/apis/api-design-rules/api-design-rules-linter) -
+- [ADR Linter](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter) -
   Valideer de OAS via CLI, IDE of CI/CD

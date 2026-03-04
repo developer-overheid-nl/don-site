@@ -108,6 +108,15 @@ const config: Config = {
           path: "docs",
           routeBasePath: "kennisbank",
           sidebarPath: "./sidebars.ts",
+          sidebarItemsGenerator: async function ({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
+            const items = await defaultSidebarItemsGenerator(args);
+            return items.filter(
+              (item) => !(item.type === "doc" && item.id.endsWith("/index")),
+            );
+          },
           tags: "../tags.yml",
           onInlineTags: "throw",
           // Please change this to your repo.
@@ -148,6 +157,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
     typesense: {
       typesenseCollectionName: "developer_overheid",
       typesenseServerConfig: {
@@ -207,17 +221,24 @@ const config: Config = {
           position: "left",
           to: "/kennisbank",
           items: [
-            { label: "API's", to: "/kennisbank/apis" },
+            { label: "API Ontwikkeling", to: "/kennisbank/api-ontwikkeling" },
             { label: "Front-end", to: "/kennisbank/front-end" },
-            { label: "Data", to: "/kennisbank/data" },
-            { label: "Open Source", to: "/kennisbank/open-source" },
-            { label: "Infrastructuur", to: "/kennisbank/infra" },
-            { label: "Security", to: "/kennisbank/security" },
-            { label: "Programmeertalen", to: "/kennisbank/programmeertalen" },
             {
-              label: "NeRDS leidraad softwareontwikkeling",
+              label: "Data & Interoperabiliteit",
+              to: "/kennisbank/data",
+            },
+            { label: "Open Source", to: "/kennisbank/open-source" },
+            { label: "DevOps & Platform", to: "/kennisbank/devops" },
+            { label: "Security", to: "/kennisbank/security" },
+            {
+              label: "Leidraad softwareontwikkeling",
               to: "/kennisbank/leidraad",
             },
+            { type: "html", value: '<hr style="margin: 0.3rem 0;">' },
+            { label: "Alle Standaarden", to: "/kennisbank/standaarden" },
+            { label: "Alle Tools", to: "/kennisbank/tools" },
+            { label: "Alle Tutorials", to: "/kennisbank/tutorials" },
+            { label: "Alle Artikelen", to: "/kennisbank/alles" },
           ],
         },
         {

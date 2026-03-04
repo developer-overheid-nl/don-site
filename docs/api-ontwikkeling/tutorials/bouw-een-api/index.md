@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Tutorial: Bouw een API
+# Bouw een API
 
 In deze tutorial leren we stap voor stap een API te ontwerpen en bouwen die
 voldoet aan de API Design Rules (ADR). We gebruiken een design-first aanpak:
@@ -26,10 +26,10 @@ technische concepten zonder ons zorgen te maken over domeinspecifieke details.
 
 Meer weten over de standaarden die we in deze tutorial gebruiken? Lees dan:
 
-- [OpenAPI Specification (OAS)](/kennisbank/apis/openapi-specification) - De
-  standaard voor het beschrijven van REST API's
-- [API Design Rules](/kennisbank/apis/api-design-rules) - De Nederlandse
-  richtlijnen voor API-ontwerp
+- [OpenAPI Specification (OAS)](/kennisbank/api-ontwikkeling/standaarden/openapi-specification) -
+  De standaard voor het beschrijven van REST API's
+- [API Design Rules](/kennisbank/api-ontwikkeling/standaarden/api-design-rules) -
+  De Nederlandse richtlijnen voor API-ontwerp
 
 :::
 

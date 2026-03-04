@@ -54,7 +54,7 @@ security-checks.
 ### ✅ Voorkomen van vendor lock-in
 
 Omdat de Haven-standaard open source is en er een
-[compliancy-checker](./haven-compliancy-checker.md) voor handen is, kan elke
+[compliancy-checker](../../tools/haven-compliancy-checker.md) voor handen is, kan elke
 leverancier die daar oren naar heeft een Haven-compliant Kubernetes Cluster
 opleveren.
 
@@ -92,7 +92,7 @@ om bijvoorbeeld platform specifieke functionaliteiten te gebruiken zoals
 
 :::
 
-### [Haven+](./haven-plus): meer soevereiniteit door componenten als vervanging voor Azure/ AWS services
+### [Haven+](../haven-plus): meer soevereiniteit door componenten als vervanging voor Azure/ AWS services
 
 Gelukkig biedt het Haventeam een oplossing voor het bovenstaande probleem: een
 suite van componenten die functionaliteiten zoals `monitoring`, `authenticatie`,
@@ -117,7 +117,7 @@ voldoet aan de voorwaarden om te draaien op een Haven Cluster.
 Deze CLI Tool stelt je in staat om pro-actief je Kubernetes cluster
 Haven-compliant te houden.
 
-- [Meer info over Haven Compliancy Checker](./haven-compliancy-checker)
+- [Meer info over Haven Compliancy Checker](../../tools/haven-compliancy-checker)
 
 ![Screenshot FSC Policy Builder](./img/schermafbeelding-compliancy-checker.png)
 
@@ -127,7 +127,7 @@ Haven+ is een set aan componenten die gezamenlijk de volgende dingen voor je
 doet: monitoring (metrics, logging en tracing), authenticatie, databases,
 certificaatbeheer, secret management.
 
-[Naar ons artikel over Haven+](./haven-plus.md)
+[Naar ons artikel over Haven+](../haven-plus.md)
 
 ## Welke organisaties werken met Haven?
 

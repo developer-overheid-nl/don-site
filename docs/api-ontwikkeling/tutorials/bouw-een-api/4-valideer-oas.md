@@ -528,7 +528,7 @@ erachter. De waarde van de server `url` wordt dus:
 Voor grotere projecten is het handig om de validatie te integreren in de
 development workflow. De ADR Linter kan ook via CLI, in de IDE, of in CI/CD
 pipelines draaien. Zie de
-[ADR Linter documentatie](/kennisbank/apis/api-design-rules/api-design-rules-linter)
+[ADR Linter documentatie](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter)
 voor meer informatie.
 
 :::

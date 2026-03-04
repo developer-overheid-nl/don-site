@@ -1,10 +1,11 @@
 ---
 sidebar_position: 0
-title: "Infrastructuur"
+title: "DevOps & Platform"
 tags: [kubernetes, ipv6, infra, devops]
 ---
 
 import { Card } from "@rijkshuisstijl-community/components-react";
+import DocCardList from '@theme/DocCardList';
 
 Infrastructuur vormt de ruggengraat van softwaretoepassingen binnen de overheid.
 Zonder een stabiele, schaalbare en veilige infrastructuur lopen digitale
@@ -21,8 +22,11 @@ diensten risico op storingen en beveiligingslekken.
 - **Interoperabiliteit** → Systemen moeten naadloos samenwerken via API’s en
   open standaarden.
 
-<br />
-<br />
+## Onderwerpen
+
+<DocCardList />
+
+## Aan de slag!
 
 <Card
   description="De Haven standaard helpt je bij het efficiënt en secure gebruiken van Kubernetes. Het Haven+ project levert je componenten voor monitoring, authenticatie en certificaatbeheer."

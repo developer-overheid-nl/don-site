@@ -59,7 +59,7 @@ Afhankelijk van je use case kies je een real-time patroon:
 Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 
 - Gebruik rijke payloads zodat consumers niet hoeven na te vragen.
-- Pas de [Cloudevents](./cloudevents.md) standaard toe op basis van het NL
+- Pas de [Cloudevents](../standaarden/cloudevents.md) standaard toe op basis van het NL
   profiel.
 - Ontwerp een duidelijke event-taxonomie met logische naamgeving.
 - Houd rekening met "idempotency" voor dubbele events.

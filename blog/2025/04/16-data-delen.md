@@ -43,7 +43,7 @@ systemen. Het wordt gebruikt voor het beveiligen van websites (SSL/TLS),
 ondertekenen van documenten en authenticatie tussen organisaties en diensten.
 
 Lees meer over
-[PKIOverheid in de kennisbank](/kennisbank/security/standaarden/pkioverheid).
+[PKIOverheid in de kennisbank](/kennisbank/security/authenticatie/pkioverheid).
 
 ### 🔑 DigiD
 
@@ -53,7 +53,7 @@ authenticatiemiddel zoals een wachtwoord, app of ID-check. Het wordt gebruikt
 voor toegang tot onder andere Belastingdienst, DUO, gemeenten en
 zorginstellingen.
 
-Lees meer over [DigiD in de kennisbank](/kennisbank/security/standaarden/digid).
+Lees meer over [DigiD in de kennisbank](/kennisbank/security/authenticatie/digid).
 
 ### 🧾 eHerkenning
 
@@ -63,7 +63,7 @@ is bedoeld voor organisaties. Het wordt gebruikt om in te loggen bij KvK,
 Belastingdienst, UWV en meer.
 
 Lees meer over
-[eHerkenning in de kennisbank](/kennisbank/security/standaarden/eherkenning).
+[eHerkenning in de kennisbank](/kennisbank/security/authenticatie/eherkenning).
 
 ### 🌍 eIDAS (electronic IDentification, Authentication and trust Services)
 
@@ -72,7 +72,7 @@ van elektronische identiteiten en vertrouwensdiensten, zoals digitale
 handtekeningen. Het wordt gebruikt om met een nationaal inlogmiddel ook in
 andere EU-landen te kunnen inloggen op overheidsdiensten.
 
-Lees meer over [eIDAS in de kennisbank](/kennisbank/security/standaarden/eidas).
+Lees meer over [eIDAS in de kennisbank](/kennisbank/security/wetgeving-en-beleid/eidas).
 
 ### 🛡 SAML (Security Assertion Markup Language)
 
@@ -81,7 +81,7 @@ het mogelijk dat een gebruiker zich één keer aanmeldt (Single Sign-On) en
 toegang krijgt tot meerdere diensten. Het wordt gebruikt bij bijvoorbeeld
 eHerkenning of enterprise identiteitsfederaties.
 
-Lees meer over [SAML in de kennisbank](/kennisbank/security/standaarden/saml).
+Lees meer over [SAML in de kennisbank](/kennisbank/security/authenticatie/saml).
 
 ### 🔓 OAuth 2.0 (Open Authorization)
 
@@ -91,7 +91,7 @@ gedeeld hoeft te worden. Het wordt gebruikt voor toegang tot API’s zoals bij
 MijnOverheid of eHerkenning, vaak in combinatie met JSON Web Tokens (JWT's).
 
 Lees meer over
-[OAuth 2.0 in de kennisbank](/kennisbank/security/standaarden/oauth).
+[OAuth 2.0 in de kennisbank](/kennisbank/security/authenticatie/oauth).
 
 ### 🔐 OIDC (OpenID Connect)
 
@@ -102,7 +102,7 @@ met behulp van een externe identiteitsprovider. Het wordt gebruikt voor Single
 Sign-On en federatieve login in moderne webapplicaties.
 
 Lees meer over
-[OpenID Connect in de kennisbank](/kennisbank/security/standaarden/oidc).
+[OpenID Connect in de kennisbank](/kennisbank/security/authenticatie/oidc).
 
 :::tip
 
@@ -179,7 +179,7 @@ stelsel.
 De uitdaging is om deze verschillende technieken en voorzieningen onderling te
 laten samenwerken zonder technisch grootschalige veranderingen door te hoeven
 voeren. De oplossing is in mijn optiek de inzet van
-[API's](https://developer.overheid.nl/kennisbank/apis/) en
+[API's](https://developer.overheid.nl/kennisbank/api-ontwikkeling/) en
 [Open Authorization](https://logius-standaarden.github.io/OAuth-NL-profiel/) in
 combinatie met bestaande inlogvoorzieningen.
 

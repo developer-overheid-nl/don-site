@@ -16,7 +16,7 @@ van de overheid. Let op: momenteel wordt alleen OAS versie 3.0.x goedgekeurd.
 
 Met OAS kunnen alle endpoints, responses en requests van een API gedetailleerd
 beschreven worden in het machine-leesbare `YAML` of `JSON` formaat. De
-[OAS Generator](openapi-specification-generator.md) genereert op basis van
+[OAS Generator](../../tools/openapi-specification-generator.md) genereert op basis van
 minimale configuratie een kant-en-klare OAS template die voldoet aan de
 [REST API Design Rules](../api-design-rules).
 

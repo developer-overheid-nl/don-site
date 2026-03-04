@@ -105,48 +105,48 @@ const tiles: GridTile[] = [
     icon: <IconCybersecurity />,
     title: "Authenticatie en autorisatie",
     description: [
-      { link: "/kennisbank/security/standaarden/digid", label: "DigiD" },
+      { link: "/kennisbank/security/authenticatie/digid", label: "DigiD" },
       {
-        link: "/kennisbank/security/standaarden/eherkenning",
+        link: "/kennisbank/security/authenticatie/eherkenning",
         label: "eHerkenning",
       },
-      { link: "/kennisbank/security/standaarden/eidas", label: "eIDAS" },
-      { link: "/kennisbank/security/standaarden/oauth", label: "OAuth 2.0" },
+      { link: "/kennisbank/security/wetgeving-en-beleid/eidas", label: "eIDAS" },
+      { link: "/kennisbank/security/authenticatie/oauth", label: "OAuth 2.0" },
       {
-        link: "/kennisbank/security/standaarden/pkioverheid",
+        link: "/kennisbank/security/authenticatie/pkioverheid",
         label: "PKIoverheid",
       },
-      { link: "/kennisbank/security/standaarden/saml", label: "SAML" },
+      { link: "/kennisbank/security/authenticatie/saml", label: "SAML" },
       {
-        link: "/kennisbank/security/standaarden/oidc",
+        link: "/kennisbank/security/authenticatie/oidc",
         label: "OpenID Connect (OIDC)",
       },
       {
-        link: "/kennisbank/security/standaarden/bio",
+        link: "/kennisbank/security/wetgeving-en-beleid/bio",
         label: "Baseline Informatiebeveiliging Overheid (BIO)",
       },
-      { link: "/kennisbank/security/standaarden/nis2", label: "NIS2" },
+      { link: "/kennisbank/security/wetgeving-en-beleid/nis2", label: "NIS2" },
     ],
-    link: "/kennisbank/security/standaarden/",
+    link: "/kennisbank/security/",
   },
   {
     icon: <IconDocumentMetGolvendeLijnenEnLint />,
     title: "API Design Rules",
     description: [
       {
-        link: "/kennisbank/apis/api-design-rules/cheat-sheet",
+        link: "/kennisbank/api-ontwikkeling/standaarden/api-design-rules/cheat-sheet",
         label: "ADR Cheat Sheet",
       },
       {
-        link: "/kennisbank/apis/api-design-rules/api-design-rules-linter",
+        link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-linter",
         label: "API Design Rules Linter",
       },
       {
-        link: "/kennisbank/apis/api-design-rules/api-design-rules-validator",
+        link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-validator",
         label: "API Design Rules Validator",
       },
       {
-        link: "/kennisbank/apis/openapi-specification/openapi-specification-generator",
+        link: "/kennisbank/api-ontwikkeling/tools/openapi-specification-generator",
         label: "OpenAPI Spec Generator",
       },
       {
@@ -154,7 +154,7 @@ const tiles: GridTile[] = [
         label: "Blog: Waarom zijn API design rules zo belangrijk?",
       },
     ],
-    link: "/kennisbank/apis/api-design-rules/",
+    link: "/kennisbank/api-ontwikkeling/standaarden/api-design-rules/",
   },
   {
     icon: <IconTekstballonnenMetPunten />,
