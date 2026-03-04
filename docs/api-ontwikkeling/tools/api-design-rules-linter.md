@@ -9,12 +9,18 @@ De ADR Linter controleert of een OpenAPI Specificatie compliant is met de API
 Design Rules. De linter is gebaseerd op het Open Source project
 [Spectral](https://github.com/stoplightio/spectral).
 
-## Browser
+<!-- @TODO: ## Kenmerken -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+## Aan de slag
+
+### Browser
 
 Een OpenAPI Specificatie kan online getest worden via onze online OAS Checker:
 [https://developer-overheid-nl.github.io/oas-checker](https://developer-overheid-nl.github.io/oas-checker)
 
-### Resultaten interpreteren
+#### Resultaten interpreteren
 
 De OAS Checker toont drie soorten meldingen:
 
@@ -24,7 +30,7 @@ De OAS Checker toont drie soorten meldingen:
 | Warning | Aanbevolen om op te lossen - de OAS voldoet niet aan een aanbevolen regel. |
 | Info    | Ter informatie - suggesties voor verbetering.                             |
 
-## CLI
+### CLI
 
 Nadat je Spectral geïnstalleerd hebt, kun je een OAS via de commandline op de
 volgende manier valideren:
@@ -34,11 +40,11 @@ $ npm install -g @stoplight/spectral-cli
 $ spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE
 ```
 
-## IDE
+### IDE
 
 Sommige IDEs ondersteunen Spectral via extensies of plugins.
 
-### Visual Studio Code
+#### Visual Studio Code
 
 Hieronder staat beschreven hoe je de ADR Linter kunt gebruiken met
 [de officiele Spectral extensie voor Visual Studio Code](https://github.com/stoplightio/vscode-spectral):
@@ -54,7 +60,7 @@ $ curl -L https://static.developer.overheid.nl/adr/ruleset.yaml > .spectral.yml
 $ code
 ```
 
-### IntelliJ IDEA
+#### IntelliJ IDEA
 
 Voor IntelliJ-based IDEs (IntelliJ IDEA, WebStorm, etc.) is er de [Spectral plugin](https://plugins.jetbrains.com/plugin/18520-spectral). Na installatie kun je een `.spectral.yaml` bestand in je project root plaatsen met de volgende inhoud:
 
@@ -63,7 +69,7 @@ extends:
   - https://static.developer.overheid.nl/adr/ruleset.yaml
 ```
 
-## Docker
+### Docker
 
 ```bash
 $ docker run --rm --entrypoint=sh \
@@ -71,7 +77,7 @@ $ docker run --rm --entrypoint=sh \
     -c "spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE"
 ```
 
-## GitLab
+### GitLab
 
 ```yaml
 spectral-lint:
@@ -87,3 +93,9 @@ spectral-lint:
       when: always
     - when: manual
 ```
+
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+<!-- @TODO: ## Bronnen -->

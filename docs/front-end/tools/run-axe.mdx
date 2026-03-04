@@ -13,7 +13,13 @@ WCAG‑problemen (grotendeels) automatisch kan opsporen. Binnen DON draait Axe
 dagelijks via een geplande GitHub Actions workflow die ons CLI-script aanroept.
 Desgewenst kun je dezelfde tooling lokaal draaien om resultaten te reproduceren.
 
-## Browser: Axe DevTools
+<!-- @TODO: ## Kenmerken -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+## Aan de slag
+
+### Browser: Axe DevTools
 
 Axe DevTools is een browserplugin voor Chrome en Firefox waarmee je snel een
 enkele pagina kunt toetsen. We gebruiken deze plugin niet in de
@@ -26,13 +32,13 @@ standaardpipeline, maar hij is handig voor:
 Meer informatie en installatie-instructies:
 [Axe DevTools](https://www.deque.com/axe/devtools).
 
-## Command line & lokaal debuggen
+### Command line & lokaal debuggen
 
 We gebruiken `@axe-core/cli` in combinatie met `scripts/wcag-sitemap-check.js`.
 Dat script leest de `sitemap.xml` van een lokaal draaiende site en draait Axe
 headless voor elke URL.
 
-### Waarom een apart script?
+#### Waarom een apart script?
 
 - Docusaurus genereert automatisch een `sitemap.xml` met alle gepubliceerde
   pagina's. Door die lijst te gebruiken hoeven we geen URL-lijst bij te houden.
@@ -44,7 +50,7 @@ headless voor elke URL.
   bepaalde paden of een alternatief sitemap-endpoint (testomgeving, staging,
   enzovoort).
 
-### Voorbereiding
+#### Voorbereiding
 
 - Node.js 18+, pnpm en Google Chrome zijn geïnstalleerd.
 - Het Docusaurus‑project draait lokaal op `http://localhost:3000`. Start
@@ -61,7 +67,7 @@ headless voor elke URL.
   in `package.json` zorgt dat de juiste ChromeDriver voor Chrome 140 wordt
   opgehaald.
 
-### Draai de Axe-check
+#### Draai de Axe-check
 
 ```bash
 node scripts/wcag-sitemap-check.js
@@ -97,7 +103,7 @@ De selectors onder `Correct invalid elements at:` helpen je het element in de
 DOM terug te vinden. Open de pagina in je browser, start Axe DevTools en check
 dezelfde regel voor extra context.
 
-## Automatisering met GitHub Actions
+### Automatisering met GitHub Actions
 
 De workflow `.github/workflows/check-wcag.yml` draait wekelijks (zondag 02:00
 UTC) en is daarnaast handmatig te starten vanuit de default branch via
@@ -123,7 +129,7 @@ Het Slack‑gedeelte gebruikt `SLACK_BOT_TOKEN` en `SLACK_CHANNEL_ID` uit de
 repository secrets. Zonder deze secrets slaat de workflow het uploaden over of
 faalt de stap.
 
-## Aanpassen en uitbreiden
+### Aanpassen en uitbreiden
 
 - Wil je een andere omgeving toetsen (bijvoorbeeld acceptatie)? Pas
   `SITEMAP_URL` in `scripts/wcag-sitemap-check.js` aan of maak een kopie van het
@@ -137,3 +143,9 @@ faalt de stap.
   }
   ```
   zodat je `pnpm run wcag:check` kunt draaien.
+
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+<!-- @TODO: ## Bronnen -->

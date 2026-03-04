@@ -31,7 +31,9 @@ voegen.
 | POST      | Header: `Idempotency-Key`                                                                    |
 | PATCH     | Header: `Idempotency-Key`                                                                    |
 
-## Werking
+<!-- @TODO: ## Het probleem -->
+
+## De oplossing
 
 1.  De client genereert een unieke `Idempotency-Key` (bijvoorbeeld een UUID)
     voor een uit te voeren operatie.
@@ -43,6 +45,14 @@ voegen.
       (statuscode en body) op, gekoppeld aan de `Idempotency-Key`.
 4.  Als de client een retry moet uitvoeren (bijvoorbeeld door een netwerkfout),
     moet exact dezelfde `Idempotency-Key` worden gebruikt.
+
+<!-- @TODO: ## Kernconcepten -->
+
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+<!-- @TODO: ## Best practices -->
+
+<!-- @TODO: ## Gerelateerde patronen -->
 
 ## Transactionele veiligheid
 
@@ -97,3 +107,5 @@ paths:
         "201":
           description: Item aangemaakt
 ```
+
+<!-- @TODO: ## Bronnen -->

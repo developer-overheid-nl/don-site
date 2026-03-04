@@ -18,7 +18,11 @@ vertrouwensdiensten in de EU.
 Kort gezegd: eIDAS maakt het mogelijk om veilig en grensoverschrijdend online
 zaken te doen binnen Europa — zowel voor burgers als bedrijven.
 
-## Wat regelt eIDAS?
+<!-- @TODO: ## Waarom deze standaard -->
+
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+## Hoe werkt het
 
 eIDAS zorgt voor:
 
@@ -35,6 +39,8 @@ eIDAS zorgt voor:
   eisen en is opgenomen in de EU Trusted List.
 - **Interoperabiliteit**: Een eID uit land A moet bruikbaar zijn bij een
   overheidsdienst in land B.
+
+<!-- @TODO: ## Toepassing in Nederland -->
 
 ## Wat betekent eIDAS voor developers?
 
@@ -64,7 +70,7 @@ zoals OAuth 2.0 en OpenID Connect (OIDC). De nieuwe verordening **eIDAS 2.0**
 (in ontwikkeling) introduceert:
 
 - **Europese Digitale Identiteit Wallets**: apps waarmee burgers hun ID,
-  diploma’s, rijbewijs en andere gegevens digitaal kunnen beheren.
+  diploma's, rijbewijs en andere gegevens digitaal kunnen beheren.
 - Meer macht aan gebruikers om zelf te bepalen wie welke gegevens mag zien.
 - Strengere eisen aan beveiliging en privacy-by-design.
 
@@ -77,9 +83,9 @@ gaan worden voor:
 
 - toestemming geven op attribuut niveau (consent),
 - mobiele authenticatie via apps (wallets),
-- en bredere integratie met moderne web-API’s.
+- en bredere integratie met moderne web-API's.
 
-## Meer informatie
+## Bronnen
 
 - [Technische Specificatie](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32015R0806)
 - [eIDAS Building blocs](https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Documentation+eID)

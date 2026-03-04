@@ -14,7 +14,11 @@ Voordat we code gaan genereren, is het belangrijk om te controleren of onze
 OpenAPI Specification voldoet aan de API Design Rules (ADR). Hiervoor gebruiken
 we onze OAS Checker.
 
-## OAS Checker
+<!-- @TODO: ## Doel -->
+
+## Instructies
+
+### OAS Checker
 
 De [OAS Checker](https://developer-overheid-nl.github.io/oas-checker) is een
 online tool om een OAS te valideren tegen de API Design Rules. Onder de motorkap
@@ -28,7 +32,7 @@ gebruikt de OAS Checker dezelfde Spectral ruleset als de ADR Linter.
 ![OAS Checker](./checker.png) _De OAS Checker met links onze JSON input en
 rechts de validatie output_
 
-## Fouten oplossen
+### Fouten oplossen
 
 Onze OAS bevat, zoals je kunt zien, één fout die in strijd is met de API Design
 Rules:
@@ -543,14 +547,11 @@ voor meer informatie.
 
 :::
 
-## Wat hebben we geleerd?
+## Resultaat
 
 - Hoe we de **OAS Checker** gebruiken om de specificatie te valideren
 - Hoe we fouten oplossen die de checker meldt
 
-## Volgende stap
+---
 
-Onze OAS is gevalideerd en voldoet aan de API Design Rules. Nu is het tijd om
-daadwerkelijk code te genereren en onze API tot leven te brengen.
-
-[Ga naar stap 5: Genereer API code](./5-genereer-api-code.md)
+Vorige: [Stap 3: Voeg functionaliteit toe](./3-voeg-functionaliteit-toe.md) | Volgende: [Stap 5: Genereer API code](./5-genereer-api-code.md)
