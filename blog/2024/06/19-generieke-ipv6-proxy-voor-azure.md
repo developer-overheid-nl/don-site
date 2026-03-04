@@ -1,6 +1,6 @@
 ---
 authors: [digilab]
-tags: [kubernetes, azure, ipv6, infra]
+tags: [kubernetes, azure, ipv6, infrastructuur]
 ---
 
 # Generieke IPv6 proxy voor Azure

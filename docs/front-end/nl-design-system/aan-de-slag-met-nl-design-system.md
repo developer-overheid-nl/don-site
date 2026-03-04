@@ -3,7 +3,7 @@ content_type: tutorial
 tags:
   - "open-source"
   - "front-end"
-  - "accessibility"
+  - "toegankelijkheid"
   - "nl-design-system"
   - "vite"
   - "nvm"

@@ -1,5 +1,11 @@
 ---
 content_type: tutorial
+tags:
+  - api
+  - openapi
+  - oas
+  - open-source
+  - development
 ---
 
 # 5. Genereer API code

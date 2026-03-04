@@ -1,7 +1,7 @@
 ---
-accessibility:
-  description: Accessibility / toegankelijkheid.
-  label: Accessibility
+toegankelijkheid:
+  description: Toegankelijkheid / accessibility.
+  label: Toegankelijkheid
 adr:
   label: API Design Rules
 ai:
@@ -10,13 +10,12 @@ ai:
 api:
   description: Application Programming Interface
   label: API
+api-design:
+  description: Het ontwerp en de architectuur van API's
+  label: API Design
 amsterdam:
   description: Amsterdam gemeente gerelateerde content
   label: Amsterdam
-api-design:
-  label: API Design
-architectuur:
-  label: Architectuur
 argo-cd:
   description:
     Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor
@@ -199,10 +198,12 @@ iam:
     wie toegang krijgt tot welke digitale informatie e systemen, op welk moment, om welke reden.
     Het gaat om 'Wie ben je? en 'Wat mag je doen?', in het kader van beveiliging."
   label: IAM
-infra:
-  label: Infra
-interoperability:
-  label: Interoperability
+infrastructuur:
+  label: Infrastructuur
+  description: Infrastructuur en platform-gerelateerde onderwerpen.
+interoperabiliteit:
+  label: Interoperabiliteit
+  description: Interoperabiliteit tussen systemen en organisaties.
 ipv6:
   label: IPv6
 json:
@@ -345,10 +346,12 @@ rust:
 saml:
   description: SAML is een XML-gebaseerde standaard voor federatieve authenticatie.
   label: SAML
-security:
-  label: Security
+informatiebeveiliging:
+  label: Informatiebeveiliging
+  description: Informatiebeveiliging en security.
 security-by-design:
-  label: Security By Design
+  label: Security by Design
+  description: Het principe om beveiliging vanaf het begin in het ontwerp mee te nemen.
 seo:
   description:
     Search Engine Optimalization is het doen van aanpassingen die er voor zorgen
@@ -367,11 +370,6 @@ technische-schuld:
     Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in
     de toekomst moeilijker te wijzigen maken
   label: Technische schuld
-tool:
-  description: Tool
-  label: Tool
-tutorial:
-  label: Tutorial
 uml:
   description: Unified Modeling Language
   label: UML

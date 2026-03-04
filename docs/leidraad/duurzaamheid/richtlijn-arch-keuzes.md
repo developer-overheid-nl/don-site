@@ -1,7 +1,7 @@
 ---
 content_type: richtlijn
 title: "13.2 Leg organisatiebrede architectuurkeuzes vast en draag deze uit"
-tags: ["architectuur"]
+tags: ["technische-schuld"]
 sidebar_position: 2
 ---
 

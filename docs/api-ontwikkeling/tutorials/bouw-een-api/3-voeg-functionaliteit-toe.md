@@ -1,5 +1,10 @@
 ---
 content_type: tutorial
+tags:
+  - api
+  - openapi
+  - oas
+  - api-design
 ---
 
 # 3. Voeg functionaliteit toe

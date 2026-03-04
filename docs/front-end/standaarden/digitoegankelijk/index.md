@@ -1,7 +1,7 @@
 ---
 tags:
   - "wcag"
-  - "accessibility"
+  - "toegankelijkheid"
   - "forum-standaardisatie"
   - "html"
 ---

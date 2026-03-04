@@ -1,5 +1,9 @@
 ---
 content_type: standaard
+tags:
+  - ldv
+  - privacy
+  - logging
 ---
 
 # Projectbesluiten bij totstandkoming

@@ -1,5 +1,10 @@
 ---
 content_type: standaard
+tags:
+  - ldv
+  - golang
+  - logging
+  - open-source
 ---
 
 # Referentie implementatie in Go

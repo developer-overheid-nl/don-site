@@ -1,5 +1,10 @@
 ---
 content_type: standaard
+tags:
+  - ldv
+  - logging
+  - privacy
+  - gegevensuitwisseling
 ---
 
 # Registratie verhuizing – Opvragen meerdere BSN's

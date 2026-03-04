@@ -1,6 +1,6 @@
 ---
 authors: [linda-van-den-brink]
-tags: [geodata, ogc, openapi, adr, tool, oas, openapi]
+tags: [geodata, ogc, openapi, adr, oas]
 image: ./img/codesprint-2.JPG
 description: |
   Het Open Geospatial Consortium (OGC) is een internationale

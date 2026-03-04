@@ -1,6 +1,6 @@
 ---
 authors: [joost-farla]
-tags: [adr, interoperability, openapi, odata]
+tags: [adr, interoperabiliteit, openapi, odata]
 image: ./img/odata.png
 description:
   Binnen de publieke sector groeit de behoefte aan goed gedocumenteerde,

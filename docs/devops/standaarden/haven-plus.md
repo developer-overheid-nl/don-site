@@ -4,7 +4,7 @@ title: "Haven+ (Flux/ Argo CD)"
 sidebar_position: 2
 tags:
   - "kubernetes"
-  - "infra"
+  - "infrastructuur"
   - "containerization"
   - "flux"
   - "argo-cd"

@@ -2,7 +2,7 @@
 tags:
   - "open-source"
   - "front-end"
-  - "accessibility"
+  - "toegankelijkheid"
   - "nl-design-system"
 title: "NL Design System"
 ---

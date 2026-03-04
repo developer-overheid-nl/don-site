@@ -1,5 +1,11 @@
 ---
 content_type: tutorial
+tags:
+  - api
+  - openapi
+  - oas
+  - adr
+  - validator
 ---
 
 # 4. Valideer de OAS

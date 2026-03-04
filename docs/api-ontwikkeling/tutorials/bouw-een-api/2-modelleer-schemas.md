@@ -1,5 +1,11 @@
 ---
 content_type: tutorial
+tags:
+  - api
+  - openapi
+  - oas
+  - json-schema
+  - api-design
 ---
 
 # 2. Modelleer de schemas

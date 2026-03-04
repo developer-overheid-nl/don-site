@@ -3,7 +3,7 @@ title: "Haven (Kubernetes)"
 sidebar_position: 0
 tags:
   - "kubernetes"
-  - "infra"
+  - "infrastructuur"
   - "containerization"
   - "helm"
   - "docker"

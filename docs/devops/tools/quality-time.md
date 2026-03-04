@@ -3,7 +3,7 @@ content_type: tool
 tags:
   - "open-source"
   - "community"
-  - "security"
+  - "informatiebeveiliging"
   - "monitoring"
   - "owasp"
 title: "Quality-time"

@@ -4,11 +4,10 @@ tags:
   [
     rest,
     api,
-    security,
+    informatiebeveiliging,
     security-by-design,
     validator,
     rust,
-    tool,
     openapi,
     open-source,
     development,

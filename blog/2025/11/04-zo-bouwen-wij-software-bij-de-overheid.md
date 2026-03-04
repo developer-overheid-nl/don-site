@@ -1,5 +1,10 @@
 ---
 authors: [tom-ootes, dimitri-van-hees]
+tags:
+  - development
+  - open-source
+  - community
+  - developer.overheid.nl
 description:
   Hoe bouwen we binnen de overheid software die betrouwbaar, open en
   herbruikbaar is en goed aansluit op standaarden en beleid? Tijdens

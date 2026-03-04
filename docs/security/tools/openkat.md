@@ -3,7 +3,7 @@ content_type: tool
 tags:
   - "open-source"
   - "git"
-  - "security"
+  - "informatiebeveiliging"
   - "community"
   - "monitoring"
 title: "OpenKAT"

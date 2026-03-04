@@ -1,9 +1,8 @@
 ---
 content_type: standaard
 tags:
-  - "security"
+  - "informatiebeveiliging"
   - "ciso"
-  - "security-by-design"
 ---
 
 # BIO

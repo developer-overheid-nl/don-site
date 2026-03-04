@@ -1,5 +1,8 @@
 ---
 content_type: architectuur
+tags:
+  - api
+  - rest
 ---
 
 # Veilige gelijktijdigheid met optimistic locking

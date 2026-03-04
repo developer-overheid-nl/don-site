@@ -1,7 +1,7 @@
 ---
 content_type: richtlijn
 title: "6.2 Gebruik PKIoverheid-certificaten"
-tags: ["security"]
+tags: ["informatiebeveiliging"]
 sidebar_position: 2
 ---
 
