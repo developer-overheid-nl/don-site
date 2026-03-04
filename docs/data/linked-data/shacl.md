@@ -17,6 +17,14 @@ een bepaald type entiteit een verplichte eigenschap moet hebben, dat een
 eigenschap een specifieke datatype moet hebben, of dat een waarde binnen een
 bepaald bereik moet liggen.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 <!-- TODO: vul aan -->
@@ -53,14 +61,6 @@ ex:PersonShape
 | **sh:property**    | Beschrijft beperkingen voor specifieke eigenschappen: `ex:name` moet een string zijn en is verplicht (`sh:minCount 1`). `ex:age` moet een geheel getal zijn en mag niet negatief zijn (`sh:minInclusive 0`). |
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

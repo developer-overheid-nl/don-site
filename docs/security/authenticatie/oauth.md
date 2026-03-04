@@ -15,6 +15,25 @@ mobiele apps, API's en microservices architecturen.
 OAuth is **geen authenticatieprotocol**, maar wordt vaak samen gebruikt met
 OpenID Connect (OIDC) om ook de identiteit van een gebruiker vast te stellen.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+OAuth is ideaal voor:
+
+- Toegang tot REST API's (bv. gegevens ophalen uit een register)
+- Delegatie van rechten (bv. iemand machtigt een app om namens hem gegevens op
+  te vragen)
+- Veiligere alternatieven voor API keys of basis authenticatie
+
+Niet geschikt voor:
+
+- Alleen identificatie zonder toestemming → gebruik dan OpenID Connect
+- Authenticatie in browser-only context zonder backend → kwetsbaar voor token
+  diefstal
+
 ## Hoe werkt het
 
 Een typische OAuth flow verloopt als volgt:
@@ -58,31 +77,13 @@ Het profiel wordt beheerd via een GitHub repository:
 
 - [NL GOV OAuth 2.0 profiel (GitHub)](https://github.com/Logius-standaarden/OAuth-NL-profiel)
 
-## Wanneer gebruik je dit
-
-OAuth is ideaal voor:
-
-- Toegang tot REST API's (bv. gegevens ophalen uit een register)
-- Delegatie van rechten (bv. iemand machtigt een app om namens hem gegevens op
-  te vragen)
-- Veiligere alternatieven voor API keys of basis authenticatie
-
-Niet geschikt voor:
-
-- Alleen identificatie zonder toestemming → gebruik dan OpenID Connect
-- Authenticatie in browser-only context zonder backend → kwetsbaar voor token
-  diefstal
-
-## Gerelateerde standaarden
-
-- [RFC 6749 - OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749)
-- [RFC 6750 - Bearer Token Usage](https://datatracker.ietf.org/doc/html/rfc6750)
-- [OAuth 2.1 (in ontwikkeling)](https://oauth.net/2.1/)
-- [OAuth Security Best Practices (BCP)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics)
-
 ## Bronnen
 
 - [OAuth 2.0 overzicht - oauth.net](https://oauth.net/2/)
 - [NL GOV OAuth profiel](https://gitdocumentatie.logius.nl/publicatie/api/oauth/)
 - [OpenID Connect profiel](https://gitdocumentatie.logius.nl/publicatie/api/oidc/)
 - [eIDAS en OAuth in de toekomst](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
+- [RFC 6749 - OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749)
+- [RFC 6750 - Bearer Token Usage](https://datatracker.ietf.org/doc/html/rfc6750)
+- [OAuth 2.1 (in ontwikkeling)](https://oauth.net/2.1/)
+- [OAuth Security Best Practices (BCP)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics)

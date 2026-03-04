@@ -18,6 +18,21 @@ aanvragen van toeslagen, het raadplegen van medische gegevens of het verlengen
 van een rijbewijs. DigiD is een cruciale schakel in de digitale dienstverlening
 van de overheid.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+DigiD is essentieel voor veilige toegang tot digitale overheidsdiensten. Voor
+developers betekent dit:
+
+- Werken met SAML-authenticatie
+- Rekening houden met verschillende inlogniveaus
+- Eventuele ondersteuning van machtigen
+- Privacymaatregelen zoals pseudonimisering via BSNk
+- Token exchange om SAML tokens in te wisselen voor een OAuth/OIDC JWT
+
 ## Hoe werkt het
 
 DigiD biedt meerdere manieren van inloggen:
@@ -74,21 +89,6 @@ dat uniek is per dienst.
 
 Meer info over BSNk en PP:
 [Logius.nl/bsnk-pp](https://www.logius.nl/domeinen/toegang/bsnk-pp)
-
-## Wanneer gebruik je dit
-
-DigiD is essentieel voor veilige toegang tot digitale overheidsdiensten. Voor
-developers betekent dit:
-
-- Werken met SAML-authenticatie
-- Rekening houden met verschillende inlogniveaus
-- Eventuele ondersteuning van machtigen
-- Privacymaatregelen zoals pseudonimisering via BSNk
-- Token exchange om SAML tokens in te wisselen voor een OAuth/OIDC JWT
-
-## Gerelateerde standaarden
-
-<!-- TODO: vul aan -->
 
 ## Bronnen
 

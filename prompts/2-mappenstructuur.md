@@ -32,7 +32,10 @@ docs/
 │   │   ├── openapi-specification-generator.md  (was: apis/openapi-specification/)
 │   │   └── wuppiefuzz.md      (was: apis/tools/)
 │   └── rust/                  (was: programmeertalen/rust/)
-├── front-end/                 (ongewijzigd qua locatie)
+├── front-end/                 (ongewijzigd qua locatie, behalve run-axe)
+│   ├── tools/
+│   │   ├── run-axe.mdx        (was: front-end/standaarden/digitoegankelijk/run-axe.md — is een tool, geen standaard)
+│   │   └── gemeente-iconen.md
 ├── data/                      (ongewijzigd qua locatie)
 ├── security/                  (mapnaam blijft, intern herstructureren)
 │   ├── authenticatie/         (was: security/standaarden/ — alleen auth-gerelateerd)
@@ -57,6 +60,7 @@ docs/
 │   │   ├── haven/
 │   │   └── fsc/
 │   └── tools/
+│       ├── haven-compliancy-checker.md  (was: devops/standaarden/haven/)
 │       ├── quality-time.md
 │       └── fsc-policy-builder.md
 ├── open-source/               (ongewijzigd)

@@ -20,6 +20,28 @@ Met eHerkenning toon je aan dat je als natuurlijk persoon namens een bedrijf mag
 handelen. Dit is belangrijk voor zaken als belastingaangifte, subsidies
 aanvragen of het doorgeven van personeelsgegevens.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+Bij implementatie van eHerkenning in jouw applicatie of dienst:
+
+- Koppel je aan via een **herkenningsmakelaar** of **dienstverlener** die
+  eHerkenning ondersteunt.
+- Moet je jouw dienst registreren in het **dienstencatalogus**.
+- Werk je met **SAML-authenticatie** (en dus metadata, EntityID's,
+  AssertionConsumerServices, enz.).
+
+Het aansluiten hoef je niet allemaal zelf te doen; de herkenningsmakelaar die de
+aansluiting aanbiedt ondersteunt hierbij.
+
+Organisaties krijgen alleen attributen aangeleverd die binnen het
+afsprakenstelsel zijn afgesproken en die in de
+[attributencatalogus](https://afsprakenstelsel.etoegang.nl/Startpagina/as/attribuutverstrekking).
+Denk aan KvK-nummer en bedrijfsnaam.
+
 ## Hoe werkt het?
 
 eHerkenning is gebaseerd op een systeem van erkende **leveranciers** die
@@ -53,24 +75,6 @@ dienstverleners omdat deze oplossing is genotificeerd.
 Als developer bouw je bijvoorbeeld integraties waarin een gebruiker namens een
 organisatie inlogt om gegevens aan te leveren of aanvragen te doen.
 
-## Wanneer gebruik je dit
-
-Bij implementatie van eHerkenning in jouw applicatie of dienst:
-
-- Koppel je aan via een **herkenningsmakelaar** of **dienstverlener** die
-  eHerkenning ondersteunt.
-- Moet je jouw dienst registreren in het **dienstencatalogus**.
-- Werk je met **SAML-authenticatie** (en dus metadata, EntityID’s,
-  AssertionConsumerServices, enz.).
-
-Het aansluiten hoef je niet allemaal zelf te doen; de herkenningsmakelaar die de
-aansluiting aanbiedt ondersteunt hierbij.
-
-Organisaties krijgen alleen attributen aangeleverd die binnen het
-afsprakenstelsel zijn afgesproken en die in de
-[attributencatalogus](https://afsprakenstelsel.etoegang.nl/Startpagina/as/attribuutverstrekking).
-Denk aan KvK-nummer en bedrijfsnaam.
-
 ## Betrouwbaarheidsniveaus
 
 eHerkenning werkt met drie hoofd-niveaus (EH2+ t/m EH4):
@@ -80,10 +84,6 @@ eHerkenning werkt met drie hoofd-niveaus (EH2+ t/m EH4):
 - **EH4**: hoog niveau (juridisch bindende handelingen)
 
 De dienstverlener bepaalt het betrouwbaarheidsniveau voor de dienst.
-
-## Gerelateerde standaarden
-
-<!-- TODO: vul aan -->
 
 ## Bronnen
 

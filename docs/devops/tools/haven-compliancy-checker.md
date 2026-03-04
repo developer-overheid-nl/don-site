@@ -1,5 +1,5 @@
 ---
-content_type: standaard
+content_type: tool
 title: "Haven compliancy checker (CLI)"
 sidebar_position: 1
 tags:
@@ -43,7 +43,7 @@ $ haven check
 
 Binnen enkele ogenblikken toont het systeem de resultaten:
 
-![Schermafbeelding van de Compliancy Checker](./img/schermafbeelding-compliancy-checker.png)
+![Schermafbeelding van de Compliancy Checker](../standaarden/haven/img/schermafbeelding-compliancy-checker.png)
 
 Een cluster is Haven-compliant indien alle checks slagen, inclusief de CNCF
 checks. Zie ook `haven check --help`.

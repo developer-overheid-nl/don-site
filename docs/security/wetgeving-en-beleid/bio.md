@@ -23,6 +23,14 @@ kracht. BIO 2.0 is
 
 :::
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 De BIO is in het leven geroepen om organisaties handvatten te geven bij het
@@ -76,14 +84,6 @@ verbeteringen nodig zijn.
 Het biedt een basis om te rapporteren over de mate van naleving van de BIO.
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

@@ -27,6 +27,14 @@ bugs aanloopt.
 
 :::
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 <!-- TODO: vul aan -->
@@ -47,14 +55,6 @@ die je kunt gebruiken.
 [Naar de Haven+ implementatie met Argo CD](https://gitlab.com/commonground/haven/havenplus/gitops-argocd)
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

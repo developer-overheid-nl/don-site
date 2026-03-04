@@ -15,6 +15,14 @@ Bestaande inhoud wordt NOOIT verwijderd — alleen herordend, hernoemd of aangev
 ### Standaard
 
 ```markdown
+## Waarom deze standaard
+
+Voordelen en redenen om deze standaard te gebruiken.
+
+## Wanneer gebruik je dit
+
+In welke situaties kies je voor deze standaard? Wanneer juist niet?
+
 ## Hoe werkt het
 
 Uitleg van het mechanisme, protocol of formaat.
@@ -22,14 +30,6 @@ Uitleg van het mechanisme, protocol of formaat.
 ## Toepassing in Nederland
 
 Hoe wordt deze standaard toegepast binnen de Nederlandse overheid?
-
-## Wanneer gebruik je dit
-
-In welke situaties kies je voor deze standaard? Wanneer juist niet?
-
-## Gerelateerde standaarden
-
-Verwijzingen naar aanverwante standaarden of specificaties.
 
 ## Bronnen
 
@@ -191,8 +191,7 @@ structuur. Sla ze over.
    | Meer informatie          | Bronnen                  |
    | Referenties              | Bronnen                  |
    | Links                    | Bronnen                  |
-   | Zie ook                  | Gerelateerde standaarden |
-   | Gerelateerd              | Gerelateerde standaarden |
+   | Voordelen (standaard)    | Waarom deze standaard    |
    | Gebruik                  | Wanneer gebruik je dit   |
    | Wanneer toepassen        | Wanneer gebruik je dit   |
    | Aan de slag / Quickstart | Aan de slag              |
@@ -200,7 +199,7 @@ structuur. Sla ze over.
    | Introductie              | Hoe werkt het            |
    | Wat is ...               | Hoe werkt het            |
    | Vergelijking             | Alternatieven            |
-   | Voordelen                | Waarom deze tool         |
+   | Voordelen (tool)         | Waarom deze tool         |
    | Voorwaarden              | Vereisten                |
    | Prerequisites            | Vereisten                |
 
@@ -208,9 +207,13 @@ structuur. Sla ze over.
 
 4. **Behoud alle bestaande inhoud** — verplaats tekst mee bij hernoeming of
    herordening, maar verwijder niets.
+   **Uitzondering:** `## Gerelateerde standaarden` wordt verwijderd uit
+   standaard-artikelen. Verplaats eventuele links naar `## Bronnen`.
 
 5. **Verwijder geen extra secties** — als een artikel secties heeft die niet in
    het sjabloon staan, laat ze staan aan het einde (voor de Bronnen-sectie).
+   **Uitzondering:** `## Gerelateerde standaarden` in standaard-artikelen
+   wordt altijd verwijderd (zie regel 4).
 
 ## Stappen
 

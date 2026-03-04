@@ -8,6 +8,14 @@ title: "Security.txt"
 De security.txt standaard zorgt ervoor dat ethische hackers laagdrempelig
 kwetsbaarheden kunnen melden bij de eigenaar/ beheerder van een applicatie.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 Het bestandje wordt op de volgende plek geplaatst:
@@ -39,14 +47,6 @@ contact wil komen met de beheerder dan achter komen via de het algemene
 e-mailadres die in het centrale security.txt bestand staat.
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

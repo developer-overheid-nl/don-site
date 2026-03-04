@@ -16,6 +16,14 @@ netwerken. Elk concept kan labels, definities en relaties hebben, zoals bredere
 of nauwere termen. Dit maakt SKOS ideaal voor het structureren van kennis in
 toepassingen zoals zoekmachines, kennisbanken en semantische webtoepassingen.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 1. Concepten
@@ -60,14 +68,6 @@ ex:Banana a skos:Concept ;
 ```
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

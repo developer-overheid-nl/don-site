@@ -70,11 +70,7 @@ hoeft een lid van de community alleen maar een of meerdere acties uit te voeren
 die gunstig zijn voor het project.
 ```
 
-## Hoe werkt het
-
-<!-- TODO: vul aan -->
-
-## Toepassing in Nederland
+## Waarom deze standaard
 
 <!-- TODO: vul aan -->
 
@@ -82,7 +78,11 @@ die gunstig zijn voor het project.
 
 <!-- TODO: vul aan -->
 
-## Gerelateerde standaarden
+## Hoe werkt het
+
+<!-- TODO: vul aan -->
+
+## Toepassing in Nederland
 
 <!-- TODO: vul aan -->
 

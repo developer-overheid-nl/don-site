@@ -12,6 +12,14 @@ expressiviteit om relaties, regels en beperkingen tussen gegevens te
 beschrijven. OWL wordt vaak gebruikt in toepassingen zoals kennisgrafen,
 semantische zoekmachines en AI-systemen.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 1. **Klassen en Individuen**:
@@ -48,14 +56,6 @@ ex:worksFor a owl:ObjectProperty ;
 ```
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

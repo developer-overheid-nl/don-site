@@ -18,6 +18,14 @@ bedrijven een nieuwe manier om hun identiteit online te bewijzen en gegevens te
 delen. Elke lidstaat moet volgens de verordening eind 2026 minstens één
 gecertificeerde EDI-wallet beschikbaar stellen.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 Een **EUDI wallet** (in Nederland ook wel de EDI-wallet of NL-Wallet genoemd) is
@@ -103,14 +111,6 @@ ecosysteem:
 ![het EUDI wallet ecosysteem](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/media/Figure_2_High-Level_Architecture.jpg)
 
 ---
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
-
-<!-- TODO: vul aan -->
 
 ## Bronnen
 

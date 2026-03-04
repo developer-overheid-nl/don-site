@@ -16,6 +16,33 @@ vertrouwensdiensten in de EU.
 Kort gezegd: eIDAS maakt het mogelijk om veilig en grensoverschrijdend online
 zaken te doen binnen Europa — zowel voor burgers als bedrijven.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+Met de komst van eIDAS 2.0 verandert er veel. Er komt o.a. een EU Digital
+Identity Wallet, en in dat kader wordt er nagedacht over modernere standaarden
+zoals OAuth 2.0 en OpenID Connect (OIDC). De nieuwe verordening **eIDAS 2.0**
+(in ontwikkeling) introduceert:
+
+- **Europese Digitale Identiteit Wallets**: apps waarmee burgers hun ID,
+  diploma's, rijbewijs en andere gegevens digitaal kunnen beheren.
+- Meer macht aan gebruikers om zelf te bepalen wie welke gegevens mag zien.
+- Strengere eisen aan beveiliging en privacy-by-design.
+
+Dit betekent nieuwe kansen én verplichtingen voor developers die digitale
+identiteiten verwerken.
+
+Hoewel OAuth/OIDC (nog) geen officieel deel is van de bestaande eIDAS
+specificatie, is het waarschijnlijk dat deze standaarden in eIDAS 2.0 gebruikt
+gaan worden voor:
+
+- toestemming geven op attribuut niveau (consent),
+- mobiele authenticatie via apps (wallets),
+- en bredere integratie met moderne web-API's.
+
 ## Hoe werkt het
 
 eIDAS zorgt voor:
@@ -53,33 +80,6 @@ Als je werkt aan toepassingen die:
 
 In Nederland worden systemen als **DigiD** en **eHerkenning** aangesloten op
 eIDAS via de zogenaamde **eIDAS-node**.
-
-## Wanneer gebruik je dit
-
-Met de komst van eIDAS 2.0 verandert er veel. Er komt o.a. een EU Digital
-Identity Wallet, en in dat kader wordt er nagedacht over modernere standaarden
-zoals OAuth 2.0 en OpenID Connect (OIDC). De nieuwe verordening **eIDAS 2.0**
-(in ontwikkeling) introduceert:
-
-- **Europese Digitale Identiteit Wallets**: apps waarmee burgers hun ID,
-  diploma’s, rijbewijs en andere gegevens digitaal kunnen beheren.
-- Meer macht aan gebruikers om zelf te bepalen wie welke gegevens mag zien.
-- Strengere eisen aan beveiliging en privacy-by-design.
-
-Dit betekent nieuwe kansen én verplichtingen voor developers die digitale
-identiteiten verwerken.
-
-Hoewel OAuth/OIDC (nog) geen officieel deel is van de bestaande eIDAS
-specificatie, is het waarschijnlijk dat deze standaarden in eIDAS 2.0 gebruikt
-gaan worden voor:
-
-- toestemming geven op attribuut niveau (consent),
-- mobiele authenticatie via apps (wallets),
-- en bredere integratie met moderne web-API’s.
-
-## Gerelateerde standaarden
-
-<!-- TODO: vul aan -->
 
 ## Bronnen
 

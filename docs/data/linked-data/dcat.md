@@ -16,6 +16,14 @@ titel, beschrijving, publicatiedatum, licentie en distributieformaten. Dit maakt
 het eenvoudiger om datasets te integreren in zoekmachines, data-portalen en
 andere toepassingen.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 <!-- TODO: vul aan -->
@@ -58,14 +66,6 @@ beschrijven, wat de interoperabiliteit en vindbaarheid van gegevens aanzienlijk
 verbetert.
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

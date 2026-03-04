@@ -51,7 +51,7 @@ security-checks.
 ### ✅ Voorkomen van vendor lock-in
 
 Omdat de Haven-standaard open source is en er een
-[compliancy-checker](./haven-compliancy-checker.md) voor handen is, kan elke
+[compliancy-checker](/kennisbank/devops/tools/haven-compliancy-checker) voor handen is, kan elke
 leverancier die daar oren naar heeft een Haven-compliant Kubernetes Cluster
 opleveren.
 
@@ -114,7 +114,7 @@ voldoet aan de voorwaarden om te draaien op een Haven Cluster.
 Deze CLI Tool stelt je in staat om pro-actief je Kubernetes cluster
 Haven-compliant te houden.
 
-- [Meer info over Haven Compliancy Checker](./haven-compliancy-checker)
+- [Meer info over Haven Compliancy Checker](/kennisbank/devops/tools/haven-compliancy-checker)
 
 ![Screenshot FSC Policy Builder](./img/schermafbeelding-compliancy-checker.png)
 

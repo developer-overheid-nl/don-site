@@ -274,7 +274,7 @@ const tiles: GridTile[] = [
       { link: "/kennisbank/devops/standaarden/haven", label: "Haven" },
       { link: "/kennisbank/devops/standaarden/fsc", label: "FSC" },
       {
-        link: "/kennisbank/devops/standaarden/haven/haven-compliancy-checker",
+        link: "/kennisbank/devops/tools/haven-compliancy-checker",
         label: "Haven Compliancy Checker",
       },
       {

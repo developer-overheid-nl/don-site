@@ -12,6 +12,14 @@ digitale dienstverlener van de overheid. Met PKIoverheid kunnen organisaties en
 burgers erop vertrouwen dat hun gegevens veilig worden uitgewisseld en dat ze
 met de juiste partij communiceren.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 PKIoverheid zorgt voor:
@@ -51,14 +59,6 @@ met PKIoverheid te maken. Denk aan:
 
 Zorg dat je op de hoogte bent van hoe je certificaten installeert, beheert en
 valideert binnen je stack.
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
-
-<!-- TODO: vul aan -->
 
 ## Bronnen
 

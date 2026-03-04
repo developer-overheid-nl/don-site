@@ -13,6 +13,14 @@ Software in de publieke sector.**
 De gids onderscheidt drie doelgroepen: managers, beleidsmakers en developers. In
 elk hoofdstuk worden er per doelgroep handelingsperspectieven uitgelicht.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 <!-- TODO: vul aan -->
@@ -21,19 +29,11 @@ elk hoofdstuk worden er per doelgroep handelingsperspectieven uitgelicht.
 
 <!-- TODO: vul aan -->
 
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
 ## Meedoen?
 
 Als je wilt meewerken aan de Standaard voor Publieke Code kan je deelnemen aan
 [**#standard-for-public-code**](https://codefornl.slack.com/archives/CPJC62GUQ)
 in de Slack van Code for NL.
-
-## Gerelateerde standaarden
-
-<!-- TODO: vul aan -->
 
 ## Bronnen
 

@@ -102,7 +102,7 @@ Links in deze tiles mogen NIET voorkomen in de thema-tiles eronder.
 
 - Haven → `/kennisbank/devops/standaarden/haven`
 - FSC → `/kennisbank/devops/standaarden/fsc`
-- Haven Compliancy Checker → `/kennisbank/devops/standaarden/haven/haven-compliancy-checker`
+- Haven Compliancy Checker → `/kennisbank/devops/tools/haven-compliancy-checker`
 - Quality-time → `/kennisbank/devops/tools/quality-time`
 - FSC Policy Builder → `/kennisbank/devops/tools/fsc-policy-builder`
 

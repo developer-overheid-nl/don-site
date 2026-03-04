@@ -42,7 +42,8 @@ oude_url,nieuwe_url
 # Infra → DevOps
 /kennisbank/infra/standaarden/,/kennisbank/devops/standaarden/
 /kennisbank/infra/standaarden/haven/,/kennisbank/devops/standaarden/haven/
-/kennisbank/infra/standaarden/haven/haven-compliancy-checker,/kennisbank/devops/standaarden/haven/haven-compliancy-checker
+/kennisbank/infra/standaarden/haven/haven-compliancy-checker,/kennisbank/devops/tools/haven-compliancy-checker
+/kennisbank/devops/standaarden/haven/haven-compliancy-checker,/kennisbank/devops/tools/haven-compliancy-checker
 /kennisbank/infra/standaarden/haven/haven-plus,/kennisbank/devops/standaarden/haven/haven-plus
 /kennisbank/infra/standaarden/fsc/,/kennisbank/devops/standaarden/fsc/
 /kennisbank/infra/tools/,/kennisbank/devops/tools/

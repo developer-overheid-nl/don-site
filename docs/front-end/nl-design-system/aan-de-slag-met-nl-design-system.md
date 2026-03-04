@@ -14,6 +14,14 @@ Wil je snel aan de slag met NL Design System? In deze handleiding laten we je
 zien hoe je het lokaal kunt opzetten en hoe je experimenteert met de beschikbare
 componenten.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 <!-- TODO: vul aan -->
@@ -184,14 +192,6 @@ meedoen zijn de volgende links handig.
   `#nl-design-system` kanaal om samen te werken met de community.
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

@@ -14,6 +14,14 @@ machine-leesbare manier te presenteren. RDF wordt vaak gebruikt in combinatie
 met andere standaarden zoals RDFa, RDFS en OWL om het semantische web te
 ondersteunen.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 ### RDFa
@@ -74,14 +82,6 @@ Kort gezegd: RDF is het fundament, RDFa is een toepassing ervan in
 webdocumenten, en RDFS biedt een uitbreidbare vocabulaire voor RDF.
 
 ## Toepassing in Nederland
-
-<!-- TODO: vul aan -->
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
 
 <!-- TODO: vul aan -->
 

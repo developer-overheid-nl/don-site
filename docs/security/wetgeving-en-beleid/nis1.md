@@ -19,6 +19,14 @@ Gaan voor de nieuwe versie naar [NIS2](./nis2).
 
 :::
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+<!-- TODO: vul aan -->
+
 ## Hoe werkt het
 
 <!-- TODO: vul aan -->
@@ -29,14 +37,6 @@ De compliance met de NIS1-richtlijn is in Nederland vastgelegd in de Wet
 beveiliging netwerk- en informatiesystemen (Wbni). Deze wet trad op 9 november
 2018 in werking en vormt de juridische implementatie van de Europese
 NIS-richtlijn in Nederland.
-
-## Wanneer gebruik je dit
-
-<!-- TODO: vul aan -->
-
-## Gerelateerde standaarden
-
-<!-- TODO: vul aan -->
 
 ## Bronnen
 

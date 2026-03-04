@@ -16,6 +16,23 @@ Met OIDC kan een applicatie (Relying Party) betrouwbaar de identiteit van een
 gebruiker vaststellen op basis van een login bij een Identity Provider (IdP),
 zoals een overheidssysteem of commerciële aanbieder.
 
+## Waarom deze standaard
+
+<!-- TODO: vul aan -->
+
+## Wanneer gebruik je dit
+
+OIDC is ideaal voor:
+
+- Single Sign-On (SSO) tussen meerdere diensten
+- Federatieve login (bijv. met DigiD of eHerkenning)
+- Veilige identificatie van gebruikers op basis van standaarden
+- Integraties in moderne web- en mobiele applicaties
+
+Niet geschikt voor:
+
+- Pure autorisatie zonder gebruikersidentiteit → gebruik dan alleen OAuth 2.0
+
 ## Hoe werkt het
 
 De flow van OIDC lijkt sterk op OAuth, maar voegt o.a. deze elementen toe:
@@ -48,28 +65,12 @@ Belangrijke kenmerken:
 🔗
 [NL GOV OIDC profiel (GitHub)](https://github.com/Logius-standaarden/OIDC-NLGOV/)
 
-## Wanneer gebruik je dit
-
-OIDC is ideaal voor:
-
-- Single Sign-On (SSO) tussen meerdere diensten
-- Federatieve login (bijv. met DigiD of eHerkenning)
-- Veilige identificatie van gebruikers op basis van standaarden
-- Integraties in moderne web- en mobiele applicaties
-
-Niet geschikt voor:
-
-- Pure autorisatie zonder gebruikersidentiteit → gebruik dan alleen OAuth 2.0
-
-## Gerelateerde standaarden
-
-- [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)
-- [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html)
-- [OpenID Connect Dynamic Client Registration](https://openid.net/specs/openid-connect-registration-1_0.html)
-- [OAuth 2.0 (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
-
 ## Bronnen
 
 - [NL GOV OIDC profiel](https://gitdocumentatie.logius.nl/publicatie/api/oidc/)
 - [OpenID Connect officiële site](https://openid.net/connect/)
 - [OIDC + OAuth uitleg (oauth.net)](https://oauth.net/2/)
+- [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)
+- [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html)
+- [OpenID Connect Dynamic Client Registration](https://openid.net/specs/openid-connect-registration-1_0.html)
+- [OAuth 2.0](/kennisbank/security/authenticatie/oauth)
