@@ -163,7 +163,7 @@ Er is een [DigiToegankelijk Pleio community](https://digitoegankelijk.pleio.nl/)
 ### Axe
 
 Met Axe kun je een deel van de WCAG-criteria automatisch testen. Voor Axe is een specifiek artikel met instructies en gelijk te gebruiken
-configuratie: [Axe accessibility checker](./run-axe.md).
+configuratie: [Axe accessibility checker](../../tools/run-axe.mdx).
 
 ### Microsoft Accessibility Insights
 

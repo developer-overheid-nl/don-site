@@ -12,9 +12,9 @@ description: |
 # OIDC voor Nederlandse Identiteitsdiensten
 
 Binnen de Nederlandse overheid zijn
-[DigiD](/kennisbank/security/standaarden/digid),
-[eHerkenning](/kennisbank/security/standaarden/eherkenning) en
-[eIDAS](/kennisbank/security/standaarden/eidas) al jaren de ruggengraat van
+[DigiD](/kennisbank/security/authenticatie/digid),
+[eHerkenning](/kennisbank/security/authenticatie/eherkenning) en
+[eIDAS](/kennisbank/security/wetgeving-en-beleid/eidas) al jaren de ruggengraat van
 digitale identiteit en toegang. Ze zijn betrouwbaar, veilig, bewezen en breed
 ingezet door heel Nederland heen. Tegelijkertijd stoelen deze voorzieningen op
 een technische basis die steeds minder goed afgestemd is op hoe we vandaag
@@ -45,8 +45,8 @@ basis van simpele, door de eigenaar van de data goedgekeurde “consent”. Ook 
 het API-first en kanaalonafhankelijk, in tegenstelling tot SAML welke echt
 browser-centrisch is; de wereld is dit echter niet meer. Daarnaast is de instap
 voor developers een stuk lager door de lichtgewicht aard van de berichtenstromen
-(JSON en REST i.p.v. XML, zie [OIDC](/kennisbank/security/standaarden/oidc) en
-[SAML](/kennisbank/security/standaarden/saml)) en de bekendheid van de techniek
+(JSON en REST i.p.v. XML, zie [OIDC](/kennisbank/security/authenticatie/oidc) en
+[SAML](/kennisbank/security/authenticatie/saml)) en de bekendheid van de techniek
 over de gehele wereld. Het is ook flexibel en toekomstvast; door OIDC flows als
 Authorization Code (met PKCE) voor web en apps en Device Code voor beperkte
 apparaten is OIDC veilig in te zetten voor vele gebruiksscenario’s, zonder

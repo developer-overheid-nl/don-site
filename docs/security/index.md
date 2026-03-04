@@ -3,11 +3,17 @@ title: "Security"
 sidebar_position: 1
 ---
 
+import DocCardList from '@theme/DocCardList';
+
 In een wereld die snel verandert en waar geopolitieke verschuivingen
 plaatsvinden, wordt security een steeds crucialer thema. Het is daarom
 belangrijker dan ooit om proactief kwetsbaarheden te monitoren en ervoor te
 zorgen dat software altijd up-to-date is. In dit thema vind je een overzicht van
 relevante securitystandaarden en beschikbare tools.
+
+## Onderwerpen
+
+<DocCardList />
 
 ## Bronnen
 

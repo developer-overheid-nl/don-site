@@ -185,7 +185,7 @@ services. Maar je kan ze wel langzamerhand gaan vervangen door open source
 componenten die je zelf opzet. En het mooie is; een aantal van deze open source
 componenten heeft het Haven-team al voor je beschikbaar gemaakt in de vorm van
 een project genaamd
-[**Haven+**](/kennisbank/infra/standaarden/haven/haven-plus).
+[**Haven+**](/kennisbank/devops/standaarden/haven-plus).
 
 Dit project bevat misschien nog niet alles wat je nodig hebt als organisatie,
 maar gelukkig staat niets je in de weg om mee te bouwen aan deze componenten met
@@ -253,7 +253,7 @@ interview zal hier later ook gepubliceerd worden.
 
 ## Handige links
 
-- [Ons kennisbank artikel over Haven](/kennisbank/infra/standaarden/haven/)
+- [Ons kennisbank artikel over Haven](/kennisbank/devops/standaarden/haven/)
 - [Slack-kanaal van Haven](https://samenorganiseren.slack.com/archives/CGCPJE599)
 - [Mattermost kanaal van Haven+](https://digilab.overheid.nl/chat/haven/channels/town-square)
 - [Naar de lijst met checks van Haven](https://haven.commonground.nl/techniek/checks)

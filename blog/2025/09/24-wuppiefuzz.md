@@ -48,7 +48,7 @@ testmodi:
 - **Grey box**: met beperkte kennis en observatie van gedrag.
 - **White box**: met volledige toegang tot de broncode en interne structuur.
 
-Op basis van een [OpenAPI-specificatie](/kennisbank/apis/openapi-specification)
+Op basis van een [OpenAPI-specificatie](/kennisbank/api-ontwikkeling/standaarden/openapi-specification)
 genereert WuppieFuzz automatisch zinvolle sequenties van HTTP-requests. Deze
 sequenties worden vervolgens gemuteerd om diepere logica en edge cases in de API
 te bereiken. De tool meet test coverage via response-codes en/of via

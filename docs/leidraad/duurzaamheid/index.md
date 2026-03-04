@@ -139,4 +139,4 @@ Geen bekend.
 ### Bronnen op developer.overheid.nl
 
 - [Quality-time](https://quality-time.readthedocs.io/en/latest/)
-- [Quality-time op developer.overheid.nl](/kennisbank/infra/tools/quality-time)
+- [Quality-time op developer.overheid.nl](/kennisbank/devops/tools/quality-time)
