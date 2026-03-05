@@ -61,6 +61,9 @@ importers:
       docusaurus-theme-search-typesense:
         specifier: 0.26.0
         version: 0.26.0(@algolia/client-search@5.40.1)(@babel/runtime@7.27.6)(@docusaurus/core@3.9.2(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@docusaurus/theme-common@3.9.2(@docusaurus/plugin-content-docs@3.9.2(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(acorn@8.15.0)(algoliasearch@5.40.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
+      dotenv:
+        specifier: ^17.3.1
+        version: 17.3.1
       focus-trap-react:
         specifier: ^11.0.4
         version: 11.0.4(@types/react-dom@19.1.5(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2962,8 +2965,8 @@ packages:
     resolution: {integrity: sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==}
     engines: {node: '>=10'}
 
-  dotenv@17.2.3:
-    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
+  dotenv@17.3.1:
+    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -6410,7 +6413,7 @@ snapshots:
       chromedriver: 146.0.0
       colors: 1.4.0
       commander: 9.5.0
-      dotenv: 17.2.3
+      dotenv: 17.3.1
       selenium-webdriver: 4.35.0
     transitivePeerDependencies:
       - bufferutil
@@ -10258,7 +10261,7 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
-  dotenv@17.2.3: {}
+  dotenv@17.3.1: {}
 
   dunder-proto@1.0.1:
     dependencies:
@@ -11077,7 +11080,7 @@ snapshots:
   http-proxy@1.18.1:
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.9
+      follow-redirects: 1.15.11
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -13899,7 +13902,7 @@ snapshots:
   typesense@1.8.2(@babel/runtime@7.27.6):
     dependencies:
       '@babel/runtime': 7.27.6
-      axios: 1.12.2
+      axios: 1.13.5
       loglevel: 1.9.2
     transitivePeerDependencies:
       - debug
