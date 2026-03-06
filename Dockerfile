@@ -30,7 +30,10 @@ COPY . /opt/docusaurus/
 ## Install dependencies with `--frozen-lockfile` to ensure reproducibility.
 RUN pnpm install --frozen-lockfile
 ## Build the static site.
-RUN pnpm build
+# RUN pnpm build
+RUN --mount=type=secret,PIWIK_PRO_SITE_ID,env=PIWIK_PRO_SITE_ID \
+  --mount=type=secret,PIWIK_PRO_ACCOUNT_ADDRESS,env=PIWIK_PRO_ACCOUNT_ADDRESS \
+  PIWIK_PRO_SITE_ID=$PIWIK_PRO_SITE_ID PIWIK_PRO_ACCOUNT_ADDRESS=$PIWIK_PRO_ACCOUNT_ADDRESS pnpm build
 
 # Stage 3a: Serve with `docusaurus serve`.
 FROM prod AS serve
