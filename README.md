@@ -58,5 +58,5 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 - Maak eventueel een nieuwe map aan als de huidige maand nog niet bestaat in
   `/blog/{year}/`.
 - Verplaats de blogpost naar de map van de huidige maand.
-- Verwijder de `draft: false` property uit het frontmatter van de blogpost.
+- Verwijder de `draft: true` property uit het frontmatter van de blogpost.
 - Draai `pnpm build` om te kijken of de markdown in orde is.
