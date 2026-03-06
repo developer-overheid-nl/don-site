@@ -34,6 +34,7 @@
     "client": "link:@docusaurus/plugin-content-docs/client",
     "clsx": "^2.1.1",
     "docusaurus-theme-search-typesense": "0.26.0",
+    "dotenv": "^17.3.1",
     "focus-trap-react": "^11.0.4",
     "gray-matter": "^4.0.3",
     "prism-react-renderer": "^2.4.1",
