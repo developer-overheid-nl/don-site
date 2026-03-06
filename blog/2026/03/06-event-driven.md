@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [martin-van-der-plas, stas-mironov]
 tags: [api, eda, fds, webhooks, cloudevents, nds]
 description:
@@ -22,16 +21,33 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 _Schematisch beeld van de event-driven overheid_
 
 Steeds meer overheidsorganisaties stappen over naar
-[eventgedreven architecturen (EDA)](/kennisbank/api-ontwikkeling/architectuur/eda). Waarom?
-Omdat het beter schaalbaar is, sneller reageert op veranderingen en beter past
-bij een moderne digitale overheid waarin systemen onderling proactief
+[eventgedreven architecturen (EDA)](/kennisbank/api-ontwikkeling/architectuur/eda).
+Waarom? Omdat het beter schaalbaar is, sneller reageert op veranderingen en
+beter past bij een moderne digitale overheid waarin systemen onderling proactief
 samenwerken op basis van gebeurtenissen, in plaats van reactieve
 vraag-antwoordstructuren. In dit artikel duiken we in de kern van EDA binnen de
 Nederlandse overheid en bespreken we Stelsels, Standaarden en Voorzieningen als
 [CloudEvents](/kennisbank/api-ontwikkeling/standaarden/cloudevents),
-[Webhooks](/kennisbank/api-ontwikkeling/architectuur/webhooks) DigiLevering en DigiMelding.
+[Webhooks](/kennisbank/api-ontwikkeling/architectuur/webhooks), DigiLevering en
+DigiMelding.
 
 <!-- truncate -->
+
+:::success[**TL;DR**]
+
+Steeds meer overheidsorganisaties stappen over op event-driven architectuur
+(EDA), waarbij systemen proactief reageren op gebeurtenissen in plaats van data
+te pollen. De **NL GOV profile for CloudEvents** — verplicht gesteld via "Pas
+toe of leg uit" — is dé standaard voor uniforme eventuitwisseling binnen de
+overheid.
+
+**Webhooks** maken het mogelijk om API's niet alleen als pull-interface maar ook
+als push-mechanisme in te zetten. Bestaande voorzieningen zoals DigiLevering en
+DigiMelding bewegen richting API-first en CloudEvents. Input en ervaringen zijn
+welkom op het
+[Kennisplatform API's](https://www.formdesk.com/geonovum/KennisplatformAPI)!
+
+:::
 
 ## Voordelen van EDA
 
@@ -53,9 +69,9 @@ voorkomen en vaak voorspelbaar zijn.
 Naast life events zijn er ook transactionele of **processing events**. Je schaft
 een paspoort aan maar je krijgt die pas als de gemeente het event van de
 betaalprovider heeft ontvangen dat de aanvrager heeft betaald. Ook weet je op
-basis het creëren van de resource paspoort dat het paspoort ook weer verloopt of
-kan worden aangemerkt als vermist of gestolen. Kortom events volgen ook uit een
-**transactie**.
+basis van het creëren van de resourcepaspoort dat het paspoort ook weer verloopt
+of kan worden aangemerkt als vermist of gestolen. Kortom events volgen ook uit
+een **transactie**.
 
 ## Context - Huidige situatie
 
@@ -122,7 +138,7 @@ Date: Fri, 26 Sep 2025 14:00:00 GMT
 
 Het opnemen van Webhooks in OAS (OpenAPI Specification) maakt het mogelijk dat
 afnemers zich kunnen abonneren op gebeurtenissen en **automatisch geïnformeerd
-worden wanneer die plaatsvinden**
+worden wanneer die plaatsvinden**.
 
 > Zie ook de cloudevents pagina op de Kennisbank van
 > [developer.overheid.nl](/kennisbank/api-ontwikkeling/standaarden/cloudevents)
@@ -200,10 +216,6 @@ hebt. Hierin zou je moeten adresseren:
 > local webhook listener zoals [webhook.site](https://webhook.site/), of gebruik
 > [ngrok](https://ngrok.com/) om een publieke endpoint te creëren voor
 > test-events .
-
-Wil je sparren over hoe jouw organisatie events kan inzetten? Of heb je een
-vraag over implementatie in je API? Deel je ervaringen op
-[developer.overheid.nl/community](https://developer.overheid.nl/community).
 
 ### Soorten Events
 
@@ -363,6 +375,26 @@ Om dat goed te laten werken, zijn afspraken nodig over:
 gebruik te maken van **CloudEvents, Webhooks en OAuth** kunnen organisaties
 robuuste event-gedreven oplossingen ontwikkelen die naadloos aansluiten op de
 **Nederlandse API Strategie**.
+
+## Conclusie
+
+Event-driven architectuur is geen toekomstmuziek meer — het is een beweging die
+al volop gaande is binnen de Nederlandse overheid. Van de verplichte adoptie van
+het **NL GOV profile for CloudEvents** tot de stap van DigiLevering en
+DigiMelding richting API-first: de fundamenten worden gelegd voor een overheid
+die proactief informatie deelt op basis van gebeurtenissen.
+
+De combinatie van **CloudEvents**, **Webhooks** en **OAuth** biedt ontwikkelaars
+een solide basis om event-gedreven oplossingen te bouwen die aansluiten op de NL
+API Strategie. De uitdaging ligt nu in brede adoptie, standaardisering van
+abonnementsbeheer en het beveiligen van event-stromen.
+
+Wil je bijdragen aan deze ontwikkeling? Alle standaarden en discussies zijn
+openbaar. Doe mee via het:
+
+<a target="_blank" class="utrecht-button utrecht-button--primary-action" type="button" href="https://www.formdesk.com/geonovum/KennisplatformAPI">
+    <p style={{marginBottom:"0"}}>Kennisplatform API's</p>
+</a>
 
 ## Verder lezen
 
