@@ -5,7 +5,6 @@ import type * as Preset from "@docusaurus/preset-classic";
 import remarkDirectiveSugar from "remark-directive-sugar";
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import 'dotenv/config';
 
 function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
   const csv = readFileSync(resolve(__dirname, "redirects.csv"), "utf-8");
@@ -30,8 +29,8 @@ const config: Config = {
     discourseCommentsInBlog: false,
     // Exposed to the browser via @generated/docusaurus.config for client modules.
     piwikPro: {
-      siteId: process.env.PIWIK_PRO_SITE_ID,
-      accountAddress: process.env.PIWIK_PRO_ACCOUNT_ADDRESS,
+      accountAddress: "https://statistiek.rijksoverheid.nl",
+      siteId: "ecfee27a-23a7-4f10-aa30-934961180d5d",
     },
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",

@@ -61,9 +61,6 @@ importers:
       docusaurus-theme-search-typesense:
         specifier: 0.26.0
         version: 0.26.0(@algolia/client-search@5.40.1)(@babel/runtime@7.27.6)(@docusaurus/core@3.9.2(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@docusaurus/theme-common@3.9.2(@docusaurus/plugin-content-docs@3.9.2(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(acorn@8.15.0)(algoliasearch@5.40.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
-      dotenv:
-        specifier: ^17.3.1
-        version: 17.3.1
       focus-trap-react:
         specifier: ^11.0.4
         version: 11.0.4(@types/react-dom@19.1.5(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2286,8 +2283,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromedriver@146.0.0:
-    resolution: {integrity: sha512-fDAbuEy+Dn9F/h8fphiQIUEyUDOTGlfjZHfI9dJZz75+ui/LIHqWzStQt87vpwA9oV3ut4C2W3flfvbn3KELFQ==}
+  chromedriver@146.0.1:
+    resolution: {integrity: sha512-XT1FnStrsGAS6l3M0yLtLjqSZWcOK0cBoR/QKLzA0rvf4oGtxnxYtCv6G0j8/0xNZTY2Zv9GOARZ5uBNc3bjTw==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -6410,7 +6407,7 @@ snapshots:
     dependencies:
       '@axe-core/webdriverjs': 4.11.0(selenium-webdriver@4.35.0)
       axe-core: 4.11.0
-      chromedriver: 146.0.0
+      chromedriver: 146.0.1
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 17.3.1
@@ -9526,7 +9523,7 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@146.0.0:
+  chromedriver@146.0.1:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.13.5
