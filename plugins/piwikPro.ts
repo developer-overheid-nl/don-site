@@ -49,7 +49,7 @@ const piwikClientModule: ClientModule = {
 
       const searchParams = new URLSearchParams(location.search);
       const query = searchParams.get(SEARCH_KEYWORD_PARAM) ?? undefined;
-      const searchResultsAmount = document.getElementById("searchResultsAmount")?.textContent;
+      const searchResultsAmount = Number(document.getElementById("searchResultsAmount")?.textContent);
 
       // debouce tracking to avoid tracking intermediate states of the search query
       window.trackSiteSearchTimeout as ReturnType<typeof setTimeout>;
@@ -57,7 +57,7 @@ const piwikClientModule: ClientModule = {
         clearTimeout(window.trackSiteSearchTimeout);
       }
       window.trackSiteSearchTimeout = setTimeout(() => {
-        SiteSearch.trackSiteSearch(query, searchResultsAmount);
+        SiteSearch.trackSiteSearch(query, undefined, searchResultsAmount);
       }, 1000);
 
     } else if (normalizePathname(location.pathname) !== normalizePathname(previousLocation?.pathname)) {
