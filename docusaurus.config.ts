@@ -23,7 +23,12 @@ function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
 
 const emptyTheme = { plain: {}, styles: [] };
 
-const config: Config = {
+type PiwikProClientConfig = {
+  siteId: string;
+  accountAddress: string;
+};
+
+const config: Config & { customFields: Config["customFields"] & { piwikPro: PiwikProClientConfig }} = {
   title: "developer.overheid.nl",
   customFields: {
     siteName: "developer.overheid.nl",
@@ -93,10 +98,10 @@ const config: Config = {
       onBrokenMarkdownImages: "throw",
     },
   },
-  clientModules: ["./src/piwikClientModule.ts"],
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     "./plugins/content-type-index.js",
+    "./plugins/plugin-piwik-pro.ts",
     [
       "@docusaurus/plugin-content-docs",
       {
