@@ -1,0 +1,25 @@
+name: JSON CI
+
+on: pull_request
+
+jobs:
+  lint-and-validate:
+    name: JSON Lint & OpenAPI Validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      statuses: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+      - name: Run Super-Linter
+        uses: super-linter/super-linter@v8.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_JSON: true
+          VALIDATE_OPENAPI: true
+          ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: true
