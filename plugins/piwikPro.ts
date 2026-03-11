@@ -45,11 +45,8 @@ const piwikClientModule: ClientModule = {
 
       init(); // PageViews.trackPageView() is already done by the PiwikPro.initialize call.
 
-    } else if (location.search && location.search.includes(`${SEARCH_KEYWORD_PARAM}=`)) {
-
-      const searchParams = new URLSearchParams(location.search);
-      const query = searchParams.get(SEARCH_KEYWORD_PARAM) ?? undefined;
-      const searchResultsAmount = Number(document.getElementById("searchResultsAmount")?.textContent);
+    } 
+    else if (location.search && location.search.includes(`${SEARCH_KEYWORD_PARAM}=`)) {
 
       // debouce tracking to avoid tracking intermediate states of the search query
       window.trackSiteSearchTimeout as ReturnType<typeof setTimeout>;
@@ -57,10 +54,16 @@ const piwikClientModule: ClientModule = {
         clearTimeout(window.trackSiteSearchTimeout);
       }
       window.trackSiteSearchTimeout = setTimeout(() => {
+        const searchParams = new URLSearchParams(location.search);
+        const query = searchParams.get(SEARCH_KEYWORD_PARAM) ?? undefined;
+        // Custom id in the SearchPage component to get the amount of results.
+        const searchResultsAmount = Number(document.getElementById("searchResultsAmount")?.textContent);
+
         SiteSearch.trackSiteSearch(query, undefined, searchResultsAmount);
       }, 1000);
 
-    } else if (normalizePathname(location.pathname) !== normalizePathname(previousLocation?.pathname)) {
+    } 
+    else if (normalizePathname(location.pathname) !== normalizePathname(previousLocation?.pathname)) {
 
       // Because the title is changed with a slight delay after the route change, we need to observe the title.
       const observer = new MutationObserver(() => {
@@ -70,7 +73,8 @@ const piwikClientModule: ClientModule = {
       })
       observer.observe(document.querySelector("title"), { childList: true });
 
-    } else {
+    } 
+    else {
 
       ErrorTracking.trackError(new Error(`Unknown route in PiwikPro plugin on page: ${JSON.stringify(location)} from ${JSON.stringify(previousLocation)}`));
     
