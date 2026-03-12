@@ -36,12 +36,9 @@ eenvoudige tekstberichten, bieden vaak onvoldoende context. Met Problem JSON kun
 je extra details toevoegen, zoals een fouttype, een beschrijving en optionele
 aanvullende informatie.
 
-## Content-Type
+<!-- @TODO: ## Het probleem -->
 
-Als je Problem JSON teruggeeft, dan moet dit vergezeld zijn van een
-`Content-Type` header met waarde `application/problem+json`.
-
-## Structuur
+## De oplossing
 
 Een `application/problem+json`-object bevat standaard de volgende velden:
 
@@ -55,6 +52,19 @@ Een `application/problem+json`-object bevat standaard de volgende velden:
   probleem.
 - **`instance`** (URI, optioneel): Een URI die verwijst naar de specifieke
   instantie van het probleem.
+
+<!-- @TODO: ## Kernconcepten -->
+
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+<!-- @TODO: ## Best practices -->
+
+<!-- @TODO: ## Gerelateerde patronen -->
+
+## Content-Type
+
+Als je Problem JSON teruggeeft, dan moet dit vergezeld zijn van een
+`Content-Type` header met waarde `application/problem+json`.
 
 ## Voorbeeld
 
@@ -107,3 +117,5 @@ app.use((err, req, res, next) => {
   });
 });
 ```
+
+<!-- @TODO: ## Bronnen -->

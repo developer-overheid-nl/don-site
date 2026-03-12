@@ -17,11 +17,13 @@ Wil je snel aan de slag met NL Design System? In deze handleiding laten we je
 zien hoe je het lokaal kunt opzetten en hoe je experimenteert met de beschikbare
 componenten.
 
-## Benodigdheden
+<!-- @TODO: ## Wat je gaat maken -->
+
+## Vereisten
 
 - [NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
-## Aan de slag
+## Stappen
 
 ### Stap 1: Installeer de juiste versie van NodeJS met nvm
 
@@ -130,8 +132,8 @@ return (
   <br /><br />
 
   <blockquote attribution="— Aaron Swartz" variation="pink-background">
-    “Be curious. Read widely. Try new things. What people call intelligence just
-    boils down to curiosity.”
+    "Be curious. Read widely. Try new things. What people call intelligence just
+    boils down to curiosity."
   </blockquote>
 </div>
 );
@@ -181,3 +183,7 @@ meedoen zijn de volgende links handig.
 - **_Blijf in contact met de community!_** Word lid van de
   [Code for NL Slack](https://praatmee.codefor.nl/) en join het
   `#nl-design-system` kanaal om samen te werken met de community.
+
+<!-- @TODO: ## Resultaat -->
+
+<!-- @TODO: ## Bronnen -->

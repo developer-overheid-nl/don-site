@@ -24,6 +24,30 @@ hiervoor gebruikt maak je automatisch gebruik van de
 waardoor je inline tips krijgt over welke properties je nog mist, of eventuele
 spelfouten.
 
+<!-- @TODO: ## Wat je gaat maken -->
+
+## Vereisten
+
+- VSCode
+
+## Stappen
+
+### Stap 1 - Voeg een publiccode.yml bestand toe
+
+Open je project in VSCode en voeg een bestand toe aan de root van je project met
+de filename: `publiccode.yml`.
+
+### Stap 2 - Kopieer ons voorbeeld
+
+Kopieer ons voorbeeld op [deze pagina](../standaarden/publiccode-yml). En plak
+deze in jouw `publiccode.yml`-bestand.
+
+### Stap 3 - Pas het voorbeeld aan
+
+Pas alle waarden aan met informatie over jouw project. Ben je opzoek naar
+informatie over de properties van de standard? Ga dan naar de
+[documentatie van de standaard](https://yml.publiccode.tools/schema.core.html).
+
 ## Waarom een publiccode.yml toevoegen aan je project?
 
 ### Groene "flag"
@@ -42,22 +66,6 @@ Software Catalogi om jou code zo nog beter vindbaar te maken.
 Voor meer informatie, ga naar de
 [pagina over de publiccode.yml standaard](../standaarden/publiccode-yml).
 
-## Vereisten
+<!-- @TODO: ## Resultaat -->
 
-- VSCode
-
-### Stap 1 - Voeg een publiccode.yml bestand toe
-
-Open je project in VSCode en voeg een bestand toe aan de root van je project met
-de filename: `publiccode.yml`.
-
-### Stap 2 - Kopieer ons voorbeeld
-
-Kopieer ons voorbeeld op [deze pagina](../standaarden/publiccode-yml). En plak
-deze in jouw `publiccode.yml`-bestand.
-
-### Stap 3 - Pas het voorbeeld aan
-
-Pas alle waarden aan met informatie over jouw project. Ben je opzoek naar
-informatie over de properties van de standard? Ga dan naar de
-[documentatie van de standaard](https://yml.publiccode.tools/schema.core.html).
+<!-- @TODO: ## Bronnen -->

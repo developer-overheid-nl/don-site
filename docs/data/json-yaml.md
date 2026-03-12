@@ -14,7 +14,16 @@ DevOps-tools en CI/CD-pipelines. Beide formaten ondersteunen complexe
 datastructuren zoals lijsten en geneste objecten, maar verschillen in syntaxis
 en gebruiksscenario's.
 
-## JSON
+<!-- TODO: ## Waarom deze standaard — voeg toe waarom JSON/YAML belangrijk is -->
+
+## Wanneer gebruik je dit
+
+Kortom, JSON is ideaal voor machine-to-machine communicatie, terwijl YAML beter
+geschikt is voor configuratiebestanden die door mensen worden beheerd.
+
+## Hoe werkt het
+
+### JSON
 
 JSON is een lichtgewicht dataformaat dat wordt gebruikt voor het uitwisselen van
 gegevens tussen systemen. Het is eenvoudig te lezen en te schrijven voor mensen,
@@ -28,7 +37,7 @@ populair vanwege zijn eenvoud en brede ondersteuning, waardoor het een
 standaardkeuze is voor het werken met gestructureerde gegevens in moderne
 applicaties.
 
-### Voorbeeld van JSON
+#### Voorbeeld van JSON
 
 Hier is een voorbeeld van een JSON-object dat informatie over een persoon bevat:
 
@@ -42,7 +51,7 @@ Hier is een voorbeeld van een JSON-object dat informatie over een persoon bevat:
 }
 ```
 
-## YAML
+### YAML
 
 YAML is een mensvriendelijk dataformaat dat wordt gebruikt voor het schrijven
 van configuratiebestanden en het uitwisselen van gegevens. Het is ontworpen om
@@ -51,7 +60,7 @@ YAML ondersteunt complexe datastructuren zoals lijsten, mappen en geneste
 objecten, en wordt vaak gebruikt in DevOps-tools, configuratiebestanden en
 data-uitwisseling.
 
-### Voorbeeld van YAML
+#### Voorbeeld van YAML
 
 Hier is hetzelfde voorbeeld als het JSON-object, maar nu in YAML:
 
@@ -66,7 +75,7 @@ skills:
 isEmployed: true
 ```
 
-## Verschillen tussen JSON en YAML
+### Verschillen tussen JSON en YAML
 
 1. Leesbaarheid:
    - YAML is mensvriendelijker door het gebruik van inspringingen en het
@@ -85,10 +94,9 @@ isEmployed: true
    - YAML ondersteunt meer geavanceerde functies zoals ankers en referenties,
      wat JSON niet heeft.
 
-Kortom, JSON is ideaal voor machine-to-machine communicatie, terwijl YAML beter
-geschikt is voor configuratiebestanden die door mensen worden beheerd.
+<!-- TODO: ## Toepassing in Nederland — voeg toe hoe JSON/YAML wordt toegepast in de Nederlandse overheid -->
 
-## Tools
+## Bronnen
 
 - [JSON/YAML converter](https://openreplay.com/tools/json-yaml/): handige tool
   om snel JSON naar YAML en YAML naar JSON om te zetten.

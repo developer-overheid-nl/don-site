@@ -28,7 +28,9 @@ headers aan onderstaande operaties.
 | POST      |                                |
 | PATCH     | Header: `If-Match`             |
 
-## Werking
+<!-- @TODO: ## Het probleem -->
+
+## De oplossing
 
 1.  Elke `GET`-respons voor een resource bevat een `ETag`-header. Deze header
     fungeert als een unieke vingerafdruk voor de specifieke versie van de
@@ -41,6 +43,14 @@ headers aan onderstaande operaties.
     - Overeenkomst: de actie wordt uitgevoerd.
     - Niet overeenkomst: de actie wordt geweigerd met een
       `412 Precondition Failed` statuscode.
+
+<!-- @TODO: ## Kernconcepten -->
+
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+<!-- @TODO: ## Best practices -->
+
+<!-- @TODO: ## Gerelateerde patronen -->
 
 ## Voorbeeld in OpenAPI
 
@@ -88,3 +98,5 @@ paths:
             Precondition Failed. De ETag in de If-Match header komt niet overeen
             met de huidige ETag van de resource.
 ```
+
+<!-- @TODO: ## Bronnen -->

@@ -15,7 +15,11 @@ basis OpenAPI Specification te genereren. We voeren wat metadata en resources
 in, en de generator maakt een complete OAS die al voldoet aan de API Design
 Rules.
 
-## Verplichte metadata
+<!-- @TODO: ## Doel -->
+
+## Instructies
+
+### Verplichte metadata
 
 De titel, omschrijving en contactgegevens van de API zijn verplicht volgens
 respectievelijk de OpenAPI Specification en de API Design Rules. Zonder deze
@@ -54,7 +58,7 @@ versie van de API.
 
 :::
 
-## Operaties en resources
+### Operaties en resources
 
 Vervolgens bepalen we de operaties en resource die onze API moeten ondersteunen.
 We willen verschillende bieren, bierstijlen en brouwerijen kunnen ontsluiten
@@ -119,7 +123,7 @@ Nadat we deze hebben toegevoegd aan `resources` ziet onze JSON er als volgt uit:
 }
 ```
 
-## OAS Generator
+### OAS Generator
 
 We kunnen deze input nu aan de OAS Generator geven:
 
@@ -131,7 +135,7 @@ We kunnen deze input nu aan de OAS Generator geven:
 ![OAS Generator](./generator.png) _De OAS Generator met links onze JSON input en
 rechts de openapi.json output_
 
-### Uitleg gegenereerde OAS
+#### Uitleg gegenereerde OAS
 
 De volgende zaken zijn nu automatisch gegenereerd:
 
@@ -156,7 +160,7 @@ nalopen en van correcte omschrijvingen voorzien.
 
 :::
 
-## Wat hebben we geleerd?
+## Resultaat
 
 - Hoe we de **OAS Generator** gebruiken om snel een basis OpenAPI Specification
   te maken
@@ -165,10 +169,6 @@ nalopen en van correcte omschrijvingen voorzien.
 - Hoe we **resources** definiëren met enkelvoud/meervoud en readonly-opties
 - Welke **operaties** automatisch gegenereerd worden (GET, POST, PUT, DELETE)
 
-## Volgende stap
+---
 
-We hebben nu een basis OAS die voldoet aan de ADR, maar de schemas bevatten
-alleen een `id` property. In de volgende stap gaan we de schemas uitbreiden met
-alle velden die we nodig hebben voor onze Bier API.
-
-[Ga naar stap 2: Modelleer de schemas](./2-modelleer-schemas.md)
+Volgende: [Stap 2: Modelleer de schemas](./2-modelleer-schemas.md)

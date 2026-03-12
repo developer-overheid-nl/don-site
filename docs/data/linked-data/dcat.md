@@ -5,6 +5,16 @@ tags: [dcat, linked-data]
 
 # DCAT
 
+## Waarom deze standaard
+
+DCAT helpt ontwikkelaars om datasets op een gestandaardiseerde manier te
+beschrijven, wat de interoperabiliteit en vindbaarheid van gegevens aanzienlijk
+verbetert.
+
+<!-- TODO: ## Wanneer gebruik je dit — voeg toe wanneer je DCAT gebruikt -->
+
+## Hoe werkt het
+
 DCAT (Data Catalog Vocabulary) is een W3C-standaard die wordt gebruikt om
 metadata over datasets te beschrijven en te publiceren. Het is ontworpen om
 data-uitwisseling tussen datacatalogi te vergemakkelijken, zodat datasets beter
@@ -16,7 +26,7 @@ titel, beschrijving, publicatiedatum, licentie en distributieformaten. Dit maakt
 het eenvoudiger om datasets te integreren in zoekmachines, data-portalen en
 andere toepassingen.
 
-## Voorbeeld van DCAT
+### Voorbeeld van DCAT
 
 Hier is een voorbeeld in Turtle-syntaxis dat een dataset beschrijft:
 
@@ -49,6 +59,6 @@ Uitleg:
    - De dct:publisher eigenschap linkt naar de organisatie die de dataset heeft
      gepubliceerd.
 
-DCAT helpt ontwikkelaars om datasets op een gestandaardiseerde manier te
-beschrijven, wat de interoperabiliteit en vindbaarheid van gegevens aanzienlijk
-verbetert.
+<!-- TODO: ## Toepassing in Nederland — voeg toe hoe DCAT wordt toegepast in Nederland -->
+
+<!-- TODO: ## Bronnen — voeg relevante bronnen toe -->

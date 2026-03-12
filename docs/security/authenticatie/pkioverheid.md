@@ -12,7 +12,7 @@ digitale dienstverlener van de overheid. Met PKIoverheid kunnen organisaties en
 burgers erop vertrouwen dat hun gegevens veilig worden uitgewisseld en dat ze
 met de juiste partij communiceren.
 
-## Wat doet PKIoverheid?
+## Waarom deze standaard
 
 PKIoverheid zorgt voor:
 
@@ -29,6 +29,8 @@ Dit is bijvoorbeeld belangrijk bij:
 - Digitale handtekeningen onder documenten.
 - Het beveiligen van websites via TLS/SSL.
 
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
 ## Hoe werkt het?
 
 PKIoverheid gebruikt een hiërarchisch systeem van certificaten:
@@ -42,6 +44,8 @@ Het hele stelsel voldoet aan strenge eisen en wordt onafhankelijk gecontroleerd.
 Alleen partijen die aan alle voorwaarden voldoen mogen certificaten uitgeven
 namens PKIoverheid.
 
+<!-- @TODO: ## Toepassing in Nederland -->
+
 ## Waarom is dit relevant voor developers?
 
 Als je werkt aan toepassingen voor of met de overheid, krijg je vrijwel altijd
@@ -54,7 +58,7 @@ met PKIoverheid te maken. Denk aan:
 Zorg dat je op de hoogte bent van hoe je certificaten installeert, beheert en
 valideert binnen je stack.
 
-## Meer informatie
+## Bronnen
 
 Wil je verder lezen of certificaten downloaden? Check dan deze bronnen:
 

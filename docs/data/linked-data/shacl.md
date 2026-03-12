@@ -5,6 +5,12 @@ tags: [shacl, linked-data]
 
 # SHACL
 
+<!-- TODO: ## Waarom deze standaard — voeg toe waarom SHACL belangrijk is -->
+
+<!-- TODO: ## Wanneer gebruik je dit — voeg toe wanneer je SHACL gebruikt -->
+
+## Hoe werkt het
+
 SHACL (Shapes Constraint Language) is een W3C-standaard die wordt gebruikt om
 validatieregels en beperkingen te definiëren voor RDF-gegevens. Het stelt
 ontwikkelaars in staat om te specificeren hoe RDF-data gestructureerd moet zijn
@@ -17,7 +23,7 @@ een bepaald type entiteit een verplichte eigenschap moet hebben, dat een
 eigenschap een specifieke datatype moet hebben, of dat een waarde binnen een
 bepaald bereik moet liggen.
 
-## Voorbeeld
+### Voorbeeld
 
 Hier is een voorbeeld van een SHACL-shape die valideert dat een `Person` een
 verplichte `name`-eigenschap heeft en dat de waarde van `age` een geheel getal
@@ -47,3 +53,7 @@ ex:PersonShape
 | **sh:NodeShape**   | Definieert een shape die wordt toegepast op RDF-resources.                                                                                                                                                   |
 | **sh:targetClass** | Geeft aan dat de shape van toepassing is op alle instanties van de klasse `ex:Person`.                                                                                                                       |
 | **sh:property**    | Beschrijft beperkingen voor specifieke eigenschappen: `ex:name` moet een string zijn en is verplicht (`sh:minCount 1`). `ex:age` moet een geheel getal zijn en mag niet negatief zijn (`sh:minInclusive 0`). |
+
+<!-- TODO: ## Toepassing in Nederland — voeg toe hoe SHACL wordt toegepast in Nederland -->
+
+<!-- TODO: ## Bronnen — voeg relevante bronnen toe -->

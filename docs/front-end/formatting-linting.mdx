@@ -41,50 +41,56 @@ Voordelen van formatting en linting zijn:
 - **✔️ Makkelijkere onboarding nieuwe teamleden**: nieuwe developers leren
   meteen de juiste patronen en stijl.
 
-## Wat is formatting?
+<!-- @TODO: ## Wat je gaat maken -->
+
+<!-- @TODO: ## Vereisten -->
+
+## Stappen
+
+### Wat is formatting?
 
 Formatting verwijst naar de stijl van je code: hoe deze eruitziet qua
 inspringing, spaties, regels en leestekens. Een formatter zorgt ervoor dat alle
 code in een project er uniform uitziet, ongeacht wie de code heeft geschreven.
 
-### Typische formatting-regels
+#### Typische formatting-regels
 
 - Gebruik van spaties of tabs voor inspringing en hoeveel (2, 4, etc.)
 - Maximale regellengte (hoeveel karakters)
 - Gebruik van enkele of dubbele aanhalingstekens ('' vs "")
 - Komma's aan het einde van objecten of arrays (trailing commas)
 
-## Wat is linting?
+### Wat is linting?
 
 Linting controleert de logica en kwaliteit van je code. Een linter analyseert je
 code op fouten, onlogische patronen, onveilige constructies en slechte
 praktijken. Waar formatting zich richt op stijl, richt linting zich op
 correctheid en consistentie.
 
-### Typische linting-controles
+#### Typische linting-controles
 
 - Ongebruikte variabelen of imports
 - Vergelijkingen met `==` in plaats van `===`
 - Niet-gedefinieerde variabelen
 - Console-statements in productiecode
 
-## Populaire Tools
+### Populaire Tools
 
-### Prettier
+#### Prettier
 
 Prettier is een "opinionated formatter" - het legt één vaste stijl op, zodat je
-geen eindeloze discussies voert over spaties en puntkomma’s. Het ondersteunt
+geen eindeloze discussies voert over spaties en puntkomma's. Het ondersteunt
 veel programmeertalen en kan worden geïntegreerd in verschillende editors en
 build-tools.
 
-### ESLint
+#### ESLint
 
 [ESLint] is een veelgebruikte **linter** voor JavaScript en TypeScript. Het
 biedt uitgebreide mogelijkheden om je code te analyseren en te controleren op
 fouten en inconsistenties. Je kunt ESLint uitbreiden met plug-ins voor
 frameworks zoals React, Vue of Next.js.
 
-### Stylelint
+#### Stylelint
 
 [Stylelint] is een **linter** voor CSS en aanverwante talen zoals SCSS en Less.
 Het helpt bij het handhaven van consistente stijlen en het voorkomen van fouten
@@ -92,7 +98,7 @@ in je stylesheets. Voorbeelden van regels die Stylelint kan afdwingen zijn het
 gebruik van onnodige units, zoals `0px`, de volgorde van properties en het
 vermijden van dubbele definities.
 
-### Biome
+#### Biome
 
 [Biome] is de moderne opvolger van de traditionele ESLint + Prettier combinatie.
 Het is geschreven in Rust, waardoor het razendsnel is, en het combineert
@@ -102,7 +108,7 @@ configureerbaar, je kan kiezen voor de gekozen _default_ instellingen of deze
 aanpassen naar je eigen regels. Configuratiebestanden kunnen per map worden
 overgeschreven en overerven.
 
-## Integratie in je workflow
+### Integratie in je workflow
 
 Deze tools kunnen worden geïntegreerd in je ontwikkelworkflow op verschillende
 manieren:
@@ -119,9 +125,9 @@ manieren:
   in je CI/CD-pijplijn om ervoor te zorgen dat alle code die wordt samengevoegd
   aan de kwaliteitsnormen voldoet.
 
-## Voorbeelden
+### Voorbeelden
 
-### Prettier
+#### Prettier
 
 Installatie (met npm):
 
@@ -151,7 +157,7 @@ npx prettier . --write
 
 Meer documentatie: [Prettier Docs](https://prettier.io/docs/)
 
-### ESLint
+#### ESLint
 
 Installatie en configuratie (met npm):
 
@@ -184,7 +190,7 @@ npx eslint . --fix
 
 Meer documentatie: [ESLint Docs](https://eslint.org/docs/latest/)
 
-### Biome
+#### Biome
 
 Installatie (met npm):
 
@@ -241,11 +247,11 @@ Linting en formatting kunnen ook apart worden uitgevoerd met `biome lint` en
 
 Meer documentatie: [Biome Docs](https://biomejs.dev/docs/).
 
-### Integratie in de workflow
+#### Integratie in de workflow
 
-#### Automatisch bij opslaan
+##### Automatisch bij opslaan
 
-De meeste IDE’s, zoals VS Code, kunnen automatisch [Prettier] en [ESLint] of
+De meeste IDE's, zoals VS Code, kunnen automatisch [Prettier] en [ESLint] of
 [Biome] draaien bij het opslaan van bestanden.
 
 - Prettier:
@@ -261,7 +267,7 @@ De meeste IDE’s, zoals VS Code, kunnen automatisch [Prettier] en [ESLint] of
   [WebStorm Integration](https://plugins.jetbrains.com/plugin/22761-biome),
   [Sublime Text Integration](https://github.com/sublimelsp/LSP-biome)
 
-#### Pre-commit hooks
+##### Pre-commit hooks
 
 Met [Husky](https://typicode.github.io/husky/) en
 [lint-staged](https://github.com/lint-staged/lint-staged) of
@@ -277,7 +283,7 @@ set -eu
 npx @biomejs/biome check --staged --files-ignore-unknown=true --no-errors-on-unmatched
 ```
 
-#### Continuous Integration (CI)
+##### Continuous Integration (CI)
 
 Je kunt linting en formatting opnemen in je CI/CD-pijplijn met tools zoals
 GitHub Actions, GitLab CI of Jenkins om ervoor te zorgen dat alle code die wordt
@@ -290,7 +296,7 @@ first party [GitHub Action](https://github.com/marketplace/actions/setup-biome)
 beschikbaar, zie de
 [Biome CI-documentatie](https://biomejs.dev/recipes/continuous-integration/).
 
-## Conclusie
+## Resultaat
 
 Wanneer elke ontwikkelaar werkt volgens dezelfde richtlijnen, verdwijnt veel van
 de frictie die normaal gesproken tijdens samenwerking of code reviews ontstaat.
@@ -315,6 +321,8 @@ op een moment dat er weinig actieve ontwikkeling plaatsvindt. Zo voorkom je dat
 er veel merge-conflicten ontstaan met andere lopende werkzaamheden.
 
 :::
+
+<!-- @TODO: ## Bronnen -->
 
 [Prettier]: https://prettier.io/
 [ESLint]: https://eslint.org/

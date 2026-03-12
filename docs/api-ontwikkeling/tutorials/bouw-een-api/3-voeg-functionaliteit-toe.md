@@ -16,7 +16,11 @@ microbrouwerijen of alléén grote brouwerijen. Dit gaan we doen door een
 queryparameter `grootte` toe te voegen aan de `listBrouwerijen` operatie,
 oftewel: `GET /brouwerijen`.
 
-## Query parameter toevoegen
+<!-- @TODO: ## Doel -->
+
+## Instructies
+
+### Query parameter toevoegen
 
 Voeg de volgende `parameters` array toe aan de `GET /brouwerijen` operatie in de
 Swagger Editor:
@@ -551,16 +555,12 @@ We kunnen op dezelfde manier meer query parameters toevoegen. Denk aan:
 
 :::
 
-## Wat hebben we geleerd?
+## Resultaat
 
 - Hoe we **query parameters** toevoegen aan een operatie
 - Hoe we een **enum** gebruiken om toegestane waarden te beperken
 - Hoe **filtering** kan werken in een API
 
-## Volgende stap
+---
 
-De OAS is nu functioneel compleet. Voordat we code gaan genereren, is het
-belangrijk om te valideren of onze specificatie nog steeds voldoet aan de API
-Design Rules.
-
-[Ga naar stap 4: Valideer de OAS](./4-valideer-oas.md)
+Vorige: [Stap 2: Modelleer de schemas](./2-modelleer-schemas.md) | Volgende: [Stap 4: Valideer de OAS](./4-valideer-oas.md)

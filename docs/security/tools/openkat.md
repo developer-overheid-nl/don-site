@@ -14,12 +14,12 @@ import { Link, Icon, Alert, Heading } from
 '@theme/Blog/Components/Author';
 
 <Alert type="info" className="mb-6">
-  <Author 
+  <Author
     author={{
       name: "Bijdrage door: Jan Klopper",
       title: "Lead Developer OpenKAT",
       url: "https://github.com/underdarknl"
-    }} 
+    }}
   />
 </Alert>
 
@@ -32,3 +32,15 @@ rapporten voor verschillende doelgroepen en gebruikers. OpenKAT is gratis, Open
 Source en self-hosted beschikbaar.
 
 **[Naar de website van OpenKat](https://openkat.nl/)**
+
+<!-- @TODO: ## Kenmerken -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+<!-- @TODO: ## Aan de slag -->
+
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+<!-- @TODO: ## Bronnen -->

@@ -8,6 +8,12 @@ sidebar_position: 1
 
 # Open Source project launch checklist
 
+<!-- @TODO: ## Wat je gaat maken -->
+
+<!-- @TODO: ## Vereisten -->
+
+## Stappen
+
 ### Project Launch Checklist
 
 Gefeliciteerd! Je leest dit omdat je van plan bent om je project te open
@@ -31,14 +37,14 @@ lijst van de Linux Foundation. De
 [GitHub Default Community Health Files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
 is ook een goede bron van inspiratie.
 
-## Stap 1: Overwegingen
+### Stap 1: Overwegingen
 
 1. Evalueer de mogelijkheden om lid te worden van een bestaand open
    source-project
 2. Evalueer hoe reëel het is dat andere bedrijven willen mee ontwikkelen aan dit
    project
 
-## Stap 2: Business strategie & plan
+### Stap 2: Business strategie & plan
 
 1. Bepaal en zet open source doelen voor je project
 2. Stel vast wie je beoogde doelgroep is
@@ -52,7 +58,7 @@ is ook een goede bron van inspiratie.
 6. Zorg dat je minimaal 3 jaar commitment hebt om het project te maintainen
 7. Stel vast of de OSPO & Enterprise Architecten akkoord zijn met je plan.
 
-## Stap 3: Juridische beoordeling
+### Stap 3: Juridische beoordeling
 
 1. Check of het open sourcen van je project impact heeft op het intellectueel
    eigendom van de organisatie
@@ -66,7 +72,7 @@ is ook een goede bron van inspiratie.
    andere licentie zijn dan waaronder je code open sourced.
 5. Bepaal je nog eventuele handelsmerk gerelateerde besluiten noodzakelijk zijn
 
-## Stap 4: Technische beoordeling
+### Stap 4: Technische beoordeling
 
 1. Verwijder kritische afhankelijkheden met niet-publieke componenten.
 2. Zorg voor een goede README.md met use-case voorbeelden. Zie
@@ -83,7 +89,7 @@ is ook een goede bron van inspiratie.
     [stap 3](#stap-3-juridische-beoordeling)) toe aan de root directory
     (LICENSE).
 
-## Stap 5: Governance en processen
+### Stap 5: Governance en processen
 
 1. Zorg voor een PROJECT_GOVERNANCE.md waarin de governance structuur beschreven
    is.
@@ -92,7 +98,7 @@ is ook een goede bron van inspiratie.
    die toegankelijk is voor de community
 4. Creëer ondersteunden communicatie kanalen, zoals mailing list en wiki
 
-## Stap 6: Launch en maintain
+### Stap 6: Launch en maintain
 
 1. Open het project en start met open source ontwikkel proces
 2. Zorg dat het gebruik van Developer Certificate or Origin (DCO) wordt
@@ -102,9 +108,13 @@ is ook een goede bron van inspiratie.
 4. Volg best practices zoveel mogelijk & behaal
    [OpenSSF ( formerly CII ) Best Practices badge](https://bestpractices.coreinfrastructure.org/en)
 
-## Stap 7: Branding en marketing
+### Stap 7: Branding en marketing
 
 1. Selecteer wie de rol van community advocate op zich neemt
 2. Creëer marketing strategie om een actieve community te promoten
 3. Zorg dat het project genoemd wordt op publieke pagina's van de organisatie
 4. Moedig en organiseer face-to-face activiteiten voor community building
+
+<!-- @TODO: ## Resultaat -->
+
+<!-- @TODO: ## Bronnen -->
