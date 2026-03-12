@@ -1,16 +1,16 @@
 ---
-description: Op developer.overheid.nl maken we gebruik van cookies. Op deze pagina leest u welke cookies developer.overheid.nl precies plaatst en met welk doel.
+description: Op developer.overheid.nl maken we gebruik van cookies. Op deze pagina lees je welke cookies developer.overheid.nl precies plaatst en met welk doel.
 hide_table_of_contents: true
 ---
 
 # Gebruik van Cookies
 
-Op developer.overheid.nl (en andere websites die onderdeel uitmaken van developer.overheid.nl) maken we gebruik van cookies. Deze worden gebruikt om anoniem informatie te verzamelen over uw bezoek en om uw ervaring op onze website te verbeteren.  
-Hieronder leest u welke cookies developer.overheid.nl precies plaatst en met welk doel.
+Op developer.overheid.nl (en andere websites die onderdeel uitmaken van developer.overheid.nl) maken we gebruik van cookies. Deze worden gebruikt om anoniem informatie te verzamelen over uw bezoek en om je ervaring op onze website te verbeteren.  
+Hieronder lees je welke cookies developer.overheid.nl precies plaatst en met welk doel.
 
 ## Cookies bevatten geen persoonsgegevens
 
-Een cookie is een klein tekstbestand met een (uniek) nummer. Bezoekt u een website? Dan plaatst de website vaak cookies op uw computer, tablet of telefoon. De cookies van developer.overheid.nl bevatten geen persoonsgegevens. U blijft dus anoniem.
+Een cookie is een klein tekstbestand met een (uniek) nummer. Bezoek je een website? Dan plaatst de website vaak cookies op jouw computer, tablet of telefoon. De cookies van developer.overheid.nl bevatten geen persoonsgegevens. Je blijft dus anoniem.
 
 ## Geen toestemming nodig voor analytische cookies
 
