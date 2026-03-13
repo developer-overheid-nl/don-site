@@ -254,3 +254,8 @@ die er gebruik van maakt.
 
 Je hoeft niet alles tegelijk te doen. Kies de route die past bij waar jij goed
 in bent, en begin klein.
+
+<!-- prettier-ignore -->
+:::info[Kennis maken?]
+Kan jij wel wat meer developer.overheid.nl in je organisatie gebruiken? Mail naar developer.overheid@geonovum.nl voor een demo en/ of meer uitleg.
+:::
