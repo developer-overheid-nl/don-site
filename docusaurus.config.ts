@@ -461,6 +461,10 @@ const config: Config & { customFields: Config["customFields"] & { piwikPro: Piwi
               to: "/privacy",
             },
             {
+              label: "Cookieverklaring",
+              to: "/cookies",
+            },
+            {
               label: "Toegankelijkheid",
               href: "/toegankelijkheid",
             },
