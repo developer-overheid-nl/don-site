@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [pascal-van-der-horst]
 date: 2026-03-04
 tags: [identity, keycloak, azure, architecture, devops, mim, migration, iam, oauth, oidc, open-source, logging, digitale-autonomie, digitale-soevereiniteit]
@@ -248,7 +247,7 @@ Keycloak-gedeelte. De rest blijft ongewijzigd.
 
 **Testbaarheid**
 De synchronisatie is gedekt met **333 geautomatiseerde tests** verdeeld over
-beiden pipelines en de gedeelde hulpfuncties. Elke use case — nieuwe medewerker,
+beide pipelines en de gedeelde hulpfuncties. Elke use case — nieuwe medewerker,
 wijziging, uitdiensttreding, ongeldig profiel — heeft eigen testscenario's.
 Daarnaast is er een dry-run modus: die doorloopt de volledige synchronisatie
 inclusief authenticatie en datavalidatie, maar voert geen schrijfacties uit.
