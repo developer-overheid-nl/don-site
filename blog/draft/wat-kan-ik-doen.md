@@ -27,23 +27,46 @@ image: ./img/nerds.jpg
 
 Toegegeven, het is een beetje een melodramatische quote. Maar ik vond hem
 toepasselijk voor het thema van deze blogpost. Deze blogpost gaat namelijk over
-effectief bijdragen aan een betere digitale overheid. De originele quote is van
-niemand minder dan J.F. Kennedy en komt uit zijn inauguratie-speech uit 1961.
-Met recht een andere tijd en plaats.
+effectiever bijdragen aan een betere digitale overheid. De originele quote is
+van niemand minder dan J.F. Kennedy en komt uit zijn inauguratie-speech
+uit 1961. Met recht een andere tijd en plaats.
 
 Mijn inspiratie voor deze blogpost kreeg ik toen ik een paar weken terug mijn
 zoontje de fles aan het geven was op een nachtelijk uurtje, en me de volgende
 vraag overviel:
 
-**"Aannemende dat ik mijn werkdag start met het ultieme doel om de digitale
-overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"**
+<p style={{ fontSize:'1.75rem'}}>**"Aannemende dat ik mijn werkdag start met het ultieme doel om de digitale
+overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"**</p>
 
 <!-- truncate -->
 
 Die vraag probeer ik te beantwoorden in deze blogpost.
 
+Als je voor de overheid werkt dan probeer je natuurlijk al dag in dag uit de
+gang van zaken om je heen, in jouw organisatie te verbeteren, en werk je aan een
+betere overheid. In dit artikel schets ik opties om deze pogingen breder te
+trekken. Ik besef me natuurlijk dat het niet voor iedereen weggelegd is om
+tijdens werkuren ruimte te krijgen voor open source projecten en standaarden,
+waarschijnlijk overheerst de dagelijkse praktijk. De uitdaging ligt hem dan ook
+in het veranderen van de cultuur zodat deze investeringen voortaan in
+begrotingen worden meegenomen. Dit is de enige manier om het werken op eilandjes
+te doorbreken.
+
 ![John F. Kennedy op September 12, 1962](./img/jfk.png) **John F. Kennedy op
 September 12, 1962**
+
+## Mijn motivatie
+
+In een wereld waarin de democratie onder druk staat denk ik dat het belangrijk
+is dat we een overheid hebben die haar digitalisering op orde heeft. Op dit
+moment is digitalisering nog te vaak de bottleneck als het gaat om uit te voeren
+beleid.
+
+Thema's als beveiliging, privacy, toegankelijkheid en digitale soevereiniteit
+zijn wat mij betreft minimale randvoorwaarden voor overheidsdiensten. Het zorgt
+ervoor dat burgers applicaties veilig kunnen gebruiken en dat er niemand wordt
+buiten gesloten. De overheid is voor kennis over die thema's afhankelijk van
+professionals. Ik ben zo'n professional, en ik wil die kennis graag inzetten.
 
 :::success[TL;DR]
 
@@ -61,9 +84,10 @@ Zet dus in op kennisdeling met maximaal bereik.
 
 ### Verschillende routes
 
-<p style={{marginTop:'1rem'}}>Het eerste idee dat bij mij kwam bovendrijven was
-dat als ik veel positieve impact wil maken, het belangrijk is om bij te dragen aan
-projecten met een groot bereik. Het liefst zijn dat dus projecten die overheidsbreed gebruikt kunnen worden.</p>
+Het eerste idee dat bij mij kwam bovendrijven was dat als ik veel positieve
+impact wil maken, het belangrijk is om bij te dragen aan projecten met een groot
+bereik. Het liefst zijn dat dus projecten die overheidsbreed gebruikt kunnen
+worden.
 
 Nog een route zou kunnen zijn via kennisdeling. Als ik waardevolle kennis heb
 over mijn vakgebied, kan ik die het beste delen zodat de kwaliteit van
@@ -78,30 +102,27 @@ jouw kennis toepasbaar te maken en deze verder te verspreiden.
 
 **Praktische voorbeelden**
 
-Een paar voorbeelden van wat je als ICT'er bij de overheid allemaal kan bereiken
+Een paar voorbeelden van wat je als IT'er bij de overheid allemaal kan bereiken
 door je kennis te vertalen naar een concreet open source project.
 
-### Als front-end developer; een datepicker met goede A11Y
+### Als front-end developer; een datepicker (A11Y)
 
 Stel je voor. Je bent een front-end developer en hebt aan veel verschillende
 projecten gewerkt waarbij het nodig was een custom datepicker te bouwen die ook
-nog eens moesten voldoen aan de WCAG richtlijnen. Als je dit wel eens gedaan
-hebt dan weet je dat dit een aardige klus is (en dat is een understatement). Wat
-als je zou besluiten deze opgedane kennis om te zetten in iets herbruikbaars,
+nog eens moest voldoen aan de WCAG richtlijnen. Als je dit wel eens gedaan hebt
+dan weet je dat dit een aardige klus is (en dat is een understatement). Wat als
+je zou besluiten deze opgedane kennis om te zetten in iets herbruikbaars,
 namelijk een datepicker component (bij voorkeur binnen NL Design-System).
 
 Elke keer als de datepicker weer wordt geïnstalleerd via NPM heb je winst
 behaald voor de overheid, omdat er nu ergens in een applicatie een beter
 bruikbare datepicker zit.
 
-Ook als andere developers de datepicker niet gebruiken maar als inspiratie
-gebruiken heb je winst, ze kunnen namelijk zo de kunst afkijken.
-
 ![Een screenshot van de JQuery UI Datepicker](./img/jquery_datepicker.png)
 
 **Kennen jullie hem nog, de JQuery UI Datepicker?**
 
-### Als DevOps engineer; jouw Kubernetes-kennis beschikbaar stellen via Haven+
+### Als DevOps engineer; Kubernetes-kennis delen via Haven+
 
 Dan weer een andere rol. Stel je bent een DevOps engineer met ambitie en je
 helpt jouw organisatie door toe te werken naar een situatie waarin je
@@ -117,7 +138,7 @@ zowel [Flux](https://gitlab.com/commonground/haven/havenplus/gitops-flux) als
 [ArgoCD](https://gitlab.com/commonground/haven/havenplus/gitops-argocd). Beide
 implementaties kunnen nog wel wat contributers gebruiken.
 
-### Als CISO; deel jouw security-kennis met de mensen van OpenKAT
+### Als CISO; security-kennis delen met de mensen van OpenKAT
 
 Als chief information security officer (CISO) is het belangrijk op de hoogte te
 zijn van ontwikkelingen in de security-wereld. Daarbij kan het van pas komen om
@@ -142,8 +163,8 @@ Niet in elke organisatie kan je (helaas) direct een open source project
 beginnen. Of je voelt je er simpelweg nog niet klaar voor. In dat geval kan je
 jouw idee of component ook eerst als **inner source** project aanbieden en
 promoten. Waarschijnlijk heb je veel kennis van wat jouw organisatie nodig heeft
-en daardoor is de kans dat het project aan slaat groter dan dat je het direct
-een overheidsbrede insteek geeft.
+en daardoor is de kans dat het project aanslaat groter dan dat je het direct een
+overheidsbrede insteek geeft.
 
 ### Contribueren is niet altijd makkelijk
 
@@ -209,26 +230,14 @@ kennisdeling centraal staat. Een aantal voorbeelden van wat je zou kunnen doen:
   kans om te leren
 - Schrijf blogs voor het intranet en probeer discussies aan te zwengelen
 
-Je zult gesprekken hebben met echte mensen. En erachter komen dat je heel veel
-dingen nog niet wist. Namen van projecten te weten komen die relevant zijn voor
-je werkveld.
+Je zult gesprekken hebben met echte mensen, erachter komen dat je heel veel
+dingen nog niet wist, en projecten leren kennen die relevant zijn voor je
+werkveld. Stiekem ben je als je de tijd neemt om collega's te spreken veel
+productiever dan als je achter je laptop zit.
 
 Meetups waarop gelijkgestemenden rondlopen zijn een ding waar ik zelf veel
 energie van krijg. Het gevoel ingebed te zijn, onderdeel van een groter geheel,
 en samen iets goeds te doen — dat is lastig te evenaren.
-
-## Mijn motivatie
-
-In een wereld waarin de democratie onder druk staat denk ik dat het belangrijk
-is dat we een overheid hebben die haar digitalisering op orde heeft. Op dit
-moment is digitalisering nog te vaak de bottleneck als het gaat om uit te voeren
-beleid.
-
-Thema's als beveiliging, privacy, toegankelijkheid en digitale soevereiniteit
-zijn wat mij betreft minimale randvoorwaarden voor overheidsdiensten. Het zorgt
-ervoor dat burgers applicaties veilig kunnen gebruiken en dat er niemand wordt
-buiten gesloten. De overheid is voor kennis over die thema's afhankelijk van
-professionals. Ik ben zo'n professional, en ik wil die kennis graag inzetten.
 
 ## Conclusie
 
