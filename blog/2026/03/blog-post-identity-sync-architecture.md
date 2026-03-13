@@ -2,16 +2,16 @@
 authors: [pascal-van-der-horst]
 date: 2026-03-04
 tags: [identity, keycloak, azure, architecture, devops, mim, migration, iam, oauth, oidc, open-source, logging, digitale-autonomie, digitale-soevereiniteit]
-description: Hoe WIGO4IT Microsoft Identity Manager verving door een leverancier-onafhankelijke synchronisatie tussen AFAS, Keycloak en EntraID.
+description: Hoe WIGO4IT Microsoft Identity Manager verving door een leverancier-onafhankelijke synchronisatie tussen AFAS, Keycloak en Entra ID.
 keywords: [identity management, keycloak, afas, entraid, mim, migratie, synchronisatie, open source]
 hide_table_of_contents: false
 ---
 
-# Van Microsoft Identity Manager naar Moderne Identity Synchronisatie
+# Van Microsoft Identity Manager naar moderne identity synchronisatie
 
 Identity management — het beheren van wie toegang heeft tot welke systemen — is
 een belangrijk onderdeel van elke IT-organisatie. Gebruikers moeten correct
-bestaan in HR-systemen, identity platforms en cloud omgevingen.
+bestaan in HR-systemen, identity platforms en cloudomgevingen.
 
 Veel organisaties gebruiken hiervoor nog legacy oplossingen zoals
 **Microsoft Identity Manager (MIM)**. Die werken, maar brengen ook
@@ -43,7 +43,7 @@ inconsistentie en extra beheer.
 flowchart LR
   AFAS["AFAS<br/>HR administratie"]
   MIM["Microsoft Identity Manager<br/>Identity synchronisatie"]
-  ENTRA["Microsoft EntraID<br/>Cloud identities"]
+  ENTRA["Microsoft Entra ID<br/>Cloud identities"]
 
   AFAS -. geen directe sync .-> MIM
   MIM --> ENTRA
@@ -68,14 +68,14 @@ van het HR-systeem naar de identity store en vervolgens naar de cloud.
 
 **AFAS** wordt de enige bron van waarheid. **Keycloak** fungeert als centrale
 identity store — een systeem dat gebruikersidentiteiten opslaat en beheert.
-**EntraID** (voorheen Azure Active Directory) blijft de cloud identity voor
+**Entra ID** (voorheen Azure Active Directory) blijft de cloud identity voor
 Microsoft-diensten zoals Microsoft 365.
 
 ```mermaid
 flowchart LR
   AFAS["AFAS<br/>HR systeem<br/>Bron van waarheid"]
   KEYCLOAK["Keycloak<br/>Identity store"]
-  ENTRA["Microsoft EntraID<br/>Cloud identity"]
+  ENTRA["Microsoft Entra ID<br/>Cloud identity"]
 
   AFAS --> KEYCLOAK
   KEYCLOAK --> ENTRA
@@ -98,7 +98,7 @@ welk protocol. Keycloak fungeert hier als schakel tussen het HR-systeem en de cl
 flowchart LR
   AFAS["AFAS"]
   KEYCLOAK["Keycloak<br/>Identity store"]
-  ENTRA["EntraID"]
+  ENTRA["Entra ID"]
   APPS["Cloud/App X"]
 
   AFAS --> KEYCLOAK
@@ -124,8 +124,8 @@ flowchart TD
   HR["HR wijzigt gebruiker in AFAS"]
   AFAS["AFAS"]
   SYNC1["Synchronisatie<br/>AFAS → Keycloak"]
-  SYNC2["Synchronisatie<br/>Keycloak → EntraID"]
-  ENTRA["EntraID"]
+  SYNC2["Synchronisatie<br/>Keycloak → Entra ID"]
+  ENTRA["Entra ID"]
 
   HR --> AFAS
   AFAS --> SYNC1
@@ -156,14 +156,14 @@ bij HR, niet bij IT.
 ### Lifecycle management: wat gebeurt er bij uitdiensttreding?
 
 Een medewerker die uit dienst gaat, moet niet alleen uit het HR-systeem
-verdwijnen — ook het Keycloak-account en het EntraID-account moeten worden
+verdwijnen — ook het Keycloak-account en het Entra ID-account moeten worden
 opgeruimd. De synchronisatie regelt dit automatisch op basis van de
 uitdiensttredingsdatum in AFAS:
 
 - **Actief** — de medewerker wordt bijgewerkt in Keycloak en EntraID
 - **Uitgetreden** — de accounts worden uitgeschakeld in beide systemen
 - **Definitief verwijderd** — na een ingestelde periode worden de accounts
-  volledig verwijderd uit Keycloak én EntraID
+  volledig verwijderd uit Keycloak én Entra ID
 
 Dit voorkomt dat verlopen accounts onbeheerd blijven bestaan — een veelvoorkomend
 beveiligingsrisico bij handmatig beheer.
@@ -218,7 +218,7 @@ om te roteren, geen risico op lekken in configuratiebestanden.
 ## Technische duurzaamheid
 
 Een oplossing is pas waardevol als je er over vijf jaar nog mee kunt werken.
-We hebben bewust keuzes gemaakt die de lange termijn onderhoudbaarheid borgen.
+We hebben bewust keuzes gemaakt die de langetermijnonderhoudbaarheid borgen.
 
 **Open standaarden**
 De synchronisatie maakt gebruik van REST API's en standaardprotocollen zoals
@@ -236,7 +236,7 @@ Elke Linux- of DevOps-engineer kan de code begrijpen, aanpassen en overdragen
 **Actief onderhouden componenten**
 Keycloak wordt actief ontwikkeld door Red Hat en een grote open source
 community, en is sinds 2023 een officieel
-[CNCF-project](https://www.cncf.io/projects/keycloak/). AFAS en EntraID worden onderhouden door hun eigen leveranciers.
+[CNCF-project](https://www.cncf.io/projects/keycloak/). AFAS en Entra ID worden onderhouden door hun eigen leveranciers.
 Geen van de componenten staat stil of is afhankelijk van één persoon.
 
 **Modulaire opzet**
@@ -263,8 +263,7 @@ onboarden van nieuwe beheerders.
 
 ## Conclusie
 
-De migratie van Microsoft Identity Manager naar een moderne synchronisatie
-architectuur leverde een eenvoudiger en robuuster identity landschap op.
+De migratie van Microsoft Identity Manager naar een moderne synchronisatiearchitectuur leverde een eenvoudiger en robuuster identity-landschap op.
 
 Belangrijkste resultaten:
 
