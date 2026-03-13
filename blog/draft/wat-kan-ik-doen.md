@@ -9,9 +9,6 @@ overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"
 image: ./img/nerds.jpg
 ---
 
-import { Alert, Heading, Paragraph } from
-'@rijkshuisstijl-community/components-react';
-
 # "Vraag niet wat je land voor jou kan doen – vraag wat jij voor je land kunt doen."
 
 Toegegeven, het is een beetje een melodramatische quote. Maar ik vond hem
@@ -37,17 +34,16 @@ September 12, 1962**
 :::success[TL;DR]
 
 Wil je als IT'er effectief bijdragen aan een betere digitale overheid? Er zijn
-drie routes: (1) draag bij aan open source projecten met breed bereik, zoals NL
-Design System of OpenKAT; (2) deel kennis via events en meetups; (3) zet
-praktijkervaring om in standaarden zoals de API Design Rules of NeRDS. Zet dus
-in op kennisdeling met maximaal bereik.
+drie routes:
+
+- Draag bij aan **open source projecten** met breed bereik, zoals NL Design
+  System of OpenKAT.
+- Deel kennis door het organiseren van **events en meetups**.
+- Zet praktijkervaring om in **standaarden** zoals de API Design Rules of NeRDS.
+
+Zet dus in op kennisdeling met maximaal bereik.
 
 :::
-
-<Alert type="ok">
-  <Heading level={3}>Heading</Heading>
-  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-</Alert>
 
 ### Verschillende routes
 
