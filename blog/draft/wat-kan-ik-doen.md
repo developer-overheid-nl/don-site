@@ -1,10 +1,24 @@
 ---
 draft: true
 authors: [tom-ootes]
-tags: [open-source, community, meetups, toegankelijkheid, digitale-soevereiniteit, haven, kubernetes, adr, nl-design-system, devops, informatiebeveiliging]
-description:
-  "Dit artikel gaat over de vraag: Aannemende dat ik mijn werkdag start met het ultieme doel om de digitale
-overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"
+tags:
+  [
+    open-source,
+    community,
+    meetups,
+    toegankelijkheid,
+    digitale-soevereiniteit,
+    haven,
+    kubernetes,
+    adr,
+    nl-design-system,
+    devops,
+    informatiebeveiliging,
+  ]
+description: >
+  Hoe maak je als IT'er bij de overheid impact? Niet door harder te werken, maar
+  slimmer: via open source met breed bereik, kennisdeling op events, en
+  praktijkervaring omzetten in standaarden. Drie routes die je kunt nemen.
 
 image: ./img/nerds.jpg
 ---
@@ -57,7 +71,7 @@ dienstverlening als geheel beter wordt.
 
 Ik kwam op een aantal verschillende routes:
 
-## 1. Door middel van open source
+## Door middel van open source
 
 Een open source project starten of eraan bijdragen kan een slimme manier zijn om
 jouw kennis toepasbaar te maken en deze verder te verspreiden.
@@ -67,7 +81,7 @@ jouw kennis toepasbaar te maken en deze verder te verspreiden.
 Een paar voorbeelden van wat je als ICT'er bij de overheid allemaal kan bereiken
 door je kennis te vertalen naar een concreet open source project.
 
-### 1.1 Als front-end developer; een datepicker met goede A11Y
+### Als front-end developer; een datepicker met goede A11Y
 
 Stel je voor. Je bent een front-end developer en hebt aan veel verschillende
 projecten gewerkt waarbij het nodig was een custom datepicker te bouwen die ook
@@ -87,7 +101,7 @@ gebruiken heb je winst, ze kunnen namelijk zo de kunst afkijken.
 
 **Kennen jullie hem nog, de JQuery UI Datepicker?**
 
-### 1.2 Als DevOps engineer; jouw Kubernetes-kennis beschikbaar stellen via Haven+
+### Als DevOps engineer; jouw Kubernetes-kennis beschikbaar stellen via Haven+
 
 Dan weer een andere rol. Stel je bent een DevOps engineer met ambitie en je
 helpt jouw organisatie door toe te werken naar een situatie waarin je
@@ -103,7 +117,7 @@ zowel [Flux](https://gitlab.com/commonground/haven/havenplus/gitops-flux) als
 [ArgoCD](https://gitlab.com/commonground/haven/havenplus/gitops-argocd). Beide
 implementaties kunnen nog wel wat contributers gebruiken.
 
-### 1.3 Als CISO; deel jouw security-kennis met de mensen van OpenKAT
+### Als CISO; deel jouw security-kennis met de mensen van OpenKAT
 
 Als chief information security officer (CISO) is het belangrijk op de hoogte te
 zijn van ontwikkelingen in de security-wereld. Daarbij kan het van pas komen om
@@ -141,13 +155,13 @@ het proberen waard, als je immers bijdraagt, creëer je veel meer waarde.
 
 Zie het als een skill die je jezelf eigen maakt, of een spier die je traint.
 
-## 2. Werk aan bruikbare (technische) standaarden
+## Werk aan bruikbare (technische) standaarden
 
 Ook is het nuttig om jouw praktijkervaring om te zetten in technische
 standaarden en validators. Voorbeelden van hoe bepaalde rollen kunnen bijdragen
 aan standaarden:
 
-### 2.1 Als beleidsmedewerker of architect; richtlijnen opstellen via NeRDS
+### Als beleidsmedewerker of architect; richtlijnen opstellen via NeRDS
 
 Niet iedereen die wil bijdragen aan een betere digitale overheid is developer.
 Stel je bent beleidsmedewerker of architect en hebt de afgelopen jaren veel
@@ -170,7 +184,7 @@ elk nieuw systeem.
 **NeRDS is een project met potentie. Waar je ook rondloopt in de publieke
 sector, je ziet deze stickers steeds vaker.**
 
-### 2.2 Als backend developer; API-kennis vastleggen in de API Design Rules
+### Als backend developer; API-kennis vastleggen in de API Design Rules
 
 Stel je bent een backend developer en hebt de afgelopen jaren tientallen REST
 API's gebouwd voor verschillende overheidsorganisaties. Je weet inmiddels uit
@@ -183,7 +197,7 @@ Elke regel die jij toevoegt of verbetert, zorgt ervoor dat andere developers die
 onze tools draaien automatisch gewaarschuwd worden voor dezelfde valkuilen. Je
 kennis wordt zo een geautomatiseerde kwaliteitscheck voor de hele overheid.
 
-## 3. Organiseer events tbv kennisdeling
+## Organiseer events tbv kennisdeling
 
 Nog een mooie manier om de overheid te verbeteren is events te organiseren waar
 kennisdeling centraal staat. Een aantal voorbeelden van wat je zou kunnen doen:
