@@ -1,42 +1,59 @@
 ---
 draft: true
 authors: [tom-ootes]
-tags: [api, eda, fds, webhooks, cloudevents, nds]
+tags: [open-source, community, meetups, toegankelijkheid, digitale-soevereiniteit, haven, kubernetes, adr, nl-design-system, devops, informatiebeveiliging]
 description:
   "Dit artikel gaat over de vraag: Aannemende dat ik mijn werkdag start met het ultieme doel om de digitale
 overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"
 
-image: ./img/event-driven-overheid.png
+image: ./img/nerds.jpg
 ---
 
-import { Blockquote } from "@rijkshuisstijl-community/components-react";
+import { Alert, Heading, Paragraph } from
+'@rijkshuisstijl-community/components-react';
 
 # "Vraag niet wat je land voor jou kan doen – vraag wat jij voor je land kunt doen."
 
 Toegegeven, het is een beetje een melodramatische quote. Maar ik vond hem
 toepasselijk voor het thema van deze blogpost. Deze blogpost gaat namelijk over
-effectief bijdragen aan een betere digitale overheid. De originele qoute is van
-niemand minder dan J.F. Kennedy en komt uit zijn inaugratie-speech uit 1961. Met
-recht een andere tijd en plaats.
+effectief bijdragen aan een betere digitale overheid. De originele quote is van
+niemand minder dan J.F. Kennedy en komt uit zijn inauguratie-speech uit 1961.
+Met recht een andere tijd en plaats.
 
 Mijn inspiratie voor deze blogpost kreeg ik toen ik een paar weken terug mijn
 zoontje de fles aan het geven was op een nachtelijk uurtje, en me de volgende
 vraag overviel:
 
+**"Aannemende dat ik mijn werkdag start met het ultieme doel om de digitale
+overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"**
+
 <!-- truncate -->
 
-<Blockquote
-  variation="pink-background"
->
-"Aannemende dat ik mijn werkdag start met het ultieme doel om de digitale
-overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"
-</Blockquote>
+Die vraag probeer ik te beantwoorden in deze blogpost.
+
+![John F. Kennedy op September 12, 1962](./img/jfk.png) **John F. Kennedy op
+September 12, 1962**
+
+:::success[TL;DR]
+
+Wil je als IT'er effectief bijdragen aan een betere digitale overheid? Er zijn
+drie routes: (1) draag bij aan open source projecten met breed bereik, zoals NL
+Design System of OpenKAT; (2) deel kennis via events en meetups; (3) zet
+praktijkervaring om in standaarden zoals de API Design Rules of NeRDS. Zet dus
+in op kennisdeling met maximaal bereik.
+
+:::
+
+<Alert type="ok">
+  <Heading level={3}>Heading</Heading>
+  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+</Alert>
 
 ### Verschillende routes
 
-<p style={{marginTop:'1em'}}>Het eerste idee dat bij mij kwam boven drijven was
-dat als ik impact wil maken, dat het dan belangrijk is om bij te dragen aan
-projecten met een groot bereik. Het liefst dus projecten met een overheidsbreed bereik.</p>
+<p style={{marginTop:'1rem'}}>Het eerste idee dat bij mij kwam bovendrijven was
+dat als ik veel positieve impact wil maken, het belangrijk is om bij te dragen aan
+projecten met een groot bereik. Het liefst zijn dat dus projecten die overheidsbreed gebruikt kunnen worden.</p>
 
 Nog een route zou kunnen zijn via kennisdeling. Als ik waardevolle kennis heb
 over mijn vakgebied, kan ik die het beste delen zodat de kwaliteit van
@@ -44,138 +61,177 @@ dienstverlening als geheel beter wordt.
 
 Ik kwam op een aantal verschillende routes:
 
-## Manier 1; draag bij aan open source
+## 1. Door middel van open source
 
-Een open source project kan een slimme manier zijn om jouw kennis toepasbaar te
-maken en deze verder te verspreiden. Maar waarom is open source daarvoor zo
-geschikt?
+Een open source project starten of eraan bijdragen kan een slimme manier zijn om
+jouw kennis toepasbaar te maken en deze verder te verspreiden.
 
-Een inzicht dat ik opdeed tijdens het luisteren naar de
-[podcast](https://podcast.publiccode.net/e/9-bastien-guerry-etalab/) van de
-Foundation voor Publiccode biedt hier denk ik een antwoord op. In een aflevering
-waarin Bastien Guery (Open Source adept, Franse overheid) beschrijft waarom hij
-open source samenwerken zo interessant vindt, zegt hij het volgende:
+**Praktische voorbeelden**
 
-<Blockquote
-  attribution="— Bastien Guery"
-  variation="pink-background"
-  style={{marginBottom:'1em'}}
->
+Een paar voorbeelden van wat je als ICT'er bij de overheid allemaal kan bereiken
+door je kennis te vertalen naar een concreet open source project.
 
-[13:13–13:25] I mean, for the usual people, software is just inward machinery
-and it's something obscure. But for me software is knowledge. When you share
-software, you share knowledge and if you don't have access to software then
-someone is preventing you to understand things.
+### 1.1 Als front-end developer; een datepicker met goede A11Y
 
-</Blockquote>
+Stel je voor. Je bent een front-end developer en hebt aan veel verschillende
+projecten gewerkt waarbij het nodig was een custom datepicker te bouwen die ook
+nog eens moesten voldoen aan de WCAG richtlijnen. Als je dit wel eens gedaan
+hebt dan weet je dat dit een aardige klus is (en dat is een understatement). Wat
+als je zou besluiten deze opgedane kennis om te zetten in iets herbruikbaars,
+namelijk een datepicker component (bij voorkeur binnen NL Design-System).
 
-### Kennis tijdens ontstaan van software
+Elke keer als de datepicker weer wordt geïnstalleerd via NPM heb je winst
+behaald voor de overheid, omdat er nu ergens in een applicatie een beter
+bruikbare datepicker zit.
 
-Ik zie dit zelf in het licht van het proces waarin software tot stand komt. Elke
-feature die wordt toegevoegd aan een codebase is gebaseerd op kennis van de
-onderliggende processen en de organisatie(s) waarvoor de software bedoelt is.
-Elke button, checkbox of dropdown staat op een bepaalde plek, in een bepaalde
-stap van een workflow, die (hopelijk) voortvloeit uit de kennis die opgedaan is
-over de eindgebruiker. Alle beslissingen borduren voort op eerdere beslissingen.
+Ook als andere developers de datepicker niet gebruiken maar als inspiratie
+gebruiken heb je winst, ze kunnen namelijk zo de kunst afkijken.
 
-De software bevat dus praktijkkennis die vergaard is en belichaamd deze.
+![Een screenshot van de JQuery UI Datepicker](./img/jquery_datepicker.png)
 
-![Mac OS X 10.3 Panther](./img/macos_2003.png)
+**Kennen jullie hem nog, de JQuery UI Datepicker?**
 
-_Een voorbeeld, software verandert constant door opgedane kennis; MacOS ziet er
-vandaag behoorlijk anders uit dan in 2003. Alhoewel, die glossy scrollbars
-hadden ook wel wat he?_
+### 1.2 Als DevOps engineer; jouw Kubernetes-kennis beschikbaar stellen via Haven+
 
-Dit aannemende is het slim dat als ik kennis opdoe terwijl ik mijn werkzaamheden
-voor de overheid ontplooi dit consolideer in een stuk software. En het liefst
-dan in een stukje software die _hergebruikt_ kan worden, **buiten** mijn
-organisatie, voor de **hele** overheid. Zo'n stuk software noem je een **Open
-Source Component**. Iets wat elke overheidsorganisatie kan installeren om er de
-vruchten van te plukken, betere producten te bouwen, met een hogere kwaliteit.
-Mooie voorbeelden zijn:
+Dan weer een andere rol. Stel je bent een DevOps engineer met ambitie en je
+helpt jouw organisatie door toe te werken naar een situatie waarin je
+Kubernetesclusters ook kunnen draaien zonder leverancierspecifieke componenten.
+Dan kan je hier andere organisaties ook wellicht mee helpen.
 
-- NL Design System
-- Haven
-- ~
+#### Meewerken aan Haven+
 
-Dan is het waarschijnlijk een slim idee om de kennis die ik heb, bijvoorbeeld
-van hoe ik goed en kwalitatief een Kubernetes cluster inricht, toe te voegen aan
-een plek waar andere developers binnen de overheid dit kunnen hergebruikt. Zoals
-Frank Niessink zijn kennis over code kwaliteit nu aan het conslideren is in
-richtlijnen op onze kennisbank, om later te toetsen.
+In dit geval is er al een project dat zich bezig houdt met het standaardiseren
+van een leverancier-agnostische Kubernetes opzet. Dit project heet Haven en
+heeft met Haven+ een standaard configuratie opgezet. De opzet is verkrijgbaar in
+zowel [Flux](https://gitlab.com/commonground/haven/havenplus/gitops-flux) als
+[ArgoCD](https://gitlab.com/commonground/haven/havenplus/gitops-argocd). Beide
+implementaties kunnen nog wel wat contributers gebruiken.
 
-Afijn, als het mijn doel is die overheid efficiënter te laten werken is het denk
-ik een slimme keuze om bij te dragen aan een Open Source project, die een
-component kan vormen om die gehele overheid beter te laten werken. Elk uur die
-ik besteed aan het verbeteren van dat component heeft een veel grotere impact
-dan dat ik binnen mijn organisatie iets verbeter. Of in mijn eigen codebaseje.
+### 1.3 Als CISO; deel jouw security-kennis met de mensen van OpenKAT
 
-## Open source componenten, als magneet voor convergentie en kwaliteit
+Als chief information security officer (CISO) is het belangrijk op de hoogte te
+zijn van ontwikkelingen in de security-wereld. Daarbij kan het van pas komen om
+een goed netwerk te hebben waardoor je weet wat er bij andere organisaties
+speelt. Het deelnemen aan een open source project zoals OpenKAT (Kwetsbaarheden
+Analyse Tool) kan je dat netwerk opleveren. Door te investeren in het product en
+de mensen erachter te leren kennen begeef je je vanzelf in deze wereld en bouw
+je een netwerk op.
 
-Door dingen makkelijk te maken voor developers en ze waarde te bieden bied je ze
-een aantrekkelijke prospect. Als een open source project groot wordt binnen de
-overheid zorgt dit voor convergentie, iedereen gaat op die manier werken. Zowel
-technisch als organisatorisch.
+#### Laat collega's tijd spenderen aan open source
 
-### Technisch (Haven+)
+Als jouw rol CISO is, is er een gerede kans dat je collega's in je team hebt die
+je ook de ruimte kan geven om bij te dragen aan iets als OpenKAT. Als je als
+organisatie gebruik maakt van een open source project is het slim om personeel
+de kans te geven te investeren in dat project, zodat je in verbinding staat met
+het project en de mogelijkheid hebt een beetje bij te sturen. Zo heb je een
+stoel aan tafel, en het komt het project ten goede.
 
-Iedereen bouwt kubernetes op middels 1 manier met de haven+ componenten. Ja dit
-is utopisch. Maar geweldig. Convergentie.
+### Begin met inner source
 
-### Organisatorisch (NL-Design-System)
+Niet in elke organisatie kan je (helaas) direct een open source project
+beginnen. Of je voelt je er simpelweg nog niet klaar voor. In dat geval kan je
+jouw idee of component ook eerst als **inner source** project aanbieden en
+promoten. Waarschijnlijk heb je veel kennis van wat jouw organisatie nodig heeft
+en daardoor is de kans dat het project aan slaat groter dan dat je het direct
+een overheidsbrede insteek geeft.
 
-Zoals het estafettemodel van NL-Design-System. Met bijbehorende cultuur.
-
-## Klopt; dat is niet makkelijk
+### Contribueren is niet altijd makkelijk
 
 Het gaat zeker even duren voordat jij effectief kan bijdragen aan het open
 source project van jouw keuze. Contribueren aan een groot open source project
 gaat altijd vele malen complexer zijn dan gewoon code pushen naar een interne
-repository waar niemand iets vind van wat jij toevoegt. Toch is het het proberen
-waard, als je immers bijdraagt, creëer je veel meer waarde.
+repository waar niet veel mensen iets vinden van wat jij toevoegt. Toch is het
+het proberen waard, als je immers bijdraagt, creëer je veel meer waarde.
 
-## Een open source project bestaat nog niet
+Zie het als een skill die je jezelf eigen maakt, of een spier die je traint.
 
-Het kan zijn dat jij een geniaal idee hebt waar de overheid nog geen OS
-component voor heeft, dit zou kunnen. Echter zou het ook kunnen dat jij een
-probleem gaat oplossen dat al veel mensen met veel moeite hebben proberen
-oplossen. Door verschillende uiteenlopende redenen (organisatorisch/ technisch/
-cultureel) kan het dat een dergelijke oplossing nooit voet aan de grond heeft
-gekregen.
+## 2. Werk aan bruikbare (technische) standaarden
 
-## Voorbeeld 2
+Ook is het nuttig om jouw praktijkervaring om te zetten in technische
+standaarden en validators. Voorbeelden van hoe bepaalde rollen kunnen bijdragen
+aan standaarden:
 
-- Ik ben een front-ender en leg mijn kennis over hoe a11y en handige UX zou
-  moeten zijn vast in NL-Design-System componenten.
+### 2.1 Als beleidsmedewerker of architect; richtlijnen opstellen via NeRDS
 
-## Voorbeeld 1
+Niet iedereen die wil bijdragen aan een betere digitale overheid is developer.
+Stel je bent beleidsmedewerker of architect en hebt de afgelopen jaren veel
+ervaring opgebouwd met het inkopen of beoordelen van digitale systemen. Je weet
+welke vragen je moet stellen, welke valkuilen er zijn bij aanbestedingen en
+welke eisen vaak ontbreken in programma's van eisen.
 
-Dev-ops/ K8s/ Haven
+Die kennis kan jij aandragen door middel van een bijdrage aan
+[**NeRDS**](https://minbzk.github.io/NeRDS/Over-NeRDS/) — de Nederlandse
+Richtlijn Digitale Systemen. NeRDS bundelt richtlijnen en praktische handvatten
+voor het verantwoord ontwerpen, ontwikkelen en inkopen van digitale systemen bij
+de overheid. Het project werkt open source en verwelkomt actief bijdragen: van
+feedback op bestaande richtlijnen tot het voorstellen van nieuwe.
 
-## Manier 2; organiseer kennisdeling in jouw organisatie
+Elke richtlijn die jij bijdraagt of verbetert op basis van jouw praktijkervaring
+helpt andere organisaties betere keuzes te maken — bij elke nieuwe aanbesteding,
+elk nieuw systeem.
 
-Nog een mooie manier om de overheid te verbeteren is door kennis te delen. En
-dan dus niet door middel van mooie open source projecten maar gewoon als mensen
-onder elkaar. Dit kan praktisch gezien door middel van verschillende manieren:
+![Een foto van een laptop met een sticker van NeRDS er op.](./img/nerds.jpg)
+**NeRDS is een project met potentie. Waar je ook rondloopt in de publieke
+sector, je ziet deze stickers steeds vaker.**
 
-- Organiseer een interne hackathon
-- Doe meer met een fieldlab van Digilab
-- Organiseer een presentatie/ borrel moment binnen je organisatie.
+### 2.2 Als backend developer; API-kennis vastleggen in de API Design Rules
 
-Je zult gesprekken met echte mensen. En erachter komen dat je heel veel dingen
-nog niet wist. Namen van project te weten komen die relevant zijn voor je
-werkveld.
+Stel je bent een backend developer en hebt de afgelopen jaren tientallen REST
+API's gebouwd voor verschillende overheidsorganisaties. Je weet inmiddels uit
+ervaring welke fouten er steeds opnieuw worden gemaakt: inconsistente
+naamgeving, ontbrekende paginering, slecht gebruik van HTTP-statuscodes.
 
-Bovendien is dit zelf een ding waar ik zelf veel energie van krijg. Borrelen met
-gelijkgestemden, synergie voelen.
+Die kennis kun je omzetten in een concrete bijdrage aan de
+[API Design Rules](https://github.com/Logius-standaarden/API-Design-Rules/issues).
+Elke regel die jij toevoegt of verbetert, zorgt ervoor dat andere developers die
+onze tools draaien automatisch gewaarschuwd worden voor dezelfde valkuilen. Je
+kennis wordt zo een geautomatiseerde kwaliteitscheck voor de hele overheid.
 
-## Open deur; doe waar je goed in bent
+## 3. Organiseer events tbv kennisdeling
 
-## Call to action; probeer het een keer
+Nog een mooie manier om de overheid te verbeteren is events te organiseren waar
+kennisdeling centraal staat. Een aantal voorbeelden van wat je zou kunnen doen:
 
-En om af te sluiten met een handelingsperspectief. Probeer het gewoon een keer,
-als je een typo ziet. Of een slecht geschreven paragraaf in de documentatie.
-Maak een pull request aan met een verbetering. Open source samenwerken is niet
-iets wat je in een weekje kan leren, het is een manier van werken/ denken en het
-vraagt dikwijls om een handreiking. Maar daarom is het goed er vandaag mee te
-beginnen, en ermee te gaan oefenen.
+- Organiseer een hackathon
+- Organiseer een demo-middag met borrel
+- Organiseer een faalcafé met positieve insteek. Laat seniors vertellen over
+  gemaakte fouten om te laten zien dat fouten maken iets menselijks is, en een
+  kans om te leren
+- Schrijf blogs voor het intranet en probeer discussies aan te zwengelen
+
+Je zult gesprekken hebben met echte mensen. En erachter komen dat je heel veel
+dingen nog niet wist. Namen van projecten te weten komen die relevant zijn voor
+je werkveld.
+
+Meetups waarop gelijkgestemenden rondlopen zijn een ding waar ik zelf veel
+energie van krijg. Het gevoel ingebed te zijn, onderdeel van een groter geheel,
+en samen iets goeds te doen — dat is lastig te evenaren.
+
+## Mijn motivatie
+
+In een wereld waarin de democratie onder druk staat denk ik dat het belangrijk
+is dat we een overheid hebben die haar digitalisering op orde heeft. Op dit
+moment is digitalisering nog te vaak de bottleneck als het gaat om uit te voeren
+beleid.
+
+Thema's als beveiliging, privacy, toegankelijkheid en digitale soevereiniteit
+zijn wat mij betreft minimale randvoorwaarden voor overheidsdiensten. Het zorgt
+ervoor dat burgers applicaties veilig kunnen gebruiken en dat er niemand wordt
+buiten gesloten. De overheid is voor kennis over die thema's afhankelijk van
+professionals. Ik ben zo'n professional, en ik wil die kennis graag inzetten.
+
+## Conclusie
+
+De vraag waarmee ik begon — hoe maak ik mijn werkdag zo effectief mogelijk voor
+de digitale overheid — kan je natuurlijk op verschillende manieren beantwoorden.
+Maar er zijn wel duidelijke routes te onderscheiden: draag bij aan open source
+projecten met breed bereik, deel kennis via events en meetups, en zet
+praktijkervaring om in standaarden die anderen verder helpen.
+
+Wat ze gemeen hebben: het gaat altijd om kennisdeling en bereik. Een fix in een
+gedeelde component, een richtlijn in NeRDS, een regel in de API Design Rules —
+het zijn investeringen die zich keer op keer terugbetalen bij elke organisatie
+die er gebruik van maakt.
+
+Je hoeft niet alles tegelijk te doen. Kies de route die past bij waar jij goed
+in bent, en begin klein.
