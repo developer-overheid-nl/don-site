@@ -192,7 +192,7 @@ html {
 }
 
 .navbar__icon-link:hover {
-  fill: var(--ifm-navbar-link-hover-color);
+  fill: var(--ifm-navbar-link-hover-coADMONlor);
 }
 
 .navbar__items {
@@ -655,4 +655,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 header.margin-bottom--xl > .avatar + a {
   text-decoration: underline;
+}
+
+.theme-admonition p,
+ul {
+  margin-bottom: 0.5rem;
 }
