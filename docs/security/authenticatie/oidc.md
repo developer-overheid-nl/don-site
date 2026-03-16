@@ -8,14 +8,29 @@ title: "OpenID Connect (OIDC)"
 ---
 
 **OpenID Connect (OIDC)** is een authenticatielaag bovenop **OAuth 2.0**. Waar
-OAuth toegang regelt tot API’s (autorisatie), voegt OIDC daar **authenticatie**
+OAuth toegang regelt tot API's (autorisatie), voegt OIDC daar **authenticatie**
 aan toe — oftewel: wie is de gebruiker?
 
 Met OIDC kan een applicatie (Relying Party) betrouwbaar de identiteit van een
 gebruiker vaststellen op basis van een login bij een Identity Provider (IdP),
 zoals een overheidssysteem of commerciële aanbieder.
 
-## Hoe werkt OIDC?
+<!-- @TODO: ## Waarom deze standaard -->
+
+## Wanneer gebruik je dit
+
+OIDC is ideaal voor:
+
+- Single Sign-On (SSO) tussen meerdere diensten
+- Federatieve login (bijv. met DigiD of eHerkenning)
+- Veilige identificatie van gebruikers op basis van standaarden
+- Integraties in moderne web- en mobiele applicaties
+
+Niet geschikt voor:
+
+- Pure autorisatie zonder gebruikersidentiteit → gebruik dan alleen OAuth 2.0
+
+## Hoe werkt het
 
 De flow van OIDC lijkt sterk op OAuth, maar voegt o.a. deze elementen toe:
 
@@ -31,7 +46,7 @@ Een typische OIDC flow verloopt als volgt:
    **ID token**.
 4. De app valideert het ID token en weet wie de gebruiker is.
 
-## OIDC in Nederland: NL GOV OIDC-profiel
+## Toepassing in Nederland
 
 Binnen de Nederlandse overheid is er een specifiek profiel ontwikkeld: het **NL
 GOV OpenID Connect profiel**. Dit profiel specificeert hoe OIDC veilig en
@@ -54,20 +69,7 @@ Belangrijke kenmerken:
 - [OpenID Connect Dynamic Client Registration](https://openid.net/specs/openid-connect-registration-1_0.html)
 - [OAuth 2.0 (RFC 6749)](https://datatracker.ietf.org/doc/html/rfc6749)
 
-## Wanneer gebruik je OIDC?
-
-OIDC is ideaal voor:
-
-- Single Sign-On (SSO) tussen meerdere diensten
-- Federatieve login (bijv. met DigiD of eHerkenning)
-- Veilige identificatie van gebruikers op basis van standaarden
-- Integraties in moderne web- en mobiele applicaties
-
-Niet geschikt voor:
-
-- Pure autorisatie zonder gebruikersidentiteit → gebruik dan alleen OAuth 2.0
-
-## Meer informatie
+## Bronnen
 
 - [NL GOV OIDC profiel](https://gitdocumentatie.logius.nl/publicatie/api/oidc/)
 - [OpenID Connect officiële site](https://openid.net/connect/)

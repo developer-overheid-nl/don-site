@@ -15,7 +15,11 @@ servercode genereren. We gebruiken hiervoor
 [OpenAPI Generator](https://openapi-generator.tech/), een populaire open-source
 tool die code kan genereren in tientallen programmeertalen en frameworks.
 
-## Voorbereiding
+<!-- @TODO: ## Doel -->
+
+## Instructies
+
+### Voorbereiding
 
 Zorg dat we de volgende zaken klaar hebben:
 
@@ -34,7 +38,7 @@ eerste keer kan dit even duren, daarna worden ze gecached.
 
 :::
 
-## Dereferencen
+### Dereferencen
 
 Onze OAS bevat `$ref` verwijzingen naar externe URL's, zoals
 `https://static.developer.overheid.nl/adr/components.yaml` voor standaard
@@ -70,9 +74,9 @@ inline geplaatst.
 
 :::
 
-## Code genereren
+### Code genereren
 
-### Stap 1: Clone de codegen templates
+#### Stap 1: Clone de codegen templates
 
 We hebben een aangepaste template gemaakt die beter aansluit bij de ADR. Clone
 deze naar de werkdirectory:
@@ -118,7 +122,7 @@ op de repository.
 
 :::
 
-### Stap 2: Genereer de Express server
+#### Stap 2: Genereer de Express server
 
 Voer het volgende commando uit om een Express server te genereren:
 
@@ -137,7 +141,7 @@ npx @openapitools/openapi-generator-cli generate \
 | `-o`      | Output: map waar de code gegenereerd wordt       |
 | `-t`      | Templates: pad naar de aangepaste templates      |
 
-### Stap 3: Bekijk de gegenereerde structuur
+#### Stap 3: Bekijk de gegenereerde structuur
 
 Na het genereren hebben we de volgende mapstructuur:
 
@@ -172,16 +176,16 @@ ongewijzigd.
 
 :::
 
-## Server starten
+### Server starten
 
-### Stap 1: Installeer dependencies
+#### Stap 1: Installeer dependencies
 
 ```bash
 cd api
 npm install
 ```
 
-### Stap 2: Start de server met mock data
+#### Stap 2: Start de server met mock data
 
 Voor deze tutorial starten we de server in mock-modus. Hiermee worden
 automatisch voorbeeldresponses gegenereerd op basis van de `example` waarden in
@@ -193,7 +197,7 @@ npm run start-mock
 
 De server draait nu op `http://localhost:8080`.
 
-### Stap 3: Test de API
+#### Stap 3: Test de API
 
 Open een nieuwe terminal en test een endpoint:
 
@@ -250,7 +254,7 @@ De gegenereerde server heeft twee modi:
 
 :::
 
-## Volgende stappen voor implementatie
+### Volgende stappen voor implementatie
 
 De gegenereerde code is een werkend skelet. Om een volledige API te bouwen
 moeten we:
@@ -263,7 +267,7 @@ moeten we:
 4. **Error handling uitbreiden** - Voeg custom error responses toe
 5. **Testen schrijven** - Unit tests en integration tests
 
-## Samenvatting
+## Resultaat
 
 In deze tutorial hebben we geleerd:
 
@@ -276,7 +280,7 @@ In deze tutorial hebben we geleerd:
 We hebben nu alle kennis om een API te ontwerpen die voldoet aan de Nederlandse
 overheidsstandaarden en om die specificatie om te zetten naar werkende code.
 
-## Verder lezen
+## Bronnen
 
 - [API Design Rules](/kennisbank/api-ontwikkeling/standaarden/api-design-rules) - Overzicht van de ADR
   op developer.overheid.nl
@@ -290,3 +294,7 @@ overheidsstandaarden en om die specificatie om te zetten naar werkende code.
   beschikbare generators
 - [ADR Linter](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter) -
   Valideer de OAS via CLI, IDE of CI/CD
+
+---
+
+Vorige: [Stap 4: Valideer de OAS](./4-valideer-oas.md)

@@ -14,7 +14,24 @@ mobiele apps, API's en microservices architecturen.
 OAuth is **geen authenticatieprotocol**, maar wordt vaak samen gebruikt met
 OpenID Connect (OIDC) om ook de identiteit van een gebruiker vast te stellen.
 
-## Hoe werkt OAuth?
+<!-- @TODO: ## Waarom deze standaard -->
+
+## Wanneer gebruik je dit
+
+OAuth is ideaal voor:
+
+- Toegang tot REST API's (bv. gegevens ophalen uit een register)
+- Delegatie van rechten (bv. iemand machtigt een app om namens hem gegevens op
+  te vragen)
+- Veiligere alternatieven voor API keys of basis authenticatie
+
+Niet geschikt voor:
+
+- Alleen identificatie zonder toestemming → gebruik dan OpenID Connect
+- Authenticatie in browser-only context zonder backend → kwetsbaar voor token
+  diefstal
+
+## Hoe werkt het
 
 Een typische OAuth flow verloopt als volgt:
 
@@ -38,7 +55,7 @@ Belangrijke componenten:
 - **Resource Server**: API die toegang beschermt >
   [link](https://gitdocumentatie.logius.nl/publicatie/api/oauth/#resource-server)
 
-## OAuth in Nederland: NL GOV OAuth-profiel
+## Toepassing in Nederland
 
 Voor toepassingen binnen de Nederlandse overheid is er het **NL GOV OAuth 2.0
 profiel**. Dit is een set afspraken en richtlijnen die ervoor zorgt dat OAuth op
@@ -64,22 +81,7 @@ Het profiel wordt beheerd via een GitHub repository:
 - [OAuth 2.1 (in ontwikkeling)](https://oauth.net/2.1/)
 - [OAuth Security Best Practices (BCP)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics)
 
-## Wanneer gebruik je OAuth?
-
-OAuth is ideaal voor:
-
-- Toegang tot REST API's (bv. gegevens ophalen uit een register)
-- Delegatie van rechten (bv. iemand machtigt een app om namens hem gegevens op
-  te vragen)
-- Veiligere alternatieven voor API keys of basis authenticatie
-
-Niet geschikt voor:
-
-- Alleen identificatie zonder toestemming → gebruik dan OpenID Connect
-- Authenticatie in browser-only context zonder backend → kwetsbaar voor token
-  diefstal
-
-## Meer bronnen
+## Bronnen
 
 - [OAuth 2.0 overzicht - oauth.net](https://oauth.net/2/)
 - [NL GOV OAuth profiel](https://gitdocumentatie.logius.nl/publicatie/api/oauth/)

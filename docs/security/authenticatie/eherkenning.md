@@ -20,22 +20,9 @@ Met eHerkenning toon je aan dat je als natuurlijk persoon namens een bedrijf mag
 handelen. Dit is belangrijk voor zaken als belastingaangifte, subsidies
 aanvragen of het doorgeven van personeelsgegevens.
 
-## Hoe werkt het?
+<!-- @TODO: ## Waarom deze standaard -->
 
-eHerkenning is gebaseerd op een systeem van erkende **leveranciers** die
-authenticatiemiddelen uitgeven en machtigingen registreren. Deze middelen zijn
-gekoppeld aan een **betrouwbaarheidsniveau** (EH2+ t/m EH4), afhankelijk van de
-gevoeligheid van de dienst waarmee wordt ingelogd. Deze betrouwbaarheidsniveaus
-zijn vergelijkbaar met eIDAS laag, substiantieel en hoog. Dat geldt ook voor de
-machtiging: die moeten ook voldoen aan een vooraf bepaalde
-betrouwbaarheidsniveau. Op die manier geef je bij de dienstverlener aan; ik ben
-ik én ik ben gemachtigd.
-
-De techniek achter eHerkenning is gebaseerd op **SAML 2.0**, net als DigiD.
-Daardoor is het goed integreerbaar in bestaande SSO- en federatieve
-login-oplossingen.
-
-## Waarvoor wordt eHerkenning gebruikt?
+## Wanneer gebruik je dit
 
 Met eHerkenning log je in bij meer dan 600 publiek en private dienstverleners,
 waaronder:
@@ -53,6 +40,23 @@ dienstverleners omdat deze oplossing is genotificeerd.
 Als developer bouw je bijvoorbeeld integraties waarin een gebruiker namens een
 organisatie inlogt om gegevens aan te leveren of aanvragen te doen.
 
+## Hoe werkt het?
+
+eHerkenning is gebaseerd op een systeem van erkende **leveranciers** die
+authenticatiemiddelen uitgeven en machtigingen registreren. Deze middelen zijn
+gekoppeld aan een **betrouwbaarheidsniveau** (EH2+ t/m EH4), afhankelijk van de
+gevoeligheid van de dienst waarmee wordt ingelogd. Deze betrouwbaarheidsniveaus
+zijn vergelijkbaar met eIDAS laag, substiantieel en hoog. Dat geldt ook voor de
+machtiging: die moeten ook voldoen aan een vooraf bepaalde
+betrouwbaarheidsniveau. Op die manier geef je bij de dienstverlener aan; ik ben
+ik én ik ben gemachtigd.
+
+De techniek achter eHerkenning is gebaseerd op **SAML 2.0**, net als DigiD.
+Daardoor is het goed integreerbaar in bestaande SSO- en federatieve
+login-oplossingen.
+
+<!-- @TODO: ## Toepassing in Nederland -->
+
 ## Belangrijk voor developers
 
 Bij implementatie van eHerkenning in jouw applicatie of dienst:
@@ -60,7 +64,7 @@ Bij implementatie van eHerkenning in jouw applicatie of dienst:
 - Koppel je aan via een **herkenningsmakelaar** of **dienstverlener** die
   eHerkenning ondersteunt.
 - Moet je jouw dienst registreren in het **dienstencatalogus**.
-- Werk je met **SAML-authenticatie** (en dus metadata, EntityID’s,
+- Werk je met **SAML-authenticatie** (en dus metadata, EntityID's,
   AssertionConsumerServices, enz.).
 
 Het aansluiten hoef je niet allemaal zelf te doen; de herkenningsmakelaar die de
@@ -81,7 +85,7 @@ eHerkenning werkt met drie hoofd-niveaus (EH2+ t/m EH4):
 
 De dienstverlener bepaalt het betrouwbaarheidsniveau voor de dienst.
 
-## Meer informatie
+## Bronnen
 
 - Algemene info en registratie: [eHerkenning.nl](https://www.eherkenning.nl/) of
   stuur een bericht naar info@eherkenning.nl

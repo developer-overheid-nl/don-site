@@ -23,7 +23,7 @@ kracht. BIO 2.0 is
 
 :::
 
-## Waarom is de BIO in het leven geroepen?
+## Waarom deze standaard
 
 De BIO is in het leven geroepen om organisaties handvatten te geven bij het
 organiseren van een consistente en risicogerichte aanpak van
@@ -51,6 +51,12 @@ maatregelen nemen op basis van de specifieke risico's die zij lopen.
 De BIO bevat een control-catalogus met maatregelen en richtlijnen voor
 implementatie, afgestemd op verschillende soorten organisaties en risico's.
 
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+<!-- @TODO: ## Toepassing in Nederland -->
+
 ## Instrumenten
 
 ### Baseline Informatiebeveiliging Overheid - Self Assessment
@@ -75,7 +81,7 @@ verbeteringen nodig zijn.
 
 Het biedt een basis om te rapporteren over de mate van naleving van de BIO.
 
-### Bronnen
+## Bronnen
 
 - [Website van BIO: bio-overheid.nl](https://www.bio-overheid.nl/)
 - [DigitaleOverheid.nl over BIO](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/)

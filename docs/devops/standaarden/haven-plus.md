@@ -28,6 +28,12 @@ bugs aanloopt.
 
 :::
 
+<!-- TODO: ## Waarom deze standaard — voeg toe waarom Haven+ belangrijk is -->
+
+<!-- TODO: ## Wanneer gebruik je dit — voeg toe wanneer je Haven+ gebruikt -->
+
+<!-- TODO: ## Hoe werkt het — voeg een beschrijving toe van hoe Haven+ werkt -->
+
 ## Aan de slag
 
 Als je zelf lokaal met Haven+ aan de gang wilt dan zijn er twee implementaties
@@ -42,3 +48,7 @@ die je kunt gebruiken.
 ### Implementatie met Argo CD
 
 [Naar de Haven+ implementatie met Argo CD](https://gitlab.com/commonground/haven/havenplus/gitops-argocd)
+
+<!-- TODO: ## Toepassing in Nederland — voeg toe hoe Haven+ wordt toegepast -->
+
+<!-- TODO: ## Bronnen — voeg relevante bronnen toe -->

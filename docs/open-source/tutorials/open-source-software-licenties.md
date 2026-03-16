@@ -10,7 +10,13 @@ tags:
 De keuze van een licentie voor je project bepaalt wat anderen met jouw code
 mogen en kunnen doen.
 
-## Veelgebruikt in overheidsland: EUPL
+<!-- @TODO: ## Wat je gaat maken -->
+
+<!-- @TODO: ## Vereisten -->
+
+## Stappen
+
+### Veelgebruikt in overheidsland: EUPL
 
 De EUPL (European Union Public License) is een open source-licentie ontwikkeld
 door de Europese Commissie. Het doel van deze licentie is om software die door
@@ -27,7 +33,7 @@ met de nadruk op juridische compatibiliteit en transparantie binnen de EU.
                       EUROPEAN UNION PUBLIC LICENCE v. 1.2
                       EUPL © the European Union 2007, 2016
 
-This European Union Public Licence (the ‘EUPL’) applies to the Work (as defined
+This European Union Public Licence (the 'EUPL') applies to the Work (as defined
 below) which is provided under the terms of this Licence. Any use of the Work,
 other than as authorised under this Licence is prohibited (to the extent such
 use is covered by a right of the copyright holder of the Work).
@@ -44,36 +50,36 @@ or has expressed by any other means his willingness to license under the EUPL.
 
 In this Licence, the following terms have the following meaning:
 
-- ‘The Licence’: this Licence.
+- 'The Licence': this Licence.
 
-- ‘The Original Work’: the work or software distributed or communicated by the
+- 'The Original Work': the work or software distributed or communicated by the
   Licensor under this Licence, available as Source Code and also as Executable
   Code as the case may be.
 
-- ‘Derivative Works’: the works or software that could be created by the
+- 'Derivative Works': the works or software that could be created by the
   Licensee, based upon the Original Work or modifications thereof. This Licence
   does not define the extent of modification or dependence on the Original Work
   required in order to classify a work as a Derivative Work; this extent is
   determined by copyright law applicable in the country mentioned in Article 15.
 
-- ‘The Work’: the Original Work or its Derivative Works.
+- 'The Work': the Original Work or its Derivative Works.
 
-- ‘The Source Code’: the human-readable form of the Work which is the most
+- 'The Source Code': the human-readable form of the Work which is the most
   convenient for people to study and modify.
 
-- ‘The Executable Code’: any code which has generally been compiled and which is
+- 'The Executable Code': any code which has generally been compiled and which is
   meant to be interpreted by a computer as a program.
 
-- ‘The Licensor’: the natural or legal person that distributes or communicates
+- 'The Licensor': the natural or legal person that distributes or communicates
   the Work under the Licence.
 
-- ‘Contributor(s)’: any natural or legal person who modifies the Work under the
+- 'Contributor(s)': any natural or legal person who modifies the Work under the
   Licence, or otherwise contributes to the creation of a Derivative Work.
 
-- ‘The Licensee’ or ‘You’: any natural or legal person who makes any usage of
+- 'The Licensee' or 'You': any natural or legal person who makes any usage of
   the Work under the terms of the Licence.
 
-- ‘Distribution’ or ‘Communication’: any act of selling, giving, lending,
+- 'Distribution' or 'Communication': any act of selling, giving, lending,
   renting, distributing, communicating, transmitting, or otherwise making
   available, online or offline, copies of the Work or providing access to its
   essential functionalities at the disposal of any other natural or legal
@@ -139,15 +145,15 @@ Copyleft clause: If the Licensee distributes or communicates copies of the
 Original Works or Derivative Works, this Distribution or Communication will be
 done under the terms of this Licence or of a later version of this Licence
 unless the Original Work is expressly distributed only under this version of the
-Licence — for example by communicating ‘EUPL v. 1.2 only’. The Licensee
+Licence — for example by communicating 'EUPL v. 1.2 only'. The Licensee
 (becoming Licensor) cannot offer or impose any additional terms or conditions on
 the Work or Derivative Work that alter or restrict the terms of the Licence.
 
 Compatibility clause: If the Licensee Distributes or Communicates Derivative
 Works or copies thereof based upon both the Work and another work licensed under
 a Compatible Licence, this Distribution or Communication can be done under the
-terms of this Compatible Licence. For the sake of this clause, ‘Compatible
-Licence’ refers to the licences listed in the appendix attached to this Licence.
+terms of this Compatible Licence. For the sake of this clause, 'Compatible
+Licence' refers to the licences listed in the appendix attached to this Licence.
 Should the Licensee's obligations under the Compatible Licence conflict with
 his/her obligations under this Licence, the obligations of the Compatible
 Licence shall prevail.
@@ -180,9 +186,9 @@ terms of this Licence.
 
 The Work is a work in progress, which is continuously improved by numerous
 Contributors. It is not a finished work and may therefore contain defects or
-‘bugs’ inherent to this type of development.
+'bugs' inherent to this type of development.
 
-For the above reason, the Work is provided under the Licence on an ‘as is’ basis
+For the above reason, the Work is provided under the Licence on an 'as is' basis
 and without warranties of any kind concerning the Work, including without
 limitation merchantability, fitness for a particular purpose, absence of defects
 or errors, accuracy, non-infringement of intellectual property rights other than
@@ -214,7 +220,7 @@ the fact You have accepted any warranty or additional liability.
 
 10. Acceptance of the Licence
 
-The provisions of this Licence can be accepted by clicking on an icon ‘I agree’
+The provisions of this Licence can be accepted by clicking on an icon 'I agree'
 placed under the bottom of a window displaying the text of this Licence or by
 affirming consent in any other similar way, in accordance with the rules of
 applicable law. Clicking on that icon indicates your clear and irrevocable
@@ -289,7 +295,7 @@ Without prejudice to specific agreement between parties,
 
 Appendix
 
-‘Compatible Licences’ according to Article 5 EUPL are:
+'Compatible Licences' according to Article 5 EUPL are:
 
 - GNU General Public License (GPL) v. 2, v. 3
 - GNU Affero General Public License (AGPL) v. 3
@@ -316,7 +322,7 @@ EUPL version.
 
 </details>
 
-### Voordelen EUPL
+#### Voordelen EUPL
 
 - Is specifiek ontworpen voor de publieke sector in de EU.
 - Heeft copyleft-eigenschappen (afgeleid werk moet onder compatibele licentie).
@@ -325,7 +331,7 @@ EUPL version.
   (GPL, AGPL, etc.).
 - Wordt ook aanbevolen in het Nederlandse overheidsbeleid.
 
-### Copyleft: voorkomt gesloten redistributie
+#### Copyleft: voorkomt gesloten redistributie
 
 De EUPL-licentie is "copyleft". Dit betekent dat een partij jouw project niet
 mag kopiëren om de codebase vervolgens **gesloten** en in **eigen beheer** door
@@ -334,7 +340,7 @@ product van te maken. Dit zou een ongewenst scenario kunnen zijn omdat je wilt
 dat iedereen die de code gebruikt ook terug contribueert aan het bestaande
 project, of in ieder geval diens versie weer open beschikbaar stelt.
 
-## Moet ik in elke file de license vermelden?
+### Moet ik in elke file de license vermelden?
 
 In veel projecten zie je dat aan het begin van elk bestand de licentie expliciet
 wordt genoemd. Dit ziet er dan bijvoorbeeld zo uit:
@@ -353,12 +359,14 @@ het `LICENSE` bestand.
 Het antwoord is dus: **nee**, dit hoeft niet als er een LICENSE-bestand in de
 root van je project staat.
 
-## Licentiewijzers
+### Licentiewijzers
 
 - [Goedgekeurde licenties Open Source Initiative](https://opensource.org/licenses)
 - [Licentiewijzer MinBZK](https://licentiewijzer.org/)
 
-## Verder lezen
+<!-- @TODO: ## Resultaat -->
+
+## Bronnen
 
 - [**Europese Commissie:** What is the EUPL?](https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-strategy-history/european-union-public-licence_en)
 - [**Standaard voor Publieke Code:** Publiceer met een open licentie](https://codefor.nl/community-translations-standard/nl/criteria/publish-with-an-open-license.html)

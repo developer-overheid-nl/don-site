@@ -12,9 +12,9 @@ informatie, bedrijven verwachten actuele datasets en IoT-toepassingen hebben
 directe feedback nodig. Polling – telkens opnieuw vragen of er nieuws is – is
 inefficiënt. Event-Driven Architecture (EDA) biedt hier een alternatief: een
 manier van bouwen waarbij systemen en applicaties reageren op gebeurtenissen. In
-zo’n opzet kan de server events pushen zodra er iets verandert.
+zo'n opzet kan de server events pushen zodra er iets verandert.
 
-## Van Polling naar Event-Driven
+## Het probleem
 
 Het traditionele model is vergelijkbaar met steeds opnieuw opvragen van je
 banksaldo. Vaak krijg je hetzelfde antwoord en dit leidt tot:
@@ -23,7 +23,7 @@ banksaldo. Vaak krijg je hetzelfde antwoord en dit leidt tot:
 - Verspilling van resources – veel nutteloze calls.
 - Strakke koppeling – server en client zijn afhankelijk van elkaar.
 
-Met event-driven API’s wordt data (bijvoorbeeld via een **HTTP POST** in het
+Met event-driven API's wordt data (bijvoorbeeld via een **HTTP POST** in het
 geval van Webhooks.) gepusht zodra er een event plaatsvindt. "Je salaris is
 betaald, je banksaldo is nu 12345,67". Dit levert drie belangrijke voordelen op:
 
@@ -44,7 +44,9 @@ Content-Type: application/json
 }
 ```
 
-## Communicatiepatronen
+<!-- @TODO: ## De oplossing -->
+
+## Kernconcepten
 
 Afhankelijk van je use case kies je een real-time patroon:
 
@@ -55,7 +57,9 @@ Afhankelijk van je use case kies je een real-time patroon:
 - [WebSocket wiki](https://en.wikipedia.org/wiki/WebSocket) – voor
   bi-directionele communicatie, geschikt voor chats of games.
 
-## Best Practices voor ontwerp
+<!-- @TODO: ## Wanneer gebruik je dit -->
+
+## Best practices
 
 Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 
@@ -66,9 +70,11 @@ Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 - Houd rekening met "idempotency" voor dubbele events.
 - Voorzie in subscription mechanismen en foutafhandeling.
 
+<!-- @TODO: ## Gerelateerde patronen -->
+
 ## De rol van de API Gateway
 
-Een moderne API-gateway is onmisbaar bij event-driven API’s. Denk aan:
+Een moderne API-gateway is onmisbaar bij event-driven API's. Denk aan:
 
 - Protocoltranslatie – vertaal bijvoorbeeld Webhooks naar Kafka.
 - Beveiliging – handhaaf standaarden als OAuth 2.0 en JWT ook op event-stromen.
@@ -80,16 +86,16 @@ developer experience.
 
 ## Tot slot
 
-De stap naar event-driven API’s is een strategische keuze om schaalbare,
+De stap naar event-driven API's is een strategische keuze om schaalbare,
 veerkrachtige en real-time applicaties te bouwen. Ontwerp met best practices,
 maak gebruik van een moderne gateway en ontwerp niet alleen voor het request,
 maar ook voor het event.
 
-Werk je bij een overheid en wil je experimenteren met event-driven API’s? Deel
+Werk je bij een overheid en wil je experimenteren met event-driven API's? Deel
 je ervaringen via developer.overheid.nl of neem deel aan het
 [Kennisplatform API's](https://developer.overheid.nl/communities/kennisplatform-apis/)
 en deel onderling ervaringen rond de NL API Strategie en event oriëntatie. Samen
-maken we API’s slimmer, robuuster en toekomstbestendig.
+maken we API's slimmer, robuuster en toekomstbestendig.
 
 <Blockquote
   variation="pink-background"
@@ -97,3 +103,5 @@ maken we API’s slimmer, robuuster en toekomstbestendig.
 >
 Lees ook het Blog "De toekomstige van de Overheid is Event Driven" op [Developer.overheid.nl/blog](https://developer.overheid.nl/blog)
 </Blockquote>
+
+<!-- @TODO: ## Bronnen -->

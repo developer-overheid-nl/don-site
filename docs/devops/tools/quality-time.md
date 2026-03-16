@@ -14,12 +14,12 @@ import { Link, Icon, Alert, Heading } from
 '@theme/Blog/Components/Author';
 
 <Alert type="info" className="mb-6">
-  <Author 
+  <Author
     author={{
       name: "Bijdrage door: Frank Niessink",
       title: "Kwaliteitsmanager bij ICTU",
       url: "https://github.com/fniessink"
-    }} 
+    }}
   />
 </Alert>
 
@@ -70,6 +70,16 @@ Quality-time via Docker of Kubernetes.
 Wij hebben al jaren veel plezier van Quality-time in onze projecten. Het zou
 mooi zijn als het ook voor jouw project/organisatie nuttig kan zijn?!
 
-## Externe links
+<!-- @TODO: ## Kenmerken -->
+
+<!-- @TODO: ## Hoe werkt het -->
+
+<!-- @TODO: ## Aan de slag -->
+
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+## Bronnen
 
 - [Naar de github van Quality-time](https://github.com/ICTU/quality-time)

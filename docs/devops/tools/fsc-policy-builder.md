@@ -23,7 +23,11 @@ niet doorgelaten. Daarnaast is er vaak sprake van _authenticatie_: de vragende
 gebruiker of partij wordt gecontroleerd op bevoegdheden om de data te mogen
 inzien.
 
-## Soorten authenticatie
+<!-- @TODO: ## Kenmerken -->
+
+## Hoe werkt het
+
+### Soorten authenticatie
 
 Voor het authenticeren van een gebruiker of partij zijn de volgende modellen
 gebruikelijk:
@@ -42,7 +46,7 @@ Van deze modellen is de laatste (PBAC) het meest uitgebreid en flexibel. FSC
 heeft een extensie waarmee ingaande of uitgaande verzoeken kunnen worden
 getoetst aan policies. Dit gebeurt door Open Policy Agent.
 
-## Open Policy Agent
+### Open Policy Agent
 
 Open Policy Agent (OPA) is een systeem dat verzoeken tot toegang van data kan
 toetsen aan policies. OPA gebruikt daarvoor de programmeertaal Rego, waarin
@@ -108,7 +112,9 @@ policies daarvoor hoeven te worden aangepast.
 De policies kunnen eventueel worden getoetst aan verschillende invoer met behulp
 van een zogenaamde _playground_ die onderdeel is van de policy builder.
 
-## Policies implementeren
+## Aan de slag
+
+### Policies implementeren
 
 Wanneer een policy is aangemaakt, wat is dan de vervolgstap om deze te
 implementeren?
@@ -119,7 +125,11 @@ opgezet kan vervolgens
 [Open Policy Agent activeren](https://docs.nlx.io/nlx-in-production/setup-authorization/),
 waarna de policy kan worden ingesteld.
 
-## Beperkingen
+<!-- @TODO: ## Waarom deze tool -->
+
+<!-- @TODO: ## Alternatieven -->
+
+### Beperkingen
 
 De FSC policy builder heeft verschillende limitaties:
 
@@ -133,3 +143,5 @@ De FSC policy builder heeft verschillende limitaties:
 
 De FSC policy builder is te vinden op
 [fsc-policy-builder.apps.digilab.network](https://fsc-policy-builder.apps.digilab.network/).
+
+<!-- @TODO: ## Bronnen -->
