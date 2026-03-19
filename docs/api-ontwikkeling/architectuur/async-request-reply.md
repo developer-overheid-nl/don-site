@@ -34,10 +34,10 @@ een bevestiging en verwerkt de taak op de achtergrond.
 Het verloop is als volgt:
 
 1. **Request**: De client stuurt een `POST`-request om een langdurige operatie
-  te starten. Om te voorkomen dat de operatie bij een retry (bijvoorbeeld na
-  een timeout) dubbel wordt uitgevoerd, moet dit initiële request idempotent
-  zijn. Zie ook [Veilige retries met volledige
-  idempotency](./retries-met-volledige-idempotency.md).
+   te starten. Om te voorkomen dat de operatie bij een retry (bijvoorbeeld na
+   een timeout) dubbel wordt uitgevoerd, moet dit initiële request idempotent
+   zijn. Zie ook
+   [Veilige retries met volledige idempotency](./retries-met-volledige-idempotency.md).
 2. **Acceptatie**: De server valideert de aanvraag, slaat de operatie op (status
    "Pending") en stuurt direct een
    [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.3)
