@@ -39,8 +39,8 @@ jobs:
 
       - name: Update image tag in prod overlay
         run: |
-          cd ${{ env.KUSTOMIZE_PATH }}
-          kustomize edit set image static=${{ env.IMAGE_NAME }}:${{ github.sha }}
+          yq e '(.images[] | select(.name == "static")).newTag = "${{ github.sha }}"' \
+            -i ${{ env.KUSTOMIZE_PATH }}/kustomization.yaml
 
       - name: Commit en push release branch
         run: |
