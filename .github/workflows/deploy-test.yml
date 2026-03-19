@@ -1,0 +1,102 @@
+name: Deploy to Test
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+env:
+  IMAGE_NAME: ghcr.io/developer-overheid-nl/don-site
+  INFRA_REPO: developer-overheid-nl/don-infra
+  KUSTOMIZE_PATH: apps/frontend/overlays/test
+
+jobs:
+  check-keyword:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.check.outputs.deploy }}
+    steps:
+      - name: Check commit message for deploy keyword
+        id: check
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          # Keyword: [bouw] anywhere in de commit message
+          # Voorbeeld: "feat: nieuwe feature [bouw]"
+          if echo "$COMMIT_MESSAGE" | grep -qi "\[bouw\]"; then
+            echo "deploy=true" >> $GITHUB_OUTPUT
+            echo "Deploy keyword gevonden in commit message."
+          else
+            echo "deploy=false" >> $GITHUB_OUTPUT
+            echo "Geen deploy keyword gevonden, sla deploy over."
+          fi
+
+  build-and-push:
+    needs: check-keyword
+    if: |
+      needs.check-keyword.outputs.deploy == 'true' &&
+      github.repository == 'developer-overheid-nl/don-site'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Login to container registry
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          target: caddy
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:test
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          secrets: |
+            "PIWIK_PRO_ACCOUNT_ADDRESS=${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}"
+            "PIWIK_PRO_SITE_ID=${{ secrets.PIWIK_PRO_SITE_ID }}"
+
+  update-infra-test:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Genereer app token (Release proces app)
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ secrets.RELEASE_PROCES_APP_ID }}
+          private-key: ${{ secrets.RELEASE_PROCES_APP_PRIVATE_KEY }}
+          repositories: don-infra
+
+      - name: Checkout don-infra
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ env.INFRA_REPO }}
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Update image tag in test overlay
+        run: |
+          cd ${{ env.KUSTOMIZE_PATH }}
+          kustomize edit set image static=${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+      - name: Commit en push naar don-infra
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ${{ env.KUSTOMIZE_PATH }}/kustomization.yaml
+          git commit -m "test: don-site → ${{ github.sha }}
+
+          Branch: ${{ github.ref_name }}
+          Commit: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}"
+          git push
