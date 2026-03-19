@@ -22,9 +22,9 @@ jobs:
         env:
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          # Keyword: [bouw] anywhere in de commit message
-          # Voorbeeld: "feat: nieuwe feature [bouw]"
-          if echo "$COMMIT_MESSAGE" | grep -qi "\[bouw\]"; then
+          # Keyword: [deploy-test] anywhere in de commit message
+          # Voorbeeld: "feat: nieuwe feature [deploy-test]"
+          if echo "$COMMIT_MESSAGE" | grep -qi "\[deploy-test\]"; then
             echo "deploy=true" >> $GITHUB_OUTPUT
             echo "Deploy keyword gevonden in commit message."
           else
