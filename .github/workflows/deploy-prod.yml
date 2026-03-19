@@ -44,8 +44,8 @@ jobs:
 
       - name: Commit en push release branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
           git add ${{ env.KUSTOMIZE_PATH }}/kustomization.yaml
           git commit -m "release: don-site → ${{ github.sha }}
 
