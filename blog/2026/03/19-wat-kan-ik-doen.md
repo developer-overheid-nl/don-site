@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [tom-ootes]
 tags:
   [
@@ -16,9 +15,9 @@ tags:
     informatiebeveiliging,
   ]
 description: >
-  Hoe maak je als IT'er bij de overheid impact? Niet door harder te werken, maar
-  slimmer: via open source met breed bereik, kennisdeling op events, en
-  praktijkervaring omzetten in standaarden. Drie routes die je kunt nemen.
+  Hoe maak je als IT'er bij de overheid impact? In dit artikel beschrijf ik drie
+  routes: via open source met breed bereik, kennisdeling op events, en door
+  praktijkervaring om te zetten in standaarden.
 
 image: ./img/nerds.jpg
 ---
@@ -35,22 +34,22 @@ Mijn inspiratie voor deze blogpost kreeg ik toen ik een paar weken terug mijn
 zoontje de fles aan het geven was op een nachtelijk uurtje, en me de volgende
 vraag overviel:
 
+<!-- truncate -->
+
 <p style={{ fontSize:'1.75rem'}}>**"Aannemende dat ik mijn werkdag start met het ultieme doel om de digitale
 overheid beter te maken. Hoe doe ik dat dan zo effectief mogelijk?"**</p>
-
-<!-- truncate -->
 
 Die vraag probeer ik te beantwoorden in deze blogpost.
 
 Als je voor de overheid werkt dan probeer je natuurlijk al dag in dag uit de
-gang van zaken om je heen, in jouw organisatie te verbeteren, en werk je aan een
-betere overheid. In dit artikel schets ik opties om deze pogingen breder te
-trekken. Ik besef me natuurlijk dat het niet voor iedereen weggelegd is om
-tijdens werkuren ruimte te krijgen voor open source projecten en standaarden,
-waarschijnlijk overheerst de dagelijkse praktijk. De uitdaging ligt hem dan ook
-in het veranderen van de cultuur zodat deze investeringen voortaan in
-begrotingen worden meegenomen. Dit is de enige manier om het werken op eilandjes
-te doorbreken.
+gang van zaken in jouw organisatie te verbeteren, en werk je aan een betere
+overheid. In dit artikel schets ik opties om deze pogingen breder te trekken. Ik
+besef me natuurlijk dat het niet voor iedereen weggelegd is om tijdens werkuren
+ruimte te krijgen voor open source projecten en standaarden, waarschijnlijk
+overheerst de dagelijkse praktijk. De uitdaging ligt hem dan ook in het
+veranderen van de cultuur zodat deze investeringen voortaan in begrotingen
+worden meegenomen. Dit is de enige manier om het werken op eilandjes te
+doorbreken.
 
 ![John F. Kennedy op September 12, 1962](./img/jfk.png) **John F. Kennedy op
 September 12, 1962**
