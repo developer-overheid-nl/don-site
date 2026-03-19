@@ -8,7 +8,7 @@ jobs:
   check-links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -20,7 +20,7 @@ jobs:
         run: pnpm run build
 
       - name: Run Linkinator to check external links
-        uses: JustinBeckwith/linkinator-action@v1
+        uses: JustinBeckwith/linkinator-action@v2.4.0
         continue-on-error: true
         with:
           paths: "build"
