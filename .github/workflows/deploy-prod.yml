@@ -13,7 +13,6 @@ env:
 
 jobs:
   create-infra-pr:
-    # Wacht op de build workflow zodat de image al gepusht is naar GHCR
     if: github.repository == 'developer-overheid-nl/don-site'
     runs-on: ubuntu-latest
     steps:
