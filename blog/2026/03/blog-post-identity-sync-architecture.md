@@ -16,7 +16,8 @@ Bij WIGO4IT hebben we daarom een migratie uitgevoerd. Het doel:
 - één bron van waarheid voor gebruikers
 - geen dubbele invoer
 - minder beheer
-- cloud-onafhankelijkheid
+- cloud-onafhankelijkheid (minder afhankelijk van Microsoft)
+- digitale soevereiniteit 
 - duidelijke logging en controle
 
 We vervingen Microsoft Identity Manager door een eenvoudige synchronisatie tussen AFAS, Keycloak en Entra ID.
@@ -93,6 +94,23 @@ Voordelen van deze aanpak:
 - Cloud-onafhankelijk: werkt naast Entra ID maar is er niet van afhankelijk
 - Ondersteuning voor standaard protocollen zoals OAuth 2.0 en OpenID Connect — dat zijn internationale open standaarden voor veilige toegang en inloggen
 
+## Waarom Entra ID blijft
+
+Waarom vervangen we Entra ID niet gewoon volledig door Keycloak?
+
+Daar zijn twee redenen voor.
+
+Ten eerste draait de volledige cloud-infrastructuur van WIGO4IT in Azure. Hyperscalers als Microsoft investeren continu in beveiliging op een schaal die geen enkele organisatie zelfstandig kan evenaren. Volgens het [Microsoft Digital Defense Report 2024](https://news.microsoft.com/en-cee/2024/11/29/microsoft-digital-defense-report-600-million-cyberattacks-per-day-around-the-globe/) vinden er wereldwijd 600 miljoen cyberaanvallen per dag plaats. Die bescherming meenemen is een bewuste keuze — tegelijkertijd weegt WIGO4IT digitale autonomie altijd mee bij het bouwen en beheren van systemen.
+
+Ten tweede hebben we in Entra ID beveiligingsfunctionaliteit ingericht die er al jaren staat en actief wordt gebruikt — en die verder gaat dan gebruikersbeheer alleen:
+
+- **Identity Governance** — regelt wie toegang heeft op basis van functie, met periodieke reviewcycli
+- **Privileged Identity Management (PIM)** — beheerderstoegang is tijdelijk en vereist expliciete activatie, elke actie is herleidbaar. Iedereen heeft leerechten; voor schrijfrechten moet expliciet toegang worden gevraagd volgens het vier-ogen-principe
+- **Conditional Access** — toegang wordt beoordeeld op basis van locatie, apparaat en risico
+- **Microsoft 365** — Teams, SharePoint en Exchange zijn direct gekoppeld aan Entra ID
+
+Keycloak vervangt Entra ID dus niet — het staat ernaast. De synchronisatielaag zelf is leverancier-onafhankelijk. Dat is de winst.
+
 ## AFAS als bron van waarheid
 
 Een kernprincipe in de nieuwe architectuur: gebruikers bestaan op één plek. **AFAS**. Alle andere systemen volgen automatisch.
@@ -116,7 +134,7 @@ De verantwoordelijkheid voor de juistheid van de data ligt daarmee duidelijk bij
 - Minder beheerlast voor IT
 - Duidelijke verantwoordelijkheden: HR beheert de gegevens, IT beheert de synchronisatie
 - Automatische verwerking van nieuwe medewerkers, wijzigingen en uitdiensttreding
-- Geautomatiseerde e-mailnotificaties naar de juiste personen bij elke mutatie
+- Geautomatiseerde Teams-notificaties naar de juiste personen bij elke mutatie
 
 ### Lifecycle management: wat gebeurt er bij uitdiensttreding?
 
@@ -130,7 +148,7 @@ Dit voorkomt dat verlopen accounts onbeheerd blijven bestaan — een veelvoorkom
 
 ### Automatische notificaties
 
-Niet elke mutatie spreekt voor zich. Daarom verstuurt de synchronisatie bij bijzondere gebeurtenissen automatisch een e-mailbericht naar de betrokkenen. Dit zijn de situaties die een bericht triggeren:
+Niet elke mutatie spreekt voor zich. Daarom verstuurt de synchronisatie bij bijzondere gebeurtenissen automatisch een Teams-bericht naar de betrokkenen. Dit zijn de situaties die een bericht triggeren:
 
 | Situatie | Ontvanger |
 |---|---|
@@ -145,11 +163,12 @@ Het mutatieoverzicht bevat tellingen van alle acties: hoeveel accounts aangemaak
 
 ### Technisch
 
-- Open source componenten: geen licentiekosten of afhankelijkheid van één leverancier
+- Open source componenten: Keycloak en de synchronisatiescripts hebben geen licentiekosten en creëren geen afhankelijkheid van één leverancier
 - Geen afhankelijkheid van de MIM-server
-- Eenvoudig te draaien op een server, in een container of als onderdeel van een geautomatiseerde deploymentpipeline
+- De synchronisatiescripts zijn eenvoudig te draaien op een server, in een container of als onderdeel van een geautomatiseerde deploymentpipeline
 - Auditlog: elke synchronisatieactie wordt vastgelegd met tijdstip en resultaat
 - JSON-schemavalidatie: de data uit AFAS wordt gevalideerd tegen een schema voordat de synchronisatie begint — fouten worden vroegtijdig gevangen
+- Automatische rapportage aan HR en officemanagement via Microsoft Teams (kan ook een ander communicatie kanaal zijn) met een overzicht van de synchronisatieresultaten
 
 ### Beveiliging: vier authenticatiemethoden
 
@@ -189,6 +208,32 @@ Elke stap in de synchronisatie is een losstaand onderdeel. Verandert de structuu
 ### Testbaarheid
 
 De synchronisatie is gedekt met **333 geautomatiseerde tests** verdeeld over beide pipelines en de gedeelde hulpfuncties. Elke use case — nieuwe medewerker, wijziging, uitdiensttreding, ongeldig profiel — heeft eigen testscenario's. Daarnaast is er een dry-run modus: die doorloopt de volledige synchronisatie inclusief authenticatie en datavalidatie, maar voert geen schrijfacties uit. Zo kun je een wijziging veilig valideren in een productieomgeving voordat je hem daadwerkelijk uitvoert.
+
+De synchronisatiescripts zijn geschreven in Bash en worden getest met **[BATS](https://bats-core.readthedocs.io/)** (Bash Automated Testing System) — een TAP-compliant testframework voor Bash. Elke test is een gewone Bash-functie met een beschrijving. Een voorbeeld:
+
+```bash
+@test "UC1: New user has all required standard fields" {
+  local test_user=$(create_test_user \
+    "10001" \
+    "John Doe" \
+    "doej@wigo4it.nl" \
+    "12345.doej" \
+    "john.doe@wigo4it.nl")
+
+  echo "$test_user" > "$TEST_INPUT"
+  run_conversion
+
+  local result=$(cat "$TEST_OUTPUT")
+
+  [ "$(echo "$result" | jq -r '.[0].username')" = "12345.doej" ]
+  [ "$(echo "$result" | jq -r '.[0].email')" = "doej@wigo4it.nl" ]
+  [ "$(echo "$result" | jq -r '.[0].firstName')" = "John" ]
+  [ "$(echo "$result" | jq -r '.[0].lastName')" = "Doe" ]
+  [ "$(echo "$result" | jq -r '.[0].enabled')" = "true" ]
+}
+```
+
+De test schrijft bekende invoer weg naar een bestand, voert de conversie uit en controleert de output veld voor veld met `jq`. Voor eenvoudige logica zoals deze zijn geen mocks nodig, voor tests die externe systemen aanroepen zijn ze wel aanwezig.
 
 :::info Dry-run in de praktijk
 Een dry-run logt precies welke acties er zouden plaatsvinden: welke gebruikers aangemaakt, bijgewerkt of verwijderd zouden worden, inclusief de volledige data die verstuurd zou worden. Handig voor acceptatietests en bij het onboarden van nieuwe beheerders.
