@@ -5,7 +5,7 @@ description: Hoe WIGO4IT Microsoft Identity Manager verving door een leverancier
 keywords: [identity management, keycloak, afas, entraid, mim, migratie, synchronisatie, open source]
 ---
 
-# Van Microsoft Identity Manager naar moderne identity synchronisatie
+# Wigo4IT: van Microsoft Identity Manager naar Keycloak voor meer soevereiniteit
 
 Identity management — het beheren van wie toegang heeft tot welke systemen — bepaalt voor elke medewerker welke applicaties en data bereikbaar zijn. Gebruikers moeten correct voorkomen in HR-systemen, identity-platforms en cloudomgevingen.
 
