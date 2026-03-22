@@ -142,7 +142,6 @@
 
   --ifm-menu-color-background-active: var(--don-grijs-200);
 
-  --ifm-navbar-height: auto;
   --ifm-navbar-shadow: none;
   --ifm-navbar-item-padding-horizontal: 0.5rem;
 
@@ -155,7 +154,9 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  --prism-background-color: var(--don-grijs-50); /* a bit darker than specified by https://github.com/ericwbailey/a11y-syntax-highlighting, but should still work */
+  --prism-background-color: var(
+    --don-grijs-50
+  ); /* a bit darker than specified by https://github.com/ericwbailey/a11y-syntax-highlighting, but should still work */
 }
 
 html {
@@ -191,7 +192,7 @@ html {
 }
 
 .navbar__icon-link:hover {
-  fill: var(--ifm-navbar-link-hover-color);
+  fill: var(--ifm-navbar-link-hover-coADMONlor);
 }
 
 .navbar__items {
@@ -654,4 +655,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 header.margin-bottom--xl > .avatar + a {
   text-decoration: underline;
+}
+
+.theme-admonition p,
+ul {
+  margin-bottom: 0.5rem;
 }

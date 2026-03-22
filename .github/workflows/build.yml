@@ -28,6 +28,9 @@ jobs:
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
           outputs: type=docker,dest=${{ runner.temp }}/image.tar
+          secrets: |
+            "PIWIK_PRO_ACCOUNT_ADDRESS=${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}"
+            "PIWIK_PRO_SITE_ID=${{ secrets.PIWIK_PRO_SITE_ID }}"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

@@ -5,6 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import remarkDirectiveSugar from "remark-directive-sugar";
 import { readFileSync } from "fs";
 import { resolve } from "path";
+import 'dotenv/config';
 
 function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
   const csv = readFileSync(resolve(__dirname, "redirects.csv"), "utf-8");
@@ -22,15 +23,20 @@ function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
 
 const emptyTheme = { plain: {}, styles: [] };
 
-const config: Config = {
+type PiwikProClientConfig = {
+  siteId: string;
+  accountAddress: string;
+};
+
+const config: Config & { customFields: Config["customFields"] & { piwikPro: PiwikProClientConfig }} = {
   title: "developer.overheid.nl",
   customFields: {
     siteName: "developer.overheid.nl",
     discourseCommentsInBlog: false,
     // Exposed to the browser via @generated/docusaurus.config for client modules.
     piwikPro: {
-      siteId: process.env.PIWIK_PRO_SITE_ID ?? "",
-      accountAddress: process.env.PIWIK_PRO_ACCOUNT_ADDRESS ?? "",
+      siteId: process.env.PIWIK_PRO_SITE_ID,
+      accountAddress: process.env.PIWIK_PRO_ACCOUNT_ADDRESS,
     },
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
@@ -92,10 +98,10 @@ const config: Config = {
       onBrokenMarkdownImages: "throw",
     },
   },
-  clientModules: ["./src/piwikClientModule.ts"],
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     "./plugins/content-type-index.js",
+    "./plugins/plugin-piwik-pro.ts",
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -453,6 +459,10 @@ const config: Config = {
             {
               label: "Privacyverklaring",
               to: "/privacy",
+            },
+            {
+              label: "Cookieverklaring",
+              to: "/cookies",
             },
             {
               label: "Toegankelijkheid",

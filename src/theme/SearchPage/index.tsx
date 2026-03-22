@@ -394,40 +394,40 @@ function SearchPageContent(): React.JSX.Element {
   const prevY = useRef(0);
   const observer = useRef(
     ExecutionEnvironment.canUseIntersectionObserver &&
-      new IntersectionObserver(
-        (entries) => {
-          const {
-            isIntersecting,
-            boundingClientRect: { y: currentY },
-          } = entries[0]!;
+    new IntersectionObserver(
+      (entries) => {
+        const {
+          isIntersecting,
+          boundingClientRect: { y: currentY },
+        } = entries[0]!;
 
-          if (isIntersecting && prevY.current > currentY) {
-            searchResultStateDispatcher({ type: "advance" });
-          }
+        if (isIntersecting && prevY.current > currentY) {
+          searchResultStateDispatcher({ type: "advance" });
+        }
 
-          prevY.current = currentY;
-        },
-        { threshold: 1 },
-      ),
+        prevY.current = currentY;
+      },
+      { threshold: 1 },
+    ),
   );
 
   const getTitle = () =>
     searchQuery
       ? translate(
-          {
-            id: "theme.SearchPage.existingResultsTitle",
-            message: 'Search results for "{query}"',
-            description: "The search page title for non-empty query",
-          },
-          {
-            query: searchQuery,
-          },
-        )
+        {
+          id: "theme.SearchPage.existingResultsTitle",
+          message: 'Search results for "{query}"',
+          description: "The search page title for non-empty query",
+        },
+        {
+          query: searchQuery,
+        },
+      )
       : translate({
-          id: "theme.SearchPage.emptyResultsTitle",
-          message: "Search the documentation",
-          description: "The search page title for empty query",
-        });
+        id: "theme.SearchPage.emptyResultsTitle",
+        message: "Search the documentation",
+        description: "The search page title for empty query",
+      });
 
   const makeSearch = useEvent((page: number = 0) => {
     // algoliaHelper.addDisjunctiveFacetRefinement('docusaurus_tag', 'default');
@@ -531,6 +531,7 @@ function SearchPageContent(): React.JSX.Element {
             <div className={clsx("col", "col--8", styles.searchResultsColumn)}>
               {!!searchResultState.totalResults &&
                 documentsFoundPlural(searchResultState.totalResults)}
+              <span id="searchResultsAmount" className="hidden">{searchResultState.totalResults}</span>
             </div>
 
             <div
