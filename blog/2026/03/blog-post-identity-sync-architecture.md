@@ -98,18 +98,11 @@ Voordelen van deze aanpak:
 Een kernprincipe in de nieuwe architectuur: gebruikers bestaan op één plek. **AFAS**. Alle andere systemen volgen automatisch.
 
 ```mermaid
-flowchart TD
-  HR["HR wijzigt gebruiker in AFAS"]
-  AFAS["AFAS"]
-  SYNC1["Synchronisatie<br/>AFAS → Keycloak"]
-  SYNC2["Synchronisatie<br/>Keycloak → Entra ID"]
-  ENTRA["Entra ID"]
-
-  HR --> AFAS
-  AFAS --> SYNC1
-  SYNC1 --> SYNC2
-  SYNC2 --> ENTRA
-```
+flowchart LR
+  HR["HR: wijzigt gebruiker in AFAS"] --> AFAS[("AFAS: bron van waarheid")]
+  AFAS -->|"synchroniseert"| KC["Keycloak"]
+  KC -->|"synchroniseert"| ENTRA["Entra ID"]
+  style HR fill:#fff4db,stroke:#333
 
 Dit principe dwingt ook datakwaliteit af: onjuiste gegevens in AFAS leiden direct tot onjuiste identities elders. De synchronisatie valideert bij elke run of verplichte velden aanwezig zijn, of e-mailadressen het juiste formaat hebben en of telefoonnummers de verwachte notatie volgen. Ontbreekt een vereist veld? Dan wordt de gebruiker overgeslagen en ontvangt het verantwoordelijke team automatisch een melding.
 
