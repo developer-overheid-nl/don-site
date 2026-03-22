@@ -168,7 +168,7 @@ Gebruik `managed_identity` of `workload_identity` waar mogelijk. Geen secrets om
 
 ## Technische duurzaamheid
 
-Een oplossing is pas waardevol als je er over vijf jaar nog mee kunt werken. We hebben bewust keuzes gemaakt die de langetermijnonderhoudbaarheid borgen.
+Een oplossing is pas waardevol als je er over vijf jaar nog mee kunt werken. We hebben bewust keuzes gemaakt die de onderhoudbaarheid op de lange termijn borgen.
 
 ### Open standaarden
 
