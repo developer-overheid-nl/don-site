@@ -1,6 +1,5 @@
 ---
 authors: [pascal-van-der-horst]
-date: 2026-03-04
 tags: [identity, keycloak, azure, architecture, devops, mim, migration, iam, oauth, oidc, open-source, logging, digitale-autonomie, digitale-soevereiniteit]
 description: Hoe WIGO4IT Microsoft Identity Manager verving door een leverancier-onafhankelijke synchronisatie tussen AFAS, Keycloak en Entra ID.
 keywords: [identity management, keycloak, afas, entraid, mim, migratie, synchronisatie, open source]
