@@ -1,7 +1,7 @@
 ---
 authors: [pascal-van-der-horst]
 tags: [identity, keycloak, azure, architecture, devops, mim, migration, iam, oauth, oidc, open-source, logging, digitale-autonomie, digitale-soevereiniteit]
-description: Hoe WIGO4IT Microsoft Identity Manager verving door een leverancier-onafhankelijke synchronisatie tussen AFAS, Keycloak en Entra ID.
+description: Hoe Wigo4it Microsoft Identity Manager verving door een leverancier-onafhankelijke synchronisatie tussen AFAS, Keycloak en Entra ID.
 keywords: [identity management, keycloak, afas, entraid, mim, migratie, synchronisatie, open source]
 ---
 
@@ -11,7 +11,7 @@ Identity management — het beheren van wie toegang heeft tot welke systemen —
 
 Veel organisaties gebruiken hiervoor nog legacy oplossingen zoals **Microsoft Identity Manager (MIM)**. Die werken, maar brengen ook complexiteit, handmatig werk en afhankelijkheid van één leverancier met zich mee.
 
-Bij WIGO4IT hebben we daarom een migratie uitgevoerd. Het doel:
+Bij Wigo4it hebben we daarom een migratie uitgevoerd. Het doel:
 
 - één bron van waarheid voor gebruikers
 - geen dubbele invoer
@@ -100,7 +100,7 @@ Waarom vervangen we Entra ID niet gewoon volledig door Keycloak?
 
 Daar zijn twee redenen voor.
 
-Ten eerste draait de volledige cloud-infrastructuur van WIGO4IT in Azure. Hyperscalers als Microsoft investeren continu in beveiliging op een schaal die geen enkele organisatie zelfstandig kan evenaren. Volgens het [Microsoft Digital Defense Report 2024](https://news.microsoft.com/en-cee/2024/11/29/microsoft-digital-defense-report-600-million-cyberattacks-per-day-around-the-globe/) vinden er wereldwijd 600 miljoen cyberaanvallen per dag plaats. Die bescherming meenemen is een bewuste keuze — tegelijkertijd weegt WIGO4IT digitale autonomie altijd mee bij het bouwen en beheren van systemen.
+Ten eerste draait de volledige cloud-infrastructuur van Wigo4it in Azure. Hyperscalers als Microsoft investeren continu in beveiliging op een schaal die geen enkele organisatie zelfstandig kan evenaren. Volgens het [Microsoft Digital Defense Report 2024](https://news.microsoft.com/en-cee/2024/11/29/microsoft-digital-defense-report-600-million-cyberattacks-per-day-around-the-globe/) vinden er wereldwijd 600 miljoen cyberaanvallen per dag plaats. Die bescherming meenemen is een bewuste keuze — tegelijkertijd weegt Wigo4it digitale autonomie altijd mee bij het bouwen en beheren van systemen.
 
 Ten tweede hebben we in Entra ID beveiligingsfunctionaliteit ingericht die er al jaren staat en actief wordt gebruikt — en die verder gaat dan gebruikersbeheer alleen:
 
@@ -121,6 +121,7 @@ flowchart LR
   AFAS -->|"synchroniseert"| KC["Keycloak"]
   KC -->|"synchroniseert"| ENTRA["Entra ID"]
   style HR fill:#fff4db,stroke:#333
+```
 
 Dit principe dwingt ook datakwaliteit af: onjuiste gegevens in AFAS leiden direct tot onjuiste identities elders. De synchronisatie valideert bij elke run of verplichte velden aanwezig zijn, of e-mailadressen het juiste formaat hebben en of telefoonnummers de verwachte notatie volgen. Ontbreekt een vereist veld? Dan wordt de gebruiker overgeslagen en ontvangt het verantwoordelijke team automatisch een melding.
 
