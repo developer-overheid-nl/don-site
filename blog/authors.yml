@@ -206,7 +206,7 @@ anne-schuth:
   name: Anne Schuth
   title: Staff Engineer - Bureau Architectuur BZK
   page: true
-  image_url: https://media.licdn.com/dms/image/v2/C4D03AQE0RSflUrQPyg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1596035901458?e=1776297600&v=beta&t=QfxZIuAKQ0Krk32sYS8qsPgUzcPpCmisemJG-DmEH8g
+  image_url: /img/authors/anne-schuth.png
   socials:
     linkedin: https://www.linkedin.com/in/anneschuth/
     github: anneschuth
