@@ -9,7 +9,7 @@ jobs:
   check-wcag:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -21,33 +21,16 @@ jobs:
         run: pnpm run build
 
       - name: Serve Files
-        uses: Eun/http-server-action@v1
-        with:
-          content-types: |
-            {
-              "css": "text/css",
-              "html": "text/html",
-              "ico": "image/x-icon",
-              "jpeg": "image/jpeg",
-              "jpg": "image/jpeg",
-              "js": "text/javascript",
-              "json": "application/json",
-              "png": "image/png",
-              "svg": "image/svg+xml",
-              "txt": "text/plain",
-              "xml": "text/xml"
-            }
-          port: 3000
-          directory: build/
-          index-files: |
-            ["index.html"]
+        run: |
+          npx --yes serve build/ --listen 3000 &
+          npx --yes wait-on http://localhost:3000
 
       - name: Run Axe to check for WCAG compliance
         run: node scripts/wcag-sitemap-check.js
 
       - name: Upload WCAG report to Slack
         if: always()
-        uses: slackapi/slack-github-action@v2.1.1
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95
         with:
           method: files.uploadV2
           token: ${{ secrets.SLACK_BOT_TOKEN }}
