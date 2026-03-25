@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [anne-schuth, dimitri-van-hees]
 tags:
   - ai
