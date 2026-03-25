@@ -67,7 +67,7 @@ DMARC- en DKIM-richtlijnen erbij. Je hoeft als developer niet eens te weten dat
 een bepaalde standaard bestaat.
 
 Meerdere skills vormen samen een plugin, en plugins zijn vindbaar via een
-marketplace. Het formaat is een [open standaard](https://agentskills.io/home)
+marketplace. Het "Agent Skills" formaat is een [open standaard](https://agentskills.io/home)
 die inmiddels door meer dan dertig tools wordt ondersteund, waaronder Claude
 Code, Opencode, Cursor, GitHub Copilot en Gemini CLI.
 
@@ -92,7 +92,7 @@ een opzet. Zonder skill krijg je een generieke API die niet voldoet aan de
 van Logius. Endpoints in camelCase in plaats van kebab-case, foutmeldingen als
 vrije tekst in plaats van `problem+json`, geen versienummer in het pad.
 
-Met de `/ls-api` skill zit dat er anders uit:
+Met de [`/ls-api`](https://github.com/developer-overheid-nl/skills-standaarden/blob/main/skills/ls-api/SKILL.md) skill zit dat er anders uit:
 
 **Prompt:**
 
