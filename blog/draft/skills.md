@@ -129,6 +129,15 @@ gekoppelde bierstijl en gekoppelde brouwerij.
 ● De spec is ADR-compliant — 0 errors, 0 warnings.
 ```
 
+:::info
+
+Merk op dat de AI-assistant zelf valideert of de gegenereerde code voldoet aan
+de ADR door de linter te draaien. Ook deze validatie staat beschreven in de
+skill. In het voorbeeld zonder skill heeft de AI-assistant hier geen weet van,
+maar om de resultaten te tonen hebben we dit hierbij expliciet aangegeven.
+
+:::
+
 Dit soort details bepalen of je API voldoet aan de standaard op de
 ['pas toe of leg uit'-lijst](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules).
 De skill bevat verder naamconventies (kebab-case paden, camelCase parameters),
