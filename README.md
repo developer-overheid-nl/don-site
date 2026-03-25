@@ -95,6 +95,17 @@ Voorbeeld commit message:
 feat: pas content aan [deploy-test]
 ```
 
+### Deploy naar productie
+
+De productiedeploy draait via `.github/workflows/deploy-prod.yml`.
+
+- De workflow draait bij een push naar `main`.
+- Er wordt in `INFRA_REPO` een release branch aangemaakt.
+- In `${KUSTOMIZE_PATH}prod/kustomization.yaml` wordt de image tag bijgewerkt
+  naar de commit SHA van deze repository.
+- Daarna wordt automatisch een pull request in de infra repository geopend.
+- De productie-uitrol gebeurt door die pull request te mergen.
+
 ### Contributies en deploy
 
 Een contribution of pull request leidt niet automatisch tot een deployment.
@@ -109,14 +120,3 @@ Een contribution of pull request leidt niet automatisch tot een deployment.
 - Die testdeploy gebruikt repository- en organization-variables en secrets om
   ook `INFRA_REPO` aan te passen. Daardoor is dit pad in de praktijk bedoeld
   voor maintainers of contributors met een branch in deze repository.
-
-### Deploy naar productie
-
-De productiedeploy draait via `.github/workflows/deploy-prod.yml`.
-
-- De workflow draait bij een push naar `main`.
-- Er wordt in `INFRA_REPO` een release branch aangemaakt.
-- In `${KUSTOMIZE_PATH}prod/kustomization.yaml` wordt de image tag bijgewerkt
-  naar de commit SHA van deze repository.
-- Daarna wordt automatisch een pull request in de infra repository geopend.
-- De productie-uitrol gebeurt door die pull request te mergen.
