@@ -140,7 +140,7 @@ en zonder skill:
 
 ```bash
 De skill zorgt ervoor dat ik de ADR-specifieke regels (zoals de verplichte
-`API-Version` header en de problem+json foutstructuur) direct goed toepas,
+API-Version header en de problem+json foutstructuur) direct goed toepas,
 in plaats van terug te vallen op gangbare REST-conventies die net niet aan
 de Nederlandse standaard voldoen.
 
