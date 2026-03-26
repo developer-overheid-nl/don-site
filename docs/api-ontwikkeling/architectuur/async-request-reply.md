@@ -7,9 +7,10 @@ tags:
 
 # Asynchronous Request-Reply Pattern
 
-Bij het ontwerpen van API's is het cruciaal om rekening te houden met operaties
-die lang kunnen duren. Een synchrone aanpak, waarbij een client wacht op de
-volledige verwerking van een request, is in zulke gevallen niet geschikt.
+Het Asynchronous Request-Reply pattern is van toepassing bij operaties die
+langer duren dan een paar seconden, of waarvan de duur onvoorspelbaar is — zoals
+het genereren van rapportages, batch-updates, of het uploaden van bestanden via
+een externe opslagdienst.
 
 ## Timeouts bij langdurige operaties
 
@@ -27,7 +28,7 @@ en mogelijke data-inconsistentie.
 
 Het Asynchronous Request-Reply pattern lost dit op door de aanvraag los te
 koppelen van de verwerking. De server accepteert de operatie, geeft onmiddellijk
-een bevestiging en verwerkt de taak op de achtergrond.
+een bevestiging en handelt de taak op de achtergrond af.
 
 ### Werking
 
@@ -48,10 +49,12 @@ Het verloop is als volgt:
    Webhooks om statuswijzigingen direct te ontvangen zonder te pollen. Zie ook
    [Event-Driven Architecture](./eda.md).
 4. **Statusupdate**: De response toont de huidige status (bijv. "Processing") en
-   eventueel een schatting van de resterende tijd.
+   eventueel een voortgangspercentage of schatting van de resterende tijd.
 5. **Voltooiing**: Bij voltooiing meldt het endpoint "Succeeded" (met een link
    naar of inhoud van het resultaat) of "Failed" (met foutdetails). De client
    kan dan indien nodig het resultaat ophalen.
+
+Hieronder het sequentiediagram voor de polling-variant van "Status opvragen".
 
 ```mermaid
 sequenceDiagram
@@ -60,20 +63,22 @@ sequenceDiagram
     participant Worker Process
 
   Client->>Server API: POST /operaties
-  note right of Server API: Operatie aanmaken
-  Server API->>Worker Process: Plaats operatie in wachtrij
+  note right of Server API: Aanmaken
+  Server API->>Worker Process: In wachtrij
     Server API->>Client: 202 Accepted (status: Pending, Location: /status/123)
 
     activate Worker Process
-        Worker Process-->>Worker Process: Start zware verwerking...
+        Worker Process-->>Worker Process: Verwerken...
 
-    loop Pollen tot operatie voltooid is
+    loop Poll-loop
             Client->>Server API: GET /status/123
-      alt Operatie nog niet klaar
+      alt Nog bezig
                 Server API->>Client: 200 OK (status: Processing)
-      else Operatie geslaagd
+      else Geslaagd
+                Worker Process->>Server API: Verwerking voltooid (succeeded)
                 Server API->>Client: 200 OK (status: Succeeded)
-      else Operatie mislukt
+      else Mislukt
+                Worker Process->>Server API: Verwerking voltooid (failed)
                 Server API->>Client: 200 OK (status: Failed)
             end
         end
@@ -93,6 +98,7 @@ paths:
       summary: Start het genereren van een rapportage
       parameters:
         - name: Idempotency-Key
+          in: header
           ...
       requestBody:
         required: true
