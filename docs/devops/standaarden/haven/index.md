@@ -132,7 +132,7 @@ certificaatbeheer, secret management.
 ## Welke organisaties werken met Haven?
 
 - [Gemeente Utrecht](https://utrecht.nl)
-- [Wigo4it](https://www.wigo4it.nl/nieuws/haven-compliancy-bij-wigo4it/)
+- [Wigo4IT](https://www.wigo4it.nl/nieuws/haven-compliancy-bij-wigo4it/)
 - [SURF](https://www.surf.nl/files/2024-10/surf-cloud-sourcing-strategie.pdf)
 
 ## Links

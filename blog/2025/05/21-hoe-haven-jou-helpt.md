@@ -246,7 +246,7 @@ ArgoCD.
 
 Ik wil graag een paar mensen bedanken die de tijd hebben genomen gesprekken met
 mij te voeren over dit onderwerp. Zo voerde ik een goed gesprek met **Dian van
-Heijningen (Product Owner Cloud Engineering)** van **Wigo4it** over hun
+Heijningen (Product Owner Cloud Engineering)** van **Wigo4IT** over hun
 infrastructuur. Ook hield ik met **Pauline van Rotterdam (Technisch PO)** en
 **Sander van Thillo (Developer)** van het **Haven** team een interview. Dit
 interview zal hier later ook gepubliceerd worden.

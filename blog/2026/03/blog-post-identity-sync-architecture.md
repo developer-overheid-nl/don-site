@@ -1,7 +1,7 @@
 ---
 authors: [pascal-van-der-horst]
 tags: [identity, keycloak, azure, architecture, devops, mim, migration, iam, oauth, oidc, open-source, logging, digitale-autonomie, digitale-soevereiniteit]
-description: Hoe Wigo4it Microsoft Identity Manager verving door een leverancier-onafhankelijke synchronisatie tussen AFAS, Keycloak en Entra ID.
+description: Hoe Wigo4IT Microsoft Identity Manager verving door een leverancier-onafhankelijke synchronisatie tussen AFAS, Keycloak en Entra ID.
 keywords: [identity management, keycloak, afas, entraid, mim, migratie, synchronisatie, open source]
 ---
 
@@ -11,7 +11,7 @@ Identity management — het beheren van wie toegang heeft tot welke systemen —
 
 Veel organisaties gebruiken hiervoor nog legacy oplossingen zoals **Microsoft Identity Manager (MIM)**. Die werken, maar brengen ook complexiteit, handmatig werk en afhankelijkheid van één leverancier met zich mee.
 
-Bij Wigo4it hebben we daarom een migratie uitgevoerd. Het doel:
+Bij Wigo4IT hebben we daarom een migratie uitgevoerd. Het doel:
 
 - één bron van waarheid voor gebruikers
 - geen dubbele invoer
@@ -100,7 +100,7 @@ Waarom vervangen we Entra ID niet gewoon volledig door Keycloak?
 
 Daar zijn twee redenen voor.
 
-Ten eerste draait de volledige cloud-infrastructuur van Wigo4it in Azure. Hyperscalers als Microsoft investeren continu in beveiliging op een schaal die geen enkele organisatie zelfstandig kan evenaren. Volgens het [Microsoft Digital Defense Report 2024](https://news.microsoft.com/en-cee/2024/11/29/microsoft-digital-defense-report-600-million-cyberattacks-per-day-around-the-globe/) vinden er wereldwijd 600 miljoen cyberaanvallen per dag plaats. Die bescherming meenemen is een bewuste keuze — tegelijkertijd weegt Wigo4it digitale autonomie altijd mee bij het bouwen en beheren van systemen.
+Ten eerste draait de volledige cloud-infrastructuur van Wigo4IT in Azure. Hyperscalers als Microsoft investeren continu in beveiliging op een schaal die geen enkele organisatie zelfstandig kan evenaren. Volgens het [Microsoft Digital Defense Report 2024](https://news.microsoft.com/en-cee/2024/11/29/microsoft-digital-defense-report-600-million-cyberattacks-per-day-around-the-globe/) vinden er wereldwijd 600 miljoen cyberaanvallen per dag plaats. Die bescherming meenemen is een bewuste keuze — tegelijkertijd weegt Wigo4IT digitale autonomie altijd mee bij het bouwen en beheren van systemen.
 
 Ten tweede hebben we in Entra ID beveiligingsfunctionaliteit ingericht die er al jaren staat en actief wordt gebruikt — en die verder gaat dan gebruikersbeheer alleen:
 
@@ -217,9 +217,9 @@ De synchronisatiescripts zijn geschreven in Bash en worden getest met **[BATS](h
   local test_user=$(create_test_user \
     "10001" \
     "John Doe" \
-    "doej@wigo4it.nl" \
+    "doej@Wigo4IT.nl" \
     "12345.doej" \
-    "john.doe@wigo4it.nl")
+    "john.doe@Wigo4IT.nl")
 
   echo "$test_user" > "$TEST_INPUT"
   run_conversion
@@ -227,7 +227,7 @@ De synchronisatiescripts zijn geschreven in Bash en worden getest met **[BATS](h
   local result=$(cat "$TEST_OUTPUT")
 
   [ "$(echo "$result" | jq -r '.[0].username')" = "12345.doej" ]
-  [ "$(echo "$result" | jq -r '.[0].email')" = "doej@wigo4it.nl" ]
+  [ "$(echo "$result" | jq -r '.[0].email')" = "doej@Wigo4IT.nl" ]
   [ "$(echo "$result" | jq -r '.[0].firstName')" = "John" ]
   [ "$(echo "$result" | jq -r '.[0].lastName')" = "Doe" ]
   [ "$(echo "$result" | jq -r '.[0].enabled')" = "true" ]
