@@ -101,6 +101,8 @@ Daar zijn twee redenen voor.
 
 Ten eerste draait de volledige cloud-infrastructuur van Wigo4it in Azure. Hyperscalers als Microsoft investeren continu in beveiliging op een schaal die geen enkele organisatie zelfstandig kan evenaren. Volgens het [Microsoft Digital Defense Report 2024](https://news.microsoft.com/en-cee/2024/11/29/microsoft-digital-defense-report-600-million-cyberattacks-per-day-around-the-globe/) vinden er wereldwijd 600 miljoen cyberaanvallen per dag plaats. Die bescherming meenemen is een bewuste keuze — tegelijkertijd weegt Wigo4it digitale autonomie altijd mee bij het bouwen en beheren van systemen.
 
+> **De cloud is geen afhankelijkheid. Het is uitbestede complexiteit.**
+
 Ten tweede hebben we in Entra ID beveiligingsfunctionaliteit ingericht die er al jaren staat en actief wordt gebruikt — en die verder gaat dan gebruikersbeheer alleen:
 
 - **Identity Governance** — regelt wie toegang heeft op basis van functie, met periodieke reviewcycli
@@ -109,6 +111,8 @@ Ten tweede hebben we in Entra ID beveiligingsfunctionaliteit ingericht die er al
 - **Microsoft 365** — Teams, SharePoint en Exchange zijn direct gekoppeld aan Entra ID
 
 Keycloak vervangt Entra ID dus niet — het staat ernaast. De synchronisatielaag zelf is leverancier-onafhankelijk. Dat is de winst.
+
+> **Autonomie haalt risico niet weg. Het legt het bij jou neer.**
 
 ## AFAS als bron van waarheid
 
@@ -251,3 +255,5 @@ Belangrijkste resultaten:
 - Betere controle en traceerbaarheid
 
 De migratie laat zien dat identity synchronisatie geen complexe legacy-systemen nodig heeft. Met open source componenten en duidelijke verantwoordelijkheden is een betrouwbare en onderhoudbare synchronisatie haalbaar voor organisaties met een vergelijkbaar IT-landschap.
+
+> **Autonomie zonder operatie is een illusie.**
