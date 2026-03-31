@@ -45,6 +45,7 @@ function Search() {
         <label
           htmlFor="banner-search"
           aria-label="Zoek in de Kennisbank, API- en OSS-register"
+          className={styles.heroSearchLabel}
         >
           Zoek in de Kennisbank, API- en OSS-register
         </label>
