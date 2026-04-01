@@ -2,7 +2,8 @@
 authors: [tim-van-der-lippe]
 tags: [adoptie, standaarden]
 description: |
-  
+  Hoe bevorder je adoptie van standaarden? Maak gebruik van persona's en stem informatie over standaarden af op hun behoeften.
+draft: true
 ---
 
 # De softe kant van standaarden
@@ -13,7 +14,7 @@ Als we kijken naar adoptie van standaarden, dan is dat vaak een soft verhaal: "W
 Dit soort vragen worden door verschillende persona's gesteld en elke persona vereist een andere aanpak om te overtuigen van het nut van een standaard.
 
 Bij het bevorderen van adoptie van standaarden is het van groot belang dat de softe kant op orde is.
-De keuze om een standaard te implementeren heeft grotere impact als een bestuurder die maakt, dan één individuele developer.
+De keuze om een standaard te implementeren heeft een grotere impact als een bestuurder die maakt, dan één individuele developer.
 Zelf doe ik mee aan de werkgroep ["Adoptie van standaarden"](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/794e40b9-9b98-494c-9242-6380409088e5/werkgroep-adoptie-standaarden) binnen het [Federatief Datastelsel](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel) (FDS), om te analyseren welke activiteiten nuttig zijn om adoptie te bevorderen.
 
 <!-- truncate -->
@@ -34,7 +35,7 @@ De focus verleggen naar "als we dit afspreken, dan kan je ineens X-Y-Z" is een p
 Door af te spreken van alle mogelijke waarden die uitgewisseld kunnen worden in formaat F vast te leggen, is het bijvoorbeeld mogelijk om efficiëntere aansluitingen te realiseren.
 De voordelen bij gegevensuitwisseling zijn er voor beide partijen:
 
-1. de afnemer weet dat het altijd er vanuit kan gaan dat het in formaat F is vastgelegd, zodat elke uitwisseling op dezelfde manier verloopt
+1. de afnemer weet dat het er altijd vanuit kan gaan dat het in formaat F is vastgelegd, zodat elke uitwisseling op dezelfde manier verloopt
 1. de aanbieder heeft baat bij makkelijker aansluiten omdat de afnemer de code al had geschreven bij de integratie met een vorige aanbieder
 
 Hier hebben beide partijen baat, ook al mogen ze nu minder dan wat voorheen toegestaan was.
@@ -100,7 +101,7 @@ Ze bevatten generieke informatie over de standaard, de impact die het heeft, maa
 Dat sluit mooi aan op de originele vraagstukken waar een architect aan werkt: hoe past in het geheel?
 
 Mogelijk valt het ook op hoe de handreikingen focusen op de positieve toon.
-Er wordt aangegeven wat er mogelijk is als de standaard wordt geimplementeerd en aan welke architectuurprincipes ze invulling geven.
+Er wordt aangegeven wat er mogelijk is als de standaard wordt geïmplementeerd en aan welke architectuurprincipes ze invulling geven.
 Daarnaast wordt er ook ingegaan op impact, want er zullen altijd ook andere consequenties zijn waar rekening mee moet worden gehouden.
 
 :::success[Begrijp de technische eisen]
@@ -110,7 +111,7 @@ Maak duidelijk hoe de technische relaties er uit zien.
 
 ## Developers als de doeners
 
-Als een bestuurder het nut in ziet en een architect de mogelijkheden, is het nog wel de zaak dat het ook uitvoerbaar is.
+Als een bestuurder het nut inziet en een architect de mogelijkheden, is het nog wel de zaak dat het ook uitvoerbaar is.
 Hier komt de doelgroep van developers (al dan niet in-house of werkzaam bij een leverancier) in beeld.
 Developers willen graag concrete instructies hoe een standaard toe te passen is en hoe het mogelijk is om te checken of daaraan wordt voldaan.
 
@@ -122,14 +123,14 @@ De [OAS checker](https://developer-overheid-nl.github.io/oas-checker/#/adr-21) i
 Validators worden steeds belangrijker, zeker in een tijdperk waarin code genereren met behulp van AI wordt toegepast.
 
 :::success[Zet in op validatie]
-Developers vinden het fijn om duidelijke doelen te krijgen en concluderen dat ze er aan voldoen.
+Developers vinden het fijn om duidelijke doelen te krijgen en concluderen dat ze eraan voldoen.
 Zet in op validatie-technieken en automatisering van testen om het einddoel te bepalen.
 :::
 
 ## De crux van adoptie zit in de gelaagdheid
 
 Elk van deze persona's heeft invloed op de (mogelijke) adoptie van een standaard.
-Als op een van de lagen het nut niet wordt gezien, het onduidelijk is hoe het past in het geheel of dat het niet uit uit te voeren is, resulteert dat vaak in het wegblijven van adoptie.
+Als op een van de lagen het nut niet wordt gezien, het onduidelijk is hoe het past in het geheel of dat het niet uit te voeren is, resulteert dat vaak in het wegblijven van adoptie.
 Het scherp hebben van de eisen van een doelgroep helpt in het positief positioneren van een standaard.
 
 Focus niet op maar één persona in de hoop dat het balletje dan vanzelf gaat rollen.
