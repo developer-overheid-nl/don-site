@@ -1,6 +1,6 @@
 publiccodeYmlVersion: "0.5"
 
-name: Developer Overheid NL Website
+name: Developer Overheid NL
 url: "https://github.com/developer-overheid-nl/don-site"
 landingURL: "https://developer.overheid.nl"
 softwareType: standalone/web
@@ -23,8 +23,7 @@ developmentStatus: beta
 description:
   nl:
     shortDescription: >-
-      Developer Overheid NL is de wegwijzer voor developers die voor of bij de
-      overheid ontwikkelen.
+      Ontwikkelaarsportaal van de Nederlandse overheid
     longDescription: |
       Developer Overheid NL is de wegwijzer voor developers die voor of bij de
       overheid ontwikkelen. Zij vervult deze rol door het aanbieden van
@@ -62,10 +61,6 @@ localisation:
 maintenance:
   type: internal
   contacts:
-    - name: Dimitri van Hees
-      email: d.vanhees@geonovum.nl
+    - name: developer.overheid.nl
+      email: developer.overheid@geonovum.nl
       affiliation: Geonovum
-    - name: Tom Ootes
-      email: tom@ootes.io
-      affiliation: Geonovum
-      phone: "+31623447230"
