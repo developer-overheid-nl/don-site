@@ -79,6 +79,22 @@
   }
 }
 
+@keyframes showLabel {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.heroSearchLabel {
+  animation: showLabel 0.25s ease-in-out 0.25s forwards;
+  margin-inline-start: 0.75rem;
+  margin-block-start: 0.5rem;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-170%);
+}
+
 .intro {
   font-size: clamp(1.2rem, 3.333vw, 2rem);
   max-width: 60rem;

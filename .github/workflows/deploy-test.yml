@@ -1,0 +1,120 @@
+name: Deploy to Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - main
+
+env:
+  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  INFRA_REPO: ${{ vars.INFRA_REPO }}
+  KUSTOMIZE_PATH: ${{ vars.KUSTOMIZE_PATH }}
+  DEPLOY_ENV: test
+
+jobs:
+  check-keyword:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.check.outputs.deploy }}
+    steps:
+      - name: Check commit message for deploy keyword
+        id: check
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          # Keyword: [deploy-test] anywhere in de commit message
+          # Voorbeeld: "feat: nieuwe feature [deploy-test]"
+          if echo "$COMMIT_MESSAGE" | grep -qi "\[deploy-test\]"; then
+            echo "deploy=true" >> $GITHUB_OUTPUT
+            echo "Deploy keyword gevonden in commit message."
+          else
+            echo "deploy=false" >> $GITHUB_OUTPUT
+            echo "Geen deploy keyword gevonden, sla deploy over."
+          fi
+
+  build-and-push:
+    needs: check-keyword
+    if: |
+      needs.check-keyword.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd
+
+      - name: Login to container registry
+        uses: docker/login-action@b45d80f862d83dbcd57f89517bcf500b2ab88fb2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294
+        with:
+          context: .
+          target: caddy
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:test
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          secrets: |
+            "PIWIK_PRO_ACCOUNT_ADDRESS=${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}"
+            "PIWIK_PRO_SITE_ID=${{ secrets.PIWIK_PRO_SITE_ID }}"
+
+  update-infra-test:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse infra repository
+        id: infra-repo
+        run: |
+          INFRA_REPO="${{ env.INFRA_REPO }}"
+
+          if [[ -z "$INFRA_REPO" || "$INFRA_REPO" != */* ]]; then
+            echo "INFRA_REPO moet de vorm owner/repo hebben, huidige waarde: '$INFRA_REPO'" >&2
+            exit 1
+          fi
+
+          echo "owner=${INFRA_REPO%%/*}" >> "$GITHUB_OUTPUT"
+          echo "repo=${INFRA_REPO#*/}" >> "$GITHUB_OUTPUT"
+
+      - name: Genereer app token (Release proces app)
+        id: app-token
+        uses: actions/create-github-app-token@f8d387b68d61c58ab83c6c016672934102569859
+        with:
+          app-id: ${{ secrets.RELEASE_PROCES_APP_ID }}
+          private-key: ${{ secrets.RELEASE_PROCES_APP_PRIVATE_KEY }}
+          owner: ${{ steps.infra-repo.outputs.owner }}
+          repositories: ${{ steps.infra-repo.outputs.repo }}
+
+      - name: Checkout don-infra
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: ${{ env.INFRA_REPO }}
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Update image tag in test overlay
+        run: |
+          KUSTOMIZATION_FILE="${{ env.KUSTOMIZE_PATH }}${{ env.DEPLOY_ENV }}/kustomization.yaml"
+
+          yq e '(.images[] | select(.newName == "${{ env.IMAGE_NAME }}")).newTag = "${{ github.sha }}"' -i "$KUSTOMIZATION_FILE"
+
+      - name: Commit en push naar don-infra
+        run: |
+          KUSTOMIZATION_FILE="${{ env.KUSTOMIZE_PATH }}${{ env.DEPLOY_ENV }}/kustomization.yaml"
+
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+          git add "$KUSTOMIZATION_FILE"
+          git commit -m "test: don-site → ${{ github.sha }}
+
+          Branch: ${{ github.ref_name }}
+          Commit: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}"
+          git push
