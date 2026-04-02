@@ -41,7 +41,7 @@ Het verloop is als volgt:
    [Veilige retries met volledige idempotency](./retries-met-volledige-idempotency.md).
 2. **Acceptatie**: De server valideert de aanvraag, slaat de operatie op (status
    "Pending") en stuurt direct een
-   [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.3)
+   [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc9110#name-202-accepted)
    response. De `Location` header verwijst naar een statusendpoint waar de
    voortgang gevolgd kan worden.
 3. **Status opvragen**: De client pollt het statusendpoint met `GET`-requests.
@@ -93,19 +93,19 @@ statusendpoint.
 
 ```yaml
 paths:
-  /rapportages:
+  /operaties:
     post:
-      summary: Start het genereren van een rapportage
+      summary: Start een langdurige operatie
       parameters:
         - name: Idempotency-Key
           in: header
-          ...
+          # ...
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/MijnZwareAanvraag"
+              $ref: "#/components/schemas/MijnAanvraag"
       responses:
         "202":
           description: Aanvraag geaccepteerd en asynchroon in verwerking genomen
@@ -119,9 +119,9 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OperatieStatus"
-  /rapportages/operaties/{operatieId}:
+  /status/{operatieId}:
     get:
-      summary: Vraag de status van een rapportage-operatie op
+      summary: Vraag de status van een operatie op
       parameters:
         - name: operatieId
           in: path
@@ -143,6 +143,8 @@ components:
   schemas:
     OperatieStatus:
       type: object
+      required:
+        - status
       properties:
         status:
           type: string
@@ -156,7 +158,6 @@ components:
           format: uri
           description:
             URL van het uiteindelijke resultaat zodra de operatie is voltooid.
-
 ```
 
 ### Voordelen
