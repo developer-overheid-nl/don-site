@@ -55,6 +55,8 @@ sequenceDiagram
     o->>d: Lees volgende outbox-record
     d-->>o: Outbox-record
     o->>x: Publiceer bericht
+    x-->>o: Bevestiging
+    o->>d: Markeer record als verwerkt
 ```
 
 ## Zelfde transactie, zelfde database
