@@ -55,8 +55,7 @@ jobs:
         run: |
           KUSTOMIZATION_FILE="${{ env.KUSTOMIZE_PATH }}${{ env.DEPLOY_ENV }}/kustomization.yaml"
 
-          yq e '(.images[] | select(.newName == "static")).newTag = "${{ github.sha }}"' \
-            -i "$KUSTOMIZATION_FILE"
+          yq e '(.images[] | select(.newName == "${{ env.IMAGE_NAME }}")).newTag = "${{ github.sha }}"' -i "$KUSTOMIZATION_FILE"
 
       - name: Commit en push release branch
         run: |
