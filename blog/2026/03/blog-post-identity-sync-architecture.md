@@ -21,6 +21,10 @@ In dit artikel laten we zien hoe Wigo4it Microsoft Identity Manager verving door
 
 Na dit artikel kijk je anders naar cloudkeuzes, security en de rol van identity.
 
+:::tip TLDR
+Wigo4it verving Microsoft Identity Manager door een open source synchronisatieketen: AFAS als enige bron van waarheid, Keycloak als centrale identity store, en Entra ID voor Microsoft-diensten. Het resultaat: geen dubbele administratie, minder beheerwerk, volledige auditbaarheid en geen leveranciersafhankelijkheid in de synchronisatielaag zelf.
+:::
+
 <!-- truncate -->
 
 ## Het oorspronkelijke landschap
