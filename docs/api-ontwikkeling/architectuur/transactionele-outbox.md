@@ -66,7 +66,9 @@ ondersteunt: de twee schrijfacties — business-data én outbox-record — moete
 één geheel slagen of falen (atomiciteit), en een commit moet een crash overleven
 (duurzaamheid). De business-wijziging en het outbox-record moeten daarom in
 dezelfde databasetransactie worden opgeslagen. Als de outbox in een andere
-database staat dan de business-data, vervalt deze garantie.
+database staat dan de business-data, is een gedistribueerd transactieprotocol
+nodig — maar dergelijke protocollen brengen eigen complexiteit en faalscenario's
+mee.
 
 ## Idempotente publicatie
 
