@@ -135,6 +135,13 @@ paths:
       responses:
         "200":
           description: Huidige status van de operatie
+          headers:
+            Retry-After:
+              description:
+                Aanbevolen wachttijd in seconden voor de volgende poll, indien
+                de operatie nog niet voltooid is.
+              schema:
+                type: integer
           content:
             application/json:
               schema:
