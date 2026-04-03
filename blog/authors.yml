@@ -18,7 +18,7 @@ floris-deutekom:
     github: Fdeutekom
     email: f.deutekom@geonovum.nl
 
-Jan Klopper:
+jan-klopper:
   name: Jan Klopper
   title: Implementatie ondersteuner - developer.overheid.nl
   image_url: https://developer.overheid.nl/img/team/jan-klopper.png
@@ -27,7 +27,7 @@ Jan Klopper:
     linkedin: janklopper
     github: underdarknl
     email: j.klopper@geonovum.nl
-    
+
 dimitri-van-hees:
   name: Dimitri van Hees
   title: Product Owner - developer.overheid.nl
@@ -210,3 +210,14 @@ pascal-van-der-horst:
   socials:
     linkedin: pascal-van-der-horst
     github: Passie1982
+
+anne-schuth:
+  name: Anne Schuth
+  title: Staff Engineer - Bureau Architectuur BZK
+  page: true
+  image_url: /img/authors/anne-schuth.png
+  socials:
+    linkedin: https://www.linkedin.com/in/anneschuth/
+    github: anneschuth
+    bluesky: anneschuth.nl
+    email: anne.schuth@rijksoverheid.nl
