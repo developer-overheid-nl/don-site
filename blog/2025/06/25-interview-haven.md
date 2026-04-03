@@ -255,7 +255,7 @@ primaire rollen. Om Haven+ verder uit te bouwen en tot een nog bruikbaarder
 product te komen, zijn ze op zoek naar meer organisaties die willen bijdragen.
 
 Bovendien zorgt samenwerking met meerdere organisaties ervoor dat Haven+ beter
-aansluit op de diverse behoeften van de publieke sector. ODC-Noord en WIGO4IT
+aansluit op de diverse behoeften van de publieke sector. ODC-Noord en Wigo4it
 gingen je al voor!
 
 [Praat mee op het Mattermost kanaal van Haven](https://digilab.overheid.nl/chat/haven/channels/town-square)

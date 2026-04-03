@@ -202,6 +202,15 @@ henry-fidder:
   title: Product Manager - Justitiële Informatiedienst
   page: true
 
+pascal-van-der-horst:
+  name: Pascal van der Horst
+  title: Platform & Cloud Engineer - Wigo4it
+  image_url: https://avatars.githubusercontent.com/u/9113152?v=4
+  page: true
+  socials:
+    linkedin: pascal-van-der-horst
+    github: Passie1982
+
 anne-schuth:
   name: Anne Schuth
   title: Staff Engineer - Bureau Architectuur BZK
