@@ -45,8 +45,11 @@ Het verloop is als volgt:
    response. De `Location` header verwijst naar een statusendpoint waar de
    voortgang gevolgd kan worden.
 3. **Status opvragen**: De client pollt het statusendpoint met `GET`-requests.
-   Alternatief kan gebruik gemaakt worden van Server-Sent Events (SSE) of
-   Webhooks om statuswijzigingen direct te ontvangen zonder te pollen. Zie ook
+   Om te voorkomen dat de client te frequent pollt, kan de server een
+   [`Retry-After`](https://www.rfc-editor.org/rfc/rfc9110#name-retry-after)
+   header meesturen met de aanbevolen wachttijd tot de volgende poll. Voor
+   directe statusupdates zonder polling-vertraging kunnen ook Server-Sent Events
+   (SSE) of Webhooks ingezet worden. Zie ook
    [Event-Driven Architecture](./eda.md).
 4. **Statusupdate**: De response toont de huidige status (bijv. "Processing") en
    eventueel een voortgangspercentage of schatting van de resterende tijd.
