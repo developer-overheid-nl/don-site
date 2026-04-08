@@ -24,12 +24,16 @@ breedgedragen discussie helpen we jou hier graag bij.
 ```md
 ---
 authors: [martin-van-der-plas]
+description: "Een korte beschrijving van je blogpost voor de RSS-feed."
+image: img/mijn-afbeelding.png
+tags:
+  - interoperabiliteit
 draft: true
 ---
 
 # Titel
 
-Dit is de intro met een hele pakkende tekst om op "Lees meer te klikken".
+Dit is de intro met een hele pakkende tekst om op "Lees meer" te klikken.
 
 <!-- truncate -->
 
@@ -42,7 +46,50 @@ En hier gaat het verhaal weer verder.
 Lorem ipsum.
 ```
 
+- `description` is **verplicht** — wordt gebruikt in de RSS-feed en als
+  meta-beschrijving. Gebruik bij voorkeur de eerste zin van je blogpost.
+- `image` is optioneel maar aanbevolen — wordt gebruikt als preview bij het
+  delen op sociale media (Open Graph). Plaats de afbeelding in dezelfde map of
+  een `img/`-submap.
+
 </details>
+
+## Tags
+
+Blogposts gebruiken dezelfde tags als kennisbankartikelen. Alle tags moeten
+voorkomen in
+[`tags.yml`](https://github.com/developer-overheid-nl/don-site/blob/main/tags.yml).
+
+### Thema-tags (verplicht, 1-3)
+
+Elk artikel heeft minimaal 1 en maximaal 3 thema-tags:
+
+| Tag                     | Beschrijving                               |
+| ----------------------- | ------------------------------------------ |
+| `informatiebeveiliging` | Security, authenticatie, encryptie         |
+| `interoperabiliteit`    | Data-uitwisseling, API's, standaarden      |
+| `toegankelijkheid`      | WCAG, inclusiviteit, UX                    |
+| `privacy`               | AVG, gegevensbescherming, logging          |
+| `infrastructuur`        | Kubernetes, deployment, cloud              |
+| `front-end`             | UI, design systems, libraries              |
+| `open-source`           | Licenties, community, governance           |
+
+### Onderwerp-tags (optioneel, 0-5)
+
+Specifieke technologieën, standaarden of concepten (bijv. `oauth`, `kubernetes`,
+`react`).
+
+### Organisatie-tags (optioneel)
+
+Bijvoorbeeld: `forum-standaardisatie`, `kennisplatform-apis`, `vng`,
+`common-ground`.
+
+### Regels
+
+- Maximaal **8 tags totaal** per blogpost.
+- Content types (`standaard`, `tool`, `tutorial`, `architectuur`, `richtlijn`)
+  mogen **nooit** als tag voorkomen.
+- Een onbekende tag laat de build falen.
 
 Er zijn verschillende manieren om een gastblog aan te dragen:
 
