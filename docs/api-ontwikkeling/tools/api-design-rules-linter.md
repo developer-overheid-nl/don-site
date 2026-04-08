@@ -18,11 +18,11 @@ Een OpenAPI Specificatie kan online getest worden via onze online OAS Checker:
 
 De OAS Checker toont drie soorten meldingen:
 
-| Type    | Betekenis                                                                 |
-| ------- | ------------------------------------------------------------------------- |
-| Error   | Moet opgelost worden - de OAS voldoet niet aan een verplichte ADR-regel.  |
+| Type    | Betekenis                                                                  |
+| ------- | -------------------------------------------------------------------------- |
+| Error   | Moet opgelost worden - de OAS voldoet niet aan een verplichte ADR-regel.   |
 | Warning | Aanbevolen om op te lossen - de OAS voldoet niet aan een aanbevolen regel. |
-| Info    | Ter informatie - suggesties voor verbetering.                             |
+| Info    | Ter informatie - suggesties voor verbetering.                              |
 
 ## CLI
 
@@ -56,7 +56,10 @@ $ code
 
 ### IntelliJ IDEA
 
-Voor IntelliJ-based IDEs (IntelliJ IDEA, WebStorm, etc.) is er de [Spectral plugin](https://plugins.jetbrains.com/plugin/18520-spectral). Na installatie kun je een `.spectral.yaml` bestand in je project root plaatsen met de volgende inhoud:
+Voor IntelliJ-based IDEs (IntelliJ IDEA, WebStorm, etc.) is er de
+[Spectral plugin](https://plugins.jetbrains.com/plugin/18520-spectral). Na
+installatie kun je een `.spectral.yaml` bestand in je project root plaatsen met
+de volgende inhoud:
 
 ```yaml
 extends:
@@ -67,7 +70,7 @@ extends:
 
 ```bash
 $ docker run --rm --entrypoint=sh \
-    -v $(pwd)/api:/locale stoplight/spectral:5.9.1 \
+    -v $(pwd)/api:/locale stoplight/spectral \
     -c "spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE"
 ```
 
