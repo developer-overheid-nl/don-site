@@ -6,7 +6,7 @@ description: |
 draft: true
 ---
 
-# De softe kant van standaarden
+# De softe kant van standaarden: adoptie vraagt om gelaagde communicatie
 
 Standaarden zijn vaak technisch van aard.
 Ze zorgen voor interoperabele oplossingen die technisch op elkaar kunnen aansluiten.
@@ -38,11 +38,11 @@ Daarom is in mijn optiek de focus op "nu kan je dit niet meer" geen handige tact
 Je staat al 1-0 achter voordat het gesprek begint.
 
 De focus verleggen naar "als we dit afspreken, dan kan je ineens X-Y-Z" is een positievere boodschap.
-Door af te spreken van alle mogelijke waarden die uitgewisseld kunnen worden in formaat F vast te leggen, is het bijvoorbeeld mogelijk om efficiëntere aansluitingen te realiseren.
+Door af te spreken om alle mogelijke gegevens die uitgewisseld kunnen worden in formaat F vast te leggen, is het bijvoorbeeld mogelijk om efficiëntere aansluitingen te realiseren.
 De voordelen bij gegevensuitwisseling zijn er voor beide partijen:
 
 1. de afnemer weet dat het er altijd vanuit kan gaan dat het in formaat F is vastgelegd, zodat elke uitwisseling op dezelfde manier verloopt
-1. de aanbieder heeft baat bij makkelijker aansluiten omdat de afnemer de code al had geschreven bij de integratie met een vorige aanbieder
+1. de aanbieder heeft baat bij uniformiteit omdat hij bij de nieuwe integratie van een afnemer exact hetzelfde endpoint kan bieden
 
 Hier hebben beide partijen baat bij, ook al mogen ze nu minder dan wat voorheen toegestaan was.
 Restricties leveren in dit geval wel degelijk waarde op.
@@ -77,7 +77,7 @@ Met standaarden is het dus van belang om duidelijk te krijgen hoe een standaard 
 Er is ingezet om een overzicht te krijgen op welke gebieden bepaalde standaarden de meeste waarde realiseren.
 Hieruit is een overzichtsplaat voortgekomen die laat zien voor welke stelselfuncties binnen het FDS welke standaarden passen:
 
-![Overzicht van stelselfuncties van FDS met bijbehorende standaarden](img/overzichtsplaat-stelselfuncties-fds.png) _Deel van de overzichtsplaat zoals gepubliceerd op [de website van FDS](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#de-technische-stelselfuncties) (geraadpleegd op 2026-04-01)_
+![Overzicht van stelselfuncties van FDS met bijbehorende standaarden](./img/overzichtsplaat-stelselfuncties-fds.png) _Deel van de overzichtsplaat zoals gepubliceerd op [de website van FDS](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#de-technische-stelselfuncties) (geraadpleegd op 2026-04-01)_
 
 Zo'n overzicht is te printen voor op een banner, of eenvoudig toe te voegen aan een presentatie.
 Dat is ook de werkomgeving van de bestuurlijke hoek: overleggen met anderen wat er gedaan moet worden.
