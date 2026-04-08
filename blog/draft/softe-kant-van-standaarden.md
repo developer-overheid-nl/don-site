@@ -18,7 +18,13 @@ De keuze om een standaard te implementeren heeft een grotere impact als een best
 Zelf doe ik mee aan de werkgroep ["Adoptie van standaarden"](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/794e40b9-9b98-494c-9242-6380409088e5/werkgroep-adoptie-standaarden) binnen het [Federatief Datastelsel](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel) (FDS), om te analyseren welke activiteiten nuttig zijn om adoptie te bevorderen.
 
 <!-- truncate -->
+:::success[**TL;DR**]
 
+Adoptie van standaarden is geen technisch, maar een menselijk vraagstuk. Door je
+te verdiepen in de juiste persona's: **bestuurder**, **architect**,
+**developer** vergroot je de kans op adoptie aanzienlijk.
+
+:::
 ## Het verkopen van "nee"
 
 Standaardisatie is in essentie de kunst van het verkopen van "nee".
@@ -38,7 +44,7 @@ De voordelen bij gegevensuitwisseling zijn er voor beide partijen:
 1. de afnemer weet dat het er altijd vanuit kan gaan dat het in formaat F is vastgelegd, zodat elke uitwisseling op dezelfde manier verloopt
 1. de aanbieder heeft baat bij makkelijker aansluiten omdat de afnemer de code al had geschreven bij de integratie met een vorige aanbieder
 
-Hier hebben beide partijen baat, ook al mogen ze nu minder dan wat voorheen toegestaan was.
+Hier hebben beide partijen baat bij, ook al mogen ze nu minder dan wat voorheen toegestaan was.
 Restricties leveren in dit geval wel degelijk waarde op.
 
 ## Hoe krijgen we de focus op de positieve kant?
@@ -48,8 +54,8 @@ Dit is het gespreksonderwerp van de werkgroep "Adoptie van standaarden" bij het 
 Vanaf de eerste werksessie werd de focus gelegd op de softe kant, iets waar ik positief verrast door was.
 "Fijn dat er gelijkgestemden hier bijeenkomen die realiseren hoe belangrijk die softe kant is" dacht ik toen.
 
-Het was wel nog zoekende hoe we deze softe kant kunnen belichten.
-We vroegen ons af wie de belanghebbenden zijn bij de keuze voor standaarden en wat zijn hun beweegredenen.
+Het was wel nog zoeken hoe we deze softe kant kunnen belichten.
+We vroegen ons af wie de belanghebbenden zijn bij de keuze voor standaarden en wat hun beweegredenen zijn.
 Hiervoor hebben we enkele persona's uitgewerkt, om structuur te kunnen geven aan de discussies.
 
 De persona's waar we voor nu op focusen zijn:
@@ -62,7 +68,7 @@ Elke persona heeft andere wensen, eisen en bewegingsruimte.
 Tevens heeft de ene persona meer invloed dan de andere op bepaalde gebieden.
 Hierbij is het belangrijk om te weten "wie er aan welke tafel zit" om te bepalen waar het gesprek over een standaard plaats vindt.
 
-## De bestuurlijke hoek die bepaalt
+## De bestuurlijke hoek bepaalt
 
 Voor de bestuurlijke hoek is het van belang om te begrijpen wat er speelt en hoe een oplossing daaraan bijdraagt.
 Vaak wordt op dit niveau nagedacht over prioriteit, tijd en geld.
@@ -73,13 +79,15 @@ Hieruit is een overzichtsplaat voortgekomen die laat zien voor welke stelselfunc
 
 ![Overzicht van stelselfuncties van FDS met bijbehorende standaarden](img/overzichtsplaat-stelselfuncties-fds.png) _Deel van de overzichtsplaat zoals gepubliceerd op [de website van FDS](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#de-technische-stelselfuncties) (geraadpleegd op 2026-04-01)_
 
-Zo'n overzicht is te printen om op een banner te zetten, of makkelijk toe te voegen aan presentatie.
+Zo'n overzicht is te printen voor op een banner, of eenvoudig toe te voegen aan een presentatie.
 Dat is ook de werkomgeving van de bestuurlijke hoek: overleggen met anderen wat er gedaan moet worden.
 Hierbij is een overzicht nuttig om te laten zien wat er mogelijk is en dat er al analyses zijn gedaan welke standaard het beste toepasbaar is.
 
 :::success[Vind de verbinding]
+
 Aansluiten bij de werkomgeving van de persona is van belang om het juiste bericht te kunnen versturen.
 Persona's die opereren in de bestuurlijke hoek hebben baat bij informatie in een overzichtelijk formaat.
+
 :::
 
 ## Architecten als sturing
@@ -91,22 +99,26 @@ Daar komt de rol van een architect bij kijken, waarbij het voor standaarden bela
 Om dit duidelijker te krijgen zijn er handreikingen geschreven.
 De eerste versie van de handreikingen staan inmiddels [online op NORA](https://www.noraonline.nl/wiki/Standaarden_in_het_Federatief_Datastelsel).
 
-:::tip
+:::Oproep
+
 Op dit moment zijn we op zoek naar feedback op deze handreikingen.
-Laat feedback achter op NORA met concrete verbeteringen en suggesties
+Laat feedback achter op NORA met concrete verbeteringen en suggesties.
+
 :::
 
 De handreikingen gaan meer in detail ten opzichte van de overzichtsplaat.
 Ze bevatten generieke informatie over de standaard, de impact die het heeft, maar ook de relaties tot andere standaarden.
 Dat sluit mooi aan op de originele vraagstukken waar een architect aan werkt: hoe past in het geheel?
 
-Mogelijk valt het ook op hoe de handreikingen focusen op de positieve toon.
+Mogelijk valt het ook op hoe de handreikingen een positieve toon hebben.
 Er wordt aangegeven wat er mogelijk is als de standaard wordt geïmplementeerd en aan welke architectuurprincipes ze invulling geven.
 Daarnaast wordt er ook ingegaan op impact, want er zullen altijd ook andere consequenties zijn waar rekening mee moet worden gehouden.
 
 :::success[Begrijp de technische eisen]
+
 Zorg ervoor dat een standaard compatibel is met bestaande oplossingen.
 Maak duidelijk hoe de technische relaties er uit zien.
+
 :::
 
 ## Developers als de doeners
@@ -123,11 +135,13 @@ De [OAS checker](https://developer-overheid-nl.github.io/oas-checker/#/adr-21) i
 Validators worden steeds belangrijker, zeker in een tijdperk waarin code genereren met behulp van AI wordt toegepast.
 
 :::success[Zet in op validatie]
+
 Developers vinden het fijn om duidelijke doelen te krijgen en concluderen dat ze eraan voldoen.
 Zet in op validatie-technieken en automatisering van testen om het einddoel te bepalen.
+
 :::
 
-## De crux van adoptie zit in de gelaagdheid
+## Conclusie: de crux van adoptie zit in de gelaagdheid
 
 Elk van deze persona's heeft invloed op de (mogelijke) adoptie van een standaard.
 Als op een van de lagen het nut niet wordt gezien, het onduidelijk is hoe het past in het geheel of dat het niet uit te voeren is, resulteert dat vaak in het wegblijven van adoptie.
