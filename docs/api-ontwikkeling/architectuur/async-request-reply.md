@@ -28,7 +28,8 @@ en mogelijke data-inconsistentie.
 
 Het Asynchronous Request-Reply pattern lost dit op door de aanvraag los te
 koppelen van de verwerking. De server accepteert de operatie, geeft onmiddellijk
-een bevestiging en handelt de taak op de achtergrond af.
+een bevestiging en handelt de taak op de achtergrond af. De client wordt via een
+statusendpoint op de hoogte gehouden van de voortgang van de operatie.
 
 ### Werking
 
