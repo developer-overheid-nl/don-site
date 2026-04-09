@@ -349,8 +349,8 @@ project, of in ieder geval diens versie weer open beschikbaar stelt.
 Een project bestaat vaak uit verschillende soorten bestanden, dikwijls van
 verschillende auteurs en ook met eigen copyright-beperkingen en of licenties.
 Denk er aan dat je onder de EUPL (en veel andere licenties) logischerwijs alleen de
-vrijheid hebt om een (open) licentie 'op het werk' van toepassingen te maken, als
-je ook daadwerkelijk de eigenaar bent van het Intelectueel eigendom.
+vrijheid hebt om een (open) licentie 'op het werk' van toepassing te maken, als
+je ook daadwerkelijk de eigenaar bent van het intellectueel eigendom.
 Bij opgenomen werk van derden zal vaak de daarop geldende licenties van
 toepassing blijven, en of al dan niet onder een compatible licentie gebubliceerd
 kunnen worden.
@@ -380,7 +380,7 @@ het `LICENSE` bestand.
 Het antwoord is dus: **nee**, dit hoeft niet als er een LICENSE-bestand in de
 root van je project staat.
 
-Voor projecten met meer dan een licentie is het gebruikelijk in de map met het
+Voor projecten met meer dan één licentie is het gebruikelijk in de map met het
 afwijkende onderdeel een eigen LICENSE-bestand op te namen, en of gebruik te maken
 van [reuse.spec](https://reuse.software/spec-3.3/).
 
