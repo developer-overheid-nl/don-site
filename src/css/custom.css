@@ -661,3 +661,11 @@ header.margin-bottom--xl > .avatar + a {
 ul {
   margin-bottom: 0.5rem;
 }
+
+.plugin-pages h2.anchor {
+  margin-top: 1.5rem;
+}
+
+.plugin-pages h3.anchor {
+  margin-top: 1.25rem;
+}
