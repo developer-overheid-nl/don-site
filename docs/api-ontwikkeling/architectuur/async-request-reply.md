@@ -16,15 +16,15 @@ bestand moet uploaden.
 
 ## Problemen bij synchrone verwerking
 
-Wanneer een consumer een asynchrone operatie start (zoals documentverwerking of
-batch-updates) en synchroon wacht op het resultaat, kunnen timeouts optreden.
-Het verhogen van de timeout-limiet is hierbij een _bad practice_, omdat dit
-resources aan de providerkant onnodig lang bezet houdt. Bovendien zijn timeouts
-vaak afhankelijk van de netwerkverbinding en tussenliggende infrastructuur, wat
-de limiet arbitrair maakt en geen succesgarantie biedt. De consumer blijft dan
-in onzekerheid over de status, wat leidt tot onbetrouwbaarheid en potentieel
-dubbele verwerking bij retries. Dit resulteert in een slechte gebruikerservaring
-en mogelijke data-inconsistentie.
+Wanneer een consumer een langdurige of onvoorspelbare operatie start (zoals
+documentverwerking of batch-updates) en synchroon wacht op het resultaat, kunnen
+timeouts optreden. Het verhogen van de timeout-limiet is hierbij een _bad
+practice_, omdat dit resources aan de providerkant onnodig lang bezet houdt.
+Bovendien zijn timeouts vaak afhankelijk van de netwerkverbinding en
+tussenliggende infrastructuur, wat de limiet arbitrair maakt en geen
+succesgarantie biedt. De consumer blijft dan in onzekerheid over de status, wat
+leidt tot onbetrouwbaarheid en potentieel dubbele verwerking bij retries. Dit
+resulteert in een slechte gebruikerservaring en mogelijke data-inconsistentie.
 
 ## Asynchroon verwerken
 
@@ -38,10 +38,10 @@ de voortgang.
 
 Het verloop is als volgt:
 
-1. **Request**: De consumer stuurt een `POST`-request om een asynchrone operatie
-   te starten. Om te voorkomen dat de operatie bij een retry (bijvoorbeeld na
-   een timeout) dubbel wordt uitgevoerd, moet dit initiële request idempotent
-   zijn. Zie ook
+1. **Request**: De consumer stuurt een `POST`-request om een operatie te
+   starten. Om te voorkomen dat de operatie bij een retry (bijvoorbeeld na een
+   timeout) dubbel wordt uitgevoerd, moet dit initiële request idempotent zijn.
+   Zie ook
    [Veilige retries met volledige idempotency](./retries-met-volledige-idempotency.md).
 2. **Acceptatie**: De provider valideert de aanvraag en stuurt direct een
    [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc9110#name-202-accepted)
@@ -54,7 +54,7 @@ Het verloop is als volgt:
    polling zijn Server-Sent Events (SSE) of Webhooks geschikter (zie
    [Event-Driven Architecture](./eda.md)).
 4. **Statusupdate**: Het statusendpoint geeft de huidige status (bijv.
-   "Processing"), inclusief een voortgangspercentage of schatting van de
+   "Processing"), eventueel met een voortgangspercentage of schatting van de
    resterende tijd.
 5. **Voltooiing**: Bij voltooiing meldt het endpoint "Succeeded" (met een link
    naar of inhoud van het resultaat) of "Failed" (met bijvoorbeeld
@@ -176,12 +176,12 @@ components:
 
 ### Voordelen
 
-- **Verbeterde gebruikerservaring**: De client krijgt direct feedback en wordt
+- **Verbeterde gebruikerservaring**: De consumer krijgt direct feedback en wordt
   niet gedwongen om lang te wachten.
-- **Betrouwbaarheid**: Het risico op client-side timeouts wordt geëlimineerd. De
-  client kan de status van de operatie betrouwbaar opvragen.
-- **Schaalbaarheid**: De server hoeft het request niet open te houden totdat de
-  operatie klaar is, waardoor de API-laag beschikbaar blijft voor nieuwe
+- **Betrouwbaarheid**: Het risico op timeouts aan de consumerkant wordt
+  geëlimineerd. De consumer kan de status van de operatie betrouwbaar opvragen.
+- **Schaalbaarheid**: De provider hoeft het request niet open te houden totdat
+  de operatie klaar is, waardoor de API-laag beschikbaar blijft voor nieuwe
   verzoeken.
 - **Eenvoudigere consumer**: De consumer hoeft het verloop van de operatie niet
   vooraf te kennen. Instructies en vervolgstappen komen vanuit de provider,
