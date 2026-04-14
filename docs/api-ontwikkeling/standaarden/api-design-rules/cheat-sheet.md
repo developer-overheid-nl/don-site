@@ -134,5 +134,4 @@ Voorbeeld van een geldig `info.servers` object:
 ## Tools
 
 - [API Design Rules Linter](../../tools/api-design-rules-linter)
-- [API Design Rules Validator](../../tools/api-design-rules-validator)
 - [OpenAPI Spec generator](../../tools/openapi-specification-generator)

@@ -3,7 +3,14 @@ content_type: tool
 tags: [adr, api, validator]
 ---
 
-# ADR Validator
+# ADR Validator (verouderd)
+
+:::danger[Deze tool is verouderd]
+
+Deze tool wordt niet meer onderhouden en is niet meer up-to-date. Gebruik in
+plaats hiervan de [ADR Linter](api-design-rules-linter.md).
+
+:::
 
 De API Design Rules (ADR) Validator is een CLI-tool om te valideren of een API
 zich gedraagt conform deze delen van de
