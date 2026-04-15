@@ -188,8 +188,8 @@ components:
   volgorde per type object kan verschillen. Zonder dit patroon moet de consumer
   die volgorde per situatie kennen en zelf de juiste resources en acties in de
   juiste volgorde aanroepen. Met dit patroon geeft de provider na acceptatie de
-  benodigde vervolgacties terug — bijvoorbeeld als links in de response body —
-  zodat de consumer het proces stap voor stap kan doorlopen zonder die
+  benodigde vervolgacties terug — bijvoorbeeld als links in de status response
+  body — zodat de consumer het proces stap voor stap kan doorlopen zonder die
   domeinkennis zelf te bevatten.
 
 ### Nadelen
