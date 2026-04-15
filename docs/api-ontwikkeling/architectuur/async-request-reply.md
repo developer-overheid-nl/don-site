@@ -176,13 +176,18 @@ components:
 
 ### Voordelen
 
-- **Verbeterde gebruikerservaring**: De consumer krijgt direct feedback en wordt
-  niet gedwongen om lang te wachten.
-- **Betrouwbaarheid**: Het risico op timeouts aan de consumerkant wordt
-  geëlimineerd. De consumer kan de status van de operatie betrouwbaar opvragen.
-- **Schaalbaarheid**: De provider hoeft het request niet open te houden totdat
-  de operatie klaar is, waardoor de API-laag beschikbaar blijft voor nieuwe
-  verzoeken.
-- **Eenvoudigere consumer**: De consumer hoeft het verloop van de operatie niet
-  vooraf te kennen. Instructies en vervolgstappen komen vanuit de provider,
-  waardoor de consumer minder logica hoeft te bevatten.
+- **Verbeterde gebruikerservaring**: De consumer krijgt direct feedback en hoeft
+  niet te wachten op voltooiing.
+- **Betrouwbaarheid**: Timeouts aan de consumerkant worden voorkomen; de status
+  is altijd opvraagbaar.
+- **Minder domeinkennis bij de consumer**: Vervolgstappen komen vanuit de
+  provider; de consumer hoeft de volgorde van stappen niet vooraf te kennen.
+
+### Nadelen
+
+- **Meer technische complexiteit bij de consumer**: In plaats van één
+  request-response-cyclus moet de consumer de afhandeling van asynchrone
+  statussen implementeren — via polling, SSE of webhooks — inclusief
+  retry-afhandeling en statusinterpretatie.
+- **Persistente toestand bij de provider**: De provider moet operatiestatus
+  opslaan en na verloop van tijd opschonen.
