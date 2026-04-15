@@ -38,12 +38,10 @@ de voortgang.
 Het verloop is als volgt:
 
 1. **Request**: De consumer stuurt een `POST`-request om een operatie te
-   starten. Om te voorkomen dat de operatie bij een retry (bijvoorbeeld na een
-   timeout) dubbel wordt uitgevoerd, moet dit initiële request idempotent zijn.
-   Zie ook
+   starten. Zie ook
    [Veilige retries met volledige idempotency](./retries-met-volledige-idempotency.md)
-   en [Transactionele Outbox](./transactionele-outbox.md) om te garanderen dat
-   de operatie niet verloren gaat.
+   voor veilige retries en [Transactionele Outbox](./transactionele-outbox.md)
+   om te borgen dat de geaccepteerde operatie intern niet verloren gaat.
 2. **Acceptatie**: De provider valideert de aanvraag en stuurt direct een
    [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc9110#name-202-accepted)
    response met een `Location` header naar het statusendpoint. De response body
