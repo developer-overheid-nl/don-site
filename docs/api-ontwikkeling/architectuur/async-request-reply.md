@@ -183,6 +183,14 @@ components:
   is altijd opvraagbaar.
 - **Minder domeinkennis bij de consumer**: Vervolgstappen komen vanuit de
   provider; de consumer hoeft de volgorde van stappen niet vooraf te kennen.
+  Denk aan domein-specifieke afhankelijkheden waarbij de ene resource eerst
+  aangemaakt moet zijn vóórdat een andere aangemaakt kan worden — en waarbij die
+  volgorde per type object kan verschillen. Zonder dit patroon moet de consumer
+  die volgorde per situatie kennen en zelf de juiste resources en acties in de
+  juiste volgorde aanroepen. Met dit patroon geeft de provider na acceptatie de
+  benodigde vervolgacties terug — bijvoorbeeld als links in de response body —
+  zodat de consumer het proces stap voor stap kan doorlopen zonder die
+  domeinkennis zelf te bevatten.
 
 ### Nadelen
 
