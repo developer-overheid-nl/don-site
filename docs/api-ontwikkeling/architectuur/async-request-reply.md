@@ -8,11 +8,10 @@ tags:
 # Asynchronous Request-Reply Pattern
 
 Het Asynchronous Request-Reply pattern is ideaal voor operaties die lang duren,
-onvoorspelbaar zijn qua tijdsduur of verloop, óf waarbij de provider (server)
-een vervolgactie teruglegt bij de consumer (client). Denk aan het genereren van
-rapportages, batch-updates, of processen waarbij de provider direct een
-verwijzing teruggeeft — zoals een URL waarnaar de consumer asynchroon een
-bestand moet uploaden.
+onvoorspelbaar zijn qua tijdsduur of verloop, óf waarbij de provider een
+vervolgactie teruglegt bij de consumer. Denk aan het genereren van rapportages,
+batch-updates, of processen waarbij de provider direct een verwijzing teruggeeft
+— zoals een URL waarnaar de consumer asynchroon een bestand moet uploaden.
 
 ## Problemen bij synchrone verwerking
 
@@ -42,26 +41,28 @@ Het verloop is als volgt:
    starten. Om te voorkomen dat de operatie bij een retry (bijvoorbeeld na een
    timeout) dubbel wordt uitgevoerd, moet dit initiële request idempotent zijn.
    Zie ook
-   [Veilige retries met volledige idempotency](./retries-met-volledige-idempotency.md).
+   [Veilige retries met volledige idempotency](./retries-met-volledige-idempotency.md)
+   en [Transactionele Outbox](./transactionele-outbox.md) om te garanderen dat
+   de operatie niet verloren gaat.
 2. **Acceptatie**: De provider valideert de aanvraag en stuurt direct een
    [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc9110#name-202-accepted)
    response met een `Location` header naar het statusendpoint. De response body
    kan aanvullende informatie bevatten, zoals een upload-URL of referenties naar
-   gerelateerde (vervolg)acties voor de consumer. Gebruik bijvoorbeeld een
-   [Transactionele Outbox](./transactionele-outbox.md) om te garanderen dat de
-   operatie niet verloren gaat.
+   gerelateerde (vervolg)acties voor de consumer.
 3. **Status opvragen**: De consumer pollt het statusendpoint met `GET`-requests.
-   Een [`Retry-After`](https://www.rfc-editor.org/rfc/rfc9110#name-retry-after)
-   header voorkomt onnodig veel netwerkverkeer. Voor directe updates zonder
-   polling zijn Server-Sent Events (SSE) of Webhooks geschikter (zie
-   [Event-Driven Architecture](./eda.md)).
+   De provider kan een advies meegeven over het volgende pollmoment,
+   bijvoorbeeld met een
+   [`Retry-After`](https://www.rfc-editor.org/rfc/rfc9110#name-retry-after)
+   header. Voor directe updates zonder polling zijn Server-Sent Events (SSE) of
+   Webhooks geschikter (zie [Event-Driven Architecture](./eda.md)).
 4. **Statusupdate**: Het statusendpoint geeft de huidige status (bijv.
    "Processing"), eventueel met een voortgangspercentage of schatting van de
    resterende tijd.
-5. **Voltooiing**: Bij voltooiing meldt het endpoint "Succeeded" (met een link
-   naar of inhoud van het resultaat) of "Failed" (met bijvoorbeeld
-   [Problem Details](./problem-details.md)). De consumer kan dan indien nodig
-   het resultaat ophalen.
+5. **Voltooiing**: Bij voltooiing meldt het endpoint "Succeeded" met een link
+   naar of inhoud van het resultaat, of "Failed" met bijvoorbeeld
+   [Problem Details](./problem-details.md). Als alternatief kan het
+   statusendpoint bij succesvolle voltooiing antwoorden met een `303 See Other`
+   redirect naar de URL van het uiteindelijke resultaat.
 
 Hieronder het sequentiediagram voor de polling-variant van "Status opvragen".
 
