@@ -47,7 +47,9 @@ Het verloop is als volgt:
    [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc9110#name-202-accepted)
    response met een `Location` header naar het statusendpoint. De response body
    kan aanvullende informatie bevatten, zoals een upload-URL of referenties naar
-   gerelateerde (vervolg)acties voor de consumer.
+   gerelateerde (vervolg)acties voor de consumer. Gebruik bijvoorbeeld een
+   [Transactionele Outbox](./transactionele-outbox.md) om te garanderen dat de
+   operatie niet verloren gaat.
 3. **Status opvragen**: De consumer pollt het statusendpoint met `GET`-requests.
    Een [`Retry-After`](https://www.rfc-editor.org/rfc/rfc9110#name-retry-after)
    header voorkomt onnodig veel netwerkverkeer. Voor directe updates zonder
