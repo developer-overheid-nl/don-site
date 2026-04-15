@@ -40,8 +40,8 @@ Het verloop is als volgt:
 1. **Request**: De consumer stuurt een `POST`-request om een operatie te
    starten. Zie ook
    [Veilige retries met volledige idempotency](./retries-met-volledige-idempotency.md)
-   voor veilige retries en [Transactionele Outbox](./transactionele-outbox.md)
-   om te borgen dat de geaccepteerde operatie intern niet verloren gaat.
+   voor veilige retries. Leg de geaccepteerde operatie duurzaam vast voordat je
+   `202 Accepted` retourneert, zodat deze intern niet verloren kan gaan.
 2. **Acceptatie**: De provider valideert de aanvraag en stuurt direct een
    [`202 Accepted`](https://www.rfc-editor.org/rfc/rfc9110#name-202-accepted)
    response met een `Location` header naar het statusendpoint. De response body
