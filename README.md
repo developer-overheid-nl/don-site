@@ -1,5 +1,10 @@
 # Developer Overheid NL website
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/developer-overheid-nl/don-site/build.yml?branch=main)
+![GitHub License](https://img.shields.io/github/license/developer-overheid-nl/don-site)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/developer-overheid-nl/don-site)
+[![Static Badge](https://img.shields.io/badge/Read-Changelog-lightcoral)](./CHANGELOG.md)
+
 Dit is de repository van de website
 [developer.overheid.nl](https://developer.overheid.nl), de kennisbank,
 communities en blog.  
@@ -18,7 +23,7 @@ staan de verschillende manieren waarop je mee kan helpen.
 
 Neem contact op met ons via een bericht op ons
 [Slack kanaal](https://codefornl.slack.com/archives/CFV4B3XE2) of stuur een
-e-mail naar developer.overheid@geonovum.nl. Dan kijken we samen hoe we je
+e-mail naar <developer.overheid&#x40;geonovum.nl>. Dan kijken we samen hoe we je
 bijdrage kunnen vormgeven.
 
 ## Lokaal draaien van de website
