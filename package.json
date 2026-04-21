@@ -45,6 +45,7 @@
     "xml2js": "0.6.2"
   },
   "devDependencies": {
+    "@changesets/cli": "2.30.0",
     "@docusaurus/module-type-aliases": "3.9.2",
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
