@@ -1,5 +1,11 @@
 # @developer-overheid-nl/website
 
+## 1.1.0
+
+### Minor Changes
+
+- 9a13d10: Artikel over onze eerste online update toegevoegd op 23 april 2026.
+
 ## 1.0.0
 
 ### Major Changes
