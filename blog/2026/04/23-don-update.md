@@ -1,14 +1,12 @@
 ---
 authors: [tom-ootes]
 description:
-  "Op 22 april hielden we een online update-sessie via Teams. We lichten toe wat
-  er het afgelopen kwartaal veranderd is aan de kennisbank, de registersites, de
-  API-infrastructuur en de tooling rondom standaarden."
+    "We lichtten toe wat er het afgelopen kwartaal toegevoegd is aan de kennisbank, we presenteerden de
+ nieuwe registersites, de API-infrastructuur en betere tooling rondom standaarden."
 tags:
   - developer.overheid.nl
   - open-source
   - api
-draft: true
 ---
 
 # Update developer.overheid.nl — april 2026
@@ -36,8 +34,8 @@ zijn.
 - **Agenda**: FOST op 9 & 10 juni (Amsterdam) en een fysieke bijeenkomst op 17
   juni (Utrecht).
 
-📺 Terugkijken kan hier:
-[online update 22 april](https://stichtinggeonovum.sharepoint.com/:v:/s/Databijdebron/IQDpJ2awkdjDRo5E7UuZW9KbAZdZdi0cd3lVYcEKgxUbFf4?e=bWW20u).
+📺 De live sessie is nog niet vrijelijk terug te kijken. Voor toegang tot de
+opname stuur een mail naar: **`V.vanderHeijden@geonovum.nl`.**
 
 :::
 
@@ -45,9 +43,9 @@ zijn.
 
 De kennisbank op de homepage heeft een nieuwe indeling gekregen. Naast de
 bestaande thema's zijn er drie dwarsdoorsnedes toegevoegd:
-**[tutorials](/kennisbank/tutorials)**, **[standaarden](/standaarden)** en
-**[tools](/kennisbank/tools)**. Hiermee kun je direct op contenttype zoeken,
-ongeacht het thema.
+**[tutorials](/kennisbank/tutorials)**,
+**[standaarden](/kennisbank/standaarden)** en **[tools](/kennisbank/tools)**.
+Hiermee kun je direct op contenttype zoeken, ongeacht het thema.
 
 Ook zijn een aantal thema's hernoemd. Het meest zichtbaar: 'Infra' heet voortaan
 'DevOps'. Tot slot is het proces voor het
@@ -118,7 +116,7 @@ voordelen van publiccode.yml zijn:
 - Doordat we door heel Europa dezelfde metadata hanteren kunnen we projecten
   uitwisselen tussen verschillende catalogi van landen. Zo bestaan er
   bijvoorbeeld al een [Duitse](https://opencode.de/en/software), en een
-  [Italiaanse ](https://developers.italia.it/it/search) op basis van
+  [Italiaanse](https://developers.italia.it/it/search) op basis van
   publiccode.yml.
 - Door je project te beschrijven in een bestandje in je repository sla je deze
   metadata agnostisch van je git-omgeving op. Als je dus later moet verhuizen
@@ -126,7 +124,7 @@ voordelen van publiccode.yml zijn:
 - De publiccode.yml dient als flag om aan te geven dat je project wellicht
   nuttig is voor andere organisaties uit de publieke sector.
 
-Om het aanmaken een `publiccode.yml` te vergemakkelijken is er een AI-skill
+Om het aanmaken van een `publiccode.yml` te vergemakkelijken is er een AI-skill
 ontwikkeld die automatisch een beschrijving en metadata genereert door
 projectinformatie zoals de README te analyseren.
 
@@ -148,8 +146,10 @@ ontmoeten:
   twee tracks; een API- en een Open Source-track. Hiervoor zullen gratis tickets
   beschikbaar worden gesteld. Houd hiervoor onze Mastodon in de gaten.
 - **17 juni** — Developer.overheid.nl meetup in het Beatrixtheater in Utrecht.
-  Schrijf je in op:
-  [opensourcewerken.nl/events](https://opensourcewerken.nl/events/view/28756611-d38b-40c1-8f87-4ac8433831dd/developeroverheidnl-meetup).
+  Op deze middag willen we jullie inspireren met interessante hands-on demo's,
+  onze highlights van het afgelopen jaar delen en kunnen elkaar weer eens in het
+  echt ontmoeten. Schrijf je in op:
+  [opensourcewerken.nl](https://opensourcewerken.nl/events/view/28756611-d38b-40c1-8f87-4ac8433831dd/developeroverheidnl-meetup).
 
 Vragen of feedback? Dat kan via de gebruikelijke kanalen of via een GitHub
 issue.
