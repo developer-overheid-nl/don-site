@@ -89,7 +89,7 @@ te brengen.
 ## De nieuwe don-checker
 
 Er is een nieuwe
-[**don-checker**](https://developer-overheid-nl.github.io/don-checker/#/adr-20)
+[**don-checker**](https://github.com/developer-overheid-nl/don-checker)
 geïntroduceerd die onafhankelijk van Spectral werkt en via de commandline
 aanroepbaar is. Kenmerken:
 
