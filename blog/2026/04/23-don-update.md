@@ -37,7 +37,7 @@ zijn.
   juni (Utrecht).
 
 📺 Terugkijken kan hier:
-[online update 22 april](https://stichtinggeonovum.sharepoint.com/:v:/s/Databijdebron/IQDpJ2awkdjDRo5E7UuZW9KbAZdZdi0cd3lVYcEKgxUbFf4?e=bWW20u)
+[online update 22 april](https://stichtinggeonovum.sharepoint.com/:v:/s/Databijdebron/IQDpJ2awkdjDRo5E7UuZW9KbAZdZdi0cd3lVYcEKgxUbFf4?e=bWW20u).
 
 :::
 
@@ -134,7 +134,7 @@ Deze skill is gebaseerd op de internationale standaard
 [_Agent Skills_](https://agentskills.io/), hierdoor is hij compatibel met
 [verschillende AI clients](https://agentskills.io/clients).
 
-De skill is onderdeel van een nieuwe
+De skill wordt onderdeel van een nieuwe
 [**AI Skills Marketplace**](https://oss.developer.overheid.nl/repositories/2d955435-f27d-4088-a7a2-816b601ba8fe),
 waarmee overheidsorganisaties kennis over standaarden en werkwijzen direct in
 hun AI-assistant kunnen laden.
@@ -144,13 +144,12 @@ hun AI-assistant kunnen laden.
 Er komen weer reuze interessante en gezellige events aan waarop je ons kan
 ontmoeten:
 
-- **9 & 10 juni** — FOST (voorheen API Days) in Amsterdam. Er worden gratis
-  tickets beschikbaar gesteld. Houd hiervoor onze Mastodon in de gaten.
-- **17 juni** — Developer.overheid.nl meetup in het Beatrixtheater in Utrecht,
-  waar we de roadmap voor het tweede halfjaar van 2026 presenteren.
-
-  Inschrijven en meer informatie vind je op op:
-  https://opensourcewerken.nl/events/view/28756611-d38b-40c1-8f87-4ac8433831dd/developeroverheidnl-meetup
+- **9 & 10 juni** — FOST (voorheen API Days) in Amsterdam. Hier organiseren we
+  twee tracks; een API- en een Open Source-track. Hiervoor zullen gratis tickets
+  beschikbaar worden gesteld. Houd hiervoor onze Mastodon in de gaten.
+- **17 juni** — Developer.overheid.nl meetup in het Beatrixtheater in Utrecht.
+  Schrijf je in op:
+  [opensourcewerken.nl/events](https://opensourcewerken.nl/events/view/28756611-d38b-40c1-8f87-4ac8433831dd/developeroverheidnl-meetup).
 
 Vragen of feedback? Dat kan via de gebruikelijke kanalen of via een GitHub
 issue.
