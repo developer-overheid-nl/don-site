@@ -52,9 +52,12 @@ pnpx @changesets/cli init
 
 Werk je in Github dan is het aan te raden om de Github App te installeren in je repository. Deze bot checkt elke Pull Request (PR) en kijkt of er een change-bestand in de PR zit en plaatst een comment hierover.
 
+![Changeset-bot](./img/changeset-bot.png)
+
 :::tip Spreek met je team af hoe je aangeeft dat er geen change gelogd hoeft te worden, bij developer.overheid.nl zetten we een 👍🏻 op de comment als het "okay" is dat er geen changeset is:::
 
-De Github Action zorgt ervoor dat Changesets een PR aanmaakt en bijhoudt om de release te doen. De standaard naam is "Version Packages", deze is aan te passen in de `.changeset/config.json`
+De Github Action zorgt ervoor dat Changesets een PR aanmaakt en bijhoudt om de release te doen. De standaard naam is "Version Packages", deze is aan te passen in de [workflow action](https://github.com/changesets/action#inputs).  
+Het mergen van deze PR merged de Changelog met de nieuwe onderdelen van die release en als de workflow ingesteld is om te publiceren naar Github en of NPM wordt dat ook gedaan.
 
 ### Changie
 
