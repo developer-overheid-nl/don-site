@@ -1,8 +1,9 @@
 ---
 authors: [tom-ootes]
 description:
-    "We lichtten toe wat er het afgelopen kwartaal toegevoegd is aan de kennisbank, we presenteerden de
- nieuwe registersites, de API-infrastructuur en betere tooling rondom standaarden."
+  "Op 24 april was de softlaunch van code.overheid.nl: één gedeelde gitomgeving
+  voor de overheid, gebouwd op Forgejo. In deze blogpost bespreken we wat er
+  nodig is om dat tot een succes te maken: beginnen met bouwen, en samenwerken."
 tags:
   - git
   - open-source
@@ -12,9 +13,9 @@ tags:
 
 24 april was ik bij de softlaunch van code.overheid.nl. Het is een project dat
 bij veel developers en organisaties aanslaat omdat elke developer er één nodig
-heeft. Sinds er veel aandacht uit gaat naar digitale soevereiniteit is de roep
-om een gezamenlijke gitomgeving alleen maar gegroeid, het werd steeds minder
-voordehandliggend om op Github te blijven.
+heeft om überhaupt samen te kunnen werken. Sinds er veel aandacht uit gaat naar
+digitale soevereiniteit is de roep om een gezamenlijke gitomgeving alleen maar
+gegroeid, het werd steeds minder voordehandliggend om op Github te blijven.
 
 Vanuit dit besef heeft OSPO BZK zich hard gemaakt voor de opzet van
 code.overheid.nl, in de vorm van een Forgejo instance.
@@ -28,8 +29,9 @@ ik je graag door naar de blogpost van Jan Vlug:
 :::success[**TL;DR**]
 
 code.overheid.nl is een nieuwe gedeelde gitomgeving voor de overheid, gebouwd op
-Forgejo. Het platform bevindt zich in de pilotfase en wordt gebouwd **samen
-met** developers. Wil jij al meedoen? Stuur een mail naar
+Forgejo. Het platform bevindt zich in de pilotfase en wordt **samen met
+developers** gebouwd. Om dit tot een succes te maken moeten we samen aan de
+slag. Wil je meebouwen? Stuur een mail naar
 [codeplatform@rijksoverheid.nl](mailto:codeplatform@rijksoverheid.nl).
 
 :::
@@ -58,6 +60,8 @@ code.overheid.nl weggelegd.
 Dat is de kans die we nu hebben, dat we eindelijk een plek hebben waar we kunnen
 samenwerken en van elkaar kunnen leren.
 
+![./img/gina.jpg](./img/gina.jpg) _Gina Plat van OSPO BZK_
+
 ## Zo beginnen we
 
 Hoe beginnen we hier mee? Door als verschillende organisaties met elkaar in
@@ -74,8 +78,10 @@ kans dat je energie in iets stopt waarvan je achteraf moet concluderen dat het
 helemaal niet nuttig was.
 
 En omdat de organisaties zelf ook energie stoppen in het bouwen van features, en
-dus skin in the game hebben, zullen ze eerder geneigd zijn het gebruik ervan ook
-aan te moedigen of te verplichten.
+dus skin in the game hebben, zullen ze eerder geneigd zijn het gebruik ervan aan
+te moedigen of te verplichten.
+
+![./img/boris.jpg](./img/boris.jpg) _Boris van Hoytema van OSPO BZK_
 
 ## Pilot
 
@@ -84,7 +90,7 @@ nog niet iedere overheidsorganisatie zich kan aanmelden en er gebruik van kan
 maken. De reden hiervoor is dat er gekozen is voor een graduele aanpak waarbij
 langzaam maar zeker een volwaardig gitplatform ontstaat.
 
-## Nog niet af
+### Nog niet af
 
 Op dit moment kan dus nog niet de hele overheid ge-onboard worden, maar dat is
 in mijn optiek logisch. We moeten voorkomen dat het beeld ontstaat dat het nog
@@ -102,17 +108,17 @@ raken. Hiervoor kan je contact opnemen met:
 
 Deze blogpost wil ik ook graag gebruiken als een herinnering aan mezelf om me te
 commiteren aan code.overheid.nl. Het blijven zorgen voor een project in de vorm
-van issues, ideeen en pull requests is iets wat een hoop geduld vereist. Vooral
-omdat je er ineens voor moet gaan **samenwerken**.
+van issues, ideeën en pull requests is iets wat een hoop geduld vereist. Vooral
+omdat je er ineens voor moet gaan _samenwerken_.
 
 Dat zie ik ook gebeuren bij de publiccode.yml-standaard waaraan ik bijdraag. De
-meeste tijd gaat zitten in het koppelen van mensen en het bespreken van ideeen,
+meeste tijd gaat zitten in het koppelen van mensen en het bespreken van ideeën,
 voordat het daadwerkelijk in de standaard zelf terecht komt.
 
 ## Conclusie
 
-Bij deze dus de uitnodiging om code.overheid.nl in de gaten te houden en
-eventueel mee te bouwen. Alleen samen komen we tot een volwaardig Github
+Bij deze dus de uitnodiging om code.overheid.nl in de gaten te houden en indien
+mogelijk mee te bouwen. Alleen samen komen we tot een volwaardig Github
 alternatief.
 
 Ben je klaar om mee te bouwen? Meld je dan aan via de "Meedoen"-sectie
