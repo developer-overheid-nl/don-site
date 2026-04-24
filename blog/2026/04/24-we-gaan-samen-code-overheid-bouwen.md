@@ -12,7 +12,7 @@ tags:
 # We gaan samen code.overheid.nl bouwen
 
 24 april was ik bij de softlaunch van code.overheid.nl. Het is een project dat
-bij veel developers en organisaties aanslaat omdat elke developer er één nodig
+bij veel developers en organisaties aanslaat omdat elke developer een gitomgeving nodig
 heeft om überhaupt samen te kunnen werken. Sinds er veel aandacht uit gaat naar
 digitale soevereiniteit is de roep om een gezamenlijke gitomgeving alleen maar
 gegroeid, het werd steeds minder voordehandliggend om op Github te blijven.
