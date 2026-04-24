@@ -1,5 +1,11 @@
 # @developer-overheid-nl/website
 
+## 1.2.0
+
+### Minor Changes
+
+- f942436: Add blogpost about code.overheid.nl
+
 ## 1.1.0
 
 ### Minor Changes
