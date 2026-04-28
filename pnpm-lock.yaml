@@ -2372,8 +2372,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromedriver@147.0.3:
-    resolution: {integrity: sha512-OF+WpbIXXqD9g0BxDkJo3vpBgeaAWy8VpWDkt9yM466lVFnhzIgjmj1SvFYMENwesaD2iFABiY5surVz6rj3qA==}
+  chromedriver@147.0.4:
+    resolution: {integrity: sha512-eRNbfkoTvAsSfFODM4QVhs3cXB/B4/nFHeI6+ycuKan5e3bJrq8njuLTBHHOLbL0dggxEpMHLiczJUQa+Gw3JA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -4555,6 +4555,10 @@ packages:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
 
+  netmask@2.1.1:
+    resolution: {integrity: sha512-eonl3sLUha+S1GzTPxychyhnUzKyeQkZ7jLjKrBagJgPla13F+uQ71HgpFefyHgqrjEbCPkDArxYsjY8/+gLKA==}
+    engines: {node: '>= 0.4.0'}
+
   nice-try@1.0.5:
     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
 
@@ -6620,7 +6624,7 @@ snapshots:
     dependencies:
       '@axe-core/webdriverjs': 4.11.0(selenium-webdriver@4.22.0)
       axe-core: 4.10.3
-      chromedriver: 147.0.3
+      chromedriver: 147.0.4
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 16.6.1
@@ -9898,7 +9902,7 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@147.0.3:
+  chromedriver@147.0.4:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.15.0
@@ -12579,6 +12583,8 @@ snapshots:
 
   netmask@2.0.2: {}
 
+  netmask@2.1.1: {}
+
   nice-try@1.0.5: {}
 
   no-case@3.0.4:
@@ -12773,7 +12779,7 @@ snapshots:
   pac-resolver@9.0.1(quickjs-wasi@2.2.0):
     dependencies:
       degenerator: 7.0.1(quickjs-wasi@2.2.0)
-      netmask: 2.0.2
+      netmask: 2.1.1
       quickjs-wasi: 2.2.0
 
   package-json@8.1.1:
