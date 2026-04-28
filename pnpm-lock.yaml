@@ -2203,8 +2203,8 @@ packages:
     engines: {node: '>=10.0.0'}
     deprecated: Security vulnerability fixed in 5.2.1, please upgrade
 
-  basic-ftp@5.3.0:
-    resolution: {integrity: sha512-5K9eNNn7ywHPsYnFwjKgYH8Hf8B5emh7JKcPaVjjrMJFQQwGpwowEnZNEtHs7DfR7hCZsmaK3VA4HUK0YarT+w==}
+  basic-ftp@5.3.1:
+    resolution: {integrity: sha512-bopVNp6ugyA150DDuZfPFdt1KZ5a94ZDiwX4hMgZDzF+GttD80lEy8kj98kbyhLXnPvhtIo93mdnLIjpCAeeOw==}
     engines: {node: '>=10.0.0'}
 
   batch@0.6.1:
@@ -2372,8 +2372,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromedriver@147.0.3:
-    resolution: {integrity: sha512-OF+WpbIXXqD9g0BxDkJo3vpBgeaAWy8VpWDkt9yM466lVFnhzIgjmj1SvFYMENwesaD2iFABiY5surVz6rj3qA==}
+  chromedriver@148.0.0:
+    resolution: {integrity: sha512-H8doVBjmPAyC1z7qYtf/CDPsmOtFqPaMo96O9fNPN9niMacNLZgsuBuHyNxHZM8N7ciB4f4s8IGKDFt3YmvlCw==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -3785,6 +3785,10 @@ packages:
     resolution: {integrity: sha512-NWv9YLW4PoW2B7xtzaS3NCot75m6nK7Icdv0o3lfMceJVRfSoQwqD4wEH5rLwoKJwUiZ/rfpiVBhnaF0FK4HoA==}
     engines: {node: '>= 12'}
 
+  ip-address@10.1.1:
+    resolution: {integrity: sha512-1FMu8/N15Ck1BL551Jf42NYIoin2unWjLQ2Fze/DXryJRl5twqtwNHlO39qERGbIOcKYWHdgRryhOC+NG4eaLw==}
+    engines: {node: '>= 12'}
+
   ip-regex@4.3.0:
     resolution: {integrity: sha512-B9ZWJxHHOHUhUjCPrMpLD4xEq35bUTClHM1S6CBU5ixQnkZmwipwgc96vAd7AAGM9TGHvJR+Uss+/Ak6UphK+Q==}
     engines: {node: '>=8'}
@@ -4553,6 +4557,10 @@ packages:
 
   netmask@2.0.2:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
+    engines: {node: '>= 0.4.0'}
+
+  netmask@2.1.1:
+    resolution: {integrity: sha512-eonl3sLUha+S1GzTPxychyhnUzKyeQkZ7jLjKrBagJgPla13F+uQ71HgpFefyHgqrjEbCPkDArxYsjY8/+gLKA==}
     engines: {node: '>= 0.4.0'}
 
   nice-try@1.0.5:
@@ -5795,6 +5803,10 @@ packages:
     resolution: {integrity: sha512-HLpt+uLy/pxB+bum/9DzAgiKS8CX1EvbWxI4zlmgGCExImLdiad2iCwXT5Z4c9c3Eq8rP2318mPW2c+QbtjK8A==}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
 
+  socks@2.8.8:
+    resolution: {integrity: sha512-NlGELfPrgX2f1TAAcz0WawlLn+0r3FyhhCRpFFK2CemXenPYvzMWWZINv3eDNo9ucdwme7oCHRY0Jnbs4aIkog==}
+    engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
+
   sort-css-media-queries@2.2.0:
     resolution: {integrity: sha512-0xtkGhWCC9MGt/EzgnvbbbKhqWjl1+/rncmhTh5qCpbYguXh6S/qwePfv/JQ8jePXXmqingylxoC49pCkSPIbA==}
     engines: {node: '>= 6.3.0'}
@@ -6620,7 +6632,7 @@ snapshots:
     dependencies:
       '@axe-core/webdriverjs': 4.11.0(selenium-webdriver@4.22.0)
       axe-core: 4.10.3
-      chromedriver: 147.0.3
+      chromedriver: 148.0.0
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 16.6.1
@@ -9679,7 +9691,7 @@ snapshots:
 
   basic-ftp@5.0.5: {}
 
-  basic-ftp@5.3.0: {}
+  basic-ftp@5.3.1: {}
 
   batch@0.6.1: {}
 
@@ -9898,7 +9910,7 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@147.0.3:
+  chromedriver@148.0.0:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.15.0
@@ -11140,7 +11152,7 @@ snapshots:
 
   get-uri@8.0.0:
     dependencies:
-      basic-ftp: 5.3.0
+      basic-ftp: 5.3.1
       data-uri-to-buffer: 8.0.0
       debug: 4.4.3
     transitivePeerDependencies:
@@ -11559,6 +11571,8 @@ snapshots:
       loose-envify: 1.4.0
 
   ip-address@10.0.1: {}
+
+  ip-address@10.1.1: {}
 
   ip-regex@4.3.0: {}
 
@@ -12579,6 +12593,8 @@ snapshots:
 
   netmask@2.0.2: {}
 
+  netmask@2.1.1: {}
+
   nice-try@1.0.5: {}
 
   no-case@3.0.4:
@@ -12773,7 +12789,7 @@ snapshots:
   pac-resolver@9.0.1(quickjs-wasi@2.2.0):
     dependencies:
       degenerator: 7.0.1(quickjs-wasi@2.2.0)
-      netmask: 2.0.2
+      netmask: 2.1.1
       quickjs-wasi: 2.2.0
 
   package-json@8.1.1:
@@ -14034,7 +14050,7 @@ snapshots:
     dependencies:
       agent-base: 9.0.0
       debug: 4.4.3
-      socks: 2.8.7
+      socks: 2.8.8
     transitivePeerDependencies:
       - supports-color
 
@@ -14049,6 +14065,11 @@ snapshots:
   socks@2.8.7:
     dependencies:
       ip-address: 10.0.1
+      smart-buffer: 4.2.0
+
+  socks@2.8.8:
+    dependencies:
+      ip-address: 10.1.1
       smart-buffer: 4.2.0
 
   sort-css-media-queries@2.2.0: {}
