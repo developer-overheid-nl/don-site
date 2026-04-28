@@ -23,6 +23,8 @@ stukje vooruit te kijken, met als kern de vraag: hoe zorg je ervoor dat events
 niet alleen goed beschreven zijn, maar ook consistent en interoperabel worden
 uitgewisseld tussen systemen?
 
+<!-- truncate -->
+
 ## Cloudevents
 
 Waar AsyncAPI zich richt op het beschrijven van berichtenstromen, biedt het niet

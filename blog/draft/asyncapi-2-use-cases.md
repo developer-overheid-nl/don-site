@@ -23,6 +23,8 @@ gebruiken? In deze blog ga ik dieper in op de situaties waarin AsyncAPI wel
 geschikt lijkt, en in welke situaties het van weinig toegevoegde waarde lijkt te
 zijn.
 
+<!-- truncate -->
+
 ## Toegevoegde waarde van AsyncAPI
 
 Daar horen een paar disclaimers bij. Bovenal moet duidelijk zijn dat dit gaat om
@@ -168,7 +170,7 @@ voordeel tegenover staat.
 ### Simpele/kleine berichten
 
 Een vergelijkbaar beeld ontstaat bij kleine of eenduidige berichten; denk aan
-simpele status berichten als een { "status": "ok" }. Wanneer de inhoud beperkt
+simpele status berichten als een `{ "status": "ok" }`. Wanneer de inhoud beperkt
 is en er weinig ruimte is voor interpretatie, voegt het modelleren van
 uitgebreide schema’s weinig toe. Het risico dat AsyncAPI hier probeert te
 ondervangen, namelijk misinterpretatie van complexe data in een uitgebreide en

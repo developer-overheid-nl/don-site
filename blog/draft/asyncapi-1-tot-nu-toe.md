@@ -21,6 +21,8 @@ wanneer we het zouden moeten gebruiken is op dit moment dé kernvraag. Ik wil
 jullie in een reeks aan blogposts graag meenemen in waar de werkgroep nu staat
 m.b.t. AsyncAPI en hoe we de toekomst voor ons zien.
 
+<!-- truncate -->
+
 Om dit alles te gaan bevatten is door de werkgroep eerst aangenomen om wat use
 cases te gaan aanpakken en gewoon te zien waar we tegenaan lopen wanneer
 AsyncAPI als standaard as-is wordt gebruikt. Hiermee konden we tegelijk
