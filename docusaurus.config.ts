@@ -212,8 +212,8 @@ const config: Config & {
           // },
         ],
         // apiKey: "xyz", Lokaal
-        // apiKey: "wpxe5EBzgodXiGygAr5jIYIAXNErTg3w", //test
-        apiKey: "TimHDyXz7K91KWuiXDcH2UN41hMk8BNc", //prod
+        // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
+        apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
       },
       typesenseSearchParameters: {
         query_by:
