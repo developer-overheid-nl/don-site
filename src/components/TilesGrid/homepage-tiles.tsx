@@ -252,7 +252,6 @@ const tiles: GridTile[] = [
       },
       { link: "/kennisbank/security/wetgeving-en-beleid/bio", label: "BIO" },
       { link: "/kennisbank/security/tools/openkat", label: "OpenKAT" },
-      { link: "/kennisbank/security/tools/internet-nl", label: "Internet.nl" },
     ],
     link: "/kennisbank/security/",
   },
