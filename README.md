@@ -68,23 +68,35 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 
 ## Changelog
 
-Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin vermelden wat er veranderd, verbeterd of toegevoegd is.  
-Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries samenvoegt. Deze pull request kan worden gemerged voor elke release.
+Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de
+changelog. Hierin vermelden wat er veranderd, verbeterd of toegevoegd is.  
+Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden
+aangemaakt. De Changesets bot en workflow maakt automatisch een pull request aan
+die de verschillende changelog entries samenvoegt. Deze pull request kan worden
+gemerged voor elke release.
 
-Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de changelog om bij te houden wat er veranderd is in de website. De semver gebruikt in de changelog heeft geen technische betekenis, maar geeft aan of een verandering een nieuwe feature, bijvoorbeeld een nieuw blog, is (minor), een bugfix (patch) of een "breaking" change (major). Voorbeelden van een breaking change zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de URL van een artikel.
+Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de
+changelog om bij te houden wat er veranderd is in de website. De semver gebruikt
+in de changelog heeft geen technische betekenis, maar geeft aan of een
+verandering een nieuwe feature, bijvoorbeeld een nieuw blog, is (minor), een
+bugfix (patch) of een "breaking" change (major). Voorbeelden van een breaking
+change zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de
+URL van een artikel.
 
 ### Hoe maak ik een changelog entry aan?
 
 1. Draai `pnpm changeset` in de terminal.
 2. Kies de type verandering (major, minor of patch).
-3. Schrijf een korte beschrijving van de verandering.
+3. Schrijf een korte beschrijving van de verandering. Let op, de beschrijving
+   schrijf je in het Nederlands.
 4. Sla de changeset op, er wordt automatisch een markdown bestand aangemaakt in
    `.changeset/` met de informatie die je hebt ingevuld.
 
 ### Release nieuwe versie van de website
 
 1. Merge de pull request van de Changesets bot.
-2. Merge de pull request in de `don-infra` repository, zie de beschrijving hieronder.
+2. Merge de pull request in de `don-infra` repository, zie de beschrijving
+   hieronder.
 
 ## Deployen
 
@@ -146,4 +158,4 @@ Een contribution of pull request leidt niet automatisch tot een deployment.
   ook `INFRA_REPO` aan te passen. Daardoor is dit pad in de praktijk bedoeld
   voor maintainers of contributors met een branch in deze repository.
 
-[Changesets]:https://github.com/changesets/changesets
+[Changesets]: https://github.com/changesets/changesets
