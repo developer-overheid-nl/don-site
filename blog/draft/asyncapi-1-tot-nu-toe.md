@@ -27,7 +27,7 @@ Om dit alles te gaan bevatten is door de werkgroep eerst aangenomen om wat use
 cases te gaan aanpakken en gewoon te zien waar we tegenaan lopen wanneer
 AsyncAPI als standaard as-is wordt gebruikt. Hiermee konden we tegelijk
 technische affiniteit opdoen, iets van waarde opleveren voor partijen die
-daadwerkelijk asynchrone API’s ontsluiten, en infromatie verzamelen voor het
+daadwerkelijk asynchrone API’s ontsluiten, en informatie verzamelen voor het
 beantwoorden van de grote vraag: “moet dit een nieuwe standaard worden as-is, of
 is er een NLGov profiel nodig?” Met dit in het achterhoofd is een tweetal cases
 opgepakt en zijn we de diepte ingedoken, met regelmatige besprekingen in de
