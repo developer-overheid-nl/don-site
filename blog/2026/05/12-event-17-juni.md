@@ -46,10 +46,6 @@ of mail naar [v.vanderheijden@geonovum.nl](mailto:v.vanderheijden@geonovum.nl).
   Een open source securitytool met een actieve community en slimme plugins
   ("boefjes") voor het analyseren van netwerken en systemen.
 
-- **code.overheid.nl** — Johan Groenen  
-  Over de gedeelde Forgejo-omgeving voor de overheid en de groeiende behoefte
-  aan digitale soevereiniteit en open samenwerking.
-
 - **Open mic & vooruitblik**  
   Welke tooling, standaarden of use cases wil jij de volgende keer zien?
 
