@@ -22,7 +22,8 @@ architecture:
   description: Software- en systeemarchitectuur
   label: Architectuur
 argo-cd:
-  description: Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery
+  description:
+    Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery
     tool voor Kubernetes.
   label: Argo CD
 asyncapi:
@@ -72,7 +73,8 @@ dcat:
   label: DCAT
 dependabot:
   label: dependabot
-  description: Dependabot is een geautomatiseerde service van GitHub die je helpt
+  description:
+    Dependabot is een geautomatiseerde service van GitHub die je helpt
     bij het bijhouden van dependencies in je project.
 design-system:
   label: Design System
@@ -81,7 +83,8 @@ developer.overheid.nl:
 development:
   label: Development
 devops:
-  description: DevOps (een samentrekking van "development" en "operations") is een
+  description:
+    DevOps (een samentrekking van "development" en "operations") is een
     gebruik en een praktijk binnen softwareontwikkeling die tot doel heeft
     softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen.
   label: DevOps
@@ -99,7 +102,8 @@ digitale-soevereiniteit:
     zeggenschap, invloed, regie en keuzevrijheid over digitale systemen.
   label: Digitale soevereiniteit
 docker:
-  description: Docker is een platform voor het bouwen, distribueren en draaien van
+  description:
+    Docker is een platform voor het bouwen, distribueren en draaien van
     applicaties in individuele containers
   label: Docker
 eherkenning:
@@ -113,7 +117,8 @@ eidas:
 eu:
   label: Europe
 eda:
-  description: Event Driven Architecture (EDA) is een architectuurparadigma waarin
+  description:
+    Event Driven Architecture (EDA) is een architectuurparadigma waarin
     componenten communiceren door het detecteren, publiceren, en verwerken van
     events (gebeurtenissen), zodat systemen loosely coupled, schaalbaar en
     responsief zijn.
@@ -136,7 +141,8 @@ flux:
 forum-standaardisatie:
   label: Forum Standaardisatie
 formatting:
-  description: Formatting is het automatisch opmaken van code volgens afgesproken
+  description:
+    Formatting is het automatisch opmaken van code volgens afgesproken
     stijlregels
   label: Formatting
 foss:
@@ -175,7 +181,8 @@ gouden-api:
   label: Gouden API
 haven:
   label: "Haven"
-  description: "Haven is een open source standaard met criteria en best practices
+  description:
+    "Haven is een open source standaard met criteria en best practices
     voor hoe je Kubernetes gebruikt."
 helm:
   description: Helm is een package manager voor Kubernetes
