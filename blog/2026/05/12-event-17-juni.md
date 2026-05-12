@@ -8,7 +8,7 @@ description: |
 # Kom naar onze meetup op 17 juni: Samen. Beter. Bouwen.
 
 Hoe bouwen we binnen de overheid software die open, veilig, herbruikbaar én
-praktisch toepasbaar is?
+dienstbaar is aan de samenleving?
 
 Op woensdag 17 juni organiseren we een nieuwe developer.overheid.nl meetup in
 Utrecht. Een middag voor developers, architecten, platform engineers, tech leads
