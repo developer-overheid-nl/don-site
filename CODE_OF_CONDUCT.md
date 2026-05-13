@@ -31,5 +31,5 @@ dient zich in te spannen voor een sfeer waar:
   ontwerp en besluitvorming betrekken.
 
 Mocht er zich een situatie voordoen waar deze waarden in het geding komen, dan
-kan je een berichtje sturen naar onze communitymanager
-[Tom Ootes](https://codefornl.slack.com/archives/D010ZM2DNNR).
+kan je een berichtje sturen naar onze communitymanager:
+[t.ootes@geonovum.nl](t.ootes@geonovum.nl).

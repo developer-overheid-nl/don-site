@@ -23,13 +23,13 @@ architecture:
   label: Architectuur
 argo-cd:
   description:
-    Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery tool voor
-    Kubernetes.
+    Argo CD is een declaratieve, GitOps-gebaseerde continuous delivery
+    tool voor Kubernetes.
   label: Argo CD
 asyncapi:
-  description:
-    AsyncAPI is een standaard om asynchrone berichtuitwisselingen te beschrijven
-    analoog aan hoe Open API Specification(OAS) dit doet voor REST APIs
+  description: AsyncAPI is een standaard om asynchrone berichtuitwisselingen te
+    beschrijven analoog aan hoe Open API Specification(OAS) dit doet voor REST
+    APIs
   label: AsyncAPI
 avg:
   description: Algemene verordening gegevensbescherming (AVG)
@@ -56,16 +56,15 @@ cli:
 cloudevents:
   label: CloudEvents
 common-ground:
-  description:
-    Common Ground is een initiatief van de Vereniging van Nederlandse Gemeenten
-    (VNG) dat leidde tot een toekomstbestendige architectuurvisie.
+  description: Common Ground is een initiatief van de Vereniging van Nederlandse
+    Gemeenten (VNG) dat leidde tot een toekomstbestendige architectuurvisie.
   label: Common Ground
 community:
   label: Community
 containerization:
-  description:
-    Containerization is het proces waarbij applicaties en hun afhankelijkheden
-    worden geïsoleerd in gestandaardiseerde eenheden (containers).
+  description: Containerization is het proces waarbij applicaties en hun
+    afhankelijkheden worden geïsoleerd in gestandaardiseerde eenheden
+    (containers).
   label: Containerization
 data-bij-de-bron:
   description: Het principe Data bij de Bron
@@ -75,8 +74,8 @@ dcat:
 dependabot:
   label: dependabot
   description:
-    Dependabot is een geautomatiseerde service van GitHub die je helpt bij het
-    bijhouden van dependencies in je project.
+    Dependabot is een geautomatiseerde service van GitHub die je helpt
+    bij het bijhouden van dependencies in je project.
 design-system:
   label: Design System
 developer.overheid.nl:
@@ -85,8 +84,8 @@ development:
   label: Development
 devops:
   description:
-    DevOps (een samentrekking van "development" en "operations") is een gebruik
-    en een praktijk binnen softwareontwikkeling die tot doel heeft
+    DevOps (een samentrekking van "development" en "operations") is een
+    gebruik en een praktijk binnen softwareontwikkeling die tot doel heeft
     softwareontwikkeling (Dev) en softwareoperaties (Ops) samen te brengen.
   label: DevOps
 digid:
@@ -95,14 +94,12 @@ digid:
 digikoppeling:
   label: Digikoppeling
 digitale-autonomie:
-  description:
-    Digitale autonomie is het principe dat de overheid zelf de regie heeft over
-    haar digitale infrastructuur en data.
+  description: Digitale autonomie is het principe dat de overheid zelf de regie
+    heeft over haar digitale infrastructuur en data.
   label: Digitale autonomie
 digitale-soevereiniteit:
-  description:
-    Digitale soevereiniteit is het principe van het beschikken over zeggenschap,
-    invloed, regie en keuzevrijheid over digitale systemen.
+  description: Digitale soevereiniteit is het principe van het beschikken over
+    zeggenschap, invloed, regie en keuzevrijheid over digitale systemen.
   label: Digitale soevereiniteit
 docker:
   description:
@@ -110,14 +107,12 @@ docker:
     applicaties in individuele containers
   label: Docker
 eherkenning:
-  description:
-    eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig toegang te
-    krijgen tot digitale overheidsdiensten.
+  description: eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig
+    toegang te krijgen tot digitale overheidsdiensten.
   label: eHerkenning
 eidas:
-  description:
-    eIDAS is een Europese verordening die zorgt voor grensoverschrijdende
-    herkenning van elektronische identiteiten
+  description: eIDAS is een Europese verordening die zorgt voor
+    grensoverschrijdende herkenning van elektronische identiteiten
   label: eIDAS
 eu:
   label: Europe
@@ -134,20 +129,21 @@ edi:
   label: Europese Digitale Identiteit (EDI)
 fds:
   description: "Het FDS is een vertrouwensraamwerk met afspraken, standaarden,
-    voorzieningen en  stelselfuncties. \_"
+    voorzieningen en  stelselfuncties.  "
   label: Federatief Data Stelsel
 fieldlab:
   description: Fieldlab
   label: Fieldlab
 flux:
-  description:
-    Flux CD is een GitOps tool voor Kubernetes die automatische deployment en
-    synchronisatie van applicaties mogelijk maakt.
+  description: Flux CD is een GitOps tool voor Kubernetes die automatische
+    deployment en synchronisatie van applicaties mogelijk maakt.
   label: Flux
 forum-standaardisatie:
   label: Forum Standaardisatie
 formatting:
-  description: Formatting is het automatisch opmaken van code volgens afgesproken stijlregels
+  description:
+    Formatting is het automatisch opmaken van code volgens afgesproken
+    stijlregels
   label: Formatting
 foss:
   description: Free and Open Source Software
@@ -186,8 +182,8 @@ gouden-api:
 haven:
   label: "Haven"
   description:
-    "Haven is een open source standaard met criteria en best practices voor hoe
-    je Kubernetes gebruikt."
+    "Haven is een open source standaard met criteria en best practices
+    voor hoe je Kubernetes gebruikt."
 helm:
   description: Helm is een package manager voor Kubernetes
   label: Helm
@@ -198,10 +194,10 @@ htmx:
   description: HTMX.
   label: HTMX
 iam:
-  description: 
-    "Identity & Access Management is het raamwerk van processen en technologieën dat regelt
-    wie toegang krijgt tot welke digitale informatie e systemen, op welk moment, om welke reden.
-    Het gaat om 'Wie ben je? en 'Wat mag je doen?', in het kader van beveiliging."
+  description: "Identity & Access Management is het raamwerk van processen en
+    technologieën dat regelt wie toegang krijgt tot welke digitale informatie e
+    systemen, op welk moment, om welke reden. Het gaat om 'Wie ben je? en 'Wat
+    mag je doen?', in het kader van beveiliging."
   label: IAM
 identity:
   description: Identity management en toegangsbeheer
@@ -234,9 +230,9 @@ kiesraad:
 kubernetes:
   label: Kubernetes
 ldv:
-  description:
-    Logboek Dataverwerkingen is een standaard die beschrijft hoe je logging kan
-    vastleggen waarmee je kan verantwoorden hoe data tot stand is gekomen
+  description: Logboek Dataverwerkingen is een standaard die beschrijft hoe je
+    logging kan vastleggen waarmee je kan verantwoorden hoe data tot stand is
+    gekomen
   label: Logboek Dataverwerkingen
 leaflet:
   description: Leaflet JavaScript library voor interactieve kaarten
@@ -286,9 +282,8 @@ notificaties:
   label: Notificaties
 npm:
   label: npm
-  description:
-    NPM staat voor 'Node Package Manager' is het standaard package management
-    systeem voor Node.js.
+  description: NPM staat voor 'Node Package Manager' is het standaard package
+    management systeem voor Node.js.
 nvm:
   label: NVM
 oas:
@@ -299,9 +294,8 @@ oauth:
 odata:
   label: OData
 ogc:
-  description:
-    Open Geospatial Consortium is de internationale standaarden organisatie voor
-    interoperabele open Geo standaarden
+  description: Open Geospatial Consortium is de internationale standaarden
+    organisatie voor interoperabele open Geo standaarden
   label: Open Geospatial Consortium
 oidc:
   description: OpenID Connect is een identity layer bovenop OAuth 2.0
@@ -321,15 +315,13 @@ owasp:
 owl:
   label: OWL
 pkio:
-  description:
-    PKIOverheid is de publieke infrastructuur voor digitale certificaten van de
-    Nederlandse overheid.
+  description: PKIOverheid is de publieke infrastructuur voor digitale
+    certificaten van de Nederlandse overheid.
   label: PKIOverheid
 pnpm:
   label: pnpm
-  description:
-    PNPM (Performant NPM) is een alternatieve package manager voor Node.js, net
-    als NPM en Yarn, maar met een slimmere aanpak.
+  description: PNPM (Performant NPM) is een alternatieve package manager voor
+    Node.js, net als NPM en Yarn, maar met een slimmere aanpak.
 portal:
   label: Portal
 privacy:
@@ -352,9 +344,15 @@ rdfa:
 rdfs:
   description: RDF Schema
   label: RDFS
+formulieren:
+  description: Formulieren en form-validatie in front-end applicaties
+  label: Forms
 react:
   description: React JavaScript library voor user interfaces
   label: React
+react-hook-form:
+  description: React Hook Form library voor formulierbeheer
+  label: React Hook Form
 release:
   label: Release
 rest:
@@ -374,9 +372,8 @@ security-by-design:
   label: Security by Design
   description: Het principe om beveiliging vanaf het begin in het ontwerp mee te nemen.
 seo:
-  description:
-    Search Engine Optimalization is het doen van aanpassingen die er voor zorgen
-    dat jouw content (on)vindbaar is in zoekmachines op het internet
+  description: Search Engine Optimalization is het doen van aanpassingen die er
+    voor zorgen dat jouw content (on)vindbaar is in zoekmachines op het internet
   label: Search Engine Optimalization
 shacl:
   description: Shapes Constraint Language
@@ -387,9 +384,8 @@ skos:
 typescript:
   label: TypeScript
 technische-schuld:
-  description:
-    Een metafoor voor de situatie waarin eerder gemaakte keuzes de software in
-    de toekomst moeilijker te wijzigen maken
+  description: Een metafoor voor de situatie waarin eerder gemaakte keuzes de
+    software in de toekomst moeilijker te wijzigen maken
   label: Technische schuld
 uml:
   description: Unified Modeling Language

@@ -1,5 +1,10 @@
 # Developer Overheid NL website
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/developer-overheid-nl/don-site/build.yml?branch=main)
+![GitHub License](https://img.shields.io/github/license/developer-overheid-nl/don-site)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/developer-overheid-nl/don-site)
+[![Static Badge](https://img.shields.io/badge/Read-Changelog-lightcoral)](./CHANGELOG.md)
+
 Dit is de repository van de website
 [developer.overheid.nl](https://developer.overheid.nl), de kennisbank,
 communities en blog.  
@@ -18,7 +23,7 @@ staan de verschillende manieren waarop je mee kan helpen.
 
 Neem contact op met ons via een bericht op ons
 [Slack kanaal](https://codefornl.slack.com/archives/CFV4B3XE2) of stuur een
-e-mail naar developer.overheid@geonovum.nl. Dan kijken we samen hoe we je
+e-mail naar <developer.overheid&#x40;geonovum.nl>. Dan kijken we samen hoe we je
 bijdrage kunnen vormgeven.
 
 ## Lokaal draaien van de website
@@ -60,6 +65,26 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 - Verplaats de blogpost naar de map van de huidige maand.
 - Verwijder de `draft: true` property uit het frontmatter van de blogpost.
 - Draai `pnpm build` om te kijken of de markdown in orde is.
+
+## Changelog
+
+Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin vermelden wat er veranderd, verbeterd of toegevoegd is.  
+Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries samenvoegt. Deze pull request kan worden gemerged voor elke release.
+
+Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de changelog om bij te houden wat er veranderd is in de website. De semver gebruikt in de changelog heeft geen technische betekenis, maar geeft aan of een verandering een nieuwe feature, bijvoorbeeld een nieuw blog, is (minor), een bugfix (patch) of een "breaking" change (major). Voorbeelden van een breaking change zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de URL van een artikel.
+
+### Hoe maak ik een changelog entry aan?
+
+1. Draai `pnpm changeset` in de terminal.
+2. Kies de type verandering (major, minor of patch).
+3. Schrijf een korte beschrijving van de verandering.
+4. Sla de changeset op, er wordt automatisch een markdown bestand aangemaakt in
+   `.changeset/` met de informatie die je hebt ingevuld.
+
+### Release nieuwe versie van de website
+
+1. Merge de pull request van de Changesets bot.
+2. Merge de pull request in de `don-infra` repository, zie de beschrijving hieronder.
 
 ## Deployen
 
@@ -120,3 +145,5 @@ Een contribution of pull request leidt niet automatisch tot een deployment.
 - Die testdeploy gebruikt repository- en organization-variables en secrets om
   ook `INFRA_REPO` aan te passen. Daardoor is dit pad in de praktijk bedoeld
   voor maintainers of contributors met een branch in deze repository.
+
+[Changesets]:https://github.com/changesets/changesets

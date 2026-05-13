@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import remarkDirectiveSugar from "remark-directive-sugar";
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import 'dotenv/config';
+import "dotenv/config";
 
 function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
   const csv = readFileSync(resolve(__dirname, "redirects.csv"), "utf-8");
@@ -28,7 +28,9 @@ type PiwikProClientConfig = {
   accountAddress: string;
 };
 
-const config: Config & { customFields: Config["customFields"] & { piwikPro: PiwikProClientConfig }} = {
+const config: Config & {
+  customFields: Config["customFields"] & { piwikPro: PiwikProClientConfig };
+} = {
   title: "developer.overheid.nl",
   customFields: {
     siteName: "developer.overheid.nl",
@@ -210,8 +212,8 @@ const config: Config & { customFields: Config["customFields"] & { piwikPro: Piwi
           // },
         ],
         // apiKey: "xyz", Lokaal
-        // apiKey: "wpxe5EBzgodXiGygAr5jIYIAXNErTg3w", //test
-        apiKey: "TimHDyXz7K91KWuiXDcH2UN41hMk8BNc", //prod
+        // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
+        apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
       },
       typesenseSearchParameters: {
         query_by:
@@ -447,6 +449,10 @@ const config: Config & { customFields: Config["customFields"] & { piwikPro: Piwi
             {
               label: "Implementatie ondersteuning",
               to: "/implementatie-ondersteuning",
+            },
+            {
+              label: "Over",
+              to: "/over",
             },
             {
               label: "Contact",
