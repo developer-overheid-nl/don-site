@@ -221,3 +221,10 @@ anne-schuth:
     github: anneschuth
     bluesky: anneschuth.nl
     email: anne.schuth@rijksoverheid.nl
+
+kadaster:
+  name: Kadaster
+  image_url: /img/authors/kadaster.png
+  page: true
+  socials:
+    website: https://www.kadaster.nl
