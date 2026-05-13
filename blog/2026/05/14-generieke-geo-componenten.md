@@ -1,6 +1,6 @@
 ---
 authors: [kadaster]
-tags: [front-end, geodata, open-source]
+tags: [front-end, geodata, open-source, toegankelijkheid, wcag]
 image: ./img/generieke-geo-componenten.png
 description: |
   Digitale kaartinformatie, ook wel geo-informatie genoemd, is voor een organisatie als het Kadaster onmisbaar.
