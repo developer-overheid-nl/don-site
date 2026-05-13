@@ -3,7 +3,6 @@ content_type: tutorial
 tags:
   - "changelog"
 title: "Changelog bijhouden"
-draft: true
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -37,8 +36,6 @@ houden, met bijvoorbeeld de nieuwe features van je website.
 Het wordt aangeraden om SemVer te gebruiken, de meeste ontwikkelaars kennen het
 en ook niet-ontwikkelaars zullen het tegen zijn gekomen. Als je een andere
 manier van versionering gebruikt, geef dit aan in je Changelog.
-
-...
 
 ## Zijn er manieren om dit te automatiseren?
 
@@ -102,7 +99,7 @@ Handmatig maak je een change-bestand aan met:
 >
   <TabItem value="npm">
 ```bash
-npx changeset
+npx @changesets/cli
 ```
   </TabItem>
   <TabItem value="yarn">
@@ -112,7 +109,7 @@ yarn changeset
   </TabItem>
   <TabItem value="pnpm">
 ```bash
-pnpx changeset
+pnpm changeset
 ```
   </TabItem>
 </Tabs>
