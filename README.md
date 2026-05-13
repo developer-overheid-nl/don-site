@@ -65,6 +65,7 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 - Verplaats de blogpost naar de map van de huidige maand.
 - Verwijder de `draft: true` property uit het frontmatter van de blogpost.
 - Draai `pnpm build` om te kijken of de markdown in orde is.
+- Maak een changeset aan met `pnpm changeset`, een nieuwe blogpost is een minor update.
 
 ## Changelog
 
@@ -121,6 +122,8 @@ feat: pas content aan [deploy-test]
 ```
 
 ### Deploy naar productie
+
+> ⚠️ Vergeet niet de laatste "Version Packages" Pull Request te mergen, zodat de changelog ook klopt.
 
 De productiedeploy draait via `.github/workflows/deploy-prod.yml`.
 
