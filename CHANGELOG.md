@@ -2,6 +2,8 @@
 
 ## 1.4.0
 
+### Minor Changes
+
 - 90d5762: Publiceer een blogpost over ons event op 17 juni
 
 ## 1.3.0
