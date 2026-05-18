@@ -1,5 +1,5 @@
 ---
-authors: [kadaster]
+authors: [jaap-willem-sjoukema]
 tags: [front-end, geodata, open-source, toegankelijkheid, wcag]
 image: ./img/generieke-geo-componenten.png
 description: |

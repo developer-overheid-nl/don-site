@@ -222,9 +222,10 @@ anne-schuth:
     bluesky: anneschuth.nl
     email: anne.schuth@rijksoverheid.nl
 
-kadaster:
-  name: Kadaster
-  image_url: /img/authors/kadaster.png
+jaap-willem-sjoukema:
+  name: Jaap-Willem Sjoukema
+  title: Productmanager Generieke Geo Services - Kadaster
+  image_url: /img/authors/jaap-willem-sjoukema.png
   page: true
   socials:
-    website: https://www.kadaster.nl
+    linkedin: https://www.linkedin.com/in/jaapwillemsjoukema/
