@@ -13,8 +13,10 @@ description: |
 
 De afgelopen periode hebben we binnen developer.overheid.nl samen met de
 Werkgroep AsyncAPI geëxperimenteerd met het toepassen van AsyncAPI in een aantal
-concrete casussen. Niet zozeer om vast te stellen of het werkt, maar vooral om
-te begrijpen waar het in de praktijk daadwerkelijk waarde toevoegt, en waar het
+concrete casussen. Het doel van deze werkgroep is om te onderzoeken in welke
+mate AsyncAPI als nieuwe standaard voor de Nederlandse overheid geaccepteerd
+dient te worden. Niet zozeer om vast te stellen of het werkt, maar vooral om te
+begrijpen waar het in de praktijk daadwerkelijk waarde toevoegt, en waar het
 vooral extra werk introduceert zonder duidelijke meerwaarde. De technische
 werkbaarheid van de specificatie is door diverse use cases aangetoond; de vraag
 wanneer we het zouden moeten gebruiken is op dit moment dé kernvraag. Ik wil
@@ -36,19 +38,19 @@ werkgroep.
 ## AsyncAPI
 
 Maar eerst even wat achtergrond en introductie voor wie nog niet bekend is met
-AsyncAPI. In het kort, AsyncAPI is een open source set aan standaarden tools
+AsyncAPI. In het kort, AsyncAPI is een open source set aan standaarden en tools
 voor ontwikkelen en documenteren van asynchrone API’s en
 [Event-Driven Architecture](https://developer.overheid.nl/blog/2026/03/06/event-driven)
 in zijn algemeen. Het is tevens een voortborduursel op het werk van
-[OpenAPI Initiative](https://www.openapis.org/), waarin door een toegeweid team
-van experts wordt gepoogd om een nieuwe standaard te bouwen voor asynchrone
-API’s binnen de context van Event-Driven Architecture. AsyncAPI is hierin geen
-runtime tool, het is voor documentatie, contract en standaardisatie voor
-Event-Driven systemen. Het helpt bij begrijpen wat er over de lijn gaat, waar
-die berichten leven, welke afspraken er gemaakt worden tussen partijen, en het
-automatiseren van documentatie, code en validatie. Dit is van toegevoegde waarde
-in asynchrone use cases; voor synchrone is OAS meer dan toereikend, ongeacht wat
-AsyncAPI op hun voorpagina heeft staan.
+[OpenAPI Initiative](https://developer.overheid.nl/kennisbank/api-ontwikkeling/standaarden/openapi-specification/),
+waarin door een toegewijd team van experts wordt gepoogd om een nieuwe standaard
+te bouwen voor asynchrone API’s binnen de context van Event-Driven Architecture.
+AsyncAPI is hierin geen runtime tool, het is voor documentatie, contract en
+standaardisatie voor Event-Driven systemen. Het helpt bij begrijpen wat er over
+de lijn gaat, waar die berichten leven, welke afspraken er gemaakt worden tussen
+partijen, en het automatiseren van documentatie, code en validatie. Dit is van
+toegevoegde waarde in asynchrone use cases; voor synchrone is OAS meer dan
+toereikend, ongeacht wat AsyncAPI op hun voorpagina heeft staan.
 
 Op dit moment wordt er in een werkgroep van diverse experts gewerkt om AsyncAPI
 te vertalen naar de Nederlandse digitale overheid. Deze groep richt zich erop om
@@ -75,7 +77,7 @@ gewoon ondersteund in OAS.
 
 ## Vingers aan de knoppen
 
-Om beter grip op de nuances te krijgen hebben we bestaande een reeks
+Om beter grip op de nuances te krijgen hebben we een bestaande reeks
 API-specificaties waarin al sprake was van asynchrone communicatie omgezet naar
 een AsyncAPI documentatie; zie
 [hier](https://studio.asyncapi.com/?share=d36cdf7f-1b42-4ac9-98a9-3194912fbfa0)
@@ -112,7 +114,7 @@ opgeschreven. Waar de 1-op-1 conversie nog sterk leunde op bestaande endpoints
 en interactiepatronen dwong het herontwerp ons om fundamenteel anders te kijken
 naar het systeem. De 1-op-1 conversie was een goede eerste stap in dit proces;
 doordat alles al naar AsyncAPI vertaald was konden bepaalde zaken zoals
-Channels, Operations, Messages e.a. makkelijk overgenomen worden. Het resultaat
+channels, operations, messages e.a. makkelijk overgenomen worden. Het resultaat
 is een ontwerp waarin Events werden leidend in plaats van Calls, meerdere
 Consumers konden onafhankelijk op dezelfde gebeurtenis reageren en de keten van
 acties werd losgekoppeld in plaats van expliciet georkestreerd. In die context
@@ -142,14 +144,14 @@ zelf je eigen templates te ontwikkelen en beheren. Er zit hier op dit moment wel
 een sterke externe afhankelijkheid in; denk hierin aan de black-box nature van
 de default templates, versies van tooling en het gekozen perspectief binnen de
 specificatie. In één geval bleek bijvoorbeeld dat om een bepaald type code te
-generen de documentatie naar een lagere versie gebracht moest worden, maar dat
+genereren de documentatie naar een lagere versie gebracht moest worden, maar dat
 daardoor ook het perspectief van de API documentatie zou wijzigen, namelijk van
 producer naar consumer. Dit was al eerder een vraag binnen de werkgroep: vanuit
 welk perspectief moet men AsyncAPI lezen? Het staat in de specificatie
 aangegeven (3.x en hoger schrijven vanuit de producer, alles daaronder vanuit
 consumer), maar dit wordt niet meteen duidelijk uit een API document zelf.
 Dergelijke afhankelijkheden en mogelijkheden tot foute interpretatie maken het
-des te belangrijker dat er een gebruikstandaard wordt opgesteld, het zij binnen
+des te belangrijker dat er een gebruikstandaard wordt opgesteld, hetzij binnen
 een organisatie danwel binnen de gehele context van de Nederlanse Overheid.
 
 ## Toepasbaarheid en Toekomst

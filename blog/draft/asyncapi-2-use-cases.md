@@ -114,7 +114,7 @@ codegeneratie ontstaat zo een mechanisme dat helpt om veranderingen
 gecontroleerd door te voeren. Door wijzigingen expliciet te maken krijg je grip
 op versiebeheer en worden breaking changes zichtbaar in zowel inhoud als
 locatie. AsyncAPI’s strakke documentatie van wat een sender/receiver echt nodig
-heeft voorkomt eens temeer dat men stilletjes elkaars systemen breekt.
+heeft voorkomt eens te meer dat men stilletjes elkaars systemen breekt.
 
 ### Complexe/grote berichten
 
@@ -195,7 +195,7 @@ kijken naar de context waarin systemen opereren. In omgevingen waarin berichten
 weinig voorkomen of nauwelijks impact hebben, is de noodzaak voor strakke
 contracten beperkt. Denk aan je “nice-to-haves”, non-critical events die tevens
 zelden voorkomen en waar het de organisatie “niks” kost als het fout gaat of
-verkeerd geinterpreteerd wordt. In zo’n situatie is het zeer aan te raden om
+verkeerd geïnterpreteerd wordt. In zo’n situatie is het zeer aan te raden om
 voor een lichtere aanpak te kiezen dan een volledige AsyncAPI straat opbouwen.
 
 ### Statische omgevingen
@@ -235,8 +235,8 @@ maken. Tegelijkertijd is het geen vanzelfsprekende keuze voor elke vorm van
 communicatie, asynchroon of anderszins. Juist door kritisch te kijken naar de
 aard van het probleem en de context waarin het zich voordoet, kun je bepalen of
 de inzet van AsyncAPI daadwerkelijk bijdraagt aan een betere oplossing. We zijn
-nog niet zover, maar het begint er wel op te lijken dat een NLgov profiel op den
-duur van toegevoegde waarde gaat zijn voor deze standaard.
+nog niet zover, maar het begint er wel op te lijken dat een NL GOV profiel op
+den duur van toegevoegde waarde gaat zijn voor deze standaard.
 
 Hopelijk heeft deze uiteenzetting geholpen met wat inzicht verkrijgen in wanneer
 AsyncAPI een oplossing kan zijn. Het kan echter goed zijn dat dit nog te

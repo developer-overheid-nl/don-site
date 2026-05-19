@@ -1,15 +1,15 @@
 ---
 authors: [floris-deutekom]
-tags: [api, api-design, eda, asyncapi, cloudevents]
+tags: [api, api-design, eda, asyncapi, CloudEvents]
 description: |
   In deze laatste blogpost in een reeks van drie wordt een voorzichtige blik 
   vooruit geworpen op de implementatie van AsyncAPI. Daarin lijkt het gebruik 
-  van Cloudevents een logische stap te zijn. Op hoogover niveau wordt er 
-  gekeken naar de vragen welke gaten in AsyncAPI worden opgevuld Cloudevents,
+  van CloudEvents een logische stap te zijn. Op hoogover niveau wordt er 
+  gekeken naar de vragen welke gaten in AsyncAPI worden opgevuld CloudEvents,
   en wat het oplevert om die twee samen te gaan gebruiken.
 ---
 
-# AsyncAPI + Cloudevents; implementatie van asynchrone oplossingen
+# AsyncAPI + CloudEvents; implementatie van asynchrone oplossingen
 
 In de voorgaande blogposts hebben we gekeken naar wat
 [AsyncAPI](https://www.asyncapi.com/en) is, hoe het zich in de praktijk gedraagt
@@ -25,7 +25,7 @@ uitgewisseld tussen systemen?
 
 <!-- truncate -->
 
-## Cloudevents
+## CloudEvents
 
 Waar AsyncAPI zich richt op het beschrijven van berichtenstromen, biedt het niet
 een gestandaardiseerde manier om events zelf vorm te geven. Het documenteert wel
@@ -33,11 +33,11 @@ wat er voor berichten over de lijn gaan, maar het definieert geen uniforme set
 metadata, zoals type, bron, identificatie of tijdstip, die losstaat van de
 inhoud van het bericht. Daarmee ontstaat een scheiding tussen wat een event is
 en wat een event bevat. Deze scheiding onderkennen is één ding, hem goed kunnen
-beschrijven is een tweede, en dit is waar Cloudevents om de hoek komt kijken.
+beschrijven is een tweede, en dit is waar CloudEvents om de hoek komt kijken.
 
 In een
 [eerdere blogpost](https://developer.overheid.nl/blog/2026/03/06/event-driven)
-is al uitgebreid over Cloudevents gesproken in de context van Event-Driven
+is al uitgebreid over CloudEvents gesproken in de context van Event-Driven
 Architecture. Zie al wat volgt dan ook vooral als een vervolg op de AsyncAPI
 mention die daar kort in voorkomt, en als een manier om de zaken uit de vorige
 twee posts in deze reeks van een theoretische realisatie te voorzien.
@@ -51,15 +51,15 @@ verschillende keuzes maken in metadata, naamgeving of contextinformatie. Binnen
 één team of tussen twee nauw-verbonden teams is dat vaak nog te overzien, maar
 op grotere schaal zal dit geheid uitlopen op problemen.
 
-[CloudEvents](https://cloudevents.io/) vangt precies dat probleem af door een
+[CloudEvents](https://CloudEvents.io/) vangt precies dat probleem af door een
 minimale, duidelijke standaard neer te zetten voor event-metadata en het
 beschrijven/definiëren van het event zelf. Opgenomen als
-[NLgov profiel](/kennisbank/api-ontwikkeling/standaarden/cloudevents) en door
-[Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents)
+[NL GOV profiel](/kennisbank/api-ontwikkeling/standaarden/CloudEvents) en door
+[Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-CloudEvents)
 op de “pas toe, leg uit” lijst gezet, CloudEvents specifieert onder andere
 uniforme naamgeving en metadata, afspraken over payloads en headers, notificatie
-toepassingen ban de overheid en meer. Dit is precies wat AsyncAPI open laat.
-Door Cloudevents als standaard te combineren met AsyncAPI ontstaat een gelaagd
+toepassingen van de overheid en meer. Dit is precies wat AsyncAPI open laat.
+Door CloudEvents als standaard te combineren met AsyncAPI ontstaat een gelaagd
 model: AsyncAPI beschrijft de structuur, het gedrag en de context van
 berichtenstromen, terwijl CloudEvents zorgt voor een consistente “envelop”
 waarin die berichten worden verstuurd. Het resultaat is een combinatie waarin
@@ -179,13 +179,13 @@ grotere schaal toe te passen zonder dat het verzandt in maatwerkafspraken.
 
 ## Kijkje naar de toekomst
 
-Dit is, in een notendop, hoe een implementatie van Cloudevents met AsyncAPI
+Dit is, in een notendop, hoe een implementatie van CloudEvents met AsyncAPI
 eruit zou kunnen zien. Het is natuurlijk een kijk naar de toekomst, en daardoor
 zijn concrete voorbeelden binnen de Nederlandse overheid nog niet voorhanden. We
 zijn echter
 [niet de enigen](https://www.asyncapi.com/blog/asyncapi-cloud-events) die de
 link tussen deze twee gezien heeft; binnen AsyncAPI is vanaf het begin al waarde
-gezien in het combineren van Cloudevents en AsyncAPI.
+gezien in het combineren van CloudEvents en AsyncAPI.
 
 De kaders die in eerdere posts geschetst zijn blijven overigens in dit alles van
 toepassing. In kleine, gesloten systemen zal de meerwaarde beperkt zijn, en kan
