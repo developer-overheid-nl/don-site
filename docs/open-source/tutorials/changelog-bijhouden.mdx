@@ -1,20 +1,20 @@
 ---
 content_type: tutorial
 tags:
-  - "changelog"
+  - "changelog","git"
 title: "Changelog bijhouden"
 ---
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 De meeste software is nooit echt af en zullen er in de loop van de tijd meerdere
 versies van je applicatie, library, website of API bestaan.  
-In [git] wordt per
-`commit` een log bijgehouden van welke bestanden er gewijzigd zijn met een
-stukje commentaar erbij. Nu denk je misschien dat is een mooie manier voor een
-"changelog", maar in git commits staat vaak veel ruis, denk aan merge commits,
-documentatie-aanpassingen en onduidelijke commentaren. Hierin zie je de
-"evolutie" van de code.
+In [git] wordt per `commit` een log bijgehouden van welke bestanden er gewijzigd
+zijn met een stukje commentaar erbij. Nu denk je misschien dat is een mooie
+manier voor een "changelog", maar in git commits staat vaak veel ruis, denk aan
+merge commits, documentatie-aanpassingen en onduidelijke commentaren. Hierin zie
+je de "evolutie" van de code.
 
 Het doel van een changelog is het documenteren van noemenswaardige aanpassingen,
 vaak over meerdere commits. Het is voor de eindgebruiker.
@@ -58,25 +58,12 @@ fragmenten samengevoegd in `CHANGELOG.md`.
 
 Je installeert de package in je project met
 
-<Tabs
-  groupId="package-managers"
-  defaultValue="pnpm"
->
-  <TabItem value="npm">
-```bash
-npx @changesets/cli init
-```
-  </TabItem>
+<Tabs groupId="package-managers" defaultValue="pnpm">
+  <TabItem value="npm">```bash npx @changesets/cli init ```</TabItem>
   <TabItem value="yarn">
-```bash
-yarn add -D @changesets/cli && yarn changeset init
-```
+    ```bash yarn add -D @changesets/cli && yarn changeset init ```
   </TabItem>
-  <TabItem value="pnpm">
-```bash
-pnpx @changesets/cli init
-```
-  </TabItem>
+  <TabItem value="pnpm">```bash pnpx @changesets/cli init ```</TabItem>
 </Tabs>
 
 Werk je in Github dan is het aan te raden om de Github App te installeren in je
@@ -85,38 +72,22 @@ change-bestand in de PR zit en plaatst een comment hierover.
 
 ![Changeset-bot](./img/changeset-bot.png)
 
-:::tip 
-Spreek met je team af hoe je aangeeft dat er geen change gelogd hoeft te
+:::tip Spreek met je team af hoe je aangeeft dat er geen change gelogd hoeft te
 worden, bij developer.overheid.nl zetten we een 👍🏻 op de comment als het "okay"
-is dat er geen changeset is.
-:::
+is dat er geen changeset is. :::
 
 Handmatig maak je een change-bestand aan met:
 
-<Tabs
-  groupId="package-managers"
-  defaultValue="pnpm"
->
-  <TabItem value="npm">
-```bash
-npx @changesets/cli
-```
-  </TabItem>
-  <TabItem value="yarn">
-```bash
-yarn changeset
-```
-  </TabItem>
-  <TabItem value="pnpm">
-```bash
-pnpm changeset
-```
-  </TabItem>
+<Tabs groupId="package-managers" defaultValue="pnpm">
+  <TabItem value="npm">```bash npx @changesets/cli ```</TabItem>
+  <TabItem value="yarn">```bash yarn changeset ```</TabItem>
+  <TabItem value="pnpm">```bash pnpm changeset ```</TabItem>
 </Tabs>
 
-Je beantwoordt een paar vragen, zoals wat voor soort wijziging het is (Major, Minor, 
-Patch) en een korte beschrijving. Daarna maakt Changesets een bestand aan in `.changeset` 
-met een unieke naam, bijvoorbeeld `.changeset/green-sheep-search.md`:
+Je beantwoordt een paar vragen, zoals wat voor soort wijziging het is (Major,
+Minor, Patch) en een korte beschrijving. Daarna maakt Changesets een bestand aan
+in `.changeset` met een unieke naam, bijvoorbeeld
+`.changeset/green-sheep-search.md`:
 
 ```markdown
 ---
@@ -134,14 +105,14 @@ Het mergen van deze PR merged de Changelog met de nieuwe onderdelen van die
 release en als de workflow ingesteld is om te publiceren naar Github en of NPM
 wordt dat ook gedaan.
 
-Meer documentatie over Changesets is te vinden in de 
+Meer documentatie over Changesets is te vinden in de
 [Changesets Docs](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md).
 
 ### Changie
 
-[Changie] is een kleine tool om, net als [Changesets], changelog-fragmenten bij te houden in je repository. Ook hier maak je per
-wijziging een los YAML-bestand aan. Deze bestanden komen standaard in
-`.changes/unreleased` te staan.
+[Changie] is een kleine tool om, net als [Changesets], changelog-fragmenten bij
+te houden in je repository. Ook hier maak je per wijziging een los YAML-bestand
+aan. Deze bestanden komen standaard in `.changes/unreleased` te staan.
 
 Je installeert Changie met:
 
@@ -170,29 +141,27 @@ welke soorten wijzigingen je gebruikt.
 
 Bij het API-register en OSS-register gebruiken we dezelfde categorieën als [Keep
 a Changelog]:  
-`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed` en
-`Security`.  
+`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed` en `Security`.  
 Per categorie kun je ook aangeven welke SemVer-impact Changie automatisch moet
 kiezen. Zo kan `Fixed` automatisch leiden tot een patch-release en `Added` tot
 een minor-release:
 
 ```yaml
 # changie.yaml
-... 
+---
 kinds:
-    - label: Added
-      auto: minor
-    - label: Changed
-      auto: major
-    - label: Deprecated
-      auto: minor
-    - label: Removed
-      auto: major
-    - label: Fixed
-      auto: patch
-    - label: Security
-      auto: patch
-...
+  - label: Added
+    auto: minor
+  - label: Changed
+    auto: major
+  - label: Deprecated
+    auto: minor
+  - label: Removed
+    auto: major
+  - label: Fixed
+    auto: patch
+  - label: Security
+    auto: patch
 ```
 
 Een release maak je lokaal met:
@@ -206,8 +175,9 @@ changie merge
 `.changes`, bijvoorbeeld `.changes/v2.1.0.md`. Daarna verwerkt `changie merge`
 deze versie in `CHANGELOG.md`.
 
-Bij developer.overheid.nl gebruiken we de [Changie Action](https://github.com/miniscruff/changie-action) 
-ook in de GitHub workflow, bijvoorbeeld in `.github/workflows/changie-auto-release.yml`.
+Bij developer.overheid.nl gebruiken we de
+[Changie Action](https://github.com/miniscruff/changie-action) ook in de GitHub
+workflow, bijvoorbeeld in `.github/workflows/changie-auto-release.yml`.
 
 Op een Pull Request controleert de workflow of er een fragment is toegevoegd aan
 `.changes/unreleased/*.yaml`.
@@ -231,11 +201,11 @@ bijwerken van de definitieve changelog gebeurt automatisch en apart. Dat
 voorkomt merge-conflicten in `CHANGELOG.md` en houdt het releaseproces
 overzichtelijk.
 
-Meer documentatie over Changie is te vinden in de [Changie Guide](https://changie.dev/guide/).
+Meer documentatie over Changie is te vinden in de
+[Changie Guide](https://changie.dev/guide/).
 
-:::info 
-Gebruikt jou organisatie al een andere tool of aanpak voor het bijhouden van changelogs? 
-Laat het ons weten, dan kunnen we deze documentatie uitbreiden!
+:::info Gebruikt jou organisatie al een andere tool of aanpak voor het bijhouden
+van changelogs? Laat het ons weten, dan kunnen we deze documentatie uitbreiden!
 :::
 
 ## Samenvatting
@@ -244,8 +214,8 @@ Een changelog is geen technische commitgeschiedenis, maar een overzicht van
 relevante wijzigingen voor mensen.
 
 Gebruik daarom duidelijke categorieën, schrijf begrijpelijke teksten en leg vast
-hoe je versieert. Tools zoals [Changesets] en [Changie] kunnen helpen om dit proces
-onderdeel te maken van je normale Pull Request- en releaseflow.
+hoe je versieert. Tools zoals [Changesets] en [Changie] kunnen helpen om dit
+proces onderdeel te maken van je normale Pull Request- en releaseflow.
 
 Voor teams die veel met Pull Requests werken is vooral de aanpak met losse
 changelog-fragmenten prettig. Elke wijziging krijgt zijn eigen entry, terwijl de
