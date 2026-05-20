@@ -53,6 +53,8 @@ const TYPESENSE_SEARCH_COLLECTIONS = [
 const TYPESENSE_QUERY_BY =
   "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
 const TYPESENSE_QUERY_BY_WEIGHTS = "12,6,4,3,2,1,1";
+const TYPESENSE_API_REGISTER_QUERY_BY = "hierarchy.lvl0,content,tags";
+const TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS = "12,2,1";
 
 type SearchResultSource = (typeof TYPESENSE_SEARCH_COLLECTIONS)[number];
 
@@ -114,12 +116,16 @@ type SearchHit = {
   url: string;
   tags?: string[];
   content?: string;
+  text_match?: number;
   __collection?: SearchResultSource;
   "hierarchy.lvl0"?: string;
   "hierarchy.lvl1"?: string;
   "hierarchy.lvl2"?: string;
   "hierarchy.lvl3"?: string;
   "hierarchy.lvl4"?: string;
+  _rawTypesenseHit?: {
+    text_match?: number;
+  };
   _highlightResult?: Record<string, HighlightedField | undefined>;
   _snippetResult?: {
     content?: HighlightedField;
@@ -201,6 +207,10 @@ function getSearchResultSummary(hit: SearchHit) {
   return hit.content ? cleanContentSummary(hit.content) : "";
 }
 
+function getSearchResultScore(hit: SearchHit) {
+  return hit.text_match || hit._rawTypesenseHit?.text_match || 0;
+}
+
 function mergeSearchResponses(
   responses: TypesenseSearchResponse[],
 ): TypesenseSearchResponse {
@@ -208,12 +218,14 @@ function mergeSearchResponses(
 
   return {
     ...firstResponse,
-    hits: responses.flatMap((response, index) =>
-      response.hits.map((hit) => ({
-        ...hit,
-        __collection: TYPESENSE_SEARCH_COLLECTIONS[index],
-      })),
-    ),
+    hits: responses
+      .flatMap((response, index) =>
+        response.hits.map((hit) => ({
+          ...hit,
+          __collection: TYPESENSE_SEARCH_COLLECTIONS[index],
+        })),
+      )
+      .sort((a, b) => getSearchResultScore(b) - getSearchResultScore(a)),
     nbHits: responses.reduce((total, response) => total + response.nbHits, 0),
     nbPages: Math.max(...responses.map((response) => response.nbPages)),
     processingTimeMS: responses.reduce(
@@ -435,6 +447,7 @@ type ResultDispatcherState = {
     metadata: string[];
     source: SearchResultSource;
     tags: string[];
+    score: number;
   }[];
   query: string | null;
   totalResults: number | null;
@@ -526,6 +539,13 @@ function SearchPageContent(): React.JSX.Element {
       highlight_full_fields: TYPESENSE_QUERY_BY,
       highlight_affix_num_tokens: 50,
     },
+    collectionSpecificSearchParameters: {
+      api_register: {
+        query_by: TYPESENSE_API_REGISTER_QUERY_BY,
+        query_by_weights: TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS,
+        highlight_full_fields: TYPESENSE_API_REGISTER_QUERY_BY,
+      },
+    },
   });
   const multiCollectionSearchClient = createMultiCollectionSearchClient(
     typesenseInstantSearchAdapter.searchClient,
@@ -571,6 +591,7 @@ function SearchPageContent(): React.JSX.Element {
           metadata: getSearchResultMetadata(hit),
           source: hit.__collection || "api_register",
           tags: getDisplayTags(tags),
+          score: getSearchResultScore(hit),
         };
       });
 
@@ -685,7 +706,13 @@ function SearchPageContent(): React.JSX.Element {
     items: searchResultState.items.filter(
       (item) => item.source === section.source,
     ),
-  })).filter((section) => section.items.length > 0);
+  }))
+    .filter((section) => section.items.length > 0)
+    .map((section) => ({
+      ...section,
+      score: Math.max(...section.items.map((item) => item.score)),
+    }))
+    .sort((a, b) => b.score - a.score);
 
   return (
     <div className={styles.searchPage}>
