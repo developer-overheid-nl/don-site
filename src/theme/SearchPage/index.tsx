@@ -59,12 +59,25 @@ type InstantSearchRequest = {
   params: SearchOptions;
 };
 
+type HierarchyField =
+  | "hierarchy.lvl0"
+  | "hierarchy.lvl1"
+  | "hierarchy.lvl2"
+  | "hierarchy.lvl3"
+  | "hierarchy.lvl4";
+
 type HighlightedField = { value: string };
 
 type SearchHit = {
   url: string;
   tags?: string[];
-  _highlightResult: Record<string, HighlightedField | undefined>;
+  content?: string;
+  "hierarchy.lvl0"?: string;
+  "hierarchy.lvl1"?: string;
+  "hierarchy.lvl2"?: string;
+  "hierarchy.lvl3"?: string;
+  "hierarchy.lvl4"?: string;
+  _highlightResult?: Record<string, HighlightedField | undefined>;
   _snippetResult?: {
     content?: HighlightedField;
   };
@@ -84,6 +97,66 @@ function getDisplayTags(tags: string[] = []) {
       return true;
     })
     .slice(0, 6);
+}
+
+function stripHighlightTags(value: string) {
+  return value.replace(/<\/?mark>/g, "");
+}
+
+function cleanContentSummary(value: string) {
+  const plainValue = stripHighlightTags(value)
+    .replace(/\s+/g, " ")
+    .trim();
+  const withoutName = plainValue.replace(/^Naam:\s*.*?\s+Beschrijving:\s*/i, "");
+  return withoutName.length > 280
+    ? `${withoutName.slice(0, 277).trim()}...`
+    : withoutName;
+}
+
+function getHighlightedValue(
+  hit: SearchHit,
+  field: HierarchyField,
+) {
+  return hit._highlightResult?.[field]?.value;
+}
+
+function getSearchFieldValue(hit: SearchHit, field: HierarchyField) {
+  return getHighlightedValue(hit, field) || hit[field] || "";
+}
+
+function getPlainHierarchyValue(hit: SearchHit, field: HierarchyField) {
+  return stripHighlightTags(String(getSearchFieldValue(hit, field)));
+}
+
+function getSearchResultTitle(hit: SearchHit) {
+  return getSearchFieldValue(hit, "hierarchy.lvl0") || "Onbekend resultaat";
+}
+
+function getSearchResultMetadata(hit: SearchHit) {
+  return Array.from(
+    new Set(
+      ([
+        "hierarchy.lvl1",
+        "hierarchy.lvl2",
+        "hierarchy.lvl3",
+        "hierarchy.lvl4",
+      ] as HierarchyField[])
+        .map((field) => getPlainHierarchyValue(hit, field))
+        .filter(
+          (value) =>
+            value && !value.startsWith("http") && !value.includes("@"),
+        ),
+    ),
+  );
+}
+
+function getSearchResultSummary(hit: SearchHit) {
+  const snippet = hit._snippetResult?.content?.value;
+  if (snippet) {
+    return cleanContentSummary(snippet);
+  }
+
+  return hit.content ? cleanContentSummary(hit.content) : "";
 }
 
 function mergeSearchResponses(
@@ -312,7 +385,7 @@ type ResultDispatcherState = {
     title: string;
     url: string;
     summary: string;
-    breadcrumbs: string[];
+    metadata: string[];
     source: SearchResultSource;
     tags: string[];
   }[];
@@ -437,31 +510,17 @@ function SearchPageContent(): React.JSX.Element {
         );
 
       const items = hits.map(
-        ({
-          url,
-          tags,
-          _highlightResult,
-          _snippetResult: snippet = {},
-        }: SearchHit) => {
+        (hit: SearchHit) => {
+          const { url, tags } = hit;
           const parsedURL = new URL(url);
-          const titles = [0, 1, 2, 3, 4, 5, 6]
-            .map((lvl) => {
-              const highlightResult = _highlightResult[`hierarchy.lvl${lvl}`];
-              return highlightResult
-                ? sanitizeValue(highlightResult.value)
-                : "";
-            })
-            .filter((v) => v);
 
           return {
-            title: titles.pop()!,
+            title: sanitizeValue(getSearchResultTitle(hit)),
             url: isRegexpStringMatch(externalUrlRegex, parsedURL.href)
               ? parsedURL.href
               : parsedURL.pathname + parsedURL.hash,
-            summary: snippet.content
-              ? `${sanitizeValue(snippet.content.value)}...`
-              : "",
-            breadcrumbs: titles,
+            summary: sanitizeValue(getSearchResultSummary(hit)),
+            metadata: getSearchResultMetadata(hit),
             source: tags?.includes("oss-register")
               ? "oss-register"
               : "api_register",
@@ -701,7 +760,7 @@ function SearchPageContent(): React.JSX.Element {
                   </h2>
                   <div className={styles.searchResultGrid}>
                   {items.map(
-                    ({ title, url, summary, breadcrumbs, tags }, i) => (
+                    ({ title, url, summary, metadata, tags }, i) => (
                       <article key={i} className={styles.searchResultCard}>
                         <div className={styles.searchResultCardHeader}>
                           <h3 className={styles.searchResultItemHeading}>
@@ -715,25 +774,10 @@ function SearchPageContent(): React.JSX.Element {
                           </span>
                         </div>
 
-                        {breadcrumbs.length > 0 && (
-                          <nav aria-label="breadcrumbs">
-                            <ul
-                              className={clsx(
-                                "breadcrumbs",
-                                styles.searchResultItemPath,
-                              )}
-                            >
-                              {breadcrumbs.map((html, index) => (
-                                <li
-                                  key={index}
-                                  className="breadcrumbs__item"
-                                  // Developer provided the HTML, so assume it's safe.
-                                  // eslint-disable-next-line react/no-danger
-                                  dangerouslySetInnerHTML={{ __html: html }}
-                                />
-                              ))}
-                            </ul>
-                          </nav>
+                        {metadata.length > 0 && (
+                          <p className={styles.searchResultItemMeta}>
+                            {metadata.join(" • ")}
+                          </p>
                         )}
 
                         {summary && (
