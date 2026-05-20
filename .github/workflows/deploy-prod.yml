@@ -2,7 +2,11 @@ name: Deploy to Production
 
 on:
   workflow_dispatch:
-  push:
+  workflow_run:
+    workflows:
+      - Build
+    types:
+      - completed
     branches:
       - main
 
@@ -11,9 +15,14 @@ env:
   INFRA_REPO: ${{ vars.INFRA_REPO }}
   KUSTOMIZE_PATH: ${{ vars.KUSTOMIZE_PATH }}
   DEPLOY_ENV: prod
+  APP_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+  APP_BRANCH: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_branch || github.ref_name }}
 
 jobs:
   create-infra-pr:
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Parse infra repository
@@ -47,7 +56,7 @@ jobs:
       - name: Maak release branch aan in don-infra
         id: branch
         run: |
-          BRANCH="release/don-site-${{ github.sha }}"
+          BRANCH="release/don-site-${{ env.APP_SHA }}"
           echo "branch=$BRANCH" >> $GITHUB_OUTPUT
           git checkout -b "$BRANCH"
 
@@ -55,7 +64,7 @@ jobs:
         run: |
           KUSTOMIZATION_FILE="${{ env.KUSTOMIZE_PATH }}${{ env.DEPLOY_ENV }}/kustomization.yaml"
 
-          yq e '(.images[] | select(.newName == "${{ env.IMAGE_NAME }}")).newTag = "${{ github.sha }}"' -i "$KUSTOMIZATION_FILE"
+          yq e '(.images[] | select(.newName == "${{ env.IMAGE_NAME }}")).newTag = "${{ env.APP_SHA }}"' -i "$KUSTOMIZATION_FILE"
 
       - name: Commit en push release branch
         run: |
@@ -64,9 +73,9 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
           git add "$KUSTOMIZATION_FILE"
-          git commit -m "release: don-site → ${{ github.sha }}
+          git commit -m "release: don-site → ${{ env.APP_SHA }}
 
-          Commit: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}"
+          Commit: ${{ github.server_url }}/${{ github.repository }}/commit/${{ env.APP_SHA }}"
           git push origin "${{ steps.branch.outputs.branch }}"
 
       - name: Maak PR aan in don-infra
@@ -77,11 +86,11 @@ jobs:
             --repo "${{ env.INFRA_REPO }}" \
             --base main \
             --head "${{ steps.branch.outputs.branch }}" \
-            --title "Release: don-site → ${GITHUB_SHA::7}" \
+            --title "Release: don-site → ${APP_SHA::7}" \
             --body "## don-site productie deploy
 
-          **Image:** \`${{ env.IMAGE_NAME }}:${{ github.sha }}\`
-          **Branch:** \`${{ github.ref_name }}\`
-          **Commit:** ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          **Image:** \`${{ env.IMAGE_NAME }}:${{ env.APP_SHA }}\`
+          **Branch:** \`${{ env.APP_BRANCH }}\`
+          **Commit:** ${{ github.server_url }}/${{ github.repository }}/commit/${{ env.APP_SHA }}
 
           Merge deze PR om de nieuwe versie naar productie te deployen."
