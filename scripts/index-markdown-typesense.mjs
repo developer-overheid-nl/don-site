@@ -37,9 +37,6 @@ const CONTENT_TYPES = {
     label: "Richtlijn",
     collection: `${COLLECTION_PREFIX}_richtlijn`,
   },
-};
-
-const EXTRA_COLLECTIONS = {
   blog: {
     label: "Blog",
     collection: `${COLLECTION_PREFIX}_blog`,
@@ -48,11 +45,6 @@ const EXTRA_COLLECTIONS = {
     label: "Community",
     collection: `${COLLECTION_PREFIX}_community`,
   },
-};
-
-const COLLECTIONS = {
-  ...CONTENT_TYPES,
-  ...EXTRA_COLLECTIONS,
 };
 
 const CATEGORY_LABELS = {
@@ -252,9 +244,9 @@ function toDocument({ filePath, frontmatter, markdown, urlPath, contentType }) {
     category,
     category_label: categoryLabel,
     content_type: contentType,
-    content_type_label: COLLECTIONS[contentType].label,
+    content_type_label: CONTENT_TYPES[contentType].label,
     "hierarchy.lvl0": cleanText(title),
-    "hierarchy.lvl1": COLLECTIONS[contentType].label,
+    "hierarchy.lvl1": CONTENT_TYPES[contentType].label,
     "hierarchy.lvl2": categoryLabel,
     "hierarchy.lvl3": detailLabel,
     "hierarchy.lvl4": Array.isArray(frontmatter.tags)
@@ -269,7 +261,7 @@ function toDocument({ filePath, frontmatter, markdown, urlPath, contentType }) {
 
 function collectDocuments() {
   const documents = Object.fromEntries(
-    Object.keys(COLLECTIONS).map((contentType) => [contentType, []]),
+    Object.keys(CONTENT_TYPES).map((contentType) => [contentType, []]),
   );
 
   for (const filePath of walk(DOCS_DIR)) {
@@ -464,5 +456,5 @@ async function indexCollection(aliasName, documents) {
 const documentsByType = collectDocuments();
 
 for (const [contentType, documents] of Object.entries(documentsByType)) {
-  await indexCollection(COLLECTIONS[contentType].collection, documents);
+  await indexCollection(CONTENT_TYPES[contentType].collection, documents);
 }

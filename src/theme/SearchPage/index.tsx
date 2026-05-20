@@ -118,6 +118,7 @@ type SearchHit = {
   content?: string;
   text_match?: number;
   __collection?: SearchResultSource;
+  content_type?: string;
   "hierarchy.lvl0"?: string;
   "hierarchy.lvl1"?: string;
   "hierarchy.lvl2"?: string;
@@ -209,6 +210,10 @@ function getSearchResultSummary(hit: SearchHit) {
 
 function getSearchResultScore(hit: SearchHit) {
   return hit.text_match || hit._rawTypesenseHit?.text_match || 0;
+}
+
+function getSearchResultSource(hit: SearchHit): SearchResultSource {
+  return hit.__collection || "api_register";
 }
 
 function mergeSearchResponses(
@@ -589,7 +594,7 @@ function SearchPageContent(): React.JSX.Element {
             : parsedURL.pathname + parsedURL.hash,
           summary: sanitizeValue(getSearchResultSummary(hit)),
           metadata: getSearchResultMetadata(hit),
-          source: hit.__collection || "api_register",
+          source: getSearchResultSource(hit),
           tags: getDisplayTags(tags),
           score: getSearchResultScore(hit),
         };
