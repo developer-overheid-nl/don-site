@@ -199,7 +199,7 @@ const tiles: GridTile[] = [
         label: "Formatting & Linting",
       },
       {
-        link: "/kennisbank/front-end/maps-developers-amsterdam",
+        link: "/kennisbank/front-end/tools/maps-developers-amsterdam",
         label: "Maps Amsterdam",
       },
       {
