@@ -202,7 +202,7 @@ export function ActiveTeam(): ReactNode {
         name="Tom Ootes"
         githubUrl="https://github.com/tomootes"
         linkedInUrl="https://www.linkedin.com/in/tootes/"
-        mastadonUrl="https://hostux.social/@tomootes"
+        mastadonUrl="https://social.codefor.nl/@tomootes"
         icon="/img/team/tom-ootes.png"
         email="t.ootes@geonovum.nl"
       >
@@ -238,16 +238,16 @@ export function ActiveTeam(): ReactNode {
         role="Implementatieadviseur internetstandaarden."
       >
         <Translate>
-          Jan is 'de vraagbaak' als het om Internetstandaarden en de daarbij 
-          behorende security en compliancy kaders. Gebruik hiervan stimuleren, 
-          uitleggen hoe, en wat, en vooral ook gemakkelijker maken is wat hem 
-          bezig houdt. Naast zijn werk voor ons verbouwt hij een boerderij en 
-          is hij oprichter van de Stichting Librekat waarlangs OpenKAT wordt 
-          doorontwikkeld en Stichting eth0 voor de Nederlandse Hacker 
+          Jan is 'de vraagbaak' als het om Internetstandaarden en de daarbij
+          behorende security en compliancy kaders. Gebruik hiervan stimuleren,
+          uitleggen hoe, en wat, en vooral ook gemakkelijker maken is wat hem
+          bezig houdt. Naast zijn werk voor ons verbouwt hij een boerderij en
+          is hij oprichter van de Stichting Librekat waarlangs OpenKAT wordt
+          doorontwikkeld en Stichting eth0 voor de Nederlandse Hacker
           community.
         </Translate>
       </TeamProfileCardCol>
-      
+
     </div>
   );
 }
