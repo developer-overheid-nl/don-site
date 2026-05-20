@@ -1,5 +1,24 @@
 # @developer-overheid-nl/website
 
+## 1.4.1
+
+### Patch Changes
+
+- de5b5d1: Voeg Johan toe als spreker aan het event van 17 juni
+
+## 1.4.0
+
+### Minor Changes
+
+- 90d5762: Publiceer een blogpost over ons event op 17 juni
+
+## 1.3.0
+
+### Minor Changes
+
+- f737426: Voegt een artikel toe van Tim van der Lippe over de zachte kant van
+  standaarden.
+
 ## 1.2.0
 
 ### Minor Changes
