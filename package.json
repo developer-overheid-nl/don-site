@@ -8,6 +8,7 @@
     "start:docusaurus": "docusaurus start",
     "build": "npm-run-all build:*",
     "build:docusaurus": "docusaurus build",
+    "index:typesense": "node scripts/index-markdown-typesense.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

@@ -65,3 +65,38 @@ jobs:
       - name: Push image
         run: |
           docker push --all-tags ${{ env.IMAGE_NAME }}
+
+  index-typesense:
+    if: |
+      github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: 24.12
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build markdown output
+        run: pnpm build:docusaurus
+        env:
+          PIWIK_PRO_ACCOUNT_ADDRESS: ${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}
+          PIWIK_PRO_SITE_ID: ${{ secrets.PIWIK_PRO_SITE_ID }}
+
+      - name: Index markdown in Typesense
+        run: pnpm index:typesense
+        env:
+          SITE_URL: https://developer.overheid.nl
+          TYPESENSE_ENDPOINT: ${{ vars.TYPESENSE_ENDPOINT }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
+          TYPESENSE_COLLECTION_PREFIX: ${{ vars.TYPESENSE_COLLECTION_PREFIX }}
