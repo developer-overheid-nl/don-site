@@ -1,5 +1,11 @@
 # @developer-overheid-nl/website
 
+## 1.4.1
+
+### Patch Changes
+
+- de5b5d1: Voeg Johan toe als spreker aan het event van 17 juni
+
 ## 1.4.0
 
 ### Minor Changes

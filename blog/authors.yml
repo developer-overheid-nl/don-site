@@ -1,7 +1,7 @@
 joost-farla:
   name: Joost Farla
   title: Implementatie ondersteuner - developer.overheid.nl
-  image_url: https://developer.overheid.nl/img/team/joost-farla.jpg
+  image_url: /img/team/joost-farla.webp
   page: true
   socials:
     linkedin: joostfarla
@@ -11,7 +11,7 @@ joost-farla:
 floris-deutekom:
   name: Floris Deutekom
   title: Implementatie ondersteuner - developer.overheid.nl
-  image_url: https://developer.overheid.nl/img/team/floris-deutekom.png
+  image_url: /img/team/floris-deutekom.webp
   page: true
   socials:
     linkedin: floris-deutekom
@@ -21,7 +21,7 @@ floris-deutekom:
 jan-klopper:
   name: Jan Klopper
   title: Implementatie ondersteuner - developer.overheid.nl
-  image_url: https://developer.overheid.nl/img/team/jan-klopper.png
+  image_url: /img/team/jan-klopper.webp
   page: true
   socials:
     linkedin: janklopper
@@ -31,7 +31,7 @@ jan-klopper:
 dimitri-van-hees:
   name: Dimitri van Hees
   title: Product Owner - developer.overheid.nl
-  image_url: https://github.com/dvh.png
+  image_url: /img/team/dimitri-van-hees.webp
   page: true
   socials:
     linkedin: dimitrivanhees
@@ -43,7 +43,7 @@ dimitri-van-hees:
 matthijs-hovestad:
   name: Matthijs Hovestad
   title: Senior Backend Developer - developer.overheid.nl
-  image_url: https://github.com/pasibun.png
+  image_url: /img/team/matthijs-hovestad.webp
   page: true
   socials:
     linkedin: matthijs-hovestad-a123898b
@@ -53,7 +53,7 @@ matthijs-hovestad:
 tom-ootes:
   name: Tom Ootes
   title: Developer Advocate - developer.overheid.nl
-  image_url: https://developer.overheid.nl/img/team/tom-ootes.png
+  image_url: /img/team/tom-ootes.webp
   page: true
   socials:
     linkedin: tootes
@@ -73,7 +73,7 @@ thomas-rooijakkers:
 martin-van-der-plas:
   name: Martin van der Plas
   title: System Architect Toegang & Wallet - Logius
-  image_url: https://github.com/mrtn78.png
+  image_url: /img/authors/martin-van-der-plas.webp
   page: true
   socials:
     linkedin: martinvanderplas
@@ -82,7 +82,7 @@ martin-van-der-plas:
 stas-mironov:
   name: Stas Mironov
   title: Architect/API Adviseur - Logius
-  image_url: https://avatars.githubusercontent.com/u/10722451?v=4
+  image_url: /img/authors/stas-mironov.webp
   page: true
   socials:
     linkedin: samironov
@@ -91,7 +91,7 @@ stas-mironov:
 frank-niessink:
   name: Frank Niessink
   title: Kwaliteitsmanager - ICTU
-  image_url: https://avatars.githubusercontent.com/u/3530545
+  image_url: /img/authors/frank-niessink.webp
   page: true
   socials:
     linkedin: fniessink
@@ -101,7 +101,7 @@ frank-niessink:
 frank-terpstra:
   name: Frank Terpstra
   title: Implementatie ondersteuner - developer.overheid.nl
-  image_url: https://developer.overheid.nl/img/team/frank-terpstra.jpg
+  image_url: /img/team/frank-terpstra.webp
   page: true
   socials:
     linkedin: frank-terpstra-1bb5096
@@ -111,7 +111,7 @@ frank-terpstra:
 jaap-hein-wester:
   name: Jaap-Hein Wester
   title: Senior Frontend Developer - developer.overheid.nl
-  image_url: https://developer.overheid.nl/img/team/jaap-hein-wester.jpg
+  image_url: /img/team/jaap-hein-wester.webp
   page: true
   socials:
     linkedin: jaapheinwester
@@ -123,7 +123,7 @@ jaap-hein-wester:
 digilab:
   name: Digilab
   title: Innovatiewerkplaats voor het Federatief Datastelsel
-  image_url: https://social.overheid.nl/system/accounts/avatars/112/552/867/348/125/912/original/4a4f714089a5b239.png
+  image_url: /img/authors/digilab.webp
   page: true
   socials:
     digilab-overheid: https://digilab.overheid.nl
@@ -132,7 +132,7 @@ digilab:
 kennisplatform-apis:
   name: Kennisplatform API's
   title: Strategische en tactische vraagstukken rond het ontwikkelen van API's
-  image_url: https://developer.overheid.nl/static/images/logo_icon_kpa.1787d5b5302a.png
+  image_url: /img/authors/kennisplatform-apis.webp
   page: true
   socials:
     apigov: https://apigov.nl
@@ -140,7 +140,7 @@ kennisplatform-apis:
 opensourcewerken:
   name: Open Source Werken
   title: Community voor Open Source werken bij de overheid
-  image_url: https://social.overheid.nl/system/accounts/avatars/112/292/076/020/535/022/original/e0f2ce016250a43d.jpg
+  image_url: /img/authors/open-source-werken.webp
   page: true
   socials:
     opensource-overheid: https://opensourcewerken.nl
@@ -149,7 +149,7 @@ opensourcewerken:
 tim-van-der-lippe:
   name: Tim van der Lippe
   title: Architect/API Adviseur - Logius
-  image_url: https://github.com/timvdlippe.png
+  image_url: /img/authors/tim-van-der-lippe.webp
   page: true
   socials:
     github: timvdlippe
@@ -157,7 +157,7 @@ tim-van-der-lippe:
 
 forum-standaardisatie:
   name: Forum Standaardisatie
-  image_url: https://avatars.githubusercontent.com/u/134707812?s=200&v=4
+  image_url: /img/authors/forum-standaardisatie.webp
   page: true
   socials:
     github: forumstandaardisatie
@@ -167,13 +167,13 @@ forum-standaardisatie:
 pieter-bresters:
   name: Pieter Bresters
   title: Senior Adviseur - Geonovum
-  image_url: /img/authors/pieter-bresters.png
+  image_url: /img/authors/pieter-bresters.webp
   page: true
 
 eric-nieuwland:
   name: Eric Nieuwland
   title: Security Officer en Solution Architect - ICTU
-  image_url: https://avatars.githubusercontent.com/u/10603975
+  image_url: /img/authors/eric-nieuwland.webp
   page: true
   socials:
     linkedin: ericnieuwland
@@ -183,7 +183,7 @@ eric-nieuwland:
 linda-van-den-brink:
   name: Linda van den Brink
   title: Senior Adviseur - Geonovum
-  image_url: https://avatars.githubusercontent.com/u/7943515?v=4
+  image_url: /img/authors/linda-van-den-brink.webp
   page: true
   socials:
     linkedin: linda-van-den-brink-87494a3
@@ -192,7 +192,7 @@ linda-van-den-brink:
 jan-vlug:
   name: Jan Vlug
   title: Software Engineer
-  image_url: https://files.mastodon.social/accounts/avatars/000/007/668/original/af32591887b40258.jpeg
+  image_url: /img/authors/jan-vlug.webp
   page: true
   socials:
     mastodon: https://mastodon.social/@janvlug
@@ -205,7 +205,7 @@ henry-fidder:
 pascal-van-der-horst:
   name: Pascal van der Horst
   title: Platform & Cloud Engineer - Wigo4it
-  image_url: https://avatars.githubusercontent.com/u/9113152?v=4
+  image_url: /img/authors/pascal-van-der-horst.webp
   page: true
   socials:
     linkedin: pascal-van-der-horst
@@ -215,9 +215,17 @@ anne-schuth:
   name: Anne Schuth
   title: Staff Engineer - Bureau Architectuur BZK
   page: true
-  image_url: /img/authors/anne-schuth.png
+  image_url: /img/authors/anne-schuth.webp
   socials:
     linkedin: https://www.linkedin.com/in/anneschuth/
     github: anneschuth
     bluesky: anneschuth.nl
     email: anne.schuth@rijksoverheid.nl
+
+jaap-willem-sjoukema:
+  name: Jaap-Willem Sjoukema
+  title: Productmanager Generieke Geo Services - Kadaster
+  image_url: /img/authors/jaap-willem-sjoukema.webp
+  page: true
+  socials:
+    linkedin: https://www.linkedin.com/in/jaapwillemsjoukema/
