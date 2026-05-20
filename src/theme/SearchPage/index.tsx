@@ -11,6 +11,12 @@ import clsx from "clsx";
 
 import algoliaSearchHelper from "algoliasearch-helper";
 import type { SearchParameters } from "algoliasearch-helper";
+import type {
+  SearchClient,
+  SearchOptions,
+  SearchResponse,
+  SearchResponses,
+} from "algoliasearch-helper/types/algoliasearch";
 
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
@@ -32,6 +38,97 @@ import styles from "./styles.module.css";
 import type { ThemeConfig } from "docusaurus-theme-search-typesense";
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 import { useHistory } from "@docusaurus/router";
+
+const TYPESENSE_SEARCH_COLLECTIONS = ["api_register", "oss-register"];
+const TYPESENSE_QUERY_BY =
+  "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags";
+
+type SearchResultSource = "api_register" | "oss-register";
+
+const SEARCH_RESULT_SECTIONS: {
+  source: SearchResultSource;
+  title: string;
+  badge: string;
+}[] = [
+  { source: "api_register", title: "API-register", badge: "API" },
+  { source: "oss-register", title: "Open source register", badge: "Repository" },
+];
+
+type InstantSearchRequest = {
+  indexName: string;
+  params: SearchOptions;
+};
+
+type HighlightedField = { value: string };
+
+type SearchHit = {
+  url: string;
+  tags?: string[];
+  _highlightResult: Record<string, HighlightedField | undefined>;
+  _snippetResult?: {
+    content?: HighlightedField;
+  };
+};
+
+type TypesenseSearchResponse = SearchResponse<SearchHit>;
+
+function getDisplayTags(tags: string[] = []) {
+  return tags
+    .filter((tag) => {
+      if (tag === "api-register" || tag === "oss-register") return false;
+      if (tag === "api" || tag === "repository") return false;
+      if (tag.startsWith("api-id:")) return false;
+      if (tag.startsWith("repository-id:")) return false;
+      if (tag.startsWith("version:")) return false;
+      if (tag.startsWith("https://")) return false;
+      return true;
+    })
+    .slice(0, 6);
+}
+
+function mergeSearchResponses(
+  responses: TypesenseSearchResponse[],
+): TypesenseSearchResponse {
+  const [firstResponse] = responses;
+
+  return {
+    ...firstResponse,
+    hits: responses.flatMap((response) => response.hits),
+    nbHits: responses.reduce((total, response) => total + response.nbHits, 0),
+    nbPages: Math.max(...responses.map((response) => response.nbPages)),
+    processingTimeMS: responses.reduce(
+      (total, response) => total + response.processingTimeMS,
+      0,
+    ),
+  };
+}
+
+function createMultiCollectionSearchClient(searchClient: SearchClient) {
+  return {
+    ...searchClient,
+    search: async <T,>(
+      requests: InstantSearchRequest[],
+    ): Promise<SearchResponses<T>> => {
+      const expandedRequests = requests.flatMap((request) =>
+        TYPESENSE_SEARCH_COLLECTIONS.map((collection) => ({
+          ...request,
+          indexName: collection,
+          params: { ...request.params },
+        })),
+      );
+      const response = await searchClient.search<T>(expandedRequests);
+      const results = response.results as TypesenseSearchResponse[];
+
+      return {
+        results: requests.map((_, index) => {
+          const start = index * TYPESENSE_SEARCH_COLLECTIONS.length;
+          const end = start + TYPESENSE_SEARCH_COLLECTIONS.length;
+          return mergeSearchResponses(results.slice(start, end));
+        }),
+      } as SearchResponses<T>;
+    },
+  };
+}
 
 export function useTitleFormatter(title?: string | undefined): string {
   const { siteConfig } = useDocusaurusContext();
@@ -216,6 +313,8 @@ type ResultDispatcherState = {
     url: string;
     summary: string;
     breadcrumbs: string[];
+    source: SearchResultSource;
+    tags: string[];
   }[];
   query: string | null;
   totalResults: number | null;
@@ -298,28 +397,27 @@ function SearchPageContent(): React.JSX.Element {
   const typesenseInstantSearchAdapter = new TypesenseInstantSearchAdapter({
     server: typesenseServerConfig,
     additionalSearchParameters: {
-      query_by:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content",
-      include_fields:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content,anchor,url,type,id",
-      highlight_full_fields:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content",
-      group_by: "url",
-      group_limit: 1,
-      highlight_affix_num_tokens: 50,
       ...typesenseSearchParameters,
+      query_by: TYPESENSE_QUERY_BY,
+      include_fields:
+        "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags,url,type,id",
+      highlight_full_fields: TYPESENSE_QUERY_BY,
+      highlight_affix_num_tokens: 50,
     },
   });
+  const multiCollectionSearchClient = createMultiCollectionSearchClient(
+    typesenseInstantSearchAdapter.searchClient,
+  );
 
   // Needed this to avoid a typescript error in algoliaSearchHelper
   const searchParams: Partial<SearchParameters> = {
-    hitsPerPage: 15,
+    hitsPerPage: 10,
     advancedSyntax: true,
-    disjunctiveFacets: ["language", "docusaurus_tag"],
+    disjunctiveFacets: [],
   };
 
   const algoliaHelper = algoliaSearchHelper(
-    typesenseInstantSearchAdapter.searchClient,
+    multiCollectionSearchClient,
     typesenseCollectionName,
     searchParams,
   );
@@ -341,13 +439,10 @@ function SearchPageContent(): React.JSX.Element {
       const items = hits.map(
         ({
           url,
+          tags,
           _highlightResult,
           _snippetResult: snippet = {},
-        }: {
-          url: string;
-          _highlightResult: { [key: string]: { value: string } };
-          _snippetResult: { content?: { value: string } };
-        }) => {
+        }: SearchHit) => {
           const parsedURL = new URL(url);
           const titles = [0, 1, 2, 3, 4, 5, 6]
             .map((lvl) => {
@@ -367,6 +462,10 @@ function SearchPageContent(): React.JSX.Element {
               ? `${sanitizeValue(snippet.content.value)}...`
               : "",
             breadcrumbs: titles,
+            source: tags?.includes("oss-register")
+              ? "oss-register"
+              : "api_register",
+            tags: getDisplayTags(tags),
           };
         },
       );
@@ -476,6 +575,13 @@ function SearchPageContent(): React.JSX.Element {
 
     makeSearch(searchResultState.lastPage);
   }, [makeSearch, searchResultState.lastPage]);
+
+  const searchResultSections = SEARCH_RESULT_SECTIONS.map((section) => ({
+    ...section,
+    items: searchResultState.items.filter(
+      (item) => item.source === section.source,
+    ),
+  })).filter((section) => section.items.length > 0);
 
   return (
     <div className={styles.searchPage}>
@@ -588,48 +694,72 @@ function SearchPageContent(): React.JSX.Element {
 
           {searchResultState.items.length > 0 ? (
             <main>
-              {searchResultState.items.map(
-                ({ title, url, summary, breadcrumbs }, i) => (
-                  <article key={i} className={styles.searchResultItem}>
-                    <h2 className={styles.searchResultItemHeading}>
-                      <Link
-                        to={url}
-                        dangerouslySetInnerHTML={{ __html: title }}
-                      />
-                    </h2>
-
-                    {breadcrumbs.length > 0 && (
-                      <nav aria-label="breadcrumbs">
-                        <ul
-                          className={clsx(
-                            "breadcrumbs",
-                            styles.searchResultItemPath,
-                          )}
-                        >
-                          {breadcrumbs.map((html, index) => (
-                            <li
-                              key={index}
-                              className="breadcrumbs__item"
-                              // Developer provided the HTML, so assume it's safe.
-                              // eslint-disable-next-line react/no-danger
-                              dangerouslySetInnerHTML={{ __html: html }}
+              {searchResultSections.map(({ source, title, badge, items }) => (
+                <section key={source} className={styles.searchResultSection}>
+                  <h2 className={styles.searchResultSectionHeading}>
+                    {title}
+                  </h2>
+                  <div className={styles.searchResultGrid}>
+                  {items.map(
+                    ({ title, url, summary, breadcrumbs, tags }, i) => (
+                      <article key={i} className={styles.searchResultCard}>
+                        <div className={styles.searchResultCardHeader}>
+                          <h3 className={styles.searchResultItemHeading}>
+                            <Link
+                              to={url}
+                              dangerouslySetInnerHTML={{ __html: title }}
                             />
-                          ))}
-                        </ul>
-                      </nav>
-                    )}
+                          </h3>
+                          <span className={styles.searchResultBadge}>
+                            {badge}
+                          </span>
+                        </div>
 
-                    {summary && (
-                      <p
-                        className={styles.searchResultItemSummary}
-                        // Developer provided the HTML, so assume it's safe.
-                        // eslint-disable-next-line react/no-danger
-                        dangerouslySetInnerHTML={{ __html: summary }}
-                      />
-                    )}
-                  </article>
-                ),
-              )}
+                        {breadcrumbs.length > 0 && (
+                          <nav aria-label="breadcrumbs">
+                            <ul
+                              className={clsx(
+                                "breadcrumbs",
+                                styles.searchResultItemPath,
+                              )}
+                            >
+                              {breadcrumbs.map((html, index) => (
+                                <li
+                                  key={index}
+                                  className="breadcrumbs__item"
+                                  // Developer provided the HTML, so assume it's safe.
+                                  // eslint-disable-next-line react/no-danger
+                                  dangerouslySetInnerHTML={{ __html: html }}
+                                />
+                              ))}
+                            </ul>
+                          </nav>
+                        )}
+
+                        {summary && (
+                          <p
+                            className={styles.searchResultItemSummary}
+                            // Developer provided the HTML, so assume it's safe.
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{ __html: summary }}
+                          />
+                        )}
+
+                        {tags.length > 0 && (
+                          <div className={styles.searchResultTags}>
+                            {tags.map((tag) => (
+                              <span key={tag} className={styles.searchResultTag}>
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </article>
+                    ),
+                  )}
+                  </div>
+                </section>
+              ))}
             </main>
           ) : (
             [
