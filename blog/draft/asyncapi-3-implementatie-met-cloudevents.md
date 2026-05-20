@@ -1,6 +1,6 @@
 ---
 authors: [floris-deutekom]
-tags: [api, api-design, eda, asyncapi, CloudEvents]
+tags: [api, api-design, eda, asyncapi, cloudevents]
 description: |
   In deze laatste blogpost in een reeks van drie wordt een voorzichtige blik 
   vooruit geworpen op de implementatie van AsyncAPI. Daarin lijkt het gebruik 
@@ -54,7 +54,7 @@ op grotere schaal zal dit geheid uitlopen op problemen.
 [CloudEvents](https://CloudEvents.io/) vangt precies dat probleem af door een
 minimale, duidelijke standaard neer te zetten voor event-metadata en het
 beschrijven/definiëren van het event zelf. Opgenomen als
-[NL GOV profiel](/kennisbank/api-ontwikkeling/standaarden/CloudEvents) en door
+[NL GOV profiel](/kennisbank/api-ontwikkeling/standaarden/cloudevents) en door
 [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-CloudEvents)
 op de “pas toe, leg uit” lijst gezet, CloudEvents specifieert onder andere
 uniforme naamgeving en metadata, afspraken over payloads en headers, notificatie
