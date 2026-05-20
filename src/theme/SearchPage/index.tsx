@@ -39,20 +39,61 @@ import type { ThemeConfig } from "docusaurus-theme-search-typesense";
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 import { useHistory } from "@docusaurus/router";
 
-const TYPESENSE_SEARCH_COLLECTIONS = ["api_register", "oss-register"];
+const TYPESENSE_SEARCH_COLLECTIONS = [
+  "api_register",
+  "oss-register",
+  "developer_overheid_standaard",
+  "developer_overheid_tutorials",
+  "developer_overheid_tools",
+  "developer_overheid_architectuur",
+  "developer_overheid_richtlijn",
+  "developer_overheid_blog",
+  "developer_overheid_community",
+] as const;
 const TYPESENSE_QUERY_BY =
   "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
 const TYPESENSE_QUERY_BY_WEIGHTS = "12,6,4,3,2,1,1";
 
-type SearchResultSource = "api_register" | "oss-register";
+type SearchResultSource = (typeof TYPESENSE_SEARCH_COLLECTIONS)[number];
 
 const SEARCH_RESULT_SECTIONS: {
   source: SearchResultSource;
   title: string;
   badge: string;
 }[] = [
+  {
+    source: "developer_overheid_standaard",
+    title: "Standaarden",
+    badge: "Standaard",
+  },
+  {
+    source: "developer_overheid_tutorials",
+    title: "Tutorials",
+    badge: "Tutorial",
+  },
+  { source: "developer_overheid_tools", title: "Tools", badge: "Tool" },
+  {
+    source: "developer_overheid_architectuur",
+    title: "Architectuur",
+    badge: "Architectuur",
+  },
+  {
+    source: "developer_overheid_richtlijn",
+    title: "Richtlijnen",
+    badge: "Richtlijn",
+  },
+  { source: "developer_overheid_blog", title: "Blog", badge: "Blog" },
+  {
+    source: "developer_overheid_community",
+    title: "Communities",
+    badge: "Community",
+  },
   { source: "api_register", title: "API-register", badge: "API" },
-  { source: "oss-register", title: "Open source register", badge: "Repository" },
+  {
+    source: "oss-register",
+    title: "Open source register",
+    badge: "Repository",
+  },
 ];
 
 type InstantSearchRequest = {
@@ -73,6 +114,7 @@ type SearchHit = {
   url: string;
   tags?: string[];
   content?: string;
+  __collection?: SearchResultSource;
   "hierarchy.lvl0"?: string;
   "hierarchy.lvl1"?: string;
   "hierarchy.lvl2"?: string;
@@ -105,19 +147,17 @@ function stripHighlightTags(value: string) {
 }
 
 function cleanContentSummary(value: string) {
-  const plainValue = stripHighlightTags(value)
-    .replace(/\s+/g, " ")
-    .trim();
-  const withoutName = plainValue.replace(/^Naam:\s*.*?\s+Beschrijving:\s*/i, "");
+  const plainValue = stripHighlightTags(value).replace(/\s+/g, " ").trim();
+  const withoutName = plainValue.replace(
+    /^Naam:\s*.*?\s+Beschrijving:\s*/i,
+    "",
+  );
   return withoutName.length > 280
     ? `${withoutName.slice(0, 277).trim()}...`
     : withoutName;
 }
 
-function getHighlightedValue(
-  hit: SearchHit,
-  field: HierarchyField,
-) {
+function getHighlightedValue(hit: SearchHit, field: HierarchyField) {
   return hit._highlightResult?.[field]?.value;
 }
 
@@ -136,16 +176,17 @@ function getSearchResultTitle(hit: SearchHit) {
 function getSearchResultMetadata(hit: SearchHit) {
   return Array.from(
     new Set(
-      ([
-        "hierarchy.lvl1",
-        "hierarchy.lvl2",
-        "hierarchy.lvl3",
-        "hierarchy.lvl4",
-      ] as HierarchyField[])
+      (
+        [
+          "hierarchy.lvl1",
+          "hierarchy.lvl2",
+          "hierarchy.lvl3",
+          "hierarchy.lvl4",
+        ] as HierarchyField[]
+      )
         .map((field) => getPlainHierarchyValue(hit, field))
         .filter(
-          (value) =>
-            value && !value.startsWith("http") && !value.includes("@"),
+          (value) => value && !value.startsWith("http") && !value.includes("@"),
         ),
     ),
   );
@@ -167,7 +208,12 @@ function mergeSearchResponses(
 
   return {
     ...firstResponse,
-    hits: responses.flatMap((response) => response.hits),
+    hits: responses.flatMap((response, index) =>
+      response.hits.map((hit) => ({
+        ...hit,
+        __collection: TYPESENSE_SEARCH_COLLECTIONS[index],
+      })),
+    ),
     nbHits: responses.reduce((total, response) => total + response.nbHits, 0),
     nbPages: Math.max(...responses.map((response) => response.nbPages)),
     processingTimeMS: responses.reduce(
@@ -476,7 +522,7 @@ function SearchPageContent(): React.JSX.Element {
       query_by_weights: TYPESENSE_QUERY_BY_WEIGHTS,
       text_match_type: "max_weight",
       include_fields:
-        "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags,url,type,id",
+        "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags,url,type,id,content_type",
       highlight_full_fields: TYPESENSE_QUERY_BY,
       highlight_affix_num_tokens: 50,
     },
@@ -512,25 +558,21 @@ function SearchPageContent(): React.JSX.Element {
           "search-result-match",
         );
 
-      const items = hits.map(
-        (hit: SearchHit) => {
-          const { url, tags } = hit;
-          const parsedURL = new URL(url);
+      const items = hits.map((hit: SearchHit) => {
+        const { url, tags } = hit;
+        const parsedURL = new URL(url);
 
-          return {
-            title: sanitizeValue(getSearchResultTitle(hit)),
-            url: isRegexpStringMatch(externalUrlRegex, parsedURL.href)
-              ? parsedURL.href
-              : parsedURL.pathname + parsedURL.hash,
-            summary: sanitizeValue(getSearchResultSummary(hit)),
-            metadata: getSearchResultMetadata(hit),
-            source: tags?.includes("oss-register")
-              ? "oss-register"
-              : "api_register",
-            tags: getDisplayTags(tags),
-          };
-        },
-      );
+        return {
+          title: sanitizeValue(getSearchResultTitle(hit)),
+          url: isRegexpStringMatch(externalUrlRegex, parsedURL.href)
+            ? parsedURL.href
+            : parsedURL.pathname + parsedURL.hash,
+          summary: sanitizeValue(getSearchResultSummary(hit)),
+          metadata: getSearchResultMetadata(hit),
+          source: hit.__collection || "api_register",
+          tags: getDisplayTags(tags),
+        };
+      });
 
       searchResultStateDispatcher({
         type: "update",
@@ -555,40 +597,40 @@ function SearchPageContent(): React.JSX.Element {
   const prevY = useRef(0);
   const observer = useRef(
     ExecutionEnvironment.canUseIntersectionObserver &&
-    new IntersectionObserver(
-      (entries) => {
-        const {
-          isIntersecting,
-          boundingClientRect: { y: currentY },
-        } = entries[0]!;
+      new IntersectionObserver(
+        (entries) => {
+          const {
+            isIntersecting,
+            boundingClientRect: { y: currentY },
+          } = entries[0]!;
 
-        if (isIntersecting && prevY.current > currentY) {
-          searchResultStateDispatcher({ type: "advance" });
-        }
+          if (isIntersecting && prevY.current > currentY) {
+            searchResultStateDispatcher({ type: "advance" });
+          }
 
-        prevY.current = currentY;
-      },
-      { threshold: 1 },
-    ),
+          prevY.current = currentY;
+        },
+        { threshold: 1 },
+      ),
   );
 
   const getTitle = () =>
     searchQuery
       ? translate(
-        {
-          id: "theme.SearchPage.existingResultsTitle",
-          message: 'Search results for "{query}"',
-          description: "The search page title for non-empty query",
-        },
-        {
-          query: searchQuery,
-        },
-      )
+          {
+            id: "theme.SearchPage.existingResultsTitle",
+            message: 'Search results for "{query}"',
+            description: "The search page title for non-empty query",
+          },
+          {
+            query: searchQuery,
+          },
+        )
       : translate({
-        id: "theme.SearchPage.emptyResultsTitle",
-        message: "Search the documentation",
-        description: "The search page title for empty query",
-      });
+          id: "theme.SearchPage.emptyResultsTitle",
+          message: "Search the documentation",
+          description: "The search page title for empty query",
+        });
 
   const makeSearch = useEvent((page: number = 0) => {
     // algoliaHelper.addDisjunctiveFacetRefinement('docusaurus_tag', 'default');
@@ -699,7 +741,9 @@ function SearchPageContent(): React.JSX.Element {
             <div className={clsx("col", "col--8", styles.searchResultsColumn)}>
               {!!searchResultState.totalResults &&
                 documentsFoundPlural(searchResultState.totalResults)}
-              <span id="searchResultsAmount" className="hidden">{searchResultState.totalResults}</span>
+              <span id="searchResultsAmount" className="hidden">
+                {searchResultState.totalResults}
+              </span>
             </div>
 
             <div
@@ -758,12 +802,9 @@ function SearchPageContent(): React.JSX.Element {
             <main>
               {searchResultSections.map(({ source, title, badge, items }) => (
                 <section key={source} className={styles.searchResultSection}>
-                  <h2 className={styles.searchResultSectionHeading}>
-                    {title}
-                  </h2>
+                  <h2 className={styles.searchResultSectionHeading}>{title}</h2>
                   <div className={styles.searchResultGrid}>
-                  {items.map(
-                    ({ title, url, summary, metadata, tags }, i) => (
+                    {items.map(({ title, url, summary, metadata, tags }, i) => (
                       <article key={i} className={styles.searchResultCard}>
                         <div className={styles.searchResultCardHeader}>
                           <h3 className={styles.searchResultItemHeading}>
@@ -795,15 +836,17 @@ function SearchPageContent(): React.JSX.Element {
                         {tags.length > 0 && (
                           <div className={styles.searchResultTags}>
                             {tags.map((tag) => (
-                              <span key={tag} className={styles.searchResultTag}>
+                              <span
+                                key={tag}
+                                className={styles.searchResultTag}
+                              >
                                 {tag}
                               </span>
                             ))}
                           </div>
                         )}
                       </article>
-                    ),
-                  )}
+                    ))}
                   </div>
                 </section>
               ))}
