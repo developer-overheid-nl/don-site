@@ -97,6 +97,5 @@ jobs:
         run: pnpm index:typesense
         env:
           SITE_URL: https://developer.overheid.nl
-          TYPESENSE_ENDPOINT: ${{ vars.TYPESENSE_ENDPOINT }}
-          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
-          TYPESENSE_COLLECTION_PREFIX: ${{ vars.TYPESENSE_COLLECTION_PREFIX }}
+          TYPESENSE_ENDPOINT: ${{ vars.TYPESENSE_ENDPOINT || secrets.TYPESENSE_ENDPOINT }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY || secrets.TYPESENSE_API_KEY }}
