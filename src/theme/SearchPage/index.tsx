@@ -41,7 +41,8 @@ import { useHistory } from "@docusaurus/router";
 
 const TYPESENSE_SEARCH_COLLECTIONS = ["api_register", "oss-register"];
 const TYPESENSE_QUERY_BY =
-  "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags";
+  "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
+const TYPESENSE_QUERY_BY_WEIGHTS = "12,6,4,3,2,1,1";
 
 type SearchResultSource = "api_register" | "oss-register";
 
@@ -472,6 +473,8 @@ function SearchPageContent(): React.JSX.Element {
     additionalSearchParameters: {
       ...typesenseSearchParameters,
       query_by: TYPESENSE_QUERY_BY,
+      query_by_weights: TYPESENSE_QUERY_BY_WEIGHTS,
+      text_match_type: "max_weight",
       include_fields:
         "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags,url,type,id",
       highlight_full_fields: TYPESENSE_QUERY_BY,
