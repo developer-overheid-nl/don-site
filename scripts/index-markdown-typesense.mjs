@@ -55,6 +55,16 @@ const COLLECTIONS = {
   ...EXTRA_COLLECTIONS,
 };
 
+const CATEGORY_LABELS = {
+  "api-ontwikkeling": "API Ontwikkeling",
+  "front-end": "Front-end",
+  data: "Data & Interoperabiliteit",
+  security: "Security",
+  devops: "DevOps & Platform",
+  "open-source": "Open Source",
+  leidraad: "Leidraad",
+};
+
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];
 
@@ -159,9 +169,72 @@ function extractDescription(markdown) {
   return paragraph ? paragraph.slice(0, 320) : "";
 }
 
+function segmentToLabel(segment) {
+  return segment
+    .replace(/^\d+-/, "")
+    .split("-")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function getBlogDateLabel(filePath) {
+  const relative = path.relative(BLOG_DIR, filePath);
+  const [year, month, fileName = ""] = relative.split(path.sep);
+  const day = fileName.match(/^(\d{2})-/)?.[1];
+
+  return year && month && day ? `${day}-${month}-${year}` : "";
+}
+
+function getDocumentMetadata(filePath, contentType) {
+  if (CONTENT_TYPES[contentType]) {
+    const relative = path.relative(DOCS_DIR, filePath);
+    const segments = relative.split(path.sep);
+    const category = segments[0] || "kennisbank";
+    const categoryLabel = CATEGORY_LABELS[category] || segmentToLabel(category);
+    const sectionLabel = segments.length > 2 ? segmentToLabel(segments[1]) : "";
+
+    return {
+      category,
+      categoryLabel,
+      detailLabel: sectionLabel,
+    };
+  }
+
+  if (contentType === "blog") {
+    return {
+      category: "blog",
+      categoryLabel: "Blog",
+      detailLabel: getBlogDateLabel(filePath),
+    };
+  }
+
+  if (contentType === "community") {
+    const relative = path.relative(COMMUNITIES_DIR, filePath);
+    const parent = path.dirname(relative);
+    const parentLabel =
+      parent !== "." ? segmentToLabel(parent.split(path.sep)[0]) : "";
+
+    return {
+      category: "community",
+      categoryLabel: "Community",
+      detailLabel: parentLabel,
+    };
+  }
+
+  return {
+    category: "pagina",
+    categoryLabel: "Pagina",
+    detailLabel: "",
+  };
+}
+
 function toDocument({ filePath, frontmatter, markdown, urlPath, contentType }) {
   const relative = path.relative(process.cwd(), filePath);
-  const category = relative.split(path.sep)[0];
+  const { category, categoryLabel, detailLabel } = getDocumentMetadata(
+    filePath,
+    contentType,
+  );
   const title =
     frontmatter.title ||
     frontmatter.sidebar_label ||
@@ -177,12 +250,13 @@ function toDocument({ filePath, frontmatter, markdown, urlPath, contentType }) {
     path: urlPath,
     source_path: relative,
     category,
+    category_label: categoryLabel,
     content_type: contentType,
     content_type_label: COLLECTIONS[contentType].label,
     "hierarchy.lvl0": cleanText(title),
     "hierarchy.lvl1": COLLECTIONS[contentType].label,
-    "hierarchy.lvl2": category,
-    "hierarchy.lvl3": relative,
+    "hierarchy.lvl2": categoryLabel,
+    "hierarchy.lvl3": detailLabel,
     "hierarchy.lvl4": Array.isArray(frontmatter.tags)
       ? frontmatter.tags.map(String).join(", ")
       : "",
@@ -310,6 +384,7 @@ function collectionSchema(collectionName) {
       { name: "path", type: "string" },
       { name: "source_path", type: "string" },
       { name: "category", type: "string", facet: true },
+      { name: "category_label", type: "string", facet: true },
       { name: "content_type", type: "string", facet: true },
       { name: "content_type_label", type: "string", facet: true },
       { name: "hierarchy.lvl0", type: "string" },
