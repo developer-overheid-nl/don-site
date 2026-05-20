@@ -39,9 +39,56 @@
   border-bottom: 1px solid var(--ifm-toc-border-color);
 }
 
+.searchResultSection {
+  margin-top: 1.5rem;
+}
+
+.searchResultSectionHeading {
+  border-bottom: 2px solid var(--ifm-toc-border-color);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.searchResultGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.searchResultCard {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: var(--ifm-global-radius);
+  padding: 1rem 1.25rem;
+  transition: box-shadow 0.2s;
+}
+
+.searchResultCard:hover {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.searchResultCardHeader {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
 .searchResultItemHeading {
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 0;
+}
+
+.searchResultItemHeading a {
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.searchResultItemHeading a:hover {
+  color: var(--docsearch-primary-color);
+  text-decoration: underline;
 }
 
 .searchResultItemPath {
@@ -52,7 +99,35 @@
 
 .searchResultItemSummary {
   margin: 0.5rem 0 0;
-  font-style: italic;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+}
+
+.searchResultBadge {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 999px;
+  color: var(--ifm-font-color-base);
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+}
+
+.searchResultTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.searchResultTag {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
 }
 
 @media only screen and (max-width: 996px) {
