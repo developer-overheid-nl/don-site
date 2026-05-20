@@ -53,8 +53,9 @@ const TYPESENSE_SEARCH_COLLECTIONS = [
 const TYPESENSE_QUERY_BY =
   "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
 const TYPESENSE_QUERY_BY_WEIGHTS = "12,6,4,3,2,1,1";
-const TYPESENSE_API_REGISTER_QUERY_BY = "hierarchy.lvl0,content,tags";
-const TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS = "12,2,1";
+const TYPESENSE_API_REGISTER_QUERY_BY =
+  "hierarchy.lvl0,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
+const TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS = "12,6,3,2,1,1";
 
 type SearchResultSource = (typeof TYPESENSE_SEARCH_COLLECTIONS)[number];
 
@@ -214,6 +215,22 @@ function getSearchResultScore(hit: SearchHit) {
 
 function getSearchResultSource(hit: SearchHit): SearchResultSource {
   return hit.__collection || "api_register";
+}
+
+function getSearchResultUrl(hit: SearchHit, externalUrlRegex: string) {
+  const parsedURL = new URL(hit.url);
+  const path = `${parsedURL.pathname}${parsedURL.search}${parsedURL.hash}`;
+
+  switch (getSearchResultSource(hit)) {
+    case "api_register":
+      return new URL(path, "https://apis.developer.overheid.nl").toString();
+    case "oss-register":
+      return new URL(path, "https://oss.developer.overheid.nl").toString();
+    default:
+      return isRegexpStringMatch(externalUrlRegex, parsedURL.href)
+        ? parsedURL.href
+        : parsedURL.pathname + parsedURL.hash;
+  }
 }
 
 function mergeSearchResponses(
@@ -584,14 +601,11 @@ function SearchPageContent(): React.JSX.Element {
         );
 
       const items = hits.map((hit: SearchHit) => {
-        const { url, tags } = hit;
-        const parsedURL = new URL(url);
+        const { tags } = hit;
 
         return {
           title: sanitizeValue(getSearchResultTitle(hit)),
-          url: isRegexpStringMatch(externalUrlRegex, parsedURL.href)
-            ? parsedURL.href
-            : parsedURL.pathname + parsedURL.hash,
+          url: getSearchResultUrl(hit, externalUrlRegex),
           summary: sanitizeValue(getSearchResultSummary(hit)),
           metadata: getSearchResultMetadata(hit),
           source: getSearchResultSource(hit),
