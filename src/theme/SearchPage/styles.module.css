@@ -91,10 +91,10 @@
   text-decoration: underline;
 }
 
-.searchResultItemPath {
+.searchResultItemMeta {
   font-size: 0.8rem;
   color: var(--ifm-color-content-secondary);
-  --ifm-breadcrumb-separator-size-multiplier: 1;
+  margin: 0.25rem 0 0;
 }
 
 .searchResultItemSummary {

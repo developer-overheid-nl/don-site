@@ -105,6 +105,12 @@ const config: Config & {
     "./plugins/content-type-index.js",
     "./plugins/plugin-piwik-pro.ts",
     [
+      "./plugins/markdown-source-no-ui.js",
+      {
+        docsPath: "/kennisbank/",
+      },
+    ],
+    [
       "@docusaurus/plugin-content-docs",
       {
         id: "communities",
