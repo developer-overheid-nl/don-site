@@ -180,12 +180,6 @@
   margin-top: 2rem;
 }
 
-:global(.search-result-match) {
-  color: var(--docsearch-hit-color);
-  background: rgb(255 215 142 / 25%);
-  padding: 0.09em 0;
-}
-
 .searchPage {
   --ifm-toc-border-color: var(--ifm-color-black);
   --ifm-global-radius: var(--utrecht-textbox-border-radius);

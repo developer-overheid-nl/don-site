@@ -53,13 +53,9 @@ const TYPESENSE_SEARCH_COLLECTIONS = [
 const TYPESENSE_QUERY_BY =
   "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
 const TYPESENSE_QUERY_BY_WEIGHTS = "12,6,4,3,2,1,1";
-const TYPESENSE_HIGHLIGHT_FULL_FIELDS =
-  "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags";
 const TYPESENSE_API_REGISTER_QUERY_BY =
   "hierarchy.lvl0,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
 const TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS = "12,6,3,2,1,1";
-const TYPESENSE_API_REGISTER_HIGHLIGHT_FULL_FIELDS =
-  "hierarchy.lvl0,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags";
 
 type SearchResultSource = (typeof TYPESENSE_SEARCH_COLLECTIONS)[number];
 
@@ -115,8 +111,6 @@ type HierarchyField =
   | "hierarchy.lvl3"
   | "hierarchy.lvl4";
 
-type HighlightedField = { value: string };
-
 type SearchHit = {
   url: string;
   tags?: string[];
@@ -132,23 +126,9 @@ type SearchHit = {
   _rawTypesenseHit?: {
     text_match?: number;
   };
-  _highlightResult?: Record<string, HighlightedField | undefined>;
-  _snippetResult?: {
-    content?: HighlightedField;
-  };
 };
 
 type TypesenseSearchResponse = SearchResponse<SearchHit>;
-
-function normalizeHighlightMarkup(value: string) {
-  return value
-    .replace(/<mark>/g, '<span class="search-result-match">')
-    .replace(/<\/mark>/g, "</span>")
-    .replace(
-      /algolia-docsearch-suggestion--highlight/g,
-      "search-result-match",
-    );
-}
 
 function getDisplayTags(tags: string[] = []) {
   return tags
@@ -171,11 +151,8 @@ function stripHighlightTags(value: string) {
     .replace(/<\/span>/g, "");
 }
 
-function cleanContentSummary(value: string, preserveHighlights = false) {
-  const normalizedValue = preserveHighlights
-    ? normalizeHighlightMarkup(value)
-    : stripHighlightTags(value);
-  const cleanValue = normalizedValue.replace(/\s+/g, " ").trim();
+function cleanContentSummary(value: string) {
+  const cleanValue = stripHighlightTags(value).replace(/\s+/g, " ").trim();
   const withoutName = cleanValue.replace(
     /^Naam:\s*.*?\s+Beschrijving:\s*/i,
     "",
@@ -185,12 +162,8 @@ function cleanContentSummary(value: string, preserveHighlights = false) {
     : withoutName;
 }
 
-function getHighlightedValue(hit: SearchHit, field: HierarchyField) {
-  return hit._highlightResult?.[field]?.value;
-}
-
 function getSearchFieldValue(hit: SearchHit, field: HierarchyField) {
-  return getHighlightedValue(hit, field) || hit[field] || "";
+  return hit[field] || "";
 }
 
 function getPlainHierarchyValue(hit: SearchHit, field: HierarchyField) {
@@ -221,16 +194,6 @@ function getSearchResultMetadata(hit: SearchHit) {
 }
 
 function getSearchResultSummary(hit: SearchHit) {
-  const snippet = hit._snippetResult?.content?.value;
-  if (snippet) {
-    return cleanContentSummary(snippet, true);
-  }
-
-  const highlightedContent = hit._highlightResult?.content?.value;
-  if (highlightedContent) {
-    return cleanContentSummary(highlightedContent, true);
-  }
-
   return hit.content ? cleanContentSummary(hit.content) : "";
 }
 
@@ -583,16 +546,15 @@ function SearchPageContent(): React.JSX.Element {
       text_match_type: "max_weight",
       include_fields:
         "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags,url,type,id,content_type",
-      highlight_fields: TYPESENSE_QUERY_BY,
-      highlight_full_fields: TYPESENSE_HIGHLIGHT_FULL_FIELDS,
-      highlight_affix_num_tokens: 18,
+      highlight_fields: "none",
+      highlight_full_fields: "none",
     },
     collectionSpecificSearchParameters: {
       api_register: {
         query_by: TYPESENSE_API_REGISTER_QUERY_BY,
         query_by_weights: TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS,
-        highlight_fields: TYPESENSE_API_REGISTER_QUERY_BY,
-        highlight_full_fields: TYPESENSE_API_REGISTER_HIGHLIGHT_FULL_FIELDS,
+        highlight_fields: "none",
+        highlight_full_fields: "none",
       },
     },
   });
@@ -621,8 +583,7 @@ function SearchPageContent(): React.JSX.Element {
         return;
       }
 
-      const sanitizeValue = (value: string) =>
-        normalizeHighlightMarkup(value);
+      const sanitizeValue = (value: string) => stripHighlightTags(value);
 
       const items = hits.map((hit: SearchHit) => {
         const { tags } = hit;
