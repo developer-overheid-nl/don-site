@@ -3,6 +3,9 @@
 hide_table_of_contents: true
 ---
 
+<!-- This class assures Docusaurus markdown CSS is applied -->
+<div class="markdown">
+
 # Privacyverklaring
 
 Privacy & security wordt integraal meegenomen in het ontwerp van onze
@@ -86,3 +89,5 @@ Persoonsgegevens.
 ## 6. Wijzigingen
 
 Deze privacyverklaring is opgesteld op: 18 november 2020.
+
+</div>

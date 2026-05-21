@@ -1,3 +1,6 @@
+<!-- This class assures Docusaurus markdown CSS is applied -->
+<div class="markdown">
+
 # Toegankelijkheid
 
 developer.overheid.nl wil dat iedereen deze website kan gebruiken. Kom je toch
@@ -25,3 +28,5 @@ toegankelijk blijkt? [Neem dan contact op met developer.overheid.nl](./contact).
 ## Label
 
 <a href="https://www.toegankelijkheidsverklaring.nl/register/17963"><img src="https://www.toegankelijkheidsverklaring.nl/files/verklaring/label/5125de74a794731d7a2003d4f61074e6.17963.svg?1746542852" alt="Status toegankelijkheidslabel van Developer Overheid. Volg de link voor de volledige toegankelijkheidsverklaring." width="692" height="251" /></a>
+
+</div>
