@@ -221,14 +221,6 @@ const config: Config & {
         // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
         apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
       },
-      // typesenseSearchParameters: {
-      //   query_by:
-      //     "hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5",
-      //   filter_by: "",
-      //   group_by: "url",
-      //   group_limit: 1,
-      //   multi_search: true,
-      // },
       contextualSearch: false,
       searchPagePath: "zoeken", // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
     },

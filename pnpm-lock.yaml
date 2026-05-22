@@ -59,7 +59,7 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       docusaurus-markdown-source-plugin:
-        specifier: ^2.2.5
+        specifier: 2.2.5
         version: 2.2.5(@docusaurus/core@3.9.2(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@18.3.1))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       docusaurus-theme-search-typesense:
         specifier: 0.26.0
@@ -2381,8 +2381,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromedriver@148.0.3:
-    resolution: {integrity: sha512-efk4NIkjjRr3Zy0C8Trj8jpMGgDY+ZA6kVpYFerH3M4tM4fguKCi81PguWwmHVx8FZdMmhFYczb1PaPvJqUkZQ==}
+  chromedriver@149.0.0:
+    resolution: {integrity: sha512-kFZI2Tft4p6QXGhtbjohRHad2uGhwcH95YH2CLVhOjQM676+QnJPl00OgcB1o3tTobmW8BezufMYTKYFjmTvtg==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -6637,7 +6637,7 @@ snapshots:
     dependencies:
       '@axe-core/webdriverjs': 4.11.0(selenium-webdriver@4.22.0)
       axe-core: 4.10.3
-      chromedriver: 148.0.3
+      chromedriver: 149.0.0
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 16.6.1
@@ -9925,7 +9925,7 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@148.0.3:
+  chromedriver@149.0.0:
     dependencies:
       '@testim/chrome-version': 1.1.4
       adm-zip: 0.5.17
