@@ -201,16 +201,16 @@ const config: Config & {
       typesenseCollectionName: "developer_overheid",
       typesenseServerConfig: {
         nodes: [
-          // {
-          //   host: "search.developer.overheid.nl",
-          //   port: 443,
-          //   protocol: "https",
-          // },
           {
-            host: "search.don.projects.digilab.network",
+            host: "search.developer.overheid.nl",
             port: 443,
             protocol: "https",
           },
+          // {
+          //   host: "search.don.projects.digilab.network",
+          //   port: 443,
+          //   protocol: "https",
+          // },
           // {
           //   host: "localhost",
           //   port: 8108,
@@ -218,8 +218,8 @@ const config: Config & {
           // },
         ],
         // apiKey: "xyz", Lokaal
-        apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
-        // apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
+        // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
+        apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
       },
       // typesenseSearchParameters: {
       //   query_by:
