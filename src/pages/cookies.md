@@ -5,6 +5,9 @@ description:
 hide_table_of_contents: true
 ---
 
+<!-- This class assures Docusaurus markdown CSS is applied -->
+<div class="markdown">
+
 # Gebruik van Cookies
 
 Op developer.overheid.nl (en andere websites die onderdeel uitmaken van
@@ -57,3 +60,5 @@ Developer.overheid.nl gebruikt geen trackingcookies. Trackingcookies zijn
 cookies die bezoekers tijdens het surfen over andere websites kunnen volgen. De
 website biedt daarom geen ondersteuning voor de DoNotTrack-instelling van
 browsers.
+
+</div>
