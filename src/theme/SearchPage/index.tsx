@@ -11,6 +11,12 @@ import clsx from "clsx";
 
 import algoliaSearchHelper from "algoliasearch-helper";
 import type { SearchParameters } from "algoliasearch-helper";
+import type {
+  SearchClient,
+  SearchOptions,
+  SearchResponse,
+  SearchResponses,
+} from "algoliasearch-helper/types/algoliasearch";
 
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
@@ -32,6 +38,239 @@ import styles from "./styles.module.css";
 import type { ThemeConfig } from "docusaurus-theme-search-typesense";
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 import { useHistory } from "@docusaurus/router";
+
+const TYPESENSE_SEARCH_COLLECTIONS = [
+  "api_register",
+  "oss-register",
+  "developer_overheid_standaard",
+  "developer_overheid_tutorials",
+  "developer_overheid_tools",
+  "developer_overheid_architectuur",
+  "developer_overheid_richtlijn",
+  "developer_overheid_blog",
+  "developer_overheid_community",
+] as const;
+const TYPESENSE_QUERY_BY =
+  "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
+const TYPESENSE_QUERY_BY_WEIGHTS = "12,6,4,3,2,1,1";
+const TYPESENSE_API_REGISTER_QUERY_BY =
+  "hierarchy.lvl0,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content,tags";
+const TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS = "12,6,3,2,1,1";
+
+type SearchResultSource = (typeof TYPESENSE_SEARCH_COLLECTIONS)[number];
+
+const SEARCH_RESULT_SECTIONS: {
+  source: SearchResultSource;
+  title: string;
+  badge: string;
+}[] = [
+  {
+    source: "developer_overheid_standaard",
+    title: "Standaarden",
+    badge: "Standaard",
+  },
+  {
+    source: "developer_overheid_tutorials",
+    title: "Tutorials",
+    badge: "Tutorial",
+  },
+  { source: "developer_overheid_tools", title: "Tools", badge: "Tool" },
+  {
+    source: "developer_overheid_architectuur",
+    title: "Architectuur",
+    badge: "Architectuur",
+  },
+  {
+    source: "developer_overheid_richtlijn",
+    title: "Richtlijnen",
+    badge: "Richtlijn",
+  },
+  { source: "developer_overheid_blog", title: "Blog", badge: "Blog" },
+  {
+    source: "developer_overheid_community",
+    title: "Communities",
+    badge: "Community",
+  },
+  { source: "api_register", title: "API-register", badge: "API" },
+  {
+    source: "oss-register",
+    title: "Open source register",
+    badge: "Repository",
+  },
+];
+
+type InstantSearchRequest = {
+  indexName: string;
+  params: SearchOptions;
+};
+
+type HierarchyField =
+  | "hierarchy.lvl0"
+  | "hierarchy.lvl1"
+  | "hierarchy.lvl2"
+  | "hierarchy.lvl3"
+  | "hierarchy.lvl4";
+
+type SearchHit = {
+  url: string;
+  tags?: string[];
+  content?: string;
+  text_match?: number;
+  __collection?: SearchResultSource;
+  content_type?: string;
+  "hierarchy.lvl0"?: string;
+  "hierarchy.lvl1"?: string;
+  "hierarchy.lvl2"?: string;
+  "hierarchy.lvl3"?: string;
+  "hierarchy.lvl4"?: string;
+  _rawTypesenseHit?: {
+    text_match?: number;
+  };
+};
+
+type TypesenseSearchResponse = SearchResponse<SearchHit>;
+
+function getDisplayTags(tags: string[] = []) {
+  return tags
+    .filter((tag) => {
+      if (tag === "api-register" || tag === "oss-register") return false;
+      if (tag === "api" || tag === "repository") return false;
+      if (tag.startsWith("api-id:")) return false;
+      if (tag.startsWith("repository-id:")) return false;
+      if (tag.startsWith("version:")) return false;
+      if (tag.startsWith("https://")) return false;
+      return true;
+    })
+    .slice(0, 6);
+}
+
+function stripHighlightTags(value: string) {
+  return value
+    .replace(/<\/?mark>/g, "")
+    .replace(/<span class="search-result-match">/g, "")
+    .replace(/<\/span>/g, "");
+}
+
+function cleanContentSummary(value: string) {
+  const cleanValue = stripHighlightTags(value).replace(/\s+/g, " ").trim();
+  const withoutName = cleanValue.replace(
+    /^Naam:\s*.*?\s+Beschrijving:\s*/i,
+    "",
+  );
+  return withoutName.length > 280
+    ? `${withoutName.slice(0, 277).trim()}...`
+    : withoutName;
+}
+
+function getSearchFieldValue(hit: SearchHit, field: HierarchyField) {
+  return hit[field] || "";
+}
+
+function getPlainHierarchyValue(hit: SearchHit, field: HierarchyField) {
+  return stripHighlightTags(String(getSearchFieldValue(hit, field)));
+}
+
+function getSearchResultTitle(hit: SearchHit) {
+  return getSearchFieldValue(hit, "hierarchy.lvl0") || "Onbekend resultaat";
+}
+
+function getSearchResultMetadata(hit: SearchHit) {
+  return Array.from(
+    new Set(
+      (
+        [
+          "hierarchy.lvl1",
+          "hierarchy.lvl2",
+          "hierarchy.lvl3",
+          "hierarchy.lvl4",
+        ] as HierarchyField[]
+      )
+        .map((field) => getPlainHierarchyValue(hit, field))
+        .filter(
+          (value) => value && !value.startsWith("http") && !value.includes("@"),
+        ),
+    ),
+  );
+}
+
+function getSearchResultSummary(hit: SearchHit) {
+  return hit.content ? cleanContentSummary(hit.content) : "";
+}
+
+function getSearchResultScore(hit: SearchHit) {
+  return hit.text_match || hit._rawTypesenseHit?.text_match || 0;
+}
+
+function getSearchResultSource(hit: SearchHit): SearchResultSource {
+  return hit.__collection || "api_register";
+}
+
+function getSearchResultUrl(hit: SearchHit, externalUrlRegex: string) {
+  const parsedURL = new URL(hit.url);
+  const path = `${parsedURL.pathname}${parsedURL.search}${parsedURL.hash}`;
+
+  switch (getSearchResultSource(hit)) {
+    case "api_register":
+      return new URL(path, "https://apis.developer.overheid.nl").toString();
+    case "oss-register":
+      return new URL(path, "https://oss.developer.overheid.nl").toString();
+    default:
+      return isRegexpStringMatch(externalUrlRegex, parsedURL.href)
+        ? parsedURL.href
+        : parsedURL.pathname + parsedURL.hash;
+  }
+}
+
+function mergeSearchResponses(
+  responses: TypesenseSearchResponse[],
+): TypesenseSearchResponse {
+  const [firstResponse] = responses;
+
+  return {
+    ...firstResponse,
+    hits: responses
+      .flatMap((response, index) =>
+        response.hits.map((hit) => ({
+          ...hit,
+          __collection: TYPESENSE_SEARCH_COLLECTIONS[index],
+        })),
+      )
+      .sort((a, b) => getSearchResultScore(b) - getSearchResultScore(a)),
+    nbHits: responses.reduce((total, response) => total + response.nbHits, 0),
+    nbPages: Math.max(...responses.map((response) => response.nbPages)),
+    processingTimeMS: responses.reduce(
+      (total, response) => total + response.processingTimeMS,
+      0,
+    ),
+  };
+}
+
+function createMultiCollectionSearchClient(searchClient: SearchClient) {
+  return {
+    ...searchClient,
+    search: async <T,>(
+      requests: InstantSearchRequest[],
+    ): Promise<SearchResponses<T>> => {
+      const expandedRequests = requests.flatMap((request) =>
+        TYPESENSE_SEARCH_COLLECTIONS.map((collection) => ({
+          ...request,
+          indexName: collection,
+          params: { ...request.params },
+        })),
+      );
+      const response = await searchClient.search<T>(expandedRequests);
+      const results = response.results as TypesenseSearchResponse[];
+
+      return {
+        results: requests.map((_, index) => {
+          const start = index * TYPESENSE_SEARCH_COLLECTIONS.length;
+          const end = start + TYPESENSE_SEARCH_COLLECTIONS.length;
+          return mergeSearchResponses(results.slice(start, end));
+        }),
+      } as SearchResponses<T>;
+    },
+  };
+}
 
 export function useTitleFormatter(title?: string | undefined): string {
   const { siteConfig } = useDocusaurusContext();
@@ -215,7 +454,10 @@ type ResultDispatcherState = {
     title: string;
     url: string;
     summary: string;
-    breadcrumbs: string[];
+    metadata: string[];
+    source: SearchResultSource;
+    tags: string[];
+    score: number;
   }[];
   query: string | null;
   totalResults: number | null;
@@ -298,28 +540,37 @@ function SearchPageContent(): React.JSX.Element {
   const typesenseInstantSearchAdapter = new TypesenseInstantSearchAdapter({
     server: typesenseServerConfig,
     additionalSearchParameters: {
-      query_by:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content",
-      include_fields:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content,anchor,url,type,id",
-      highlight_full_fields:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content",
-      group_by: "url",
-      group_limit: 1,
-      highlight_affix_num_tokens: 50,
       ...typesenseSearchParameters,
+      query_by: TYPESENSE_QUERY_BY,
+      query_by_weights: TYPESENSE_QUERY_BY_WEIGHTS,
+      text_match_type: "max_weight",
+      include_fields:
+        "content,hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,tags,url,type,id,content_type",
+      highlight_fields: "none",
+      highlight_full_fields: "none",
+    },
+    collectionSpecificSearchParameters: {
+      api_register: {
+        query_by: TYPESENSE_API_REGISTER_QUERY_BY,
+        query_by_weights: TYPESENSE_API_REGISTER_QUERY_BY_WEIGHTS,
+        highlight_fields: "none",
+        highlight_full_fields: "none",
+      },
     },
   });
+  const multiCollectionSearchClient = createMultiCollectionSearchClient(
+    typesenseInstantSearchAdapter.searchClient,
+  );
 
   // Needed this to avoid a typescript error in algoliaSearchHelper
   const searchParams: Partial<SearchParameters> = {
-    hitsPerPage: 15,
+    hitsPerPage: 10,
     advancedSyntax: true,
-    disjunctiveFacets: ["language", "docusaurus_tag"],
+    disjunctiveFacets: [],
   };
 
   const algoliaHelper = algoliaSearchHelper(
-    typesenseInstantSearchAdapter.searchClient,
+    multiCollectionSearchClient,
     typesenseCollectionName,
     searchParams,
   );
@@ -332,44 +583,21 @@ function SearchPageContent(): React.JSX.Element {
         return;
       }
 
-      const sanitizeValue = (value: string) =>
-        value.replace(
-          /algolia-docsearch-suggestion--highlight/g,
-          "search-result-match",
-        );
+      const sanitizeValue = (value: string) => stripHighlightTags(value);
 
-      const items = hits.map(
-        ({
-          url,
-          _highlightResult,
-          _snippetResult: snippet = {},
-        }: {
-          url: string;
-          _highlightResult: { [key: string]: { value: string } };
-          _snippetResult: { content?: { value: string } };
-        }) => {
-          const parsedURL = new URL(url);
-          const titles = [0, 1, 2, 3, 4, 5, 6]
-            .map((lvl) => {
-              const highlightResult = _highlightResult[`hierarchy.lvl${lvl}`];
-              return highlightResult
-                ? sanitizeValue(highlightResult.value)
-                : "";
-            })
-            .filter((v) => v);
+      const items = hits.map((hit: SearchHit) => {
+        const { tags } = hit;
 
-          return {
-            title: titles.pop()!,
-            url: isRegexpStringMatch(externalUrlRegex, parsedURL.href)
-              ? parsedURL.href
-              : parsedURL.pathname + parsedURL.hash,
-            summary: snippet.content
-              ? `${sanitizeValue(snippet.content.value)}...`
-              : "",
-            breadcrumbs: titles,
-          };
-        },
-      );
+        return {
+          title: sanitizeValue(getSearchResultTitle(hit)),
+          url: getSearchResultUrl(hit, externalUrlRegex),
+          summary: sanitizeValue(getSearchResultSummary(hit)),
+          metadata: getSearchResultMetadata(hit),
+          source: getSearchResultSource(hit),
+          tags: getDisplayTags(tags),
+          score: getSearchResultScore(hit),
+        };
+      });
 
       searchResultStateDispatcher({
         type: "update",
@@ -394,40 +622,40 @@ function SearchPageContent(): React.JSX.Element {
   const prevY = useRef(0);
   const observer = useRef(
     ExecutionEnvironment.canUseIntersectionObserver &&
-    new IntersectionObserver(
-      (entries) => {
-        const {
-          isIntersecting,
-          boundingClientRect: { y: currentY },
-        } = entries[0]!;
+      new IntersectionObserver(
+        (entries) => {
+          const {
+            isIntersecting,
+            boundingClientRect: { y: currentY },
+          } = entries[0]!;
 
-        if (isIntersecting && prevY.current > currentY) {
-          searchResultStateDispatcher({ type: "advance" });
-        }
+          if (isIntersecting && prevY.current > currentY) {
+            searchResultStateDispatcher({ type: "advance" });
+          }
 
-        prevY.current = currentY;
-      },
-      { threshold: 1 },
-    ),
+          prevY.current = currentY;
+        },
+        { threshold: 1 },
+      ),
   );
 
   const getTitle = () =>
     searchQuery
       ? translate(
-        {
-          id: "theme.SearchPage.existingResultsTitle",
-          message: 'Search results for "{query}"',
-          description: "The search page title for non-empty query",
-        },
-        {
-          query: searchQuery,
-        },
-      )
+          {
+            id: "theme.SearchPage.existingResultsTitle",
+            message: 'Search results for "{query}"',
+            description: "The search page title for non-empty query",
+          },
+          {
+            query: searchQuery,
+          },
+        )
       : translate({
-        id: "theme.SearchPage.emptyResultsTitle",
-        message: "Search the documentation",
-        description: "The search page title for empty query",
-      });
+          id: "theme.SearchPage.emptyResultsTitle",
+          message: "Search the documentation",
+          description: "The search page title for empty query",
+        });
 
   const makeSearch = useEvent((page: number = 0) => {
     // algoliaHelper.addDisjunctiveFacetRefinement('docusaurus_tag', 'default');
@@ -476,6 +704,19 @@ function SearchPageContent(): React.JSX.Element {
 
     makeSearch(searchResultState.lastPage);
   }, [makeSearch, searchResultState.lastPage]);
+
+  const searchResultSections = SEARCH_RESULT_SECTIONS.map((section) => ({
+    ...section,
+    items: searchResultState.items.filter(
+      (item) => item.source === section.source,
+    ),
+  }))
+    .filter((section) => section.items.length > 0)
+    .map((section) => ({
+      ...section,
+      score: Math.max(...section.items.map((item) => item.score)),
+    }))
+    .sort((a, b) => b.score - a.score);
 
   return (
     <div className={styles.searchPage}>
@@ -531,7 +772,9 @@ function SearchPageContent(): React.JSX.Element {
             <div className={clsx("col", "col--8", styles.searchResultsColumn)}>
               {!!searchResultState.totalResults &&
                 documentsFoundPlural(searchResultState.totalResults)}
-              <span id="searchResultsAmount" className="hidden">{searchResultState.totalResults}</span>
+              <span id="searchResultsAmount" className="hidden">
+                {searchResultState.totalResults}
+              </span>
             </div>
 
             <div
@@ -588,48 +831,56 @@ function SearchPageContent(): React.JSX.Element {
 
           {searchResultState.items.length > 0 ? (
             <main>
-              {searchResultState.items.map(
-                ({ title, url, summary, breadcrumbs }, i) => (
-                  <article key={i} className={styles.searchResultItem}>
-                    <h2 className={styles.searchResultItemHeading}>
-                      <Link
-                        to={url}
-                        dangerouslySetInnerHTML={{ __html: title }}
-                      />
-                    </h2>
-
-                    {breadcrumbs.length > 0 && (
-                      <nav aria-label="breadcrumbs">
-                        <ul
-                          className={clsx(
-                            "breadcrumbs",
-                            styles.searchResultItemPath,
-                          )}
-                        >
-                          {breadcrumbs.map((html, index) => (
-                            <li
-                              key={index}
-                              className="breadcrumbs__item"
-                              // Developer provided the HTML, so assume it's safe.
-                              // eslint-disable-next-line react/no-danger
-                              dangerouslySetInnerHTML={{ __html: html }}
+              {searchResultSections.map(({ source, title, badge, items }) => (
+                <section key={source} className={styles.searchResultSection}>
+                  <h2 className={styles.searchResultSectionHeading}>{title}</h2>
+                  <div className={styles.searchResultGrid}>
+                    {items.map(({ title, url, summary, metadata, tags }, i) => (
+                      <article key={i} className={styles.searchResultCard}>
+                        <div className={styles.searchResultCardHeader}>
+                          <h3 className={styles.searchResultItemHeading}>
+                            <Link
+                              to={url}
+                              dangerouslySetInnerHTML={{ __html: title }}
                             />
-                          ))}
-                        </ul>
-                      </nav>
-                    )}
+                          </h3>
+                          <span className={styles.searchResultBadge}>
+                            {badge}
+                          </span>
+                        </div>
 
-                    {summary && (
-                      <p
-                        className={styles.searchResultItemSummary}
-                        // Developer provided the HTML, so assume it's safe.
-                        // eslint-disable-next-line react/no-danger
-                        dangerouslySetInnerHTML={{ __html: summary }}
-                      />
-                    )}
-                  </article>
-                ),
-              )}
+                        {metadata.length > 0 && (
+                          <p className={styles.searchResultItemMeta}>
+                            {metadata.join(" • ")}
+                          </p>
+                        )}
+
+                        {summary && (
+                          <p
+                            className={styles.searchResultItemSummary}
+                            // Developer provided the HTML, so assume it's safe.
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{ __html: summary }}
+                          />
+                        )}
+
+                        {tags.length > 0 && (
+                          <div className={styles.searchResultTags}>
+                            {tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className={styles.searchResultTag}
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              ))}
             </main>
           ) : (
             [
