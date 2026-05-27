@@ -41,7 +41,7 @@ Selecteer verschillende templates via deze dropdown:
 Pas de inhoud van de bestanden aan naar wat van toepassing is op jouw project.
 
 Wil je je `publiccode.yml` nog checken op errors? Gebruik dan de
-[publiccode-checker](https://developer-overheid-nl.github.io/publiccode-checker/#/pc).
+[publiccode-checker](https://developer-overheid-nl.github.io/don-checker/#/publiccode-05).
 
 ## Bronnen
 
