@@ -106,6 +106,7 @@ export function ActiveTeam(): ReactNode {
         linkedInUrl="https://www.linkedin.com/in/dimitrivanhees/"
         email="d.vanhees@geonovum.nl"
         mastadonUrl="https://me.dm/@dvh"
+        icon="/img/team/dimitri-van-hees.webp"
       >
         <Translate>
           Dimitri is als Product Owner de brug tussen de business en techniek.
@@ -121,7 +122,7 @@ export function ActiveTeam(): ReactNode {
         role="Implementatie-ondersteuner"
         linkedInUrl="https://www.linkedin.com/in/frank-terpstra-1bb5096/"
         githubUrl="https://github.com/fterpstra"
-        icon="/img/team/frank-terpstra.jpg"
+        icon="/img/team/frank-terpstra.webp"
         email="f.terpstra@geonovum.nl"
       >
         <Translate>
@@ -138,7 +139,7 @@ export function ActiveTeam(): ReactNode {
         name="Jaap-Hein Wester"
         githubUrl="https://github.com/MrSkippy"
         linkedInUrl="https://www.linkedin.com/in/jaapheinwester/"
-        icon="/img/team/jaap-hein-wester.jpg"
+        icon="/img/team/jaap-hein-wester.webp"
         email="j.h.wester@geonovum.nl"
       >
         <Translate>
@@ -153,7 +154,7 @@ export function ActiveTeam(): ReactNode {
         role="Implementatie-ondersteuner"
         linkedInUrl="https://www.linkedin.com/in/joostfarla/"
         githubUrl="https://github.com/joostfarla"
-        icon="/img/team/joost-farla.jpg"
+        icon="/img/team/joost-farla.webp"
         email="j.farla@geonovum.nl"
       >
         <Translate>
@@ -170,15 +171,16 @@ export function ActiveTeam(): ReactNode {
         role="Implementatie-ondersteuner"
         linkedInUrl="https://www.linkedin.com/in/floris-deutekom/"
         githubUrl="https://github.com/Fdeutekom"
-        icon="/img/team/floris-deutekom.png"
+        icon="/img/team/floris-deutekom.webp"
         email="f.deutekom@geonovum.nl"
       >
         <Translate>
-          Floris werkt als adviseur in het implementatie-ondersteuningsteam, waarin hij
-          diverse technische vraagstukken omzet in praktische oplossingen. Zijn expertise
-          ligt in IAM en API management, hij houdt zich bezig met architectuur, implementatie
-          en standaardisering. Als hij niet aan het werk is ontwerpt hij zelf spellen of
-          staat hij in de keuken bijzondere dingen te maken.
+          Floris werkt als adviseur in het implementatie-ondersteuningsteam,
+          waarin hij diverse technische vraagstukken omzet in praktische
+          oplossingen. Zijn expertise ligt in IAM en API management, hij houdt
+          zich bezig met architectuur, implementatie en standaardisering. Als
+          hij niet aan het werk is ontwerpt hij zelf spellen of staat hij in de
+          keuken bijzondere dingen te maken.
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
@@ -203,7 +205,7 @@ export function ActiveTeam(): ReactNode {
         githubUrl="https://github.com/tomootes"
         linkedInUrl="https://www.linkedin.com/in/tootes/"
         mastadonUrl="https://hostux.social/@tomootes"
-        icon="/img/team/tom-ootes.png"
+        icon="/img/team/tom-ootes.webp"
         email="t.ootes@geonovum.nl"
       >
         <Translate>
@@ -219,7 +221,7 @@ export function ActiveTeam(): ReactNode {
       <TeamProfileCardCol
         name="Vivian van der Heijden-Hanssen"
         linkedInUrl="https://www.linkedin.com/in/vivianvanderheydenhanssen/"
-        icon="/img/team/vivian-van-der-heijden-hanssen.jpg"
+        icon="/img/team/vivian-van-der-heijden-hanssen.webp"
         email="v.vanderheijden@geonovum.nl"
         role="Projectleider"
       >
@@ -233,21 +235,19 @@ export function ActiveTeam(): ReactNode {
       <TeamProfileCardCol
         name="Jan Klopper"
         linkedInUrl="https://www.linkedin.com/in/janklopper/"
-        icon="/img/team/jan-klopper.jpg"
+        icon="/img/team/jan-klopper.webp"
         email="j.klopper@geonovum.nl"
         role="Implementatieadviseur internetstandaarden."
       >
         <Translate>
-          Jan is 'de vraagbaak' als het om Internetstandaarden en de daarbij 
-          behorende security en compliancy kaders. Gebruik hiervan stimuleren, 
-          uitleggen hoe, en wat, en vooral ook gemakkelijker maken is wat hem 
-          bezig houdt. Naast zijn werk voor ons verbouwt hij een boerderij en 
-          is hij oprichter van de Stichting Librekat waarlangs OpenKAT wordt 
-          doorontwikkeld en Stichting eth0 voor de Nederlandse Hacker 
-          community.
+          Jan is 'de vraagbaak' als het om Internetstandaarden en de daarbij
+          behorende security en compliancy kaders. Gebruik hiervan stimuleren,
+          uitleggen hoe, en wat, en vooral ook gemakkelijker maken is wat hem
+          bezig houdt. Naast zijn werk voor ons verbouwt hij een boerderij en is
+          hij oprichter van de Stichting Librekat waarlangs OpenKAT wordt
+          doorontwikkeld en Stichting eth0 voor de Nederlandse Hacker community.
         </Translate>
       </TeamProfileCardCol>
-      
     </div>
   );
 }

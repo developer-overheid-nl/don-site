@@ -105,6 +105,12 @@ const config: Config & {
     "./plugins/content-type-index.js",
     "./plugins/plugin-piwik-pro.ts",
     [
+      "./plugins/markdown-source-no-ui.js",
+      {
+        docsPath: "/kennisbank/",
+      },
+    ],
+    [
       "@docusaurus/plugin-content-docs",
       {
         id: "communities",
@@ -201,7 +207,7 @@ const config: Config & {
             protocol: "https",
           },
           // {
-          //   host: "search.don.apps.digilab.network",
+          //   host: "search.don.projects.digilab.network",
           //   port: 443,
           //   protocol: "https",
           // },
@@ -215,16 +221,6 @@ const config: Config & {
         // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
         apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
       },
-      typesenseSearchParameters: {
-        query_by:
-          "hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5",
-        filter_by: "",
-        group_by: "url",
-        group_limit: 1,
-        multi_search: true,
-      },
-      externalUrlRegex:
-        "apis\\.developer\\.overheid\\.nl|oss\\.developer\\.overheid\\.nl",
       contextualSearch: false,
       searchPagePath: "zoeken", // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
     },

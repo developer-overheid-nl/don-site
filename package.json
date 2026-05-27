@@ -8,6 +8,7 @@
     "start:docusaurus": "docusaurus start",
     "build": "npm-run-all build:*",
     "build:docusaurus": "docusaurus build",
+    "index:typesense": "node scripts/index-markdown-typesense.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -33,6 +34,7 @@
     "axios": "1.15.2",
     "client": "link:@docusaurus/plugin-content-docs/client",
     "clsx": "2.1.1",
+    "docusaurus-markdown-source-plugin": "2.2.5",
     "docusaurus-theme-search-typesense": "0.26.0",
     "dotenv": "17.3.1",
     "focus-trap-react": "11.0.4",
@@ -55,10 +57,10 @@
     "typescript": "5.8.3"
   },
   "peerDependencies": {
+    "axios": "0.30.3 || ~1.12.0 || ~1.13.0 || 1.14.0",
     "node-forge": "1.3.3",
     "react": "^18.3.1 || 19.0.3 || 19.1.4 || 19.2.3",
-    "react-dom": "^18.3.1 || 19.0.3 || 19.1.4 || 19.2.3",
-    "axios": "0.30.3 || ~1.12.0 || ~1.13.0 || 1.14.0"
+    "react-dom": "^18.3.1 || 19.0.3 || 19.1.4 || 19.2.3"
   },
   "browserslist": {
     "production": [

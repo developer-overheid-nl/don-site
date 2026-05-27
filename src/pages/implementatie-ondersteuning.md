@@ -1,3 +1,6 @@
+<!-- This class assures Docusaurus markdown CSS is applied -->
+<div class="markdown">
+
 # Implementatie ondersteuning
 
 Bij het implementeren van nieuwe standaarden en het moderniseren van
@@ -86,3 +89,5 @@ Voor vragen of ondersteuning kun je eenvoudig contact opnemen via:
 
 Spreek je ons liever persoonlijk aan dan zijn we altijd aan te spreken bij het
 [Kennisplatform API's](/communities/kennisplatform-apis/).
+
+</div>
