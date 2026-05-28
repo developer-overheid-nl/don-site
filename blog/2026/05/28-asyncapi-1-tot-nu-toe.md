@@ -21,7 +21,7 @@ vooral extra werk introduceert zonder duidelijke meerwaarde. De technische
 werkbaarheid van de specificatie is door diverse use cases aangetoond; de vraag
 wanneer we het zouden moeten gebruiken is op dit moment dé kernvraag. Ik wil
 jullie in een reeks aan blogposts graag meenemen in waar de werkgroep nu staat
-m.b.t. AsyncAPI en hoe we de toekomst voor ons zien. `
+m.b.t. AsyncAPI en hoe we de toekomst voor ons zien.
 
 <!-- truncate -->
 
