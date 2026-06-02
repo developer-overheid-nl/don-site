@@ -19,10 +19,6 @@ stappen een selectie van relevante standaarden voor je project.
   <Icon icon="pijl-naar-rechts" />
 </Link>
 
-Deze open standaarden zijn verplicht ter bevordering van interoperabiliteit,
-leveranciersonafhankelijkheid, veiligheid, datakwaliteit en toegankelijkheid van
-publieke (overheids)informatie.
-
 ## Aanvullende hulpmiddelen
 
 - **[Vragen om open standaarden bij aanschaf van ICT](https://www.forumstandaardisatie.nl/)**
