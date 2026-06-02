@@ -35,6 +35,19 @@ is er een NLGov profiel nodig?” Met dit in het achterhoofd is een tweetal case
 opgepakt en zijn we de diepte ingedoken, met regelmatige besprekingen in de
 werkgroep.
 
+:::success[TL;DR]
+
+De Werkgroep AsyncAPI heeft concrete cases uitgewerkt om te toetsen of AsyncAPI
+een standaard moet worden voor de Nederlandse overheid. De technische werking is
+bewezen: conversie van bestaande API-documentatie is goed te doen en de tooling
+is volwassen. Maar AsyncAPI voegt pas écht waarde toe in een volwaardig
+Event-Driven landschap, niet bij een simpele 1-op-1 conversie van bestaande
+OpenAPI-specs. De kern­vraag: moet de standaard as-is worden opgenomen of met
+een NLGov-profiel. Deze vraag staat nog open en komt in volgende blogposts aan
+bod.
+
+:::
+
 ## AsyncAPI
 
 Maar eerst even wat achtergrond en introductie voor wie nog niet bekend is met
@@ -77,6 +90,8 @@ gewoon ondersteund in OAS.
 
 ## Vingers aan de knoppen
 
+### 1-op-1 conversie
+
 Om beter grip op de nuances te krijgen hebben we een bestaande reeks
 API-specificaties waarin al sprake was van asynchrone communicatie omgezet naar
 een AsyncAPI documentatie; zie
@@ -107,6 +122,8 @@ verkeer, maar de vraag blijft of het wel nodig is. Ja, de berichtenstroom was
 explicieter gemaakt, maar de onderliggende architectuur bleef ongewijzigd.
 Daarmee ontstaat een situatie waarin je wel asynchrone documentatie hebt, maar
 nog geen Event-Driven ontwerp. Kortom, we kunnen nog een stap verder.
+
+### Event-Driven herontwerp
 
 Voor één van de casussen hebben we dus precies dit gedaan; in plaats van een
 simpele conversie is er een volledig Event-Driven documentatie in AsyncAPI
@@ -168,6 +185,8 @@ misinterpretaties te voorkomen. Hetzelfde geldt voor bredere Event-Driven
 landschappen, waarin inzicht in de keten en de impact van wijzigingen cruciaal
 is om het geheel beheersbaar te houden.
 
+### Wanneer AsyncAPI minder waarde toevoegt
+
 Daar tegenover staan situaties waarin die meerwaarde een stuk minder evident is.
 In eenvoudige koppelingen tussen twee systemen, zeker wanneer beide onder
 dezelfde verantwoordelijkheid vallen, voegt het expliciet modelleren van events
@@ -177,6 +196,8 @@ soort gevallen kan de overhead van uitgebreide specificaties en bijbehorende
 tooling zwaarder wegen dan de voordelen die het oplevert. Sterker nog, wanneer
 documentatie niet actief wordt bijgehouden, kan het zelfs een risico vormen
 doordat het een vertekend beeld geeft van de werkelijkheid.
+
+## Conclusie
 
 De belangrijkste les die uit deze exercitie naar voren komt, is dan ook dat
 AsyncAPI vooral gezien moet worden als een middel, en niet als een doel op zich.

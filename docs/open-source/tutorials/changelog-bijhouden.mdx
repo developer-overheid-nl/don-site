@@ -1,0 +1,302 @@
+---
+content_type: tutorial
+tags:
+  - "changelog"
+  - "git"
+  - "semver"
+title: "Changelog bijhouden"
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+De meeste software is nooit echt af en er zullen er in de loop van de tijd
+steeds nieuwe versies van je applicatie, library, website of API worden
+opgeleverd. In git wordt per `commit` een log bijgehouden van welke bestanden er
+gewijzigd zijn met een stukje commentaar erbij. Nu zou je kunnen stellen:
+gebruik dan die commits voor het genereren van een changelog, maar helaas: in
+git commits staat vaak veel ruis, denk aan merge commits,
+documentatie-aanpassingen en onduidelijke commentaren. Hierin vindt je de
+"evolutie" van de code terug.
+
+Om de commit-history 1 op 1 te laten corresponderen met wat je in je changelog
+wilt laten zien dien je een strikte **git-discipline** op te brengen als team:
+elke commit-description dient relevante informatie te bevatten voor de
+gebruiker. Het kan wel, maar vereist strikte afspraken en tooling zoals
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). In dit
+artikel beschrijven we de oplossing die juist uit gaat van het beschrijven van
+dedicated changelog-fragmenten.
+
+:::success tldr;
+
+Met een goede changelog documenteer je alle belangrijke wijzigingen voor je
+eindgebruiker — geen ruwe git-history. Gebruik duidelijke categorieën (`Added`,
+`Fixed`, `Changed`, ...) en [Semantic Versioning]. Tools zoals [Changesets]
+(Node.js) en [Changie] (Go) laten je per Pull Request een los changelog-fragment
+aanmaken; bij een release worden die automatisch samengevoegd in `CHANGELOG.md`.
+
+:::
+
+## Het doel
+
+Het doel van een changelog is de gebruiker van de codebase inzicht te geven in
+wat er is veranderd in een nieuwe versie. Hierdoor kan die nagaan of de changes
+breaking zijn, of dat er juist nieuwe features inzitten die nuttig zijn.
+
+## Hoe maak je een goede changelog?
+
+Zoals op [Keep a changelog] in de richtlijnen staat:
+
+- Changelogs zijn voor mensen, niet voor machines.
+
+Een (eind)gebruiker moet in de changelog kunnen zien wat de wijzigingen zijn,
+zijn er _deprecations_, is er iets vervallen, zijn er bugs gefixt, etc. Dit zijn
+de vragen die ze hebben. Ook als je geen software hebt die "geconsumeerd" wordt
+zoals een library of design system kan het handig zijn om een changelog bij te
+houden, met bijvoorbeeld de nieuwe features van je website.
+
+- Geef aan of je [Semantic Versioning] gebruikt.
+
+Het wordt aangeraden om SemVer te gebruiken. SemVer is de meest gebruikte vorm
+van versioneren en daarom zullen developers aannemen dat je op deze manier
+versioneert.
+
+### Voorbeeld `CHANGELOG.md`
+
+```markdown
+# Changelog
+
+Deze changelog houdt zich aan de conventie:
+[Semantic Versioning](https://semver.org/lang/nl/).
+
+## [2.1.0] - 2026-04-15
+
+### Added
+
+- Filteroptie op organisatietype toegevoegd aan het API-register.
+
+### Fixed
+
+- Zoekresultaten worden nu correct gesorteerd op relevantie.
+
+## [2.0.0] - 2026-03-01
+
+### Changed
+
+- API-endpoints verplaatst naar `/v2/` — zie de migratieguide voor details.
+
+### Removed
+
+- Verouderd `/v1/search`-endpoint verwijderd.
+
+## [1.4.2] - 2026-01-20
+
+### Security
+
+- Dependency bijgewerkt vanwege CVE-2026-12345.
+```
+
+## Zijn er manieren om dit te automatiseren?
+
+Er zijn verschillende tools om changelogs bij te houden. Sommige tools gebruiken
+hiervoor de git commit comments, maar zoals hierboven al aangegeven is het beter
+om _dedicated_ changelogs bij te houden.
+
+Een betere aanpak is om per wijziging een los changelog-fragment bij te houden
+en die pas bij een release samen te voegen. Hieronder bespreken we twee tools
+die dit ondersteunen.
+
+### Pull-request-workflow
+
+Die aanpak sluit goed aan op een pull-request-workflow: elke PR levert één
+changelog-fragment op, en bij een release worden alle losse fragmenten
+automatisch samengevoegd tot een definitieve `CHANGELOG.md`.
+
+### Changesets
+
+[Changesets] is een NPM-package,
+[Github App](https://github.com/apps/changeset-bot) en
+[-Action](https://github.com/changesets/action) voor je workflows.
+
+#### NPM
+
+Je installeert de package in je project met
+
+<Tabs groupId="package-managers" defaultValue="pnpm">
+  <TabItem value="npm">```bash npx @changesets/cli init ```</TabItem>
+  <TabItem value="yarn">
+    ```bash yarn add -D @changesets/cli && yarn changeset init ```
+  </TabItem>
+  <TabItem value="pnpm">```bash pnpx @changesets/cli init ```</TabItem>
+</Tabs>
+
+#### Github app
+
+Werk je in Github dan is het aan te raden om de Github App te installeren in je
+repository. Deze bot checkt elke Pull Request (PR) en kijkt of er een
+change-bestand in de PR zit en plaatst een comment hierover.
+
+![Changeset-bot](./img/changeset-bot.png)
+
+:::tip
+
+Spreek met je team af hoe je aangeeft dat er geen change gelogd hoeft te worden,
+bij developer.overheid.nl zetten we een 👍🏻 op de comment als het "okay" is dat
+er geen changeset is.
+
+:::
+
+#### Handmatig aanmaken
+
+Handmatig maak je een change-bestand aan met:
+
+<Tabs groupId="package-managers" defaultValue="pnpm">
+  <TabItem value="npm">```bash npx @changesets/cli ```</TabItem>
+  <TabItem value="yarn">```bash yarn changeset ```</TabItem>
+  <TabItem value="pnpm">```bash pnpm changeset ```</TabItem>
+</Tabs>
+
+Je beantwoordt een paar vragen, zoals wat voor soort wijziging het is (Major,
+Minor, Patch) en een korte beschrijving. Daarna maakt Changesets een bestand aan
+in `.changeset` met een unieke naam, bijvoorbeeld
+`.changeset/green-sheep-search.md`:
+
+```markdown
+---
+"@developer-overheid-nl/api-register": minor
+"@developer-overheid-nl/oss-register": minor
+---
+
+Verbeterde filtering in het API- en OSS-register.
+```
+
+De Github Action zorgt ervoor dat Changesets een PR aanmaakt en bijhoudt om de
+release te doen. De standaard naam is "Version Packages", deze is aan te passen
+in de [workflow action](https://github.com/changesets/action#inputs).  
+Het mergen van deze PR merged de Changelog met de nieuwe onderdelen van die
+release en als de workflow ingesteld is om te publiceren naar Github en of NPM
+wordt dat ook gedaan.
+
+Meer documentatie over Changesets is te vinden in de
+[Changesets Docs](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md).
+
+### Changie
+
+[Changie] is een kleine tool om, net als [Changesets], changelog-fragmenten bij
+te houden in je repository. Ook hier maak je per wijziging een los YAML-bestand
+aan. Deze bestanden komen standaard in `.changes/unreleased` te staan.
+
+Je installeert Changie met:
+
+```bash
+go install github.com/miniscruff/changie@latest
+```
+
+Daarna maak je een nieuw fragment aan met:
+
+```bash
+changie new
+```
+
+Changie vraagt vervolgens om het type wijziging en een korte beschrijving. Dit
+levert bijvoorbeeld een bestand op in `.changes/unreleased`:
+
+```yaml
+kind: Changed
+body: Verbeter filtering in het API-register.
+time: 2026-04-22T09:16:11.116493+02:00
+```
+
+#### .changie.yaml
+
+In `.changie.yaml` configureer je hoe Changie werkt. Daarin leg je bijvoorbeeld
+vast waar de fragmenten staan, waar de changelog naartoe wordt geschreven en
+welke soorten wijzigingen je gebruikt.
+
+Bij het API-register en OSS-register gebruiken we dezelfde categorieën als [Keep
+a Changelog]:  
+`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed` en `Security`.  
+Per categorie kun je ook aangeven welke SemVer-impact Changie automatisch moet
+kiezen. Zo kan `Fixed` automatisch leiden tot een patch-release en `Added` tot
+een minor-release:
+
+```yaml
+# changie.yaml
+---
+kinds:
+  - label: Added
+    auto: minor
+  - label: Changed
+    auto: major
+  - label: Deprecated
+    auto: minor
+  - label: Removed
+    auto: major
+  - label: Fixed
+    auto: patch
+  - label: Security
+    auto: patch
+```
+
+Een release maak je lokaal met:
+
+```bash
+changie batch <version>
+changie merge
+```
+
+`changie batch` bundelt de losse fragmenten in een versiebestand onder
+`.changes`, bijvoorbeeld `.changes/v2.1.0.md`. Daarna verwerkt `changie merge`
+deze versie in `CHANGELOG.md`.
+
+#### Changie Github workflow
+
+Bij developer.overheid.nl gebruiken we de
+[Changie Action](https://github.com/miniscruff/changie-action) ook in de GitHub
+workflow, bijvoorbeeld in `.github/workflows/changie-auto-release.yml`. Op een
+Pull Request controleert de workflow of er een fragment is toegevoegd aan
+`.changes/unreleased/*.yaml`. Als dat ontbreekt, plaatst de workflow een
+reminder-comment op de PR. Als er wel een fragment is gevonden, wordt die
+comment bijgewerkt naar `Changie-fragment gevonden`.
+
+Na een merge naar `main` doet de workflow het releasewerk automatisch met:
+
+```bash
+changie batch auto
+changie merge
+```
+
+Daarna maakt de workflow een aparte Pull Request aan met de wijzigingen in
+`CHANGELOG.md` en `.changes/**`. Zo hoeft een feature-PR alleen het losse
+changelog-fragment mee te nemen. Het bijwerken van de definitieve changelog
+gebeurt automatisch en apart. Dat voorkomt merge-conflicten in `CHANGELOG.md` en
+houdt het releaseproces overzichtelijk.
+
+Meer documentatie over Changie is te vinden in de
+[Changie Guide](https://changie.dev/guide/).
+
+:::info
+
+Gebruikt jouw organisatie al een andere tool of aanpak voor het bijhouden van
+changelogs? Laat het ons weten, dan kunnen we deze documentatie uitbreiden!
+
+:::
+
+## Conclusie
+
+Een changelog is geen kopie van je git-history, maar een leesbaar overzicht van
+relevante wijzigingen voor de gebruiker. Gebruik duidelijke categorieën zoals
+`Added`, `Fixed` en `Changed`, en leg vast hoe je versienummers zijn opgebouwd —
+bij voorkeur via [Semantic Versioning].
+
+De meest praktische aanpak is om per wijziging een los changelog-fragment aan te
+maken en die bij een release samen te voegen. Dat voorkomt merge-conflicten en
+past goed bij een Pull Request-workflow. Tools zoals [Changesets] (Node.js) en
+[Changie] (Go) nemen het samenvoegen uit handen en kunnen via GitHub Actions
+volledig worden geautomatiseerd.
+
+[git]: https://git-scm.com/
+[Keep a changelog]: https://keepachangelog.com/nl/1.1.0/
+[Semantic Versioning]: https://semver.org/lang/nl/
+[Changesets]: https://github.com/changesets/changesets
+[Changie]: https://changie.dev/
