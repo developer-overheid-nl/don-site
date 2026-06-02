@@ -93,4 +93,5 @@ jobs:
           **Branch:** \`${{ env.APP_BRANCH }}\`
           **Commit:** ${{ github.server_url }}/${{ github.repository }}/commit/${{ env.APP_SHA }}
 
-          Merge deze PR om de nieuwe versie naar productie te deployen."
+          Merge eerst een eventuele \`Version Packages\` PR zodat de changelog up to date is.
+          Merge daarna deze PR om de nieuwe versie naar productie te deployen."
