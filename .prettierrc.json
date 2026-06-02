@@ -13,7 +13,8 @@
       "files": ["*.md", "*.mdx"],
       "options": {
         "proseWrap": "always",
-        "printWidth": 80
+        "printWidth": 80,
+        "embeddedLanguageFormatting": "off"
       }
     }
   ]
