@@ -8,6 +8,7 @@ description: |
   voorlopige conclusies te trekken. In deze blogpost nemen we je mee 
   in deze conclusies en kijken we naar de mitsen en de maren in de 
   algemene regels die zich nu vormgeven.
+draft: true
 ---
 
 # AsyncAPI: Wanneer wel? Wanneer niet?
