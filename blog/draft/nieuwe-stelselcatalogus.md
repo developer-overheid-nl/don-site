@@ -47,7 +47,8 @@ Datastelsel.
 <video controls preload="metadata" style={{width: '100%'}}>
 
   <source src="https://www.stelselcatalogus.nl/cms/uploads/Explainer_full_v1_81f8560d75.mp4" type="video/mp4" />
-  Je browser ondersteunt geen ingesloten video.
+  Je browser ondersteunt geen ingesloten video. Je kunt de video ook
+  [downloaden](https://www.stelselcatalogus.nl/cms/uploads/Explainer_full_v1_81f8560d75.mp4).
 </video>
 
 ## Onderdeel van een groter geheel
@@ -70,4 +71,4 @@ vindbaar, begrijpelijk en toepasbaar is. Meer informatie is te vinden op
 [www.stelselcatalogus.nl](https://www.stelselcatalogus.nl).
 
 Wij komen graag in contact met onze stakeholders. Via
-LogiusContactStelselcatalogus@logius.nl kun je met ons in contact komen.
+[LogiusContactStelselcatalogus@logius.nl](mailto:LogiusContactStelselcatalogus@logius.nl) kun je met ons in contact komen.
