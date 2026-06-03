@@ -8,7 +8,6 @@ description: |
   informatiemodel is verbeterd. Hierdoor kunnen onder meer specifieke relaties
   tussen gegevens worden gelegd.
 image: ./img/nieuwe-stelselcatalogus.png
-draft: true
 ---
 
 # De Stelselcatalogus is vernieuwd
@@ -16,13 +15,28 @@ draft: true
 ![De Stelselcatalogus is vernieuwd](./img/nieuwe-stelselcatalogus.png)
 
 De vernieuwde Stelselcatalogus is nu live via
-[www.stelselcatalogus.nl](https://www.stelselcatalogus.nl)! De omgeving is
+[stelselcatalogus.nl](https://stelselcatalogus.nl)! De omgeving is
 gebruiksvriendelijker, actueler en beter voorbereid op de toekomst. Niet alleen
 de techniek en interface zijn vernieuwd, ook het onderliggende informatiemodel
 is verbeterd. Hierdoor kunnen onder meer specifieke relaties tussen gegevens
 worden gelegd.
 
 <!-- truncate -->
+
+:::success[TL;DR]
+
+De vernieuwde [Stelselcatalogus](https://stelselcatalogus.nl) is live. De
+technologie is herschreven op basis van moderne webstandaarden, het
+informatiemodel is uitgebreid met begrippenkaders en expliciete relaties tussen
+gegevens, en de zoekfunctie is verbeterd. De catalogus biedt metadata over
+begrippen en informatiemodellen uit basisregistraties zoals BRP, Handelsregister
+en BRK.
+
+Samen met [data.overheid.nl](https://data.overheid.nl) en
+[developer.overheid.nl](https://developer.overheid.nl) vormt het de gezamenlijke
+ingang tot overheidsdata binnen het Federatief Datastelsel.
+
+:::
 
 Wie met data werkt voor maatschappelijke vraagstukken, weet hoeveel tijd gaat
 zitten in het vinden, verkrijgen en begrijpen van gegevens. Juist daarom zijn
@@ -68,7 +82,8 @@ begrijpen, te gebruiken en waar mogelijk te hergebruiken.
 
 Zo draagt de vernieuwde Stelselcatalogus bij aan een overheid waarin data beter
 vindbaar, begrijpelijk en toepasbaar is. Meer informatie is te vinden op
-[www.stelselcatalogus.nl](https://www.stelselcatalogus.nl).
+[stelselcatalogus.nl](https://stelselcatalogus.nl).
 
 Wij komen graag in contact met onze stakeholders. Via
-[LogiusContactStelselcatalogus@logius.nl](mailto:LogiusContactStelselcatalogus@logius.nl) kun je met ons in contact komen.
+[LogiusContactStelselcatalogus@logius.nl](mailto:LogiusContactStelselcatalogus@logius.nl)
+kun je met ons in contact komen.
