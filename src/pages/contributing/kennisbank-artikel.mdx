@@ -4,6 +4,7 @@ title: Hoe draag ik een kennisbank-artikel aan?
 ---
 
 {/* This class assures Docusaurus markdown CSS is applied */}
+
 <div className="markdown">
 
 # Hoe draag ik een kennisbank-artikel aan?
@@ -175,13 +176,9 @@ kopje te vullen, maar probeer de structuur aan te houden:
 
 ```markdown
 ## Waarom deze standaard
-
 ## Wanneer gebruik je dit
-
 ## Hoe werkt het
-
 ## Toepassing in Nederland
-
 ## Bronnen
 ```
 
@@ -189,15 +186,10 @@ kopje te vullen, maar probeer de structuur aan te houden:
 
 ```markdown
 ## Kenmerken
-
 ## Hoe werkt het
-
 ## Aan de slag
-
 ## Waarom deze tool
-
 ## Alternatieven
-
 ## Bronnen
 ```
 
@@ -205,13 +197,9 @@ kopje te vullen, maar probeer de structuur aan te houden:
 
 ```markdown
 ## Wat je gaat maken
-
 ## Vereisten
-
 ## Stappen
-
 ## Resultaat
-
 ## Bronnen
 ```
 
@@ -224,11 +212,8 @@ genummerde stap-bestanden (`1-eerste-stap.md`, `2-tweede-stap.md`, etc.).
 
 ```markdown
 ## Wat je gaat maken
-
 ## Vereisten
-
 ## Stappen
-
 ## Bronnen
 ```
 
@@ -236,18 +221,62 @@ genummerde stap-bestanden (`1-eerste-stap.md`, `2-tweede-stap.md`, etc.).
 
 ```markdown
 ## Het probleem
-
 ## De oplossing
-
 ## Kernconcepten
-
 ## Wanneer gebruik je dit
-
 ## Best practices
-
 ## Gerelateerde patronen
-
 ## Bronnen
+```
+
+## Toon en stijl
+
+### Schrijf voor een developer, niet voor een beleidsmaker
+
+De kennisbank richt zich op developers en andere technische profielen die werken
+aan digitale overheidsdiensten. Schrijf praktisch en concreet: wat moet iemand
+weten of doen?
+
+### Spreek de lezer aan met "je"
+
+Gebruik de informele "je", niet het formele "u". Dit sluit aan bij de toon in
+ontwikkelaarsdocumentatie en voelt toegankelijker.
+
+### Schrijf in het Nederlands, gebruik Engelse termen waar standaard
+
+De kennisbank is Nederlandstalig. Engelse vakbegrippen die in de praktijk zo
+worden gebruikt — zoals _idempotent_, _pull request_, _header_, of _endpoint_ —
+hoef je niet te vertalen. Introduceer een acroniem of technische term bij eerste
+gebruik kort met een uitleg of link.
+
+### Wees direct en bondig
+
+Schrijf korte, actieve zinnen. Vermijd ambtelijk taalgebruik, onnodige
+inleidingen en nominalisaties.
+
+```markdown
+✓ Sla de sleutel op voordat je het verzoek verstuurt.
+✗ Het wordt aanbevolen dat de sleutel wordt opgeslagen voorafgaand aan het
+versturen van het verzoek.
+```
+
+### Gebruik de gebiedende wijs in instructies
+
+Geef instructies als directe opdrachten, niet als suggesties.
+
+```markdown
+✓ Controleer of het gebruik van het bsn is toegestaan.
+✗ Je zou kunnen controleren of het gebruik van het bsn is toegestaan.
+```
+
+### Geen emoji in koppen of lopende tekst
+
+Emoji horen niet in H2/H3-koppen of in lopende tekst. Ze leiden af en zijn
+inconsistent met de rest van de kennisbank.
+
+```markdown
+✓ ## Wanneer gebruik je dit
+✗ ## 🧠 Wanneer gebruik je dit
 ```
 
 ## Voorbeeld
