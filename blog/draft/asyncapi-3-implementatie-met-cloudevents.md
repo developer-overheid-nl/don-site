@@ -31,7 +31,10 @@ te kijken. CLoudevents, een aangenomen standaard binnen de Nederlandse Overheid,
 vult AsyncAPI aan in het beschrijven van events en het implementeren van EDA. Het 
 doet dit door concreet in te vullen hoe de berichten die over de lijn gaan eruit 
 zien, waar AsyncAPI alleen beschrijft wat voor soort berichten er verstuurd worden 
-en waar dat verkeer leeft. REST NOG AANVULLEN, NU SPRINTREVIEW
+en waar dat verkeer leeft. Met Cloudevents en AsyncAPI samen volgt er documentatie
+waar vervolgens met gemak op te ontwikkelen en implementeren valt. De werkgroep 
+AsyncAPI gaat zich richten op dit alles verder uitwerken; wie mee wil doen met de 
+discussie is meer dan welkom om aan te schuiven!
 
 :::
 
