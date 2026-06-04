@@ -27,7 +27,7 @@ uitgewisseld tussen systemen?
 :::success[TL;DR]
 
 Na een wat theoretische behandeling van AsyncAPI is het tijd om naar de toekomst 
-te kijken. CLoudevents, een aangenomen standaard binnen de Nederlandse Overheid, 
+te kijken. Cloudevents, een aangenomen standaard binnen de Nederlandse Overheid, 
 vult AsyncAPI aan in het beschrijven van events en het implementeren van EDA. Het 
 doet dit door concreet in te vullen hoe de berichten die over de lijn gaan eruit 
 zien, waar AsyncAPI alleen beschrijft wat voor soort berichten er verstuurd worden 
