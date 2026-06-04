@@ -28,8 +28,8 @@ uitgewisseld tussen systemen?
 
 Na een wat theoretische behandeling van AsyncAPI is het tijd om naar de toekomst 
 te kijken. Cloudevents, een aangenomen standaard binnen de Nederlandse Overheid, 
-vult AsyncAPI aan in het beschrijven van events en het implementeren van Event Driven Architecture. Het 
-doet dit door concreet in te vullen hoe de berichten die over de lijn gaan eruit 
+vult AsyncAPI aan in het beschrijven van events en het implementeren van Event Driven
+Architecture. Het doet dit door concreet in te vullen hoe asynchrone berichten eruit 
 zien, waar AsyncAPI alleen beschrijft wat voor soort berichten er verstuurd worden 
 en waar dat verkeer leeft. Met Cloudevents en AsyncAPI samen volgt er documentatie
 waar vervolgens met gemak op te ontwikkelen en implementeren valt. De werkgroep 
@@ -218,4 +218,4 @@ van de werkgroep AsyncAPI, en ook vast wat vooruit te lopen op de zaken die daar
 nu spelen. Mocht je na dit alles gelezen te hebben denken “dit klinkt
 interessant”, “oh maar daar heb ik een interessante use case voor”, of misschien
 iets als “maar dat weet ik veel beter”, schroom dan vooral niet om je aan te
-melden voor de werkgroep!
+melden voor de werkgroep via api@geonovum.nl!
