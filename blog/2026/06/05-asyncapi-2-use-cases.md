@@ -12,7 +12,7 @@ description: |
 
 # AsyncAPI: Wanneer wel? Wanneer niet?
 
-In een eerdere blogpost zijn de eerste bevindingen van de werkgroep
+In een [eerdere blogpost](https://developer.overheid.nl/blog/2026/05/28/asyncapi-1-tot-nu-toe) zijn de eerste bevindingen van de werkgroep
 [AsyncAPI](https://www.asyncapi.com/en) gedeeld na het uitwerken van een tweetal
 use cases waarin asynchrone API’s van [OAS](https://www.openapis.org/) naar
 AsyncAPI werden omgezet. Daarbij werd duidelijk dat AsyncAPI op zichzelf geen
@@ -22,6 +22,8 @@ nog echter niet behandeld: wanneer gaan we het dan wel, en wanneer niet
 gebruiken? In deze blog ga ik dieper in op de situaties waarin AsyncAPI wel
 geschikt lijkt, en in welke situaties het van weinig toegevoegde waarde lijkt te
 zijn.
+
+<!-- truncate -->
 
 :::success[TL;DR]
 
@@ -35,8 +37,6 @@ vormen. De details van al deze punten staan zeker nog ter discussie, maar het is
 duidelijk dat er potentie in zit.
 
 :::
-
-<!-- truncate -->
 
 ## Toegevoegde waarde van AsyncAPI
 
