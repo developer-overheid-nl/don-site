@@ -8,7 +8,6 @@ description: |
   voorlopige conclusies te trekken. In deze blogpost nemen we je mee 
   in deze conclusies en kijken we naar de mitsen en de maren in de 
   algemene regels die zich nu vormgeven.
-draft: true
 ---
 
 # AsyncAPI: Wanneer wel? Wanneer niet?
@@ -26,14 +25,14 @@ zijn.
 
 :::success[TL;DR]
 
-AsyncAPI heeft zich als tooling bewezen op een aantal vlakken, maar is
-minder van toegevoegde waarde op anderen. Wanneer het landschap complex,
-veranderlijk, grootschalig of ontkoppeld is valt er een hoop te halen uit
-het gebruik van AsyncAPI. Echter, wanneer het gaat om simpele integraties,
-kleine berichten, low-use omgevingen of gewoon als de organisatie niet de 
-benodigde volwassenheid heeft om het goed te implementeren dan kan AsyncAPI
-juist een bottleneck gaan vormen. De details van al deze punten staan zeker 
-nog ter discussie, maar het is duidelijk dat er potentie in zit.
+AsyncAPI heeft zich als tooling bewezen op een aantal vlakken, maar is minder
+van toegevoegde waarde op anderen. Wanneer het landschap complex, veranderlijk,
+grootschalig of ontkoppeld is valt er een hoop te halen uit het gebruik van
+AsyncAPI. Echter, wanneer het gaat om simpele integraties, kleine berichten,
+low-use omgevingen of gewoon als de organisatie niet de benodigde volwassenheid
+heeft om het goed te implementeren dan kan AsyncAPI juist een bottleneck gaan
+vormen. De details van al deze punten staan zeker nog ter discussie, maar het is
+duidelijk dat er potentie in zit.
 
 :::
 
