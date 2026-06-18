@@ -31,7 +31,7 @@
     "@rijkshuisstijl-community/components-react": "1.1.0",
     "a11y-syntax-highlighting": "1.1.0",
     "algoliasearch-helper": "3.25.0",
-    "axios": "1.15.2",
+    "axios": "1.16.0",
     "client": "link:@docusaurus/plugin-content-docs/client",
     "clsx": "2.1.1",
     "docusaurus-markdown-source-plugin": "2.2.5",
