@@ -1,5 +1,46 @@
 # @developer-overheid-nl/website
 
+## 1.5.0
+
+### Minor Changes
+
+- 135240c: Voeg het common ground event toe
+- 91664a9: Voeg een artikel toe over de beslisboom-tool van Forum
+  Standaardisatie
+
+  Voeg een property toe aan de Prettier config zodat markdown
+
+  Voeg een paragraaf toe aan de tutorial "Hoe draag ik een kennisbank-artikel
+  aan?" over de "Toon en stijl" van artikelen.
+
+- 3590954: Artikel toegevoegd over Changelogs bijhouden met voorbeelden van de
+  tools Changesets en Changie.
+- 4f1716e: Blogpost over nieuwe Stelselcatalogus toegevoegd.
+- 3f8409d: Publiceer tweede blog Floris Async API
+
+### Patch Changes
+
+- 1a83dd9: Moved Async blogpost 3 to 06 folder for publishing
+- f253339: TL;DR + kopjes toegevoegd aan blog Floris
+- 939df0b: Improve Typesense search across Developer Overheid
+
+  Updated the search page to query multiple Typesense collections, including the
+  API register, OSS register, and the new Developer Overheid content
+  collections. Search results are grouped by source, use collection-specific
+  ranking fields where needed, and link API/OSS results to their public domains.
+
+  Also added Markdown indexing for generated Docusaurus content so standards,
+  tutorials, tools, architecture, guidelines, blog posts, and communities can be
+  pushed to Typesense after build.
+
+- 2406d39: Offline halen blog Floris
+- 316f86f: Verander links die verwezen naar de publiccode-checker, deze is
+  deprecated
+- 741173c: fix: add wrappers to pages to apply markdown
+- 2c02f77: Update 05-asyncapi-2-use-cases.md - truncate verplaatst
+- 40bac4e: Pas het voorbeeld van pc.yml aan bij de key
+  "localisation.availableLanguages"
+
 ## 1.4.1
 
 ### Patch Changes
