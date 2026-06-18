@@ -24,6 +24,9 @@ stukje vooruit te kijken, met als kern de vraag: hoe zorg je ervoor dat events
 niet alleen goed beschreven zijn, maar ook consistent en interoperabel worden
 uitgewisseld tussen systemen?
 
+<!-- truncate -->
+
+
 :::success[TL;DR]
 
 Na een wat theoretische behandeling van AsyncAPI is het tijd om naar de toekomst 
@@ -38,7 +41,6 @@ discussie is meer dan welkom om aan te schuiven!
 
 :::
 
-<!-- truncate -->
 
 ## CloudEvents
 
