@@ -7,7 +7,6 @@ description: |
   van CloudEvents een logische stap te zijn. Op hoogover niveau wordt er 
   gekeken naar de vragen welke gaten in AsyncAPI worden opgevuld CloudEvents,
   en wat het oplevert om die twee samen te gaan gebruiken.
-draft: true
 ---
 
 # AsyncAPI + CloudEvents; implementatie van asynchrone oplossingen
