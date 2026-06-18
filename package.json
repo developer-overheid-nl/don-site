@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "2.30.0",
-    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/module-type-aliases": "3.10.1",
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
     "@rijkshuisstijl-community/design-tokens": "1.2.0",
