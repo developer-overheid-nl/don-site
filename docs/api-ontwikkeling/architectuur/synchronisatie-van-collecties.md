@@ -54,6 +54,8 @@ artikel noemen we die positie een **state-id**. Een snapshot bevat de toestand
 tot en met het bijbehorende state-id; een delta beschrijft de stap van het
 vorige state-id naar een volgende state-id.
 
+In onderstaande tabel wordt `snapshot 42` als instappunt gebruikt:
+
 | Snapshots | Delta's | Actie                  | State-id lokale kopie |
 | --------- | ------- | ---------------------- | --------------------- |
 | 10        |         | ouder snapshot         |                       |
@@ -64,8 +66,6 @@ vorige state-id naar een volgende state-id.
 |           | 57      | **delta toepassen**    | **57**                |
 |           | 63      | **delta toepassen**    | **63**                |
 |           | 71      | **delta toepassen**    | **71**                |
-
-In bovenstaande tabel wordt `snapshot 42` als instappunt gebruikt:
 
 - Delta's tot en met `42` zijn al in `snapshot 42` opgenomen.
 - Na het laden van `snapshot 42` gaat de consumer verder met `delta 57`.
@@ -114,9 +114,9 @@ en biedt die atomiciteitsgarantie niet per se.
 
 De provider kiest de concrete vorm van het state-id, bijvoorbeeld een oplopend
 transactienummer, een hash of een UUID. De enige eis is dat een state-id uniek
-is binnen de collectie. De volgorde van wijzigingen ligt vast in de
-`prev_id`-keten, niet in de state-id-waarden zelf — state-ids hoeven dus niet
-gesorteerd of oplopend te zijn.
+is binnen de collectie. De volgorde van wijzigingen ligt niet in de state-ids
+zelf, maar in de verwijzing die elke delta naar de voorafgaande state-id bevat —
+state-ids hoeven dus niet gesorteerd of oplopend te zijn.
 
 ## REST API's
 
@@ -134,10 +134,14 @@ collectie:
 ```text
 /publicaties              → de collectie zelf (ongewijzigd)
 /publicaties/snapshots    → lijst van beschikbare snapshots
-/publicaties/snapshots/42 → inhoud van snapshot 42 (statische collectie)
 /publicaties/deltas       → lijst of stroom van delta's (polling of SSE);
                             geen individuele endpoints per delta
 ```
+
+De inhoud van een snapshot is geen vaste extra sub-resource in dit model. De
+snapshotlijst verwijst ernaar via `href`; die kan naar een pad binnen dezelfde
+API wijzen, zoals `/publicaties/snapshots/42`, maar ook naar een externe locatie
+zoals een CDN.
 
 ### Snapshots ophalen
 
@@ -164,16 +168,15 @@ GET /publicaties/snapshots
   }
 ```
 
-De inhoud van een snapshot is een _statische collectie_: nadat het snapshot is
-gemaakt, verandert het niet meer. Daardoor kan de provider die inhoud op
-verschillende manieren aanbieden, bijvoorbeeld met paginering, vaste chunks of
-bestanden. Snapshot-chunks zijn statische bestanden en kunnen potentieel groot
-zijn. Ze lenen zich daardoor voor distributie via een CDN, wat een API gateway
-kan ontlasten. Voor het patroon is het van belang dat alle delen samen dezelfde
+Een snapshot is een _statische collectie_: nadat het snapshot is gemaakt,
+verandert het niet meer. Daardoor kan de provider die inhoud op verschillende
+manieren aanbieden, bijvoorbeeld met paginering, vaste chunks of bestanden.
+Snapshot-chunks zijn statische bestanden en kunnen potentieel groot zijn. Ze
+lenen zich daardoor voor distributie via een CDN, wat een API gateway kan
+ontlasten. Voor het patroon is het van belang dat alle delen samen dezelfde
 snapshot-toestand representeren. De provider dient te garanderen dat vanaf elk
 aangeboden snapshot de aansluitende delta-keten beschikbaar is. Vervolgens haalt
-de consumer de inhoud op via de bijbehorende link. Die link kan relatief zijn
-binnen dezelfde API, maar ook absoluut.
+de consumer de inhoud op via de bijbehorende link.
 
 De provider houdt snapshots lang genoeg beschikbaar om ze volledig te
 downloaden; verloopt een snapshot toch tussentijds — kenbaar via `410 Gone` op
@@ -231,8 +234,8 @@ provider in plaats van de volledige resource ook een
 [JSON Merge Patch (RFC 7396)](https://datatracker.ietf.org/doc/html/rfc7396) of
 [JSON Patch (RFC 6902)](https://datatracker.ietf.org/doc/html/rfc6902)
 meesturen. Dat is een uitzondering op de voorkeursvorm en maakt de
-consumer-logica complexer, omdat patching pad- en schema-afhankelijk is en
-correct herstel na _out-of-order_ events lastiger wordt.
+consumer-logica complexer, omdat patching afhankelijk is van de lokale
+uitgangstoestand en van paden en schemastructuur.
 
 :::note CloudEvents
 
@@ -331,21 +334,17 @@ verwerkingstijd van een snapshot. Anders gezegd: voor elk snapshot dat de
 provider aanbiedt, moet de aansluitende delta-keten vanaf het state-id van dat
 snapshot nog beschikbaar zijn.
 
-De ontvangst van delta's kan vooruitlopen op het laden van een snapshot: een
-consumer kan al beginnen met het ontvangen van delta's terwijl er mogelijk nog
-geen snapshot is, of terwijl het snapshot nog wordt gedownload. Die delta's
-worden dan tijdelijk gebufferd, maar nog niet toegepast. Zodra het snapshot is
-geladen, verwijdert de consumer alle gebufferde delta's tot en met de
-snapshotpositie, en verwerkt deze alleen de delta's die daarop aansluiten. Dat
-kan de hersteltijd verkorten, maar is niet nodig als de provider de genoemde
-overlap garandeert.
+De ontvangst van delta's kan vooruitlopen op het laden van een snapshot: terwijl
+het gekozen snapshot nog wordt gedownload, kan een consumer nieuwe delta's
+alvast ontvangen en tijdelijk bufferen. Zodra het snapshot is geladen,
+verwijdert de consumer alle gebufferde delta's tot en met de snapshotpositie en
+verwerkt deze alleen de delta's die daarop aansluiten. Dat kan de hersteltijd
+verkorten, maar is niet nodig als de provider de genoemde overlap garandeert.
 
-De provider dient snapshots en delta's beschikbaar te houden voor een
-retentieperiode die groot genoeg is voor een consumer om ze te verwerken. Daarna
-geeft de provider de ruimte om deze te verwijderen. Bij polling en
-SSE-herverbinding ontvangt de consumer in dat geval `410 Gone`. Hieruit kan de
-consumer afleiden dat het state-id is verlopen en dat opnieuw een snapshot dient
-te worden opgehaald.
+Is een gevraagde positie toch verlopen, dan maakt de provider dat expliciet met
+`410 Gone`: bij polling op het delta-endpoint, bij SSE tijdens de herverbinding,
+of bij het alsnog opvragen van een verlopen snapshot-deel. De consumer kan
+daaruit afleiden dat opnieuw een snapshot moet worden opgehaald.
 
 ## Gerelateerde patronen
 
