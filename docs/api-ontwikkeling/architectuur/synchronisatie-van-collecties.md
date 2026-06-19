@@ -234,6 +234,16 @@ meesturen. Dat is een uitzondering op de voorkeursvorm en maakt de
 consumer-logica complexer, omdat patching pad- en schema-afhankelijk is en
 correct herstel na _out-of-order_ events lastiger wordt.
 
+:::note CloudEvents
+
+Delta's kunnen desgewenst in een
+[CloudEvents](../standaarden/cloudevents)-envelop worden verpakt. Dit is goed
+mogelijk, mits de delta-semantiek behouden blijft: één event dient nog steeds
+één delta te representeren, inclusief de atomaire set wijzigingen in
+`operations`.
+
+:::
+
 #### Polling
 
 De consumer vraagt periodiek nieuwe delta's op via het state-id:
@@ -310,16 +320,6 @@ provider de verbinding. Bij herverbinding stuurt de consumer opnieuw
 `Last-Event-ID`; als dat state-id inmiddels niet meer bekend is, antwoordt de
 provider alsnog met `410 Gone`.
 
-:::note CloudEvents
-
-Delta's kunnen desgewenst in een
-[CloudEvents](../standaarden/cloudevents)-envelop worden verpakt. Dit is goed
-mogelijk, mits de delta-semantiek behouden blijft: één event dient nog steeds
-één delta te representeren, inclusief de atomaire set wijzigingen in
-`operations`.
-
-:::
-
 ## Retentie van snapshots en delta's
 
 Een cruciale verantwoordelijkheid van de provider is de overlap tussen
@@ -350,9 +350,9 @@ te worden opgehaald.
 ## Gerelateerde patronen
 
 - Voor het betrouwbaar genereren en publiceren van delta's kan een provider het
-  [Transactionele outbox](./transactionele-outbox.md)-patroon toepassen.
-- Voor navigatie door de snapshot-pagina's (en een vergelijking van
+[Transactionele outbox](./transactionele-outbox.md)-patroon toepassen.
+<!-- - Voor navigatie door de snapshot-pagina's (en een vergelijking van
   pagineerstrategieën), zie
-  [Paginering van collecties](./paginering-van-collecties.md).
+  [Paginering van collecties](./paginering-van-collecties.md). -->
 - Voor een bredere introductie op event-driven communicatiepatronen, zie
   [Event Driven Architecture](./eda.md).
