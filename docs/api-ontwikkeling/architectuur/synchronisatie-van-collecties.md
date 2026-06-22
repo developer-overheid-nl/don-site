@@ -30,17 +30,42 @@ graph RL
 Het **snapshots-en-delta's-patroon** richt zich op _one-way state
 synchronization_: het in één richting synchroniseren van de actuele toestand van
 een collectie. _Snapshots_ bieden een startpunt; _delta's_ houden die toestand
-daarna efficiënt bij. Het patroon is niet bedoeld voor bidirectionele
-synchronisatie, conflictresolutie of volledige historische replay op basis van
-events. Ook is het minder geschikt voor deelverzamelingen die per consumer of
-per request met parameters worden samengesteld.
+daarna efficiënt bij.
 
-De garantie van het patroon is
+De belangrijkste garantie van het patroon is
 [sequentiële consistentie](https://en.wikipedia.org/wiki/Consistency_model#Sequential_consistency):
-een sterke garantie waarbij de lokale kopie gegarandeerd exact dezelfde volgorde
-van atomaire toestandsveranderingen doorloopt als de bron. Hierdoor is de lokale
-kopie — weliswaar met een tijdsvertraging — te allen tijde consistent met de
-(historische) toestand van de bron.
+de lokale kopie doorloopt exact dezelfde volgorde van atomaire
+toestandsveranderingen als de bron. Hierdoor is de lokale kopie — weliswaar met
+een tijdsvertraging — te allen tijde consistent met de (historische) toestand
+van de bron.
+
+## Wanneer toe te passen
+
+Het uitgangspunt blijft dat data bij de bron wordt bevraagd. Dit patroon is niet
+bedoeld als generieke datareplicatie of als vervanging van
+[data bij de bron](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/data/data-bij-de-bron/).
+Ook is het niet bedoeld voor bidirectionele synchronisatie, conflictresolutie of
+volledige historische replay op basis van events.
+
+Het patroon past vooral bij _read-optimized_ use cases waarin een consumer een
+lokale, consistente leesweergave nodig heeft en het telkens rechtstreeks
+bevragen van de bron of bronnen onwenselijk is. Dat kan bijvoorbeeld spelen bij
+eisen aan schaalbaarheid, beschikbaarheid, netwerklast, volledigheid of
+controleerbaarheid.
+
+Vrijwel altijd gaat het daarbij om metadata in plaats van om de volledige
+bronregistratie: een index, verwijzingslaag of publicatieoverzicht waarmee
+consumers de juiste brondata kunnen vinden, controleren of raadplegen.
+Voorbeelden zijn discovery en routering in decentrale stelsels, of het opbouwen
+van een aantoonbaar volledige publieke index voor grote metadata-collecties
+zoals Woo-publicaties.
+
+Toepassing van dit patroon vraagt daarom om een expliciete architectonische
+afweging. De keuze voor synchronisatie moet worden onderbouwd vanuit de use
+case, de doelbinding en de garanties die daarvoor nodig zijn, zoals
+schaalbaarheid, beschikbaarheid, controleerbaarheid en consistente verwerking.
+Het patroon is minder geschikt voor deelverzamelingen die per consumer of per
+request met parameters worden samengesteld.
 
 ## Het snapshots-en-delta's-patroon
 
