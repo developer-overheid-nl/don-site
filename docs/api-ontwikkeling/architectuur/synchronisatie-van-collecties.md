@@ -55,10 +55,11 @@ controleerbaarheid.
 
 Vrijwel altijd gaat het daarbij om metadata in plaats van om de volledige
 bronregistratie: een index, verwijzingslaag of publicatieoverzicht waarmee
-consumers de juiste brondata kunnen vinden, controleren of raadplegen.
-Voorbeelden zijn discovery en routering in decentrale stelsels, of het opbouwen
-van een aantoonbaar volledige publieke index voor grote metadata-collecties
-zoals Woo-publicaties.
+consumers de juiste brondata kunnen vinden, controleren of raadplegen. In die
+zin kan zo'n gesynchroniseerde collectie de rol van een directory service
+vervullen. Voorbeelden zijn discovery en routering in decentrale stelsels, of
+het opbouwen van een aantoonbaar volledige publieke index voor grote
+metadata-collecties zoals Woo-publicaties.
 
 Toepassing van dit patroon vraagt daarom om een expliciete architectonische
 afweging. De keuze voor synchronisatie moet worden onderbouwd vanuit de use
