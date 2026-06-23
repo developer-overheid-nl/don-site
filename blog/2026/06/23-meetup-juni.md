@@ -65,13 +65,12 @@ van een bijbehorende
 en de
 [repo-docs-generator tool](https://developer-overheid-nl.github.io/repo-docs-generator).
 
-<div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
-  <Link href="https://github.com/developer-overheid-nl/oas-generator/">
-    OAS Generator
-    <Icon icon="pijl-naar-rechts" />
-  </Link>
-</div>
+<Link href="https://github.com/developer-overheid-nl/oas-generator/">
+  OAS Generator
+  <Icon icon="pijl-naar-rechts" />
+</Link>
 
+<br/>
 <br/>
 
 !["Foto van het koffiemoment."](./img/pauze.jpg)_{"<br>"}_
