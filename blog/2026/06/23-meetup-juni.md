@@ -38,10 +38,10 @@ verschijnen.
 ### Anne Schuth: Platform engineering
 
 Anne Schuth opende met een prikkelende stelling: de Nederlandse overheid is
-misschien wel het grootste softwarebedrijf van Nederland, maar organiseert ze
-zich ook zo? Hij liet zien hoe platform engineering developers kan ontlasten,
-hoe je standaarden by design kunt afdwingen en hoe beleid letterlijk onderdeel
-kan worden van je code, inclusief verwijzingen naar wetsartikelen.
+misschien wel het grootste softwarebedrijf van Nederland, waarom organiseert ze
+zich dan nog niet zo? Hij liet zien hoe platform engineering developers kan
+ontlasten, hoe je standaarden by design kunt afdwingen en hoe beleid letterlijk
+onderdeel kan worden van je code, inclusief verwijzingen naar wetsartikelen.
 
 !["Anne Schuth tijdens zijn praatje over platform engineering."](./img/anne.jpg)
 _Anne Schuth tijdens zijn talk over platform engineering._
@@ -53,7 +53,7 @@ _Anne Schuth tijdens zijn talk over platform engineering._
 
 ### Dimitri en Tom: features live demo
 
-Onze collega’s Tom Ootes en Dimitri van Hees lieten aan de hand van een live
+Onze collega’s Dimitri van Hees en Tom Ootes lieten aan de hand van een live
 demo zien welke verbeteringen aan onze producten er allemaal zijn doorgevoerd.
 Dimitri liet zien hoe je een API bouwt met behulp van de
 [AI-Skills van developer.overheid.nl](https://github.com/developer-overheid-nl/skills-developer-overheid-nl)
@@ -68,10 +68,6 @@ en de
 <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
   <Link href="https://github.com/developer-overheid-nl/oas-generator/">
     OAS Generator
-    <Icon icon="pijl-naar-rechts" />
-  </Link>
-  <Link href="https://developer-overheid-nl.github.io/repo-docs-generator">
-    Repo Docs Generator
     <Icon icon="pijl-naar-rechts" />
   </Link>
 </div>
