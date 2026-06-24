@@ -57,9 +57,10 @@ Vrijwel altijd gaat het daarbij om metadata in plaats van om de volledige
 bronregistratie: een index, verwijzingslaag of publicatieoverzicht waarmee
 consumers de juiste brondata kunnen vinden, controleren of raadplegen. In die
 zin kan zo'n gesynchroniseerde collectie de rol van een directory service
-vervullen. Voorbeelden zijn discovery en routering in decentrale stelsels, of
-het opbouwen van een aantoonbaar volledige publieke index voor grote
-metadata-collecties zoals Woo-publicaties.
+vervullen. Voorbeelden zijn discovery en routering in decentrale stelsels, het
+opbouwen van een aantoonbaar volledige publieke index voor grote
+metadata-collecties zoals openbare publicaties, en het overkoepelend
+reconstrueren van de samenhang van items binnen een keten.
 
 Toepassing van dit patroon vraagt daarom om een expliciete architectonische
 afweging. De keuze voor synchronisatie moet worden onderbouwd vanuit de use
@@ -70,7 +71,7 @@ request met parameters worden samengesteld.
 
 ## Het snapshots-en-delta's-patroon
 
-Het **snapshots-en-delta's** patroon maakt synchronisatie betrouwbaar door twee
+Het **snapshots-en-delta's-patroon** maakt synchronisatie betrouwbaar door twee
 parallelle stromen te combineren: een laagfrequente stroom van snapshots en een
 hoogfrequente stroom van delta's. De ene stroom biedt een veilig startpunt, de
 andere stroom zorgt ervoor dat de lokale kopie actueel blijft.
@@ -171,9 +172,9 @@ zoals een CDN.
 
 ### Snapshots ophalen
 
-De provider publiceert een lijst van beschikbare snapshots, chronologisch
-gesorteerd (oudste eerst). De consumer kiest het laatste (meest recente) item in
-die lijst als startpunt:
+De provider publiceert een lijst van beschikbare snapshots, gesorteerd op
+reekspositie (oudste eerst). De consumer kiest het laatste (meest recente) item
+in die lijst als startpunt:
 
 ```http
 GET /publicaties/snapshots
