@@ -160,7 +160,7 @@ auth-configuratie.
 API-keys zijn bewust beperkter dan bearer tokens. In de huidige policy zijn
 API-keys standaard alleen toegestaan voor `GET` requests. Per route kan daarvan
 worden afgeweken met `allow_api_key_methods`, bijvoorbeeld voor een server-side
-tool-endpoint dat een `POST` nodig heeft.
+tool-endpoint die een `POST` nodig heeft.
 
 Deze beperking is belangrijk omdat een API-key vaak makkelijker uitlekt dan een
 kortlevend bearer token. Gebruik API-keys daarom alleen voor routes waar dat
