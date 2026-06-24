@@ -151,6 +151,84 @@ geconfigureerd in de gateway/policy-configuratie. Voorbeelden:
 | `/api-register/v1/apis`  | `POST`  | `apis:write` |
 | `/tools/v1/oas/validate` | `POST`  | `tools`      |
 
+Bijvoorbeeld: dit is de volledige APISIX-routeconfiguratie voor
+`GET /api-register/v1/apis`. Hierin staan niet alleen de auth-plugin, maar ook
+de rewrite, CORS, timeout en backend-service.
+
+```yaml
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+spec:
+  http:
+    - name: api-register-api-v1-listapis
+      match:
+        paths:
+          - "/api-register/v1/apis"
+        methods:
+          - GET
+      plugins:
+        - name: proxy-rewrite
+          enable: true
+          config:
+            regex_uri:
+              - "^/api-register/(.*)"
+              - "/$1"
+            use_real_request_uri_unsafe: false
+        - name: cors
+          enable: true
+          config:
+            allow_origins: "*"
+            allow_credential: false
+            allow_headers: Authorization,x-api-key,Content-Type
+            allow_methods: GET,OPTIONS
+            max_age: 5
+        - name: opa
+          enable: true
+          config:
+            host: http://don-api-opa:8181
+            policy: apisix/authz/result
+            timeout: 3000
+            with_route: true
+      timeout:
+        connect: 60s
+        send: 60s
+        read: 60s
+      backends:
+        - serviceName: api-register-svc
+          servicePort: 1337
+```
+
+De vereiste scope staat vervolgens in de OPA-routeconfiguratie. De `name`,
+`methods` en `paths` sluiten aan op de APISIX-route hierboven.
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: opa-route-authz
+data:
+  apisix-route-authz.json: |
+    {
+      "apisix_route_authz": {
+        "rules": [
+          {
+            "name": "api-register-api-v1-listapis",
+            "methods": [
+              "GET"
+            ],
+            "paths": [
+              "/api-register/v1/apis"
+            ],
+            "required_scopes": [
+              "apis:read"
+            ],
+            "allow_api_key_methods": []
+          }
+        ]
+      }
+    }
+```
+
 OPA kiest de meest specifieke regel die past bij de requestmethode en het pad.
 Als er geen routespecifieke scope is, valt OPA terug op de default scopes uit de
 auth-configuratie.
