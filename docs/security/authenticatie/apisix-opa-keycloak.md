@@ -184,8 +184,9 @@ wel aanvullende domeinautorisatie uitvoeren als de operatie dat vereist.
 
 - **Authenticatie centraal aan de rand**: APISIX en OPA houden ongeldige
   requests buiten de achterliggende services.
-- **Policy als code**: autorisatieregels staan in Rego en routeconfiguratie, en
-  kunnen samen met de infrastructuur worden gereviewd.
+- **Policy als code**: autorisatieregels staan in Rego, de policy-taal van
+  Open Policy Agent, en in routeconfiguratie. Daardoor kunnen ze samen met de
+  infrastructuur worden gereviewd.
 - **Keycloak als bron voor clients en scopes**: clientregistratie, secrets en
   OAuth/OIDC-instellingen blijven op één plek.
 - **Deny-by-default**: nieuwe routes zijn niet impliciet open.
