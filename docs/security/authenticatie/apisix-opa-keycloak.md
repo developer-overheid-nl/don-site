@@ -162,9 +162,12 @@ API-keys standaard alleen toegestaan voor `GET` requests. Per route kan daarvan
 worden afgeweken met `allow_api_key_methods`, bijvoorbeeld voor een server-side
 tool-endpoint die een `POST` nodig heeft.
 
-Deze beperking is belangrijk omdat een API-key vaak makkelijker uitlekt dan een
-kortlevend bearer token. Gebruik API-keys daarom alleen voor routes waar dat
-bewust is afgewogen.
+:::warning[Gebruik zo min mogelijk API-keys]
+
+API-keys lekken vaak makkelijker uit dan een kortlevend bearer token. Gebruik
+API-keys daarom alleen voor routes waar dat bewust is afgewogen.
+
+:::
 
 ## Foutgedrag
 
