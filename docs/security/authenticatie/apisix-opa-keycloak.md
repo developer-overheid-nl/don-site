@@ -12,17 +12,22 @@ title: "API-authenticatie met APISIX, OPA en Keycloak"
 
 Developer.overheid.nl gebruikt een centrale API-gateway om API-verkeer te
 authenticeren en autoriseren voordat requests bij achterliggende services
-terechtkomen. De gateway is opgebouwd rond drie componenten:
+terechtkomen. Die auth-flow bestaat uit drie aparte diensten die elk een eigen
+rol hebben:
 
-- **APISIX** routeert requests naar de juiste backend en voert gateway-plugins
-  uit.
-- **Open Policy Agent (OPA)** neemt per request de autorisatiebeslissing.
-- **Keycloak** is de identity provider en authorization server voor clients,
-  tokens en scopes.
+- **APISIX** is de publieke API-gateway. Deze service ontvangt het request,
+  draait gateway-plugins en routeert naar de juiste backend.
+- **Open Policy Agent (OPA)** is een aparte policy-service. APISIX roept OPA per
+  request aan via de `opa` plugin. OPA geeft alleen een beslissing terug:
+  `allow` of `deny`.
+- **Keycloak** is de identity provider en authorization server. OPA raadpleegt
+  Keycloak voor token introspection en voor het valideren van API-key clients.
 
-Deze scheiding houdt de backends eenvoudiger. Zij hoeven niet zelf te weten hoe
-een token of API-key gevalideerd wordt; ze ontvangen alleen requests die door de
-gateway zijn toegestaan.
+APISIX, OPA en Keycloak zijn dus geen onderdelen van één applicatie. Ze draaien
+als losse services en praten via HTTP met elkaar. Deze scheiding houdt de
+backends eenvoudiger. Zij hoeven niet zelf te weten hoe een token of API-key
+gevalideerd wordt; ze ontvangen alleen requests die door de gateway zijn
+toegestaan.
 
 ## Waarom deze opzet?
 
@@ -890,8 +895,8 @@ wel aanvullende domeinautorisatie uitvoeren als de operatie dat vereist.
 
 - **Authenticatie centraal aan de rand**: APISIX en OPA houden ongeldige
   requests buiten de achterliggende services.
-- **Policy als code**: autorisatieregels staan in Rego, de policy-taal van
-  Open Policy Agent, en in routeconfiguratie. Daardoor kunnen ze samen met de
+- **Policy als code**: autorisatieregels staan in Rego, de policy-taal van Open
+  Policy Agent, en in routeconfiguratie. Daardoor kunnen ze samen met de
   infrastructuur worden gereviewd.
 - **Keycloak als bron voor clients en scopes**: clientregistratie, secrets en
   OAuth/OIDC-instellingen blijven op één plek.
