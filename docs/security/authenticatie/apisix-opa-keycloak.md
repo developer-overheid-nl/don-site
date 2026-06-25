@@ -48,35 +48,47 @@ HTTP-methode en vereiste scopes.
 
 ## Request-flow
 
+Dit diagram laat de service-topologie en request-flow samen zien. APISIX staat
+aan de rand als publieke gateway. OPA is een aparte policy service die door
+APISIX wordt aangeroepen. Keycloak is weer een aparte auth service die door OPA
+wordt bevraagd voor tokens, clients en scopes.
+
 ```mermaid
-sequenceDiagram
-    participant Client
-    participant APISIX as APISIX gateway
-    participant OPA
-    participant Keycloak
-    participant API as Backend API
+flowchart LR
+    client["API client<br/>Bearer token of x-api-key"]
 
-    Client->>APISIX: API request met Authorization of x-api-key
-    APISIX->>OPA: Vraag autorisatiebeslissing voor route en request
-
-    alt Bearer token
-        OPA->>Keycloak: Token introspection
-        Keycloak-->>OPA: Tokenstatus, client en scopes
-    else x-api-key
-        OPA->>Keycloak: Client lookup via admin API
-        Keycloak-->>OPA: Client bestaat of niet
+    subgraph apiNs["API namespace"]
+        apisix["APISIX<br/>publieke API-gateway"]
+        opa["OPA<br/>policy decision service"]
+        apiRegister["API Register API"]
+        toolsApi["Tools API"]
     end
 
-    OPA-->>APISIX: allow of deny
-
-    alt allow
-        APISIX->>API: Forward request
-        API-->>APISIX: Response
-        APISIX-->>Client: Response
-    else deny
-        APISIX-->>Client: 401 of 403
+    subgraph authNs["Auth namespace"]
+        keycloak["Keycloak<br/>clients, tokens, scopes"]
     end
+
+    subgraph gitops["Configuratie uit Git"]
+        apisixRoutes["ApisixRoute<br/>routes + plugins + backends"]
+        opaRouteAuthz["opa-route-authz<br/>scopes per route"]
+        opaPolicy["opa-policy<br/>autorisatieregels"]
+    end
+
+    client -->|"1. API request"| apisix
+    apisix -->|"2. vraag allow/deny"| opa
+    opa -->|"3. token introspection<br/>of client lookup"| keycloak
+    opa -->|"4. allow/deny"| apisix
+    apisix -->|"5a. allowed request"| apiRegister
+    apisix -->|"5b. allowed request"| toolsApi
+
+    apisixRoutes -. configureert .-> apisix
+    opaRouteAuthz -. levert route-scopes .-> opa
+    opaPolicy -. levert policy-logica .-> opa
 ```
+
+De stippellijnen zijn configuratie uit Git. De doorgetrokken lijnen zijn runtime
+verkeer. Backends krijgen alleen requests die via APISIX lopen en waarvoor OPA
+`allow` teruggeeft.
 
 ## Stap 1: client krijgt credentials
 
