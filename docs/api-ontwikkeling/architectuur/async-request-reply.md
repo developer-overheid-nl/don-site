@@ -175,7 +175,7 @@ components:
             URL van het uiteindelijke resultaat zodra de operatie is voltooid.
 ```
 
-### Voordelen
+## Voordelen
 
 - **Verbeterde gebruikerservaring**: De consumer krijgt direct feedback en hoeft
   niet te wachten op voltooiing.
@@ -192,7 +192,7 @@ components:
   body — zodat de consumer het proces stap voor stap kan doorlopen zonder die
   domeinkennis zelf te bevatten.
 
-### Nadelen
+## Nadelen
 
 - **Meer technische complexiteit bij de consumer**: In plaats van één
   request-response-cyclus moet de consumer de afhandeling van asynchrone
@@ -200,3 +200,11 @@ components:
   retry-afhandeling en statusinterpretatie.
 - **Persistente toestand bij de provider**: De provider moet operatiestatus
   opslaan en na verloop van tijd opschonen.
+
+## Referenties
+
+- Tanenbaum, A.S. en Van Steen, M. (2007). _Distributed Systems: Principles and
+  Paradigms_ (2e editie). Prentice Hall. Sectie 4.2.3, "Asynchronous RPC".
+- Microsoft. _Asynchronous Request-Reply Pattern_. Azure Architecture Center,
+  Microsoft Learn.
+  https://learn.microsoft.com/en-us/azure/architecture/patterns/asynchronous-request-reply
