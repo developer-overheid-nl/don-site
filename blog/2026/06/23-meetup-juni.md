@@ -73,7 +73,8 @@ en de
 <br/>
 <br/>
 
-!["Foto van het koffiemoment."](./img/pauze.jpg)_{"<br>"}_
+!["Foto van het koffiemoment."](./img/pauze.jpg)
+_Foto van het koffiemoment._
 
 ### Johan Groenen: code.overheid.nl
 
@@ -97,8 +98,8 @@ ontstaan bij VWS tijdens de coronacrisis en inmiddels gedragen door een actieve
 community. Met slimme plugins, de zogenoemde boefjes, breng je het
 aanvalsoppervlak van je organisatie feitelijk en forensisch geborgd in kaart.
 
-!["Jan Klopper tijdens zijn praatje over OpenKAT"](./img/jan.jpg) _Jan Klopper
-tijdens zijn talk over OpenKAT._
+!["Jan Klopper tijdens zijn praatje over OpenKAT"](./img/jan.jpg)
+_Jan Klopper tijdens zijn praatje over OpenKAT._
 
 <Link href="https://openkat.nl/">
   Meer over OpenKAT
