@@ -1,14 +1,56 @@
-# Houd niet alleen de mens, maar ook je tools in de loop
+---
+draft: true
+authors: [dimitri-van-hees]
+tags:
+  - ai
+  - llm
+  - cli
+  - validator
+  - oas
+  - adr
+  - publiccode
+  - open-source
+  - standaarden
+description: >
+  Voor wie AI inzet om overheidssoftware te bouwen, houden we naast de mens ook
+  de tools in de loop: generators die het zware werk doen en validators die de
+  regels bewaken. Zo verschuift het naleven van standaarden van menselijke
+  oplettendheid naar deterministische tooling die je kunt vertrouwen.
+image: ./img/tools-in-the-loop.png
+---
+
+# Tools in the loop: "human in the loop" krijgt hulp
+
+![Abstracte weergave van het proces](./img/tools-in-the-loop.png)
 
 "Human in the loop" is inmiddels het standaardantwoord op bijna elke zorg rond
-AI. Maar voor wie AI inzet om overheids-software te bouwen, willen we naast de
-mens ook _tools_ in de loop houden: generators die het zware werk doen en
-validators die de regels bewaken. Zo verschuift het naleven van standaarden van
-de oplettendheid van een mens en de welwillendheid van AI naar tooling die je
-kunt vertrouwen. Hoe dat samenwerkt, en aan welk arsenaal aan skills,
-generators, validators en andere tools we werken, lees je in deze post.
+AI. Maar voor wie AI inzet om overheidssoftware te bouwen, is het verstandig om
+naast de mens ook _tools_ in de te loop houden: generators die het zware werk
+doen en validators die de regels bewaken. Zo verschuift het naleven van
+standaarden van de oplettendheid van een mens en de welwillendheid van AI naar
+tooling die je kunt vertrouwen. Hoe dat samenwerkt, en aan welk arsenaal aan
+skills, generators, validators en andere tools we werken, lees je in deze post.
 
 <!-- truncate -->
+
+:::success[TL;DR]
+
+Als je AI gebruikt om software te bouwen, houd dan naast de mens ook onze
+_tools_ in de loop:
+
+- **Generators** doen het zware, repetitieve werk (boilerplate,
+  projectstructuur) en zijn deterministisch.
+- **Validators** beantwoorden de waarheidsvraag "Voldoet dit aan de regels?".
+  Niet het model, maar een tool met een vaste set regels.
+- De **command line** is de natuurlijke interface voor agents: de agent itereert
+  op exit codes tot de checker `valid` teruggeeft.
+- AI is zo een hulpmiddel voor de input, niet het orakel dat de waarheid
+  bepaalt.
+
+Dit valt of staat met **standaarden**: elke afspraak is een stukje waarheid dat
+je in betrouwbare tooling stopt zodat AI het niet zelf hoeft te verzinnen.
+
+:::
 
 ## Validators en generators worden steeds belangrijker
 
@@ -29,7 +71,7 @@ Bovendien hoeft AI zo minder zelf te "bedenken". Dat scheelt hallucinaties en
 het verbrandt geen onnodige tokens. Het model doet waar het goed in is, namelijk
 taal en intentie interpreteren, en de tools doen waar zij goed in zijn.
 
-## Command line als natuurlijke interface voor AI-agents
+## CLI als natuurlijke interface voor AI-agents
 
 Agents leven op de command line. Ze roepen tools aan, lezen de output, en
 bepalen op basis daarvan hun volgende stap. Dat maakt een CLI de meest
@@ -45,35 +87,37 @@ er een mens tussen hoeft te zitten.
 
 ## Hoe alles samenwerkt
 
-Vanuit developer.overheid.nl bieden we de volgende features (binnenkort) aan. De
-rolverdeling:
+Vanuit developer.overheid.nl bieden we de volgende features (deels al, deels
+binnenkort) aan. De rolverdeling:
 
 - **Schema Register.** Een register van herbruikbare JSON schema's waar straks
   niet alleen mensen, maar ook agents uit kunnen putten. In plaats van schema's
   te verzinnen, verwijst de agent naar wat er al is. Met de komende upgrade naar
-  OpenAPI 3.1 zijn deze schema's direct te gebruiken in OAS-documenten. Dit
-  register is momenteel volop in ontwikkeling en verwachten we snel te kunnen
-  lanceren.
+  [OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht) zijn deze schema's direct
+  te gebruiken in OAS-documenten. Dit register is momenteel in ontwikkeling; we
+  verwachten dit snel te kunnen lanceren.
 - **[Agent Skills](https://github.com/developer-overheid-nl/skills-marketplace).**
   Hiermee geven we agents instructies mee: welke tool, op welk moment, in welke
   volgorde. De skill is wat de agent dwingt om onze tooling te gebruiken in
-  plaats van zelf te improviseren. Deze zijn in beta en nog volop in
-  ontwikkeling en onderzoek, dus gebruiken op eigen risico!
+  plaats van zelf te improviseren. Deze zijn in beta en nog volop in onderzoek,
+  dus gebruiken op eigen risico! Eerder schreven we al over
+  [hoe je standaarden in je AI-assistant laadt](/blog/2026/03/25/skills).
 - **[OAS Generator](https://developer-overheid-nl.github.io/oas-generator).**
   Genereert een boilerplate OpenAPI-document op basis van een `input.json`. Die
   boilerplate is al ADR-conform van opzet, dus de agent begint niet van scratch
   maar met een correct startpunt.
 - **[Checker](https://developer-overheid-nl.github.io/don-checker).** Onze
   linter/validator die een document toetst aan een ruleset, bijvoorbeeld de
-  ADR-ruleset voor een OAS of de publiccode-ruleset voor `publiccode.yml`. Bij
-  `valid` mag de pijplijn door, bij `invalid` moet er opnieuw geïtereerd worden.
-  Dit is de spil waar de hele kwaliteitsborging om draait.
+  ADR-ruleset voor een OAS of de publiccode-ruleset voor
+  [`publiccode.yml`](/kennisbank/open-source/standaarden/standaard-voor-publieke-code).
+  Bij `valid` mag de pijplijn door, bij `invalid` moet er opnieuw geïtereerd
+  worden. Dit is de spil waar de hele kwaliteitsborging om draait.
 - **[Codegen Templates](https://github.com/developer-overheid-nl/codegen-templates).**
   Eigen [OpenAPI Generator](https://openapi-generator.tech/) templates, zodat de
   gegenereerde servercode voor API's aansluit op de API Design Rules en andere
   overheidsstandaarden. Momenteel hebben we een aantal smaken in de aanbieding,
-  waaronder voor Java, Go, NodeJS, Rust en Python.
-- **[Repo Docs Generator](https://developer-overheid-nl.github.io/repo-docs-generator).**
+  waaronder voor Java, Go, Node.js, Rust en Python.
+- **[Repo Docs Generator](/kennisbank/open-source/tutorials/tutorial-repo-docs-generator).**
   Genereert de standaard repo-documentatie: een `README.md`, `CONTRIBUTING.md`,
   `CODE_OF_CONDUCT.md`, `LICENSE`, `SECURITY.md`, `CHANGELOG.md` en een
   `publiccode.yml`. In één keer nette, consistente templates in plaats van
@@ -85,7 +129,8 @@ maken. Pas als de input volledig is, wordt er daadwerkelijk gegenereerd.
 
 ## Generator en checker zijn complementair
 
-Een terechte vraag is: als de generator al een ADR-conforme boilerplate maakt,
+Een terechte vraag is: als de generator al een boilerplate maakt conform de
+[API Design Rules (ADR)](/kennisbank/api-ontwikkeling/standaarden/api-design-rules),
 en de agent borduurt voort op wat er al staat, heb je die checker dan überhaupt
 nog nodig?
 
@@ -111,6 +156,10 @@ endpoints, filters, etc. De checker handhaaft de harde grens die een taalmodel
 statistisch nooit kan garanderen.
 
 ## Een overheids-API bouwen
+
+Tijd om te laten zien hoe die loop er in de praktijk uitziet. De onderstaande
+flowchart toont het hele proces in één oogopslag; daaronder lopen we de stappen
+langs.
 
 ```mermaid
 graph TD
@@ -143,29 +192,31 @@ het model, maar in de checker.
 
 ## De code open source maken
 
+Precies hetzelfde patroon keert terug voor een ander prompt. De flowchart
+hieronder laat zien hoe:
+
 ```mermaid
 graph TD
     H([''Maak dit open source''])-->AS[/Agent Skill/]-->I[Agent verzamelt input]
     U[/User input/]<-->|Feedback|I
     I-->T[[Repo Docs Generator]]
-    T-->R[/README.md/]---C[/CONTRIBUTING.md/]---COC[/CODE_OF_CONDUCT.md/]---LIC[/LICENSE/]---SEC[/SECURITY.md/]---CL[/CHANGELOG.md/]
+    T-->R[/README.md/]---C[/CONTRIBUTING.md, etc./]
     T-->P[/publiccode.yml/]-->L[[Checker]]
     PR[/Publiccode Ruleset/]-->L
     L--Invalid?-->M[Agent fixt publiccode.yml]-->L
 ```
 
-Hetzelfde patroon werkt voor de volgende stap. "Maak dit open source" trapt een
-vergelijkbaar proces af: de juiste skill wordt getriggerd, de agent verzamelt
-input en laat dat door de Repo Docs Generator lopen. Die genereert in één keer
-de complete set repo-documentatie, van `README.md` en `CONTRIBUTING.md` tot
-`CODE_OF_CONDUCT.md`, `LICENSE`, `SECURITY.md`, `CHANGELOG.md` en een
-`publiccode.yml`. Vervolgens komt dezelfde checker terug, nu met de
-publiccode-ruleset, die de `publiccode.yml` toetst. Is het `invalid`, dan fixt
-de agent het bestand en draait de checker opnieuw, exact dezelfde lus als bij
-het bouwen van de API. Saillant detail: als er reeds een `README.md` is, zoals
-het geval is nadat je de OpenAPI-generator hebt gebruikt, zal de agent deze
-aanpassen conform de template van de generator, welke de best practices voor een
-`README.md` bevat.
+"Maak dit open source" trapt een vergelijkbaar proces af: de juiste skill wordt
+getriggerd, de agent verzamelt input en laat dat door de Repo Docs Generator
+lopen. Die genereert in één keer de complete set repo-documentatie, van
+`README.md` en `CONTRIBUTING.md` tot `CODE_OF_CONDUCT.md`, `LICENSE.md`,
+`SECURITY.md`, `CHANGELOG.md` en een `publiccode.yml`. Vervolgens komt dezelfde
+checker terug, nu met de publiccode-ruleset, die de `publiccode.yml` toetst. Is
+het `invalid`, dan fixt de agent het bestand en draait de checker opnieuw, exact
+dezelfde lus als bij het bouwen van de API. Saillant detail: als er reeds een
+`README.md` is, zoals het geval is nadat je de OpenAPI-generator hebt gebruikt,
+zal de agent deze aanpassen conform de template van de generator, welke de best
+practices voor een `README.md` bevat.
 
 In het geval van een bestaande codebase, instrueert de skill de agent om te
 kijken naar de git remote, bestanden als `openapi.json` en het projectmanifest
