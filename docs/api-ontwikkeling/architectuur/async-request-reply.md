@@ -181,16 +181,13 @@ components:
   niet te wachten op voltooiing.
 - **Betrouwbaarheid**: Timeouts aan de consumerkant worden voorkomen; de status
   is altijd opvraagbaar.
-- **Minder domeinkennis bij de consumer**: Vervolgstappen komen vanuit de
-  provider; de consumer hoeft de volgorde van stappen niet vooraf te kennen.
-  Denk aan domein-specifieke afhankelijkheden waarbij de ene resource eerst
-  aangemaakt moet zijn vóórdat een andere aangemaakt kan worden — en waarbij die
-  volgorde per type object kan verschillen. Zonder dit patroon moet de consumer
-  die volgorde per situatie kennen en zelf de juiste resources en acties in de
-  juiste volgorde aanroepen. Met dit patroon geeft de provider na acceptatie de
-  benodigde vervolgacties terug — bijvoorbeeld als links in de status response
-  body — zodat de consumer het proces stap voor stap kan doorlopen zonder die
-  domeinkennis zelf te bevatten.
+- **Minder domeinkennis bij de consumer in meerstapsprocessen**: De provider kan
+  bij acceptatie of via het statusendpoint expliciet de mogelijke vervolgstappen
+  teruggeven. Denk aan domeinspecifieke afhankelijkheden waarbij eerst de ene
+  resource aangemaakt moet zijn voordat een andere actie mogelijk is. De
+  consumer hoeft die procesvolgorde dan minder hard te coderen, maar kan het
+  proces stap voor stap volgen op basis van de acties of links die de provider
+  teruggeeft.
 
 ## Nadelen
 
