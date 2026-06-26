@@ -160,15 +160,15 @@ collectie:
 
 ```text
 /publicaties              → de collectie zelf (ongewijzigd)
-/publicaties/snapshots    → lijst van beschikbare snapshots
-/publicaties/deltas       → lijst of stroom van delta's (polling of SSE);
+/publicaties/_snapshots   → lijst van beschikbare snapshots
+/publicaties/_deltas      → lijst of stroom van delta's (polling of SSE);
                             geen individuele endpoints per delta
 ```
 
 De inhoud van een snapshot is geen vaste extra sub-resource in dit model. De
-snapshotlijst verwijst ernaar via `href`; die kan naar een pad binnen dezelfde
-API wijzen, zoals `/publicaties/snapshots/42`, maar ook naar een externe locatie
-zoals een CDN.
+snapshotlijst verwijst ernaar via `href`; die kan naar een technisch pad binnen
+dezelfde API wijzen, zoals `/publicaties/_snapshots/42`, maar ook naar een
+externe locatie zoals een CDN.
 
 ### Snapshots ophalen
 
@@ -177,18 +177,18 @@ reekspositie (oudste eerst). De consumer kiest het laatste (meest recente) item
 in die lijst als startpunt:
 
 ```http
-GET /publicaties/snapshots
+GET /publicaties/_snapshots
 → 200 OK
   {
     "items": [
       {
         "id": 10,
-        "href": "/publicaties/snapshots/10",
+        "href": "/publicaties/_snapshots/10",
         "total": 800
       },
       {
         "id": 42,
-        "href": "/publicaties/snapshots/42",
+        "href": "/publicaties/_snapshots/42",
         "total": 850
       }
     ]
@@ -213,7 +213,7 @@ beschikbare snapshot.
 ### Delta's ophalen
 
 Individuele delta's worden niet als afzonderlijke REST-resources (zoals
-`GET /publicaties/deltas/57`) aangeboden. Hun waarde zit in de aaneengesloten
+`GET /publicaties/_deltas/57`) aangeboden. Hun waarde zit in de aaneengesloten
 chronologische reeks; een losse delta bevragen dient geen synchronisatiedoel en
 zou leiden tot een overload aan afzonderlijke HTTP-requests (_chatty API_).
 Daarom ontsluit de provider delta's alleen als gecombineerde stroom of batch.
@@ -279,7 +279,7 @@ mogelijk, mits de delta-semantiek behouden blijft: één event dient nog steeds
 De consumer vraagt periodiek nieuwe delta's op via het state-id:
 
 ```http
-GET /publicaties/deltas?after=42&limit=10
+GET /publicaties/_deltas?after=42&limit=10
 → 200 OK
   {
     "items": [
@@ -314,7 +314,7 @@ Als het gevraagde state-id niet meer bekend is bij de provider, antwoordt die
 met `410 Gone`:
 
 ```http
-GET /publicaties/deltas?after=99
+GET /publicaties/_deltas?after=99
 → 410 Gone
 ```
 
@@ -329,7 +329,7 @@ beschikbaar zijn. De consumer stuurt `Last-Event-ID` mee als state-id — zowel
 bij de initiële verbinding als bij herverbinding na een onderbreking:
 
 ```http
-GET /publicaties/deltas
+GET /publicaties/_deltas
 Accept: text/event-stream
 Last-Event-ID: 42
 
