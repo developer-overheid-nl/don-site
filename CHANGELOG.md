@@ -1,5 +1,11 @@
 # @developer-overheid-nl/website
 
+## 1.6.0
+
+### Minor Changes
+
+- 41734f3: Voeg artikel toe over onze tweede meetup
+
 ## 1.5.0
 
 ### Minor Changes
