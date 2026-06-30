@@ -49,10 +49,10 @@ halen en het de community zo makkelijk mogelijk maken om bij te dragen.
 
 ### Tools helpen bij uniformiteit
 
-Door het aanbieden van tooling kunnen we direct uniformiseren en helpen we bij
-het voldoen aan standaarden. Op deze manier helpen we developers enerzijds
-efficiënter te werken en anderzijds voldoen ze direct aan de relevante
-standaarden.
+Door het aanbieden van tooling dragen we direct bij aan uniformisering van
+werkwijzen en helpen we bij het voldoen aan standaarden. Op deze manier helpen
+we developers enerzijds efficiënter te werken en anderzijds voldoen ze direct
+aan de relevante standaarden.
 
 ### API Catalogus
 
