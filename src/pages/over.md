@@ -25,10 +25,8 @@ dienstverlening.
 
 ## Doelen
 
-De doelen die wij als project onderscheiden zijn de volgende:
-
-- Zorgen dat developers gemakkelijker kwaliteit kunnen leveren door het
-  aanbieden van goede documentatie.
+- Zorgen dat developers makkelijker kwaliteit kunnen leveren door het aanbieden
+  van goede documentatie.
 - Verdere adoptie van standaarden.
 - Zorgen voor uniformiteit in de manier van werken van alle developers bij de
   overheid.
@@ -53,13 +51,6 @@ Door het aanbieden van tooling dragen we direct bij aan uniformisering van
 werkwijzen en helpen we bij het voldoen aan standaarden. Op deze manier helpen
 we developers enerzijds efficiënter te werken en anderzijds voldoen ze direct
 aan de relevante standaarden.
-
-### API Catalogus
-
-Onze API-catalogus valideert automatisch alle aanwezige API's op de API Design
-Rules en toont scores. We spelen hiermee in op de behoefte van teams en
-organisaties om goed te willen scoren en stimuleren zo het naleven van de
-standaard.
 
 ## Contact
 
