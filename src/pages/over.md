@@ -7,19 +7,20 @@ description: Over developer.overheid.nl
 
 # Over developer.overheid.nl
 
-Developer.overheid.nl is hét developer portal van de Nederlandse overheid. Het
+Developer.overheid.nl is hét developersportaal van de Nederlandse overheid. Het
 platform is bedoeld voor iedereen die bij of voor de overheid software
-ontwikkelt. Door tools en producten aan te bieden voor developers dragen wij bij
-aan het uniformiseren en standaardiseren van het digitale overheidslandschap.
-Wij geloven dat wij een onmisbare partner zijn als het gaat om het realiseren
-van doelen als:
+ontwikkelt. Door tools en producten aan te bieden dragen wij bij aan het
+uniformiseren en standaardiseren van de digitale overheid.
+
+We zijn een onmisbare partner als het gaat om het realiseren van doelen als:
 
 - Nederlandse Digitaliseringsstrategie (NDS)
 - Data bij de Bron
 - Digitale Soevereiniteit
+- Interoperabiliteit
 
 Door het faciliteren van samenwerking tussen developers, over organisaties heen,
-organiseren we een krachtenbundeling wat uiteindelijk leidt tot betere
+organiseren we een krachtenbundeling die uiteindelijk leidt tot betere
 dienstverlening.
 
 ## Doelen
