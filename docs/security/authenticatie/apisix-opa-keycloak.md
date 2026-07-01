@@ -157,6 +157,22 @@ Voor API-keys haalt OPA met een admin-token de Keycloak-client op die bij de
 sleutel hoort. Bestaat de client, dan wordt de API-key als actief beschouwd en
 krijgt deze alleen de vooraf toegestane API-key scopes.
 
+:::warning[Ontwerpnotitie]
+
+De directe runtime-interactie tussen OPA en Keycloak is vooral een praktische
+implementatiekeuze. Als generiek patroon is dit niet ideaal: de policy service
+wordt zo afhankelijk van de beschikbaarheid, latency en API-details van de
+identity provider.
+
+Een robuuster ontwerp is om OPA zoveel mogelijk te laten beslissen op basis van
+informatie die al in het request of in lokale policy-data beschikbaar is. Denk
+bijvoorbeeld aan JWT-validatie met JWKS en scopes/claims in het token, of aan
+een gateway die tokens valideert en alleen de gevalideerde context aan OPA
+doorgeeft. Voor API-keys ligt een aparte key- of clientregistratie dichter bij
+de gateway vaak meer voor de hand dan een Keycloak admin lookup per request.
+
+:::
+
 ## De volledige OPA-policy
 
 De APISIX-routes verwijzen naar `policy: apisix/authz/result`. Dat betekent:
