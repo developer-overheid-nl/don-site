@@ -15,13 +15,15 @@ description: >
   Op woensdag 24 juni was developer.overheid.nl te gast bij de Rijks CIO dag.
 ---
 
-# Een overkoepelend (nieuw?) thema. De Nederlandse Digitaliseringsstrategie
+# CIO-dag: Samen werken als oplossing voor Digitale Soevereiniteit en AI
 
 Om maar in de zelfde stroming te blijven als de Pitch voor het event zelf: Er
 staat een nieuwe wind in het digitale landschap. Een wind aangewakkerd door
 internationale incidenten, uitspraken, maar toch ook door een kritische blik op
 'hoe zijn we hier gekomen'. Digitale souvereiniteit is de veilige haven waar we
 op koersen, en de vloot is ondertussen onomkeerbaar in beweging gekomen.
+
+<!-- truncate -->
 
 ## Een inmense uitdaging, met een duidelijke eerste stap
 
