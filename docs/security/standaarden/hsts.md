@@ -2,7 +2,6 @@
 content_type: standaard
 tags:
   - "informatiebeveiliging"
-  - "websecurity"
 title: "HTTP Strict Transport Security (HSTS)"
 ---
 
