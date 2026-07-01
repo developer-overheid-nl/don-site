@@ -18,7 +18,7 @@ description: |
 # Van OpenAPI-specificatie naar startbare API-app
 
 Een goede API begint niet bij de controller, maar bij het contract. In de
-[Bouw een API-tutorial](/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/genereer-api-code)
+[Bouw een API-tutorial](/kennisbank/api-ontwikkeling/tutorials/bouw-een-api)
 laten we zien hoe je vanuit een gevalideerde OpenAPI Specification servercode
 genereert. Tot nu toe lag de nadruk daar vooral op een Express-template als
 demonstratie. Inmiddels hebben we de template-repository uitgebreid met meer
