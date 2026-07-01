@@ -38,7 +38,7 @@ eerste keer kan dit even duren, daarna worden ze gecached.
 
 :::
 
-## Dereferencen
+## Bundlen
 
 Onze OAS bevat `$ref` verwijzingen naar externe URL's, zoals
 `https://static.developer.overheid.nl/adr/components.yaml` voor standaard
@@ -46,9 +46,10 @@ headers en error responses. Dit is handig omdat we zo herbruikbare
 ADR-componenten kunnen gebruiken, maar de OpenAPI Generator kan niet overweg met
 externe referenties.
 
-We moeten de OAS daarom eerst "dereferencen" (ook wel "bundlen" genoemd). Dit
-betekent dat alle externe verwijzingen worden opgehaald en inline in het
-document worden geplaatst. Het resultaat is een volledig zelfstandige OAS.
+We moeten de OAS daarom eerst bundlen. Dit betekent dat externe verwijzingen
+worden opgehaald en als interne `$ref` verwijzingen in het document worden
+opgenomen. Het resultaat is een zelfstandig bestand zonder externe
+afhankelijkheden.
 
 Dit doen we met [Redocly CLI](https://redocly.com/docs/cli/):
 

@@ -107,8 +107,8 @@ Denk aan:
 - controllers, services, delegates, traits of base classes waar je eigen code
   aan koppelt;
 - standaardresponses voor ontbrekende implementaties;
-- publicatie van het broncontract via bijvoorbeeld `/openapi.yaml`;
-- in meerdere templates ook een runtime OpenAPI-document via `/openapi.json`.
+- publicatie van het broncontract of runtime OpenAPI-document, bijvoorbeeld via
+  `/openapi.yaml` of `/openapi.json`.
 
 De belangrijkste winst zit in de scheiding tussen contract en implementatie. De
 OAS bepaalt welke operatie bestaat, welke parameters geldig zijn en welke
