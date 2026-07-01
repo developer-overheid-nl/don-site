@@ -39,8 +39,12 @@ of mail naar [v.vanderheijden@geonovum.nl](mailto:v.vanderheijden@geonovum.nl).
   binnen je ontwikkelproces.
 
 - **DON-checker** — Dimitri van Hees  
-  Live demo van de vernieuwde DON-checker voor het toetsen op standaarden en
-  kwaliteit.
+   Live demo van de vernieuwde DON-checker voor het toetsen op standaarden en kwaliteit.
+
+- **Code.overheid.nl** — Johan Groenen  
+   Over code.overheid.nl; een nieuwe gedeelde gitomgeving voor de overheid, gebouwd
+  op Forgejo, opgezet door OSPO BZK als antwoord op de groeiende vraag naar digitale
+  soevereiniteit en een alternatief voor GitHub.
 
 - **OpenKAT** — Jan Klopper  
   Een open source securitytool met een actieve community en slimme plugins

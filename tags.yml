@@ -47,6 +47,9 @@ changelog:
 ci/cd:
   description: Continuous Integration / Continuous Deployment
   label: CI/CD
+cio:
+  description: Chief information officer
+  label: Cio
 ciso:
   description: Chief information security officer
   label: Ciso
@@ -375,6 +378,11 @@ seo:
   description: Search Engine Optimalization is het doen van aanpassingen die er
     voor zorgen dat jouw content (on)vindbaar is in zoekmachines op het internet
   label: Search Engine Optimalization
+semver:
+  description: Semantic Versioning (SemVer) is een versienummeringsstandaard waarbij
+    een versienummer bestaat uit drie delen (MAJOR.MINOR.PATCH) met vaste regels
+    voor wanneer elk deel wordt verhoogd.
+  label: Semantic Versioning
 shacl:
   description: Shapes Constraint Language
   label: SHACL

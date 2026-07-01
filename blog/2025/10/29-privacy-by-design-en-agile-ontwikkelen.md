@@ -69,8 +69,8 @@ privacy-inspanning mee met de software en het proces dat ermee wordt
 ondersteund. Als extraatje hebben we op de achterkant de beslisboom van het
 _Privacy by Design framework_ overgenomen (met bronvermelding, uiteraard).
 
-!["Story Card Privacy - voorkant"](./img/ictu-2025-storycard-privacy-front.jpg)
-!["Story Card Privacy - achterkant"](./img/ictu-2025-storycard-privacy-back.jpg)
+!["Story Card Privacy - voorkant"](./img/ictu-2026-storycard-privacy-front.jpg)
+!["Story Card Privacy - achterkant"](./img/ictu-2026-storycard-privacy-back.jpg)
 
 Voor _Security by Design_ hebben we net zoiets, met op de achterkant
 verwijzingen naar de [OWASP Top 10] en de [SANS 25]. Dit zijn lijsten van veel
@@ -78,11 +78,13 @@ voorkomende beveiligingsgebreken in software. Door die lijsten te koppelen aan
 de verandering die de story brengt, worden ontwikkelaars geholpen niet in
 bekende valkuilen te stappen.
 
-!["Story Card Security - voorkant"](./img/ictu-2025-storycard-security-front.jpg)
-!["Story Card Security - achterkant"](./img/ictu-2025-storycard-security-back.jpg)
+!["Story Card Security - voorkant"](./img/ictu-2026-storycard-security-front.jpg)
+!["Story Card Security - achterkant"](./img/ictu-2026-storycard-security-back.jpg)
 
 (Een printbare versie van deze 'Story Cards' is
-[hier](./img/ictu-2025-storycards.pdf) te downloaden)
+[hier](./img/ictu-2026-storycards.pdf) te downloaden)
+
+[UPDATE] Spiekbriefjes geactualiseerd met informatie van begin 2026. 
 
 ## Hoe doe jij dat?
 

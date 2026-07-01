@@ -1,6 +1,9 @@
-name: Check external links
+name: Check links
 
 on:
+  pull_request:
+  push:
+  workflow_dispatch:
   schedule:
     - cron: "0 5 * * *"
 
@@ -19,13 +22,15 @@ jobs:
       - name: Build Docusaurus site
         run: pnpm run build
 
-      - name: Run Linkinator to check external links
+      - name: Run Linkinator to check links
         uses: JustinBeckwith/linkinator-action@f62ba0c110a76effb2ee6022cc6ce4ab161085e3
-        continue-on-error: true
         with:
-          paths: "build"
+          paths: "build/index.html"
           recurse: true
+          cleanUrls: true
           config: "./linkinator.config.json"
           verbosity: "ERROR"
           timeout: 5000
-          retry: 3
+          retry: true
+          retryErrors: true
+          retryErrorsCount: 3
