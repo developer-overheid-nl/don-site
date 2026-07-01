@@ -55,28 +55,28 @@ wordt bevraagd voor tokens, clients en scopes.
 
 ```mermaid
 flowchart LR
-    client["API client<br/>Bearer token of x-api-key"]
+    client["API client met bearer token of API-key"]
 
     subgraph apiNs["API namespace"]
-        apisix["APISIX<br/>publieke API-gateway"]
-        opa["OPA<br/>policy decision service"]
+        apisix["APISIX publieke API-gateway"]
+        opa["OPA policy decision service"]
         apiRegister["API Register API"]
         toolsApi["Tools API"]
     end
 
     subgraph authNs["Auth namespace"]
-        keycloak["Keycloak<br/>clients, tokens, scopes"]
+        keycloak["Keycloak clients tokens scopes"]
     end
 
     subgraph gitops["Configuratie uit Git"]
-        apisixRoutes["ApisixRoute<br/>routes + plugins + backends"]
-        opaRouteAuthz["opa-route-authz<br/>scopes per route"]
-        opaPolicy["opa-policy<br/>autorisatieregels"]
+        apisixRoutes["ApisixRoute routes plugins backends"]
+        opaRouteAuthz["OPA route authz scopes per route"]
+        opaPolicy["OPA policy autorisatieregels"]
     end
 
     client -->|"1. API request"| apisix
     apisix -->|"2. vraag allow/deny"| opa
-    opa -->|"3. token introspection<br/>of client lookup"| keycloak
+    opa -->|"3. token introspection of client lookup"| keycloak
     opa -->|"4. allow/deny"| apisix
     apisix -->|"5a. allowed request"| apiRegister
     apisix -->|"5b. allowed request"| toolsApi
