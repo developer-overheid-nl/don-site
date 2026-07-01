@@ -1,5 +1,5 @@
 ---
-content_type: standaard
+content_type: tutorial
 tags:
   - "informatiebeveiliging"
 title: "Stappenplan voor het veilig in gebruik nemen van HSTS"
