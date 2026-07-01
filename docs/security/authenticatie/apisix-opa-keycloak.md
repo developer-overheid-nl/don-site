@@ -55,7 +55,7 @@ wordt bevraagd voor tokens, clients en scopes.
 
 ```mermaid
 flowchart LR
-    client["API client met bearer token of API-key"]
+    client["API client met bearer token of API key"]
 
     subgraph apiNs["API namespace"]
         apisix["APISIX publieke API-gateway"]
@@ -74,16 +74,16 @@ flowchart LR
         opaPolicy["OPA policy autorisatieregels"]
     end
 
-    client -->|"1. API request"| apisix
-    apisix -->|"2. vraag allow/deny"| opa
-    opa -->|"3. token introspection of client lookup"| keycloak
-    opa -->|"4. allow/deny"| apisix
-    apisix -->|"5a. allowed request"| apiRegister
-    apisix -->|"5b. allowed request"| toolsApi
+    client -->|"Stap 1 API request"| apisix
+    apisix -->|"Stap 2 vraag allow of deny"| opa
+    opa -->|"Stap 3 token introspection of client lookup"| keycloak
+    opa -->|"Stap 4 allow of deny"| apisix
+    apisix -->|"Stap 5a allowed request"| apiRegister
+    apisix -->|"Stap 5b allowed request"| toolsApi
 
     apisixRoutes -. configureert .-> apisix
-    opaRouteAuthz -. levert route-scopes .-> opa
-    opaPolicy -. levert policy-logica .-> opa
+    opaRouteAuthz -. levert route scopes .-> opa
+    opaPolicy -. levert policy logica .-> opa
 ```
 
 De stippellijnen zijn configuratie uit Git. De doorgetrokken lijnen zijn runtime
