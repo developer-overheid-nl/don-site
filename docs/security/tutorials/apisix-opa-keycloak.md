@@ -1,5 +1,5 @@
 ---
-content_type: architectuur
+content_type: tutorial
 tags:
   - "informatiebeveiliging"
   - "api"
@@ -934,6 +934,6 @@ wel aanvullende domeinautorisatie uitvoeren als de operatie dat vereist.
 
 ## Zie ook
 
-- [OAuth 2.0](./oauth.md)
-- [OpenID Connect (OIDC)](./oidc.md)
+- [OAuth 2.0](../authenticatie/oauth.md)
+- [OpenID Connect (OIDC)](../authenticatie/oidc.md)
 - [API Design Rules](../../api-ontwikkeling/standaarden/api-design-rules/)
