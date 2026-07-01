@@ -1,5 +1,17 @@
 # @developer-overheid-nl/website
 
+## 1.7.0
+
+### Minor Changes
+
+- 3debea8: Voeg artikel toe over CIO-Dag 2026 van Jan Klopper
+- 0113c1c: Update 18-asyncapi-3-implementatie-met-cloudevents.md 3de blogpost
+  AsyncAPI
+
+### Patch Changes
+
+- 3581f0c: Fix typos and content on about page
+
 ## 1.6.0
 
 ### Minor Changes
