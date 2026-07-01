@@ -47,6 +47,9 @@ changelog:
 ci/cd:
   description: Continuous Integration / Continuous Deployment
   label: CI/CD
+cio:
+  description: Chief information officer
+  label: Cio
 ciso:
   description: Chief information security officer
   label: Ciso
