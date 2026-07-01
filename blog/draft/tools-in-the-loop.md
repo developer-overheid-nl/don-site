@@ -25,11 +25,11 @@ image: ./img/tools-in-the-loop.png
 
 "Human in the loop" is inmiddels het standaardantwoord op bijna elke zorg rond
 AI. Maar voor wie AI inzet om overheidssoftware te bouwen, is het verstandig om
-naast de mens ook _tools_ in de te loop houden: generators die het zware werk
-doen en validators die de regels bewaken. Zo verschuift het naleven van
-standaarden van de oplettendheid van een mens en de welwillendheid van AI naar
-tooling die je kunt vertrouwen. Hoe dat samenwerkt, en aan welk arsenaal aan
-skills, generators, validators en andere tools we werken, lees je in deze post.
+naast de mens ook _tools_ in de loop houden: generators die het zware werk doen
+en validators die de regels bewaken. Zo verschuift het naleven van standaarden
+van de oplettendheid van een mens en de welwillendheid van AI naar tooling die
+je kunt vertrouwen. Hoe dat samenwerkt, en aan welk arsenaal aan skills,
+generators, validators en andere tools we werken, lees je in deze post.
 
 <!-- truncate -->
 
@@ -109,9 +109,9 @@ binnenkort) aan. De rolverdeling:
 - **[Checker](https://developer-overheid-nl.github.io/don-checker).** Onze
   linter/validator die een document toetst aan een ruleset, bijvoorbeeld de
   ADR-ruleset voor een OAS of de publiccode-ruleset voor
-  [`publiccode.yml`](/kennisbank/open-source/standaarden/standaard-voor-publieke-code).
-  Bij `valid` mag de pijplijn door, bij `invalid` moet er opnieuw geïtereerd
-  worden. Dit is de spil waar de hele kwaliteitsborging om draait.
+  [`publiccode.yml`](/kennisbank/open-source/standaarden/publiccode-yml). Bij
+  `valid` mag de pijplijn door, bij `invalid` moet er opnieuw geïtereerd worden.
+  Dit is de spil waar de hele kwaliteitsborging om draait.
 - **[Codegen Templates](https://github.com/developer-overheid-nl/codegen-templates).**
   Eigen [OpenAPI Generator](https://openapi-generator.tech/) templates, zodat de
   gegenereerde servercode voor API's aansluit op de API Design Rules en andere
@@ -173,7 +173,7 @@ graph TD
     CG[/Codegen Template/]-->F
 ```
 
-De gebruiker geeft het prompt "bouw een overheids-API". De juiste skill wordt
+De gebruiker geeft de prompt "bouw een overheids-API". De juiste skill wordt
 getriggerd en stuurt de agent door een vast proces. Eerst verzamelt de agent
 input: deels door vragen te stellen aan de gebruiker, deels door het
 schema-register te doorzoeken naar bruikbare, herbruikbare schema's. Het
