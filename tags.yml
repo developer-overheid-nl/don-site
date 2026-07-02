@@ -254,6 +254,9 @@ llm:
 logging:
   description: Logging
   label: Logging
+manon:
+  description: Het (MinVWS) Manon Design system
+  label: Manon
 maps:
   description: Kaarten, cartografie en mapping technologieën
   label: Maps
