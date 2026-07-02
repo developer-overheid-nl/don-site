@@ -36,7 +36,7 @@ OpenKAT raadpleegt externe databases en combineert informatie van al deze
 bronnen tot feiten welke forensische geborgd en onderbouwdt zijn.
 Met deze feiten in de hand, getoetst tegen (eigen) beleid maakt OpenKAT het
 mogelijk grip te krijgen op zaken als Attack Surface, Security posture en de
-daarbij behorende PDCA cycli.
+daarbij behorende PDCA (Plan-Do-Check-Act) cycli.
 Duidelijke rapporten voor verschillende doelgroepen en gebruikers dragen bij om
 zowel op Cert, CISO of op de engineering afdeling inzicht te krijgen en houden
 over problemen, en de daarbij behorende oplossingsrichtingen.
@@ -45,9 +45,9 @@ Enkele features op een rij:
 
 * Multi-tennant, volledige gescheiden organisaties.
 * Schaalbaar (honderd organisaties, ieder met 20k of meer assets)
-* Verschillende scan-levels, van alleen OSint tot directe aanvallen.
-* 50+ hoge kwaliteit scan tools.
-* Bi-temporal opslag. (Hoe zag mijn netwerk er toen uit?)
+* Verschillende scan-levels, van alleen OSINT (Open Source Intelligence) tot directe aanvallen.
+* 50+ hoge kwaliteit scan tools
+* Bi-temporal opslag (hoe zag mijn netwerk er toen uit?)
 * Forensische borging, timestamping van handelingen en uitkomsten
 * Losse verwerking van reeds opgeslagen bewijs
 * Eigen business rules op basis van eigen beleid
@@ -57,7 +57,7 @@ OpenKAT is gratis, Open Source en self-hosted beschikbaar. Daarnaast zijn er
 verschillende organisaties die OpenKAT inzetten voor de eigen `achterban` of
 vanuit commercieel perspectief een totaalpakket aanbieden.
 
-De governance van het doorontwikkelen is door de community belegd wij Sitchting
+De governance van het doorontwikkelen is door de community belegd wij Stichting
 LibreKAT waarlangs gebruikers, bijdragers en uitbaters met elkaar de toekomstige
 ontwikkelingen van de tool en aanverwanten digitale beveiligingsoplossingen
 plannen en op zich nemen.
