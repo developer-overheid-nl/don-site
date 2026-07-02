@@ -43,9 +43,9 @@ over problemen, en de daarbij behorende oplossingsrichtingen.
 
 Enkele features op een rij:
 
-* Multi-tennant, volledige gescheiden organisaties.
+* Multi-tennant, volledige gescheiden organisaties
 * Schaalbaar (honderd organisaties, ieder met 20k of meer assets)
-* Verschillende scan-levels, van alleen OSINT (Open Source Intelligence) tot directe aanvallen.
+* Verschillende scan-levels, van alleen OSINT (Open Source Intelligence) tot directe aanvallen
 * 50+ hoge kwaliteit scan tools
 * Bi-temporal opslag (hoe zag mijn netwerk er toen uit?)
 * Forensische borging, timestamping van handelingen en uitkomsten
