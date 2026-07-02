@@ -49,7 +49,7 @@
   "devDependencies": {
     "@changesets/cli": "2.30.0",
     "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/tsconfig": "3.10.1",
     "@docusaurus/types": "3.9.2",
     "@rijkshuisstijl-community/design-tokens": "1.2.0",
     "browser-driver-manager": "2.0.1",
