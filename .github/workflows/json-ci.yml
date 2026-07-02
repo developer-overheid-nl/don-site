@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run Super-Linter
-        uses: super-linter/super-linter@61abc07d755095a68f4987d1c2c3d1d64408f1f9
+        uses: super-linter/super-linter@4ce20838b8ab83717e78138c5b3a1407148e0918
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FILTER_REGEX_EXCLUDE: "(^|.*/)\\.vscode/|(^|.*/)tsconfig(\\..+)?\\.json$"
@@ -24,3 +24,4 @@ jobs:
           VALIDATE_JSON: true
           VALIDATE_OPENAPI: true
           ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: true
+          UPDATE_EXISTING_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: true
