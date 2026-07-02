@@ -30,6 +30,11 @@ applicatie die dezelfde afspraken ook echt afdwingt?
 
 <!-- truncate -->
 
+Dit artikel zoomt bewust in op één concrete stap: codegeneratie na het
+ontwerpen en valideren van je API-contract. Niet de hele toolingketen, maar de
+vraag wat er gebeurt zodra je OAS klaar is en je team met implementeren wil
+beginnen.
+
 ## Waarom templates?
 
 OpenAPI Generator kan code genereren voor tientallen talen en frameworks. Dat is
@@ -127,7 +132,8 @@ npx @openapitools/openapi-generator-cli generate \
   -o ./generated-api-nestjs \
   -t ./codegen-templates/nestjs-fastify \
   -c ./codegen-templates/nestjs-fastify/generator-config.yaml \
-  --skip-validate-spec
+  --skip-validate-spec \
+  --additional-properties=npmName=generated-api-nestjs,npmVersion=1.0.0,nestVersion=11.0.0,rxjsVersion=7.8.2,tsVersion=5.9.3,nodeVersion=22.0.0
 ```
 
 De template maakt abstracte API classes en controllers. Je koppelt je eigen
@@ -144,7 +150,7 @@ npx @openapitools/openapi-generator-cli generate \
   -o ./generated-api-python \
   -t ./codegen-templates/python-fastapi-template \
   -c ./codegen-templates/python-fastapi-template/generator-config.yaml \
-  --additional-properties=packageName=generated_api_python
+  --additional-properties=packageName=generated_api_python,packageVersion=1.0.0,serverPort=1337
 ```
 
 FastAPI en Pydantic verzorgen de request-validatie. De template zet
