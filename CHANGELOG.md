@@ -1,5 +1,12 @@
 # @developer-overheid-nl/website
 
+## 1.8.1
+
+### Patch Changes
+
+- f87e8ff: Voeg een kennisbankartikel toe over API-authenticatie met APISIX, OPA
+  en Keycloak.
+
 ## 1.8.0
 
 ### Minor Changes
