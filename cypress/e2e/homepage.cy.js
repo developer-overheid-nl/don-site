@@ -41,12 +41,23 @@ const events = [
 
 describe('The Home Page', () => {
   beforeEach(() => {
-    cy.intercept('/agenda/events.json', events).as('getEvents');
+    cy.intercept('GET', '/agenda/events.json', events).as('getEvents');
+    cy.intercept('GET', '/blog/feed.json', { fixture: 'feed.json' }).as('getBlogFeed');
   });
 
   it('successfully loads', () => {
-    cy.visit('/')
+    cy.visit('/');
   })
+
+  it('has content', () => {
+    cy.visit('/');
+
+    cy.get('[data-testid="hero-text"]')
+      .should('have.text', "Eén plek met informatie, bronnen, tools en codevoorbeelden van de overheid voor developers over privacy, security, toegankelijkheid, DevOps, infra, data, AI, standaarden, API\'s, Open Source en meer.")
+    
+    cy.get('nav[aria-label="Main"] [aria-label="Onze GitHub repositories"]').should('exist');
+    cy.get('nav[aria-label="Main"] [aria-label="Zoek op deze pagina"]').should('exist');
+  });
 
   it('shows tomorrow and today`s events', () => {
     cy.visit('/');
@@ -58,6 +69,20 @@ describe('The Home Page', () => {
       expect(items[0]).to.contain.text('Event Today');
       expect(items[1]).to.contain.text('Event Tomorrow');
       expect(items).not.to.contain.text('Event Yesterday');
+    });
+  });
+
+  it('shows latest blogposts', () => {
+    cy.visit('/');
+    cy.wait(['@getBlogFeed']);
+
+    let blogpostList = cy.contains('h2', 'Laatste blogposts').next('ul').children('li');
+
+    blogpostList.should('have.length', 4).then( items => {
+      expect(items[0]).to.contain.text('overheidssoftware');
+      expect(items[1]).to.contain.text('1 juli 2026');
+      expect(items[3]).to.contain.text('Volle zaal');
+      expect(items).not.to.contain.text('Wij waren op FOST');
     });
   });
 });
