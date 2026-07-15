@@ -90,7 +90,7 @@ function HomepageHeader(): React.JSX.Element {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <p className={styles.intro}>
+        <p className={styles.intro} data-testid="hero-text">
           Eén plek met informatie, bronnen, tools en codevoorbeelden van
           de&nbsp;
           <strong className={styles.intro__highlight}>
