@@ -536,8 +536,8 @@ erachter. De waarde van de server `url` wordt dus:
 :::tip Lokale validatie
 
 Voor grotere projecten is het handig om de validatie te integreren in de
-development workflow. De ADR Checker kan ook via CLI, in de IDE, of in CI/CD
-pipelines draaien. Zie de
+development workflow. De ADR Checker kan ook via CLI of in CI/CD pipelines
+draaien. Zie de
 [ADR Checker documentatie](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter)
 voor meer informatie.
 
