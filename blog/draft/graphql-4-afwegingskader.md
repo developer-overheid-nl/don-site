@@ -269,11 +269,16 @@ maakt, kan op deze signalen letten:
 Naarmate deze punten worden afgevinkt, verschuift de balans: een deel van
 wat je nu zelf moet ontwerpen en bewaken, wordt dan door standaarden en
 tooling gedragen. Het is dezelfde ontwikkeling die REST in de afgelopen
-tien jaar heeft doorgemaakt, met de ADR als resultaat. Binnen de overheid
-is zo'n verkenningsproces overigens niet nieuw: voor asynchrone API's
-doorloopt de
+tien jaar heeft doorgemaakt, met de ADR als resultaat.
+
+Daar hoeft de overheid overigens niet passief op te wachten. Voor
+asynchrone API's doorloopt de
 [werkgroep AsyncAPI](/blog/2026/05/28/asyncapi-1-tot-nu-toe) op dit moment
-een vergelijkbaar traject.
+een verkenningstraject; een vergelijkbare werkgroep "GraphQL design rules"
+zou nu al kunnen uitwerken wat een NLGov-profiel voor GraphQL minimaal moet
+vastleggen. De inhoudsopgave daarvoor ligt in deze serie al klaar: de
+uitdagingen uit deel 2 en 3 zijn precies de onderdelen waar de ADR dit voor
+REST-API's al regelen.
 
 ## Slotadvies
 
