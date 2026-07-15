@@ -181,6 +181,9 @@ github:
 gitlab:
   description: Een Git-forge
   label: GitLab
+graphql:
+  description: Querytaal en runtime voor API's
+  label: GraphQL
 golang:
   label: Golang
 gouden-api:
