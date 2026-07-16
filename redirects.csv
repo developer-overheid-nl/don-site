@@ -53,4 +53,6 @@ from,to
 /kennisbank/security/standaarden/nis1,/kennisbank/security/wetgeving-en-beleid/nis1
 /kennisbank/security/standaarden/nis2,/kennisbank/security/wetgeving-en-beleid/nis2
 /kennisbank/front-end/standaarden/digitoegankelijk/run-axe,/kennisbank/front-end/tools/run-axe
+/kennisbank/front-end/nl-design-system/,/kennisbank/front-end/design-systems/nl-design-system/
+/kennisbank/front-end/nl-design-system/aan-de-slag-met-nl-design-system,/kennisbank/front-end/design-systems/nl-design-system/aan-de-slag-met-nl-design-system
 /kennisplatform-apis,/communities/kennisplatform-apis
