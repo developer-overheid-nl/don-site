@@ -460,5 +460,5 @@ overheidsstandaarden en om die specificatie om te zetten naar werkende code.
   beschikbare generators
 - [Codegen templates](https://github.com/developer-overheid-nl/codegen-templates) -
   DON-templates voor OpenAPI Generator
-- [ADR Linter](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter) -
-  Valideer de OAS via CLI, IDE of CI/CD
+- [ADR Checker](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter) -
+  Valideer de OAS via CLI of CI/CD
