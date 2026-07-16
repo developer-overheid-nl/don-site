@@ -13,10 +13,12 @@ description: |
   gevalideerde OpenAPI-specificatie een startbare API-applicatie genereren in
   meerdere programmeertalen. Dat maakt design-first werken concreter: eerst het
   contract goed krijgen, daarna sneller naar werkende code.
-draft: true
+image: ./img/codegen.png
 ---
 
 # Van OpenAPI-specificatie naar startbare API-app
+
+![Abstracte weergave van het proces](./img/codegen.png)
 
 Een goede API begint niet bij de controller, maar bij het contract. In de
 [Bouw een API-tutorial](/kennisbank/api-ontwikkeling/tutorials/bouw-een-api)
@@ -33,9 +35,9 @@ applicatie die dezelfde afspraken ook echt afdwingt?
 
 Dit artikel zoomt bewust in op één concrete stap: codegeneratie na het ontwerpen
 en valideren van je API-contract. Niet de hele toolingketen, maar de vraag wat
-er gebeurt zodra je OAS klaar is en je team met implementeren wil beginnen.
-Voor de bredere gedachte achter generators, validators en agents verwijzen we
-naar [Tools in the loop](/blog/2026/07/2/tools-in-the-loop).
+er gebeurt zodra je OAS klaar is en je team met implementeren wil beginnen. Voor
+de bredere gedachte achter generators, validators en agents verwijzen we naar
+[Tools in the loop](/blog/2026/07/2/tools-in-the-loop).
 
 ## Waarom templates?
 
