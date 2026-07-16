@@ -4,3 +4,13 @@ updates:
     directory: /
     schedule:
       interval: daily
+    groups:
+      docusaurus:
+        applies-to: version-updates
+        patterns:
+          - "@docusaurus/*"
+          - "docusaurus-*"
+      rijkshuisstijl:
+        applies-to: version-updates
+        patterns:
+          - "@rijkshuisstijl-community/*"
