@@ -11,8 +11,6 @@ title: "NL Design System"
 > overheidsorganisaties laat samenwerken aan concrete oplossingen voor websites
 > en applicaties. Denk bijvoorbeeld aan code, ontwerp en richtlijnen.**
 
-**[Direct naar NL Design System](https://nldesignsystem.nl/)**
-
 Binnen de overheid is digitale dienstverlening de standaard geworden. Dit
 betekent dat veel organisaties zelf een website of webapplicatie moeten bouwen
 om hun diensten aan te bieden. Om dubbel werk te voorkomen is de NL design
@@ -44,7 +42,7 @@ onderdelen:
 Al deze onderdelen hebben dit gedeelde doel: makkelijk consistente,
 toegankelijke en gebruiksvriendelijke websites en applicaties maken.
 
-## NL Design System en het Estafettemodel
+## Het Estafettemodel
 
 Het [NL Design System](https://nldesignsystem.nl/) is een **framework** waarmee
 organisaties hun eigen design system kunnen bouwen. Het belangrijkste voordeel
@@ -61,7 +59,7 @@ heen consistentie en kwaliteit te bereiken en standaarden te creëren.
 Als je zelf een publieke organisatie bent, en je wilt een design systeem
 opzetten is dit waar je wilt beginnen.
 
-## Van lokaal en specifiek naar centrale hoogwaardige componenten
+## Hoogwaardige componenten
 
 Het implementeren van het NL Design System vergt wel enige inspanning van jou en
 je organisatie, maar levert uiteindelijk veel op. De tijd die je als developer
@@ -70,11 +68,27 @@ front-end-oplossingen, kun je nu investeren in het verbeteren van centrale
 componenten. Alle verbeteringen die je aanbrengt, komen ten goede aan de hele
 organisatie, waardoor iedereen profiteert van jouw bijdragen.
 
-### Extra tijd inplannen
+## Extra tijd inplannen
 
 Wat natuurlijk wel vereist is, is dat er binnen jouw project extra tijd wordt
 vrijgemaakt voor de werkzaamheden die komen kijken bij het opzetten van alle
-tooling.
+tooling. Denk hierbij aan het inrichten van een design token pipeline (zoals
+Style Dictionary), het opzetten van Storybook als componenten-catalogus, en het
+configureren van de build- en testomgeving waarmee je thema en componenten
+worden gegenereerd, gevalideerd en gepubliceerd.
+
+Daarnaast vraagt het opzetten van een thema om afstemming binnen je organisatie:
+huisstijlrichtlijnen moeten worden vertaald naar design tokens, er moet gekozen
+worden welke componenten je als eerste overneemt of aanpast, en er moet een
+proces komen voor het beheren en updaten van het thema zodra nieuwe versies van
+onderliggende componenten verschijnen. Dit is werk dat niet naast de reguliere
+projectwerkzaamheden past, dus houd hier vanaf de start rekening mee in de
+planning en capaciteit van je team.
+
+Deze investering betaalt zich uiteindelijkd dubbel en dwars terug: eenmaal
+ingericht, kun je nieuwe componenten met relatief weinig moeite toevoegen en
+profiteer je van verbeteringen die door andere organisaties binnen het
+Estafettemodel worden aangedragen.
 
 ## Aan de slag
 
@@ -93,7 +107,7 @@ repository bevat al direct:
 
 **[Example Repo van NL Design System »](https://github.com/nl-design-system/example)**
 
-## Aan de slag met components zonder theme?
+## Meeliften op een theme?
 
 Als developer vraag je je natuurlijk direct af, kan ik ook gebruik maken van NL
 Design System zonder dat ik een thema hoeft te bouwen voor mijn organisatie? Het
@@ -129,8 +143,8 @@ zijn:
 
 ## Links
 
-- [Introductie NL Design System](https://nldesignsystem.nl/handboek/introductie/)  
-- [Over NL Design System](https://nldesignsystem.nl/project/over-nl-design-system/)  
+- [Introductie NL Design System](https://nldesignsystem.nl/handboek/introductie/)
+- [Over NL Design System](https://nldesignsystem.nl/project/over-nl-design-system/)
 - [Website NL Design System](https://nldesignsystem.nl)
 
 ### Op de hoogte blijven
