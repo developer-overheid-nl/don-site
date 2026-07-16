@@ -1,5 +1,29 @@
 # @developer-overheid-nl/website
 
+## 1.9.0
+
+### Minor Changes
+
+- cf6b6c1: Updated information about the ADR Checker. Fixed syntax highlighting
+  for `bash`.
+- 10dbe2c: Update getting started artikel NL Design System
+- 10dbe2c: - Deelhoofdstuk Design Systems onder Front-end hoofdstuk toegevoegd
+  en NL Design System er naar toe verhuisd
+  - NL Design System ge-update
+  - Getting Started NL Design System ge-update
+- 2359e6c: Enhance OpenKAT documentation with features and details
+
+### Patch Changes
+
+- 5152064: Update pc.yml standaard pagina naar 0.7
+- c6f28ba: Update the API code generation tutorial to use the NestJS Fastify
+  template as the main example.
+- 3cd1456: Groepeer Dependabot-updates voor Docusaurus en Rijkshuisstijl in
+  aparte pull requests.
+- 6ff092d: Publish codegen blogpost
+- 9c33e26: Docusaurus geupgradet naar versie 3.10.1; DocCard opnieuw geswizzeld
+  voor onze custom iconen en downstream fixes toegepast.
+
 ## 1.8.1
 
 ### Patch Changes
