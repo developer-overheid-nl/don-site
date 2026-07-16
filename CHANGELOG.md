@@ -1,5 +1,20 @@
 # @developer-overheid-nl/website
 
+## 1.8.1
+
+### Patch Changes
+
+- f87e8ff: Voeg een kennisbankartikel toe over API-authenticatie met APISIX, OPA
+  en Keycloak.
+
+## 1.8.0
+
+### Minor Changes
+
+- 50d6a1f: Publish blogpost "Tools in de loop"
+- 7aca0d3: Enhance security.txt with contact validation details
+- 6b7eee8: Add HSTS documentation with configuration details
+
 ## 1.7.0
 
 ### Minor Changes

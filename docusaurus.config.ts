@@ -480,7 +480,7 @@ const config: Config & {
     },
     prism: {
       theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
-      additionalLanguages: ["turtle", "java", "go"],
+      additionalLanguages: ["bash", "turtle", "java", "go"],
     },
     colorMode: {
       defaultMode: "light",

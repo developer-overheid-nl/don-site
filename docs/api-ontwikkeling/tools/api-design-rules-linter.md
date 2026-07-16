@@ -3,20 +3,20 @@ content_type: tool
 tags: [adr, api]
 ---
 
-# ADR Linter
+# ADR Checker
 
-De ADR Linter controleert of een OpenAPI Specificatie compliant is met de API
-Design Rules. De linter is gebaseerd op het Open Source project
-[Spectral](https://github.com/stoplightio/spectral).
+De ADR Checker controleert of een OpenAPI Specificatie compliant is met de API
+Design Rules. De checker is gebaseerd op de
+[DON Checker](https://github.com/developer-overheid-nl/don-checker).
 
 ## Browser
 
-Een OpenAPI Specificatie kan online getest worden via onze online OAS Checker:
-[https://developer-overheid-nl.github.io/oas-checker](https://developer-overheid-nl.github.io/oas-checker)
+Een OpenAPI Specificatie kan online getest worden via onze online ADR Checker:
+[https://developer-overheid-nl.github.io/don-checker/#/adr](https://developer-overheid-nl.github.io/don-checker/#/adr)
 
 ### Resultaten interpreteren
 
-De OAS Checker toont drie soorten meldingen:
+De ADR Checker toont drie soorten meldingen:
 
 | Type    | Betekenis                                                                  |
 | ------- | -------------------------------------------------------------------------- |
@@ -26,67 +26,70 @@ De OAS Checker toont drie soorten meldingen:
 
 ## CLI
 
-Nadat je Spectral geïnstalleerd hebt, kun je een OAS via de commandline op de
-volgende manier valideren:
+Je kunt een OAS via de commandline op de volgende manier valideren:
 
-```bash
-$ npm install -g @stoplight/spectral-cli
-$ spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE
-```
+```sh
+# From a local file (ADR, default version)
+npx @developer-overheid-nl/don-checker@latest validate --standard adr --input ./openapi.json
 
-## IDE
+# Pin a specific version
+npx @developer-overheid-nl/don-checker@latest validate --standard adr --version 2.1.0 --input ./openapi.json
 
-Sommige IDEs ondersteunen Spectral via extensies of plugins.
+# From an external file (ADR, default version)
+npx @developer-overheid-nl/don-checker@latest validate --standard adr \
+  --input https://api.developer.overheid.nl/api-register/v1/openapi.json
 
-### Visual Studio Code
-
-Hieronder staat beschreven hoe je de ADR Linter kunt gebruiken met
-[de officiele Spectral extensie voor Visual Studio Code](https://github.com/stoplightio/vscode-spectral):
-
-```bash
-# Install the extension from the vscode marketplace
-$ code --install-extension stoplight.spectral
-
-# Download the ruleset to your project home
-$ curl -L https://static.developer.overheid.nl/adr/ruleset.yaml > .spectral.yml
-
-# Run the IDE
-$ code
-```
-
-### IntelliJ IDEA
-
-Voor IntelliJ-based IDEs (IntelliJ IDEA, WebStorm, etc.) is er de
-[Spectral plugin](https://plugins.jetbrains.com/plugin/18520-spectral). Na
-installatie kun je een `.spectral.yaml` bestand in je project root plaatsen met
-de volgende inhoud:
-
-```yaml
-extends:
-  - https://static.developer.overheid.nl/adr/ruleset.yaml
+# From stdin
+cat openapi.json | npx @developer-overheid-nl/don-checker@latest validate --standard adr
 ```
 
 ## Docker
 
 ```bash
-$ docker run --rm --entrypoint=sh \
-    -v $(pwd)/api:/locale stoplight/spectral \
-    -c "spectral lint -r https://static.developer.overheid.nl/adr/ruleset.yaml $OAS_URL_OR_FILE"
+docker run --rm node:24-alpine \
+  npx @developer-overheid-nl/don-checker@latest validate --standard adr \
+    --input https://api.developer.overheid.nl/api-register/v1/openapi.json
 ```
 
-## GitLab
+## Git workflows
 
-```yaml
-spectral-lint:
-  image: node:20
-  stage: spectral_lint
-  script:
-    - npm install -g @stoplight/spectral-cli
-    - curl -L https://static.developer.overheid.nl/adr/ruleset.yaml >
-      .spectral.yml
-    - spectral lint -r .spectral.yml $OAS_URL_OR_FILE
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-      when: always
-    - when: manual
-```
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
+<Tabs groupId="git-workflow">
+  <TabItem value="gitlab" label="GitLab CI">
+    ```yaml title=".gitlab-ci.yml"
+    adr-check:
+      image: node:24
+      stage: adr_check
+      script:
+        - npx @developer-overheid-nl/don-checker@latest validate --standard adr --input $OAS_URL_OR_FILE
+      rules:
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+          when: always
+        - when: manual
+    ```
+  </TabItem>
+  <TabItem value="github" label="GitHub Actions" default>
+  ```yaml title=".github/workflows/adr-check.yml"
+  name: ADR check
+  on:
+    pull_request:
+    workflow_dispatch:
+  jobs:
+    adr-check:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 24
+        - name: Valideer OAS tegen de API Design Rules
+          run: |
+            npx @developer-overheid-nl/don-checker@latest validate \
+              --standard adr --input ${{ env.OAS_URL_OR_FILE }}
+          env:
+            OAS_URL_OR_FILE: ./openapi.json
+  ```
+  </TabItem>
+  
+</Tabs>

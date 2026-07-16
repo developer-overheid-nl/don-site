@@ -118,11 +118,7 @@ const tiles: GridTile[] = [
     description: [
       {
         link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-linter",
-        label: "ADR Linter",
-      },
-      {
-        link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-validator",
-        label: "ADR Validator",
+        label: "ADR Checker",
       },
       {
         link: "/kennisbank/api-ontwikkeling/tools/openapi-specification-generator",
