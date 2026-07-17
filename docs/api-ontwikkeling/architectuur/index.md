@@ -149,7 +149,6 @@ modulaire overheidsinfrastructuur.
 - [KP-APIs GitHub](https://github.com/Geonovum/KP-APIs)
 - [API Design Rules (ADR)](https://gitdocumentatie.logius.nl/publicatie/api/adr/)
 - [NL API Strategie – Architectuur](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Architectuur/)
-- [API Management en Beveiliging – Developer Overheid](https://developer.overheid.nl/apis/beveiliging/)
 
 ## Onderwerpen
 
