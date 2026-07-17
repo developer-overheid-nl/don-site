@@ -60,8 +60,8 @@ Afhankelijk van je use case kies je een real-time patroon:
 Een goed ontworpen event-driven API kent dezelfde discipline als een REST-API:
 
 - Gebruik rijke payloads zodat consumers niet hoeven na te vragen.
-- Pas de [Cloudevents](../standaarden/cloudevents.md) standaard toe op basis van het NL
-  profiel.
+- Pas de [Cloudevents](../standaarden/cloudevents.md) standaard toe op basis van
+  het NL profiel.
 - Ontwerp een duidelijke event-taxonomie met logische naamgeving.
 - Houd rekening met "idempotency" voor dubbele events.
 - Voorzie in subscription mechanismen en foutafhandeling.
@@ -91,9 +91,9 @@ je ervaringen via developer.overheid.nl of neem deel aan het
 en deel onderling ervaringen rond de NL API Strategie en event oriëntatie. Samen
 maken we API’s slimmer, robuuster en toekomstbestendig.
 
-<Blockquote
-  variation="pink-background"
-  attribution="- Developer.overheid.nl/blog -"
->
-Lees ook het Blog "De toekomstige van de Overheid is Event Driven" op [Developer.overheid.nl/blog](https://developer.overheid.nl/blog)
-</Blockquote>
+## Verder lezen
+
+<Link href="/blog/2026/03/06/event-driven">
+  Blog: De toekomst van de overheid is event-driven
+  <Icon icon="pijl-naar-rechts" />
+</Link>
