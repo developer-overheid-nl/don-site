@@ -56,6 +56,29 @@ Voer eerst de stappen uit zoals beschreven in
 pnpm run lint:wcag
 ```
 
+## Links controleren
+
+De workflow `.github/workflows/check-links.yml` controleert of alle links op
+de website nog werken met [Linkinator](https://github.com/JustinBeckwith/linkinator).
+Je kan deze check ook lokaal draaien:
+
+1. Draai `pnpm run build` om de site te builden naar de map `build/`.
+2. Draai Linkinator met dezelfde instellingen als de workflow:
+
+   ```bash
+   npx linkinator build \
+     --recurse \
+     --clean-urls \
+     --config ./linkinator.config.json \
+     --verbosity ERROR \
+     --timeout 5000 \
+     --retry \
+     --retry-errors \
+     --retry-errors-count 3
+   ```
+
+Links die bewust overgeslagen moeten worden staan in `linkinator.config.json`.
+
 ## Publiceren blogpost
 
 Om een blog te publiceren die in draft staat volg je de volgende stappen:
