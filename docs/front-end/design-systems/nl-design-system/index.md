@@ -118,7 +118,7 @@ van het Design System van gemeente Utrecht.
 
 ## Rijkshuisstijl Community
 
-De [Rijkshuisstijl Community](https://rijkshuisstijl.community/) is een
+De [Rijkshuisstijl Community](https://www.rijkshuisstijl-community.nl/) is een
 opensource community die een **concrete implementatie** van de Rijkshuisstijl
 heeft ontwikkeld als design system componenten. Een van de vele design systemen
 die is aangesloten bij het NL Design System framework.
