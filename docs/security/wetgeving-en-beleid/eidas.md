@@ -87,4 +87,4 @@ gaan worden voor:
 - EU-info:
   [eIDAS Regulation – Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 - Nederlandse uitleg (Logius):
-  [Logius.nl - Vertrouwensdiensten](https://www.logius.nl/domeinen/toegang/vertrouwensdiensten)
+  [Logius.nl - eIDAS](https://www.logius.nl/domeinen/toegang/eidas)
