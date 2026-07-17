@@ -3,8 +3,6 @@ content_type: architectuur
 tags: [adr, api, eda]
 ---
 
-import { Blockquote } from "@rijkshuisstijl-community/components-react";
-
 # Event Driven Architecture
 
 De digitale samenleving vraagt om snelheid en actualiteit. Burgers willen live
