@@ -58,24 +58,24 @@ pnpm run lint:wcag
 
 ## Links controleren
 
-De workflow `.github/workflows/check-links.yml` controleert of alle links op
-de website nog werken met [Linkinator](https://github.com/JustinBeckwith/linkinator).
-Je kan deze check ook lokaal draaien:
+De workflow `.github/workflows/check-links.yml` controleert of alle links op de
+website nog werken met
+[Linkinator](https://github.com/JustinBeckwith/linkinator). Je kan deze check
+ook lokaal draaien:
 
 1. Draai `pnpm run build` om de site te builden naar de map `build/`.
 2. Draai Linkinator met dezelfde instellingen als de workflow:
 
-   ```bash
-   npx linkinator build \
-     --recurse \
-     --clean-urls \
-     --config ./linkinator.config.json \
-     --verbosity ERROR \
-     --timeout 5000 \
-     --retry \
-     --retry-errors \
-     --retry-errors-count 3
-   ```
+```bash
+npx linkinator build \
+--recurse \
+--format JSON \
+--clean-urls \
+--config ./linkinator.config.json \
+--verbosity ERROR \
+--timeout 5000 \
+> linkinator-results.json
+```
 
 Links die bewust overgeslagen moeten worden staan in `linkinator.config.json`.
 
@@ -91,10 +91,20 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 
 ## Changelog
 
-Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin vermelden wat er veranderd, verbeterd of toegevoegd is.  
-Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries samenvoegt. Deze pull request kan worden gemerged voor elke release.
+Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de
+changelog. Hierin vermelden wat er veranderd, verbeterd of toegevoegd is.  
+Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden
+aangemaakt. De Changesets bot en workflow maakt automatisch een pull request aan
+die de verschillende changelog entries samenvoegt. Deze pull request kan worden
+gemerged voor elke release.
 
-Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de changelog om bij te houden wat er veranderd is in de website. De semver gebruikt in de changelog heeft geen technische betekenis, maar geeft aan of een verandering een nieuwe feature, bijvoorbeeld een nieuw blog, is (minor), een bugfix (patch) of een "breaking" change (major). Voorbeelden van een breaking change zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de URL van een artikel.
+Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de
+changelog om bij te houden wat er veranderd is in de website. De semver gebruikt
+in de changelog heeft geen technische betekenis, maar geeft aan of een
+verandering een nieuwe feature, bijvoorbeeld een nieuw blog, is (minor), een
+bugfix (patch) of een "breaking" change (major). Voorbeelden van een breaking
+change zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de
+URL van een artikel.
 
 ### Hoe maak ik een changelog entry aan?
 
@@ -107,7 +117,8 @@ Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de changel
 ### Release nieuwe versie van de website
 
 1. Merge de pull request van de Changesets bot.
-2. Merge de pull request in de `don-infra` repository, zie de beschrijving hieronder.
+2. Merge de pull request in de `don-infra` repository, zie de beschrijving
+   hieronder.
 
 ## Deployen
 
@@ -169,4 +180,4 @@ Een contribution of pull request leidt niet automatisch tot een deployment.
   ook `INFRA_REPO` aan te passen. Daardoor is dit pad in de praktijk bedoeld
   voor maintainers of contributors met een branch in deze repository.
 
-[Changesets]:https://github.com/changesets/changesets
+[Changesets]: https://github.com/changesets/changesets
