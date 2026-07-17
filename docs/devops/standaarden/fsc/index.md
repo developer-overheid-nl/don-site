@@ -23,7 +23,7 @@ Wil je direct met FSC aan de slag dan kan je de referentie implementatie
 ## Standaardisatie in gegevensuitwisseling
 
 Volgens het principe
-[Data bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron) moeten
+[Data bij de Bron](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/data/data-bij-de-bron/) moeten
 organisaties die verantwoordelijk zijn voor data deze op een bruikbare manier
 beschikbaar stellen. Dit principe gaat er voor zorgen dat er veel koppelingen
 zullen ontstaan tussen afnemers en bronnen. Om te voorkomen dat er een
