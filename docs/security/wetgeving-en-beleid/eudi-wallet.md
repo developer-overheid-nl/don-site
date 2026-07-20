@@ -95,7 +95,7 @@ nog in ontwikkeling, maar gaan richting verplicht.
 Onderstaand model geeft een overzicht van de architectuur van het EUDI wallet
 ecosysteem:
 
-![het EUDI wallet ecosysteem](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/media/Figure_2_High-Level_Architecture.jpg)
+![het EUDI wallet ecosysteem](https://eudi.dev/latest/media/Figure_2_High-Level_Architecture.png)
 
 ---
 

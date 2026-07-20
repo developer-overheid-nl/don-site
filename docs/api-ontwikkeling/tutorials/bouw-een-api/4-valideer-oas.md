@@ -44,8 +44,7 @@ versienummer en we bezig zijn met versie 1.0 van de API, plakken we `/v1`
 erachter. De waarde van de server `url` wordt dus:
 `https://api.bieren.nepdomein/v1`. Zodra je dit hebt aangepast meldt de checker:
 
-> [https://logius-standaarden.github.io/API-Design-Rules/2.0] No violations
-> found.
+> [https://logius-standaarden.github.io/API-Design-Rules/] No violations found.
 
 <details>
   <summary>De spec zou er op dit moment zo uit moeten zien</summary>

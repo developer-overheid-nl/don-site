@@ -49,4 +49,4 @@ veilig én ethisch verantwoord data uit te wisselen en te analyseren. Nicpet is
 er voor de overheid en de publieke sector en staat open voor alle partijen die
 beter met gevoelige data om willen gaan.
 
-- [Nationaal innovatie centrum privacy-enhancing technologies (nicpet)](https://nicpet.nl)
+- [Nationaal innovatie centrum privacy-enhancing technologies (nicpet)](https://nicpet.pleio.nl/)

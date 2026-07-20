@@ -79,7 +79,7 @@ Gemaakte keuzes kun je vastleggen in een Wiki.
   [cloud(diensten)](https://developer.overheid.nl/kennisbank/leidraad/cloud)
 - Gebruik van
   [open source](https://developer.overheid.nl/kennisbank/leidraad/open-source)
-- [Richtlijn onboarding](https://developer.overheid.nl/don-site/leidraad/hergebruik/richtlijn-onboarding)
+- [Richtlijn onboarding](https://developer.overheid.nl/kennisbank/leidraad/hergebruik/richtlijn-onboarding)
   helpt ervoor te zorgen dat nieuwe developers bekend raken met de keuzes die je
   als organisatie hebt gemaakt.
 
@@ -90,7 +90,7 @@ Wanneer voldoe je aan deze richtlijn?
 - Je hebt keuzes gedocumenteerd zodat ze voor alle betrokkenen makkelijk
   vindbaar en raadpleegbaar zijn.
 - Je hebt de relevante (links naar) informatie opgenomen in de
-  [onboarding](https://developer.overheid.nl/don-site/leidraad/hergebruik/richtlijn-onboarding).
+  [onboarding](https://developer.overheid.nl/kennisbank/leidraad/hergebruik/richtlijn-onboarding).
 - Je hebt belegd hoe keuzes bekrachtigd worden.
 - Je hebt belegd hoe keuzes bewaakt worden.
 

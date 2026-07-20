@@ -63,13 +63,6 @@ een bedrijf die open-source beleid beheert.
 
 - [Naar de website van TODO Group](https://todogroup.org/)
 
-## OSPO NL
-
-OSPO NL is het Nederlandse kennisnetwerk van OSPO's. Het netwerk is een publiek-
-private samenwerking dus zowel bedrijven als overheden zijn er welkom.
-
-- [OSPO NL Community](https://ospo-nl.github.io/kennisbank/)
-
 ## Verder praten
 
 - [Slack Code for NL / #open-werken-best-practices](https://codefornl.slack.com/archives/C01L2643G3W)
