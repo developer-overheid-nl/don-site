@@ -8,9 +8,12 @@ tags:
   - informatiebeveiliging
   - open-source
   - standaarden
+image: ./img/spectral-onder-vuur.png
 ---
 
 # Spectral onder vuur: waar wij staan
+
+![Spectral onder vuur](./img/spectral-onder-vuur.png)
 
 Spectral is een open source linter waarmee je regels voor API-documentatie
 vastlegt in een ruleset en die vervolgens automatisch controleert. Die tool ligt
@@ -23,6 +26,26 @@ Spectral er niet halsoverkop uit, want er zit juist beweging in de richting die
 we toch al op wilden. Hieronder leggen we uit waar we staan en wat we doen.
 
 <!-- truncate -->
+
+:::success[TL;DR]
+
+- Onlangs vond er een security-incident plaats rondom Spectral, doordat er via
+  een dependency kwaadaardige code werd meegeleverd. Dit is inmiddels opgelost,
+  maar het is niet het enige probleem: Spectral kampt al langer met
+  achterstallig onderhoud.
+- Het rulesetformaat wordt afgesplitst van de linter en krijgt een ander
+  onderkomen. Daar haken wij op aan: we dragen bij aan het
+  [nieuwe project](https://github.com/orgs/api-commons/discussions/28) en denken
+  mee over waar dit formaat als standaard thuishoort.
+- We zien nog geen reden om over te stappen naar
+  [vacuum](https://quobix.com/vacuum/): omdat we Spectral bewust en niet
+  automatisch updaten zijn de risico's klein, en we willen eerst deze nieuwe
+  route verkennen. We slopen Spectral er dus niet halsoverkop uit.
+- Werk je met de API Design Rules? Gebruik de
+  [ADR Checker](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter) in
+  plaats van Spectral rechtstreeks.
+
+:::
 
 ## Wat er is gebeurd
 
