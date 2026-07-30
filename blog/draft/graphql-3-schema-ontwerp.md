@@ -16,26 +16,25 @@ description: |
 
 ![GraphQL onder de loep](/img/graphql-onder-de-loep.jpg)
 
-In [deel 2](/blog/draft/graphql-2-flexibiliteit-en-limieten) <!-- TODO: link
-bijwerken na publicatie --> zagen we dat de flexibiliteit van GraphQL een beheeropgave
-met zich meebrengt. In dit deel kijken we naar de ontwerpkant. De rode draad: veel
-zaken die je in REST oplost met mechanismen van HTTP (headers, statuscodes, media
-types, middleware op routes) moeten in GraphQL expliciet gemodelleerd worden in het
-schema en de resolvers. Dat maakt schema's en queries complexer dan de voorbeelden
-uit deel 1 doen vermoeden. We behandelen zes uitdagingen die je in vrijwel elk GraphQL-project
-van enige omvang tegenkomt.
+In [deel 2](/blog/2026/08/05/graphql-2-flexibiliteit-en-limieten) zagen we dat
+de flexibiliteit van GraphQL een beheeropgave met zich meebrengt. In dit deel
+kijken we naar de ontwerpkant. De rode draad: veel zaken die je in REST oplost
+met mechanismen van HTTP (headers, statuscodes, media types, middleware op
+routes) moeten in GraphQL expliciet gemodelleerd worden in het schema en de
+resolvers. Dat maakt schema's en queries complexer dan de voorbeelden uit deel 1
+doen vermoeden. We behandelen zes uitdagingen die je in vrijwel elk
+GraphQL-project van enige omvang tegenkomt.
 
 <!-- truncate -->
 
-<!-- TODO bij publicatie: link van deel 2 omzetten naar de definitieve URL;
-deel 4 linken zodra dat deel verschenen is -->
+<!-- TODO bij publicatie: deel 4 linken zodra dat deel verschenen is -->
 
 :::info[GraphQL onder de loep]
 
 Dit artikel is deel 3 van een vierdelige serie:
 
 1. [Een kennismaking](/blog/2026/07/30/graphql-1-introductie)
-2. [Flexibel bevragen, en wat dat kost](/blog/draft/graphql-2-flexibiliteit-en-limieten)
+2. [Flexibel bevragen, en wat dat kost](/blog/2026/08/05/graphql-2-flexibiliteit-en-limieten)
 3. Zes uitdagingen bij schema-ontwerp (dit deel)
 4. Wanneer wel, en wanneer niet? (volgt)
 
