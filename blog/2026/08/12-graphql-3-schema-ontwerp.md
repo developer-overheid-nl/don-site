@@ -27,8 +27,6 @@ GraphQL-project van enige omvang tegenkomt.
 
 <!-- truncate -->
 
-<!-- TODO bij publicatie: deel 4 linken zodra dat deel verschenen is -->
-
 :::info[GraphQL onder de loep]
 
 Dit artikel is deel 3 van een vierdelige serie:
@@ -36,7 +34,7 @@ Dit artikel is deel 3 van een vierdelige serie:
 1. [Een kennismaking](/blog/2026/07/30/graphql-1-introductie)
 2. [Flexibel bevragen, en wat dat kost](/blog/2026/08/05/graphql-2-flexibiliteit-en-limieten)
 3. Zes uitdagingen bij schema-ontwerp (dit deel)
-4. Wanneer wel, en wanneer niet? (volgt)
+4. [Wanneer wel, en wanneer niet?](/blog/2026/08/19/graphql-4-afwegingskader)
 
 :::
 
@@ -334,7 +332,5 @@ een krachtig, generiek bevragingsmodel en vraagt in ruil daarvoor dat je
 conventies die REST van HTTP en van standaarden als de ADR cadeau krijgt, zelf
 ontwerpt, bouwt en bewaakt. Daarmee is de vraag niet óf GraphQL werkt (dat doet
 het aantoonbaar, ook op grote schaal), maar wanneer die opgave in verhouding
-staat tot wat het oplevert. Dat is het onderwerp van deel 4, het slot van deze
-serie.
-
-<!-- TODO: deel 4 linken zodra dat is gepubliceerd -->
+staat tot wat het oplevert. Dat is het onderwerp van
+[deel 4](/blog/2026/08/19/graphql-4-afwegingskader), het slot van deze serie.

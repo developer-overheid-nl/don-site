@@ -34,8 +34,6 @@ samenstellen? En vooral: hoe stel je daar grenzen aan?
 
 <!-- truncate -->
 
-<!-- TODO bij publicatie: deel 4 linken zodra dat deel verschenen is -->
-
 :::info[GraphQL onder de loep]
 
 Dit artikel is deel 2 van een vierdelige serie:
@@ -43,7 +41,7 @@ Dit artikel is deel 2 van een vierdelige serie:
 1. [Een kennismaking](/blog/2026/07/30/graphql-1-introductie)
 2. Flexibel bevragen, en wat dat kost (dit deel)
 3. [Zes uitdagingen bij schema-ontwerp](/blog/2026/08/12/graphql-3-schema-ontwerp)
-4. Wanneer wel, en wanneer niet? (volgt)
+4. [Wanneer wel, en wanneer niet?](/blog/2026/08/19/graphql-4-afwegingskader)
 
 :::
 

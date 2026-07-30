@@ -256,9 +256,6 @@ caching, autorisatie en beheersing van de belasting.
 
 ## De rest van deze serie
 
-<!-- TODO: bij publicatie van deel 4 hier de link naar het verschenen deel
-toevoegen -->
-
 In de komende delen gaan we de diepte in:
 
 - **[Deel 2](/blog/2026/08/05/graphql-2-flexibiliteit-en-limieten)** behandelt
@@ -268,9 +265,10 @@ In de komende delen gaan we de diepte in:
 - **[Deel 3](/blog/2026/08/12/graphql-3-schema-ontwerp)** duikt in de praktijk
   van schema-ontwerp: paginering, filtering, union types, custom scalars,
   autorisatie en content negotiation.
-- **Deel 4** brengt alles samen in een afwegingskader: wanneer is GraphQL een
-  logische keuze, en wanneer ben je met REST beter af, zeker binnen de context
-  van de Nederlandse overheid en de ADR.
+- **[Deel 4](/blog/2026/08/19/graphql-4-afwegingskader)** brengt alles samen in
+  een afwegingskader: wanneer is GraphQL een logische keuze, en wanneer ben je
+  met REST beter af, zeker binnen de context van de Nederlandse overheid en de
+  ADR.
 
 Een compacte referentie over GraphQL, met de status binnen de overheid en de
 belangrijkste specificaties, staat in de
