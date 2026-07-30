@@ -256,8 +256,8 @@ caching, autorisatie en beheersing van de belasting.
 
 ## De rest van deze serie
 
-<!-- TODO: bij publicatie van deel 3 en 4 hier de link naar het verschenen
-deel toevoegen -->
+<!-- TODO: bij publicatie van deel 4 hier de link naar het verschenen deel
+toevoegen -->
 
 In de komende delen gaan we de diepte in:
 
@@ -265,8 +265,9 @@ In de komende delen gaan we de diepte in:
   de kernbelofte van GraphQL (flexibel bevragen als oplossing voor over- en
   underfetching) en de prijs die daar tegenover staat: onvoorspelbare
   performance en een groter aanvalsoppervlak, en hoe je daar limieten aan stelt.
-- **Deel 3** duikt in de praktijk van schema-ontwerp: paginering, filtering,
-  union types, custom scalars, autorisatie en content negotiation.
+- **[Deel 3](/blog/2026/08/12/graphql-3-schema-ontwerp)** duikt in de praktijk
+  van schema-ontwerp: paginering, filtering, union types, custom scalars,
+  autorisatie en content negotiation.
 - **Deel 4** brengt alles samen in een afwegingskader: wanneer is GraphQL een
   logische keuze, en wanneer ben je met REST beter af, zeker binnen de context
   van de Nederlandse overheid en de ADR.
