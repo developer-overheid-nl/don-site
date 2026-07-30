@@ -1,5 +1,19 @@
 # @developer-overheid-nl/website
 
+## 1.10.0
+
+### Minor Changes
+
+- 8ed99bd: Updated dead links in all knowledge base chapters. Fixed check-links
+  github action. Disabled the check-links github action for now since it
+  currently has too much errors.
+
+### Patch Changes
+
+- b1ff0c9: Voeg blogserie "GraphQL onder de loep" toe (vier delen, als draft)
+  plus een kennisbankartikel over GraphQL en de tag `graphql`
+- b1ff0c9: Publish GraphQL blog series part 1
+
 ## 1.9.0
 
 ### Minor Changes
