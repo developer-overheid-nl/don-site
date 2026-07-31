@@ -66,12 +66,12 @@ zijn met een Spectral ruleset beschreven.
 
 Eerst het goede nieuws. De aanval was niet gericht op Spectral en Stoplight is
 hier net zo goed slachtoffer als iedereen verderop in de keten. De kwaadaardige
-versies zijn inmiddels van npm verwijderd en `latest` wijst weer naar de laatste
-schone versie. Een verse install van vandaag is veilig.
+versies werden snel door npm en Github verwijderd waardoor `latest` weer naar de
+laatste schone versie verwees. Een verse install van vandaag is veilig.
 
 ## De druppel, niet het begin
 
-Het incident zelf is dus opgeruimd. De reactie erop niet. Op de
+Het incident zelf is dus opgelost. De reactie erop niet. Op de
 Spectral-repository is op 14 juli een issue geopend met de melding dat Spectral
 gecompromitteerde dependencies binnenhaalde, en dat issue staat er twee weken
 later nog steeds, onbeantwoord, terwijl er in de tussentijd wel een release is
@@ -121,13 +121,13 @@ duurzame deel, niet de linter die ze toevallig uitvoert.
 
 Kin's fork onder API Commons splitst die twee alsnog, in twee repositories:
 
-- [Het rulesetformaat](https://github.com/api-commons/spectral-rules) als
+- [Het rulesetformaat](https://github.com/api-commons/spotlight-spec) als
   zelfstandige specificatie, met één portable JSON Schema (draft 2020-12) in
   plaats van vijf interne draft-07 meta-schema's die aan de runtime van de
   linter hangen.
-- [De linter zelf](https://github.com/api-commons/spectral-cli) als onderhouden
-  build van v6.16.2, met volledige commithistorie, zonder telemetrie, en met
-  issues die openstaan voor reactie.
+- [De linter zelf](https://github.com/api-commons/spotlight-tools) als
+  onderhouden build van v6.16.2, met volledige commithistorie, zonder
+  telemetrie, en met issues die openstaan voor reactie.
 
 Hoe een en ander uiteindelijk gaat heten staat nog open, dus verwacht daar de
 komende tijd nog wijzigingen.
@@ -154,11 +154,11 @@ vervanging, om drie redenen:
   afhangt.
 
 - Ten derde is vacuum geschreven in Go. Onze tooling moet ook in de browser en
-  in editors kunnen draaien, en dat lukt met een gecompileerde binary niet. Een
-  JavaScript-engine heeft dus onze sterke voorkeur. Dat Spectral trager is dan
-  vacuum weegt daar niet tegenop: de codebase van Spectral is jarenlang
-  organisch gegroeid en er valt nog genoeg aan te sleutelen voordat de taal de
-  beperkende factor wordt.
+  in editors kunnen draaien, en dat wordt met een gecompileerde binary al snel
+  ingewikkeld. Een JavaScript-engine heeft dus onze sterke voorkeur. Dat
+  Spectral trager is dan vacuum weegt daar niet tegenop: de codebase van
+  Spectral is jarenlang organisch gegroeid en er valt nog genoeg aan te
+  sleutelen voordat de taal de beperkende factor wordt.
 
 ## Wat we gaan doen
 
