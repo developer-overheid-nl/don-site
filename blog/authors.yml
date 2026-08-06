@@ -237,3 +237,13 @@ kees-jan-westmaas:
   page: true
   socials:
     linkedin: https://www.linkedin.com/in/keesjanwestmaas/
+
+sander-van-rijsoort:
+  name: Sander van Rijsoort
+  title: Freelance front-end developer
+  image_url: /img/team/sander-van-rijsoort.webp
+  page: true
+  socials:
+    linkedin: sander-van-rijsoort-335418140
+    github: sanderyt
+    website: https://www.reactdev.io
