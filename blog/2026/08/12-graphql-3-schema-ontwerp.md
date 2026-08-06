@@ -1,5 +1,5 @@
 ---
-draft: true
+
 authors: [joost-farla]
 tags:
   [api, api-design, graphql, rest, interoperabiliteit, standaarden, geodata]

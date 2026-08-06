@@ -21,9 +21,8 @@ getypeerde querytaal met een fundamenteel ander model dan REST
 bevraging zowel de grote kracht als een serieuze beheeropgave is
 ([deel 2](/blog/2026/08/05/graphql-2-flexibiliteit-en-limieten)) en liepen we
 zes ontwerpuitdagingen langs die in de praktijk bepalen hoeveel werk een
-GraphQL-API werkelijk kost ([deel 3](/blog/draft/graphql-3-schema-ontwerp)).
-
-<!-- TODO: link naar deel 3 bijwerken na publicatie -->
+GraphQL-API werkelijk kost
+([deel 3](/blog/2026/08/12/graphql-3-schema-ontwerp)).
 
 In dit slotdeel komen we bij de vraag waar het allemaal om draait: wanneer is
 GraphQL een passende keuze, en wanneer ben je met REST beter af? Er zijn
@@ -31,16 +30,13 @@ omstandigheden waarin het ene model aantoonbaar beter past dan het andere.
 
 <!-- truncate -->
 
-<!-- TODO bij publicatie: de link naar deel 3 omzetten naar de definitieve
-URL -->
-
 :::info[GraphQL onder de loep]
 
 Dit artikel is deel 4 van een vierdelige serie:
 
 1. [Een kennismaking](/blog/2026/07/30/graphql-1-introductie)
 2. [Flexibel bevragen, en wat dat kost](/blog/2026/08/05/graphql-2-flexibiliteit-en-limieten)
-3. [Zes uitdagingen bij schema-ontwerp](/blog/draft/graphql-3-schema-ontwerp)
+3. [Zes uitdagingen bij schema-ontwerp](/blog/2026/08/12/graphql-3-schema-ontwerp)
 4. Wanneer wel, en wanneer niet? (dit deel)
 
 :::
