@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [joost-farla]
 tags:
   [
