@@ -31,7 +31,7 @@
     "@piwikpro/react-piwik-pro": "2.6.0",
     "@rijkshuisstijl-community/components-react": "1.1.0",
     "a11y-syntax-highlighting": "1.1.0",
-    "algoliasearch-helper": "3.25.0",
+    "algoliasearch-helper": "3.29.3",
     "axios": "1.18.0",
     "client": "link:@docusaurus/plugin-content-docs/client",
     "clsx": "2.1.1",

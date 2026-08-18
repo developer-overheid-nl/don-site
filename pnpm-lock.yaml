@@ -83,8 +83,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0
       algoliasearch-helper:
-        specifier: 3.25.0
-        version: 3.25.0(algoliasearch@5.40.1)
+        specifier: 3.29.3
+        version: 3.29.3(algoliasearch@5.40.1)
       axios:
         specifier: 1.18.0
         version: 1.18.0
@@ -2267,13 +2267,8 @@ packages:
   ajv@8.20.0:
     resolution: {integrity: sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==}
 
-  algoliasearch-helper@3.25.0:
-    resolution: {integrity: sha512-vQoK43U6HXA9/euCqLjvyNdM4G2Fiu/VFp4ae0Gau9sZeIKBPvUPnXfLYAe65Bg7PFuw03coeu5K6lTPSXRObw==}
-    peerDependencies:
-      algoliasearch: '>= 3.1 < 6'
-
-  algoliasearch-helper@3.26.0:
-    resolution: {integrity: sha512-Rv2x3GXleQ3ygwhkhJubhhYGsICmShLAiqtUuJTUkr9uOCOXyF2E71LVT4XDnVffbknv8XgScP4U0Oxtgm+hIw==}
+  algoliasearch-helper@3.29.3:
+    resolution: {integrity: sha512-gVOMbbPVrCO3Xs+B+BLAIGFqIQow6qHMTYCEeBqLQB9m4ZmKUqMwkEumlal2iyyezHEd4Y0FvFTLbCRutCutIQ==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
 
@@ -9644,7 +9639,7 @@ snapshots:
       '@docusaurus/utils': 3.10.2(acorn@8.15.0)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@docusaurus/utils-validation': 3.10.2(acorn@8.15.0)(postcss@8.5.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       algoliasearch: 5.40.1
-      algoliasearch-helper: 3.26.0(algoliasearch@5.40.1)
+      algoliasearch-helper: 3.29.3(algoliasearch@5.40.1)
       clsx: 2.1.1
       eta: 2.2.0
       fs-extra: 11.3.0
@@ -10837,12 +10832,7 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
-  algoliasearch-helper@3.25.0(algoliasearch@5.40.1):
-    dependencies:
-      '@algolia/events': 4.0.1
-      algoliasearch: 5.40.1
-
-  algoliasearch-helper@3.26.0(algoliasearch@5.40.1):
+  algoliasearch-helper@3.29.3(algoliasearch@5.40.1):
     dependencies:
       '@algolia/events': 4.0.1
       algoliasearch: 5.40.1
@@ -12003,7 +11993,7 @@ snapshots:
       '@docusaurus/theme-translations': 3.9.2
       '@docusaurus/utils': 3.9.2(acorn@8.15.0)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@docusaurus/utils-validation': 3.9.2(acorn@8.15.0)(postcss@8.5.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      algoliasearch-helper: 3.25.0(algoliasearch@5.40.1)
+      algoliasearch-helper: 3.29.3(algoliasearch@5.40.1)
       clsx: 2.1.1
       eta: 2.2.0
       fs-extra: 11.3.0
