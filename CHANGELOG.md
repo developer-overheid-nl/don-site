@@ -1,5 +1,17 @@
 # @developer-overheid-nl/website
 
+## 1.12.0
+
+### Minor Changes
+
+- 69016c3: Publish GraphQL blog series part 2
+
+### Patch Changes
+
+- 10321dd: Update site dependencies to remediate known security vulnerabilities,
+  run CI tooling on Node.js 24, and add a temporary compatibility override for
+  the browser driver installer.
+
 ## 1.11.0
 
 ### Minor Changes
