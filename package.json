@@ -52,7 +52,7 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "@rijkshuisstijl-community/design-tokens": "1.2.0",
+    "@rijkshuisstijl-community/design-tokens": "17.0.0",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
     "browser-driver-manager": "2.0.1",
