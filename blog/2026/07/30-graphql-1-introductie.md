@@ -256,15 +256,16 @@ caching, autorisatie en beheersing van de belasting.
 
 ## De rest van deze serie
 
-<!-- TODO: bij publicatie van deel 2, 3 en 4 hier telkens de link naar het
+<!-- TODO: bij publicatie van deel 3 en 4 hier telkens de link naar het
 verschenen deel toevoegen -->
 
 In de komende delen gaan we de diepte in:
 
-- **Deel 2** behandelt de kernbelofte van GraphQL (flexibel bevragen als
-  oplossing voor over- en underfetching) en de prijs die daar tegenover staat:
-  onvoorspelbare performance en een groter aanvalsoppervlak, en hoe je daar
-  limieten aan stelt.
+- **[Deel 2](/blog/2026/08/18/graphql-2-flexibiliteit-en-limieten)** behandelt
+  de kernbelofte van GraphQL (flexibel bevragen als oplossing voor over- en
+  underfetching) en de prijs die daar tegenover staat: onvoorspelbare
+  performance en een groter aanvalsoppervlak, en hoe je daar limieten aan
+  stelt.
 - **Deel 3** duikt in de praktijk van schema-ontwerp: paginering, filtering,
   union types, custom scalars, autorisatie en content negotiation.
 - **Deel 4** brengt alles samen in een afwegingskader: wanneer is GraphQL een

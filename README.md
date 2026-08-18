@@ -88,6 +88,8 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 - Verplaats de blogpost naar de map van de huidige maand.
 - Verwijder de `draft: true` property uit het frontmatter van de blogpost.
 - Draai `pnpm build` om te kijken of de markdown in orde is.
+- Voeg een changeset toe met minor version bump, zie
+  [Hoe maak ik een changelog entry aan?](#hoe-maak-ik-een-changelog-entry-aan).
 
 ## Changelog
 
