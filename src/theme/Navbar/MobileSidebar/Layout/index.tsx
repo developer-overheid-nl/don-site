@@ -1,6 +1,9 @@
 import React, { version, forwardRef, type ReactNode } from "react";
 import clsx from "clsx";
-import { useNavbarSecondaryMenu } from "@docusaurus/theme-common/internal";
+import {
+  useNavbarMobileSidebar,
+  useNavbarSecondaryMenu,
+} from "@docusaurus/theme-common/internal";
 import { ThemeClassNames } from "@docusaurus/theme-common";
 import type { Props } from "@theme/Navbar/MobileSidebar/Layout";
 
@@ -41,7 +44,7 @@ export default forwardRef(function NavbarMobileSidebarLayout(
   ref: any,
 ): ReactNode {
   const { shown: secondaryMenuShown } = useNavbarSecondaryMenu();
-  const mobileSidebar = useNavbarSecondaryMenu();
+  const mobileSidebar = useNavbarMobileSidebar();
   return (
     <div
       className="navbar-sidebar__overlay"

@@ -25,7 +25,7 @@ import styles from "./styles.module.css";
 /** DON version */
 function getFallbackEmojiIcon(
   item: PropSidebarItemLink | PropSidebarItemCategory,
-): string {
+): ReactNode {
   if (item.type === 'category') {
     return <IconLadeArchiefkast className={styles.cardIcon} />;
   }

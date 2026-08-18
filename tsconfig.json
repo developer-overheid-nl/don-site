@@ -5,7 +5,6 @@
     "jsx": "react-jsx",
     "lib": ["dom", "es2015"],
     "baseUrl": ".",
-    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true
     // "strict": true,
