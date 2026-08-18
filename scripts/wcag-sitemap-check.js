@@ -1,12 +1,65 @@
 const axios = require("axios");
 const { parseStringPromise } = require("xml2js");
-const { spawnSync } = require("child_process");
+const { execSync, spawnSync } = require("child_process");
 const fs = require("fs");
-const { createAxeCommand } = require("./wcag-sitemap-check.helpers");
+const os = require("os");
+const path = require("path");
 
 const SITEMAP_URL = "http://localhost:3000/sitemap.xml";
+const BROWSER_DRIVER_ENV_PATH = path.join(
+  os.homedir(),
+  ".browser-driver-manager",
+  ".env",
+);
+
+function ensureChromeAndDriver() {
+  try {
+    execSync("npx browser-driver-manager install chrome", {
+      stdio: "inherit",
+    });
+  } catch (error) {
+    throw new Error(
+      `Kon browser-driver-manager niet draaien: ${
+        error.stderr?.toString() || error.message
+      }`,
+    );
+  }
+
+  let envContent = "";
+  try {
+    envContent = fs.readFileSync(BROWSER_DRIVER_ENV_PATH, "utf-8");
+  } catch (error) {
+    throw new Error(
+      `Kon ${BROWSER_DRIVER_ENV_PATH} niet lezen. Run "npx browser-driver-manager install chrome" handmatig en probeer opnieuw.`,
+    );
+  }
+
+  const envMap = {};
+  for (const line of envContent.split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    const [key, ...rest] = line.split("=");
+    if (!key || rest.length === 0) continue;
+    const rawValue = rest.join("=");
+    envMap[key.trim()] = rawValue.replace(/^"(.*)"$/, "$1").trim();
+  }
+
+  const chromePath = envMap.CHROME_TEST_PATH;
+  const chromedriverPath = envMap.CHROMEDRIVER_TEST_PATH;
+
+  if (!chromePath || !chromedriverPath) {
+    throw new Error(
+      `Kon Chrome of Chromedriver pad niet vinden in ${BROWSER_DRIVER_ENV_PATH}. Inhoud:\n${envContent}`,
+    );
+  }
+
+  return {
+    chromePath,
+    chromedriverPath,
+  };
+}
 
 async function main() {
+  const { chromePath, chromedriverPath } = ensureChromeAndDriver();
   const res = await axios.get(SITEMAP_URL);
   const result = await parseStringPromise(res.data);
 
@@ -16,10 +69,15 @@ async function main() {
   let report = "";
 
   for (const url of urls) {
-    const axeCommand = createAxeCommand(url);
     const axeResult = spawnSync(
-      axeCommand.command,
-      axeCommand.args,
+      "npx",
+      [
+        "axe",
+        url,
+        "--exit",
+        `--chromedriver-path=${chromedriverPath}`,
+        `--chrome-path=${chromePath}`,
+      ],
       { encoding: "utf-8" },
     );
 
