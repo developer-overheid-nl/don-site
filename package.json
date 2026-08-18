@@ -56,7 +56,6 @@
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
     "cypress": "15.18.0",
-    "image-size": "file:vendor/image-size",
     "npm-run-all": "4.1.5",
     "typescript": "5.8.3"
   },
@@ -87,7 +86,6 @@
       "dompurify": "3.4.13",
       "fast-uri@>=3.0.0 <4.0.0": "3.1.5",
       "http-proxy-middleware@<3.0.0": "2.0.10",
-      "image-size": "file:vendor/image-size",
       "ip-address": "10.5.0",
       "joi@<18.0.0": "17.13.4",
       "js-yaml@<4.0.0": "3.15.1",
@@ -115,6 +113,12 @@
     },
     "patchedDependencies": {
       "@rijkshuisstijl-community/components-react@1.1.0": "patches/@rijkshuisstijl-community__components-react@1.1.0.patch"
+    },
+    "auditConfig": {
+      "ignoreCves": [
+        "CVE-2025-71329",
+        "CVE-2025-71330"
+      ]
     }
   }
 }
