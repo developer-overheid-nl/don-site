@@ -1,13 +1,19 @@
 {
   // This file is not used in compilation. It is here just for a nice editor experience.
-  "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
+    "allowJs": true,
     "jsx": "react-jsx",
     "lib": ["dom", "es2015"],
-    "baseUrl": ".",
     "esModuleInterop": true,
-    "skipLibCheck": true
-    // "strict": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "paths": {
+      "@site/*": ["./*"]
+    },
+    "skipLibCheck": true,
+    "strict": false,
+    "target": "ES2022"
     // "verbatimModuleSyntax": true
   },
   "include": ["**/*.ts", "**/*.tsx", "scripts/wcag-sitemap-check.js"],
