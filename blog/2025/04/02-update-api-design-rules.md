@@ -6,9 +6,9 @@ tags: [api, adr, forum-standaardisatie, developer.overheid.nl, openapi]
 # Status update API Design Rules
 
 Op woensdagmiddag 26 maart 2025 kwam
-[het Kennisplatform API's](/communities/kennisplatform-apis/) bijeen om de
-laatste ontwikkelingen rond API's te bespreken. Hier presenteerde ik een update
-over de
+[het Kennisplatform API's](/kennisbank/api-ontwikkeling/communities/kennisplatform-apis/)
+bijeen om de laatste ontwikkelingen rond API's te bespreken. Hier presenteerde
+ik een update over de
 [API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/) (ADR),
 waarvan de 2.0 versie is ingediend bij het Forum Standaardisatie om op de
 ['Pas toe of leg uit'-lijst (PTOLU)](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules)

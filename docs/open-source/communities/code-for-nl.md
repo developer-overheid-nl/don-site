@@ -1,7 +1,7 @@
 ---
+content_type: community
 tags:
   - "open-source"
-  - "community"
   - "meetups"
 title: "Code for NL"
 ---
