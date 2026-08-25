@@ -1,4 +1,5 @@
 ---
+content_type: community
 tags:
   - "toegankelijkheid"
 title: "Gebruiker Centraal"

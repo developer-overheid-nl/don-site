@@ -142,7 +142,7 @@ Geen bekend.
 ### Communities
 
 - [Linkeddata.overheid.nl](https://linkeddata.overheid.nl)
-- [Federatief Datastelsel](/communities/federatief-datastelsel)
+- [Federatief Datastelsel](/kennisbank/data/communities/federatief-datastelsel)
 
 ### Literatuur
 

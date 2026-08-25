@@ -85,7 +85,7 @@ Afgesproken is dat de Rijksoverheid, provincies, gemeenten, waterschappen en pub
 
 2. **Data delen**  
    We werken overheidsbreed datagedreven via een
-   [federatief datastelsel](https://developer.overheid.nl/communities/federatief-datastelsel)
+   [federatief datastelsel](/kennisbank/data/communities/federatief-datastelsel)
    met bindende afspraken, om data verantwoord te delen en knelpunten collectief
    op te lossen.
    [externe link](https://www.digitaleoverheid.nl/nederlandse-digitaliseringsstrategie-nds/6-prioriteiten-voor-een-overheid/prioriteit-2-data/)

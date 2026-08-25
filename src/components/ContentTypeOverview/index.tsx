@@ -32,6 +32,7 @@ const CONTENT_TYPE_LABELS: Record<string, string> = {
   tutorial: "Tutorial",
   architectuur: "Architectuur",
   richtlijn: "Richtlijn",
+  community: "Community",
 };
 
 const nlCollator = new Intl.Collator("nl");

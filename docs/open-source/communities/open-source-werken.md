@@ -1,7 +1,7 @@
 ---
+content_type: community
 tags:
   - "open-source"
-  - "community"
   - "meetups"
   - "ospo"
   - "foss"
