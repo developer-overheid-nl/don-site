@@ -54,9 +54,6 @@ refactoren en discussie.
   zie je hoe andere projecten standaarden hebben toegepast. Die data is ook
   ontsloten via de
   [NORA](https://www.noraonline.nl/wiki/Monitor_Open_Standaarden).
-- **Aanbesteden**: ga je standaarden uitvragen bij een leverancier, dan biedt de
-  handreiking Vragen om open standaarden bij aanschaf van ICT kant-en-klare
-  voorbeeldteksten.
 
 ## Van afspraak naar code
 
