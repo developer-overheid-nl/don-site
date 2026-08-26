@@ -200,8 +200,7 @@ kwetsbaarhedenmanagement.
 
 NIS2 verplicht essentiële en belangrijke organisaties om passende maatregelen te
 nemen voor het beheersen van cyberrisico's binnen hun gehele toeleveringsketen.
-Daarbij hoort ook het verkrijgen van inzicht in de gebruikte softwarecomponenten
-, leveranciers en afhankelijkheden die onderdeel zijn van bedrijfskritische
+Daarbij hoort ook het verkrijgen van inzicht in de gebruikte softwarecomponenten, leveranciers en afhankelijkheden die onderdeel zijn van bedrijfskritische
 systemen. Organisaties moeten kunnen aantonen dat zij risico's identificeren,
 beoordelen en beheersen, inclusief risico's die voortkomen uit software van
 derden en open-source componenten.
