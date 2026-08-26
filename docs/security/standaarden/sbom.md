@@ -254,8 +254,7 @@ verhoogt de weerbaarheid van de gehele softwareketen.
 ## Conclusie
 
 Een SBOM is inmiddels een essentieel onderdeel van moderne softwareontwikkeling
-en software supply chain security. Het biedt inzicht in de gebruikte componenten
-, ondersteunt compliance en versnelt de reactie op beveiligingsincidenten.
+en software supply chain security. Het biedt inzicht in de gebruikte componenten, ondersteunt compliance en versnelt de reactie op beveiligingsincidenten.
 
 Voor organisaties die zich vooral richten op kwetsbaarheden, risicoanalyse en
 DevSecOps is **CycloneDX** vaak de meest logische keuze. Voor organisaties
