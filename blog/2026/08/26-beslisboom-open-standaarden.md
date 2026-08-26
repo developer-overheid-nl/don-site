@@ -1,5 +1,5 @@
 ---
-authors: [tom-ootes]
+authors: [vivian-van-der-heijden-hanssen]
 tags: [interoperabiliteit, forum-standaardisatie, standaarden]
 image: ./img/beslisboom-open-standaarden.png
 description: |
