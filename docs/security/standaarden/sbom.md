@@ -71,7 +71,7 @@ Forum Standaardisatie op opgenomen te worden op de 'Pas toe of leg uit' lijst.
 
 ## CycloneDX
 
-[CycloneDX](https://cyclonedx.org?utm_source=chatgpt.com) is een open standaard
+[CycloneDX](https://cyclonedx.org) is een open standaard
 die wordt beheerd door de OWASP Foundation en specifiek is ontwikkeld voor
 software supply chain security.
 
