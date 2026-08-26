@@ -120,7 +120,7 @@ Geen bekend.
 
 ### Communities
 
-- [Gebruiker Centraal](/communities/gebruiker-centraal)
+- [Gebruiker Centraal](/kennisbank/front-end/communities/gebruiker-centraal)
 
 ### Literatuur
 

@@ -10,6 +10,7 @@ import Icon3BoekenAchterElkaar from "@site/src/theme/icons/Icon3BoekenAchterElka
 import IconKlembordMetVinkjesEnLijnen from "@site/src/theme/icons/IconKlembordMetVinkjesEnLijnen";
 import IconNetwerk from "@site/src/theme/icons/IconNetwerk";
 import IconManMetLaptop from "@site/src/theme/icons/IconManMetLaptop";
+import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten";
 
 import { GridTile } from ".";
 
@@ -134,6 +135,50 @@ const tiles: GridTile[] = [
       },
     ],
     link: "/kennisbank/tools",
+  },
+  {
+    icon: <IconTekstballonnenMetPunten />,
+    title: "Communities",
+    description: [
+      {
+        link: "/kennisbank/api-ontwikkeling/communities/kennisplatform-apis",
+        label: "Kennisplatform API's",
+      },
+      {
+        link: "/kennisbank/data/communities/federatief-datastelsel",
+        label: "Federatief Datastelsel",
+      },
+      {
+        link: "/kennisbank/data/communities/common-ground",
+        label: "Common Ground",
+      },
+      { link: "/kennisbank/data/communities/digilab", label: "Digilab" },
+      {
+        link: "/kennisbank/front-end/communities/nl-design-system",
+        label: "NL Design System",
+      },
+      {
+        link: "/kennisbank/front-end/communities/digitoegankelijk",
+        label: "DigiToegankelijk",
+      },
+      {
+        link: "/kennisbank/front-end/communities/gebruiker-centraal",
+        label: "Gebruiker Centraal",
+      },
+      {
+        link: "/kennisbank/open-source/communities/code-for-nl",
+        label: "Code for NL",
+      },
+      {
+        link: "/kennisbank/open-source/communities/open-source-werken",
+        label: "Opensourcewerken",
+      },
+      {
+        link: "/kennisbank/open-source/communities/todo-group",
+        label: "TODO Group",
+      },
+    ],
+    link: "/kennisbank/communities",
   },
   {
     icon: <IconApiInrichting />,

@@ -1,5 +1,7 @@
 ---
+content_type: community
 tags: [api, kennisplatform-apis]
+title: "Kennisplatform API's"
 ---
 
 # Kennisplatform API's
