@@ -236,7 +236,7 @@ breed ondersteund door tooling en maken het mogelijk om softwarecomponenten,
 leveranciers, versies, licenties en afhankelijkheden gestructureerd vast te
 leggen.
 
-## Bestaande inkoopvoorwaarden.
+### Bestaande inkoopvoorwaarden
 
 Onder andere de Nederlandse vereniging van gemeenten vraagt in de
 inkoopvoorwaarden Sboms al uit bij software.
