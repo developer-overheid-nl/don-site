@@ -3,12 +3,17 @@ import clsx from "clsx";
 import styles from "./styles.module.css";
 
 export type GridTile = {
-  icon: React.ReactNode;
+  icon: React.ReactElement;
   title: string;
   description: string | { link: string; label: string; external?: boolean }[];
   link?: string;
   highlight?: "uitgelicht" | "nieuw" | "tutorial" | "beta";
   external?: boolean;
+};
+
+export type TilesGridProps = {
+  tiles: GridTile[];
+  paddingY?: boolean;
 };
 
 const ExternalLinkIcon = () => (
@@ -24,7 +29,10 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
-export default function TilesGrid({ tiles, paddingY }): React.ReactNode {
+export default function TilesGrid({
+  tiles,
+  paddingY = false,
+}: TilesGridProps): React.JSX.Element {
   const tileItems = tiles.map(
     ({ icon, title, link, external, description, highlight }, i) => {
       const Description =

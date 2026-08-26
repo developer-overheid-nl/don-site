@@ -152,7 +152,7 @@ Ga gezamenlijk aan de slag om AI te ontwikkelen en gebruik
 ### 🎨 Hergebruik overheidsbrede ontwerpprincipes
 
 Hergebruik overheidsbrede ontwerpprincipes, bijvoorbeeld het
-[NL Design System](https://developer.overheid.nl/kennisbank/front-end/nl-design-system/).
+[NL Design System](https://developer.overheid.nl/kennisbank/front-end/design-systems/nl-design-system/).
 
 ### 🔗 Ontwerp organisatie-overstijgend
 

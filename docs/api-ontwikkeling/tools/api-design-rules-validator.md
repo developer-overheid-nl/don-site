@@ -1,6 +1,6 @@
 ---
-content_type: tool
 tags: [adr, api, validator]
+unlisted: true
 ---
 
 # ADR Validator (verouderd)
@@ -8,7 +8,7 @@ tags: [adr, api, validator]
 :::danger[Deze tool is verouderd]
 
 Deze tool wordt niet meer onderhouden en is niet meer up-to-date. Gebruik in
-plaats hiervan de [ADR Linter](api-design-rules-linter.md).
+plaats hiervan de [ADR Checker](api-design-rules-linter.md).
 
 :::
 

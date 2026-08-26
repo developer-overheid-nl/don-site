@@ -47,7 +47,7 @@ const tiles: GridTile[] = [
         label: "Bouw een API",
       },
       {
-        link: "/kennisbank/front-end/nl-design-system/aan-de-slag-met-nl-design-system",
+        link: "/kennisbank/front-end/design-systems/nl-design-system/aan-de-slag-met-nl-design-system",
         label: "Aan de slag met NL Design System",
       },
       {
@@ -118,11 +118,7 @@ const tiles: GridTile[] = [
     description: [
       {
         link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-linter",
-        label: "ADR Linter",
-      },
-      {
-        link: "/kennisbank/api-ontwikkeling/tools/api-design-rules-validator",
-        label: "ADR Validator",
+        label: "ADR Checker",
       },
       {
         link: "/kennisbank/api-ontwikkeling/tools/openapi-specification-generator",
@@ -191,7 +187,7 @@ const tiles: GridTile[] = [
         label: "DigiToegankelijk (WCAG)",
       },
       {
-        link: "/kennisbank/front-end/nl-design-system",
+        link: "/kennisbank/front-end/design-systems/nl-design-system",
         label: "NL Design System",
       },
       {

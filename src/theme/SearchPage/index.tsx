@@ -259,7 +259,8 @@ function createMultiCollectionSearchClient(searchClient: SearchClient) {
         })),
       );
       const response = await searchClient.search<T>(expandedRequests);
-      const results = response.results as TypesenseSearchResponse[];
+      // The expanded requests are regular searches, never facet-value searches.
+      const results = response.results as unknown as TypesenseSearchResponse[];
 
       return {
         results: requests.map((_, index) => {
@@ -267,7 +268,7 @@ function createMultiCollectionSearchClient(searchClient: SearchClient) {
           const end = start + TYPESENSE_SEARCH_COLLECTIONS.length;
           return mergeSearchResponses(results.slice(start, end));
         }),
-      } as SearchResponses<T>;
+      } as unknown as SearchResponses<T>;
     },
   };
 }

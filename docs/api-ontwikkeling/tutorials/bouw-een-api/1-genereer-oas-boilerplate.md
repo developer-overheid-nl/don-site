@@ -13,7 +13,7 @@ In deze stap gebruiken we de
 [OAS Generator](https://developer-overheid-nl.github.io/oas-generator) om een
 basis OpenAPI Specification te genereren. We voeren wat metadata en resources
 in, en de generator maakt een complete OAS die al voldoet aan de API Design
-Rules.
+Rules zodra we later in deze tutorial de server URL hebben ingevuld.
 
 ## Verplichte metadata
 
@@ -56,17 +56,18 @@ versie van de API.
 
 ## Operaties en resources
 
-Vervolgens bepalen we de operaties en resource die onze API moeten ondersteunen.
+Vervolgens bepalen we de operaties en resources die onze API moeten ondersteunen.
 We willen verschillende bieren, bierstijlen en brouwerijen kunnen ontsluiten
-(`GET`). Bieren en brouwerij kunnen toegevoegd (`POST`), verwijderd (`DELETE`)
+(`GET`). Bieren en brouwerijen kunnen toegevoegd (`POST`), verwijderd (`DELETE`)
 en gewijzigd (`PUT`) worden, terwijl de bierstijlen in ons voorbeeld door een
 redactie bepaald worden en derhalve alleen opgehaald kunnen worden. Om deze
 operaties correct in de OAS te krijgen, stoppen we een JSON array in de
 `resources` property. De array bestaat uit de drie verschillende resources:
 brouwerijen, bieren, bierstijlen. De generator verwacht een enkelvoud `name`, de
 schrijfwijze van het meervoud van de resource (`plural`) en of het `readonly` is
-of niet. Zodra het `readonly` is, wordt er alleen een `GET` operatie
-gegenereerd. In ons geval krijgen we dan deze array:
+of niet. Zodra het `readonly` is, worden er alleen `GET` operaties voor de
+collectie en individuele resource gegenereerd. In ons geval krijgen we dan deze
+array:
 
 ```json
 [
@@ -135,24 +136,40 @@ rechts de openapi.json output_
 
 De volgende zaken zijn nu automatisch gegenereerd:
 
-| Onderdeel   | Uitleg                                                                                                                                                                                                                                                                                                                             |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tags`      | Voor elke resource wordt een taggroup gegenereerd. Hiermee worden operaties gegroepeerd per resourcetype.                                                                                                                                                                                                                          |
-| `paths`     | Voor elke resource worden paden gegenereerd, volgens de ADR wordt hier de meervoud schrijfwijze voor gebruikt; bijvoorbeeld `/bieren` voor de collectie en `/bieren/{id}` voor een individuele resource.                                                                                                                           |
-| Operaties   | Per `path` worden de correcte operaties toegevoegd. Voor een readonly resource is dit alleen een `GET` request, anders worden ook de juiste `PUT`, `POST`, en `DELETE` operaties gegenereerd.                                                                                                                                      |
-| `responses` | Per operatie worden de juiste responses gegenereerd. De responses bevatten de juiste statuscodes, headers en verwijzingen naar schemas.                                                                                                                                                                                            |
-| `headers`   | Per response worden de juiste headers gegenereerd. `API-Version` is de verplichte response header voor alle API requests, voor `list` operaties wordt ook de `Link` header teruggegeven die eventueel gebruikt kan worden voor paginering. Deze headers komen direct `https://static.developer.overheid.nl` en voldoen aan de ADR. |
-| Errors      | Voor 4XX statuscodes (404 not found, 400 bad request, etc.) wordt een `problem+json` response teruggegeven. Deze komt direct van `https://static.developer.overheid.nl` en voldoet aan de ADR.                                                                                                                                     |
-| `schemas`   | In `/components` worden de bijbehorende schemas gegenereerd. Deze bevatten standaard een `id` property omdat een leeg schema niet valid is. In de volgende stap gaan we deze schemas aanpassen naar onze behoeften.                                                                                                                |
+```text
+openapi
+info
+servers
+tags
+paths
+components
+  schemas
+  parameters
+```
+
+| Onderdeel               | Uitleg                                                                                                                                                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `openapi`               | De gebruikte OpenAPI-versie. De generator zet deze standaard op `3.0.2`.                                                                                                                                                                                                                                                 |
+| `info`                  | Metadata over de API, waaronder titel, omschrijving, contactgegevens en versie.                                                                                                                                                                                                                                          |
+| `servers`               | De server URL. De generator vult hier eerst een `@TODO` placeholder in. In stap 4 vervangen we die door een URL met major versie, bijvoorbeeld `/v1`.                                                                                                                                                                    |
+| `tags`                  | Voor elke resource wordt een tag gegenereerd. Hiermee worden operaties gegroepeerd per resourcetype.                                                                                                                                                                                                                     |
+| `paths`                 | Voor elke resource worden paden gegenereerd. Volgens de ADR wordt hier de meervoud schrijfwijze voor gebruikt; bijvoorbeeld `/bieren` voor de collectie en `/bieren/{id}` voor een individuele resource.                                                                                                                |
+| Operaties               | Per `path` worden de correcte operaties toegevoegd. Voor een readonly resource zijn dit alleen `GET` operaties, anders worden ook de juiste `POST`, `PUT` en `DELETE` operaties gegenereerd.                                                                                                                            |
+| `responses`             | Per operatie worden de juiste responses gegenereerd. Succesresponses bevatten statuscodes, headers en verwijzingen naar schemas. Foutresponses verwijzen direct naar standaardresponses in `https://static.developer.overheid.nl/adr/components.yaml`.                                                                    |
+| `headers`               | Per succesresponse worden de juiste headers gegenereerd. `API-Version` is de verplichte response header voor API requests. Voor lijstoperaties wordt ook de `Link` header teruggegeven, die gebruikt kan worden voor paginering. Deze headers komen uit `https://static.developer.overheid.nl/adr/components.yaml`.       |
+| Errors                  | Voor 4XX statuscodes zoals `400` en `404` wordt verwezen naar standaard `application/problem+json` responses uit `https://static.developer.overheid.nl/adr/components.yaml`.                                                                                                                                             |
+| `components.schemas`    | Hier worden de bijbehorende schemas gegenereerd. Deze bevatten standaard een `id` property omdat een leeg schema niet valid is. In de volgende stap gaan we deze schemas aanpassen naar onze behoeften.                                                                                                                 |
+| `components.parameters` | Hier worden herbruikbare parameters gegenereerd, zoals de `id` path parameter voor individuele resources.                                                                                                                                                                                                                |
 
 :::tip Handmatige verbeteringen
 
 De generator levert een prima startpunt, maar er zijn nog wat zaken die
-handmatig verbeterd kunnen worden. Zo staat er bijvoorbeeld "Nieuwe bier
-aanmaken" wat in goed Nederlands "Nieuw bier aanmaken" moet zijn. Ook staan er
-`@TODO` placeholders in sommige omschrijvingen. Voor deze tutorial en voor
-ADR-compliancy maakt dit niet uit, maar in een echte API wil je natuurlijk alles
-nalopen en van correcte omschrijvingen voorzien.
+handmatig verbeterd moeten worden. De `servers[0].url` staat bijvoorbeeld nog op
+een `@TODO` placeholder. Die moeten we invullen voordat de OAS volledig voldoet
+aan de API Design Rules. Ook staan er `@TODO` placeholders in sommige
+omschrijvingen. Voor de structuur van deze tutorial maakt dit niet uit, maar in
+een echte API wil je natuurlijk alles nalopen en van correcte omschrijvingen
+voorzien.
 
 :::
 
@@ -167,8 +184,8 @@ nalopen en van correcte omschrijvingen voorzien.
 
 ## Volgende stap
 
-We hebben nu een basis OAS die voldoet aan de ADR, maar de schemas bevatten
-alleen een `id` property. In de volgende stap gaan we de schemas uitbreiden met
-alle velden die we nodig hebben voor onze Bier API.
+We hebben nu een basis OAS. De server URL vullen we later in, en de schemas
+bevatten nu alleen een `id` property. In de volgende stap gaan we de schemas
+uitbreiden met alle velden die we nodig hebben voor onze Bier API.
 
 [Ga naar stap 2: Modelleer de schemas](./2-modelleer-schemas.md)
