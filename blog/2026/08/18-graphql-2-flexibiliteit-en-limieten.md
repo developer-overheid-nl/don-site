@@ -33,7 +33,7 @@ samenstellen? En vooral: hoe stel je daar grenzen aan?
 
 <!-- truncate -->
 
-<!-- TODO bij publicatie: deel 3 en 4 linken zodra die delen verschenen zijn -->
+<!-- TODO bij publicatie: deel 4 linken zodra dat deel verschenen is -->
 
 :::info[GraphQL onder de loep]
 
@@ -41,7 +41,7 @@ Dit artikel is deel 2 van een vierdelige serie:
 
 1. [Een kennismaking](/blog/2026/07/30/graphql-1-introductie)
 2. Flexibel bevragen, en wat dat kost (dit deel)
-3. Zes uitdagingen bij schema-ontwerp (volgt)
+3. [Zes uitdagingen bij schema-ontwerp](/blog/2026/08/26/graphql-3-schema-ontwerp)
 4. Wanneer wel, en wanneer niet? (volgt)
 
 :::
@@ -329,7 +329,7 @@ inzet, plant depth limiting, cost analysis, monitoring per operatie en een
 cachingstrategie daarom in als onderdeel van de basisinrichting, niet als
 optimalisatie achteraf.
 
-In deel 3 <!-- TODO: linken zodra deel 3 is gepubliceerd --> verleggen we de
-blik van runtime naar design-time: wat komt er kijken bij het ontwerpen van een
-goed GraphQL-schema, en waarom blijkt dat in de praktijk lastiger dan de
-voorbeelden doen vermoeden?
+In [deel 3](/blog/2026/08/26/graphql-3-schema-ontwerp) verleggen we de blik van
+runtime naar design-time: wat komt er kijken bij het ontwerpen van een goed
+GraphQL-schema, en waarom blijkt dat in de praktijk lastiger dan de voorbeelden
+doen vermoeden?
