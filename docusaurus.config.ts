@@ -111,24 +111,6 @@ const config: Config & {
       },
     ],
     [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "communities",
-        path: "communities",
-        routeBasePath: "communities",
-        sidebarPath: "./sidebarsCommunities.ts",
-        sidebarItemsGenerator: async ({ docs }) => {
-          // this way we can filter out the index doc
-          return docs
-            .map((doc) => ({ type: "doc", id: doc.id }))
-            .filter((item) => item.id !== "index");
-        },
-        tags: "../tags.yml",
-        onInlineTags: "throw",
-        // ... other options
-      },
-    ],
-    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: loadRedirectsFromCsv(),
@@ -263,6 +245,7 @@ const config: Config & {
             { label: "Alle Standaarden", to: "/kennisbank/standaarden" },
             { label: "Alle Tools", to: "/kennisbank/tools" },
             { label: "Alle Tutorials", to: "/kennisbank/tutorials" },
+            { label: "Alle Communities", to: "/kennisbank/communities" },
             { label: "Alle Artikelen", to: "/kennisbank/alles" },
           ],
         },
@@ -277,38 +260,6 @@ const config: Config & {
           label: "Repositories",
           position: "left",
           target: "_self",
-        },
-        {
-          label: "Communities",
-          position: "left",
-          to: "/communities",
-          items: [
-            { label: "Code for NL", to: "/communities/code-for-nl" },
-            { label: "CommonGround", to: "/communities/common-ground" },
-            { label: "Digilab", to: "/communities/digilab" },
-            { label: "DigiToegankelijk", to: "/communities/digitoegankelijk" },
-            {
-              label: "Federatief Datastelsel",
-              to: "/communities/federatief-datastelsel",
-            },
-            {
-              label: "Gebruiker Centraal",
-              to: "/communities/gebruiker-centraal",
-            },
-            { label: "NL Design System", to: "/communities/nl-design-system" },
-            {
-              label: "Opensourcewerken",
-              to: "/communities/open-source-werken",
-            },
-            {
-              label: "Kennisplatform API's",
-              to: "/communities/kennisplatform-apis",
-            },
-            {
-              label: "Intentieverklaring API Strategie",
-              to: "/communities/kennisplatform-apis/intentieverklaring",
-            },
-          ],
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
@@ -480,7 +431,7 @@ const config: Config & {
     },
     prism: {
       theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
-      additionalLanguages: ["turtle", "java", "go"],
+      additionalLanguages: ["bash", "turtle", "java", "go"],
     },
     colorMode: {
       defaultMode: "light",

@@ -6,7 +6,7 @@ tags:
 
 # PROJECT_GOVERNANCE.md
 
-Voorbeeld van [OSPO-NL](https://github.com/ospo-nl):
+Voorbeeld van OSPO-NL:
 
 ```markdown showLineNumbers title="./PROJECT_GOVERNANCE.md"
 # Project Governance

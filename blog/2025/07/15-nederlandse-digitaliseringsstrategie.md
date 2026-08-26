@@ -85,7 +85,7 @@ Afgesproken is dat de Rijksoverheid, provincies, gemeenten, waterschappen en pub
 
 2. **Data delen**  
    We werken overheidsbreed datagedreven via een
-   [federatief datastelsel](https://developer.overheid.nl/communities/federatief-datastelsel)
+   [federatief datastelsel](/kennisbank/data/communities/federatief-datastelsel)
    met bindende afspraken, om data verantwoord te delen en knelpunten collectief
    op te lossen.
    [externe link](https://www.digitaleoverheid.nl/nederlandse-digitaliseringsstrategie-nds/6-prioriteiten-voor-een-overheid/prioriteit-2-data/)
@@ -152,7 +152,7 @@ Ga gezamenlijk aan de slag om AI te ontwikkelen en gebruik
 ### 🎨 Hergebruik overheidsbrede ontwerpprincipes
 
 Hergebruik overheidsbrede ontwerpprincipes, bijvoorbeeld het
-[NL Design System](https://developer.overheid.nl/kennisbank/front-end/nl-design-system/).
+[NL Design System](https://developer.overheid.nl/kennisbank/front-end/design-systems/nl-design-system/).
 
 ### 🔗 Ontwerp organisatie-overstijgend
 

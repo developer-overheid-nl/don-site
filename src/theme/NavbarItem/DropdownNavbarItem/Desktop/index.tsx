@@ -38,7 +38,7 @@ export default function DropdownNavbarItemDesktop({
     };
   }, [dropdownRef]);
 
-  const labelsWithoutDropdown = ["Kennisbank", "Communities"];
+  const labelsWithoutDropdown = ["Kennisbank"];
   const isSimpleLink =
     typeof props.label === "string" &&
     labelsWithoutDropdown.includes(props.label);
@@ -79,7 +79,7 @@ export default function DropdownNavbarItemDesktop({
         {...props}
         onClick={props.to ? undefined : (e) => e.preventDefault()}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
+          if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             setShowDropdown(!showDropdown);
           }
