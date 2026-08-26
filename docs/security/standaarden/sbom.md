@@ -161,7 +161,7 @@ SPDX is vaak de beste keuze wanneer:
 | VEX-ondersteuning    | Sterk geïntegreerd                | Mogelijk, maar minder centraal |
 | Licentiebeheer       | Goed                              | Uitstekend                     |
 | Gebruik in DevSecOps | Zeer populair                     | Populair                       |
-| ISO-standaard        | ECMA-424                          | ISO/IEC 5962                   |
+| Formele standaardisatie        | ECMA-424                          | ISO/IEC 5962                   |
 
 In de praktijk ondersteunen veel toolingplatformen beide standaarden en is
 conversie vaak mogelijk. De keuze hangt daarom meestal af van het primaire doel:
