@@ -1,3 +1,9 @@
+---
+content_type: community
+tags: [api, kennisplatform-apis]
+title: "Intentieverklaring API Strategie"
+---
+
 # Intentieverklaring API Strategie
 
 In onze visie zal de digitale overheid de komende jaren gegevens en data steeds

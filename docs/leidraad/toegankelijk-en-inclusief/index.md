@@ -107,8 +107,8 @@ Geen bekend.
 
 ### Communities
 
-- [DigiToegankelijk Pleio](/communities/digitoegankelijk#community)
-- [NL Design System](/communities/nl-design-system)
+- [DigiToegankelijk Pleio](/kennisbank/front-end/communities/digitoegankelijk#pleio-community)
+- [NL Design System](/kennisbank/front-end/communities/nl-design-system)
 
 ### Literatuur
 

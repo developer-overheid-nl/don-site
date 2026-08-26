@@ -111,7 +111,7 @@ Geen bekend.
 
 ### Communities
 
-- [Common Ground](/communities/common-ground)
+- [Common Ground](/kennisbank/data/communities/common-ground)
 - [Haven](https://haven.commonground.nl/)
 
 ### Literatuur

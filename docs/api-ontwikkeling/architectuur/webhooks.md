@@ -71,7 +71,7 @@ Veelgebruikte methoden zijn:
 - **HTTPS**: altijd gebruiken om transportbeveiliging te garanderen.
 
 Meer informatie hierover vind je ook in de richtlijnen van de
-[NL API Strategie](https://developer.overheid.nl/communities/kennisplatform-apis/).
+[NL API Strategie](../communities/kennisplatform-apis/index.md).
 
 ## Webhooks en de API-strategie
 
@@ -146,7 +146,7 @@ aanvulling op REST-API’s.
 
 Voor meer informatie:
 
-- [NL API Strategie – Eventgedreven werken](https://developer.overheid.nl/communities/kennisplatform-apis/)
+- [NL API Strategie – Eventgedreven werken](../communities/kennisplatform-apis/index.md)
 - [CloudEvents standaard bij Geonovum](https://www.gemmaonline.nl/wiki/De_CloudEvents_standaard)
 - [Server-sent events wiki](https://en.wikipedia.org/wiki/Server-sent_events)
 - [WebSocket wiki](https://en.wikipedia.org/wiki/WebSocket)

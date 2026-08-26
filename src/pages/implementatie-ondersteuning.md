@@ -88,6 +88,6 @@ Voor vragen of ondersteuning kun je eenvoudig contact opnemen via:
 [api@geonovum.nl](mailto:api@geonovum.nl)
 
 Spreek je ons liever persoonlijk aan dan zijn we altijd aan te spreken bij het
-[Kennisplatform API's](/communities/kennisplatform-apis/).
+[Kennisplatform API's](/kennisbank/api-ontwikkeling/communities/kennisplatform-apis/).
 
 </div>

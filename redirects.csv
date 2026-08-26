@@ -55,4 +55,15 @@ from,to
 /kennisbank/front-end/standaarden/digitoegankelijk/run-axe,/kennisbank/front-end/tools/run-axe
 /kennisbank/front-end/nl-design-system/,/kennisbank/front-end/design-systems/nl-design-system/
 /kennisbank/front-end/nl-design-system/aan-de-slag-met-nl-design-system,/kennisbank/front-end/design-systems/nl-design-system/aan-de-slag-met-nl-design-system
-/kennisplatform-apis,/communities/kennisplatform-apis
+/kennisplatform-apis,/kennisbank/api-ontwikkeling/communities/kennisplatform-apis
+/communities,/kennisbank/communities
+/communities/kennisplatform-apis,/kennisbank/api-ontwikkeling/communities/kennisplatform-apis
+/communities/kennisplatform-apis/intentieverklaring,/kennisbank/api-ontwikkeling/communities/kennisplatform-apis/intentieverklaring
+/communities/common-ground,/kennisbank/data/communities/common-ground
+/communities/digilab,/kennisbank/data/communities/digilab
+/communities/federatief-datastelsel,/kennisbank/data/communities/federatief-datastelsel
+/communities/digitoegankelijk,/kennisbank/front-end/communities/digitoegankelijk
+/communities/gebruiker-centraal,/kennisbank/front-end/communities/gebruiker-centraal
+/communities/nl-design-system,/kennisbank/front-end/communities/nl-design-system
+/communities/code-for-nl,/kennisbank/open-source/communities/code-for-nl
+/communities/open-source-werken,/kennisbank/open-source/communities/open-source-werken
