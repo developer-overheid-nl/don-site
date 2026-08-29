@@ -80,6 +80,7 @@ API's van de overheid te vinden die je kunt hergebruiken.
 
 ### Gerelateerde richtlijnen
 
+- [Richtlijn dependencies bijhouden](richtlijn-dependencies-bijhouden.md).
 - [Richtlijn software beheerst overdragen](richtlijn-software-overdragen.md)
 - [Richtlijn onboarding](richtlijn-onboarding.md)
 
