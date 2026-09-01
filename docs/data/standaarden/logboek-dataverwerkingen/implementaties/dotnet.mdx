@@ -1,0 +1,372 @@
+---
+content_type: standaard
+tags:
+  - ldv
+  - logging
+  - development
+  - otel
+  - csharp
+  - dotnet
+sidebar_position: 1
+sidebar_label: .NET
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# .NET voorbeeldimplementatie
+
+Een voorbeeld hoe [Logboek Dataverwerkingen](../index.md) toe te passen in .NET.
+
+
+## Nieuw project
+
+Maak een nieuw project aan:
+
+```sh
+dotnet new webapi --name LDVExample --output ldv-example-dotnet --no-openapi --use-controllers
+cd ldv-example-dotnet
+```
+
+### Voeg dependency's toe
+
+```sh
+dotnet add package OpenTelemetry --version "[1.18.0, 2.0)"
+dotnet add package OpenTelemetry.Exporter.OpenTelemetryProtocol --version "[1.18.0, 2.0)"
+```
+
+
+## Logboek
+
+### OpenTelemetry
+
+In `LogboekServiceExtensions` wordt een OpenTelemetry Tracer geconfigureerd die alleen voor het registreren van verwerkingen gebruikt wordt.
+
+<Tabs>
+<TabItem value="service" label="LogboekServiceExtensions">
+
+```csharp title="Logboek/LogboekServiceExtensions.cs"
+using System.Diagnostics;
+using System.Reflection;
+using Microsoft.Extensions.Options;
+using OpenTelemetry;
+using OpenTelemetry.Exporter;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
+
+namespace LDVExample.Logboek;
+
+public class LogboekOptions
+{
+    public required Uri Endpoint { get; set; }
+}
+
+public static class LogboekServiceExtensions
+{
+    internal const string ActivitySourceName = "LogboekDataverwerkingen";
+    internal const string ActivitySourceVersion = "0.1.0";
+
+    public static IServiceCollection AddLogboek(this IServiceCollection services, Action<LogboekOptions> configure)
+    {
+        ArgumentNullException.ThrowIfNull(services);
+
+        services.AddOptions<LogboekOptions>()
+            .Configure(configure)
+            .Validate(o =>
+            {
+                return (
+                    o.Endpoint is not null &&
+                    o.Endpoint.IsAbsoluteUri &&
+                    o.Endpoint.Scheme is "http" or "https"
+                );
+            }, "Logboek endpoint must be an absolute url")
+            .ValidateOnStart();
+
+        services.AddKeyedSingleton("logboek", (sp, _) =>
+        {
+            var assemblyName = Assembly.GetExecutingAssembly().GetName();
+            var logboekOptions = sp.GetRequiredService<IOptions<LogboekOptions>>().Value;
+
+            return Sdk.CreateTracerProviderBuilder()
+                .SetResourceBuilder(
+                    ResourceBuilder.CreateEmpty()
+                        .AddService(assemblyName.Name ?? "Unknown", serviceVersion: assemblyName.Version?.ToString())
+                )
+                .SetSampler(new AlwaysOnSampler())
+                .AddOtlpExporter("logboek", options =>
+                    {
+                        options.Endpoint = logboekOptions.Endpoint;
+                        options.Protocol = OtlpExportProtocol.Grpc;
+                        options.ExportProcessorType = ExportProcessorType.Simple;
+                    })
+                .AddSource(ActivitySourceName)
+                .Build();
+        });
+
+        services.AddKeyedSingleton("logboek", new ActivitySource(ActivitySourceName, ActivitySourceVersion));
+
+        services.AddHostedService<LogboekHostedService>();
+
+        return services;
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="hosted" label="LogboekHostedService">
+
+```csharp title="Logboek/LogboekHostedService.cs"
+using OpenTelemetry.Trace;
+
+namespace LDVExample.Logboek;
+
+public class LogboekHostedService(IServiceProvider serviceProvider) : IHostedService
+{
+    public Task StartAsync(CancellationToken cancellationToken)
+    {
+        serviceProvider.GetKeyedService<TracerProvider>("logboek");
+        return Task.CompletedTask;
+    }
+
+    public Task StopAsync(CancellationToken cancellationToken)
+    {
+        return Task.CompletedTask;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+### Registreren van verwerkingen
+
+.NET heeft ingebouwde ondersteuning voor het produceren van telemetriegegevens. De [Activity API](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.activity) is daarvoor beschikbaar. Om eenvoudig verwerkingen te kunnen registreren breiden we `Activity`-class uit met methoden.
+
+<Tabs>
+<TabItem value="activity" label="LogboekActivityExtensions">
+
+```csharp title="Logboek/LogboekActivityExtensions.cs"
+using System.Diagnostics;
+
+namespace LDVExample.Logboek;
+
+public static class LogboekActivityExtensions
+{
+    public static Activity StartLogboekProccessingFromForeignOperation(this ActivitySource source, string name, string activityId, IHeaderDictionary headers)
+    {
+        // Haal de Trace Context op uit de headers van het HTTP-verzoek
+        DistributedContextPropagator.CreateW3CPropagator().ExtractTraceIdAndState(
+            headers,
+            static (carrier, fieldName, out fieldValue, out fieldValues) =>
+                {
+                    fieldValues = default;
+                    var headers = (IHeaderDictionary)carrier!;
+                    fieldValue = headers[fieldName];
+                },
+            out string? traceId,
+            out _
+        );
+
+        Activity? activity;
+
+        if (ActivityContext.TryParse(traceId, null, isRemote: true, out ActivityContext context))
+        {
+           activity = source.CreateActivity(name, ActivityKind.Internal, context);
+        }
+        else
+        {
+            activity = source.CreateActivity(name, ActivityKind.Internal, parentId: "");
+        }
+
+        ArgumentNullException.ThrowIfNull(activity);
+
+        return activity
+            .SetTag(LogboekTags.ActivityId, activityId)
+            .Start();
+    }
+
+    public static Activity StartLogboekProcessing(this ActivitySource source, string name, string activityId)
+    {
+        var activity = source.CreateActivity(name, ActivityKind.Internal);
+        ArgumentNullException.ThrowIfNull(activity);
+
+        return activity
+            .SetTag(LogboekTags.ActivityId, activityId)
+            .Start();
+    }
+
+    public static Activity SetLogboekDataSubject(this Activity activity, string id, string type)
+    {
+        return activity
+            .SetTag(LogboekTags.DataSubjectId, id)
+            .SetTag(LogboekTags.DataSubjectIdType, type);
+    }
+}
+```
+
+</TabItem>
+<TabItem value="tags" label="LogboekTags">
+
+```csharp title="Logboek/LogboekTags.cs"
+namespace LDVExample.Logboek;
+
+/// <summary>
+/// Logboek Dataverkingen attributen
+///
+/// <see href="https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/#attributes"/>
+/// </summary>
+public static class LogboekTags
+{
+    public const string ActivityId = "dpl.core.processing_activity_id";
+
+    public const string DataSubjectId = "dpl.core.data_subject_id";
+
+    public const string DataSubjectIdType = "dpl.core.data_subject_id_type";
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Attribuut
+
+Met een attribuut kunnen we eenvoudig verwerkingen registreren.
+
+```csharp title="Logboek/LogboekProcessingAttribute.cs"
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+namespace LDVExample.Logboek;
+
+[AttributeUsage(AttributeTargets.Method)]
+public class LogboekProcessingAttribute : ActionFilterAttribute
+{
+    private const string RequestScopeKey = "__LogboekActivity";
+
+    public LogboekProcessingAttribute(string name, string activityId)
+    {
+        Name = name;
+        ActivityId = activityId;
+    }
+
+    public string Name { get; }
+
+    public string ActivityId { get; }
+
+    public bool FromForeign { get; set; } = false;
+
+    public override void OnActionExecuting(ActionExecutingContext context)
+    {
+        var source = context.HttpContext.RequestServices.GetRequiredKeyedService<ActivitySource>("logboek");
+        var activity = FromForeign ?
+            source.StartLogboekProccessingFromForeignOperation(Name, ActivityId, context.HttpContext.Request.Headers) :
+            source.StartLogboekProcessing(Name, ActivityId);
+
+        context.HttpContext.Items[RequestScopeKey] = activity;
+    }
+
+    public override void OnActionExecuted(ActionExecutedContext context)
+    {
+        if (context.HttpContext.Items[RequestScopeKey] is not Activity activity)
+        {
+            throw new InvalidOperationException("Missing Activity in request scope");
+        }
+
+        if (context.Exception is not null)
+        {
+            activity.SetStatus(ActivityStatusCode.Error, context.Exception.Message);
+        }
+        else
+        {
+            activity.SetStatus(ActivityStatusCode.Ok);
+        }
+
+        activity.Dispose();
+    }
+}
+```
+
+
+## Applicatie
+
+### Logboek configureren
+
+Voeg de Logboek-extentie toe en configureer de endpoint-URL.
+
+```csharp title="Program.cs"
+using LDVExample.Logboek;
+
+// ... bestaande code ...
+
+builder.Services.AddLogboek(options =>
+    {
+        options.Endpoint = new Uri("http://127.0.0.1:4317");
+    }
+);
+```
+
+
+### Verwerkingen definiëren
+
+Alles komt nu samen in `PersonsController`.
+
+De gemarkeerde regels laten zien hoe het `LogboekProcessing`-attribuut, en de toevoegingen aan de `ActivitySource`- en `Activity`-class gebruikt kunnen worden.
+
+```csharp {13,22-23} title="Controllers/PersonsController.cs"
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using LDVExample.Logboek;
+
+namespace LDVExample.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class PersonsController([FromKeyedServices("logboek")] ActivitySource activitySource) : ControllerBase
+{
+    [HttpGet("{bsn}/is-minimal-18-years-old")]
+    [Produces("application/json")]
+    [LogboekProcessing("check_18_or_over", "urn:ldv:activity:1407", FromForeign = true)]
+    public ActionResult<Dictionary<string, object>> IsMinimal18YearsOld(string bsn)
+    {
+        var is18OrOver = PersonIs18OrOver(bsn);
+        return Ok(new Dictionary<string, object> { ["is_18_or_over"] = is18OrOver });
+    }
+
+    private bool PersonIs18OrOver(string bsn)
+    {
+        using var activity = activitySource.StartLogboekProcessing("fetch_date_of_birth", "urn:ldv:activity:1550");
+        activity.SetLogboekDataSubject(bsn, "BSN");
+
+        // Simuleer het ophalen van de geboortedatum
+        Thread.Sleep(42);
+
+        activity.SetStatus(ActivityStatusCode.Ok);
+        return true;
+    }
+}
+```
+
+
+### Applicatie starten
+
+Start nu de applicatie:
+
+```sh
+dotnet run --urls http://127.0.0.1:8080
+```
+
+Roep de API aan:
+
+```sh
+curl http://127.0.0.1:8080/persons/999990342/is-minimal-18-years-old
+```
+
+De verwerkingen zijn nu naar het logboek geschreven.
+
+
+### Logboek inzien
+
+Als je de [OpenTelemetry viewer](otel-viewer.mdx) gebruikt kun je de twee verwerkingen in het logboek zien.
