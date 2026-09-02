@@ -1,5 +1,25 @@
 # @developer-overheid-nl/website
 
+## 1.13.0
+
+### Minor Changes
+
+- 9b19e82: Update tutorial on adding publiccode.yml, refer to 0.7 version
+- bd1ac4a: Move communities into the kennisbank themes as a Communities
+  subcategory and remove Communities from the main menu
+- 1f27f74: Refresh the agenda with developer-focused events through December
+  2026, and drop events that have already taken place
+- e8a8ca5: Publish GraphQL blog series part 3
+- 22059ef: Publish GraphQL blog series part 4
+- 79f8b68: Publish blog post about the Beslisboom Open Standaarden
+
+### Patch Changes
+
+- 6972416: Fix CVEs by patching browserslist to 4.28.8, updating the lockfile,
+  and running pnpm audit at moderate level in CI
+- 6408e6b: Update dotenv, Algolia Search Helper, axe CLI and TypeScript,
+  including the TypeScript 7 configuration migration.
+
 ## 1.12.0
 
 ### Minor Changes
