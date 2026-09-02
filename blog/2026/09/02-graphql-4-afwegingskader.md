@@ -1,5 +1,4 @@
 ---
-draft: true
 authors: [joost-farla]
 tags: [api, api-design, graphql, rest, adr, adoptie, orkestratie, fsc]
 image: /img/graphql-onder-de-loep.jpg
