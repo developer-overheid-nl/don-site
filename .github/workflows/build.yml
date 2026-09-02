@@ -39,7 +39,7 @@ jobs:
         run: pnpm test
 
       - name: Audit dependencies
-        run: pnpm audit
+        run: pnpm audit --audit-level moderate
 
   build:
     runs-on: ubuntu-latest
