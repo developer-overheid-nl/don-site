@@ -1,222 +1,70 @@
 [
   {
-    "title": "Lunchbreaksessie: AI Debat Assistent",
-    "start_date": "2026-01-27T12:00:00+01:00",
-    "end_date": "2026-01-27T13:00:00+01:00",
-    "place": "Online",
-    "summary": "AI lunchbreaksessie met gastspreker Jurriaan Raaijmakers (BZK) over de AI Debat Assistent. Verdiep je in AI en de overheid en ontmoet AI-professionals uit andere overheidsorganisaties.",
-    "url": "https://platformaioverheid.nl/event/ai-lunchbreaksessie-jurriaan-raaijmakers-vanuit-het-ministerie-van-bzk-over-de-ai-debat-assistent/"
+    "title": "PGDay Lowlands 2026",
+    "start_date": "2026-09-10T09:00:00+02:00",
+    "end_date": "2026-09-10T17:00:00+02:00",
+    "place": "TivoliVredenburg, Utrecht",
+    "summary": "PostgreSQL-conferentie van PostgreSQL Europe, voor developers en databaseprofessionals. Met sprekers, netwerken en een testing challenge.",
+    "url": "https://2026.pgday.nl/"
   },
   {
-    "title": "Webinar: Hoe publiceer je als overheid broncode?",
-    "start_date": "2026-01-28T12:00:00+01:00",
-    "end_date": "2026-01-28T13:00:00+01:00",
-    "place": "Online",
-    "summary": "Webinar over broncode publiceren als overheid vanuit het perspectief van opensourcewerken. Met Anne Jan Brouwer (VWS) en Marlena van Ooijen (Logius).",
-    "url": "https://www.it-academieoverheid.nl/actueel/agenda/2026/01/28/radio-webinar-broncode-publiceren"
-  },
-  {
-    "title": "Webinar: De Cyberbeveiligingswet komt eraan",
-    "start_date": "2026-01-29T11:00:00+01:00",
-    "end_date": "2026-01-29T12:00:00+01:00",
-    "place": "Online",
-    "summary": "Webinar van NCSC en NCTV over de Cyberbeveiligingswet. Focus op zorgplicht, bestuurlijke verantwoordelijkheid en opleidingsplicht. Leer hoe je een risicoanalyse maakt en passende technische en organisatorische maatregelen neemt.",
-    "url": "https://www.formdesk.com/ncsc/WebinarCbw2"
-  },
-  {
-    "title": "Symposium Digitale Vertalingen",
-    "start_date": "2026-01-29T13:00:00+01:00",
-    "end_date": "2026-01-29T17:15:00+01:00",
-    "place": "Hogeschool van Amsterdam, Amsterdam",
-    "summary": "Middag over het verantwoord, rechtmatig en effectief vertalen van rechtsregels naar digitale systemen in de publieke sector. Uitwisseling tussen praktijk, onderzoek en onderwijs staat centraal.",
-    "url": "https://www.it-academieoverheid.nl/actueel/agenda/2026/01/29/symposium-digitale-vertalingen"
-  },
-  {
-    "title": "Open Dialoog NDS Cloud",
-    "start_date": "2026-01-29T14:45:00+01:00",
-    "end_date": "2026-01-29T18:00:00+01:00",
-    "place": "Rijkswaterstaat, Utrecht",
-    "summary": "Derde Open Dialoog over de vormgeving van een overheidsbrede soevereine clouddienst en bijbehorende marktplaats. Voor cloudleveranciers, integrators, SaaS-leveranciers en adviseurs op cloudgebied.",
-    "url": "https://open-dialoog-nds-cloud-2026.yellenge.nl/registration/#/participants"
-  },
-  {
-    "title": "Workshop OGC API - Intro en Features",
-    "start_date": "2026-02-04T10:00:00+01:00",
-    "end_date": "2026-02-04T16:00:00+01:00",
+    "title": "Workshop OGC Sensor API's basis",
+    "start_date": "2026-09-10T10:00:00+02:00",
+    "end_date": "2026-09-10T16:00:00+02:00",
     "place": "Geonovum, Amersfoort",
-    "summary": "Workshop over OGC API standaarden. Je leert hoe je geografische informatie kunt uitwisselen en integreren binnen QGIS-software en gaat aan de slag met de OGC API Features standaard. Met OGC API's heb je geen specifieke geo-kennis of tooling nodig om geodata te verwerken.",
-    "url": "https://www.geonovum.nl/agenda/workshop-ogc-api-intro-en-features"
+    "summary": "Introductieworkshop over de OGC SensorThings API voor het werken met sensordata.",
+    "url": "https://www.geonovum.nl/agenda/workshop-ogc-sensor-apis-basis"
   },
   {
-    "title": "Demodag Digitale Overheid",
-    "start_date": "2026-02-12T10:00:00+01:00",
-    "end_date": "2026-02-12T17:00:00+01:00",
-    "place": "Fokker Terminal, Den Haag",
-    "summary": "Maak kennis met innovatieve projecten die bijdragen aan een slimme digitale overheid. Projecten uit het Innovatiebudget en andere innovatie-instrumenten van BZK krijgen een podium.",
-    "url": "https://demodag-innovatiebudget.yellenge.nl/registration/#/participants"
-  },
-  {
-    "title": "Uitvoering geven aan de Wdo",
-    "start_date": "2026-02-19T10:00:00+01:00",
-    "end_date": "2026-02-19T11:00:00+01:00",
+    "title": "Online lunchsessie: wat is Gemeenschappelijke Bronontsluiting?",
+    "start_date": "2026-09-10T12:00:00+02:00",
+    "end_date": "2026-09-10T13:00:00+02:00",
     "place": "Online",
-    "summary": "Online sessie over uitvoering geven aan de Wet digitale overheid en het veilig gebruiken van het Stelsel Toegang. Leer hoe publieke dienstverleners veilig en eenvoudig gebruik kunnen maken van erkende inlog- en machtigingsdiensten.",
-    "url": "https://stelseltoegang.pleio.nl/events/view/a6ad9fa4-09bd-4ae6-a184-27883628a0d3/online-informatiesessie-uitvoering-geven-aan-de-wdo-de-essentie-van-het-stelsel-toegang"
+    "summary": "Over het programma Gemeenschappelijke Bronontsluiting (GBO): de aanleiding, hoe het bronhouders helpt, de aansluiting op bestaande afsprakenstelsels en de technische documentatie.",
+    "url": "https://www.digitaleoverheid.nl/evenementen/online-lunchsessie-wat-is-gemeenschappelijke-bronontsluiting/"
   },
   {
-    "title": "De Digital Twin van de Planketen",
-    "start_date": "2026-03-03T09:30:00+01:00",
-    "end_date": "2026-03-03T17:30:00+01:00",
-    "place": "Prodentfabriek, Amersfoort",
-    "summary": "Community-dag over digitale tweelingen in de planketen. Beleid, praktijk en technologie rond digital twins voor de fysieke leefomgeving komen samen. Georganiseerd door ministerie VRO, DMI, VNG, Geonovum en GeoSquare KennisKring.",
-    "url": "https://www.geonovum.nl/agenda/de-digital-twin-van-de-planketen"
-  },
-  {
-    "title": "Conferentie Rules as Code 2026",
-    "start_date": "2026-03-10T09:00:00+01:00",
-    "end_date": "2026-03-11T17:00:00+01:00",
-    "place": "The Hague Conference Centre, Den Haag",
-    "summary": "Tweedaagse conferentie over Rules as Code: wet- en regelgeving omzetten in machineleesbare vorm. Internationale keynotes, praktische workshops en de nieuwste tools en methoden om regels direct te integreren in digitale systemen.",
-    "url": "https://rules-as-code.yellenge.nl/"
-  },
-  {
-    "title": "RADIO Techpeditie naar SAP (Den Bosch)",
-    "start_date": "2026-03-12T12:30:00+01:00",
-    "end_date": "2026-03-12T17:30:00+01:00",
-    "place": "SAP, Den Bosch",
-    "summary": "Werkbezoek aan SAP over de impact van digitalisering, informatisering en AI op de publieke sector. Inspiratiesessies over AI-waarde en digitale innovatie in de praktijk. Thema's: beleid-naar-uitvoering, grip door digitalisering, internationale best practices.",
-    "url": "https://www.formdesk.com/BZK/Techpeditie_SAP"
-  },
-  {
-    "title": "Kennisplatform API's",
-    "start_date": "2026-03-18T12:00:00+01:00",
-    "end_date": "2026-03-18T16:30:00+01:00",
-    "place": "Meetup Utrecht (boven Beatrixtheater)",
-    "summary": "Kennissessie over het ontwikkelen en inzetten van API's bij de overheid. Updates over de laatste ontwikkelingen, parallelle sessies over specifieke thema's en netwerkmogelijkheden met API-professionals.",
-    "url": "https://www.geonovum.nl/agenda/kennisplatform-apis-0"
-  },
-  {
-    "title": "Demo Day Startup in Residence Intergov",
-    "start_date": "2026-03-26T09:00:00+01:00",
-    "end_date": "2026-03-26T17:00:00+01:00",
-    "place": "Locatie volgt",
-    "summary": "16 start-ups pitchen hun co-creaties met overheidspartners. Ontdek concrete oplossingen voor maatschappelijke opgaven, ervaar publiek-private samenwerking en ontmoet changemakers, innovators en beleidsmakers.",
-    "url": "https://www.intergov.nl/"
-  },
-  {
-    "title": "Conferentie Gebruiker Centraal 2026",
-    "start_date": "2026-03-27T10:00:00+01:00",
-    "end_date": "2026-03-27T17:00:00+01:00",
-    "place": "Koepelgevangenis, Arnhem",
-    "summary": "Conferentie over mensvaardiger werken bij de overheid. Voor iedereen die werkt aan dienstverlening en communicatie van de overheid. Dag vol ontmoeting, interactie en inspiratie over gebruikersgerichte digitale dienstverlening.",
-    "url": "https://www.gebruikercentraal.nl/agenda/conferentie-gebruiker-centraal-2026/"
-  },
-  {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
-    "start_date": "2026-03-27T10:00:00+01:00",
-    "end_date": "2026-03-27T17:30:00+01:00",
-    "place": "The Hague Tech, Den Haag",
-    "summary": "Maandelijkse co-werkdag voor professionals op het snijvlak van overheid, technologie en publieke waarde. Bijeenkomst voor overheidsmedewerkers, beleidsmakers, developers, datawetenschappers, GovTech-startups en onderzoekers om samen te werken, kennis te delen en de digitale transformatie te versnellen.",
-    "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
-  },
-  {
-    "title": "Leveranciersoverleg Wro plansoftware en overgangsrecht",
-    "start_date": "2026-04-21T16:00:00+02:00",
-    "end_date": "2026-04-21T17:00:00+02:00",
-    "place": "Geonovum, Amersfoort",
-    "summary": "Overleg voor softwareleveranciers over de toepassing van de Wro plansoftware door bevoegde gezagen in het kader van overgangsrecht Omgevingswet.",
-    "url": "https://www.geonovum.nl/agenda/leveranciersoverleg-wro-plansoftware-en-overgangsrecht-0"
-  },
-  {
-    "title": "developer.overheid.nl update",
-    "start_date": "2026-04-22T16:00:00+02:00",
-    "end_date": "2026-04-22T17:00:00+02:00",
+    "title": "social.overheid.nl (Mastodon) gebruikersgroep",
+    "start_date": "2026-09-10T13:30:00+02:00",
+    "end_date": "2026-09-10T15:00:00+02:00",
     "place": "Online",
-    "summary": "Na het geslaagde event #zoBouwenWijSoftwareBijDeOverheid in december, met een erg mooie opkomst, gaan we door. We beginnen met een developer.overheid.nl update op 22 april.",
-    "url": "https://opensourcewerken.nl/events/view/a2ed7f2f-4141-4a12-9cd0-87294e014b9d/developeroverheidnl-update"
+    "summary": "Maandelijkse gebruikersgroep rond social.overheid.nl, de Mastodon-instantie van de overheid.",
+    "url": "https://opensourcewerken.nl/events/view/0e958df2-b3e8-4a2f-8523-d0fb1db72335/socialoverheidnl-mastodon-gebruikersgroep-september"
   },
   {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
-    "start_date": "2026-04-24T10:00:00+02:00",
-    "end_date": "2026-04-24T17:30:00+02:00",
-    "place": "The Hague Tech, Den Haag",
-    "summary": "Maandelijkse co-werkdag voor professionals op het snijvlak van overheid, technologie en publieke waarde. Bijeenkomst voor overheidsmedewerkers, beleidsmakers, developers, datawetenschappers, GovTech-startups en onderzoekers om samen te werken, kennis te delen en de digitale transformatie te versnellen.",
-    "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
+    "title": "Community call: werken aan publieke code",
+    "start_date": "2026-09-14T12:15:00+02:00",
+    "end_date": "2026-09-14T13:15:00+02:00",
+    "place": "Hybride, Common Ground Fieldlab",
+    "summary": "Community call over het werken aan publieke code.",
+    "url": "https://opensourcewerken.nl/events/view/66e74cdc-5072-4444-b2b4-d6b3fe52bf67/community-call-werken-aan-publieke-code"
   },
   {
-    "title": "Open Geodag 2026",
-    "start_date": "2026-05-12T09:00:00+02:00",
-    "end_date": "2026-05-12T17:00:00+02:00",
-    "place": "Locatie volgt",
-    "summary": "Tweejaarlijks event van Geonovum over geo-standaarden en databedreven werken. Kennissessies, workshops over OGC API's, presentaties over Zicht op Nederland en netwerkmogelijkheden voor de geo-community.",
-    "url": "https://www.geonovum.nl/agenda/open-geodag-2026"
+    "title": "Congres: Forum Standaardisatie 20 jaar",
+    "start_date": "2026-09-21T09:30:00+02:00",
+    "end_date": "2026-09-21T17:30:00+02:00",
+    "place": "Gooiland, Hilversum",
+    "summary": "Congres over standaarden, openheid en autonomie, met keynotes, een panelgesprek over soevereiniteit en infrastructuur, en de uitreiking van de Gouden API.",
+    "url": "https://www.digitaleoverheid.nl/evenementen/congres-forum-standaardisatie-20-jaar/"
   },
   {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
-    "start_date": "2026-05-22T10:00:00+02:00",
-    "end_date": "2026-05-22T17:30:00+02:00",
-    "place": "The Hague Tech, Den Haag",
-    "summary": "Maandelijkse co-werkdag voor professionals op het snijvlak van overheid, technologie en publieke waarde. Bijeenkomst voor overheidsmedewerkers, beleidsmakers, developers, datawetenschappers, GovTech-startups en onderzoekers om samen te werken, kennis te delen en de digitale transformatie te versnellen.",
-    "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
+    "title": "Testbed Sensordata: eindpresentatie",
+    "start_date": "2026-09-22T13:00:00+02:00",
+    "end_date": "2026-09-22T15:00:00+02:00",
+    "place": "Online",
+    "summary": "Laatste publieke sessie met de resultaten van het Testbed Sensordata.",
+    "url": "https://www.geonovum.nl/agenda/testbed-sensordata-final-presentation"
   },
   {
-    "title": "RADIO Techpeditie naar Netcompany (Den Haag)",
-    "start_date": "2026-06-04T12:30:00+02:00",
-    "end_date": "2026-06-04T17:00:00+02:00",
-    "place": "Netcompany, Den Haag",
-    "summary": "Werkbezoek aan Netcompany, medebouwer van het Europese prototype van de Digitale Wallet. Wissel van gedachten over strategische kansen, nationale en Europese ontwikkelingen en concrete toepassingen voor digitale zelfbeschikking.",
-    "url": "https://www.formdesk.com/BZK/Techpeditie_Netcompany"
+    "title": "Meet-up EDI-stelsel en BLSP",
+    "start_date": "2026-09-23T12:45:00+02:00",
+    "end_date": "2026-09-23T18:00:00+02:00",
+    "place": "Nieuwe Luxor Theater, Rotterdam",
+    "summary": "Bijeenkomst over de laatste ontwikkelingen in het EDI-stelsel en de Large Scale Pilots, met plenaire sessies, praktische workshops en netwerken met Europese collega's.",
+    "url": "https://www.digitaleoverheid.nl/evenementen/meet-up-edi-stelsel-en-blsp/"
   },
   {
-    "title": "Common Ground Congres",
-    "start_date": "2026-06-08T09:30:00+02:00",
-    "end_date": "2026-06-08T17:30:00+02:00",
-    "place": "NBC Nieuwegein, Nieuwegein",
-    "summary": "Congres voor gemeenten over de doorontwikkeling van Common Ground naar een gezamenlijk beheerde voorziening. Het programmateam gaat in op de voorziening, regieorganisatie en de business case. Gemeenten als Utrecht, Eindhoven en Leeuwarden delen hun aanpak en resultaten.",
-    "url": "https://commonground.nl/events/view/919890aa-dd01-488c-bbba-8d6c197e9b0f/common-ground-congres-8-juni-2026"
-  },
-  {
-    "title": "developer.overheid.nl meetup: Samen. Beter. Bouwen.",
-    "start_date": "2026-06-17T12:30:00+02:00",
-    "end_date": "2026-06-17T16:00:00+02:00",
-    "place": "Meetup Utrecht, Utrecht",
-    "summary": "Fysieke meetup voor iedereen die betrokken is bij of interesse heeft in het bouwen van software binnen de overheid. Met talks, demo's, nieuwe features en een roadmap-update. Na afloop borrel in Ruig.",
-    "url": "https://opensourcewerken.nl/events/view/28756611-d38b-40c1-8f87-4ac8433831dd/developeroverheidnl-meetup"
-  },
-  {
-    "title": "CIO-dag 2026",
-    "start_date": "2026-06-24T12:00:00+02:00",
-    "end_date": "2026-06-24T17:00:00+02:00",
-    "place": "Amare, Den Haag",
-    "summary": "Vijfde editie van de CIO-dag met interbestuurlijk karakter. Sessies en workshops over NDS-prioriteiten, informatiehuishouding, privacy, innovatie en duurzaamheid. Voor CIO's, CISO's, CTO's en digitaliseringsprofessionals bij de overheid.",
-    "url": "https://www.formdesk.com/AenO/interesse-cio-dag"
-  },
-  {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
-    "start_date": "2026-06-26T10:00:00+02:00",
-    "end_date": "2026-06-26T17:30:00+02:00",
-    "place": "The Hague Tech, Den Haag",
-    "summary": "Maandelijkse co-werkdag voor professionals op het snijvlak van overheid, technologie en publieke waarde. Bijeenkomst voor overheidsmedewerkers, beleidsmakers, developers, datawetenschappers, GovTech-startups en onderzoekers om samen te werken, kennis te delen en de digitale transformatie te versnellen.",
-    "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
-  },
-  {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
-    "start_date": "2026-07-24T10:00:00+02:00",
-    "end_date": "2026-07-24T17:30:00+02:00",
-    "place": "The Hague Tech, Den Haag",
-    "summary": "Maandelijkse co-werkdag voor professionals op het snijvlak van overheid, technologie en publieke waarde. Bijeenkomst voor overheidsmedewerkers, beleidsmakers, developers, datawetenschappers, GovTech-startups en onderzoekers om samen te werken, kennis te delen en de digitale transformatie te versnellen.",
-    "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
-  },
-  {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
-    "start_date": "2026-08-28T10:00:00+02:00",
-    "end_date": "2026-08-28T17:30:00+02:00",
-    "place": "The Hague Tech, Den Haag",
-    "summary": "Maandelijkse co-werkdag voor professionals op het snijvlak van overheid, technologie en publieke waarde. Bijeenkomst voor overheidsmedewerkers, beleidsmakers, developers, datawetenschappers, GovTech-startups en onderzoekers om samen te werken, kennis te delen en de digitale transformatie te versnellen.",
-    "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
-  },
-  {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
+    "title": "CrossGov Monthly Meetup - GovTech Co-Working Day @ The Hague Tech",
     "start_date": "2026-09-25T10:00:00+02:00",
     "end_date": "2026-09-25T17:30:00+02:00",
     "place": "The Hague Tech, Den Haag",
@@ -224,7 +72,71 @@
     "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
   },
   {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
+    "title": "DrupalCon Rotterdam",
+    "start_date": "2026-09-28T09:00:00+02:00",
+    "end_date": "2026-10-01T17:00:00+02:00",
+    "place": "WTC Rotterdam",
+    "summary": "Europese Drupal-conferentie voor developers, met sessies, sprints en netwerken.",
+    "url": "https://opensourcewerken.nl/events/view/e3ceac26-2891-4e04-b993-fffc5065579c/drupalcon-rotterdam"
+  },
+  {
+    "title": "Geonovum Plugfest no 2",
+    "start_date": "2026-09-28T10:00:00+02:00",
+    "end_date": "2026-09-28T15:00:00+02:00",
+    "place": "Nog te bepalen",
+    "summary": "Tweede Plugfest van dit jaar, waarin implementaties van standaarden onderling worden beproefd.",
+    "url": "https://www.geonovum.nl/agenda/geonovum-plugfest-no-2"
+  },
+  {
+    "title": "JSON-FG in practice",
+    "start_date": "2026-09-29T10:00:00+02:00",
+    "end_date": "2026-09-29T13:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Vervolgbijeenkomst over de OGC-standaard Features and Geometries JSON.",
+    "url": "https://www.geonovum.nl/agenda/json-fg-in-practice"
+  },
+  {
+    "title": "Workshop OGC API - Tiles & Styles",
+    "start_date": "2026-09-30T10:00:00+02:00",
+    "end_date": "2026-09-30T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Workshop met praktische oefeningen op OGC API Tiles en OGC API Styles.",
+    "url": "https://www.geonovum.nl/agenda/workshop-ogc-api-tiles-styles"
+  },
+  {
+    "title": "DigiToegankelijk Roadshow Assen",
+    "start_date": "2026-10-02T09:30:00+02:00",
+    "end_date": "2026-10-02T13:00:00+02:00",
+    "place": "Provincie Drenthe, Assen",
+    "summary": "Praktische kennis en voorbeelden op het gebied van digitale toegankelijkheid, met plenaire sessies en interactieve workshops voor uiteenlopende niveaus.",
+    "url": "https://www.digitaleoverheid.nl/evenementen/digitoegankelijk-roadshow-assen/"
+  },
+  {
+    "title": "ONE Conference",
+    "start_date": "2026-10-06T09:00:00+02:00",
+    "end_date": "2026-10-07T17:00:00+02:00",
+    "place": "Den Haag",
+    "summary": "Europees cybersecurity-congres voor professionals uit bedrijfsleven, wetenschap en overheid, met kennisdeling, best practices en onderzoeksresultaten.",
+    "url": "https://one-conference.nl/"
+  },
+  {
+    "title": "Open Source Summit Europe",
+    "start_date": "2026-10-07T09:00:00+02:00",
+    "end_date": "2026-10-09T17:00:00+02:00",
+    "place": "Praag, Tsjechië",
+    "summary": "Conferentie van de Linux Foundation voor developers en maintainers in de open source-gemeenschap, met elf inhoudelijke tracks.",
+    "url": "https://events.linuxfoundation.org/open-source-summit-europe/"
+  },
+  {
+    "title": "Workshop Intro OGC API's en API Features",
+    "start_date": "2026-10-07T10:00:00+02:00",
+    "end_date": "2026-10-07T16:00:00+02:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Praktische oefeningen in de OGC API's voor geografische informatie, met de nadruk op API Features.",
+    "url": "https://www.geonovum.nl/agenda/workshop-intro-ogc-apis-en-api-features-0"
+  },
+  {
+    "title": "CrossGov Monthly Meetup - GovTech Co-Working Day @ The Hague Tech",
     "start_date": "2026-10-23T10:00:00+02:00",
     "end_date": "2026-10-23T17:30:00+02:00",
     "place": "The Hague Tech, Den Haag",
@@ -232,19 +144,75 @@
     "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
   },
   {
-    "title": "Leveranciersoverleg Wro plansoftware en overgangsrecht",
-    "start_date": "2026-11-03T16:00:00+01:00",
-    "end_date": "2026-11-03T17:00:00+01:00",
-    "place": "Geonovum, Amersfoort",
-    "summary": "Overleg voor softwareleveranciers over de toepassing van de Wro plansoftware door bevoegde gezagen in het kader van overgangsrecht Omgevingswet.",
-    "url": "https://www.geonovum.nl/agenda/leveranciersoverleg-wro-plansoftware-en-overgangsrecht"
+    "title": "De Design Systems Week",
+    "start_date": "2026-10-26T09:00:00+01:00",
+    "end_date": "2026-10-29T17:00:00+01:00",
+    "place": "Online",
+    "summary": "Gratis online event voor front-end developers, UX'ers, specialisten webtoegankelijkheid en contentmakers die werken aan toegankelijke digitale dienstverlening voor de overheid.",
+    "url": "https://www.digitaleoverheid.nl/evenementen/de-design-systems-week/"
   },
   {
-    "title": "CrossGov Monthly Meetup – GovTech Co-Working Day @ The Hague Tech",
+    "title": "Geonovum Plugfest no 3",
+    "start_date": "2026-10-27T10:00:00+01:00",
+    "end_date": "2026-10-27T15:00:00+01:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Derde Plugfest van dit jaar, waarin implementaties van standaarden onderling worden beproefd.",
+    "url": "https://www.geonovum.nl/agenda/geonovum-plugfest-no-3"
+  },
+  {
+    "title": "Tweakers Developers Summit 2026",
+    "start_date": "2026-10-28T09:00:00+01:00",
+    "end_date": "2026-10-28T17:00:00+01:00",
+    "place": "DeFabrique, Utrecht",
+    "summary": "Evenement voor softwareontwikkelaars met keynotes en in-depth talks over innovatieve tech, met ruimte voor kennisdeling en netwerken.",
+    "url": "https://www.tweakersdevsummit.nl/"
+  },
+  {
+    "title": "Workshop OGC API 3D Tiles",
+    "start_date": "2026-11-12T10:00:00+01:00",
+    "end_date": "2026-11-12T16:00:00+01:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Workshop met praktische oefeningen op de 3D Tiles-standaard.",
+    "url": "https://www.geonovum.nl/agenda/ogc-api-3d-tiles"
+  },
+  {
+    "title": "Testbed 2026 fase 2: eindpresentatie",
+    "start_date": "2026-11-23T10:00:00+01:00",
+    "end_date": "2026-11-23T12:00:00+01:00",
+    "place": "Online",
+    "summary": "Publieke sessie over de resultaten van fase 2 van het testbed 2026.",
+    "url": "https://www.geonovum.nl/agenda/testbed-2026-phase-2-final-presentation"
+  },
+  {
+    "title": "Hoe maken we geografische informatie toegankelijk?",
+    "start_date": "2026-11-25T13:00:00+01:00",
+    "end_date": "2026-11-25T16:00:00+01:00",
+    "place": "Utrecht",
+    "summary": "Bijeenkomst van Gebruiker Centraal en Geonovum over de rol van standaarden, ontwerpkeuzes en techniek bij toegankelijke geo-informatie.",
+    "url": "https://www.geonovum.nl/agenda/hoe-maken-we-geografische-informatie-toegankelijk"
+  },
+  {
+    "title": "CrossGov Monthly Meetup - GovTech Co-Working Day @ The Hague Tech",
     "start_date": "2026-11-27T10:00:00+01:00",
     "end_date": "2026-11-27T17:30:00+01:00",
     "place": "The Hague Tech, Den Haag",
     "summary": "Maandelijkse co-werkdag voor professionals op het snijvlak van overheid, technologie en publieke waarde. Bijeenkomst voor overheidsmedewerkers, beleidsmakers, developers, datawetenschappers, GovTech-startups en onderzoekers om samen te werken, kennis te delen en de digitale transformatie te versnellen.",
     "url": "https://www.eventbrite.nl/e/crossgov-monthly-meetup-govtech-co-working-day-the-hague-tech-tickets-1984124392469"
+  },
+  {
+    "title": "DigiToegankelijk Roadshow Maastricht",
+    "start_date": "2026-12-09T09:30:00+01:00",
+    "end_date": "2026-12-09T13:00:00+01:00",
+    "place": "Gouvernement aan de Maas, Maastricht",
+    "summary": "Praktische kennis en voorbeelden op het gebied van digitale toegankelijkheid, met plenaire sessies en workshops voor verschillende kennisniveaus.",
+    "url": "https://www.digitaleoverheid.nl/evenementen/digitoegankelijk-roadshow-maastricht/"
+  },
+  {
+    "title": "Workshop OGC Sensor API's voor gevorderden",
+    "start_date": "2026-12-09T10:00:00+01:00",
+    "end_date": "2026-12-09T16:00:00+01:00",
+    "place": "Geonovum, Amersfoort",
+    "summary": "Verdiepende workshop over het implementeren van de OGC SensorThings API.",
+    "url": "https://www.geonovum.nl/agenda/workshop-ogc-sensor-apis-voor-gevorderden"
   }
 ]
