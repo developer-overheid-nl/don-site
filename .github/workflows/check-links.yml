@@ -4,8 +4,8 @@ on:
   pull_request:
   push:
   workflow_dispatch:
-  schedule:
-    - cron: "0 5 * * *"
+  # schedule:
+  #   - cron: "0 5 * * *"
 
 jobs:
   check-links:
@@ -25,7 +25,7 @@ jobs:
       - name: Run Linkinator to check links
         uses: JustinBeckwith/linkinator-action@f62ba0c110a76effb2ee6022cc6ce4ab161085e3
         with:
-          paths: "build/index.html"
+          paths: "build"
           recurse: true
           cleanUrls: true
           config: "./linkinator.config.json"

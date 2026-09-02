@@ -44,8 +44,7 @@ versienummer en we bezig zijn met versie 1.0 van de API, plakken we `/v1`
 erachter. De waarde van de server `url` wordt dus:
 `https://api.bieren.nepdomein/v1`. Zodra je dit hebt aangepast meldt de checker:
 
-> [https://logius-standaarden.github.io/API-Design-Rules/2.0] No violations
-> found.
+> [https://logius-standaarden.github.io/API-Design-Rules/] No violations found.
 
 <details>
   <summary>De spec zou er op dit moment zo uit moeten zien</summary>
@@ -536,9 +535,9 @@ erachter. De waarde van de server `url` wordt dus:
 :::tip Lokale validatie
 
 Voor grotere projecten is het handig om de validatie te integreren in de
-development workflow. De ADR Linter kan ook via CLI, in de IDE, of in CI/CD
-pipelines draaien. Zie de
-[ADR Linter documentatie](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter)
+development workflow. De ADR Checker kan ook via CLI of in CI/CD pipelines
+draaien. Zie de
+[ADR Checker documentatie](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter)
 voor meer informatie.
 
 :::

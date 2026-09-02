@@ -236,7 +236,7 @@ Voor velen wellicht een open deur maar het vertrouwen van de burger in de
 werking van een dergelijk data delen stelsel is een betrouwbare en intuitieve
 interface met heldere stappen en duidelijk en herkenbaar proces. Om dit te
 faciliteren zijn onder andere het
-[NL Design System](/kennisbank/front-end/nl-design-system/) en
+[NL Design System](/kennisbank/front-end/design-systems/nl-design-system/) en
 [DigiToegankelijk](/kennisbank/front-end/standaarden/digitoegankelijk)
 beschikbaar.
 

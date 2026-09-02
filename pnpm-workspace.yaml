@@ -2,3 +2,8 @@ packages:
   - .
 
 minimumReleaseAge: 1440
+
+# The two image-size@2.0.2 audit exceptions are configured for pnpm 9 in
+# package.json. image-size is only used at build time by @docusaurus/mdx-loader.
+# Tracked upstream in:
+# https://github.com/facebook/docusaurus/issues/12231

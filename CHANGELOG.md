@@ -1,5 +1,76 @@
 # @developer-overheid-nl/website
 
+## 1.12.0
+
+### Minor Changes
+
+- 69016c3: Publish GraphQL blog series part 2
+
+### Patch Changes
+
+- 10321dd: Update site dependencies to remediate known security vulnerabilities,
+  run CI tooling on Node.js 24, and add a temporary compatibility override for
+  the browser driver installer.
+
+## 1.11.0
+
+### Minor Changes
+
+- af837b4: Publish blogpost about Spectral status
+
+## 1.10.0
+
+### Minor Changes
+
+- 8ed99bd: Updated dead links in all knowledge base chapters. Fixed check-links
+  github action. Disabled the check-links github action for now since it
+  currently has too much errors.
+
+### Patch Changes
+
+- b1ff0c9: Voeg blogserie "GraphQL onder de loep" toe (vier delen, als draft)
+  plus een kennisbankartikel over GraphQL en de tag `graphql`
+- b1ff0c9: Publish GraphQL blog series part 1
+
+## 1.9.0
+
+### Minor Changes
+
+- cf6b6c1: Updated information about the ADR Checker. Fixed syntax highlighting
+  for `bash`.
+- 10dbe2c: Update getting started artikel NL Design System
+- 10dbe2c: - Deelhoofdstuk Design Systems onder Front-end hoofdstuk toegevoegd
+  en NL Design System er naar toe verhuisd
+  - NL Design System ge-update
+  - Getting Started NL Design System ge-update
+- 2359e6c: Enhance OpenKAT documentation with features and details
+
+### Patch Changes
+
+- 5152064: Update pc.yml standaard pagina naar 0.7
+- c6f28ba: Update the API code generation tutorial to use the NestJS Fastify
+  template as the main example.
+- 3cd1456: Groepeer Dependabot-updates voor Docusaurus en Rijkshuisstijl in
+  aparte pull requests.
+- 6ff092d: Publish codegen blogpost
+- 9c33e26: Docusaurus geupgradet naar versie 3.10.1; DocCard opnieuw geswizzeld
+  voor onze custom iconen en downstream fixes toegepast.
+
+## 1.8.1
+
+### Patch Changes
+
+- f87e8ff: Voeg een kennisbankartikel toe over API-authenticatie met APISIX, OPA
+  en Keycloak.
+
+## 1.8.0
+
+### Minor Changes
+
+- 50d6a1f: Publish blogpost "Tools in de loop"
+- 7aca0d3: Enhance security.txt with contact validation details
+- 6b7eee8: Add HSTS documentation with configuration details
+
 ## 1.7.0
 
 ### Minor Changes

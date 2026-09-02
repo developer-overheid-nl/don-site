@@ -56,6 +56,29 @@ Voer eerst de stappen uit zoals beschreven in
 pnpm run lint:wcag
 ```
 
+## Links controleren
+
+De workflow `.github/workflows/check-links.yml` controleert of alle links op de
+website nog werken met
+[Linkinator](https://github.com/JustinBeckwith/linkinator). Je kan deze check
+ook lokaal draaien:
+
+1. Draai `pnpm run build` om de site te builden naar de map `build/`.
+2. Draai Linkinator met dezelfde instellingen als de workflow:
+
+```bash
+npx linkinator build \
+--recurse \
+--format JSON \
+--clean-urls \
+--config ./linkinator.config.json \
+--verbosity ERROR \
+--timeout 5000 \
+> linkinator-results.json
+```
+
+Links die bewust overgeslagen moeten worden staan in `linkinator.config.json`.
+
 ## Publiceren blogpost
 
 Om een blog te publiceren die in draft staat volg je de volgende stappen:
@@ -65,7 +88,8 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 - Verplaats de blogpost naar de map van de huidige maand.
 - Verwijder de `draft: true` property uit het frontmatter van de blogpost.
 - Draai `pnpm build` om te kijken of de markdown in orde is.
-- Maak een changeset aan met `pnpm changeset`, een nieuwe blogpost is een minor update. (Zie hieronder.)
+- Voeg een changeset toe met minor version bump, zie
+  [Hoe maak ik een changelog entry aan?](#hoe-maak-ik-een-changelog-entry-aan).
 
 ## Changelog
 
@@ -97,7 +121,8 @@ veranderingen die voor de eindgebruiker niet van belang zijn niet gelogd te word
 ### Release nieuwe versie van de website
 
 1. Merge de pull request van de Changesets bot.
-2. Merge de pull request in de `don-infra` repository, zie de beschrijving hieronder.
+2. Merge de pull request in de `don-infra` repository, zie de beschrijving
+   hieronder.
 
 ## Deployen
 
@@ -162,4 +187,4 @@ Een contribution of pull request leidt niet automatisch tot een deployment.
   ook `INFRA_REPO` aan te passen. Daardoor is dit pad in de praktijk bedoeld
   voor maintainers of contributors met een branch in deze repository.
 
-[Changesets]:https://github.com/changesets/changesets
+[Changesets]: https://github.com/changesets/changesets

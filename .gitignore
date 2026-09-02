@@ -135,3 +135,5 @@ build
 # We will use pnpm instead
 package-lock.json
 .DS_Store
+
+linkinator-results.json

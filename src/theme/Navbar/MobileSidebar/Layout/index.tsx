@@ -1,6 +1,9 @@
 import React, { version, forwardRef, type ReactNode } from "react";
 import clsx from "clsx";
-import { useNavbarSecondaryMenu } from "@docusaurus/theme-common/internal";
+import {
+  useNavbarMobileSidebar,
+  useNavbarSecondaryMenu,
+} from "@docusaurus/theme-common/internal";
 import { ThemeClassNames } from "@docusaurus/theme-common";
 import type { Props } from "@theme/Navbar/MobileSidebar/Layout";
 
@@ -8,9 +11,10 @@ import type { Props } from "@theme/Navbar/MobileSidebar/Layout";
 //  See https://github.com/facebook/react/issues/17157
 //  See https://github.com/radix-ui/themes/pull/509
 function inertProps(inert: boolean) {
-  const isBeforeReact19 = parseInt(version!.split(".")[0]!, 10) < 19;
+  const isBeforeReact19 = parseInt(version!.split('.')[0]!, 10) < 19;
   if (isBeforeReact19) {
-    return { inert: inert ? "" : undefined };
+    // TODO Docusaurus v4: remove temporary inert workaround
+    return { inert: inert ? '' : undefined } as unknown as { inert: boolean };
   }
   return { inert };
 }
@@ -40,7 +44,7 @@ export default forwardRef(function NavbarMobileSidebarLayout(
   ref: any,
 ): ReactNode {
   const { shown: secondaryMenuShown } = useNavbarSecondaryMenu();
-  const mobileSidebar = useNavbarSecondaryMenu();
+  const mobileSidebar = useNavbarMobileSidebar();
   return (
     <div
       className="navbar-sidebar__overlay"

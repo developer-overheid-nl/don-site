@@ -44,6 +44,8 @@ build-for-failure:
   label: Build for Failure
 changelog:
   label: Changelog
+csharp:
+  label: C#
 ci/cd:
   description: Continuous Integration / Continuous Deployment
   label: CI/CD
@@ -56,6 +58,9 @@ ciso:
 cli:
   description: Command line interface
   label: CLI
+codegen:
+  description: Codegeneratie op basis van API-specificaties
+  label: Codegen
 cloudevents:
   label: CloudEvents
 common-ground:
@@ -109,6 +114,8 @@ docker:
     Docker is een platform voor het bouwen, distribueren en draaien van
     applicaties in individuele containers
   label: Docker
+dotnet:
+  label: .NET
 eherkenning:
   description: eHerkenning is het zakelijke inlogmiddel voor bedrijven om veilig
     toegang te krijgen tot digitale overheidsdiensten.
@@ -137,6 +144,9 @@ fds:
 fieldlab:
   description: Fieldlab
   label: Fieldlab
+flask:
+  description: Een lichtgewicht webframework voor Python
+  label: Flask
 flux:
   description: Flux CD is een GitOps tool voor Kubernetes die automatische
     deployment en synchronisatie van applicaties mogelijk maakt.
@@ -178,6 +188,9 @@ github:
 gitlab:
   description: Een Git-forge
   label: GitLab
+graphql:
+  description: Querytaal en runtime voor API's
+  label: GraphQL
 golang:
   label: Golang
 gouden-api:
@@ -217,6 +230,9 @@ json:
   label: JSON
 json-schema:
   label: JSON Schema
+java:
+  description: Java programmeertaal
+  label: Java
 javascript:
   label: JavaScript
 jwt:
@@ -254,6 +270,9 @@ llm:
 logging:
   description: Logging
   label: Logging
+manon:
+  description: Het (MinVWS) Manon Design system
+  label: Manon
 maps:
   description: Kaarten, cartografie en mapping technologieën
   label: Maps
@@ -312,6 +331,8 @@ orkestratie:
 ospo:
   description: Open Source Program Office
   label: OSPO
+otel:
+  label: OpenTelemetry
 owasp:
   description: "OWASP: Open Web Application Security Project"
   label: OWASP
@@ -321,6 +342,9 @@ pkio:
   description: PKIOverheid is de publieke infrastructuur voor digitale
     certificaten van de Nederlandse overheid.
   label: PKIOverheid
+php:
+  description: PHP programmeertaal
+  label: PHP
 pnpm:
   label: pnpm
   description: PNPM (Performant NPM) is een alternatieve package manager voor
@@ -336,6 +360,9 @@ publiccode:
   label: PublicCode
 publiccode-yml:
   label: publiccode.yml
+python:
+  description: Pyton programmeertaal
+  label: Python
 quality-management:
   label: Quality Management
 rdf:
@@ -389,6 +416,12 @@ shacl:
 skos:
   description: Simple Knowledge Organization System
   label: SKOS
+spring:
+  description: Een framework gericht op ontwikkeling van software in de programmeertaal Java
+  label: Spring Framework
+symfony:
+  description: Een PHP webapplicatie-framework
+  label: Symfony Framework
 typescript:
   label: TypeScript
 technische-schuld:

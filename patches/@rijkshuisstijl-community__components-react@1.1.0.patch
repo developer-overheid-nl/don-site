@@ -24,3 +24,21 @@ index 2d238c9bddf783e68c217b05c8cafd8e6f410fcf..7840ec0ca57a0322879b6c9b7a27ab9e
    alt: alt,
    ...restProps,
    photo: true,
+diff --git a/dist/Button.d.ts b/dist/Button.d.ts
+index 7f89c6e..998f446 100644
+--- a/dist/Button.d.ts
++++ b/dist/Button.d.ts
+@@ -1,10 +1,11 @@
+ import { Button, ButtonLink, type ButtonLinkProps, type ButtonProps, PrimaryActionButton, SecondaryActionButton, SubtleButton } from '@utrecht/component-library-react';
+-import { PropsWithChildren, Ref } from 'react';
++import { ButtonHTMLAttributes, PropsWithChildren, Ref } from 'react';
+ import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
+ export { Button, ButtonLink, type ButtonLinkProps, type ButtonProps, PrimaryActionButton, SecondaryActionButton, SubtleButton, };
+-export interface IconButtonProps extends ButtonProps {
++export interface IconButtonProps extends ButtonProps, Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'ref'> {
+     ref?: Ref<HTMLButtonElement>;
+     icon?: RHCIconID;
++    label?: string;
+ }
+ export declare const IconButton: {
+     ({ ref, children, className, label, icon, ...restProps }: PropsWithChildren<IconButtonProps>): import("react/jsx-runtime").JSX.Element;
