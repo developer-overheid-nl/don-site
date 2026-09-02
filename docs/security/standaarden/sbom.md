@@ -54,7 +54,14 @@ Een SBOM maakt deze inzichtelijk en ondersteunt licentiecompliance.
 ### Software supply chain security
 
 Een actuele SBOM maakt het mogelijk om risico's binnen de softwareketen beter te
-beheersen en sneller incidenten te analyseren.
+beheersen en sneller incidenten te analyseren. Als er nieuwe beveiligingsproblemen 
+worden ontdekt in software kun je hier alleen snel op acteren als je weet of je
+deze software ergens gebruikt, waar deze wellicht als onderdeel in zit, en welke
+versies dat zijn. Een sprekend voorbeeld is het incident en de nasleep rond 
+[Log4J](https://www.ncsc.nl/nieuws/log4j-bereid-u-voor-op-misbruik), welke op veel
+plekken een ernstig risico veroorzaakte, maar voor de meeste partijen volstrekt
+onzichtbaar was. Een correcte en volledige SBOM over alle lagen van 'dependencies'
+had een reactie op dit probleem veel sneller gemaakt.
 
 ## De twee belangrijkste SBOM-standaarden
 
