@@ -431,7 +431,7 @@ const config: Config & {
     },
     prism: {
       theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
-      additionalLanguages: ["bash", "turtle", "java", "go"],
+      additionalLanguages: ["bash", "csharp", "go", "groovy", "java", "php", "properties", "turtle"],
     },
     colorMode: {
       defaultMode: "light",
