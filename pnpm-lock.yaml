@@ -142,8 +142,8 @@ importers:
         specifier: 3.10.2
         version: 3.10.2(acorn@8.15.0)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@rijkshuisstijl-community/design-tokens':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 18.0.0
+        version: 18.0.0
       '@types/react':
         specifier: 18.3.31
         version: 18.3.31
@@ -1768,8 +1768,8 @@ packages:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
 
-  '@rijkshuisstijl-community/design-tokens@1.2.0':
-    resolution: {integrity: sha512-RhNvfTtWiqpENxM8wzF9f8b6XWWFnZ0IBnpDD/Sx8J1LgpzYjV1itEYN5Abp1HXhsR/PaQBdtYs8FJEt+hstaA==}
+  '@rijkshuisstijl-community/design-tokens@18.0.0':
+    resolution: {integrity: sha512-zOi/lm88LISUvbzeD9w/LUN5WRch12LjR5Xm79cIkSVfZMzdn5hioIJgpEHzc7N40O338ptM5oqDawLkdU49UA==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -2529,8 +2529,8 @@ packages:
   axios@1.18.0:
     resolution: {integrity: sha512-E32NzpYKp++W7XRe52rHiXV2ehxmh3wbdgO7MHeFM+vqxLBYHzt0ElkiImtOBxtOmyp0yoC8C6uESVV84Y2/hw==}
 
-  axios@1.19.0:
-    resolution: {integrity: sha512-ht/iuYZXEjFxLH/Hkezgd7m6JKlHHXEUSneaDz8uZe1Gj5QZtCnpyDsckvAiEnT89OEbCLmnte4R4sn7P0EKFw==}
+  axios@1.20.0:
+    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
   babel-loader@9.2.1:
     resolution: {integrity: sha512-fqe8naHt46e0yIdkjUZYqddSXfej3AHajX+CSO5X7oy0EmPc6o5Xh+RClNoHjnieWz9AW4kZxW9yyFMhVB1QLA==}
@@ -2755,8 +2755,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromedriver@152.0.2:
-    resolution: {integrity: sha512-w/trjzSjQC8vHHwl4e+WXBGPRN3XnrsY14q/FdxCY8GtTUIlB+wH1gn/Kz3CHpdmbsouUEGal6E8bjEEz72pZg==}
+  chromedriver@152.0.3:
+    resolution: {integrity: sha512-6v3pquS2kgb1HedzALRZeaoFZVCgghW2u1QjlzaoZruw75QBxKQtv/PKzJ8Scb3L8Vx32gcFwvUKcHmW7xjIVg==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -7279,7 +7279,7 @@ snapshots:
     dependencies:
       '@axe-core/webdriverjs': 4.13.0(selenium-webdriver@4.44.0)
       axe-core: 4.13.0
-      chromedriver: 152.0.2
+      chromedriver: 152.0.3
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 17.4.2
@@ -10350,7 +10350,7 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/runtime'
 
-  '@rijkshuisstijl-community/design-tokens@1.2.0': {}
+  '@rijkshuisstijl-community/design-tokens@18.0.0': {}
 
   '@sideway/address@4.1.5':
     dependencies:
@@ -11135,7 +11135,7 @@ snapshots:
       - debug
       - supports-color
 
-  axios@1.19.0:
+  axios@1.20.0:
     dependencies:
       follow-redirects: 1.16.0
       form-data: 4.0.6
@@ -11411,11 +11411,11 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@152.0.2:
+  chromedriver@152.0.3:
     dependencies:
       '@testim/chrome-version': 1.1.4
       adm-zip: 0.6.0
-      axios: 1.19.0
+      axios: 1.20.0
       compare-versions: 6.1.1
       proxy-agent: 8.0.2
       proxy-from-env: 2.1.0
