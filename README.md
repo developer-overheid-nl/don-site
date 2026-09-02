@@ -75,11 +75,16 @@ Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt
 bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries 
 samenvoegt. Deze pull request, genaamd "Version Packages", _moet_ worden gemerged voor elke release.
 
-Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de changelog om bij te 
-houden wat er veranderd is in de website. De semver gebruikt in de changelog heeft geen technische 
-betekenis, maar geeft aan of een verandering een nieuwe feature, bijvoorbeeld een nieuw blog, is 
-**minor**, een bugfix **patch** of een "breaking" change **major**. Voorbeelden van een breaking change 
+Ondanks dat er geen software package wordt gepubliceerd, _gebruiken we de changelog om bij te 
+houden wat er veranderd is in de website_. De semver gebruikt in de changelog heeft geen technische 
+betekenis, maar kan wel gebruikt worden om in te zien wat er veranderd is.
+Zo is een nieuwe blogpost of kennisbankartikel een **minor** version bump en een bugfix een **patch**.
+Een "breaking" change is een **major** version bump. Voorbeelden van een breaking change 
 zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de URL van een artikel.
+
+De changelog voor de website schrijven we in het **Nederlands**, anders dan bij onze softwareprojecten,
+omdat we deze ook (gaan) ontsluiten op de site zelf. Daarom hoeven package updates of kleine technische
+veranderingen die voor de eindgebruiker niet van belang zijn niet gelogd te worden.
 
 ### Hoe maak ik een changelog entry aan?
 
