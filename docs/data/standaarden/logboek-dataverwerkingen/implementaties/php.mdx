@@ -1,0 +1,402 @@
+---
+content_type: standaard
+tags:
+  - ldv
+  - logging
+  - development
+  - otel
+  - php
+  - symfony
+sidebar_position: 1
+sidebar_label: PHP
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# PHP voorbeeldimplementatie met Symfony
+
+Een voorbeeld hoe [Logboek Dataverwerkingen](../index.md) toe te passen met [Symfony](https://symfony.com/) in PHP.
+
+
+## Nieuw project
+
+Maak een nieuw project aan aan met [Composer](https://getcomposer.org/):
+
+```sh
+composer create-project symfony/skeleton:"8.1.*" ldv-example-php
+cd ldv-example-php
+```
+
+
+### Voeg dependency's toe
+
+```sh
+composer require open-telemetry/sdk:^1.15
+composer require open-telemetry/exporter-otlp:^1.4
+```
+
+
+## Logboek
+
+### OpenTelemetry
+
+In `TracerFactory` wordt een OpenTelemetry Tracer geconfigureerd die alleen voor het registreren van verwerkingen gebruikt wordt.
+
+```php title="src/Logboek/TracerFactory.php"
+<?php
+
+namespace App\Logboek;
+
+use OpenTelemetry\API\Trace\TracerInterface;
+use OpenTelemetry\Contrib\Otlp\ContentTypes;
+use OpenTelemetry\Contrib\Otlp\OtlpHttpTransportFactory;
+use OpenTelemetry\Contrib\Otlp\SpanExporter;
+use OpenTelemetry\SDK\Common\Attribute\Attributes;
+use OpenTelemetry\SDK\Common\Util\ShutdownHandler;
+use OpenTelemetry\SDK\Resource\ResourceInfo;
+use OpenTelemetry\SDK\Trace\Sampler\AlwaysOnSampler;
+use OpenTelemetry\SDK\Trace\SpanProcessor\SimpleSpanProcessor;
+use OpenTelemetry\SDK\Trace\TracerProvider;
+use OpenTelemetry\SemConv\Attributes\ServiceAttributes;
+
+class TracerFactory
+{
+    private const TRACER_NAME = 'logboek-dataverwerkingen';
+    private const TRACER_VERSION = '0.1.0';
+
+    public function __invoke(string $endpoint, string $appName, string $appVersion): TracerInterface
+    {
+        $resource = ResourceInfo::create(
+            Attributes::create([
+                ServiceAttributes::SERVICE_NAME => $appName,
+                ServiceAttributes::SERVICE_VERSION => $appVersion,
+            ])
+        );
+
+        $transport = (new OtlpHttpTransportFactory())->create($endpoint, ContentTypes::JSON);
+        $exporter = new SpanExporter($transport);
+
+        $provider = TracerProvider::builder()
+            ->addSpanProcessor(new SimpleSpanProcessor($exporter))
+            ->setResource($resource)
+            ->setSampler(new AlwaysOnSampler())
+            ->build();
+
+        ShutdownHandler::register($provider->shutdown(...));
+
+        return $provider->getTracer(self::TRACER_NAME, self::TRACER_VERSION);
+    }
+}
+```
+
+
+### Registreren van verwerkingen
+
+<Tabs>
+<TabItem value="operator" label="ProcessingOperator">
+
+Met een `ProcessingOperator` kunnen we eenvoudig verwerkingen starten en direct de juiste attributen toevoegen. Met een `Processing` kan het "data subject" gezet worden.
+
+```php title="src/Logboek/ProcessingOperator.php"
+<?php
+
+namespace App\Logboek;
+
+use OpenTelemetry\API\Trace\Propagation\TraceContextPropagator;
+use OpenTelemetry\API\Trace\SpanBuilderInterface;
+use OpenTelemetry\API\Trace\TracerInterface;
+use OpenTelemetry\Context\Context;
+use OpenTelemetry\Context\ContextInterface;
+use Symfony\Component\DependencyInjection\Attribute\Target;
+
+class ProcessingOperator
+{
+    private TraceContextPropagator $propergator;
+
+    public function __construct(#[Target('logboekTracer')] private readonly TracerInterface $tracer)
+    {
+        $this->propergator = TraceContextPropagator::getInstance();
+    }
+
+    public function startProccessingFromForeignOperation(string $name, string $activityId, array $traceContextCarrier): Processing
+    {
+        $remoteContext = $this->propergator->extract($traceContextCarrier);
+        $span = $this->builder($name, $activityId, $remoteContext)
+            ->startSpan();
+
+        Context::storage()->attach($span->storeInContext($remoteContext));
+
+        return new Processing($span);
+    }
+
+    public function startProccessing(string $name, string $activityId): Processing
+    {
+        $context = Context::getCurrent();
+        $span = $this->builder($name, $activityId, $context)
+            ->startSpan();
+
+        Context::storage()->attach($span->storeInContext($context));
+
+        return new Processing($span);
+    }
+
+    private function builder(string $name, string $activityId, ContextInterface $context): SpanBuilderInterface
+    {
+        return $this->tracer->spanBuilder($name)
+            ->setParent($context)
+            ->setAttribute(LogboekAttributes::PROCESSING_ACTIVITY_ID, $activityId);
+    }
+}
+```
+
+</TabItem>
+<TabItem value="processing" label="Processing">
+
+```php title="src/Logboek/Processing.php"
+<?php
+
+namespace App\Logboek;
+
+use OpenTelemetry\API\Trace\SpanInterface;
+use OpenTelemetry\API\Trace\StatusCode;
+use OpenTelemetry\Context\Context;
+
+class Processing
+{
+    public function __construct(public readonly SpanInterface $span) {}
+
+    public function setDataSubject(string $id, string $type): self
+    {
+        $this->span->setAttributes([
+            LogboekAttributes::DATA_SUBJECT_ID => $id,
+            LogboekAttributes::DATA_SUBJECT_ID_TYPE => $type,
+        ]);
+        return $this;
+    }
+
+    public function stopSuccessful(): void
+    {
+        $scope = Context::storage()->scope();
+        $scope?->detach();
+
+        $this->span
+            ->setStatus(StatusCode::STATUS_OK)
+            ->end();
+    }
+
+    public function stopFailed(string $reason): void
+    {
+        $scope = Context::storage()->scope();
+        $scope?->detach();
+
+        $this->span
+            ->setStatus(StatusCode::STATUS_ERROR, $reason)
+            ->end();
+    }
+}
+```
+
+</TabItem>
+<TabItem value="attributes" label="LogboekAttributes">
+
+```php title="src/Logboek/LogboekAttributes.php"
+<?php
+
+namespace App\Logboek;
+
+/**
+ * Logboek Dataverwerkingen attributen
+ *
+ * https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/#attributes
+ */
+interface LogboekAttributes
+{
+    public const PROCESSING_ACTIVITY_ID = 'dpl.core.processing_activity_id';
+
+    public const DATA_SUBJECT_ID = 'dpl.core.data_subject_id';
+
+    public const DATA_SUBJECT_ID_TYPE = 'dpl.core.data_subject_id_type';
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+### Attribuut
+
+Met een attribuut kunnen we eenvoudig verwerkingen registreren.
+
+<Tabs>
+<TabItem value="attribute" label="LogboekProcessing">
+
+```php title="src/Logboek/Attribute/LogboekProcessing.php"
+<?php
+
+namespace App\Logboek\Attribute;
+
+#[\Attribute(\Attribute::TARGET_METHOD)]
+class LogboekProcessing
+{
+    public function __construct(
+        public readonly string $name,
+        public readonly string $activityId,
+        public readonly bool $fromForeign = false
+    ) {}
+}
+```
+
+</TabItem>
+<TabItem value="listener" label="LogboekProcessingAttributeListener">
+
+```php title="src/EventSubscriber/LogboekProcessingAttributeListener.php"
+<?php
+
+namespace App\EventSubscriber;
+
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\Event\ControllerAttributeEvent;
+use Symfony\Component\HttpKernel\KernelEvents;
+
+use App\Logboek\Attribute\LogboekProcessing;
+use App\Logboek\Processing;
+use App\Logboek\ProcessingOperator;
+
+class LogboekProcessingAttributeListener implements EventSubscriberInterface
+{
+    private const PROCESSING_KEY = '__logboek_processing';
+
+    public function __construct(private readonly ProcessingOperator $processingOperator) {}
+
+    public function onController(ControllerAttributeEvent $event): void
+    {
+        /** @var LogboekProcessing */
+        $attribute = $event->attribute;
+        $request = $event->kernelEvent->getRequest();
+
+        $processing = $attribute->fromForeign ?
+            $this->processingOperator->startProccessingFromForeignOperation(
+                $attribute->name,
+                $attribute->activityId,
+                $request->headers->all()
+            ) :
+            $this->processingOperator->startProccessing($attribute->name, $attribute->activityId);
+
+        $request->attributes->set(self::PROCESSING_KEY, $processing);
+    }
+
+    public function onFinishRequest(ControllerAttributeEvent $event): void
+    {
+        /** @var Processing|null */
+        $processing = $event->kernelEvent->getRequest()->attributes->get(self::PROCESSING_KEY);
+        $processing?->stopSuccessful();
+    }
+
+    public static function getSubscribedEvents(): array
+    {
+        return [
+            KernelEvents::CONTROLLER . '.' . LogboekProcessing::class => 'onController',
+            KernelEvents::FINISH_REQUEST . '.' . LogboekProcessing::class => 'onFinishRequest',
+        ];
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+## Applicatie
+
+### Logboek configureren
+
+Voeg de Logboek-tracer toe en configureer de endpoint-URL.
+
+```yaml title="config/services.yaml"
+parameters:
+    app.name: ldv-example-php
+    app.version: 0.1.0
+    logboek.endpoint: http://127.0.0.1:4318/v1/traces
+
+services:
+    # ... bestaande services ...
+
+    OpenTelemetry\API\Trace\TracerInterface $logboekTracer:
+        class: OpenTelemetry\API\Trace\TracerInterface
+        factory: '@App\Logboek\TracerFactory'
+        arguments:
+            - '%logboek.endpoint%'
+            - '%app.name%'
+            - '%app.version%'
+```
+
+### Verwerkingen definiëren
+
+Alles komt nu samen in de `PersonsController`.
+
+De gemarkeerde regels laten zien hoe het `LogboekProcessing`-attribuut, en de `ProcessingOperator`-, en `Processing`-class gebruikt kunnen worden.
+
+```php {15,18,28-30,35} title="src/Controller/PersonsController.php"
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Attribute\Route;
+
+use App\Logboek\Attribute\LogboekProcessing;
+use App\Logboek\ProcessingOperator;
+
+#[Route('/persons')]
+class PersonsController extends AbstractController
+{
+    public function __construct(private readonly ProcessingOperator $processingOperator) {}
+
+    #[Route('/{bsn}/is-minimal-18-years-old', name: 'person-is-minimal-18-years-old', methods: ['GET'])]
+    #[LogboekProcessing('check_18_or_over', 'urn:ldv:activity:1337', fromForeign: true)]
+    public function isMinimal18YearsOld(string $bsn): Response
+    {
+        $is18OrOver = $this->personIs18OrOver($bsn);
+
+        return $this->json(['is_18_or_over' => $is18OrOver]);
+    }
+
+    private function personIs18OrOver(string $bsn): bool
+    {
+        $processing = $this->processingOperator
+            ->startProccessing('fetch_date_of_birth', 'urn:ldv:activity:1550')
+            ->setDataSubject($bsn, "BSN");
+
+        // Simuleer het ophalen van de geboortedatum
+        usleep(42_000);
+
+        $processing->stopSuccessful();
+
+        return true;
+    }
+}
+```
+
+
+### Applicatie starten
+
+Start nu de applicatie:
+
+
+```sh
+php -S 127.0.0.1:8080 -t public
+```
+
+Roep de API aan:
+
+```sh
+curl http://127.0.0.1:8080/persons/999990342/is-minimal-18-years-old
+```
+
+
+### Logboek inzien
+
+Als je de [OpenTelemetry viewer](otel-viewer.mdx) gebruikt kun je de twee verwerkingen in het logboek zien.
