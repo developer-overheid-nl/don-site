@@ -2,7 +2,7 @@
 content_type: standaard
 tags:
   - "informatiebeveiliging"
-title: "SBOM uitgelegd: CycloneDX en SPDX"
+title: "SBOM uitgelegd: een ingrediëntenlijst voor software."
 ---
 
 ## Wat is een SBOM?
