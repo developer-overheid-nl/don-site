@@ -28,7 +28,7 @@
     "@docusaurus/theme-common": "3.10.2",
     "@docusaurus/theme-mermaid": "3.10.2",
     "@mdx-js/react": "3.1.1",
-    "@piwikpro/react-piwik-pro": "2.6.0",
+    "@piwikpro/react-piwik-pro": "3.0.0",
     "@rijkshuisstijl-community/components-react": "1.1.0",
     "a11y-syntax-highlighting": "1.1.0",
     "algoliasearch-helper": "3.29.3",

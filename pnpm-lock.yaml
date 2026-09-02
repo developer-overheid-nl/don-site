@@ -75,8 +75,8 @@ importers:
         specifier: 3.1.1
         version: 3.1.1(@types/react@18.3.31)(react@18.3.1)
       '@piwikpro/react-piwik-pro':
-        specifier: 2.6.0
-        version: 2.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 3.0.0
+        version: 3.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@rijkshuisstijl-community/components-react':
         specifier: 1.1.0
         version: 1.1.0(patch_hash=icpvd7rrsfv6fzpcmze4pnanuu)(@babel/runtime@7.29.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1723,15 +1723,15 @@ packages:
     resolution: {integrity: sha512-C2Xj8FZ0uHWeCXXqX5B4/gVFQmtSkiuOolzAgutjTfseNOHT3pUjljDZsTSxXFGgio54bCzVFqmEOUrIVk8RDA==}
     engines: {node: '>=20.0.0'}
 
-  '@piwikpro/react-piwik-pro@2.6.0':
-    resolution: {integrity: sha512-yOF9pI24vL7yj2Fng7wJcU9nGEVLSwzEl41xThvLefkJmBriv7mSScJ/I1SA6nx0JkuW9T2NLFHlUKv500Lwyg==}
+  '@piwikpro/react-piwik-pro@3.0.0':
+    resolution: {integrity: sha512-8lUjiBdJENOjbsCb7r9o9cRQLip8K9ehwDxImSPx5vuW36ePf2bJky5nsZc6HZuiNReMMpL7NBHyIjdsb07XbQ==}
     engines: {node: '>=18'}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
-  '@piwikpro/tracking-base-library@1.7.1':
-    resolution: {integrity: sha512-vDV8NZ7rYTlhKBHMHL880QqPOPzrXSurZn0sfhodqwGa9v7tmqLJe0IaG2Su1fOtlQm5pb2zobm8ngar45AKmQ==}
+  '@piwikpro/tracking-base-library@2.0.0':
+    resolution: {integrity: sha512-ePwUzPpCM0Es7qbO/Z+OnpKf6FzjD9P3FLm+1h3ZyekhOuoHYa7jh4UWfAgPDe/62WYbTTqdqZRh/vEEoQwSVA==}
     engines: {node: '>=18.0.0'}
 
   '@pnpm/config.env-replace@1.1.0':
@@ -2529,8 +2529,8 @@ packages:
   axios@1.18.0:
     resolution: {integrity: sha512-E32NzpYKp++W7XRe52rHiXV2ehxmh3wbdgO7MHeFM+vqxLBYHzt0ElkiImtOBxtOmyp0yoC8C6uESVV84Y2/hw==}
 
-  axios@1.19.0:
-    resolution: {integrity: sha512-ht/iuYZXEjFxLH/Hkezgd7m6JKlHHXEUSneaDz8uZe1Gj5QZtCnpyDsckvAiEnT89OEbCLmnte4R4sn7P0EKFw==}
+  axios@1.20.0:
+    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
   babel-loader@9.2.1:
     resolution: {integrity: sha512-fqe8naHt46e0yIdkjUZYqddSXfej3AHajX+CSO5X7oy0EmPc6o5Xh+RClNoHjnieWz9AW4kZxW9yyFMhVB1QLA==}
@@ -10311,13 +10311,13 @@ snapshots:
       tslib: 2.8.1
       tsyringe: 4.10.0
 
-  '@piwikpro/react-piwik-pro@2.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@piwikpro/react-piwik-pro@3.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@piwikpro/tracking-base-library': 1.7.1
+      '@piwikpro/tracking-base-library': 2.0.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@piwikpro/tracking-base-library@1.7.1': {}
+  '@piwikpro/tracking-base-library@2.0.0': {}
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -11135,7 +11135,7 @@ snapshots:
       - debug
       - supports-color
 
-  axios@1.19.0:
+  axios@1.20.0:
     dependencies:
       follow-redirects: 1.16.0
       form-data: 4.0.6
@@ -11415,7 +11415,7 @@ snapshots:
     dependencies:
       '@testim/chrome-version': 1.1.4
       adm-zip: 0.6.0
-      axios: 1.19.0
+      axios: 1.20.0
       compare-versions: 6.1.1
       proxy-agent: 8.0.2
       proxy-from-env: 2.1.0
