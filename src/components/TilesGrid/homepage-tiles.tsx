@@ -64,7 +64,7 @@ const tiles: GridTile[] = [
         label: "Git workflow",
       },
       {
-        link: "/kennisbank/open-source/tutorials/voeg-een-publiccode-yml-bestand-toe",
+        link: "/kennisbank/open-source/tutorials/publiccode-yml-toevoegen",
         label: "publiccode.yml toevoegen",
       },
       {
