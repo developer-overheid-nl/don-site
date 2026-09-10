@@ -2,6 +2,11 @@
 // import docusaurusTheme from "./src/utils/prismLight";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import {
+  findInitiativeForPath,
+  initiatives,
+  INITIATIVES_BASE_PATH,
+} from "./src/data/initiatives";
 import remarkDirectiveSugar from "remark-directive-sugar";
 import { readFileSync } from "fs";
 import { resolve } from "path";
@@ -34,6 +39,8 @@ const config: Config & {
   title: "developer.overheid.nl",
   customFields: {
     siteName: "developer.overheid.nl",
+    // Register van gehoste initiatieven; zie src/data/initiatives.ts.
+    initiatives,
     discourseCommentsInBlog: false,
     // Exposed to the browser via @generated/docusaurus.config for client modules.
     piwikPro: {
@@ -100,10 +107,63 @@ const config: Config & {
       onBrokenMarkdownImages: "throw",
     },
   },
-  themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
+  // Afbeeldingen van gehoste initiatieven komen rechtstreeks uit hun package;
+  // die hoeven dus niet gekopieerd te worden.
+  staticDirectories: ["static", "node_modules/mijn-services-docs/static"],
+
+  themes: [
+    "@docusaurus/theme-mermaid",
+    "docusaurus-theme-openapi-docs",
+    "docusaurus-theme-search-typesense",
+  ],
   plugins: [
     "./plugins/content-type-index.js",
     "./plugins/plugin-piwik-pro.ts",
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "initiatieven",
+        path: "initiatieven",
+        routeBasePath: "initiatieven",
+        sidebarPath: "./sidebarsInitiatives.ts",
+        // De index is al de ingang van de categorie; niet nog eens als los item.
+        sidebarItemsGenerator: async ({
+          defaultSidebarItemsGenerator,
+          ...args
+        }) => {
+          const items = await defaultSidebarItemsGenerator(args);
+          return items.filter(
+            (item) =>
+              !(
+                item.type === "doc" &&
+                (item.id === "index" || item.id.endsWith("/index"))
+              ),
+          );
+        },
+        // Alleen deze sectie rendert OpenAPI-referentiepagina's; de kennisbank
+        // blijft de standaard DocItem gebruiken.
+        docItemComponent: "@theme/ApiItem",
+        /**
+         * De eerste map onder de contentroot is de slug van het initiatief.
+         * Daarmee wijst "Iets aan dit artikel verbeteren?" naar de repo van de
+         * owner in plaats van naar de siterepo.
+         */
+        editUrl: ({ docPath }: { docPath: string }) => {
+          // Dezelfde vraag als in EditThisPage: bij welk initiatief hoort deze
+          // pagina? Daarom dezelfde helper, met docPath omgezet naar het pad
+          // zoals de bezoeker het ziet.
+          const initiative = findInitiativeForPath(
+            `${INITIATIVES_BASE_PATH}/${docPath}`,
+          );
+          if (!initiative) {
+            // De overzichtspagina is wel van ons en hoort naar onze eigen repo.
+            return `https://github.com/developer-overheid-nl/don-site/tree/main/initiatieven/${docPath}`;
+          }
+          const remainingPath = docPath.slice(initiative.slug.length + 1);
+          return `${initiative.editBaseUrl}${remainingPath}`;
+        },
+      },
+    ],
     [
       "./plugins/markdown-source-no-ui.js",
       {
@@ -166,6 +226,7 @@ const config: Config & {
           customCss: [
             "./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css",
             "./src/css/custom.css",
+            "./src/css/initiatives.css",
             "./node_modules/a11y-syntax-highlighting/dist/prism/a11y-light.min.css",
           ],
         },
@@ -174,6 +235,11 @@ const config: Config & {
   ],
 
   themeConfig: {
+    api: {
+      schemaExpansion: {
+        default: 1,
+      },
+    },
     docs: {
       sidebar: {
         autoCollapseCategories: true,
@@ -262,6 +328,7 @@ const config: Config & {
           target: "_self",
         },
         { to: "/blog", label: "Blog", position: "left" },
+        { to: "/initiatieven", label: "Initiatieven", position: "left" },
         {
           href: "https://data.overheid.nl",
           label: "Open Data",
@@ -431,7 +498,16 @@ const config: Config & {
     },
     prism: {
       theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
-      additionalLanguages: ["bash", "csharp", "go", "groovy", "java", "php", "properties", "turtle"],
+      additionalLanguages: [
+        "bash",
+        "csharp",
+        "go",
+        "groovy",
+        "java",
+        "php",
+        "properties",
+        "turtle",
+      ],
     },
     colorMode: {
       defaultMode: "light",

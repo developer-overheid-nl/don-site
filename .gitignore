@@ -137,3 +137,8 @@ package-lock.json
 .DS_Store
 
 linkinator-results.json
+# Documentatie van initiatieven die elders wordt beheerd; opgehaald door
+# scripts/fetch-initiatieven.mjs vlak voor de build. Zie
+# src/data/initiatieven-bronnen.json.
+/initiatieven/mijn-services/
+/static/img/mijn-services/

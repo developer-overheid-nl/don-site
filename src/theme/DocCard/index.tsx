@@ -36,6 +36,22 @@ function getIconTitleProps(
   item: PropSidebarItemLink | PropSidebarItemCategory,
 ): { icon: ReactNode; title: string } {
   const extracted = extractLeadingEmoji(item.label);
+
+  const customIcon = item.customProps?.icon;
+  if (typeof customIcon === "string") {
+    return {
+      icon: (
+        <img
+          src={customIcon}
+          className={styles.cardIcon}
+          alt=""
+          aria-hidden="true"
+        />
+      ),
+      title: extracted.rest.trim(),
+    };
+  }
+
   const emoji = extracted.emoji ?? getFallbackEmojiIcon(item);
   return {
     icon: emoji,
