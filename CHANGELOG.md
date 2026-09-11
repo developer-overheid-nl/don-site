@@ -1,5 +1,13 @@
 # @developer-overheid-nl/website
 
+## 1.14.0
+
+### Minor Changes
+
+- b33e7d3: Publish a blog post by Kennisplatform API's about the Kadaster
+  BAG-API and the shift from technical data exposure to product-driven
+  development
+
 ## 1.13.0
 
 ### Minor Changes
