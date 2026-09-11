@@ -3,15 +3,18 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const { createRequire } = require("node:module");
+const { loadAll } = require("js-yaml");
 
 const packageJson = require("../package.json");
+const documents = loadAll(fs.readFileSync('pnpm-lock.yaml', "utf8"));
+const installed = documents.flatMap((doc) => Object.keys(doc.packages ?? {}));
 
 test("browser-driver-manager uses Puppeteer browsers v3 without extract-zip", () => {
   assert.equal(
     packageJson.devDependencies["browser-driver-manager"],
     "2.0.1",
   );
-  assert.equal(packageJson.pnpm.overrides["@puppeteer/browsers"], "3.2.0");
+  assert.deepStrictEqual(installed.filter(package => package.match(/@puppeteer\/browsers/)), [ '@puppeteer/browsers@3.2.0' ]);
 
   const managerPackagePath = require.resolve(
     "browser-driver-manager/package.json",
