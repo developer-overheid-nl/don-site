@@ -35,6 +35,9 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Test
+        run: pnpm test
+
       - name: Audit dependencies
         run: pnpm audit --audit-level moderate
 
