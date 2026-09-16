@@ -183,16 +183,16 @@ const config: Config & {
       typesenseCollectionName: "developer_overheid",
       typesenseServerConfig: {
         nodes: [
-          {
-            host: "search.developer.overheid.nl",
-            port: 443,
-            protocol: "https",
-          },
           // {
-          //   host: "search.don.projects.digilab.network",
+          //   host: "search.developer.overheid.nl",
           //   port: 443,
           //   protocol: "https",
           // },
+          {
+            host: "search.don.projects.digilab.network",
+            port: 443,
+            protocol: "https",
+          },
           // {
           //   host: "localhost",
           //   port: 8108,
@@ -200,8 +200,8 @@ const config: Config & {
           // },
         ],
         // apiKey: "xyz", Lokaal
-        // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
-        apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
+        apiKey: "NFzpPqCWAFE1133lkURBFaXz7Q0H1LXi", //test
+        // apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
       },
       contextualSearch: false,
       searchPagePath: "zoeken", // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
@@ -431,7 +431,16 @@ const config: Config & {
     },
     prism: {
       theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
-      additionalLanguages: ["bash", "csharp", "go", "groovy", "java", "php", "properties", "turtle"],
+      additionalLanguages: [
+        "bash",
+        "csharp",
+        "go",
+        "groovy",
+        "java",
+        "php",
+        "properties",
+        "turtle",
+      ],
     },
     colorMode: {
       defaultMode: "light",
