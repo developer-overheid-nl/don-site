@@ -1,4 +1,8 @@
 ---
+content_type: standaard
+description:
+  "De FSC-standaard beschrijft hoe koppelingen voor gegevensuitwisseling veilig,
+  transparant en beheersbaar kunnen worden opgezet."
 tags:
   - "fsc"
   - "gegevensuitwisseling"

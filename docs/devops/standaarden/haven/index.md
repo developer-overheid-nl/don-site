@@ -1,5 +1,7 @@
 ---
 title: "Haven (Kubernetes)"
+content_type: standaard
+description: "Haven is een standaard voor platform-onafhankelijke cloud hosting."
 sidebar_position: 0
 tags:
   - "kubernetes"

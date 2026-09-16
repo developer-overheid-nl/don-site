@@ -1,5 +1,10 @@
 ---
+content_type: standaard
+description:
+  "Met Logboek Dataverwerkingen kunnen overheden dataverwerkingen
+  gestandaardiseerd registreren en aan elkaar koppelen."
 tags:
+  - "privacy"
   - "ldv"
   - "forum-standaardisatie"
   - "gdpr"
