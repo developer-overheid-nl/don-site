@@ -200,7 +200,7 @@ const config: Config & {
           // },
         ],
         // apiKey: "xyz", Lokaal
-        apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
+        apiKey: "NFzpPqCWAFE1133lkURBFaXz7Q0H1LXi", //test
         // apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
       },
       contextualSearch: false,
