@@ -1,10 +1,6 @@
 ---
 content_type: standaard
-description:
-  "Met OAS kunnen alle endpoints, responses en requests van een API gedetailleerd
-  beschreven worden in het machine-leesbare YAML formaat."
 tags:
-  - "interoperabiliteit"
   - "oas"
   - "api"
 ---
