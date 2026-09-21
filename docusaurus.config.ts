@@ -228,6 +228,7 @@ const config: Config & {
           position: "left",
           to: "/kennisbank",
           items: [
+            { label: "AI", to: "/kennisbank/ai" },
             { label: "API Ontwikkeling", to: "/kennisbank/api-ontwikkeling" },
             { label: "Front-end", to: "/kennisbank/front-end" },
             {

@@ -1,4 +1,5 @@
 import IconApiInrichting from "@site/src/theme/icons/IconApiInrichting";
+import IconTekstballonMetPotlood from "@site/src/theme/icons/IconTekstballonMetPotlood";
 import IconComputer from "@site/src/theme/icons/IconComputer";
 import IconKetting2Schakels from "@site/src/theme/icons/IconKetting2Schakels";
 import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
@@ -179,6 +180,24 @@ const tiles: GridTile[] = [
       },
     ],
     link: "/kennisbank/communities",
+  },
+  {
+    icon: <IconTekstballonMetPotlood />,
+    title: "AI",
+    description: [
+      { link: "/kennisbank/ai/standaarden/agents-md", label: "AGENTS.md" },
+      { link: "/kennisbank/ai/standaarden/mcp", label: "MCP" },
+      { link: "/kennisbank/ai/standaarden/llms-txt", label: "llms.txt" },
+      {
+        link: "/kennisbank/ai/skills-plugins-en-marketplaces",
+        label: "Skills en plugins",
+      },
+      {
+        link: "/kennisbank/ai/tutorials/bouw-een-plugin",
+        label: "Bouw zelf een plugin",
+      },
+    ],
+    link: "/kennisbank/ai/",
   },
   {
     icon: <IconApiInrichting />,
