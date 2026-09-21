@@ -1,5 +1,11 @@
 # @developer-overheid-nl/website
 
+## 1.15.0
+
+### Minor Changes
+
+- c350972: Add article about Nederlandse Digitale Dienst
+
 ## 1.14.0
 
 ### Minor Changes
