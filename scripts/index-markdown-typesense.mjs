@@ -105,7 +105,7 @@ function blogFilePathToUrl(filePath, frontmatter) {
   const parts = relative.split(path.sep);
   const fileName = parts.pop() || "";
   const fileSlug = fileName.replace(/\.(md|mdx)$/, "");
-  const datePrefix = fileSlug.match(/^(\d{2})-(.+)$/);
+  const datePrefix = fileSlug.match(/^(\d{1,2})-(.+)$/);
   const slugParts = datePrefix ? [datePrefix[1], datePrefix[2]] : [fileSlug];
 
   return `/blog/${[...parts, ...slugParts].join("/")}`;

@@ -35,6 +35,10 @@ Daarna kan je de website lokaal draaien.
 
 1. Draai `pnpm install` om te zorgen dat alle afhankelijkheden die Docusaurus
    nodig heeft beschikbaar zijn
+1. Kopieer `.env.example` naar `.env`. De Typesense-waarden in het
+   voorbeeldbestand horen bij de lokale service in `docker-compose.yml`.
+1. Start voor een werkende lokale zoekfunctie Typesense met
+   `docker compose up -d typesense`.
 1. Draai `pnpm run start` om te builden en Docusaurus te starten.
 
 Daarna kan je de lokale versie van de site bekijken op

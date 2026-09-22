@@ -11,6 +11,9 @@ env:
   INFRA_REPO: ${{ vars.INFRA_REPO }}
   KUSTOMIZE_PATH: ${{ vars.KUSTOMIZE_PATH }}
   DEPLOY_ENV: test
+  TYPESENSE_ENDPOINT: https://search.don.projects.digilab.network
+  # This search-only key is bundled into public browser JavaScript.
+  TYPESENSE_API_KEY: NFzpPqCWAFE1133lkURBFaXz7Q0H1LXi
 
 jobs:
   check-keyword:
@@ -67,6 +70,8 @@ jobs:
           secrets: |
             "PIWIK_PRO_ACCOUNT_ADDRESS=${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}"
             "PIWIK_PRO_SITE_ID=${{ secrets.PIWIK_PRO_SITE_ID }}"
+            "TYPESENSE_ENDPOINT=${{ env.TYPESENSE_ENDPOINT }}"
+            "TYPESENSE_API_KEY=${{ env.TYPESENSE_API_KEY }}"
 
   update-infra-test:
     needs: build-and-push
