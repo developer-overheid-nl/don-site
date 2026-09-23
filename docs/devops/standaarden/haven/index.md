@@ -1,5 +1,6 @@
 ---
 title: "Haven (Kubernetes)"
+content_type: standaard
 sidebar_position: 0
 tags:
   - "kubernetes"

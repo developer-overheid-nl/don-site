@@ -23,6 +23,39 @@ function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
 
 const emptyTheme = { plain: {}, styles: [] };
 
+function getTypesenseServerConfig() {
+  const endpoint = process.env.TYPESENSE_ENDPOINT;
+  const protocol = process.env.TYPESENSE_PROTOCOL ?? "https";
+  const host = process.env.TYPESENSE_HOST;
+  const port = process.env.TYPESENSE_PORT;
+  const apiKey = process.env.TYPESENSE_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("TYPESENSE_API_KEY is required to build the site");
+  }
+
+  if (!host && !endpoint) {
+    throw new Error(
+      "TYPESENSE_ENDPOINT or TYPESENSE_HOST is required to build the site",
+    );
+  }
+
+  const url = endpoint
+    ? new URL(endpoint)
+    : new URL(`${protocol}://${host}${port ? `:${port}` : ""}`);
+
+  return {
+    nodes: [
+      {
+        host: url.hostname,
+        port: Number(url.port || (url.protocol === "https:" ? 443 : 80)),
+        protocol: url.protocol.replace(":", ""),
+      },
+    ],
+    apiKey,
+  };
+}
+
 type PiwikProClientConfig = {
   siteId: string;
   accountAddress: string;
@@ -181,28 +214,7 @@ const config: Config & {
     },
     typesense: {
       typesenseCollectionName: "developer_overheid",
-      typesenseServerConfig: {
-        nodes: [
-          {
-            host: "search.developer.overheid.nl",
-            port: 443,
-            protocol: "https",
-          },
-          // {
-          //   host: "search.don.projects.digilab.network",
-          //   port: 443,
-          //   protocol: "https",
-          // },
-          // {
-          //   host: "localhost",
-          //   port: 8108,
-          //   protocol: "http",
-          // },
-        ],
-        // apiKey: "xyz", Lokaal
-        // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
-        apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
-      },
+      typesenseServerConfig: getTypesenseServerConfig(),
       contextualSearch: false,
       searchPagePath: "zoeken", // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
     },
@@ -431,7 +443,16 @@ const config: Config & {
     },
     prism: {
       theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
-      additionalLanguages: ["bash", "csharp", "go", "groovy", "java", "php", "properties", "turtle"],
+      additionalLanguages: [
+        "bash",
+        "csharp",
+        "go",
+        "groovy",
+        "java",
+        "php",
+        "properties",
+        "turtle",
+      ],
     },
     colorMode: {
       defaultMode: "light",
