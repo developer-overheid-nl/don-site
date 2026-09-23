@@ -136,6 +136,7 @@ const config: Config & {
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     "./plugins/content-type-index.js",
+    "./plugins/llms-txt.js",
     "./plugins/plugin-piwik-pro.ts",
     [
       "./plugins/markdown-source-no-ui.js",
