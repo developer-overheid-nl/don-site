@@ -1,5 +1,17 @@
 # @developer-overheid-nl/website
 
+## 1.16.0
+
+### Minor Changes
+
+- 10dd94d: Add new restrictions to advertising in guest blogs
+
+### Patch Changes
+
+- 45f0ec8: Include the main pages for Logboek Dataverwerkingen, API Design
+  Rules, OpenAPI Specification, FSC, and Haven in search results. Also index
+  blog posts whose filenames contain a single-digit day.
+
 ## 1.15.0
 
 ### Minor Changes
