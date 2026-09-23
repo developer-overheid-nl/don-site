@@ -64,8 +64,8 @@ gericht op webapplicaties).
 
 Voor het maken en lezen van `publiccode.yml` bestanden zijn tools beschikbaar:
 
-- [Publicode.yml editor](https://developer.overheid.nl/kennisbank/open-source/tools/publiccode-yml-editor)
-- [Publicode.yml checker](https://developer.overheid.nl/kennisbank/open-source/tools/publiccode-yml-checker)
+- [Publiccode.yml editor](https://developer.overheid.nl/kennisbank/open-source/tools/publiccode-yml-editor)
+- [Publiccode.yml checker](https://developer.overheid.nl/kennisbank/open-source/tools/publiccode-yml-checker)
 
 ### Gerelateerde richtlijnen
 
