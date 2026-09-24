@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  /* Zonder dit valt een <button> terug op de browserstandaard (Arial), die bij
+     dezelfde px-grootte breder en zwaarder oogt dan de huisstijlfont. */
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  border-color: var(--ifm-color-primary);
+}
+
+.menu {
+  position: absolute;
+  inset-inline-end: 0;
+  z-index: 10;
+  min-width: 15rem;
+  margin-block-start: 0.25rem;
+  padding: 0.25rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.item {
+  /* Idem: het kopieer-item is een <button> tussen drie <a>'s. */
+  font: inherit;
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.875rem;
+  text-align: start;
+  color: var(--ifm-font-color-base);
+  background: none;
+  border: 0;
+  border-radius: var(--ifm-global-radius);
+  cursor: pointer;
+}
+
+.item:hover,
+.item:focus-visible {
+  background: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+
+/* Melding voor schermlezers; visueel dekt het knoplabel de status al af. */
+.status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (forced-colors: active) {
+  .button,
+  .menu {
+    border: 1px solid CanvasText;
+  }
+}

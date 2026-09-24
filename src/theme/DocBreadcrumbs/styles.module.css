@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--ifm-spacing-horizontal, 1rem);
+}
+
+/* De breadcrumbs hebben zelf al een onder-marge; die telt voor de hele regel. */
+.row > nav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
