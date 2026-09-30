@@ -2,7 +2,7 @@ import Header from "@theme-original/BlogPostItem/Header";
 import type HeaderType from "@theme/BlogPostItem/Header";
 import type { WrapperProps } from "@docusaurus/types";
 import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
-import AiMenu from "@site/src/components/AiMenu";
+import AiDropdown from "@site/src/components/AiDropdown";
 
 import styles from "./styles.module.css";
 
@@ -14,16 +14,15 @@ type Props = WrapperProps<typeof HeaderType>;
  */
 export default function HeaderWrapper(props: Props): React.JSX.Element {
   const { metadata, isBlogPostPage } = useBlogPost();
-  const markdownPath = `${metadata.permalink}.md`;
 
   return (
     <>
-      <Header {...props} />
       {isBlogPostPage ? (
         <div className={styles.bar}>
-          <AiMenu markdownPath={markdownPath} title={metadata.title} />
+          <Header {...props} />
+          <AiDropdown permalink={metadata.permalink} title={metadata.title} label="AI-Menu" />
         </div>
-      ) : null}
+      ) : <Header {...props} />}
     </>
   );
 }
