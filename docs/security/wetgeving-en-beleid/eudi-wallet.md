@@ -34,7 +34,7 @@ wallets accepteren zodra ze beschikbaar zijn, private partijen een jaar later.
 In Nederland wordt de **EDI-wallet** ontwikkeld die gratis beschikbaar komt en
 voldoet aan de eisen van inclusiviteit, toegankelijkheid en veiligheid. De
 broncode van deze applicatie is als
-[open source project](https://oss.developer.overheid.nl/repositories/minbzk-nl-wallet-9632)
+[open source project](https://oss.developer.overheid.nl/repositories/cd46930e-8457-4560-a6d7-3af5e0bd3433)
 gepubliceerd. Naast de publieke wallet kunnen in de toekomst ook private
 aanbieders toetreden, mits zij voldoen aan de eIDAS-eisen.
 
@@ -104,7 +104,7 @@ ecosysteem:
 - [edi.pleio.nl](https://edi.pleio.nl) – informatie over de Nederlandse
   EDI-wallet.
 - [blsp.pleio.nl](https://blsp.pleio.nl) – Large Scale Pilots in Europa.
-- [OSS repository NL-wallet](https://oss.developer.overheid.nl/repositories/minbzk-nl-wallet-9632)
+- [OSS repository NL-wallet](https://oss.developer.overheid.nl/repositories/cd46930e-8457-4560-a6d7-3af5e0bd3433)
   – open source ontwikkeling van de Nederlandse wallet.
 - [EUDI Architecture and Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/architecture-and-reference-framework-main/) -
   het Europese referentie en architectuur raamwerk.
