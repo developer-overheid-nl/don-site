@@ -67,14 +67,39 @@ function titleOf(frontMatter, content, filePath) {
   return path.basename(filePath, path.extname(filePath));
 }
 
-/** Bladpagina's krijgen <route>.md, indexpagina's <route>/index.md. */
+/**
+ * Bladpagina's krijgen <route>.md, indexpagina's <route>/index.md.
+ *
+ * Docs en blog behandelen een cijferprefix verschillend. In docs is het een
+ * sorteerprefix die uit de route verdwijnt: 1-genereer-oas.md wordt
+ * genereer-oas.md. In de blog is het de dag van publicatie, en die wordt juist
+ * een eigen padsegment: 10-bag-api.md wordt 10/bag-api.md.
+ */
 function markdownUrl(filePath, baseDir, routeBase) {
   const relative = path.relative(baseDir, filePath).split(path.sep).join("/");
   const withoutExtension = relative.replace(/\.mdx?$/, "");
+  if (routeBase === "/blog") {
+    const withDay = withoutExtension.replace(
+      /^(\d{4}\/\d{1,2}\/\d{1,2})-/,
+      "$1/",
+    );
+    return `${routeBase}/${withDay}.md`;
+  }
   const segments = withoutExtension
     .split("/")
     .map((segment) => segment.replace(/^\d+-/, ""));
   return `${routeBase}/${segments.join("/")}.md`;
+}
+
+/**
+ * Datum van een blogpost, afgeleid uit de URL.
+ *
+ * Sorteren op de URL-string gaat mis zodra een dag of maand niet met een nul is
+ * aangevuld: "9/" komt dan na "10/".
+ */
+function blogDate(item) {
+  const match = item.url.match(/^\/blog\/(\d{4})\/(\d{1,2})\/(\d{1,2})\//);
+  return match ? new Date(match[1], match[2] - 1, match[3]) : new Date(0);
 }
 
 function collect(baseDir, routeBase) {
@@ -156,7 +181,7 @@ module.exports = function llmsTxtPlugin(context) {
         `- [Blogoverzicht](${siteUrl}/blog): ${blog.length} artikelen over lopend werk, interviews en achtergronden`,
       );
       blog
-        .sort((a, b) => b.url.localeCompare(a.url))
+        .sort((a, b) => blogDate(b) - blogDate(a))
         .slice(0, 20)
         .forEach((item) => lines.push(formatLine(siteUrl, item)));
       lines.push("");
