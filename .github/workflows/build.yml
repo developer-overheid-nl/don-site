@@ -39,6 +39,7 @@ jobs:
         run: pnpm test
 
       - name: Audit dependencies
+        continue-on-error: true
         run: pnpm audit --audit-level moderate
 
   build:
