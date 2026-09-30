@@ -130,8 +130,8 @@ const tiles: GridTile[] = [
         label: "publiccode.yml editor",
       },
       {
-        link: "/kennisbank/open-source/tools/publiccode-yml-parser",
-        label: "publiccode.yml parser",
+        link: "/kennisbank/open-source/tools/publiccode-yml-checker",
+        label: "publiccode.yml checker",
       },
     ],
     link: "/kennisbank/tools",
