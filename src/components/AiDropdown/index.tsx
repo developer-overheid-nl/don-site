@@ -144,7 +144,7 @@ export default function AiDropdown({ permalink, title, label }: AiDropdownProps)
           items={[
             {
               label: "Bekijk als Markdown",
-              href: markdownPath,
+              href: `pathname://${markdownPath}`,
             },
             {
               label: copyMarkdownLabel,
