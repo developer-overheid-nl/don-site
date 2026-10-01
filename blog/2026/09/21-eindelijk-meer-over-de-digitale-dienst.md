@@ -23,7 +23,7 @@ opereren.
 
 <!-- truncate -->
 
-## Een rapport door Kamercommissie Digitale Zaken
+## Rapport door Kamercommissie Digitale Zaken
 
 Voor het ontstaan van de NLDD moeten we terug naar het rapport "Ons Digitaal
 Fundament" dat geschreven werd door de Kamercommissie Digitale Zaken. Hierin
