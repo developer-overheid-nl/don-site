@@ -5,25 +5,25 @@ image: ./img/kees.jpg
 description: |
   Lang wisten we weinig over de Nederlandse Digitale Dienst.
   Wij waren met developer.overheid.nl aanwezig op de Digilab meetup
-  waar Kees Keulemans van Bureau Architectuur vertelde over waar het initiatief nu staat.
+  waar Kees Keulemans (kwartiermakersteam Nederlandse Digitale Dienst) vertelde over waar het initiatief nu staat.
 ---
 
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 # Eindelijk meer over de Nederlandse Digitale Dienst
 
-![Kees Keulemans van de Nederlandse Digitale Dienst](./img/kees.jpg) _Kees
-Keulemans van de Nederlandse Digitale Dienst_
+![Kees Keulemans, kwartiermakersteam Nederlandse Digitale Dienst](./img/kees.jpg)
+_Kees Keulemans, kwartiermakersteam Nederlandse Digitale Dienst_
 
 Lang wisten we weinig over de Nederlandse Digitale Dienst (NLDD). Het bleef een
 in nevelen gehuld initiatief waarvan de verwachtingen hoog gespannen waren.
 Gelukkig waren wij aanwezig bij de meetup van Digilab in Utrecht, waar Kees
-Keulemans van Bureau Architectuur meer vertelde over waar het team nu staat, en
-hoe het van plan is te opereren.
+Keulemans meer vertelde over waar het team nu staat, en hoe het van plan is te
+opereren.
 
 <!-- truncate -->
 
-## Een rapport door Kamercommissie Digitale Zaken
+## Rapport door Kamercommissie Digitale Zaken
 
 Voor het ontstaan van de NLDD moeten we terug naar het rapport "Ons Digitaal
 Fundament" dat geschreven werd door de Kamercommissie Digitale Zaken. Hierin
@@ -54,9 +54,10 @@ behartigen.
 Als op 30 januari 2026 het
 [coalitieakkoord](https://www.kabinetsformatie2025.nl/documenten/2026/01/30/aan-de-slag---coalitieakkoord-2026-2030)
 vermeldt dat er een Digitale Dienst komt, blijkt er geen budget voor
-gereserveerd te zijn. Dat dwong de medewerkers van Bureau Architectuur tot
-samenwerking: Digilab, Forum Standaardisatie en Bureau Architectuur bundelen hun
-krachten en zullen uiteindelijk opgaan in de Digitale Dienst.
+gereserveerd te zijn. Bij BZK is er toen nagedacht over hoe de Digitale Dienst
+het beste kon starten. Daaruit is het plan voortgekomen om Digilab, Bureau
+Architectuur Digitale Overheid en Bureau Forum Standaardisatie virtueel samen te
+brengen.
 
 In de beginfase werden er snel eerste ideeën uitgewerkt als voorbereiding voor
 het gesprek met de staatssecretaris. De vraag was: hoe zet je iets neer waar
@@ -69,15 +70,15 @@ Om snel van start te gaan is er gekozen om vier projecten te markeren als
 "doorbraakprojecten". Dit zijn projecten die veel potentie hebben en waar vanuit
 de dienst aan gewerkt wordt. Dit zijn:
 
-- [Het Fundament](https://github.com/fundament-oss) (Private Cloud, volledig
-  open source en op eigen hardware)
-- [MijnOverheid Zakelijk](https://github.com/MinBZK/MijnOverheidZakelijk)
-  (MijnOverheid voor bedrijven)
+- [Fundament](https://github.com/fundament-oss) (Private Cloud, volledig open
+  source en op eigen hardware)
+- [MijnOverheid Zakelijk](https://mijnoverheidzakelijk.nl/) (MijnOverheid voor
+  bedrijven)
 - [RegelRecht](https://regelrecht.rijks.app/) (Wetten als uitvoerbare code)
 - AI-assisted programming
 
 <Blockquote
-  attribution="~ Kees Keulemans"
+  attribution="~ Kees Keulemans, kwartiermakersteam NLDD"
   variation="pink-background"
 >
 De Digitale Dienst geeft elke drie weken een demo
@@ -108,7 +109,6 @@ bevat nu alleen nog een tijdlijn, maar op termijn vind je hier meer informatie.
 
 ## De toekomst
 
-Het team groeit: inmiddels bestaat het uit zo'n 45 mensen. De continuïteit is
-ondertussen geborgd en er is voldoende budget om in 2027 door te draaien. Ook
-zijn er veel cruciale debatten in aantocht waaruit misschien weer werk voortkomt
-voor de NLDD.
+Het team groeit: inmiddels bestaat het uit zo'n 45 mensen. Ook zijn er veel
+cruciale debatten in aantocht waaruit misschien weer werk voortkomt voor de
+NLDD.
