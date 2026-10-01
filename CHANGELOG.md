@@ -1,5 +1,23 @@
 # @developer-overheid-nl/website
 
+## 1.16.0
+
+### Minor Changes
+
+- 720a4f1: Replace developer-italia parser by don-checker in open-source chapter
+- 4bea514: Generate an llms.txt index so language models can find the Markdown
+  source of every kennisbank article and blog post
+- 10dd94d: Add new restrictions to advertising in guest blogs
+
+### Patch Changes
+
+- ab11165: Expand AGENTS.md with the contributing rules, the four-layer tagging
+  strategy, the changeset requirement and a no-em-dash style rule
+- 45f0ec8: Include the main pages for Logboek Dataverwerkingen, API Design
+  Rules, OpenAPI Specification, FSC, and Haven in search results. Also index
+  blog posts whose filenames contain a single-digit day.
+- a23d6d0: Fix speaker affiliation and project details in the NLDD blog post
+
 ## 1.15.0
 
 ### Minor Changes
