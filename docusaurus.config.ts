@@ -61,8 +61,17 @@ type PiwikProClientConfig = {
   accountAddress: string;
 };
 
+// Read-only events API of the Tools API; the API key ends up in public browser JavaScript.
+type EventsApiClientConfig = {
+  baseUrl: string;
+  apiKey?: string;
+};
+
 const config: Config & {
-  customFields: Config["customFields"] & { piwikPro: PiwikProClientConfig };
+  customFields: Config["customFields"] & {
+    piwikPro: PiwikProClientConfig;
+    eventsApi: EventsApiClientConfig;
+  };
 } = {
   title: "developer.overheid.nl",
   customFields: {
@@ -72,6 +81,12 @@ const config: Config & {
     piwikPro: {
       siteId: process.env.PIWIK_PRO_SITE_ID,
       accountAddress: process.env.PIWIK_PRO_ACCOUNT_ADDRESS,
+    },
+    eventsApi: {
+      baseUrl:
+        process.env.EVENTS_API_URL ??
+        "https://api.developer.overheid.nl/tools/v1",
+      apiKey: process.env.EVENTS_API_KEY,
     },
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
