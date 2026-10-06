@@ -1,5 +1,5 @@
 ---
-"@developer-overheid-nl/website": minor
+"@developer-overheid-nl/website": major
 ---
 
 Add a tool article and a CLI tutorial for the Repository Docs Generator, move
