@@ -15,15 +15,15 @@ en de generator maakt daar alle bestanden van.
 
 De generator maakt de volgende bestanden:
 
-| Bestand              | Functie                                                                                                 | Meer informatie                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `README.md`          | Legt uit wat het project doet en hoe je het installeert en gebruikt                                     | [README.md](../standaarden/readme-md)                                         |
-| `CONTRIBUTING.md`    | Beschrijft hoe anderen kunnen bijdragen aan het project                                                 | [CONTRIBUTING.md](../standaarden/contributing-md)                             |
-| `CODE_OF_CONDUCT.md` | Legt de gedragsregels van de community vast                                                             | [CODE_OF_CONDUCT.md](../standaarden/code-of-conduct-md)                       |
-| `SECURITY.md`        | Vertelt je hoe je een kwetsbaarheid veilig meldt                                                        | [SECURITY.md](../standaarden/security)                                        |
-| `LICENSE.md`         | Bepaalt onder welke voorwaarden anderen de code mogen gebruiken (standaard een EUPL license)            | [Open source software licenties](../tutorials/open-source-software-licenties) |
-| `CHANGELOG.md`       | Houdt per versie bij wat er is veranderd                                                                |                                                                               |
-| `publiccode.yml`     | Beschrijft het project in een gestandardiseerd formaat, zodat anderen het kunnen vinden en hergebruiken | [publiccode.yml](../standaarden/publiccode-yml)                               |
+| Bestand              | Functie                                                                                                  | Meer informatie                                                               |
+| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `README.md`          | Legt uit wat het project doet en hoe je het installeert en gebruikt                                      | [README.md](../standaarden/readme-md)                                         |
+| `CONTRIBUTING.md`    | Beschrijft hoe anderen kunnen bijdragen aan het project                                                  | [CONTRIBUTING.md](../standaarden/contributing-md)                             |
+| `CODE_OF_CONDUCT.md` | Legt de gedragsregels van de community vast                                                              | [CODE_OF_CONDUCT.md](../standaarden/code-of-conduct-md)                       |
+| `SECURITY.md`        | Vertelt je hoe je een kwetsbaarheid veilig meldt                                                         | [SECURITY.md](../standaarden/security)                                        |
+| `LICENSE.md`         | Bepaalt onder welke voorwaarden anderen de code mogen gebruiken (standaard een EUPL licentie)            | [Open source software licenties](../tutorials/open-source-software-licenties) |
+| `CHANGELOG.md`       | Houdt per versie bij wat er is veranderd                                                                 |                                                                               |
+| `publiccode.yml`     | Beschrijft het project in een gestandaardiseerd formaat, zodat anderen het kunnen vinden en hergebruiken | [publiccode.yml](../standaarden/publiccode-yml)                               |
 
 De bestanden zijn gebaseerd op de
 [templates in de repository](https://github.com/developer-overheid-nl/repo-docs-generator/tree/main/templates)
@@ -37,14 +37,28 @@ en vul de JSON aan de linkerkant in met de gegevens van je project. Aan de
 rechterkant zie je het resultaat. Kies met de dropdown welk bestand je wilt zien
 en kopieer de inhoud met de kopieerknop.
 
-Een stapsgewijze uitleg met screenshots staat in de tutorial
-[Richt je repo in met de generator](../tutorials/tutorial-repo-docs-generator).
+:::tip[Stap voor stap]
+
+Volg de tutorial
+[Repo inrichten met de generator (web-app)](../tutorials/repo-inrichten-generator-webapp)
+voor een uitleg met screenshots.
+
+:::
 
 ## CLI
 
-De generator is ook via command line te gebruiken. De CLI gebruikt dezelfde
-templates en validatie als de web-app en werkt met Node 18 of hoger. Je hoeft de
-repository niet te clonen:
+De generator is ook via de command line te gebruiken. De CLI gebruikt dezelfde
+templates en validatie als de web-app.
+
+:::tip[Stap voor stap]
+
+Volg de tutorial
+[Repo inrichten met de generator (CLI)](../tutorials/repo-inrichten-generator-cli)
+voor een uitleg van begin tot eind.
+
+:::
+
+### Voorbeelden
 
 ```sh
 # Maak een voorbeeld input.json als startpunt
