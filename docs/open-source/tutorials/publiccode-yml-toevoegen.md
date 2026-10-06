@@ -87,7 +87,7 @@ No diagnostics.
 
 ### 5. (optioneel) - Voeg validatie toe aan je CI/CD-pipeline
 
-Door de parser te draaien in je pipeline weet je zeker dat je `publiccode.yml`
+Door de checker te draaien in je pipeline weet je zeker dat je `publiccode.yml`
 altijd geldig is.
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
