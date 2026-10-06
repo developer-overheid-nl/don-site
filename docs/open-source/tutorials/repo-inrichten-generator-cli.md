@@ -4,20 +4,20 @@ description:
   README.md, SECURITY.md, publiccode.yml en andere standaardbestanden voor je
   repository."
 content_type: tutorial
-tags: [open-source, publiccode-yml, license, changelog, cli]
+tags: [open-source, publiccode-yml, license, changelog, cli, json-schema]
 ---
 
 # Repo inrichten met generator (CLI)
 
 Met de CLI van de [Repository Docs Generator](../tools/repo-docs-generator) maak
 je vanaf de commandline de standaardbestanden voor je repository. De CLI
-gebruikt dezelfde templates als de [web-app](./tutorial-repo-docs-generator),
+gebruikt dezelfde templates als de [web-app](./repo-inrichten-generator-webapp),
 maar leest de gegevens lokaal uit een JSON-bestand. Dat bestand kun je inchecken
 en bewaren om hem later opnieuw te gebruiken.
 
-## Prerequisites
+## Wat heb je nodig
 
-- Node 18.0 of > hoger
+- Node 18 of hoger
 
 ## 1. Maak een input-bestand
 
@@ -88,18 +88,3 @@ Alle opties van de CLI staan in het artikel over de
 - [Meer over de Repository Docs Generator](../tools/repo-docs-generator#cli)
 - [Repository Docs Generator op GitHub](https://github.com/developer-overheid-nl/repo-docs-generator)
 - [Repository Docs Generator web-app](https://developer-overheid-nl.github.io/repo-docs-generator/#/README.md)
-
-Handige opties:
-
-| Optie                   | Beschrijving                                            | Standaard    |
-| ----------------------- | ------------------------------------------------------- | ------------ |
-| `-o, --out <dir>`       | Map waarin de bestanden komen                           | `output`     |
-| `-t, --template <name>` | Genereer alleen dit bestand; mag vaker voorkomen        | alle         |
-| `-l, --list`            | Toon de beschikbare templates                           |              |
-| `--init`                | Schrijf een voorbeeld input-bestand weg                 | `input.json` |
-| `--force`               | Overschrijf een bestaand bestand bij `--init`           |              |
-| `--skip-validation`     | Sla de controle van de input tegen het JSON-schema over |              |
-
-De generator controleert de input tegen een JSON-schema
-(`input_json_schema.json` in de repository). Een fout in je input zie je dus
-meteen, en niet pas in de gegenereerde bestanden.
