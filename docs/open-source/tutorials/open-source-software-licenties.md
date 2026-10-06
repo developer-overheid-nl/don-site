@@ -15,12 +15,12 @@ mogen en kunnen doen.
 De EUPL (European Union Public License) is een open source-licentie ontwikkeld
 door de Europese Commissie. Het doel van deze licentie is om software die door
 overheidsinstanties wordt ontwikkeld, gemakkelijk te delen en te hergebruiken,
-met de nadruk op juridische compatibiliteit en transparantie binnen de EU. Deze
-compatibiliteit, maar ook juridische afdekking moet zorgdragen voor een
-drempelvrije uitwisseling en ingebruikname van broncode uit andere EUPL
-projecten binnen Europese instellingen. De EUPL is binnen veel
-overheidsinstellingen beleidsmatig de standaardkeuze voor werken die
-geproduceerd zijn met publiek geld.
+met de nadruk op juridische compatibiliteit en transparantie binnen de EU.
+Deze compatibiliteit, maar ook juridische afdekking moet zorgdragen voor een
+drempelvrije uitwisseling en ingebruikname van broncode uit andere EUPL 
+projecten binnen Europese instellingen.
+De EUPL is binnen veel overheidsinstellingen beleidsmatig de standaardkeuze
+voor werken die geproduceerd zijn met publiek geld.
 
 - [Contents EUPL 1.2 NL](https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/EUPL%20v1_2%20NL.txt)
 - [Contents EUPL 1.2 EN](https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt)
@@ -327,15 +327,13 @@ EUPL version.
 - Heeft copyleft-eigenschappen (afgeleid werk moet onder compatibele licentie).
 - Is beschikbaar in [alle EU-talen](https://eupl.eu/) met juridische geldigheid.
 - Heeft expliciet compatibiliteit met andere belangrijke open source licenties.
-  (GPL, AGPL, etc.).
-  https://nl.wikipedia.org/wiki/Openbare_Licentie_van_de_Europese_Unie#Verenigbare_licenties
+  (GPL, AGPL, etc.). https://nl.wikipedia.org/wiki/Openbare_Licentie_van_de_Europese_Unie#Verenigbare_licenties
 - Automatisch 'forward' geupgrade naar nieuwe versies.
-- Aansprakelijkheid wordt (net als bij andere open source licenties)
-  nadrukkelijk gelimiteerd, maar binnen de EUPL sterk passend bij de toepasbare
-  Europese wetgeving.
+- Aansprakelijkheid wordt (net als bij andere open source licenties) nadrukkelijk
+  gelimiteerd, maar binnen de EUPL sterk passend bij de toepasbare Europese
+  wetgeving.
 - Wordt ook aanbevolen in het Nederlandse overheidsbeleid.
-- Omvat het 'gehele' werk (anders dan alleen de code), denk hierbij aan
-  documentatie etc.
+- Omvat het 'gehele' werk (anders dan alleen de code), denk hierbij aan documentatie etc.
 
 ### Copyleft: voorkomt gesloten redistributie
 
@@ -346,23 +344,20 @@ product van te maken. Dit zou een ongewenst scenario kunnen zijn omdat je wilt
 dat iedereen die de code gebruikt ook terug contribueert aan het bestaande
 project, of in ieder geval diens versie weer open beschikbaar stelt.
 
-## Moet ik alle bestanden onder de zelfde licentie uitbrengen?
+## Kan, en of Moet ik alle bestanden onder de zelfde licentie uitbrengen?
 
 Een project bestaat vaak uit verschillende soorten bestanden, dikwijls van
 verschillende auteurs en ook met eigen copyright-beperkingen en of licenties.
-Denk er aan dat je onder de EUPL (en veel andere licenties) logischerwijs alleen
-de vrijheid hebt om een (open) licentie 'op het werk' van toepassing te maken,
-als je ook daadwerkelijk de eigenaar bent van het intellectueel eigendom. Bij
-opgenomen werk van derden zal vaak de daarop geldende licenties van toepassing
-blijven, en of al dan niet onder een compatible licentie gebubliceerd kunnen
-worden.
+Denk er aan dat je onder de EUPL (en veel andere licenties) logischerwijs alleen de
+vrijheid hebt om een (open) licentie 'op het werk' van toepassing te maken, als
+je ook daadwerkelijk de eigenaar bent van het intellectueel eigendom.
+Bij opgenomen werk van derden zal vaak de daarop geldende licenties van
+toepassing blijven, en of al dan niet onder een compatible licentie gebubliceerd
+kunnen worden.
 
 Valkuilen in deze context zijn vooral te vinden in:
-
-- Overgenomen text die eerder onder een Creative Commons licentie is
-  vrijgegegeven.
-- Typografische (font) en of Icon-bestanden (en dan met name die uit de
-  [Rijkhuisstijl set](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6756))
+- Overgenomen text die eerder onder een Creative Commons licentie is vrijgegegeven.
+- Typografische (font) en of Icon-bestanden (en dan met name die uit de [Rijkhuisstijl set](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6756))
 - Logo's van organisaties en of bedrijven. (denk aan het rijkswapen `beeldmerk`)
 - Meegeleverde afgeleide werken (minified Javascript files bijvoorbeeld)
 
@@ -386,8 +381,8 @@ Het antwoord is dus: **nee**, dit hoeft niet als er een LICENSE-bestand in de
 root van je project staat.
 
 Voor projecten met meer dan één licentie is het gebruikelijk in de map met het
-afwijkende onderdeel een eigen LICENSE-bestand op te namen, en of gebruik te
-maken van [reuse.spec](https://reuse.software/spec-3.3/).
+afwijkende onderdeel een eigen LICENSE-bestand op te namen, en of gebruik te maken
+van [reuse.spec](https://reuse.software/spec-3.3/).
 
 ## Licentiewijzers
 
