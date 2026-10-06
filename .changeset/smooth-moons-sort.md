@@ -1,7 +1,7 @@
 ---
-"@developer-overheid-nl/website": major
+"@developer-overheid-nl/website": minor
 ---
 
-Add a tool article and a CLI tutorial for the Repository Docs Generator, and
-move the website tutorial to
-/kennisbank/open-source/tutorials/repo-inrichten-generator-website
+Add a tool article and a CLI tutorial for the Repository Docs Generator, move
+the web-app tutorial to
+/kennisbank/open-source/tutorials/repo-inrichten-generator-webapp
