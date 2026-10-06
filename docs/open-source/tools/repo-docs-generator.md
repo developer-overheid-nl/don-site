@@ -21,7 +21,7 @@ De generator maakt de volgende bestanden:
 | `CONTRIBUTING.md`    | Beschrijft hoe anderen kunnen bijdragen aan het project                                                 | [CONTRIBUTING.md](../standaarden/contributing-md)                             |
 | `CODE_OF_CONDUCT.md` | Legt de gedragsregels van de community vast                                                             | [CODE_OF_CONDUCT.md](../standaarden/code-of-conduct-md)                       |
 | `SECURITY.md`        | Vertelt je hoe je een kwetsbaarheid veilig meldt                                                        | [SECURITY.md](../standaarden/security)                                        |
-| `LICENSE.md`         | Bepaalt onder welke voorwaarden anderen de code mogen gebruiken                                         | [Open source software licenties](../tutorials/open-source-software-licenties) |
+| `LICENSE.md`         | Bepaalt onder welke voorwaarden anderen de code mogen gebruiken (standaard een EUPL license)            | [Open source software licenties](../tutorials/open-source-software-licenties) |
 | `CHANGELOG.md`       | Houdt per versie bij wat er is veranderd                                                                |                                                                               |
 | `publiccode.yml`     | Beschrijft het project in een gestandardiseerd formaat, zodat anderen het kunnen vinden en hergebruiken | [publiccode.yml](../standaarden/publiccode-yml)                               |
 
