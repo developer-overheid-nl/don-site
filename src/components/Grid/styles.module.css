@@ -1,6 +1,16 @@
 .grid {
+  --rhc-card-as-link-inline-size: 100%;
+  --rhc-font-size-xs-desktop: var(--ifm-font-size-base);
+  --rhc-card-as-link-heading-font-size: var(--ifm-h3-font-size);
   display: flex;
   flex-direction: column;
+}
+
+/* :global keeps the class name unhashed so it matches the class the card
+   library renders. Long words like "Publiccode.yml" may wrap instead of
+   overflowing narrow cards. */
+.grid :global(.rhc-card__heading) {
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 45.063rem) {

@@ -1,0 +1,18 @@
+.aiDropdown {
+  flex-grow: 0;
+
+  :global(.navbar__item) {
+    display: inline-block;
+  }
+  :global(.navbar__link) {
+    white-space: nowrap;
+    
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+.copyLink {
+  min-width: 190px; /* so smaller texts don't scale the modal window */
+  cursor: pointer;
+}
