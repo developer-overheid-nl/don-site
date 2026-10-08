@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-title: "AI"
+title: "Artificiële Intelligentie (AI)"
 tags: [ai, llm, mcp, skills]
 ---
 

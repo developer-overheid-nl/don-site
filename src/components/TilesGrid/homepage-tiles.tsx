@@ -1,5 +1,5 @@
 import IconApiInrichting from "@site/src/theme/icons/IconApiInrichting";
-import IconTekstballonMetPotlood from "@site/src/theme/icons/IconTekstballonMetPotlood";
+import IconAI from "@site/src/theme/icons/IconAI";
 import IconComputer from "@site/src/theme/icons/IconComputer";
 import IconKetting2Schakels from "@site/src/theme/icons/IconKetting2Schakels";
 import IconCybersecurity from "@site/src/theme/icons/IconCybersecurity";
@@ -182,20 +182,31 @@ const tiles: GridTile[] = [
     link: "/kennisbank/communities",
   },
   {
-    icon: <IconTekstballonMetPotlood />,
-    title: "AI",
+    icon: <IconAI />,
+    title: "Artificiële Intelligentie (AI)",
     description: [
       { link: "/kennisbank/ai/standaarden/agents-md", label: "AGENTS.md" },
       { link: "/kennisbank/ai/standaarden/mcp", label: "MCP" },
       { link: "/kennisbank/ai/standaarden/llms-txt", label: "llms.txt" },
       {
         link: "/kennisbank/ai/skills-plugins-en-marketplaces",
-        label: "Skills en plugins",
+        label: "Skills, plugins en marketplaces",
+      },
+      {
+        link: "/kennisbank/ai/skills-plugins-en-marketplaces/plugins",
+        label: "Beschikbare plugins",
+      },
+      {
+        link: "/kennisbank/ai/skills-plugins-en-marketplaces/verantwoording",
+        label: "Verantwoording",
       },
       {
         link: "/kennisbank/ai/tutorials/bouw-een-plugin",
         label: "Bouw zelf een plugin",
       },
+      { link: "/kennisbank/ai/communities/saidkick", label: "sAIdkick" },
+      { link: "/kennisbank/ai/communities/gpt-nl", label: "GPT-NL" },
+      { link: "/kennisbank/ai/communities/vlam-ai", label: "vlam.ai" },
     ],
     link: "/kennisbank/ai/",
   },
