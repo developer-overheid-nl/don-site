@@ -19,6 +19,47 @@ Voor de overheid is dat een bekend patroon. Je publiceert je API één keer
 volgens een standaard, in plaats van per afnemer een eigen koppeling te maken.
 MCP doet hetzelfde voor de laag tussen model en systeem.
 
+## MCP en je API
+
+De vraag die hierna altijd komt: vervangt dit mijn API? Nee. Een MCP-server zet
+er een laag bovenop, en in de praktijk is die server zelf een afnemer van je
+API.
+
+Het verschil zit in wie de aanroeper is en wat die vooraf weet. Een API
+veronderstelt een programmeur die de documentatie heeft gelezen en weet wat hij
+wil. Het contract staat vast, de aanroep staat in code, en als het contract
+wijzigt breekt die code. Een MCP-server praat met een model dat vooraf niet weet
+wat er te halen valt. Daarom vraagt de client bij het begin welke tools er zijn
+en wat ze doen, en kiest het model er dan een.
+
+|                   | API                                 | MCP-server                                 |
+| ----------------- | ----------------------------------- | ------------------------------------------ |
+| Aanroeper         | een programma dat het contract kent | een model dat het contract opvraagt        |
+| Ontdekken         | vooraf, uit de OAS                  | tijdens het gesprek, via `tools/list`      |
+| Wie kiest         | de programmeur, in code             | het model, per vraag                       |
+| Beschrijving      | documentatie voor mensen            | onderdeel van de prompt                    |
+| Bij een wijziging | de aanroepende code breekt          | het model kiest anders, zonder foutmelding |
+
+Die laatste twee rijen zijn de reden om hier anders naar te kijken dan naar een
+gewone integratie. De omschrijving van een tool is geen documentatie maar invoer
+voor het model: zij bepaalt of en wanneer de tool wordt gekozen. Een
+onduidelijke omschrijving is dus geen documentatieprobleem maar een functioneel
+probleem. En waar een contractwijziging bij een API een harde fout geeft,
+verandert bij MCP stilletjes het gedrag.
+
+Praktisch betekent dit drie dingen:
+
+- **Bouw de API eerst.** Zonder API heeft een MCP-server niets te ontsluiten. De
+  verplichtingen blijven staan: de
+  [API Design Rules](/kennisbank/api-ontwikkeling/standaarden), een OAS, het
+  API-register
+- **Zet de MCP-server ernaast, niet ervoor.** Andere afnemers blijven de API
+  gebruiken. Een server die de enige weg naar je data wordt, maakt een
+  AI-assistent een verplichte schakel
+- **Een MCP-server is geen dunne doorgeefluik.** Een API ontworpen voor
+  programma's geeft vaak te veel terug in te veel aanroepen. Een bruikbare
+  server bundelt dat tot een paar tools met een duidelijke taak
+
 ## De rollen
 
 | Rol        | Wat het is                                            |
@@ -56,7 +97,24 @@ er alleen om gelezen te worden.
 
 De client ontdekt wat er is via `tools/list`, `resources/list` en
 `prompts/list`, en voert uit via `tools/call`. Onderliggend is het gewoon
-JSON-RPC 2.0.
+JSON-RPC 2.0, waarbij elk verzoek op zichzelf staat: de versie en de
+mogelijkheden van de client reizen mee per verzoek, in plaats van eenmalig bij
+het opzetten van een verbinding.
+
+Omgekeerd kan de client ook iets aanbieden aan de server. Vandaag is dat
+**elicitation**: de server vraagt tijdens het uitvoeren om aanvullende
+informatie, en de client legt die vraag bij de gebruiker neer.
+
+Naast het kernprotocol staan er optionele **extensies**, die beide kanten
+expliciet moeten ondersteunen:
+
+- **Tasks** voor bewerkingen die lang duren, met een handle waarop je later
+  terugkomt
+- **Skills over MCP** voor het aanbieden van werkinstructies via MCP, in plaats
+  van als bestanden; zie
+  [Skills, plugins en marketplaces](/kennisbank/ai/skills-plugins-en-marketplaces)
+- **MCP Apps** voor interactieve elementen zoals een formulier of een grafiek in
+  het gesprek
 
 ## Transport
 
@@ -85,9 +143,11 @@ komt in de context van het model terecht. Staat er in een veld een instructie
 gericht aan de assistent, dan kan die worden opgevolgd. Behandel de output van
 een server dus als onvertrouwde invoer, niet als data die alleen gelezen wordt.
 
-**Het protocol beweegt snel.** De versie van dit schrijven is `2026-07-28`, en
-onderdelen die eerder in de specificatie stonden zijn inmiddels vervallen.
-Controleer bij het bouwen welke versie je tegenover je hebt.
+**Het protocol beweegt snel.** De huidige versie is `2026-07-28`. Daarin is de
+`initialize`-handshake vervallen en kan een server geen verzoeken meer naar de
+client sturen; implementaties van voor die versie werken anders en de
+specificatie beschrijft hoe je daarop terugvalt. Controleer bij het bouwen welke
+versie je tegenover je hebt.
 
 ## Meer weten
 

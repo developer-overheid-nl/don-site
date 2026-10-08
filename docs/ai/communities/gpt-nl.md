@@ -27,8 +27,13 @@ ontwikkeld en beheerd, zonder afhankelijkheid van een leverancier buiten de EU.
 
 ## Status
 
-De eerste versies draaien bij een beperkte groep testgebruikers. Een bredere
-uitrol staat gepland voor de tweede helft van 2026.
+GPT-NL v1 staat gepland voor het najaar van 2026. Tot die tijd is het model
+alleen beschikbaar voor een besloten groep launching customers; publiek
+beschikbaar is het nog niet.
+
+:::note Let op de naam Het project waarschuwt zelf dat het niets te maken heeft
+met gpt-nl.com, een ander product met een vergelijkbare naam. De juiste
+vindplaats is gpt-nl.nl. :::
 
 ## Waarom het relevant is voor developers
 

@@ -40,7 +40,7 @@ vraagt._ Die zin wordt straks je `description`.
 
 ## Stap 2: Zet de structuur op
 
-```
+```text
 mijn-plugin/
 ├── .plugin/
 │   └── plugin.json
@@ -88,11 +88,11 @@ expliciet naar de API Design Rules verwijst.
 
 ## Wat je controleert
 
-| Regel | Wat je nagaat |
-| --- | --- |
-| `/core/no-trailing-slash` | Paden eindigen niet op een slash |
-| `/core/http-methods` | Alleen standaard HTTP-methods |
-| `/core/uri-version` | Major versie in de URI, voorafgegaan door `v` |
+| Regel                     | Wat je nagaat                                 |
+| ------------------------- | --------------------------------------------- |
+| `/core/no-trailing-slash` | Paden eindigen niet op een slash              |
+| `/core/http-methods`      | Alleen standaard HTTP-methods                 |
+| `/core/uri-version`       | Major versie in de URI, voorafgegaan door `v` |
 
 ## Hoe je rapporteert
 

@@ -1,11 +1,11 @@
 ---
 content_type: standaard
 tags: [ai, development]
-title: "AGENTS.md en CLAUDE.md"
+title: "AGENTS.md"
 description: "Een markdownbestand in de root van je repository dat AI-assistenten vertelt hoe ze met het project moeten werken."
 ---
 
-# AGENTS.md en CLAUDE.md
+# AGENTS.md
 
 `AGENTS.md` is een markdownbestand in de root van een repository met instructies
 voor AI-assistenten die aan het project werken. Waar `README.md` de mens uitlegt

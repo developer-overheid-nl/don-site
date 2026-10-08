@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 tags: [ai, skills]
 title: "Verantwoording en voorbehouden"
 sidebar_label: "Verantwoording"
