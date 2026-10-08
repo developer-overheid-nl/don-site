@@ -76,8 +76,8 @@ Vier lagen, waarvan alleen de tweede verplicht is.
 **Laag 1, content type.** Geen tag, maar een apart frontmatter-veld. Zie
 hierboven.
 
-**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De
-zeven thema's zijn `informatiebeveiliging`, `interoperabiliteit`,
+**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De acht
+thema's zijn `ai`, `informatiebeveiliging`, `interoperabiliteit`,
 `toegankelijkheid`, `privacy`, `infrastructuur`, `front-end` en `open-source`.
 
 **Laag 3, onderwerp-tags.** Optioneel, maximaal 5. Specifieke technologieën,

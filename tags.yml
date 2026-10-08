@@ -7,8 +7,8 @@ adr:
 adoptie:
   label: Adoptie
 ai:
-  description: Artificial Intelligence oftewel Kunstmatige Intelligentie
-  label: Artificial Intelligence
+  description: AI-assistenten, modellen en de protocollen eromheen
+  label: Artificiële Intelligentie
 api:
   description: Application Programming Interface
   label: API
