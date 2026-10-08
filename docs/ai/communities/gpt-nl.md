@@ -1,6 +1,6 @@
 ---
 content_type: community
-tags: [ai, llm, community]
+tags: [ai, llm]
 title: "GPT-NL"
 description: "Nederlands taalmodel van TNO, SURF en het NFI, getraind op data waarvoor toestemming is gegeven."
 ---

@@ -1,6 +1,6 @@
 ---
 content_type: community
-tags: [ai, community]
+tags: [ai]
 title: "sAIdkick"
 description: "Programma en community van BZK die AI-ontwikkeling binnen de overheid samenbrengt."
 ---

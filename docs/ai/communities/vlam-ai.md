@@ -1,6 +1,6 @@
 ---
 content_type: community
-tags: [ai, llm, community]
+tags: [ai, llm]
 title: "vlam.ai"
 description: "AI-voorziening van SSC-ICT die binnen een overheidsdatacenter draait op Europese opensourcemodellen."
 ---
