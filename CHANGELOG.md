@@ -1,5 +1,23 @@
 # @developer-overheid-nl/website
 
+## 2.0.0
+
+### Major Changes
+
+- 3319016: Add a tool article and a CLI tutorial for the Repository Docs Generator, move
+  the web-app tutorial to
+  /kennisbank/open-source/tutorials/repo-inrichten-generator-webapp
+
+### Minor Changes
+
+- eac086b: Load the homepage agenda from the events API of the Tools API instead of a
+  static JSON file
+
+### Patch Changes
+
+- 08a24ea: Update the cloud guideline of the Leidraad for the 2026 government cloud policy:
+  portability, exit planning and current policy sources
+
 ## 1.16.0
 
 ### Minor Changes
