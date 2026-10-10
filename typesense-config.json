@@ -2,7 +2,6 @@
   "index_name": "developer_overheid",
   "start_urls": [
     "https://developer.overheid.nl/kennisbank/",
-    "https://developer.overheid.nl/communities/",
     "https://developer.overheid.nl/blog/",
     "https://apis.developer.overheid.nl/apis",
     "https://oss.developer.overheid.nl/repositories"

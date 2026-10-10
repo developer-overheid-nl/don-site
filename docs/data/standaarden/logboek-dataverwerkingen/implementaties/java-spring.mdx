@@ -1,0 +1,569 @@
+---
+content_type: standaard
+tags:
+  - ldv
+  - logging
+  - development
+  - otel
+  - java
+  - spring
+sidebar_position: 1
+sidebar_label: Java (Spring)
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Java voorbeeldimplementatie met Spring
+
+Een voorbeeld hoe [Logboek Dataverwerkingen](../index.md) toe te passen met [Spring](https://spring.io/) in Java.
+
+
+## Nieuw project
+
+Maak een nieuw project aan:
+
+<Tabs groupId="build-tool">
+<TabItem value="maven" label="Maven">
+
+```sh
+# Stap 1a: Spring Boot CLI
+spring init --build maven --name ldv-example-java --group-id nl.example --package-name nl.example.ldv --dependencies web --java-version 21 ldv-example-java
+
+# Stap 1b: Spring Initializr
+curl "https://start.spring.io/starter.zip?type=maven-project&language=java&configurationFileFormat=properties&javaVersion=21&name=ldv-example-java&groupId=nl.example&artifactId=ldv-example-java&packageName=nl.example.ldv&dependencies=web" --output ldv-example-java.zip
+unzip ldv-example-java.zip -d ldv-example-java
+
+# Stap 2
+cd ldv-example-java
+```
+
+:::tip
+Je kunt ook het project genereren via [start.spring.io](https://start.spring.io/#!type=maven-project&language=java&packaging=jar&configurationFileFormat=properties&jvmVersion=21&groupId=nl.example&artifactId=ldv-example-java&packageName=nl.example.ldv&dependencies=web).
+:::
+</TabItem>
+
+<TabItem value="gradle" label="Gradle">
+
+```sh
+# Stap 1a: Spring Boot CLI
+spring init --build gradle --name ldv-example-java --group-id nl.example --package-name nl.example.ldv --dependencies web --java-version 21 ldv-example-java
+
+# Stap 1b: Spring Initializr
+curl "https://start.spring.io/starter.zip?type=gradle-project&language=java&configurationFileFormat=properties&javaVersion=21&name=ldv-example-java&groupId=nl.example&artifactId=ldv-example-java&packageName=nl.example.ldv&dependencies=web" --output ldv-example-java.zip
+unzip ldv-example-java.zip -d ldv-example-java
+
+# Stap 2
+cd ldv-example-java
+```
+
+:::tip
+Je kunt ook het project genereren via [start.spring.io](https://start.spring.io/#!type=gradle-project&language=java&packaging=jar&configurationFileFormat=properties&jvmVersion=21&groupId=nl.example&artifactId=ldv-example-java&packageName=nl.example.ldv&dependencies=web).
+:::
+</TabItem>
+</Tabs>
+
+
+### Voeg dependency's toe
+
+<Tabs groupId="build-tool">
+<TabItem value="maven" label="Maven">
+
+```xml title="pom.xml"
+<project>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.opentelemetry</groupId>
+        <artifactId>opentelemetry-bom</artifactId>
+        <version>1.65.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <!-- Ondersteuning voor Aspect-oriented Programming (AOP) -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aspectj</artifactId>
+    </dependency>
+
+    <!-- OpenTelemetry -->
+    <dependency>
+      <groupId>io.opentelemetry</groupId>
+      <artifactId>opentelemetry-sdk</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.opentelemetry</groupId>
+      <artifactId>opentelemetry-exporter-otlp</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.opentelemetry.semconv</groupId>
+      <artifactId>opentelemetry-semconv</artifactId>
+      <version>[1.43.0, 2.0)</version>
+    </dependency>
+  </dependencies>
+</project>
+```
+
+</TabItem>
+<TabItem value="gradle" label="Gradle">
+
+```groovy title="build.gradle"
+dependencies {
+  // Ondersteuning voor Aspect-oriented Programming (AOP)
+  implementation 'org.springframework.boot:spring-boot-starter-aspectj'
+
+  // OpenTelemetry
+  implementation platform('io.opentelemetry:opentelemetry-bom:[1.65.0, 2.0)')
+  implementation 'io.opentelemetry:opentelemetry-sdk'
+  implementation 'io.opentelemetry:opentelemetry-exporter-otlp'
+  implementation 'io.opentelemetry.semconv:opentelemetry-semconv:[1.43.0, 2.0)'
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+## Logboek
+
+### OpenTelemetry
+
+In `LogboekConfiguration` wordt een OpenTelemetry Tracer geconfigureerd die alleen voor het registreren van verwerkingen gebruikt wordt.
+
+```java title="src/main/java/nl/example/ldv/logboek/LogboekConfiguration.java"
+package nl.example.ldv.logboek;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.info.BuildProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import io.opentelemetry.api.trace.propagation.W3CTraceContextPropagator;
+import io.opentelemetry.api.trace.Tracer;
+import io.opentelemetry.context.propagation.TextMapPropagator;
+import io.opentelemetry.exporter.otlp.trace.OtlpGrpcSpanExporter;
+import io.opentelemetry.sdk.resources.Resource;
+import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
+import io.opentelemetry.sdk.trace.export.SpanExporter;
+import io.opentelemetry.sdk.trace.samplers.Sampler;
+import io.opentelemetry.sdk.trace.SdkTracerProvider;
+import io.opentelemetry.semconv.ServiceAttributes;
+
+@Configuration
+public class LogboekConfiguration {
+
+  private static final String TRACER_NAME = "logboek-dataverwerkingen";
+  private static final String TRACER_VERSION = "0.1.0";
+
+  private final BuildProperties buildProperties;
+
+  public LogboekConfiguration(BuildProperties buildProperties) {
+    this.buildProperties = buildProperties;
+  }
+
+  @Bean
+  @Qualifier("logboek")
+  public Tracer logboekTracer(@Value("${logboek.endpoint}") String endpoint) {
+    Resource resource = Resource.builder()
+        .put(ServiceAttributes.SERVICE_NAME, buildProperties.getName())
+        .put(ServiceAttributes.SERVICE_VERSION, buildProperties.getVersion())
+        .build();
+
+    SpanExporter exporter = OtlpGrpcSpanExporter.builder()
+        .setEndpoint(endpoint)
+        .build();
+
+    SdkTracerProvider provider = SdkTracerProvider.builder()
+        .setResource(resource)
+        .addSpanProcessor(SimpleSpanProcessor.create(exporter))
+        .setSampler(Sampler.alwaysOn())
+        .build();
+
+    Runtime.getRuntime().addShutdownHook(new Thread(provider::close));
+
+    return provider.get(TRACER_NAME, TRACER_VERSION);
+  }
+
+  @Bean
+  public TextMapPropagator w3cTraceContextPropagator() {
+    return W3CTraceContextPropagator.getInstance();
+  }
+}
+```
+
+<Tabs groupId="build-tool">
+<TabItem value="maven" label="Maven">
+
+```xml title="pom.xml"
+<project>
+  <!-- ... bestaande configuratie ... -->
+
+  <build>
+    <plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+      <executions>
+        <execution>
+          <goals>
+            <goal>build-info</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </build>
+</project>
+```
+
+</TabItem>
+<TabItem value="gradle" label="Gradle">
+
+```groovy title="build.gradle"
+// ... bestaande configuratie ...
+
+springBoot {
+    buildInfo()
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+### Registreren van verwerkingen
+
+Met een `ProcessingOperator` kunnen we eenvoudig verwerkingen starten en direct de juiste attributen toevoegen. Met een `Processing` kan het "data subject" gezet worden.
+
+<Tabs>
+<TabItem value="operator" label="ProcessingOperator">
+
+```java title="src/main/java/nl/example/ldv/logboek/ProcessingOperator.java"
+package nl.example.ldv.logboek;
+
+import jakarta.servlet.http.HttpServletRequest;
+import java.util.Collections;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.ApplicationScope;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import io.opentelemetry.api.trace.Span;
+import io.opentelemetry.api.trace.SpanBuilder;
+import io.opentelemetry.api.trace.Tracer;
+import io.opentelemetry.context.Context;
+import io.opentelemetry.context.propagation.TextMapGetter;
+import io.opentelemetry.context.propagation.TextMapPropagator;
+
+@ApplicationScope
+@Component
+public class ProcessingOperator {
+
+  private final Tracer tracer;
+
+  private final TextMapPropagator propagator;
+
+  private static final TextMapGetter<HttpServletRequest> HTTP_REQUEST_GETTER = new HttpRequestGetter();
+
+  public ProcessingOperator(@Qualifier("logboek") Tracer tracer, TextMapPropagator propagator) {
+    this.tracer = tracer;
+    this.propagator = propagator;
+  }
+
+  public Processing startProccessingFromForeignOperation(String name, String activityId) {
+    HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
+        .getRequest();
+    Context remoteContext = propagator.extract(Context.current(), request, HTTP_REQUEST_GETTER);
+
+    Span span = buildSpan(name, activityId, remoteContext)
+        .startSpan();
+
+    return new Processing(span);
+  }
+
+  public Processing startProccessing(String name, String activityId) {
+    Span span = buildSpan(name, activityId, Context.current())
+        .startSpan();
+
+    return new Processing(span);
+  }
+
+  private SpanBuilder buildSpan(String name, String activityId, Context context) {
+    return tracer.spanBuilder(name)
+        .setParent(context)
+        .setAttribute(LogboekAttributes.PROCESSING_ACTIVITY_ID, activityId);
+  }
+
+  private static class HttpRequestGetter implements TextMapGetter<HttpServletRequest> {
+    @Override
+    public Iterable<String> keys(HttpServletRequest carrier) {
+      return Collections.list(carrier.getHeaderNames());
+    }
+
+    @Override
+    public String get(HttpServletRequest carrier, String key) {
+      return carrier != null ? carrier.getHeader(key) : null;
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="processing" label="Processing">
+
+```java title="src/main/java/nl/example/ldv/logboek/Processing.java"
+package nl.example.ldv.logboek;
+
+import io.opentelemetry.api.trace.Span;
+import io.opentelemetry.api.trace.StatusCode;
+import io.opentelemetry.context.Scope;
+
+public class Processing {
+
+  private final Span span;
+
+  public Processing(Span span) {
+    this.span = span;
+  }
+
+  public Scope makeCurrent() {
+    return span.makeCurrent();
+  }
+
+  public void setDataSubject(String id, String type) {
+    span
+        .setAttribute(LogboekAttributes.DATA_SUBJECT_ID, id)
+        .setAttribute(LogboekAttributes.DATA_SUBJECT_ID_TYPE, type);
+  }
+
+  public void stopSuccessful() {
+    span
+        .setStatus(StatusCode.OK)
+        .end();
+  }
+
+  public void stopFailed(String reason) {
+    span
+        .setStatus(StatusCode.ERROR, reason)
+        .end();
+  }
+}
+```
+
+</TabItem>
+<TabItem value="attributes" label="LogboekAttributes">
+
+```java title="src/main/java/nl/example/ldv/logboek/LogboekAttributes.java"
+package nl.example.ldv.logboek;
+
+import io.opentelemetry.api.common.AttributeKey;
+
+/**
+ * Logboek Dataverwerkingen attributen
+ * @see <a href="https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/#attributes">Logboek Dataverwerkingen attributen</a>
+ */
+public final class LogboekAttributes {
+  public static final AttributeKey<String> PROCESSING_ACTIVITY_ID = AttributeKey.stringKey("dpl.core.processing_activity_id");
+
+  public static final AttributeKey<String> DATA_SUBJECT_ID = AttributeKey.stringKey("dpl.core.data_subject_id");
+
+  public static final AttributeKey<String> DATA_SUBJECT_ID_TYPE = AttributeKey.stringKey("dpl.core.data_subject_id_type");
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+### Annotatie
+
+Met een annotatie kunnen we eenvoudig verwerkingen registreren.
+
+<Tabs>
+<TabItem value="annotation" label="LogboekProcessing">
+
+```java title="src/main/java/nl/example/ldv/logboek/annotation/LogboekProcessing.java"
+package nl.example.ldv.logboek.annotation;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface LogboekProcessing {
+
+  String name();
+
+  String activityId();
+
+  boolean fromForeign() default false;
+}
+```
+
+</TabItem>
+<TabItem value="aspect" label="LogboekProcessingAspect">
+
+```java title="src/main/java/nl/example/ldv/logboek/annotation/LogboekProcessingAspect.java"
+package nl.example.ldv.logboek.annotation;
+
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.stereotype.Component;
+import io.opentelemetry.context.Scope;
+
+import nl.example.ldv.logboek.Processing;
+import nl.example.ldv.logboek.ProcessingOperator;
+
+@Aspect
+@Component
+public class LogboekProcessingAspect {
+
+  private final ProcessingOperator processingOperator;
+
+  public LogboekProcessingAspect(ProcessingOperator processingOperator) {
+    this.processingOperator = processingOperator;
+  }
+
+  @Around("@annotation(annotation))")
+  public Object logboekProcessing(ProceedingJoinPoint joinPoint, LogboekProcessing annotation) throws Throwable {
+    Processing processing;
+    if (annotation.fromForeign()) {
+      processing = processingOperator.startProccessingFromForeignOperation(annotation.name(), annotation.activityId());
+    } else {
+      processing = processingOperator.startProccessing(annotation.name(), annotation.activityId());
+    }
+
+    Object result = null;
+    try (Scope scope = processing.makeCurrent()) {
+      result = joinPoint.proceed();
+      processing.stopSuccessful();
+    } catch (Throwable e) {
+      processing.stopFailed(e.getMessage());
+    }
+
+    return result;
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+## Applicatie
+
+### Logboek configureren
+
+Configureer de endpoint-URL.
+
+```properties title="src/main/resources/application.properties"
+# ... bestaande configuratie ...
+
+logboek.endpoint=http://127.0.0.1:4317
+```
+
+### Verwerkingen definiëren
+
+Alles komt nu samen in de `PersonsController`.
+
+De gemarkeerde regels laten zien hoe de `LogboekProcessing`-annotatie, en de `ProcessingOperator`-, en `Processing`-class gebruikt kunnen worden.
+
+```java {27,35-36,40,44,46} title="src/main/java/nl/example/ldv/controller/PersonsController.java"
+package nl.example.ldv.controller;
+
+import java.util.Map;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import io.opentelemetry.context.Scope;
+
+import nl.example.ldv.logboek.annotation.LogboekProcessing;
+import nl.example.ldv.logboek.Processing;
+import nl.example.ldv.logboek.ProcessingOperator;
+
+@RestController
+@RequestMapping("/persons")
+public class PersonsController {
+
+  private final ProcessingOperator processingOperator;
+
+  public PersonsController(ProcessingOperator processingOperator) {
+    this.processingOperator = processingOperator;
+  }
+
+  @GetMapping(path = "/{bsn}/is-minimal-18-years-old", produces = MediaType.APPLICATION_JSON_VALUE)
+  @LogboekProcessing(name = "check_18_or_over", activityId = "urn:ldv:activity:1407", fromForeign = true)
+  public ResponseEntity<Map<String, Object>> isMinimal18YearsOld(@PathVariable String bsn) throws Throwable {
+    boolean is18OrOver = personIs18OrOver(bsn);
+
+    return ResponseEntity.ok(Map.of("is_18_or_over", is18OrOver));
+  }
+
+  private boolean personIs18OrOver(String bsn) throws Throwable {
+    Processing processing = processingOperator.startProccessing("fetch_date_of_birth", "urn:ldv:activity:1550");
+    processing.setDataSubject(bsn, "BSN");
+
+    boolean is18OrOver;
+
+    try (Scope scope = processing.makeCurrent()) {
+      // Simuleer het ophalen van de geboortedatum
+      Thread.sleep(42);
+      is18OrOver = true;
+      processing.stopSuccessful();
+    } catch (Throwable e) {
+      processing.stopFailed(e.getMessage());
+      throw e;
+    }
+
+    return is18OrOver;
+  }
+}
+```
+
+### Applicatie starten
+
+Start nu de applicatie:
+
+<Tabs groupId="build-tool">
+<TabItem value="maven" label="Maven">
+
+```sh
+./mvnw spring-boot:run
+```
+
+</TabItem>
+<TabItem value="gradle" label="Gradle">
+
+```sh
+./gradlew bootRun
+```
+
+</TabItem>
+</Tabs>
+
+
+Roep de API aan:
+
+```sh
+curl http://127.0.0.1:8080/persons/999990342/is-minimal-18-years-old
+```
+
+De verwerkingen zijn nu naar het logboek geschreven.
+
+
+### Logboek inzien
+
+Als je de [OpenTelemetry viewer](otel-viewer.mdx) gebruikt kun je de twee verwerkingen in het logboek zien.

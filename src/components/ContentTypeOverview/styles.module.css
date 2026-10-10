@@ -122,6 +122,11 @@
   color: #4b5563;
 }
 
+.badge--community {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;

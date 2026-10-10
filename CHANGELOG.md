@@ -1,5 +1,79 @@
 # @developer-overheid-nl/website
 
+## 1.16.0
+
+### Minor Changes
+
+- 58cfad7: Add an AI button to kennisbank articles and blog posts, offering to copy or view
+  the page as Markdown and to open it in Claude or ChatGPT
+- 720a4f1: Replace developer-italia parser by don-checker in open-source chapter
+- 4bea514: Generate an llms.txt index so language models can find the Markdown source of
+  every kennisbank article and blog post
+- 10dd94d: Add new restrictions to advertising in guest blogs
+
+### Patch Changes
+
+- ab11165: Expand AGENTS.md with the contributing rules, the four-layer tagging strategy,
+  the changeset requirement and a no-em-dash style rule
+- 1d93a86: Fix cards overflowing their grid columns and match their font sizes to the site
+- 97df37f: Upgrade Changesets to v3 and pnpm to v10, update the changelog workflow, and move
+  pnpm configuration into pnpm-workspace.yaml. Retain browser installer compatibility
+  checks while removing hardcoded dependency-version and lockfile assertions.
+- 45f0ec8: Include the main pages for Logboek Dataverwerkingen, API Design Rules, OpenAPI
+  Specification, FSC, and Haven in search results. Also index blog posts whose
+  filenames contain a single-digit day.
+- a23d6d0: Fix speaker affiliation and project details in the NLDD blog post
+
+## 1.15.0
+
+### Minor Changes
+
+- c350972: Add article about Nederlandse Digitale Dienst
+
+## 1.14.0
+
+### Minor Changes
+
+- b33e7d3: Publish a blog post by Kennisplatform API's about the Kadaster
+  BAG-API and the shift from technical data exposure to product-driven
+  development
+
+## 1.13.0
+
+### Minor Changes
+
+- 9b19e82: Update tutorial on adding publiccode.yml, refer to 0.7 version
+- bd1ac4a: Move communities into the kennisbank themes as a Communities
+  subcategory and remove Communities from the main menu
+- 1f27f74: Refresh the agenda with developer-focused events through December
+  2026, and drop events that have already taken place
+- e8a8ca5: Publish GraphQL blog series part 3
+- 22059ef: Publish GraphQL blog series part 4
+- 79f8b68: Publish blog post about the Beslisboom Open Standaarden
+- 53642d9: Create SBOM documentation with standards and compliance
+
+### Patch Changes
+
+- 6972416: Fix CVEs by patching browserslist to 4.28.8, updating the lockfile,
+  and running pnpm audit at moderate level in CI
+- 5652c9a: Update vulnerable transitive dependencies to patched versions,
+  replace the Axe CLI with its WebDriver API, and complete the Cypress 16
+  configuration migration.
+- 6408e6b: Update dotenv, Algolia Search Helper, axe CLI and TypeScript,
+  including the TypeScript 7 configuration migration.
+
+## 1.12.0
+
+### Minor Changes
+
+- 69016c3: Publish GraphQL blog series part 2
+
+### Patch Changes
+
+- 10321dd: Update site dependencies to remediate known security vulnerabilities,
+  run CI tooling on Node.js 24, and add a temporary compatibility override for
+  the browser driver installer.
+
 ## 1.11.0
 
 ### Minor Changes

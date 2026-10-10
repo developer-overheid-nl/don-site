@@ -14,8 +14,45 @@ env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}
 
 jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: 24.12
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test
+
+      - name: Audit dependencies
+        continue-on-error: true
+        run: pnpm audit --audit-level moderate
+
   build:
     runs-on: ubuntu-latest
+    env:
+      # Main and manually started release builds use production Typesense.
+      # Pull requests and feature-branch pushes use the public test configuration.
+      # The search-only key is bundled into public browser JavaScript.
+      TYPESENSE_ENDPOINT: ${{ (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch') && (vars.TYPESENSE_ENDPOINT || secrets.TYPESENSE_ENDPOINT) || 'https://search.don.projects.digilab.network' }}
+      TYPESENSE_API_KEY: ${{ (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch') && secrets.TYPESENSE_API_KEY || 'NFzpPqCWAFE1133lkURBFaXz7Q0H1LXi' }}
+      # Read-only events API of the Tools API; the API key is bundled into public browser JavaScript.
+      EVENTS_API_URL: ${{ (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch') && 'https://api.developer.overheid.nl/tools/v1' || 'https://api.don.projects.digilab.network/tools/v1' }}
+      EVENTS_API_KEY: ${{ (github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch') && secrets.EVENTS_API_KEY || secrets.EVENTS_API_KEY_TEST }}
     steps:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd
@@ -31,6 +68,10 @@ jobs:
           secrets: |
             "PIWIK_PRO_ACCOUNT_ADDRESS=${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}"
             "PIWIK_PRO_SITE_ID=${{ secrets.PIWIK_PRO_SITE_ID }}"
+            "TYPESENSE_ENDPOINT=${{ env.TYPESENSE_ENDPOINT }}"
+            "TYPESENSE_API_KEY=${{ env.TYPESENSE_API_KEY }}"
+            "EVENTS_API_URL=${{ env.EVENTS_API_URL }}"
+            "EVENTS_API_KEY=${{ env.EVENTS_API_KEY }}"
 
       - name: Upload artifact
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
@@ -76,7 +117,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
@@ -92,10 +133,12 @@ jobs:
         env:
           PIWIK_PRO_ACCOUNT_ADDRESS: ${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}
           PIWIK_PRO_SITE_ID: ${{ secrets.PIWIK_PRO_SITE_ID }}
+          TYPESENSE_ENDPOINT: ${{ vars.TYPESENSE_ENDPOINT || secrets.TYPESENSE_ENDPOINT }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
 
       - name: Index markdown in Typesense
         run: pnpm index:typesense
         env:
           SITE_URL: https://developer.overheid.nl
           TYPESENSE_ENDPOINT: ${{ vars.TYPESENSE_ENDPOINT || secrets.TYPESENSE_ENDPOINT }}
-          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY || secrets.TYPESENSE_API_KEY }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}

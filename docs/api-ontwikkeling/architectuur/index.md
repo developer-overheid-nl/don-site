@@ -13,7 +13,7 @@ import DocCardList from '@theme/DocCardList';
 Het volledige
 [Architectuurdocument](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Architectuur/)
 is vastgesteld en online gepubliceerd als onderdeel van het
-[Kennisplatform API's](https://developer.overheid.nl/communities/kennisplatform-apis/).
+[Kennisplatform API's](../communities/kennisplatform-apis/index.md).
 
 :::
 

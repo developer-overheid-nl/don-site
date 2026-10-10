@@ -5,6 +5,9 @@ tags:
   - golang
   - logging
   - open-source
+  - golang
+sidebar_position: 1
+sidebar_label: Go
 ---
 
 # Referentie implementatie in Go

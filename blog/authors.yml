@@ -238,6 +238,14 @@ kees-jan-westmaas:
   socials:
     linkedin: https://www.linkedin.com/in/keesjanwestmaas/
 
+vivian-van-der-heijden-hanssen:
+  name: Vivian van der Heijden-Hanssen
+  title: Projectleider - developer.overheid.nl
+  image_url: /img/team/vivian-van-der-heijden-hanssen.webp
+  page: true
+  socials:
+    linkedin: https://www.linkedin.com/in/vivianvanderheydenhanssen/
+
 sander-van-rijsoort:
   name: Sander van Rijsoort
   title: Freelance front-end developer

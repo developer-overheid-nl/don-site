@@ -32,7 +32,6 @@ function Search() {
             setHasInput(!!e.target.value)
           }
         />
-        {/* @ts-ignore RHC component bug `label` not in type */}
         <IconButton
           label="Zoeken"
           type="submit"

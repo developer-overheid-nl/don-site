@@ -13,7 +13,6 @@ const COLLECTION_PREFIX = "developer_overheid";
 const BUILD_DIR = process.env.MARKDOWN_BUILD_DIR || "build";
 const DOCS_DIR = process.env.DOCS_DIR || "docs";
 const BLOG_DIR = process.env.BLOG_DIR || "blog";
-const COMMUNITIES_DIR = process.env.COMMUNITIES_DIR || "communities";
 const DRY_RUN = process.env.DRY_RUN === "true";
 
 const CONTENT_TYPES = {
@@ -106,24 +105,10 @@ function blogFilePathToUrl(filePath, frontmatter) {
   const parts = relative.split(path.sep);
   const fileName = parts.pop() || "";
   const fileSlug = fileName.replace(/\.(md|mdx)$/, "");
-  const datePrefix = fileSlug.match(/^(\d{2})-(.+)$/);
+  const datePrefix = fileSlug.match(/^(\d{1,2})-(.+)$/);
   const slugParts = datePrefix ? [datePrefix[1], datePrefix[2]] : [fileSlug];
 
   return `/blog/${[...parts, ...slugParts].join("/")}`;
-}
-
-function communityFilePathToUrl(filePath, frontmatter) {
-  if (frontmatter.slug) {
-    return frontmatter.slug.startsWith("/")
-      ? frontmatter.slug
-      : `/communities/${frontmatter.slug}`;
-  }
-
-  const relative = path.relative(COMMUNITIES_DIR, filePath);
-  const withoutExtension = relative.replace(/\.(md|mdx)$/, "");
-  const withoutIndex = withoutExtension.replace(/\/index$/, "");
-
-  return `/communities${withoutIndex === "index" ? "" : `/${withoutIndex}`}`;
 }
 
 function markdownPathForUrl(urlPath) {
@@ -198,19 +183,6 @@ function getDocumentMetadata(filePath, contentType) {
       category: "blog",
       categoryLabel: "Blog",
       detailLabel: getBlogDateLabel(filePath),
-    };
-  }
-
-  if (contentType === "community") {
-    const relative = path.relative(COMMUNITIES_DIR, filePath);
-    const parent = path.dirname(relative);
-    const parentLabel =
-      parent !== "." ? segmentToLabel(parent.split(path.sep)[0]) : "";
-
-    return {
-      category: "community",
-      categoryLabel: "Community",
-      detailLabel: parentLabel,
     };
   }
 
@@ -304,29 +276,6 @@ function collectDocuments() {
         markdown,
         urlPath,
         contentType: "blog",
-      }),
-    );
-  }
-
-  for (const filePath of walk(COMMUNITIES_DIR)) {
-    const raw = fs.readFileSync(filePath, "utf8");
-    const { data: frontmatter } = matter(raw);
-    const urlPath = communityFilePathToUrl(filePath, frontmatter);
-    const markdownPath = markdownPathForUrl(urlPath);
-
-    if (!markdownPath) {
-      console.warn(`No generated markdown found for ${urlPath}`);
-      continue;
-    }
-
-    const markdown = fs.readFileSync(markdownPath, "utf8");
-    documents.community.push(
-      toDocument({
-        filePath,
-        frontmatter,
-        markdown,
-        urlPath,
-        contentType: "community",
       }),
     );
   }

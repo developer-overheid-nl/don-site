@@ -101,7 +101,7 @@ Geen bekend.
 ### Communities
 
 - [PIANOo, Expertisecentrum Aanbesteden](https://www.pianoo.nl/nl)
-- [Open Source Werken](/communities/open-source-werken)
+- [Open Source Werken](/kennisbank/open-source/communities/open-source-werken)
 - [Gereedschapskist voor het aanbesteden van open source standaardsoftware](https://minvws.opensourcewerken.nl/open-source-gereedschapskist-voor-het-aanbesteden-van-standaardsoftware/)
   (Ministerie van VWS)
 

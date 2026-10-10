@@ -28,9 +28,10 @@ Meer informatie en installatie-instructies:
 
 ## Command line & lokaal debuggen
 
-We gebruiken `@axe-core/cli` in combinatie met `scripts/wcag-sitemap-check.js`.
-Dat script leest de `sitemap.xml` van een lokaal draaiende site en draait Axe
-headless voor elke URL.
+We gebruiken `@axe-core/webdriverjs` in combinatie met
+`scripts/wcag-sitemap-check.js`. Dat script leest de `sitemap.xml` van een
+lokaal draaiende site en draait Axe met Selenium en headless Chrome voor elke
+URL.
 
 ### Waarom een apart script?
 
@@ -38,8 +39,8 @@ headless voor elke URL.
   pagina's. Door die lijst te gebruiken hoeven we geen URL-lijst bij te houden.
 - Nieuwe pagina's komen vanzelf mee in de check zodra ze in de sitemap
   terechtkomen (bijvoorbeeld na een nieuwe doc of blogpost).
-- Axe CLI kent geen ingebouwde "crawl" functie; met het script houden we de
-  logic klein maar krijgen we toch volledige dekking.
+- Axe kent geen ingebouwde "crawl" functie; met het script houden we de logica
+  klein maar krijgen we toch volledige dekking.
 - Het script kan eenvoudig worden uitgebreid, bijvoorbeeld met filters voor
   bepaalde paden of een alternatief sitemap-endpoint (testomgeving, staging,
   enzovoort).
@@ -57,9 +58,9 @@ headless voor elke URL.
   pnpm run build
   pnpm dlx http-server build --port 3000
   ```
-- Zorg dat `node_modules` up-to-date zijn (`pnpm install`). De `pnpm` override
-  in `package.json` zorgt dat de juiste ChromeDriver voor Chrome 140 wordt
-  opgehaald.
+- Zorg dat `node_modules` up-to-date zijn (`pnpm install`).
+  `browser-driver-manager` haalt een bijpassende versie van Chrome en
+  ChromeDriver op.
 
 ### Draai de Axe-check
 
@@ -70,7 +71,8 @@ node scripts/wcag-sitemap-check.js
 Wat er gebeurt:
 
 - Het script haalt de sitemap op en loopt alle `loc`-links af.
-- Voor elke pagina wordt `npx axe <url> --exit` aangeroepen.
+- Voor elke pagina voert `@axe-core/webdriverjs` een Axe-analyse uit in dezelfde
+  browser.
 - Bij fouten wordt `wcag-report.txt` geschreven en het proces stopt met exitcode
   `1`. Zonder issues krijg je dezelfde file met een succesbericht en exitcode
   `0`.

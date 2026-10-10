@@ -136,7 +136,7 @@ binnenkort in publieke consultatie gaan.
 Geïntrigeerd over deze onderwerpen, en wil je graag meedenken over de
 beveiliging van API's of notificaties? Dat kan in de werkgroepen beveiliging en
 notificaties (georganiseerd door
-[Kennisplatform API's](/communities/kennisplatform-apis/)). Wil je meedenken
+[Kennisplatform API's](/kennisbank/api-ontwikkeling/communities/kennisplatform-apis/)). Wil je meedenken
 over Provenance? Dat kan in de werkgroep Data lineage (georganiseerd door bureau
 MIDO).
 

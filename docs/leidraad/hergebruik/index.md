@@ -119,10 +119,10 @@ Geen bekend.
 
 ### Communities
 
-- [Code for NL](/communities/code-for-nl)
-- [Digilab](/communities/digilab)
-- [Open Source Werken](/communities/open-source-werken)
-- [NL Design System](/communities/nl-design-system)
+- [Code for NL](/kennisbank/open-source/communities/code-for-nl)
+- [Digilab](/kennisbank/data/communities/digilab)
+- [Open Source Werken](/kennisbank/open-source/communities/open-source-werken)
+- [NL Design System](/kennisbank/front-end/communities/nl-design-system)
 
 ### Literatuur
 

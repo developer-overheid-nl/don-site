@@ -15,7 +15,7 @@ description:
 # NeRDS leidraad softwareontwikkeling
 
 De
-[Nederlandse Richtlijn Digitale Systemen (NeRDS)](https://minbzk.github.io/NeRDS)
+[Nederlandse Richtlijn Digitale Systemen (NeRDS)](https://nerds.digitaledienst.overheid.nl)
 bestaat uit een set standaarden, richtlijnen en praktische hulpmiddelen voor het
 verantwoord ontwikkelen, inkopen en gebruiken van digitale systemen binnen de
 Nederlandse overheid. Deze leidraad softwareontwikkeling bevat de NeRDS
@@ -28,7 +28,7 @@ standaard, techniek of principe? Laat het ons weten via
 [Slack](https://codefornl.slack.com/archives/CFV4B3XE2) of
 [mail](mailto:developer.overheid@geonovum.nl). Wil je bijdragen aan dit project?
 Bekijk dan de
-[bijdragerichtlijnen van NeRDS](https://minbzk.github.io/NeRDS/Over-NeRDS/CONTRIBUTING/)
+[bijdragerichtlijnen van NeRDS](https://nerds.digitaledienst.overheid.nl/Over-NeRDS/CONTRIBUTING/)
 voor meer informatie. Gebruik voor een nieuwe richtlijn het [richtlijnsjabloon](./richtlijnsjabloon-v1.md).
 
 :::

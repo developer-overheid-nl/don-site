@@ -2,12 +2,18 @@ import type { PropsWithChildren } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useLocation } from "@docusaurus/router";
 
+type HomepageLinkProps = PropsWithChildren<{
+  pathname: string;
+  siteName: string;
+  tagline: string;
+}>;
+
 function HomepageLink({
   pathname,
   siteName,
   tagline,
   children,
-}: PropsWithChildren<object>) {
+}: HomepageLinkProps) {
   return pathname !== "" ? (
     <a href="/" aria-label={`Logo ${siteName}, ${tagline}; naar de homepage`}>
       {children}
@@ -28,7 +34,7 @@ function Root({ children }: PropsWithChildren<object>) {
       <header className="ro-header container">
         <HomepageLink
           pathname={pathname}
-          siteName={siteConfig.customFields.siteName}
+          siteName={String(siteConfig.customFields.siteName)}
           tagline={siteConfig.tagline}
         >
           <div className="ro-header__word-mark">

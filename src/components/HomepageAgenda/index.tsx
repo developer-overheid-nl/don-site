@@ -8,6 +8,7 @@ import styles from "./styles.module.css";
 import IconKalenderInline from "@site/src/theme/icons/IconKalenderInline";
 import IconLocatiemarkerInline from "@site/src/theme/icons/IconLocatiemarkerInline";
 import BrowserOnly from "@docusaurus/BrowserOnly";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 const NUM_EVENTS = 6;
 const HEADING_LEVEL = 2;
@@ -26,38 +27,48 @@ function formatDate(start_dateString: string, end_dateString: string) {
     start_date.getDate() === end_date.getDate()
   ) {
     // On the same day
-    return `${new Intl.DateTimeFormat("nl-NL", { dateStyle: "long", timeStyle: "short" }).format(start_date)} - ${new Intl.DateTimeFormat("nl-NL", { timeStyle: "short" }).format(end_date)}`;
+    return `${new Intl.DateTimeFormat("nl-NL", {
+      dateStyle: "long",
+      timeStyle: "short",
+    }).format(start_date)} - ${new Intl.DateTimeFormat("nl-NL", {
+      timeStyle: "short",
+    }).format(end_date)}`;
   } else if (
     start_date.getFullYear() === end_date.getFullYear() &&
     start_date.getMonth() === end_date.getMonth()
   ) {
     // In the same month
-    return `${new Intl.DateTimeFormat("nl-NL", { day: "numeric" }).format(start_date)} - ${new Intl.DateTimeFormat("nl-NL", { day: "numeric" }).format(end_date)} ${new Intl.DateTimeFormat("nl-NL", { month: "long", year: "numeric" }).format(start_date)}`;
+    return `${new Intl.DateTimeFormat("nl-NL", { day: "numeric" }).format(
+      start_date,
+    )} - ${new Intl.DateTimeFormat("nl-NL", { day: "numeric" }).format(
+      end_date,
+    )} ${new Intl.DateTimeFormat("nl-NL", {
+      month: "long",
+      year: "numeric",
+    }).format(start_date)}`;
   }
   // other
-  return `${new Intl.DateTimeFormat("nl-NL", { dateStyle: "long" }).format(start_date)} - ${new Intl.DateTimeFormat("nl-NL", { dateStyle: "long" }).format(end_date)}`;
+  return `${new Intl.DateTimeFormat("nl-NL", { dateStyle: "long" }).format(
+    start_date,
+  )} - ${new Intl.DateTimeFormat("nl-NL", { dateStyle: "long" }).format(
+    end_date,
+  )}`;
 }
 
-function filterDate(dateString: string) {
-  const date = new Date(dateString);
+// AgendaEvent of the Tools API (GET /events), limited to the fields the agenda shows.
+type AgendaEvent = {
+  title: string;
+  summary?: string;
+  startsAt: string;
+  endsAt: string;
+  location?: string;
+  url: string;
+};
 
-  if (Number.isNaN(date.valueOf())) {
-    // show if date cannot be parsed
-    return true;
-  }
-  if (date.valueOf() > new Date().valueOf()) {
-    // date is past current date
-    return true;
-  }
-  return false;
-}
-
-function sortDates(
-  a: Partial<{ start_date: string }>,
-  b: Partial<{ start_date: string }>,
-) {
-  return new Date(a.start_date).valueOf() - new Date(b.start_date).valueOf();
-}
+type EventsApiConfig = {
+  baseUrl: string;
+  apiKey?: string;
+};
 
 type HomepageAgendaProps = {
   numEvents?: number;
@@ -69,33 +80,43 @@ export default function HomepageAgenda(
 ): React.JSX.Element {
   const [agenda, setAgenda] = useState<Record<string, any>[] | null>(null);
   const { numEvents = NUM_EVENTS, headingLevel = HEADING_LEVEL } = props;
+  const { siteConfig } = useDocusaurusContext();
+  const { baseUrl, apiKey } = siteConfig.customFields
+    .eventsApi as EventsApiConfig;
 
   useEffect(
     function fetchFeed() {
-      fetch("/agenda/events.json")
-        .then((response) =>
-          response.json().catch((error) => {
-            console.warn("JSON Error: ", error.message);
-            return [];
-          }),
-        )
-        .then((list) => {
-          const events = list
-            .filter(({ end_date }) => filterDate(end_date))
-            .sort(sortDates)
-            .map(({ title, summary, start_date, end_date, place, url }) => ({
+      // The API filters on events that have not ended yet and sorts them by start time.
+      const query = new URLSearchParams({
+        endsAfter: new Date().toISOString(),
+        perPage: String(numEvents),
+      });
+      fetch(`${baseUrl}/events?${query}`, {
+        headers: apiKey ? { "X-Api-Key": apiKey } : {},
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Events API responded with ${response.status}`);
+          }
+          return response.json() as Promise<AgendaEvent[]>;
+        })
+        .then((list) =>
+          setAgenda(
+            list.map(({ title, summary, startsAt, endsAt, location, url }) => ({
               title,
               summary,
-              date: formatDate(start_date, end_date),
-              place,
+              date: formatDate(startsAt, endsAt),
+              place: location,
               url,
-            }))
-            .slice(0, numEvents);
-
-          setAgenda(events);
+            })),
+          ),
+        )
+        .catch((error) => {
+          console.warn("Agenda kon niet worden geladen:", error.message);
+          setAgenda([]);
         });
     },
-    [numEvents],
+    [numEvents, baseUrl, apiKey],
   );
 
   return (

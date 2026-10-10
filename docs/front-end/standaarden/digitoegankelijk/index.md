@@ -151,20 +151,9 @@ in progress, nog niet alle tekstjes zijn compleet. Het goede nieuws is dat jij
 kunt bijdragen aan het compleet maken van alle criteria, door bijvoorbeeld een
 [issue](https://github.com/nl-design-system/documentatie/issues) aan te dragen._
 
-## Pleio community
-
-Er is een
-[DigiToegankelijk Pleio community](https://digitoegankelijk.pleio.nl/), waar
-iedereen van de overheid met elkaar kan sparren over vragen rondom het
-implementeren van digitale toegankelijkheid, denk aan projectmanagement,
-interpretatie van de eisen en verklaringen (emailadres van de overheid
-verplicht).
-
 ## Links
 
 - [DigiToegankelijk.nl](https://www.digitoegankelijk.nl/)
-- [DigiToegankelijk Pleio community](https://digitoegankelijk.pleio.nl/)
-  (beschikbaar voor mensen met een emailadres van de overheid)
 
 ## Tools
 
@@ -194,7 +183,9 @@ toegankelijkheidsproblemen: [Wave](https://wave.webaim.org/)
 
 ## Communities
 
-- [DigiToegankelijk](/communities/digitoegankelijk)
+Heb je een vraag over het implementeren van de eisen, of wil je sparren met
+collega's bij andere overheden? Dat kan in de Pleio community, zie
+[Community: DigiToegankelijk](../../communities/digitoegankelijk.md).
 
 ## Bronnen
 

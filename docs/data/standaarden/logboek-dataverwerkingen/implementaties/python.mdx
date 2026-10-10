@@ -1,0 +1,369 @@
+---
+content_type: standaard
+tags:
+  - ldv
+  - logging
+  - development
+  - otel
+  - python
+  - flask
+sidebar_position: 1
+sidebar_label: Python
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Python voorbeeldimplementatie met Flask
+
+Een voorbeeld hoe [Logboek Dataverwerkingen](../index.md) toe te passen met [Flask](https://flask.palletsprojects.com/) in Python.
+
+
+## Nieuw project
+
+Maak een nieuw project aan:
+
+<Tabs groupId="package-manager">
+<TabItem value="uv" label="uv">
+
+```sh
+uv init --bare ldv-example-python
+cd ldv-example-python
+```
+
+</TabItem>
+<TabItem value="pip" label="pip">
+
+```sh
+mkdir ldv-example-python
+cd ldv-example-python
+
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+</TabItem>
+</Tabs>
+
+
+### Voeg dependency's toe
+
+<Tabs groupId="package-manager">
+<TabItem value="uv" label="uv">
+
+```sh
+# Flask
+uv add "flask >=3.1.3, <4.0"
+
+# OpenTelemetry
+uv add "opentelemetry-sdk >=1.44.0, <2.0"
+uv add "opentelemetry-exporter-otlp >=1.44.0, <2.0"
+```
+
+</TabItem>
+<TabItem value="pip" label="pip">
+
+```sh
+# Flask
+pip install "flask >=3.1.3, <4.0"
+
+# OpenTelemetry
+pip install "opentelemetry-sdk >=1.44.0, <2.0"
+pip install "opentelemetry-exporter-otlp >=1.44.0, <2.0"
+```
+
+</TabItem>
+</Tabs>
+
+
+## Logboek
+
+### OpenTelemetry
+
+In `Logboek` wordt een OpenTelemetry Tracer geconfigureerd die alleen voor het registreren van verwerkingen gebruikt wordt.
+
+<a id="logboek-extentie"/>
+Dit definieert ook een [Flask-extentie](https://flask.palletsprojects.com/en/stable/extensiondev/).
+
+```python title="logboek/flask.py"
+from flask import Config, Flask, current_app
+from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
+from opentelemetry.sdk.resources import Resource
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import SimpleSpanProcessor
+from opentelemetry.semconv.attributes.service_attributes import SERVICE_NAME, SERVICE_VERSION
+from opentelemetry.trace import Tracer
+
+from logboek import ProcessingOperator
+
+
+class Logboek:
+    def __init__(self, app: Flask | None = None) -> None:
+        self._processing_operator: ProcessingOperator
+
+        if app is not None:
+            self.init_app(app)
+
+    def init_app(self, app: Flask) -> None:
+        app.extensions["logboek"] = self
+
+        config: Config = app.config.setdefault("LOGBOEK", {})
+
+        endpoint: str | None = config.setdefault("endpoint")
+        if not endpoint:
+            raise RuntimeError("Logboek endpoint must be set")
+
+        endpoint_insecure: bool = config.setdefault("endpoint_insecure", False)
+
+        tracer = self._create_tracer(
+            endpoint,
+            endpoint_insecure,
+            app.config.setdefault("APP_NAME", ""),
+            app.config.setdefault("APP_VERSION", ""),
+        )
+
+        self._processing_operator = ProcessingOperator(tracer)
+
+    def _create_tracer(self, endpoint: str, endpoint_insecure: bool, app_name: str, app_version: str) -> Tracer:
+        processor = SimpleSpanProcessor(OTLPSpanExporter(endpoint, endpoint_insecure))
+
+        resource: Resource = Resource.create({SERVICE_NAME: app_name, SERVICE_VERSION: app_version})
+        provider = TracerProvider(resource=resource)
+        provider.add_span_processor(processor)
+
+        return provider.get_tracer("logboek-dataverwerkingen", "0.1.0")
+
+    @property
+    def processing_operator(self) -> ProcessingOperator:
+        return self._processing_operator
+
+
+def processing_operator() -> ProcessingOperator:
+    return current_app.extensions["logboek"].processing_operator
+```
+
+### Registreren van verwerkingen
+
+Met een `ProcessingOperator` kunnen we eenvoudig verwerkingen starten en direct de juiste attributen toevoegen. Met een `Processing` kan het "data subject" gezet worden.
+
+<Tabs >
+<TabItem value="init" label="__init__.py">
+
+```python title="logboek/__init__.py"
+from collections.abc import Generator, Mapping
+from contextlib import _GeneratorContextManager, contextmanager
+
+from opentelemetry.context import Context
+from opentelemetry.trace import StatusCode, Tracer, use_span
+from opentelemetry.trace.propagation.tracecontext import TraceContextTextMapPropagator
+from opentelemetry.trace.span import Span
+
+from logboek.attributes import DATA_SUBJECT_ID, DATA_SUBJECT_ID_TYPE, PROCESSING_ACTIVITY_ID
+
+
+class Processing:
+    def __init__(self, span: Span) -> None:
+        self._span: Span = span
+
+    def set_data_subject(self, subject_id: str, sibject_id_type: str) -> None:
+        self._span.set_attributes(
+            {
+                DATA_SUBJECT_ID: subject_id,
+                DATA_SUBJECT_ID_TYPE: sibject_id_type,
+            }
+        )
+
+    def successful(self) -> None:
+        self._span.set_status(StatusCode.OK)
+
+    def failed(self, reason: str) -> None:
+        self._span.set_status(StatusCode.ERROR, reason)
+
+
+class ProcessingOperator:
+    def __init__(self, tracer: Tracer) -> None:
+        self._tracer: Tracer = tracer
+
+    def start_proccessing_from_foreign_operation(
+        self, name: str, activity_id: str, headers: Mapping[str, str], end_on_exit: bool = True
+    ) -> _GeneratorContextManager[Processing]:
+        context = TraceContextTextMapPropagator().extract(headers)
+
+        return self._start_proccessing(name, activity_id, context, end_on_exit)
+
+    def start_proccessing(
+        self, name: str, activity_id: str, end_on_exit: bool = True
+    ) -> _GeneratorContextManager[Processing]:
+        return self._start_proccessing(name, activity_id, None, end_on_exit)
+
+    @contextmanager
+    def _start_proccessing(
+        self, name: str, activity_id: str, context: Context | None, end_on_exit: bool
+    ) -> Generator[Processing]:
+        attributes = {
+            PROCESSING_ACTIVITY_ID: activity_id,
+        }
+
+        span = self._tracer.start_span(name, attributes=attributes, context=context)
+
+        with use_span(span, end_on_exit):
+            yield Processing(span)
+```
+
+</TabItem>
+<TabItem value="attributes" label="attributes.py">
+
+```python title="logboek/attributes.py"
+"""Logboek Dataverwerkingen attributen
+
+See: https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/#attributes
+"""
+
+from typing import Final
+
+PROCESSING_ACTIVITY_ID: Final = "dpl.core.processing_activity_id"
+
+DATA_SUBJECT_ID: Final = "dpl.core.data_subject_id"
+
+DATA_SUBJECT_ID_TYPE: Final = "dpl.core.data_subject_id_type"
+```
+
+</TabItem>
+</Tabs>
+
+
+### Decorator
+
+Met een decorator kunnen we eenvoudig verwerkingen registreren.
+
+```python title="logboek/decorators.py"
+import functools
+from collections.abc import Callable
+from typing import ParamSpec, TypeVar
+
+from flask import request
+
+from .flask import processing_operator
+
+P = ParamSpec("P")
+RT = TypeVar("RT")
+
+
+def logboek_processing(
+    name: str, activity_id: str, from_foreign: bool = False
+) -> Callable[[Callable[P, RT]], Callable[P, RT | None]]:
+    def decorator(func: Callable[P, RT]) -> Callable[P, RT | None]:
+        @functools.wraps(func)
+        def wrapper(*args: P.args, **kwargs: P.kwargs) -> RT | None:
+            op = processing_operator()
+
+            if from_foreign:
+                cm = op.start_proccessing_from_foreign_operation(
+                    name, activity_id, request.headers, end_on_exit=True
+                )
+            else:
+                cm = op.start_proccessing(name, activity_id, end_on_exit=True)
+
+            with cm as processing:
+                try:
+                    return_value = func(*args, **kwargs)
+                    processing.successful()
+                    return return_value
+                except Exception as e:
+                    processing.failed(str(e))
+
+            return None
+
+        return wrapper
+
+    return decorator
+```
+
+
+## Applicatie
+
+### Logboek configureren
+
+Voeg de [Logboek-extentie](#logboek-extentie) toe en configureer de endpoint-URL.
+
+```python title="app/__init__.py"
+from flask import Flask
+
+from logboek.flask import Logboek
+
+from .persons import persons
+
+app = Flask(__name__)
+app.config.from_mapping(
+    APP_NAME="ldv-example-python",
+    APP_VERSION="0.1.0",
+    LOGBOEK={
+        "endpoint": "127.0.0.1:4317",
+        "endpoint_insecure": True,
+    },
+)
+
+logboek = Logboek()
+logboek.init_app(app)
+
+app.register_blueprint(persons)
+```
+
+
+### Verwerkingen definiëren
+
+Alles komt nu samen in dit [Flask blueprint](https://flask.palletsprojects.com/en/stable/blueprints/).
+
+De gemarkeerde regels laten zien hoe de `logboek_processing`-decorator, en de `ProcessingOperator`-class en `Processing`-class gebruikt kunnen worden.
+
+```python {12,20-21} title="app/persons.py"
+from time import sleep
+
+from flask import Blueprint
+
+from logboek.decorators import logboek_processing
+from logboek.flask import processing_operator
+
+persons = Blueprint("persons", __name__, url_prefix="/persons")
+
+
+@persons.route("/<bsn>/is-minimal-18-years-old")
+@logboek_processing("check_18_or_over", "urn:ldv:activity:1407", from_foreign=True)
+def is_minimal_18_years_old(bsn: str) -> dict[str, bool]:
+    is_18_or_over = _person_is_18_or_over(bsn)
+
+    return {"is_18_or_over": is_18_or_over}
+
+
+def _person_is_18_or_over(bsn: str) -> bool:
+    with processing_operator().start_proccessing("fetch_date_of_birth", "urn:ldv:activity:1550") as processing:
+        processing.set_data_subject(bsn, "BSN")
+
+        #  Simuleer het ophalen van de geboortedatum
+        sleep(42 / 1000)
+
+        processing.successful()
+
+    return True
+```
+
+
+### Applicatie starten
+
+Start nu de applicatie:
+
+```sh
+.venv/bin/flask run
+```
+
+Roep de API aan:
+
+```sh
+curl http://127.0.0.1:5000/persons/999990342/is-minimal-18-years-old
+```
+
+
+### Logboek inzien
+
+Als je de [OpenTelemetry viewer](otel-viewer.mdx) gebruikt kun je de twee verwerkingen in het logboek zien.

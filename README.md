@@ -35,6 +35,10 @@ Daarna kan je de website lokaal draaien.
 
 1. Draai `pnpm install` om te zorgen dat alle afhankelijkheden die Docusaurus
    nodig heeft beschikbaar zijn
+1. Kopieer `.env.example` naar `.env`. De Typesense-waarden in het
+   voorbeeldbestand horen bij de lokale service in `docker-compose.yml`.
+1. Start voor een werkende lokale zoekfunctie Typesense met
+   `docker compose up -d typesense`.
 1. Draai `pnpm run start` om te builden en Docusaurus te starten.
 
 Daarna kan je de lokale versie van de site bekijken op
@@ -88,23 +92,27 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 - Verplaats de blogpost naar de map van de huidige maand.
 - Verwijder de `draft: true` property uit het frontmatter van de blogpost.
 - Draai `pnpm build` om te kijken of de markdown in orde is.
+- Voeg een changeset toe met minor version bump, zie
+  [Hoe maak ik een changelog entry aan?](#hoe-maak-ik-een-changelog-entry-aan).
 
 ## Changelog
 
-Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de
-changelog. Hierin vermelden wat er veranderd, verbeterd of toegevoegd is.  
-Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden
-aangemaakt. De Changesets bot en workflow maakt automatisch een pull request aan
-die de verschillende changelog entries samenvoegt. Deze pull request kan worden
-gemerged voor elke release.
+Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin 
+vermelden wat er veranderd, verbeterd of toegevoegd is.  
+Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets 
+bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries 
+samenvoegt. Deze pull request, genaamd "Version Packages", _moet_ worden gemerged voor elke release.
 
-Ondanks dat er geen software package wordt gepubliceerd, gebruiken we de
-changelog om bij te houden wat er veranderd is in de website. De semver gebruikt
-in de changelog heeft geen technische betekenis, maar geeft aan of een
-verandering een nieuwe feature, bijvoorbeeld een nieuw blog, is (minor), een
-bugfix (patch) of een "breaking" change (major). Voorbeelden van een breaking
-change zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de
-URL van een artikel.
+Ondanks dat er geen software package wordt gepubliceerd, _gebruiken we de changelog om bij te 
+houden wat er veranderd is in de website_. De semver gebruikt in de changelog heeft geen technische 
+betekenis, maar kan wel gebruikt worden om in te zien wat er veranderd is.
+Zo is een nieuwe blogpost of kennisbankartikel een **minor** version bump en een bugfix een **patch**.
+Een "breaking" change is een **major** version bump. Voorbeelden van een breaking change 
+zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de URL van een artikel.
+
+De changelog voor de website schrijven we in het **Nederlands**, anders dan bij onze softwareprojecten,
+omdat we deze ook (gaan) ontsluiten op de site zelf. Daarom hoeven package updates of kleine technische
+veranderingen die voor de eindgebruiker niet van belang zijn niet gelogd te worden.
 
 ### Hoe maak ik een changelog entry aan?
 
@@ -155,6 +163,9 @@ feat: pas content aan [deploy-test]
 ```
 
 ### Deploy naar productie
+
+> ⚠️ Vergeet niet de laatste "Version Packages" Pull Request te mergen, zodat de changelog ook klopt.  
+> 💁 Zie hierboven bij [Changelog](#changelog) hoe dat werkt.
 
 De productiedeploy draait via `.github/workflows/deploy-prod.yml`.
 

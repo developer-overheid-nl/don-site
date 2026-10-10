@@ -85,9 +85,9 @@ maar ook voor het event.
 
 Werk je bij een overheid en wil je experimenteren met event-driven API’s? Deel
 je ervaringen via developer.overheid.nl of neem deel aan het
-[Kennisplatform API's](https://developer.overheid.nl/communities/kennisplatform-apis/)
-en deel onderling ervaringen rond de NL API Strategie en event oriëntatie. Samen
-maken we API’s slimmer, robuuster en toekomstbestendig.
+[Kennisplatform API's](../communities/kennisplatform-apis/index.md) en deel
+onderling ervaringen rond de NL API Strategie en event oriëntatie. Samen maken
+we API’s slimmer, robuuster en toekomstbestendig.
 
 ## Verder lezen
 

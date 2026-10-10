@@ -10,6 +10,7 @@ import Icon3BoekenAchterElkaar from "@site/src/theme/icons/Icon3BoekenAchterElka
 import IconKlembordMetVinkjesEnLijnen from "@site/src/theme/icons/IconKlembordMetVinkjesEnLijnen";
 import IconNetwerk from "@site/src/theme/icons/IconNetwerk";
 import IconManMetLaptop from "@site/src/theme/icons/IconManMetLaptop";
+import IconTekstballonnenMetPunten from "@site/src/theme/icons/IconTekstballonnenMetPunten";
 
 import { GridTile } from ".";
 
@@ -63,11 +64,11 @@ const tiles: GridTile[] = [
         label: "Git workflow",
       },
       {
-        link: "/kennisbank/open-source/tutorials/voeg-een-publiccode-yml-bestand-toe",
+        link: "/kennisbank/open-source/tutorials/publiccode-yml-toevoegen",
         label: "publiccode.yml toevoegen",
       },
       {
-        link: "/kennisbank/open-source/tutorials/tutorial-repo-docs-generator",
+        link: "/kennisbank/open-source/tutorials/repo-inrichten-generator-webapp",
         label: "Repo docs generator",
       },
     ],
@@ -129,11 +130,55 @@ const tiles: GridTile[] = [
         label: "publiccode.yml editor",
       },
       {
-        link: "/kennisbank/open-source/tools/publiccode-yml-parser",
-        label: "publiccode.yml parser",
+        link: "/kennisbank/open-source/tools/publiccode-yml-checker",
+        label: "publiccode.yml checker",
       },
     ],
     link: "/kennisbank/tools",
+  },
+  {
+    icon: <IconTekstballonnenMetPunten />,
+    title: "Communities",
+    description: [
+      {
+        link: "/kennisbank/api-ontwikkeling/communities/kennisplatform-apis",
+        label: "Kennisplatform API's",
+      },
+      {
+        link: "/kennisbank/data/communities/federatief-datastelsel",
+        label: "Federatief Datastelsel",
+      },
+      {
+        link: "/kennisbank/data/communities/common-ground",
+        label: "Common Ground",
+      },
+      { link: "/kennisbank/data/communities/digilab", label: "Digilab" },
+      {
+        link: "/kennisbank/front-end/communities/nl-design-system",
+        label: "NL Design System",
+      },
+      {
+        link: "/kennisbank/front-end/communities/digitoegankelijk",
+        label: "DigiToegankelijk",
+      },
+      {
+        link: "/kennisbank/front-end/communities/gebruiker-centraal",
+        label: "Gebruiker Centraal",
+      },
+      {
+        link: "/kennisbank/open-source/communities/code-for-nl",
+        label: "Code for NL",
+      },
+      {
+        link: "/kennisbank/open-source/communities/open-source-werken",
+        label: "Opensourcewerken",
+      },
+      {
+        link: "/kennisbank/open-source/communities/todo-group",
+        label: "TODO Group",
+      },
+    ],
+    link: "/kennisbank/communities",
   },
   {
     icon: <IconApiInrichting />,
@@ -277,6 +322,10 @@ const tiles: GridTile[] = [
     icon: <IconComputercode />,
     title: "Open Source",
     description: [
+      {
+        link: "/kennisbank/open-source/tools/repo-docs-generator",
+        label: "Repo docs generator",
+      },
       {
         link: "/kennisbank/open-source/standaarden/publiccode-yml",
         label: "publiccode.yml",

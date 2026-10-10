@@ -106,7 +106,7 @@ Geen bekend.
 
 ### Communities
 
-- [Kennisplatform API's](/communities/kennisplatform-apis/)
+- [Kennisplatform API's](/kennisbank/api-ontwikkeling/communities/kennisplatform-apis/)
 
 ### Literatuur
 

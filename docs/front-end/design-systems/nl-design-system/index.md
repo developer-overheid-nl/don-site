@@ -141,21 +141,14 @@ zijn:
 - [Storybook gemeente Utrecht](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/css_css-alert-dialog--docs)
 - [Storybook gemeente Den Haag](https://nl-design-system.github.io/denhaag/?path=/docs/react-cards-case-card--docs)
 
+## Community
+
+NL Design System wordt gemaakt en onderhouden door een open community. Waar je
+kunt meepraten en meedoen, lees je op
+[Community: NL Design System](../../communities/nl-design-system.md).
+
 ## Links
 
 - [Introductie NL Design System](https://nldesignsystem.nl/handboek/introductie/)
 - [Over NL Design System](https://nldesignsystem.nl/project/over-nl-design-system/)
 - [Website NL Design System](https://nldesignsystem.nl)
-
-### Op de hoogte blijven
-
-- Praat mee op [Slack van Code for NL](https://praatmee.codefor.nl) in het
-  kanaal #nl-design-system. hier vind je ook de Rijkshuisstijl Community
-  developers.
-- Bezoek de tweewekelijkse NL Design System Heartbeat meetings
-- Sluit je aan bij de
-  [Rijkshuisstijl Community op GitHub](https://github.com/Rijkshuisstijl)
-- Sluit aan bij de wekelijkse
-  [developers meeting van de Rijkshuisstijl Community](https://nldesignsystem.nl/events/developer-open-hour/overzicht/)
-- Schrijf je in voor de nieuwsbrief via
-  [Gebruiker Centraal](https://www.gebruikercentraal.nl/)

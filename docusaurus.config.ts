@@ -23,13 +23,55 @@ function loadRedirectsFromCsv(): Array<{ from: string; to: string }> {
 
 const emptyTheme = { plain: {}, styles: [] };
 
+function getTypesenseServerConfig() {
+  const endpoint = process.env.TYPESENSE_ENDPOINT;
+  const protocol = process.env.TYPESENSE_PROTOCOL ?? "https";
+  const host = process.env.TYPESENSE_HOST;
+  const port = process.env.TYPESENSE_PORT;
+  const apiKey = process.env.TYPESENSE_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("TYPESENSE_API_KEY is required to build the site");
+  }
+
+  if (!host && !endpoint) {
+    throw new Error(
+      "TYPESENSE_ENDPOINT or TYPESENSE_HOST is required to build the site",
+    );
+  }
+
+  const url = endpoint
+    ? new URL(endpoint)
+    : new URL(`${protocol}://${host}${port ? `:${port}` : ""}`);
+
+  return {
+    nodes: [
+      {
+        host: url.hostname,
+        port: Number(url.port || (url.protocol === "https:" ? 443 : 80)),
+        protocol: url.protocol.replace(":", ""),
+      },
+    ],
+    apiKey,
+  };
+}
+
 type PiwikProClientConfig = {
   siteId: string;
   accountAddress: string;
 };
 
+// Read-only events API of the Tools API; the API key ends up in public browser JavaScript.
+type EventsApiClientConfig = {
+  baseUrl: string;
+  apiKey?: string;
+};
+
 const config: Config & {
-  customFields: Config["customFields"] & { piwikPro: PiwikProClientConfig };
+  customFields: Config["customFields"] & {
+    piwikPro: PiwikProClientConfig;
+    eventsApi: EventsApiClientConfig;
+  };
 } = {
   title: "developer.overheid.nl",
   customFields: {
@@ -39,6 +81,12 @@ const config: Config & {
     piwikPro: {
       siteId: process.env.PIWIK_PRO_SITE_ID,
       accountAddress: process.env.PIWIK_PRO_ACCOUNT_ADDRESS,
+    },
+    eventsApi: {
+      baseUrl:
+        process.env.EVENTS_API_URL ??
+        "https://api.developer.overheid.nl/tools/v1",
+      apiKey: process.env.EVENTS_API_KEY,
     },
   },
   tagline: "Ontwikkelaarsportaal van de Nederlandse overheid",
@@ -103,29 +151,12 @@ const config: Config & {
   themes: ["@docusaurus/theme-mermaid", "docusaurus-theme-search-typesense"],
   plugins: [
     "./plugins/content-type-index.js",
+    "./plugins/llms-txt.js",
     "./plugins/plugin-piwik-pro.ts",
     [
       "./plugins/markdown-source-no-ui.js",
       {
         docsPath: "/kennisbank/",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "communities",
-        path: "communities",
-        routeBasePath: "communities",
-        sidebarPath: "./sidebarsCommunities.ts",
-        sidebarItemsGenerator: async ({ docs }) => {
-          // this way we can filter out the index doc
-          return docs
-            .map((doc) => ({ type: "doc", id: doc.id }))
-            .filter((item) => item.id !== "index");
-        },
-        tags: "../tags.yml",
-        onInlineTags: "throw",
-        // ... other options
       },
     ],
     [
@@ -199,28 +230,7 @@ const config: Config & {
     },
     typesense: {
       typesenseCollectionName: "developer_overheid",
-      typesenseServerConfig: {
-        nodes: [
-          {
-            host: "search.developer.overheid.nl",
-            port: 443,
-            protocol: "https",
-          },
-          // {
-          //   host: "search.don.projects.digilab.network",
-          //   port: 443,
-          //   protocol: "https",
-          // },
-          // {
-          //   host: "localhost",
-          //   port: 8108,
-          //   protocol: "http",
-          // },
-        ],
-        // apiKey: "xyz", Lokaal
-        // apiKey: "DorQJB3ld82O9o7GT9b2MHGFgYTNRayi", //test
-        apiKey: "7DsCobfUmP6BDeVeFzlGgqBuqXg0WAJC", //prod
-      },
+      typesenseServerConfig: getTypesenseServerConfig(),
       contextualSearch: false,
       searchPagePath: "zoeken", // 'zoeken' DON version: when set to `false`, it shows the modal, if set to {string}, it will show search input on homepage and button in menu.
     },
@@ -263,6 +273,7 @@ const config: Config & {
             { label: "Alle Standaarden", to: "/kennisbank/standaarden" },
             { label: "Alle Tools", to: "/kennisbank/tools" },
             { label: "Alle Tutorials", to: "/kennisbank/tutorials" },
+            { label: "Alle Communities", to: "/kennisbank/communities" },
             { label: "Alle Artikelen", to: "/kennisbank/alles" },
           ],
         },
@@ -277,38 +288,6 @@ const config: Config & {
           label: "Repositories",
           position: "left",
           target: "_self",
-        },
-        {
-          label: "Communities",
-          position: "left",
-          to: "/communities",
-          items: [
-            { label: "Code for NL", to: "/communities/code-for-nl" },
-            { label: "CommonGround", to: "/communities/common-ground" },
-            { label: "Digilab", to: "/communities/digilab" },
-            { label: "DigiToegankelijk", to: "/communities/digitoegankelijk" },
-            {
-              label: "Federatief Datastelsel",
-              to: "/communities/federatief-datastelsel",
-            },
-            {
-              label: "Gebruiker Centraal",
-              to: "/communities/gebruiker-centraal",
-            },
-            { label: "NL Design System", to: "/communities/nl-design-system" },
-            {
-              label: "Opensourcewerken",
-              to: "/communities/open-source-werken",
-            },
-            {
-              label: "Kennisplatform API's",
-              to: "/communities/kennisplatform-apis",
-            },
-            {
-              label: "Intentieverklaring API Strategie",
-              to: "/communities/kennisplatform-apis/intentieverklaring",
-            },
-          ],
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
@@ -480,7 +459,16 @@ const config: Config & {
     },
     prism: {
       theme: emptyTheme, // CSS classes are used; see presets.theme.customCss
-      additionalLanguages: ["bash", "turtle", "java", "go"],
+      additionalLanguages: [
+        "bash",
+        "csharp",
+        "go",
+        "groovy",
+        "java",
+        "php",
+        "properties",
+        "turtle",
+      ],
     },
     colorMode: {
       defaultMode: "light",
