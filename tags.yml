@@ -7,8 +7,8 @@ adr:
 adoptie:
   label: Adoptie
 ai:
-  description: Artificial Intelligence oftewel Kunstmatige Intelligentie
-  label: Artificial Intelligence
+  description: AI-assistenten, modellen en de protocollen eromheen
+  label: Artificiële Intelligentie
 api:
   description: Application Programming Interface
   label: API
@@ -267,6 +267,9 @@ llm:
   description: Large Language Models zijn generatieve AI die natuurlijke of niet
     natuurlijke (programmeer) taal kunnen genereren
   label: Large Language Model
+llms-txt:
+  description: Conventie om taalmodellen de weg te wijzen naar de inhoud van een site.
+  label: llms.txt
 logging:
   description: Logging
   label: Logging
@@ -288,6 +291,9 @@ monitoring:
   label: Monitoring
 msa:
   label: Microservices Architectuur
+mcp:
+  description: Model Context Protocol, protocol om AI-applicaties aan systemen te koppelen.
+  label: MCP
 mtls:
   label: mTLS
   description: Mutual TLS
@@ -413,6 +419,9 @@ semver:
 shacl:
   description: Shapes Constraint Language
   label: SHACL
+skills:
+  description: Instructies waarmee AI-assistenten volgens een standaard of richtlijn werken.
+  label: Skills
 skos:
   description: Simple Knowledge Organization System
   label: SKOS
