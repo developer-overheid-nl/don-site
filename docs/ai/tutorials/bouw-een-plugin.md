@@ -22,6 +22,7 @@ als die termen nog door elkaar lopen.
 ## Wat je nodig hebt
 
 - Claude Code of Cursor, lokaal geïnstalleerd
+- Python 3, voor het script dat de manifesten genereert
 - Een publieke repository met een opensourcelicentie
 - De standaard of richtlijn die je wilt ontsluiten
 
@@ -43,7 +44,13 @@ vraagt._ Die zin wordt straks je `description`.
 ```text
 mijn-plugin/
 ├── .plugin/
-│   └── plugin.json
+│   └── plugin.json          # de bron, die schrijf je zelf
+├── .claude-plugin/
+│   └── plugin.json          # gegenereerd voor Claude Code
+├── .cursor-plugin/
+│   └── plugin.json          # gegenereerd voor Cursor
+├── scripts/
+│   └── generate_plugin.py   # genereert de twee bestanden hierboven
 ├── skills/
 │   └── mijn-skill/
 │       └── SKILL.md
@@ -53,8 +60,16 @@ mijn-plugin/
 ```
 
 `.plugin/plugin.json` is de bron. De platformspecifieke varianten voor Claude
-Code en Cursor worden daaruit gegenereerd, zodat je ze niet met de hand
-synchroon hoeft te houden.
+Code en Cursor genereer je daaruit met `scripts/generate_plugin.py`, zodat je ze
+niet met de hand synchroon hoeft te houden. Het script haal je uit
+[skills-standaarden](https://github.com/developer-overheid-nl/skills-standaarden/blob/main/scripts/generate_plugin.py);
+het gebruikt alleen de standaardbibliotheek van Python.
+
+```bash
+mkdir -p scripts
+curl -o scripts/generate_plugin.py \
+  https://raw.githubusercontent.com/developer-overheid-nl/skills-standaarden/main/scripts/generate_plugin.py
+```
 
 ```json title=".plugin/plugin.json"
 {
@@ -115,7 +130,26 @@ in dezelfde map, dat de assistent erbij pakt als het nodig is.
 **Beperk `allowed-tools`.** Geef alleen wat de skill nodig heeft. Een skill die
 alleen leest, hoeft niet te kunnen schrijven.
 
-## Stap 4: Test lokaal
+## Stap 4: Genereer de manifesten
+
+```bash
+python scripts/generate_plugin.py
+```
+
+Dit maakt `.claude-plugin/plugin.json` en `.cursor-plugin/plugin.json` aan. Sla
+deze stap niet over: Claude Code leest `.plugin/plugin.json` niet, alleen
+`.claude-plugin/plugin.json`. Zonder dat bestand komen de naam en de versie uit
+je manifest niet bij de assistent aan, en hangt de namespace van je skills af
+van de mapnaam in plaats van de `name`.
+
+Draai het script opnieuw na elke wijziging in `.plugin/plugin.json`. Met
+`--check` controleer je of de bestanden nog gelijk lopen, bijvoorbeeld in CI:
+
+```bash
+python scripts/generate_plugin.py --check
+```
+
+## Stap 5: Test lokaal
 
 ```bash
 claude --plugin-dir ./mijn-plugin
@@ -129,7 +163,7 @@ aanslaat en de assistent afleidt.
 Loopt het niet zoals verwacht, dan zit de oorzaak bijna altijd in de
 `description`, niet in de inhoud.
 
-## Stap 5: Voeg een disclaimer toe
+## Stap 6: Voeg een disclaimer toe
 
 Een skill is een samenvatting, geen standaard. Zet in `DISCLAIMER.md` wat de
 plugin wel en niet is, en waar de officiële tekst staat. Voor opname in onze
@@ -138,7 +172,7 @@ catalogus is dat een voorwaarde.
 Zie de [verantwoording](../skills-plugins-en-marketplaces/verantwoording.md)
 voor de voorbehouden die wij hanteren.
 
-## Stap 6: Meld hem aan
+## Stap 7: Meld hem aan
 
 Voldoet je plugin aan de eisen, dan kun je hem aanmelden:
 
