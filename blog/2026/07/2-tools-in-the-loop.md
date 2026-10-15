@@ -116,7 +116,7 @@ binnenkort) aan. De rolverdeling:
   gegenereerde servercode voor API's aansluit op de API Design Rules en andere
   overheidsstandaarden. Momenteel hebben we een aantal smaken in de aanbieding,
   waaronder voor Java, Go, Node.js, Rust en Python.
-- **[Repo Docs Generator](/kennisbank/open-source/tutorials/tutorial-repo-docs-generator).**
+- **[Repo Docs Generator](/kennisbank/open-source/tutorials/repo-inrichten-generator-webapp).**
   Genereert de standaard repo-documentatie: een `README.md`, `CONTRIBUTING.md`,
   `CODE_OF_CONDUCT.md`, `LICENSE`, `SECURITY.md`, `CHANGELOG.md` en een
   `publiccode.yml`. In één keer nette, consistente templates in plaats van

@@ -1,0 +1,6 @@
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--ifm-spacing-horizontal, 1rem);
+}

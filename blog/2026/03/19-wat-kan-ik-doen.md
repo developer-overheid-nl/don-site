@@ -190,7 +190,7 @@ welke vragen je moet stellen, welke valkuilen er zijn bij aanbestedingen en
 welke eisen vaak ontbreken in programma's van eisen.
 
 Die kennis kan jij aandragen door middel van een bijdrage aan
-[**NeRDS**](https://minbzk.github.io/NeRDS/Over-NeRDS/) — de Nederlandse
+[**NeRDS**](https://nerds.digitaledienst.overheid.nl/Over-NeRDS/) — de Nederlandse
 Richtlijn Digitale Systemen. NeRDS bundelt richtlijnen en praktische handvatten
 voor het verantwoord ontwerpen, ontwikkelen en inkopen van digitale systemen bij
 de overheid. Het project werkt open source en verwelkomt actief bijdragen: van
