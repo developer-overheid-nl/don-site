@@ -24,3 +24,8 @@ SPDX-License-Identifier = "LicenseRef-Beelden-proprietary"
 path = "static/img/authors/**"
 SPDX-FileCopyrightText = "Ministerie van Binnenlandse Zaken / Respectievelijke rechtenhouders"
 SPDX-License-Identifier = "LicenseRef-Beelden-proprietary"
+
+[[annotations]]
+path = ["swizzle-baseline/@docusaurus/**", "swizzle-baseline/docusaurus-theme-search-typesense/**"]
+SPDX-FileCopyrightText = "Copyright (c) Facebook, Inc. and its affiliates"
+SPDX-License-Identifier = "MIT"
