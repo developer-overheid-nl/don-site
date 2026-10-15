@@ -65,6 +65,7 @@ Het veld `content_type` bepaalt in welke overzichten een artikel verschijnt.
 | `tutorial`     | Stapsgewijze handleidingen                          |
 | `architectuur` | Patronen, concepten, ontwerpbeslissingen            |
 | `richtlijn`    | Leidraad content (principes en richtlijnen)         |
+| `community`    | Samenwerkingsverbanden, platforms en netwerken      |
 
 `content_type` staat los van de tags. Deze waarden mogen **nooit** als tag
 voorkomen.
@@ -79,6 +80,10 @@ hierboven.
 **Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De
 zeven thema's zijn `informatiebeveiliging`, `interoperabiliteit`,
 `toegankelijkheid`, `privacy`, `infrastructuur`, `front-end` en `open-source`.
+
+De build dwingt deze laag niet af, en de meeste bestaande artikelen voeren geen
+thema-tag. Neem een bestaand artikel dus niet als voorbeeld voor je tags; houd
+je aan de regel hierboven.
 
 **Laag 3, onderwerp-tags.** Optioneel, maximaal 5. Specifieke technologieën,
 standaarden of concepten, bijvoorbeeld `oauth`, `kubernetes`, `dcat`, `wcag`.
