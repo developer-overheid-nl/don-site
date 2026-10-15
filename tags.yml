@@ -322,6 +322,8 @@ ogc:
 oidc:
   description: OpenID Connect is een identity layer bovenop OAuth 2.0
   label: OpenID Connect
+online-sessie:
+  label: Online sessie
 open-source:
   label: Open Source
 openapi:
