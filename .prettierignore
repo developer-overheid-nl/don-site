@@ -2,3 +2,4 @@
 .devcontainer
 .github
 pnpm-lock.yaml
+swizzle-baseline
