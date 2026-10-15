@@ -6,7 +6,7 @@ description: |
   NL Design System organiseert in 2026 voor de 5e keer de Design Systems Week. Van 26 tot en met 29 oktober zijn er dagelijks meerdere korte sessies van diverse organisaties online te volgen over het hoe en waarom van design systems.
 ---
 
-# Design Systems Week voor developers
+# Design Systems Week 2026: dit is interessant voor developers
 
 ![Posters van de Design Systems Week 2026](./img/drieluik-designconferentieposters.png)
 
