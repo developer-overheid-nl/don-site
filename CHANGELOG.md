@@ -1,5 +1,11 @@
 # @developer-overheid-nl/website
 
+## 2.1.0
+
+### Minor Changes
+
+- db51807: Add REUSE-standard to knowledge base
+
 ## 2.0.0
 
 ### Major Changes
