@@ -196,4 +196,7 @@ kan.
 Voeg geen dependencies toe zonder dat te overleggen. Let er daarbij op dat
 `pnpm` peer dependencies standaard automatisch installeert: dat een build slaagt
 zonder een declaratie betekent niet dat het package overbodig is. Toets dat met
-`pnpm install --config.auto-install-peers=false`.
+`pnpm install --config.auto-install-peers=false`. Die install haalt de
+automatisch geïnstalleerde peers uit `pnpm-lock.yaml`, en een gewone
+`pnpm install` zet ze niet terug. Herstel de lockfile daarna met
+`git checkout -- pnpm-lock.yaml` en draai `pnpm install` opnieuw.
