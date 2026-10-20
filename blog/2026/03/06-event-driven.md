@@ -400,9 +400,9 @@ openbaar. Doe mee via het:
 
 Verder over de Standaarden, Stelsels en Voorzieningen kan op:
 
-- [NL API Strategie – Webhooks en Events](https://developer.overheid.nl/standaarden/nl-api-strategie/#webhooks)
+- [NL API Strategie – Event Driven Architecture](https://docs.geostandaarden.nl/api/API-Strategie-architectuur/#x2-7-event-driven-architecture-eda)
 - [CloudEvents Specificatie](https://cloudevents.io/)
-- [eDelivery API Standaard](https://developer.overheid.nl/standaarden/edelivery)
+- [eDelivery (EU Digital Building Blocks)](https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/eDelivery)
 - [Federatief Datastelsel | Federatief.Datastelsel.nl](https://federatief.datastelsel.nl/)
 - [DigiLevering en DigiMelding | Logius](https://logius.nl/diensten)
 - [Event-Driven Architecture uitgelegd (AWS)](https://aws.amazon.com/event-driven-architecture/)

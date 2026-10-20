@@ -182,7 +182,7 @@ de Europese Commissie. Wij zijn in gesprek met onder andere onze Franse en
 Italiaanse collega's om te zorgen dat we optimaal hergebruik kunnen maken van
 elkaars software. Hierbij zal de Standaard voor Publieke Code een grote rol
 spelen en is de kans aanwezig dat de daaruit voortgekomen standaard
-[`publiccode.yml`](https://developer.overheid.nl/kennisbank/leidraad/open-source/standaarden/publiccode-yml)
+[`publiccode.yml`](/kennisbank/open-source/standaarden/publiccode-yml)
 verplicht wordt voor Europese Open Source projecten.
 
 ### Schema register

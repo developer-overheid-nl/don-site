@@ -12,7 +12,7 @@ tags:
 
 Overheidsorganisaties delen regelmatig gegevens met andere
 (overheids)organisaties.
-[Federatieve Service Connectivity (FSC)](https://nlx.io/) is een standaard (in
+[Federatieve Service Connectivity (FSC)](https://fsc-standaard.nl/) is een standaard (in
 wording d.d. jun 2024) voor veilige digitale gegevensuitwisseling, ontwikkeld
 door de overheid. Vaak is het echter wenselijk om deze gegevensuitwisseling te
 beperken door bepaalde regels, zogenaamde policies. Digilab heeft een tool
@@ -116,7 +116,7 @@ implementeren?
 Wanneer met behulp van de policy builder een policy is aangemaakt, kan deze
 worden geëxporteerd als Rego-bestand. De werknemer of partij die FSC heeft
 opgezet kan vervolgens
-[Open Policy Agent activeren](https://docs.nlx.io/nlx-in-production/setup-authorization/),
+[Open Policy Agent activeren](https://docs.open-fsc.nl/fsc-in-production/setup-authorization/),
 waarna de policy kan worden ingesteld.
 
 ## Beperkingen
