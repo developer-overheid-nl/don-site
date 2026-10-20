@@ -46,6 +46,23 @@ Daarna kan je de lokale versie van de site bekijken op
 Maak je aanpassingen aan de design tokens, draai `pnpm run build` om de CSS te
 builden.
 
+### Werken met Docusaurus
+
+De kennisbank staan in `/docs`, de blogposts in `/blog` en de overige pagina's
+in `/src/pages`.
+
+Een aantal componenten zijn aangepast of toegevoegd, deze staan in `/src/components`
+en `/src/theme`. De laatste map bevat componenten die de standaard Docusaurus
+componenten overschrijven, zogenoemde ge-swizzle-de components. Ga je aanpassingen
+maken aan de standaard Docusaurus componenten, dan doe je dat dmv
+`pnpm run swizzle ...`, [zie de documentatie](https://docusaurus.io/docs/swizzling)
+bij Docusaurus. Om upgrades van Docusaurus makkelijker te maken, is er een script en
+tests toegevoegd die checkt of de ge-swizzle-de componenten nog up-to-date zijn met
+de upstream-versie.  
+*Belangrijk*: Swizzle je een nieuw component, zet het dan in
+`/swizzle-baseline/manifest.json` en draai `pnpm swizzle:update`; dat maakt de
+baseline aan. Kies wrap boven eject waar dat kan.
+
 ## WCAG pnpm script
 
 Het `pnpm run lint:wcag` script vereist extra dependencies die niet in de
@@ -97,17 +114,17 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 
 ## Changelog
 
-Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin 
+Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin
 vermelden wat er veranderd, verbeterd of toegevoegd is.  
-Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets 
-bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries 
-samenvoegt. Deze pull request, genaamd "Version Packages", _moet_ worden gemerged voor elke release.
+Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets
+bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries
+samenvoegt. Deze pull request, genaamd "Version Packages", *moet* worden gemerged voor elke release.
 
-Ondanks dat er geen software package wordt gepubliceerd, _gebruiken we de changelog om bij te 
-houden wat er veranderd is in de website_. De semver gebruikt in de changelog heeft geen technische 
+Ondanks dat er geen software package wordt gepubliceerd, *gebruiken we de changelog om bij te
+houden wat er veranderd is in de website*. De semver gebruikt in de changelog heeft geen technische
 betekenis, maar kan wel gebruikt worden om in te zien wat er veranderd is.
 Zo is een nieuwe blogpost of kennisbankartikel een **minor** version bump en een bugfix een **patch**.
-Een "breaking" change is een **major** version bump. Voorbeelden van een breaking change 
+Een "breaking" change is een **major** version bump. Voorbeelden van een breaking change
 zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de URL van een artikel.
 
 De changelog voor de website schrijven we in het **Nederlands**, anders dan bij onze softwareprojecten,
