@@ -38,9 +38,12 @@ jobs:
 
       - name: Check links
         id: links
+        env:
+          FORCE_COLOR: 0
         run: |
           set -o pipefail
-          pnpm --silent check:links | tee linkinator-report.txt
+          # Linkinator schrijft het rapport naar stderr.
+          pnpm --silent check:links 2>&1 | tee linkinator-report.txt
 
       - name: Upload linkrapport naar Slack
         if: failure() && steps.links.outcome == 'failure'
@@ -48,6 +51,7 @@ jobs:
         with:
           method: files.uploadV2
           token: ${{ secrets.SLACK_BOT_TOKEN }}
+          errors: true
           payload: |
             channel_id: ${{ secrets.SLACK_CHANNEL_ID }}
             initial_comment: "Linkcheck developer.overheid.nl: kapotte links gevonden (${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
