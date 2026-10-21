@@ -71,7 +71,7 @@ low-code/no-code tool waarmee iedereen gemakkelijk policies kan schrijven. De
 tool is specifiek gericht op het maken van FSC policies.
 
 De FSC policy builder is te vinden op
-[fsc-policy-builder.apps.digilab.network](https://fsc-policy-builder.apps.digilab.network/).
+[fsc-policy-builder.projects.digilab.network](https://fsc-policy-builder.projects.digilab.network/).
 
 Met de tool kunnen relatief eenvoudig policies worden geschreven. Die kunnen
 vervolgens worden geëxporteerd en geïmporteerd.
@@ -132,4 +132,4 @@ De FSC policy builder heeft verschillende limitaties:
   systemen te ondersteunen.
 
 De FSC policy builder is te vinden op
-[fsc-policy-builder.apps.digilab.network](https://fsc-policy-builder.apps.digilab.network/).
+[fsc-policy-builder.projects.digilab.network](https://fsc-policy-builder.projects.digilab.network/).
