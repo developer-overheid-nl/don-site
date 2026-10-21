@@ -62,26 +62,26 @@ pnpm run lint:wcag
 
 ## Links controleren
 
-De workflow `.github/workflows/check-links.yml` controleert of alle links op de
-website nog werken met
-[Linkinator](https://github.com/JustinBeckwith/linkinator). Je kan deze check
-ook lokaal draaien:
+De workflow `.github/workflows/check-links.yml` controleert elke maandag of alle
+links op de website nog werken met
+[Linkinator](https://github.com/JustinBeckwith/linkinator). Worden er kapotte
+links gevonden, dan wordt het rapport in Slack geplaatst. De workflow kan ook
+handmatig gestart worden via de Actions-tab.
+
+Interne links worden al tijdens de build gecontroleerd door Docusaurus. Deze
+check draait daarom niet bij pull requests: externe sites zijn daarvoor te
+wisselvallig.
+
+Je kan deze check ook lokaal draaien:
 
 1. Draai `pnpm run build` om de site te builden naar de map `build/`.
-2. Draai Linkinator met dezelfde instellingen als de workflow:
+2. Draai `pnpm check:links`.
 
-```bash
-npx linkinator build \
---recurse \
---format JSON \
---clean-urls \
---config ./linkinator.config.json \
---verbosity ERROR \
---timeout 5000 \
-> linkinator-results.json
-```
+Voeg `--format JSON > linkinator-results.json` toe voor een rapport in JSON.
 
-Links die bewust overgeslagen moeten worden staan in `linkinator.config.json`.
+De instellingen staan in `linkinator.config.json`. Links die bewust
+overgeslagen moeten worden staan onder `skip`. Sites die bots blokkeren
+(HTTP 401, 403 en 429) geven een waarschuwing in plaats van een fout.
 
 ## Publiceren blogpost
 

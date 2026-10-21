@@ -45,7 +45,7 @@ const tiles: GridTile[] = [
     title: "Repository toevoegen",
     description:
       "Heb jij waardevolle repositories? Voeg deze toe aan het Open Source Software-register.",
-    link: "https://oss.developer.overheid.nl/apis/toevoegen",
+    link: "https://oss.developer.overheid.nl/repositories/toevoegen",
   },
   {
     icon: <IconTekstballonnenMetVraagteken />,

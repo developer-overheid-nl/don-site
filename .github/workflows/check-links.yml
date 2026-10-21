@@ -1,37 +1,59 @@
 name: Check links
 
+# Externe sites zijn te wisselvallig om pull requests op te laten falen.
+# Interne links worden al tijdens de build gecontroleerd (onBrokenLinks: "throw").
 on:
-  pull_request:
-  push:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "0 5 * * *"
+  schedule:
+    - cron: "0 5 * * 1"
+
+permissions:
+  contents: read
 
 jobs:
   check-links:
-    if: false
     runs-on: ubuntu-latest
+    env:
+      # De build vereist een Typesense-configuratie, maar zoeken is voor de linkcheck niet nodig.
+      TYPESENSE_ENDPOINT: https://search.don.projects.digilab.network
+      TYPESENSE_API_KEY: linkcheck-placeholder
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: 24.12
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build Docusaurus site
-        run: pnpm run build
+        run: pnpm build:docusaurus
 
-      - name: Run Linkinator to check links
-        uses: JustinBeckwith/linkinator-action@f62ba0c110a76effb2ee6022cc6ce4ab161085e3
+      - name: Check links
+        id: links
+        env:
+          FORCE_COLOR: 0
+        run: |
+          set -o pipefail
+          # Linkinator schrijft het rapport naar stderr.
+          pnpm --silent check:links 2>&1 | tee linkinator-report.txt
+
+      - name: Upload linkrapport naar Slack
+        if: failure() && steps.links.outcome == 'failure'
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95
         with:
-          paths: "build"
-          recurse: true
-          cleanUrls: true
-          config: "./linkinator.config.json"
-          verbosity: "ERROR"
-          timeout: 5000
-          retry: true
-          retryErrors: true
-          retryErrorsCount: 3
+          method: files.uploadV2
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          errors: true
+          payload: |
+            channel_id: C0BU0ALC4F8
+            initial_comment: "Linkcheck developer.overheid.nl: kapotte links gevonden (${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            file: "./linkinator-report.txt"
+            filename: "linkinator-report.txt"
