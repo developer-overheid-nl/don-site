@@ -53,7 +53,7 @@ jobs:
           token: ${{ secrets.SLACK_BOT_TOKEN }}
           errors: true
           payload: |
-            channel_id: ${{ secrets.SLACK_CHANNEL_ID }}
+            channel_id: C0BU0ALC4F8
             initial_comment: "Linkcheck developer.overheid.nl: kapotte links gevonden (${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
             file: "./linkinator-report.txt"
             filename: "linkinator-report.txt"
