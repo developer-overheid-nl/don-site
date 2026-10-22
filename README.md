@@ -58,7 +58,8 @@ maken aan de standaard Docusaurus componenten, dan doe je dat dmv
 `pnpm run swizzle ...`, [zie de documentatie](https://docusaurus.io/docs/swizzling)
 bij Docusaurus. Om upgrades van Docusaurus makkelijker te maken, is er een script en
 tests toegevoegd die checkt of de ge-swizzle-de componenten nog up-to-date zijn met
-de upstream-versie.  
+de upstream-versie. Een "pristine copy" van een geswizzled component wordt bijgehouden
+in de map `/swizzle-baseline` zodat er makkelijker gemerged kan worden.
 *Belangrijk*: Swizzle je een nieuw component, zet het dan in
 `/swizzle-baseline/manifest.json` en draai `pnpm swizzle:update`; dat maakt de
 baseline aan. Kies wrap boven eject waar dat kan.
