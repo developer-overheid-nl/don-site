@@ -1,0 +1,243 @@
+{
+  "components": [
+    {
+      "component": "BackToTopButton",
+      "type": "custom",
+      "package": "@docusaurus/theme-classic",
+      "files": [
+        "BackToTopButton/index.tsx"
+      ]
+    },
+    {
+      "component": "BlogLayout",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "BlogLayout/index.tsx"
+      ]
+    },
+    {
+      "component": "BlogPostItem/Header",
+      "type": "wrap",
+      "package": "@docusaurus/theme-classic",
+      "files": [
+        "BlogPostItem/Header/index.tsx",
+        "BlogPostItem/Header/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocBreadcrumbs",
+      "type": "wrap",
+      "package": "@docusaurus/theme-classic",
+      "files": [
+        "DocBreadcrumbs/index.tsx",
+        "DocBreadcrumbs/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocCard",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "DocCard/index.tsx"
+      ],
+      "extraFiles": [
+        "DocCard/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocCard/Description",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "DocCard/Description/index.tsx",
+        "DocCard/Description/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocCard/Heading",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "DocCard/Heading/index.tsx",
+        "DocCard/Heading/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocCard/Heading/Icon",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "DocCard/Heading/Icon/index.tsx",
+        "DocCard/Heading/Icon/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocCard/Heading/Text",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "DocCard/Heading/Text/index.tsx",
+        "DocCard/Heading/Text/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocCard/Layout",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "DocCard/Layout/index.tsx",
+        "DocCard/Layout/styles.module.css"
+      ]
+    },
+    {
+      "component": "DocTagDocListPage",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "DocTagDocListPage/index.tsx"
+      ],
+      "extraFiles": [
+        "DocTagDocListPage/styles.module.css"
+      ]
+    },
+    {
+      "component": "EditThisPage",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "EditThisPage/index.tsx"
+      ],
+      "extraFiles": [
+        "EditThisPage/index.module.css"
+      ]
+    },
+    {
+      "component": "Icon/Edit",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "Icon/Edit/index.tsx",
+        "Icon/Edit/styles.module.css"
+      ]
+    },
+    {
+      "component": "MDXComponents",
+      "type": "wrap",
+      "package": "@docusaurus/theme-classic",
+      "files": [
+        "MDXComponents.js"
+      ]
+    },
+    {
+      "component": "Navbar/MobileSidebar",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "Navbar/MobileSidebar/index.tsx"
+      ]
+    },
+    {
+      "component": "Navbar/MobileSidebar/Header",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "Navbar/MobileSidebar/Header/index.tsx"
+      ]
+    },
+    {
+      "component": "Navbar/MobileSidebar/Layout",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "Navbar/MobileSidebar/Layout/index.tsx"
+      ]
+    },
+    {
+      "component": "Navbar/MobileSidebar/SecondaryMenu",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "Navbar/MobileSidebar/SecondaryMenu/index.tsx"
+      ]
+    },
+    {
+      "component": "NavbarItem/DropdownNavbarItem",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "NavbarItem/DropdownNavbarItem/index.tsx"
+      ]
+    },
+    {
+      "component": "NavbarItem/DropdownNavbarItem/Desktop",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "NavbarItem/DropdownNavbarItem/Desktop/index.tsx"
+      ]
+    },
+    {
+      "component": "NavbarItem/DropdownNavbarItem/Mobile",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "NavbarItem/DropdownNavbarItem/Mobile/index.tsx",
+        "NavbarItem/DropdownNavbarItem/Mobile/styles.module.css"
+      ]
+    },
+    {
+      "component": "PaginatorNavLink",
+      "type": "eject",
+      "package": "@docusaurus/theme-classic",
+      "version": "3.10.2",
+      "files": [
+        "PaginatorNavLink/index.tsx"
+      ]
+    },
+    {
+      "component": "Root",
+      "type": "custom",
+      "package": "@docusaurus/core",
+      "files": [
+        "Root.tsx"
+      ]
+    },
+    {
+      "component": "SearchBar",
+      "type": "wrap",
+      "package": "docusaurus-theme-search-typesense",
+      "files": [
+        "SearchBar.tsx",
+        "searchBar.module.css"
+      ]
+    },
+    {
+      "component": "SearchPage",
+      "type": "eject",
+      "package": "docusaurus-theme-search-typesense",
+      "version": "0.26.0",
+      "files": [
+        "SearchPage/index.tsx",
+        "SearchPage/styles.module.css"
+      ]
+    }
+  ]
+}
