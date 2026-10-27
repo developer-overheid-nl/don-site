@@ -350,23 +350,22 @@ Hier wordt besloten om dat wel te doen, en de impact hiervan aan implementaties 
 
 -	De scope van de standaard expliciet neerzetten dat het alleen gaat over de opslag van Logregels.
 De generatie van Logregels wordt daarmee buiten scope gezet.
-Ten opzichte van de [overwogen alternatieven](#overwogen-alternatieven) is deze oplossingsrichting het minst ingrijpend, en laat de implementatie de vrijheid om keuzes te maken over log generatie (dit heeft geen impact op interoperabiliteit).
+Ten opzichte van het [overwogen alternatief](#overwogen-alternatief) is deze oplossingsrichting minder ingrijpend, en laat de implementatie de vrijheid om keuzes te maken over log generatie (dit heeft geen impact op interoperabiliteit).
 
 ### Gevolgen
--	Inhoudelijk geen functionele wijziging van de standaard.
+
+-	Inhoudelijk geen functionele wijziging van de standaard (impliciet is dit al het standpunt van de standaard).
 -	In de scope van de standaard wordt explciet genoemd dat het specifiek gaat over log opslag gaat en niet log generatie.
 -	De opslag van Logregels wordt expliciet gedaan nadat een Actie is afgerond.
 -	Er worden niet normatieve aanwijzingen toegevoegd met aandachtspunten voor implementaties over log generatie.
+-	Implementaties krijgen hierdoor de vrijheid om voor hun specifieke situatie een geschikte oplossing voor log generatie te bepalen.
+-	Als er uit praktijkvoorbeelden blijkt dat log generatie toch problemen oplevert kan heroverwogen worden om dit in scope te trekken.
 
-#### Overwogen alternatieven
-1.	Scope van de standaard expliciet laten gaan over enkel log opslag en niet log generatie.
-    1. Minst ingrijpend omdat dit impliciet al het standpunt is van de standaard.
-    2. Door het expliciet te maken kunnen aandachtspunten over log generatie worden toegelicht.
-    3. Als er uit praktijkvoorbeelden blijkt dat log generatie toch problemen oplevert kan heroverwogen worden om dit in scope te trekken.
-    4. Dit geeft implementaties de vrijheid om voor hun specifieke situatie een geschikte oplossing voor log generatie te bepalen.
+#### Overwogen alternatief
 
-2.	Scope van de standaard uitbreiden en log generatie inscope nemen.
-    1.	Significante impact op de standaard. De scope van de standaard wordt uitgebreid en nieuwe rollen en functionaliteit moeten worden beschreven. 
-    2.  Er zijn veel implementatie keuzes mogelijk voor log generatie.
-    3.	De exacte invulling van log generatie moet verder worden onderzocht. Bijvoorbeeld, hoe worden logs gegenereerd, wanneer worden deze opgeslagen, hoe kunnen alle mogelijke errors worden afgehandeld, enz. 
-    4.	Deze functionaliteit heeft niet direct een impact op de interoperabiliteit van Logregels en de invulling is applicatie afhankelijk. Daarom is het niet gewenst om dit op dit moment in scope van de standaard te nemen.
+Scope van de standaard uitbreiden en log generatie inscope nemen.
+Dit heeft als gevolg:
+-	Significante impact op de standaard. De scope van de standaard wordt uitgebreid en nieuwe rollen en functionaliteit moeten worden beschreven.
+-	Er zijn veel implementatie keuzes mogelijk voor log generatie. Voor de standaard moeten hier dan keuzes over worden genomen.
+-	De exacte invulling van log generatie moet verder worden onderzocht voordat hier keuzes over genomen kunnen worden. Bijvoorbeeld, hoe worden logs gegenereerd, wanneer worden deze opgeslagen, hoe kunnen alle mogelijke errors worden afgehandeld, enz.
+-	Deze functionaliteit heeft niet direct een impact op de interoperabiliteit van Logregels en de invulling is applicatie afhankelijk. Daarom is het niet gewenst om dit op dit moment in scope van de standaard te nemen.
