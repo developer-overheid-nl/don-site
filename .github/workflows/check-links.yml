@@ -43,7 +43,9 @@ jobs:
         run: |
           set -o pipefail
           # Linkinator schrijft het rapport naar stderr.
-          pnpm --silent check:links 2>&1 | tee linkinator-report.txt
+          pnpm --silent check:links 2>&1 \
+            | node scripts/dedupe-link-report.js \
+            | tee linkinator-report.txt
 
       - name: Upload linkrapport naar Slack
         if: failure() && steps.links.outcome == 'failure'

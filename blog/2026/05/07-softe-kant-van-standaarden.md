@@ -170,7 +170,7 @@ voor
 zijn er
 [concrete codevoorbeelden](/kennisbank/data/standaarden/logboek-dataverwerkingen/implementaties/java-jakarta)
 en links naar
-[referentie-implementaties](https://developer.overheid.nl/kennisbank/data/standaarden/logboek-dataverwerkingen/implementaties/go)
+[referentie-implementaties](/kennisbank/data/standaarden/logboek-dataverwerkingen/implementaties/go)
 die inspiratie kunnen bieden aan de doeners.
 
 Om te checken of er wordt voldaan aan een standaard kunnen validators worden
