@@ -23,7 +23,7 @@ const THEME_LABELS = {
   "open-source": "Open Source",
   devops: "DevOps & Platform",
   security: "Security",
-  ai: "AI",
+  ai: "Artificiële Intelligentie (AI)",
   leidraad: "Leidraad softwareontwikkeling",
 };
 
