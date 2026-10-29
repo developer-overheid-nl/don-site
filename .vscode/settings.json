@@ -2,7 +2,9 @@
     "editor.formatOnSave": true,
     "[markdown]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100    
     },
     "[mdx]": {
         "editor.formatOnSave": true,
@@ -24,5 +26,6 @@
         "pkio",
         "pkioverheid",
         "securitytxt"
-    ]
+    ],
+    "cSpell.language": "en,nl"
 }
