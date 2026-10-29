@@ -10,6 +10,9 @@
     "build:docusaurus": "docusaurus build",
     "index:typesense": "node scripts/index-markdown-typesense.mjs",
     "swizzle": "docusaurus swizzle",
+    "swizzle:check": "node scripts/swizzle.js check",
+    "swizzle:update": "node scripts/swizzle.js update",
+    "swizzle:diff": "node scripts/swizzle.js diff",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
@@ -62,6 +65,7 @@
     "cypress": "16.0.0",
     "linkinator": "8.1.0",
     "npm-run-all": "4.1.5",
+    "prettier": "3.9.10",
     "typescript": "7.0.2"
   },
   "browserslist": {
