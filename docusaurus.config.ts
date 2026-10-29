@@ -290,7 +290,6 @@ const config: Config & {
           target: "_self",
         },
         { to: "/blog", label: "Blog", position: "left" },
-        { to: "/evenementen", label: "Evenementen", position: "left" },
         {
           href: "https://data.overheid.nl",
           label: "Open Data",
