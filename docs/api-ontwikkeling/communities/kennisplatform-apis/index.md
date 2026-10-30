@@ -98,17 +98,17 @@ bekijken.
   Centraal
 - [Veilig Samenwerken met API's](https://www.youtube.com/watch?v=ZUuEsquzMPw) -
   Pascal de Haan, Politie
-- [KPN API Store](https://vimeo.com/fixvision/review/485974071/90e4ba80ed?sort=lastUserActionEventDate&direction=desc) -
+- KPN API Store -
   Wouter van Schaik, KPN
-- [Implementatie API managementplatform bij Logius](https://vimeo.com/fixvision/review/484431070/e38eddced0?sort=lastUserActionEventDate&direction=desc) -
+- Implementatie API managementplatform bij Logius -
   Paul van Gent, Logius
-- [API en Microservice beveiliging | Hoe API beveiliging wordt toegepast bij Machtigen](https://vimeo.com/fixvision/review/484360046/b0852767c4?sort=lastUserActionEventDate&direction=desc) -
+- API en Microservice beveiliging | Hoe API beveiliging wordt toegepast bij Machtigen -
   Frank van Es
-- [De beste API Style voor jouw missie kies je zo!](https://vimeo.com/fixvision/review/484047083/2468ea9c81?sort=lastUserActionEventDate&direction=desc) -
+- De beste API Style voor jouw missie kies je zo! -
   Joost Farla en Cathy Dingemanse, Kennisplatform API's
-- [Casus derdenbeslag | Toepassing API strategie, regie op gegevens, mens centraal](https://vimeo.com/fixvision/review/484068253/4d70aaf0c3?sort=lastUserActionEventDate&direction=desc) -
+- Casus derdenbeslag | Toepassing API strategie, regie op gegevens, mens centraal -
   Steven Gort en Bert Lukkien
-- [Developer.overheid.nl | voor het vinden en delen van APIs van de overheid](https://vimeo.com/fixvision/review/486399728/1d0fe094b7?sort=lastUserActionEventDate&direction=desc) -
+- Developer.overheid.nl | voor het vinden en delen van APIs van de overheid -
   Eelco Hotting
 - [Bekijk de API Talkshow](https://www.youtube.com/watch?v=cbV_Kn4At-8) van
   december 2020 waarin gasten uit binnen- en buitenland vertelden over actuele

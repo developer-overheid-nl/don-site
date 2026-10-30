@@ -15,6 +15,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
+    "check:links": "linkinator build --config ./linkinator.config.json",
     "test": "node --test scripts/*.test.js",
     "lint:typecheck": "tsc --noEmit",
     "lint": "npm-run-all lint:*"
@@ -59,6 +60,7 @@
     "@types/react-dom": "18.3.7",
     "browser-driver-manager": "2.0.1",
     "cypress": "16.0.0",
+    "linkinator": "8.1.0",
     "npm-run-all": "4.1.5",
     "typescript": "7.0.2"
   },
