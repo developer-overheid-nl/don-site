@@ -1,5 +1,16 @@
 # @developer-overheid-nl/website
 
+## 2.1.0
+
+### Minor Changes
+
+- 988df91: Add article about tweakers developers summit 2026
+- db51807: Add REUSE-standard to knowledge base
+
+### Patch Changes
+
+- dc940ec: Re-enable the link checker as a weekly check with a Slack report and fix broken links
+
 ## 2.0.0
 
 ### Major Changes
