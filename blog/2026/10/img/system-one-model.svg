@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="title">Hoe een System One-model werkt</title>
+  <desc id="desc">Een ongestructureerd bericht van een burger gaat een System One-model in. Er komt getypeerde, probabilistische output uit: een categorie (adreswijziging 0,91, klacht 0,06, overig 0,03) en een urgentie (hoog 0,72, normaal 0,28).</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#154273"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="420" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <!-- Kolomlabels -->
+  <g font-size="14" font-weight="600" fill="#154273">
+    <text x="32" y="56">1. Ongestructureerde input</text>
+    <text x="360" y="56">2. Model</text>
+    <text x="608" y="56">3. Getypeerde, probabilistische output</text>
+  </g>
+
+  <!-- Input -->
+  <rect x="32" y="72" width="280" height="256" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <g font-size="15" fill="#1f2937">
+    <text x="52" y="108">"Hoi, ik ben vorige week</text>
+    <text x="52" y="132">verhuisd naar Utrecht, maar</text>
+    <text x="52" y="156">in MijnOverheid staat nog</text>
+    <text x="52" y="180">steeds mijn oude adres. Wie</text>
+    <text x="52" y="204">kan mij helpen? Dit moet</text>
+    <text x="52" y="228">voor vrijdag geregeld zijn!"</text>
+  </g>
+  <rect x="52" y="280" width="176" height="28" rx="14" fill="#e2e8f0"/>
+  <text x="140" y="299" font-size="13" fill="#475569" text-anchor="middle">e-mail, chat, formulier</text>
+
+  <!-- Pijl naar model -->
+  <line x1="316" y1="200" x2="354" y2="200" stroke="#154273" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Model -->
+  <rect x="360" y="124" width="216" height="152" rx="12" fill="#154273"/>
+  <text x="468" y="182" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">System One-model</text>
+  <text x="468" y="212" font-size="14" fill="#cfe0f3" text-anchor="middle">classificatie in één stap</text>
+  <text x="468" y="236" font-size="14" fill="#cfe0f3" text-anchor="middle">snel, goedkoop, voorspelbaar</text>
+
+  <!-- Pijl naar output -->
+  <line x1="580" y1="200" x2="602" y2="200" stroke="#154273" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Output -->
+  <rect x="608" y="72" width="320" height="256" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#64748b">
+    <text x="628" y="102">categorie: enum</text>
+    <text x="628" y="226">urgentie: enum</text>
+  </g>
+
+  <g font-size="14" fill="#1f2937">
+    <text x="628" y="132" font-weight="600">adreswijziging</text>
+    <text x="628" y="160">klacht</text>
+    <text x="628" y="188">overig</text>
+    <text x="628" y="256" font-weight="600">hoog</text>
+    <text x="628" y="284">normaal</text>
+  </g>
+
+  <g>
+    <rect x="764" y="121" width="98" height="14" rx="3" fill="#2563eb"/>
+    <rect x="764" y="149" width="7" height="14" rx="3" fill="#93c5fd"/>
+    <rect x="764" y="177" width="3" height="14" rx="2" fill="#93c5fd"/>
+    <rect x="764" y="245" width="78" height="14" rx="3" fill="#2563eb"/>
+    <rect x="764" y="273" width="30" height="14" rx="3" fill="#93c5fd"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#1f2937" text-anchor="end">
+    <text x="912" y="132" font-weight="700">0,91</text>
+    <text x="912" y="160">0,06</text>
+    <text x="912" y="188">0,03</text>
+    <text x="912" y="256" font-weight="700">0,72</text>
+    <text x="912" y="284">0,28</text>
+  </g>
+
+  <!-- Onderschrift -->
+  <text x="480" y="372" font-size="15" fill="#334155" text-anchor="middle">Geen vrije tekst terug, maar een keuze uit vaste labels met een kans per label.</text>
+</svg>

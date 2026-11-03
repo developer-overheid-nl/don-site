@@ -75,5 +75,5 @@ om zich te beschermen tegen veelvoorkomende kwetsbaarheden en risico's.
 
 De API design rules dragen op verschillende vlakken bij aan moderne software
 ontwikkeling. Wil je weten of jouw API ook voldoet aan de API Design Rules? Voeg
-dan je API toe op [developer.overheid.nl](https://developer.overheid.nl/apis) en
+dan je API toe op [developer.overheid.nl](https://apis.developer.overheid.nl/apis) en
 laat (een deel van) de API design rules automatisch valideren!
