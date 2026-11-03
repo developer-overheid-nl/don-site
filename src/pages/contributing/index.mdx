@@ -1,6 +1,7 @@
 import ContributingTiles from "../../components/ContributingTiles";
 
 {/* This class assures Docusaurus markdown CSS is applied */}
+
 <div className="markdown">
 
 # Bijdragerichtlijnen
@@ -108,6 +109,32 @@ hoe je iets dient op te leveren dan kun je je vraag stellen in ons
 Wanneer je pull request wordt gemerged in de `main` branch, squashen we alle
 commits tot één commit met een passende naam. Je hoeft je dus niet druk te maken
 dat de namen van je commits allemaal even eloquent hoeven te zijn.
+
+### Changeset
+
+Elke pull request heeft een changeset nodig, ook als je alleen content toevoegt.
+Zonder changeset komt je wijziging niet in de changelog en krijgt de site geen
+versiebump. Maak het bestand aan met:
+
+```bash
+pnpm changeset
+```
+
+Dit vraagt je welk type bump je wijziging is en om een korte samenvatting. Het
+resultaat is een bestand in `.changeset/` dat je meecommit in je pull request.
+
+Kies het type bump als volgt:
+
+- `major` voor een breaking change, zoals een artikel verwijderen of de URL van
+  een bestaand artikel wijzigen.
+- `minor` voor nieuwe content of functionaliteit, zoals een artikel, een
+  blogpost, een thema of een component.
+- `patch` voor correcties, dependency-updates, tooling en documentatie voor
+  bijdragers die de site zelf niet verandert.
+
+Schrijf de samenvatting in het Engels en in de gebiedende wijs, net als de
+bestaande changesets, bijvoorbeeld "Add article about OAuth" of "Fix broken link
+in BAG tutorial".
 
 ## Opzetten ontwikkelomgeving
 
