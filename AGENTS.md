@@ -76,8 +76,8 @@ Vier lagen, waarvan alleen de tweede verplicht is.
 **Laag 1, content type.** Geen tag, maar een apart frontmatter-veld. Zie
 hierboven.
 
-**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De
-zeven thema's zijn `informatiebeveiliging`, `interoperabiliteit`,
+**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De acht
+thema's zijn `ai`, `informatiebeveiliging`, `interoperabiliteit`,
 `toegankelijkheid`, `privacy`, `infrastructuur`, `front-end` en `open-source`.
 
 **Laag 3, onderwerp-tags.** Optioneel, maximaal 5. Specifieke technologieën,
@@ -196,4 +196,7 @@ kan.
 Voeg geen dependencies toe zonder dat te overleggen. Let er daarbij op dat
 `pnpm` peer dependencies standaard automatisch installeert: dat een build slaagt
 zonder een declaratie betekent niet dat het package overbodig is. Toets dat met
-`pnpm install --config.auto-install-peers=false`.
+`pnpm install --config.auto-install-peers=false`. Die install haalt de
+automatisch geïnstalleerde peers uit `pnpm-lock.yaml`, en een gewone
+`pnpm install` zet ze niet terug. Herstel de lockfile daarna met
+`git checkout -- pnpm-lock.yaml` en draai `pnpm install` opnieuw.

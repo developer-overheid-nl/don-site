@@ -233,7 +233,7 @@
       "component": "SearchPage",
       "type": "eject",
       "package": "docusaurus-theme-search-typesense",
-      "version": "0.26.0",
+      "version": "0.27.0",
       "files": [
         "SearchPage/index.tsx",
         "SearchPage/styles.module.css"
