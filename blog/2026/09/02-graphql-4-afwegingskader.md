@@ -137,7 +137,7 @@ API-aanbieders zien.
 **Shopify** ging volledig over:
 [de REST Admin API is sinds oktober 2024 legacy](https://www.shopify.com/partners/blog/all-in-on-graphql)
 en nieuwe publieke apps in de App Store
-[moeten sinds april 2025 GraphQL gebruiken](https://shopify.dev/changelog/starting-april-2025-new-public-apps-submitted-to-shopify-app-store-must-use-graphql).
+[moeten sinds april 2025 GraphQL gebruiken](https://shopify.dev/docs/api/admin-rest).
 Duizenden bekende, geregistreerde app-ontwikkelaars met sterk uiteenlopende
 databehoeften op één samenhangend commerce-datamodel, en de schaal om cost-based
 rate limiting (zie deel 2) als platformvoorziening aan te bieden.

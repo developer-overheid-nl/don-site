@@ -40,7 +40,7 @@ ervoor gaan zorgen dat het aantal verzoeken zo ver mogelijk kan worden
 gereduceerd. Je kunt daarbij bijvoorbeeld denken aan het ondersteunen van
 speciale toegangspatronen, zoals _batch bevragingen_ en _eager loading_. Ook zou
 caching hier een belangrijke rol kunnen vervullen. De
-[werkgroep orkestratie van het Kennisplatform API's](https://github.com/Geonovum/KP-APIs/blob/master/overleggen/Werkgroep%20API%20design%20rules/orkestratie.md)
+[werkgroep orkestratie van het Kennisplatform API's](https://github.com/Geonovum/KP-APIs/blob/master/overleggen/Werkgroep%20API%20design%20rules/orkestratie/README.md)
 werkt momenteel aan de totstandkoming van deze nieuwe standaarden.
 
 ## Interoperabiliteit
