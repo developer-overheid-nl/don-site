@@ -112,29 +112,51 @@ dat de namen van je commits allemaal even eloquent hoeven te zijn.
 
 ### Changeset
 
-Elke pull request heeft een changeset nodig, ook als je alleen content toevoegt.
+:::warning[Elke pull request heeft een changeset nodig]
+
+Ook als je alleen een artikel, een blogpost of een kleine correctie toevoegt.
 Zonder changeset komt je wijziging niet in de changelog en krijgt de site geen
-versiebump. Maak het bestand aan met:
+versiebump. **Schrijf de changeset altijd in het Engels**, ook al is de site
+Nederlands.
+
+:::
+
+Maak het bestand aan met:
 
 ```bash
 pnpm changeset
 ```
 
-Dit vraagt je welk type bump je wijziging is en om een korte samenvatting. Het
-resultaat is een bestand in `.changeset/` dat je meecommit in je pull request.
+Vervolgens geef je aan welk type versionbump het is (`major`,`minor`of `patch`)
+en voer je een samenvatting in. Het resultaat is een bestand in `.changeset/`
+dat je meecommit in je pull request.
 
-Kies het type bump als volgt:
+Kies het type versionbump als volgt:
 
 - `major` voor een breaking change, zoals een artikel verwijderen of de URL van
   een bestaand artikel wijzigen.
 - `minor` voor nieuwe content of functionaliteit, zoals een artikel, een
-  blogpost, een thema of een component.
-- `patch` voor correcties, dependency-updates, tooling en documentatie voor
-  bijdragers die de site zelf niet verandert.
+  blogpost of een component.
+- `patch` voor correcties, dependency-updates en tooling.
 
-Schrijf de samenvatting in het Engels en in de gebiedende wijs, net als de
-bestaande changesets, bijvoorbeeld "Add article about OAuth" of "Fix broken link
-in BAG tutorial".
+De samenvatting komt in de changelog terecht, en die is Engelstalig. Schrijf hem
+in de gebiedende wijs, net als de bestaande changesets. Een changeset ziet er
+dan zo uit:
+
+```md title=".changeset/brave-owls-sing.md"
+---
+"@developer-overheid-nl/website": minor
+---
+
+Add article about OAuth in the knowledge base
+```
+
+Andere goede voorbeelden zijn:
+
+- "Fix broken link in BAG tutorial"
+- "Publish blog post about the BAG API"
+
+Schrijf dus niet: "Artikel over OAuth toegevoegd".
 
 ## Opzetten ontwikkelomgeving
 
