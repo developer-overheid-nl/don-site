@@ -68,7 +68,7 @@ const tiles: GridTile[] = [
         label: "publiccode.yml toevoegen",
       },
       {
-        link: "/kennisbank/open-source/tutorials/tutorial-repo-docs-generator",
+        link: "/kennisbank/open-source/tutorials/repo-inrichten-generator-webapp",
         label: "Repo docs generator",
       },
     ],
@@ -322,6 +322,10 @@ const tiles: GridTile[] = [
     icon: <IconComputercode />,
     title: "Open Source",
     description: [
+      {
+        link: "/kennisbank/open-source/tools/repo-docs-generator",
+        label: "Repo docs generator",
+      },
       {
         link: "/kennisbank/open-source/standaarden/publiccode-yml",
         label: "publiccode.yml",

@@ -12,7 +12,7 @@ tags:
 
 Overheidsorganisaties delen regelmatig gegevens met andere
 (overheids)organisaties.
-[Federatieve Service Connectivity (FSC)](https://nlx.io/) is een standaard (in
+[Federatieve Service Connectivity (FSC)](https://fsc-standaard.nl/) is een standaard (in
 wording d.d. jun 2024) voor veilige digitale gegevensuitwisseling, ontwikkeld
 door de overheid. Vaak is het echter wenselijk om deze gegevensuitwisseling te
 beperken door bepaalde regels, zogenaamde policies. Digilab heeft een tool
@@ -71,7 +71,7 @@ low-code/no-code tool waarmee iedereen gemakkelijk policies kan schrijven. De
 tool is specifiek gericht op het maken van FSC policies.
 
 De FSC policy builder is te vinden op
-[fsc-policy-builder.apps.digilab.network](https://fsc-policy-builder.apps.digilab.network/).
+[fsc-policy-builder.projects.digilab.network](https://fsc-policy-builder.projects.digilab.network/).
 
 Met de tool kunnen relatief eenvoudig policies worden geschreven. Die kunnen
 vervolgens worden geëxporteerd en geïmporteerd.
@@ -116,7 +116,7 @@ implementeren?
 Wanneer met behulp van de policy builder een policy is aangemaakt, kan deze
 worden geëxporteerd als Rego-bestand. De werknemer of partij die FSC heeft
 opgezet kan vervolgens
-[Open Policy Agent activeren](https://docs.nlx.io/nlx-in-production/setup-authorization/),
+[Open Policy Agent activeren](https://docs.open-fsc.nl/fsc-in-production/setup-authorization/),
 waarna de policy kan worden ingesteld.
 
 ## Beperkingen
@@ -132,4 +132,4 @@ De FSC policy builder heeft verschillende limitaties:
   systemen te ondersteunen.
 
 De FSC policy builder is te vinden op
-[fsc-policy-builder.apps.digilab.network](https://fsc-policy-builder.apps.digilab.network/).
+[fsc-policy-builder.projects.digilab.network](https://fsc-policy-builder.projects.digilab.network/).
