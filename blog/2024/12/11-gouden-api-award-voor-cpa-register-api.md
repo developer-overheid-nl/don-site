@@ -5,7 +5,7 @@ tags: [gouden-api]
 
 # Gouden API Award voor CPA Register API
 
-![gouden api](https://www.geonovum.nl/uploads/styles/auto_1600/public/image/2024-12/goudenapigroot.jpg?itok=o0rz1M1t)
+![gouden api](https://www.geonovum.nl/uploads/image/2024-12/goudenapigroot.jpg)
 
 Op 11 december 2024, tijdens de IBDS Stelseldag, heeft het Kennisplatform API's
 de Gouden API Award uitgereikt voor de CPA Register API gemaakt door Justid.
