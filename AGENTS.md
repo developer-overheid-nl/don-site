@@ -146,9 +146,49 @@ commitberichten hoeven niet perfect te zijn.
 
 Push niet naar `main`. Werk altijd op een branch en open een pull request.
 
+## Docusaurus upgraden
+
+`src/theme/` bevat componenten die we bij Docusaurus hebben geswizzeld. Bij een
+eject is het een volledige kopie die niet vanzelf meegaat met upstream. Bij een
+hernoemd component negeert Docusaurus onze override zonder foutmelding.
+`swizzle-baseline/` bewaakt dat:
+
+- `manifest.json` noemt elke override in `src/theme/`, met type (`eject`, `wrap`
+  of `custom`), het package en de bestanden.
+- Voor elk geëject bestand staat ernaast een ongewijzigde kopie van de
+  upstream-versie waarop het is gebaseerd.
+
+`pnpm test` draait `pnpm swizzle:check` mee, dus een Dependabot-PR voor de
+`docusaurus`-groep wordt rood zodra een geswizzeld component upstream verandert.
+
+Een upgrade gaat zo:
+
+1. Maak een branch, bijvoorbeeld `chore/docusaurus-3.11.0`.
+2. Zet alle `@docusaurus/*`-packages op dezelfde exacte versie en draai
+   `pnpm install`.
+3. Draai `pnpm swizzle:check`. Groen betekent dat geen geswizzeld component is
+   veranderd; ga door naar stap 5.
+4. Draai `pnpm swizzle:update`. Dat merget de upstream-wijzigingen met een 3-way
+   merge in onze bestanden en ververst de baselines. Los de conflict markers op
+   (`<<<<<<< DON`) en formatteer de gewijzigde bestanden met Prettier.
+5. Draai `pnpm lint`, `pnpm test` en `pnpm build`. De typecheck vangt
+   wijzigingen in `@docusaurus/theme-common/internal`, waar veel ejects van
+   afhangen.
+6. Controleer met `pnpm serve`: een docs-categoriepagina (DocCard), de mobiele
+   navigatie, een blogpost, `/search` en een tagpagina.
+7. Voeg een changeset toe (`patch`).
+
+`pnpm swizzle:diff <Component>` toont onze aanpassingen ten opzichte van de
+baseline.
+
+Swizzle je een nieuw component, zet het dan in `manifest.json` en draai
+`pnpm swizzle:update`; dat maakt de baseline aan. Kies wrap boven eject waar dat
+kan.
+
 ## Waar je vanaf blijft
 
 - `build/` en `.docusaurus/` zijn gegenereerd.
+- `swizzle-baseline/` alleen via `pnpm swizzle:update`, nooit met de hand.
 - `pnpm-lock.yaml` alleen via pnpm zelf, nooit met de hand.
 - `patches/` bevat patch-bestanden die bij `pnpm.patchedDependencies` horen.
 - Gooi geen bestaande tests weg om een nieuwe te laten slagen.
