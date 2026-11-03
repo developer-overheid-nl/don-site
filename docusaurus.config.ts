@@ -426,6 +426,10 @@ const config: Config & {
               to: "/implementatie-ondersteuning",
             },
             {
+              label: "Evenementen",
+              to: "/evenementen",
+            },
+            {
               label: "Over",
               to: "/over",
             },
