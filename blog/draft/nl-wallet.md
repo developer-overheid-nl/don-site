@@ -23,7 +23,7 @@ description: |
 
 import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
-# NL Wallet: veilig dankzij de secure enclave en security by design
+# NL Wallet onder de motorkap: in gesprek met het team
 
 Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties[^ezk] bouwt een
 digitale identiteitswallet, werknaam: NL Wallet. Daarmee kun je in de toekomst
@@ -47,8 +47,8 @@ kunnen aanhaken.
 
 - De overheid implementeert de Europese eIDAS-verordening: elke lidstaat moet
   ervoor zorgen dat burgers die dat willen een digitale identiteitswallet kunnen
-  gebruiken. Hiertoe ontwikkelt de overheid de NL Wallet, en een stelsel voorop
-  private EDI-wallets kunnen aansluiten.
+  gebruiken. Hiertoe ontwikkelt de overheid de NL Wallet, en een stelsel waarop
+  ook private EDI-wallets kunnen aansluiten.
 - Gegevens worden lokaal opgeslagen op het apparaat van de gebruiker. Een
   ontvanger vraagt alleen de gegevens die nodig zijn, en de gebruiker beslist of
   hij die deelt.
@@ -97,7 +97,7 @@ anders dan bijvoorbeeld DigiD.
 
 ### Gegevens op je eigen telefoon
 
-**DigiD** werkt centraal: na het inloggen verstuurt DigiD jouw BSN naar de
+**DigiD** werkt centraal: tijdens het inloggen verstuurt DigiD jouw BSN naar de
 dienstverlener, zodat die weet wie er inlogt.
 
 ```mermaid
@@ -142,14 +142,14 @@ Het gebruik van de app vindt plaats volgens de volgende stappen:
 
 ### 1. Wallet activeren (personaliseren)
 
-Na het downloaden van de app moet de wallet eenmalig worden geactiveerd.
-Hiervoor identificeert de gebruiker zich op het hoogste betrouwbaarheidsniveau
-met DigiD en stelt een zescijferige pincode in. Bij deze activatie worden
+Na het downloaden van de app moet de wallet eenmalig worden geactiveerd. Eerst
+stelt de gebruiker een zes-cijferige code in daarna identificeert de gebruiker
+zich op het hoogste betrouwbaarheidsniveau met DigiD. Daarna worden
 persoonsidentificatiegegevens (PID) uit de Basisregistratie Personen (BRP),
 zoals naam en geboortedatum, aan de wallet toegevoegd. Deze gegevens zijn nodig
 om de wallet te gebruiken.
 
-![Stap 1: de gebruiker logt in met DigiD op niveau hoog, kiest een pincode en ontvangt de PID uit de BRP in de wallet](./img/stap-1-activeren.svg)
+![Stap 1: de gebruiker kiest een pincode, logt in met DigiD op niveau hoog en ontvangt de PID uit de BRP in de wallet](./img/stap-1-activeren.svg)
 _Schematische weergave door Claude Opus 5.5_
 
 ### 2. Kaartjes ophalen (issuing)
@@ -181,49 +181,106 @@ _Schematische weergave door Claude Opus 5.5_
 De ontvanger controleert de handtekening van de uitgever op de attestatie en
 valideert de gedeelde attributen. Helemaal zonder server gaat dat niet. Bij het
 presenteren (stap 3) ondertekent de wallet-backend, die de sleutels namens de
-gebruiker beheert, een challenge. Zo ziet de dienstverlener dat het om de
-legitieme gebruiker gaat. De backend ziet dat de gebruiker actief is, maar niet
-wat hij aan het doen is.
+gebruiker beheert, een bewijs dat de wallet het kaartje echt bezit (proof of
+possession). Zo ziet de dienstverlener dat het om de legitieme gebruiker gaat en
+niet om een gekopieerd kaartje. De backend krijgt daarbij alleen een hash te
+zien: hij ziet dat de gebruiker actief is, maar niet wat hij aan het doen is.
 
-Daarnaast kan de ontvanger, afhankelijk van de toepassing, bij de uitgever
-nagaan of een kaartje nog geldig is. Dat gebeurt op een privacyvriendelijke
-manier via Token Status Lists: lange lijsten met de status van heel veel
-uitgegeven kaartjes, zodat de uitgever niet weet naar welk kaartje de ontvanger
-op zoek is.
+Daarnaast kan de ontvanger, afhankelijk van de toepassing, nagaan of een kaartje
+nog geldig is. Dat gebeurt op een privacyvriendelijke manier via Token Status
+Lists. De uitgever publiceert een lange lijst met de status van heel veel
+uitgegeven kaartjes. De ontvanger haalt die hele lijst op en zoekt daarin zelf
+het kaartje op, zodat de uitgever niet weet naar welk kaartje de ontvanger op
+zoek is.
 
-![Stap 4: de ontvanger controleert de handtekening van de uitgever en vraagt bij de uitgever na of het kaartje nog geldig is](./img/stap-4-verificatie.svg)
+![Stap 4: de ontvanger controleert de handtekening van de uitgever, haalt de statuslijst van de uitgever op en zoekt daarin zelf of het kaartje nog geldig is](./img/stap-4-verificatie.svg)
 _Schematische weergave door Claude Opus 5.5_
 
 ### De workflow
 
+Achter deze vier stappen zitten drie losse flows. De activatie doe je één keer,
+als je de app installeert. Daarna gebruik je de wallet zo vaak als je wilt,
+zonder opnieuw met DigiD in te loggen of je PID op te halen.
+
+#### **Eenmalig: wallet activeren**
+
 ```mermaid
 sequenceDiagram
-    participant P as DigiD / BRP
-    participant U as Uitgever
     participant W as Wallet app
+    participant P as DigiD / BRP
+
+    Note over W: 1. Pincode kiezen
+    W->>P: 2. Inloggen met DigiD
+    P->>W: 3. Bevestigd
+    P->>W: 4. PID (naam, geboortedatum)
+```
+
+_Vereenvoudigde weergave. De volledige flow staat in de NL Wallet-documentatie
+over
+[het aanmaken van de wallet](https://github.com/MinBZK/nl-wallet/blob/main/wallet_docs/architecture/use-cases/wallet-creation.md)
+en
+[het ophalen van de PID](https://github.com/MinBZK/nl-wallet/blob/main/wallet_docs/architecture/use-cases/issuance-with-openid4vci.md#pid-issuance)._
+
+<br/>
+
+#### **Kaartje ophalen: eenmalig per kaartje (issuing)**
+
+```mermaid
+sequenceDiagram
+    participant B as Wallet-backend
+    participant W as 📱 Wallet app
+    participant U as Uitgever
+
+    W->>U: 1. Verzoek om kaartje
+    U->>W: 2. Nonce (c_nonce)
+    W->>B: 3. Vraagt om sleutel voor nieuw kaartje (met nonce)
+    Note over B: 4. Maakt sleutelpaar in de HSM<br/>en ondertekent bezitsbewijs over de nonce
+    B->>W: 5. Bezitsbewijs + publieke sleutel
+    W->>U: 6. Bezitsbewijs
+    Note over U: 7. Koppelt kaartje aan die sleutel
+    U->>W: 8. Kaartje naar wallet
+    Note over W: 9. Lokaal opgeslagen<br/>[Ondertekend door uitgever]
+```
+
+_Vereenvoudigde weergave. De volledige flow staat in de
+[NL Wallet-documentatie over issuance](https://github.com/MinBZK/nl-wallet/blob/main/wallet_docs/architecture/use-cases/issuance-with-openid4vci.md)._
+
+:::info[Wat is een nonce?]
+
+Een **willekeurige code die maar één keer geldig is** (_number used once_).
+Omdat de wallet hem ondertekent, weet de uitgever dat het bewijs vers is en geen
+kopie van eerder.
+
+:::
+
+Een kaartje haal je één keer op bij de uitgever. Daarna kun je het zo vaak
+presenteren als nodig is.
+
+<br/>
+
+#### **Bij elk gebruik: presenteren en verifiëren (verifying)**
+
+```mermaid
+sequenceDiagram
+    participant W as 📱 Wallet app
     participant B as Wallet-backend
     participant O as Ontvanger
+    participant U as Uitgever
 
-    W->>P: 1.1 Inloggen met DigiD
-    P->>W: 1.2 Bevestigd
-    Note over W: 1.3 Pincode kiezen
-    P->>W: 1.4 PID (naam, geboortedatum)
-
-    W->>U: 2.1 Verzoek om kaartje
-    U->>W: 2.2 Kaartje naar wallet
-    Note over W: Lokaal opgeslagen<br/>[Ondertekend door uitgever]
-
-    O->>W: 3.1 Verzoek om attribuut
-    Note over W: 3.2 Gebruiker geeft toestemming
-    W->>B: 3.3 Challenge laten ondertekenen
-    B->>W: 3.4 Ondertekende challenge
-    W->>O: 3.5 Gevraagde attributen + challenge
-
-    O->>O: 4.1 Controleert handtekening uitgever
-    O->>U: 4.2 Nog geldig?
-    U->>O: 4.3 Ja, geldig
-    O-->>W: 4.4 Koppelt terug naar gebruiker
+    O->>W: 1. Verzoek om attribuut
+    Note over W: 2. Gebruiker geeft toestemming met pincode
+    W->>B: 3. Bezitsbewijs laten ondertekenen (alleen een hash)
+    B->>W: 4. Ondertekend bezitsbewijs
+    W->>O: 5. Gevraagde attributen + bezitsbewijs
+    O->>O: 6. Controleert handtekening uitgever
+    O->>U: 7. Statuslijst ophalen
+    U->>O: 8. Hele statuslijst
+    Note over O: 9. Zoekt het kaartje zelf op in de lijst
+    O-->>W: 10. Koppelt terug naar gebruiker
 ```
+
+_Vereenvoudigde weergave. De volledige flow staat in de
+[NL Wallet-documentatie over disclosure](https://github.com/MinBZK/nl-wallet/blob/main/wallet_docs/architecture/use-cases/disclosure-with-openid4vp.md)._
 
 ## Eén Europese digitale wallet
 
@@ -272,15 +329,13 @@ krijg je cryptografisch gegarandeerde, betrouwbare gegevens."
 jouw data te tonen, bijvoorbeeld alleen of iemand 18 jaar of ouder is. Hoe werkt
 dat technisch?**
 
-**Sietse**: Technisch heb je een attestatie of credential: een bericht getekend
-door de uitgever, in het geval van de PID (Personal Identification Data) de
-overheid. Daarin zitten je attributen, maar niet rechtstreeks, want in plaats
-daarvan staan ze als gesalte hashes. Als je een attribuut wilt onthullen, stuur
-je de waarde én de salt mee. De ontvanger hasht die twee samen en controleert of
-het overeenkomt met de hash in de attestatie, die getekend is door de uitgever.
-
-![De wallet stuurt één pakket met de attestatie (gesalte hashes, getekend door de uitgever), de onthulling van de geboortedatum (salt en waarde) en een handtekening van de wallet over de hash; de ontvanger hasht de onthulling, vindt de hash terug in de attestatie en controleert beide handtekeningen](./img/selectieve-onthulling.svg)
-_Schematische weergave door Claude Opus 5.5_
+**Sietse**: Technisch gezien heb je een attestatie of credential: een bericht
+getekend door de uitgever. In het geval van de PID (Personal Identification
+Data) is dat de overheid. Daarin zitten je attributen, maar niet rechtstreeks,
+want in plaats daarvan staan ze als gesalte hashes. Als je een attribuut wilt
+onthullen, stuur je de waarde én de salt mee. De ontvanger hasht die twee samen
+en controleert of het overeenkomt met de hash in de attestatie, die getekend is
+door de uitgever.
 
 **Tim**: Er is in dit vakgebied ook het begrip zero-knowledge proofs, en dan
 specifiek range proofs. In theorie zou de wallet kunnen berekenen of iemand
@@ -315,8 +370,9 @@ willen experimenteren met wat de NL Wallet in hun bedrijfsprocessen of sector
 betekent, zonder dat we daarvoor meteen een grootschalige pilot hoeven te
 organiseren. Vanuit het project ondersteunen we die partijen met documentatie en
 software. Sommigen gebruiken onze componenten, anderen bouwen hun eigen software
-of gebruiken andere componenten. Organisaties kunnen zich aanmelden via de
-[NL Wallet Community op Pleio](https://edi.pleio.nl/page/view/0c9b8ee6-cadc-4b2b-b84f-5d27cd264b1e/nl-wallet-community).
+of gebruiken andere componenten. Meer informatie over de NL Wallet Community en
+hoe organisaties zich kunnen aanmelden vind je op
+[edi.pleio.nl](https://edi.pleio.nl).
 
 ## Hoe verloopt de samenwerking met Europa?
 
@@ -438,8 +494,8 @@ besturingssysteem bij kan.
 ![De Apple M1-chip met losgehaalde heatspreader: links het metalen kapje met het Apple-logo, rechts de chip met de siliciumdie en het geheugen](./img/apple-m1.jpg)
 _De Secure Enclave is een extra beschermd deel van Apple-processors, en bestaat
 sinds de A7-chip. Op de foto: de Apple M1 met losgehaalde heatspreader, die ook
-een Secure Enclave heeft. (Afbeelding: Sonic8400 via [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Apple_M1_-_APL1102_-_IHS_removed.jpg),
+een Secure Enclave heeft. (Afbeelding: Sonic8400 via
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Apple_M1_-_APL1102_-_IHS_removed.jpg),
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.nl))_
 
 Het binden van de telefoon aan de persoon en aan de app met gegevens is een van
@@ -526,5 +582,5 @@ nieuw. Het is leuk om die te proberen.
 ---
 
 Wil je experimenteren met de NL Wallet? Sluit je aan bij de
-[NL Wallet Community op Pleio](https://edi.pleio.nl/page/view/0c9b8ee6-cadc-4b2b-b84f-5d27cd264b1e/nl-wallet-community)
+[NL Wallet Community](https://edi.pleio.nl/page/view/0c9b8ee6-cadc-4b2b-b84f-5d27cd264b1e/nl-wallet-community)
 of bekijk de broncode op [GitHub](https://github.com/MinBZK/nl-wallet).

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-labelledby="s4-title s4-desc">
   <title id="s4-title">Stap 4: verificatie</title>
-  <desc id="s4-desc">De ontvanger controleert de handtekening van de uitgever op het gedeelde kaartje en vraagt bij de uitgever, bijvoorbeeld de RDW, na of het kaartje nog geldig is. De uitgever ziet daarbij niet om welk kaartje het gaat.</desc>
+  <desc id="s4-desc">De ontvanger controleert de handtekening van de uitgever op het gedeelde kaartje en haalt de statuslijst van de uitgever, bijvoorbeeld de RDW, op. Daarin zoekt de ontvanger zelf of het kaartje nog geldig is, zodat de uitgever niet ziet om welk kaartje het gaat.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
       <path d="M0,0 L8,4 L0,8 z" fill="#01689b"/>
@@ -11,7 +11,7 @@
     <rect width="800" height="350" rx="16" fill="#eef7fb"/>
 
     <text x="40" y="52" font-size="22" font-weight="700" fill="#0f172a">Stap 4: verificatie</text>
-    <text x="40" y="78" font-size="14" fill="#475569">De ontvanger controleert de handtekening en checkt bij de uitgever of het kaartje nog geldig is.</text>
+    <text x="40" y="78" font-size="14" fill="#475569">De ontvanger controleert de handtekening en zoekt het kaartje op in de statuslijst van de uitgever.</text>
 
     <!-- Ontvanger -->
     <rect x="70" y="110" width="250" height="210" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
@@ -34,9 +34,9 @@
 
     <!-- Geldigheidscheck -->
     <line x1="324" y1="190" x2="476" y2="190" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="400" y="180" font-size="13" font-weight="700" fill="#1e293b" text-anchor="middle">Nog geldig?</text>
+    <text x="400" y="180" font-size="13" font-weight="700" fill="#1e293b" text-anchor="middle">Statuslijst ophalen</text>
     <line x1="476" y1="250" x2="324" y2="250" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="400" y="270" font-size="13" fill="#334155" text-anchor="middle">Ja, geldig</text>
+    <text x="400" y="270" font-size="13" fill="#334155" text-anchor="middle">Hele statuslijst</text>
 
     <!-- Uitgever -->
     <rect x="480" y="110" width="250" height="210" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
