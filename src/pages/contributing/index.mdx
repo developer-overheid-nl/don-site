@@ -110,14 +110,14 @@ Wanneer je pull request wordt gemerged in de `main` branch, squashen we alle
 commits tot één commit met een passende naam. Je hoeft je dus niet druk te maken
 dat de namen van je commits allemaal even eloquent hoeven te zijn.
 
-### Changeset
+### Changeset toevoegen
 
-:::warning[Elke pull request heeft een changeset nodig]
+:::warning[Changeset verplicht bij contentwijzigingen]
 
-Ook als je alleen een artikel, een blogpost of een kleine correctie toevoegt.
-Zonder changeset komt je wijziging niet in de changelog en krijgt de site geen
-versiebump. **Schrijf de changeset altijd in het Engels**, ook al is de site
-Nederlands.
+Wijzig je iets waardoor er iets visueels of contentmatig op de kennisbank
+verandert, voeg dan een changeset toe. Zonder changeset komt je wijziging niet
+in de changelog en krijgt de site geen versiebump. **Schrijf de changeset altijd
+in het Engels**, ook al is de site in het Nederlands.
 
 :::
 
@@ -137,7 +137,8 @@ Kies het type versionbump als volgt:
   een bestaand artikel wijzigen.
 - `minor` voor nieuwe content of functionaliteit, zoals een artikel, een
   blogpost of een component.
-- `patch` voor correcties, dependency-updates en tooling.
+- `patch` voor correcties en dependency-updates. Alleen nodig als de wijziging
+  zichtbaar is op de site.
 
 De samenvatting komt in de changelog terecht, en die is Engelstalig. Schrijf hem
 in de gebiedende wijs, net als de bestaande changesets. Een changeset ziet er
