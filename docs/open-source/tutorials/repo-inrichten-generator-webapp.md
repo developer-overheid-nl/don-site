@@ -1,20 +1,24 @@
 ---
+description:
+  "Maak met de web-app van de Repository Docs Generator in een paar stappen een
+  README.md, SECURITY.md, publiccode.yml en andere standaardbestanden voor je
+  repository."
 content_type: tutorial
-tags:
-  - "license"
-  - "open-source"
+tags: [open-source, publiccode-yml, license, changelog]
 ---
 
-# Richt je repository in voor Open Source
+# Repo inrichten met generator (web-app)
 
-Met de Repository Docs Generator kun je een repository voorzien van de juiste
-bestanden.
+Met de
+[Repository Docs Generator](https://developer-overheid-nl.github.io/repo-docs-generator/#/README.md)
+kun je een repository voorzien van de juiste bestanden.
 
 De generator genereert de volgende files:
 
 - `SECURITY.md`
-- `LICENCE.md`
+- `LICENSE.md`
 - `README.md`
+- `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
 - `CHANGELOG.md`
 - `publiccode.yml`
@@ -22,8 +26,8 @@ De generator genereert de volgende files:
 ## 1. Vul de JSON in
 
 Ga naar de
-[generator](https://developer-overheid-nl.github.io/repo-docs-generator/#/publiccode.yml)
-en vul de JSON aan de linkerkant in.
+[generator](https://developer-overheid-nl.github.io/repo-docs-generator) en vul
+de JSON aan de linkerkant in.
 
 ## 2. Kopieer de inhoud van de bestanden
 
@@ -41,8 +45,10 @@ Selecteer verschillende templates via deze dropdown:
 Pas de inhoud van de bestanden aan naar wat van toepassing is op jouw project.
 
 Wil je je `publiccode.yml` nog checken op errors? Gebruik dan de
-[publiccode-checker](https://developer-overheid-nl.github.io/don-checker/#/publiccode-05).
+[publiccode-checker](https://developer-overheid-nl.github.io/don-checker/#/publiccode).
 
 ## Bronnen
 
+- [Meer over de Repository Docs Generator](../tools/repo-docs-generator)
 - [GitHub van de repo-docs-generator](https://github.com/developer-overheid-nl/repo-docs-generator).
+- [Publiccode-checker](../tools/publiccode-yml-checker)
