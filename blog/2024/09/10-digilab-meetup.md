@@ -28,8 +28,7 @@ Proactieve Dienstverlening op 9, 10 en 11 december.
 - [Schrijf je alvast in](https://digilab.pleio.nl/groups/view/fdadad2d-155d-4395-a010-67003d2d9e8a/de-toekomst-van-federatieve-toegang/events/view/80376d03-aef4-4d12-be91-e9c1b5c1fffc/de-toekomst-van-federatieve-toegang)
   voor het evenement **De Toekomst van Federatieve Toegang** op dinsdag 22
   oktober 2024.
-- [Lees meer](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/de-ontwikkeling-van-het-federatief-datastelsel/events/view/6d18d384-f521-43c2-8732-d49828028f78/save-the-date-fieldlab-proactieve-dienstverlening-in-een-federatief-datastelsel)
-  over het fieldlab **Proactieve Dienstverlening in een Federatief Datastelsel**
+- Daarnaast organiseren we het fieldlab **Proactieve Dienstverlening in een Federatief Datastelsel**
   op 9, 10 en 11 december 2024.
 - Meer informatie over projecten op Digilab vind je op onze
   [projectenpagina](https://digilab.overheid.nl/projecten)
