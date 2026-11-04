@@ -155,6 +155,8 @@ Een datum-, tijd- of datumtijdveld is in de OAS altijd een `string` met een
 - Een datumtijd heeft een tijdzone-offset. Zonder offset is hij niet eenduidig.
 - Een API accepteert elke offset in een request en antwoordt bij voorkeur in
   UTC.
+- Is de oorspronkelijke tijdzone relevant voor gebruikers, publiceer de offset
+  dan in een apart veld, bijvoorbeeld `+02:00`.
 - Is het tijdstip niet relevant, gebruik dan `date` en niet `date-time`. Een
   geboortedatum als `date-time` verschuift een dag zodra iemand hem in een
   andere tijdzone leest.
