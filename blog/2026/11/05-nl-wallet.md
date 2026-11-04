@@ -31,6 +31,9 @@ rijbewijs en documenten elektronisch ondertekenen. Allemaal vanuit één app. Ee
 interessant traject dat voortkomt uit een Europees kader (eIDAS) en volledig
 open source wordt ontwikkeld.
 
+![Jacob Middag, Sietse Ringers en Tim Speelman van het NL Wallet-team](./img/team-nl-wallet.jpg)
+_Van links naar rechts: Jacob Middag, Sietse Ringers en Tim Speelman_
+
 <!-- truncate -->
 
 We spraken met **Tim Speelman** (beleidsmedewerker en product owner), **Sietse
@@ -86,9 +89,6 @@ aan de backend voor de DigiD-app werkte. Na een opdracht bij ICTU volgden andere
 projecten, totdat een oud-collega hem wees op een opdracht bij het NL
 Wallet-team. Zijn achtergrond met DigiD komt direct van pas in zijn huidige rol,
 met focus op de Rust-backend en DevOps voor testomgevingen.
-
-![Jacob Middag, Sietse Ringers en Tim Speelman van het NL Wallet-team](./img/team-nl-wallet.jpg)
-_Van links naar rechts: Jacob Middag, Sietse Ringers en Tim Speelman_
 
 ## Eén Europese digitale wallet
 
