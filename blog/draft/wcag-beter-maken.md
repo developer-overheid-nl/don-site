@@ -37,7 +37,7 @@ Tegelijkertijd hebben we over de jaren ook wel geleerd dat er van alles beter ka
 
 ### Representatie
 
-Toegankelijkheid draait om bruikbaarheid door mensen een beperking. Er zijn veel verschillende beperkingen, zoals visuele, auditieve, en cognitieve beperkingen. Wat Qwe veel horen over WCAG 2 is dat niet al deze groep even goed vertegenwoordigd zijn in de eisen.
+Toegankelijkheid draait om bruikbaarheid door mensen een beperking. Er zijn veel verschillende beperkingen, zoals visuele, auditieve, en cognitieve beperkingen. Wat we veel horen over WCAG 2 is dat niet al deze groep even goed vertegenwoordigd zijn in de eisen.
 
 Zo is er een groter deel eisen dat specifiek relevant is voor het wegnemen van beperkingen voor mensen die met een screenreader werken. Dit kan overigens grotendeels verklaard worden doordat het makkelijker testbaar te maken is: wat je toevoegt voor screenreaders is relatief makkelijk na te gaan, vergeleken met bijvoorbeeld hoe iets werkt voor iemand met ADHD.
 
