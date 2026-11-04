@@ -334,6 +334,10 @@ open-source:
   label: Open Source
 openapi:
   label: OpenAPI
+openlint:
+  label: OpenLint
+  description: OpenLint is een open specificatie en toolbox voor het linten van
+    API-beschrijvingen, en de opvolger van Spectral.
 orkestratie:
   label: Orkestratie
 ospo:
