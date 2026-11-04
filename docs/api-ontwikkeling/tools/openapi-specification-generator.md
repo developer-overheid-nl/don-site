@@ -72,7 +72,7 @@ staan, leveren een foutmelding op. Hieronder een overzicht:
 
 Elke filter wordt een optionele query parameter op de collectie, met een
 standaardomschrijving. De API Design Rules schrijven
-[lowerCamelCase voor query keys](https://gitdocumentatie.logius.nl/publicatie/api/adr/#/core/query-keys-camel-case)
+[lowerCamelCase voor query keys](../standaarden/api-design-rules/hoe-te-voldoen/query-keys-camel-case.md)
 voor, dus de tool hernoemt filters daar automatisch naar: `owner_name` wordt in
 de OAS `ownerName`. Filters moeten uniek zijn. De tool controleert niet of een
 filter ook voorkomt in het schema van de resource.
