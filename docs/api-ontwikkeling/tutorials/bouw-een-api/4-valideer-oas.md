@@ -18,7 +18,7 @@ we onze OAS Checker.
 
 De [OAS Checker](https://developer-overheid-nl.github.io/oas-checker) is een
 online tool om een OAS te valideren tegen de API Design Rules. Onder de motorkap
-gebruikt de OAS Checker dezelfde Spectral ruleset als de ADR Linter.
+gebruikt de OAS Checker dezelfde OpenLint ruleset als de ADR Linter.
 
 1. [Open de OAS Checker](https://developer-overheid-nl.github.io/oas-checker).
 2. Kopieer de volledige OAS uit de Swagger Editor.
@@ -51,7 +51,7 @@ erachter. De waarde van de server `url` wordt dus:
 
 ```json
 {
-  "openapi": "3.0.2",
+  "openapi": "3.1.0",
   "info": {
     "title": "Bier API",
     "description": "API over bier om te demonstreren hoe je eenvoudig een API kunt ontwikkelen.",

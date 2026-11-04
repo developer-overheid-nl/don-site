@@ -11,8 +11,7 @@ tags:
 
 Deze standaard is
 [verplicht voor REST API's](https://www.forumstandaardisatie.nl/open-standaarden/openapi-specification)
-van de overheid. De standaard is OAS 3.1; de status "pas toe of leg uit" geldt
-voor deze versie per 1 januari 2027.
+van de overheid. De standaard is OAS 3.1.
 
 :::
 

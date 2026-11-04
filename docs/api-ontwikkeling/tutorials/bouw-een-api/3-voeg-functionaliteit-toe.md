@@ -52,7 +52,7 @@ Swagger Editor:
 
 ```json
 {
-  "openapi": "3.0.2",
+  "openapi": "3.1.0",
   "info": {
     "title": "Bier API",
     "description": "API over bier om te demonstreren hoe je eenvoudig een API kunt ontwikkelen.",

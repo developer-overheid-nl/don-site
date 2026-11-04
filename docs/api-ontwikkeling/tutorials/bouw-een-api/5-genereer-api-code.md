@@ -454,8 +454,8 @@ overheidsstandaarden en om die specificatie om te zetten naar werkende code.
   De volledige ADR specificatie
 - [OpenAPI Specification](/kennisbank/api-ontwikkeling/standaarden/openapi-specification) -
   Overzicht van OAS op developer.overheid.nl
-- [OpenAPI Specification 3.0](https://spec.openapis.org/oas/v3.0.3) - Officiële
-  OAS 3.0 documentatie
+- [OpenAPI Specification 3.1](https://spec.openapis.org/oas/v3.1) - Officiële
+  OAS 3.1 documentatie
 - [OpenAPI Generator](https://openapi-generator.tech/) - Documentatie en
   beschikbare generators
 - [Codegen templates](https://github.com/developer-overheid-nl/codegen-templates) -

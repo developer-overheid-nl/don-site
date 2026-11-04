@@ -237,14 +237,11 @@ regels zie je hoe we dit hebben gedaan.
 
 :::
 
-:::warning OpenAPI Schema is niet hetzelfde als JSON Schema
+:::info OpenAPI Schema is JSON Schema
 
-Hoewel bovenstaande schemas heel erg lijken op JSON Schema, is het niet 100%
-hetzelfde. Dit komt doordat OAS 3.0 ouder is dan de officiele release van JSON
-Schema. Vanaf OAS 3.1 wordt JSON Schema volledig ondersteund, maar deze versie
-is nog niet goedgekeurd door de Nederlands overheid. Het traject om de
-verplichte standaard te updaten naar OAS 3.1 loopt momenteel. Zodra OAS 3.1 de
-nieuwe standaard is zullen we deze tutorial updaten met JSON Schema voorbeelden.
+OAS 3.1 is volledig verenigbaar met JSON Schema (draft 2020-12). Bovenstaande
+schemas zijn dus gewoon JSON Schema. Je kunt ze daardoor ook los publiceren en
+met `$ref` hergebruiken in andere API-beschrijvingen.
 
 :::
 
@@ -258,7 +255,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
 
 ```json
 {
-  "openapi": "3.0.2",
+  "openapi": "3.1.0",
   "info": {
     "title": "Bier API",
     "description": "API over bier om te demonstreren hoe je eenvoudig een API kunt ontwikkelen.",
