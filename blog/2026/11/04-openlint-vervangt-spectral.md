@@ -8,6 +8,7 @@ tags:
   - oas
   - npm
   - standaarden
+  - openlint
 image: ./img/openlint.png
 ---
 
@@ -90,11 +91,11 @@ elke linter het formaat kan implementeren en OpenLint daar één van is.
 De ambitie reikt ook verder dan die van Spectral. OpenLint moet uiteindelijk
 meer standaarden en formaten kunnen linten dan alleen OpenAPI, AsyncAPI en
 Arazzo, en wij willen er onder meer Nederlandse overheidsstandaarden zoals
-NL-SBB en [DCAT](/kennisbank/data/linked-data/dcat) aan toevoegen. Daarbij is
-OpenLint niet afhankelijk van één persoon of een commerciële vendor. Er werken
-onder meer mensen aan mee uit de communities rond OpenAPI, AsyncAPI en Arazzo,
-mensen die eerder aan Spectral zelf hebben meegewerkt en collega's van andere
-overheden.
+NL-SBB en [DCAT-AP-NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/) aan
+toevoegen. Daarbij is OpenLint niet afhankelijk van één persoon of een
+commerciële vendor. Er werken onder meer mensen aan mee uit de communities rond
+OpenAPI, AsyncAPI en Arazzo, mensen die eerder aan Spectral zelf hebben
+meegewerkt en collega's van andere overheden.
 
 In juli zeiden we ook dat we zouden helpen zoeken naar een plek om te landen,
 want een fork is nog geen standaard. Die plek hebben we gevonden bij
