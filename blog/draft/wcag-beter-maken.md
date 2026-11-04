@@ -5,12 +5,13 @@ description:
 image: ./img/wcag3.png
 tags:
   - toegankelijkheid
-draft: true
 ---
 
 # Hoe we WCAG beter willen maken
 
 [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) is al vele jaren dé standaard voor digitale toegankelijkheid. Wereldwijd is wetgeving die toegankelijkheid vereist vaak wetgeving die naar “WCAG” verwijst, al is dat technisch gezien vaak vrijwillig of indirect. Doordat WCAG veel gebruikt wordt, horen we veel over wat er beter kan. Vanuit [Logius](https://logius.nl) werk ik als co-editor actief mee aan [WCAG 3](https://www.w3.org/TR/wcag-3.0/), waarin we proberen WCAG beter te maken.
+
+![Een screenshot van de huidige working draft van de WCAG-standaard versie 3](./img/wcag3.png)
 
 <!-- truncate -->
 
@@ -37,7 +38,7 @@ Tegelijkertijd hebben we over de jaren ook wel geleerd dat er van alles beter ka
 
 ### Representatie
 
-Toegankelijkheid draait om bruikbaarheid door mensen een beperking. Er zijn veel verschillende beperkingen, zoals visuele, auditieve, en cognitieve beperkingen. Wat Qwe veel horen over WCAG 2 is dat niet al deze groep even goed vertegenwoordigd zijn in de eisen.
+Toegankelijkheid draait om bruikbaarheid door mensen een beperking. Er zijn veel verschillende beperkingen, zoals visuele, auditieve, en cognitieve beperkingen. Wat we veel horen over WCAG 2 is dat niet al deze groep even goed vertegenwoordigd zijn in de eisen.
 
 Zo is er een groter deel eisen dat specifiek relevant is voor het wegnemen van beperkingen voor mensen die met een screenreader werken. Dit kan overigens grotendeels verklaard worden doordat het makkelijker testbaar te maken is: wat je toevoegt voor screenreaders is relatief makkelijk na te gaan, vergeleken met bijvoorbeeld hoe iets werkt voor iemand met ADHD.
 
