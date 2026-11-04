@@ -24,16 +24,12 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 # NL Wallet onder de motorkap: in gesprek met het team
 
-Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties[^ezk] bouwt een
-digitale identiteitswallet, werknaam: NL Wallet. Daarmee kun je in de toekomst
-inloggen bij overheidsorganisaties en bedrijven, gegevens delen zoals je diploma
-of rijbewijs en documenten elektronisch ondertekenen. Allemaal vanuit één app.
-Een interessant traject dat voortkomt uit een Europees kader (eIDAS) en volledig
+Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties bouwt een digitale
+identiteitswallet, werknaam: NL Wallet. Daarmee kun je in de toekomst inloggen
+bij overheidsorganisaties en bedrijven, gegevens delen zoals je diploma of
+rijbewijs en documenten elektronisch ondertekenen. Allemaal vanuit één app. Een
+interessant traject dat voortkomt uit een Europees kader (eIDAS) en volledig
 open source wordt ontwikkeld.
-
-[^ezk]:
-    De beleidsverantwoordelijkheid voor het dossier ligt sinds de start van dit
-    kabinet bij het ministerie van Economische Zaken (EZK).
 
 <!-- truncate -->
 
@@ -67,8 +63,13 @@ Tim studeerde in Delft, eerst Industrieel Ontwerpen (bachelor) en daarna
 Computer Science (master). In die master specialiseerde hij zich in digitale
 identiteit. Zijn masterscriptie bracht hem in contact met RvIG, ICTU en de Kamer
 van Koophandel. Sinds september 2021 werkt hij als beleidsmedewerker bij het
-ministerie van Binnenlandse Zaken en Koninkrijksrelaties. In deze context is hij
-product owner van het NL Wallet-team, een traject dat in augustus 2022 startte.
+ministerie van Binnenlandse Zaken en Koninkrijksrelaties[^ezk]. In deze context
+is hij product owner van het NL Wallet-team, een traject dat in augustus 2022
+startte.
+
+[^ezk]:
+    De beleidsverantwoordelijkheid voor het dossier ligt sinds de start van dit
+    kabinet bij het ministerie van Economische Zaken (EZK).
 
 ### Sietse Ringers, architect en developer
 
@@ -493,7 +494,7 @@ verlaten de enclave nooit: cryptografische bewerkingen vinden plaats binnen de
 enclave zelf, zodat je er zelfs niet van uit een gecompromitteerd
 besturingssysteem bij kan.
 
-::: cha
+:::
 ![De Apple M1-chip met losgehaalde heatspreader: links het metalen kapje met het Apple-logo, rechts de chip met de siliciumdie en het geheugen](./img/apple-m1.jpg)
 _De Secure Enclave is een extra beschermd deel van Apple-processors, en bestaat
 sinds de A7-chip. Op de foto: de Apple M1 met losgehaalde heatspreader, die ook
