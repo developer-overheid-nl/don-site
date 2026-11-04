@@ -180,13 +180,13 @@ De runtime gebruikt dit bestand bij het starten. Door de gebundelde OAS te
 kopiëren weet de gegenereerde app exact welk contract hij moet valideren en
 publiceren.
 
-| Parameter | Betekenis                                                    |
-| --------- | ------------------------------------------------------------ |
-| `-i`      | Input: pad naar de OpenAPI Specification                     |
+| Parameter | Betekenis                                         |
+| --------- | ------------------------------------------------- |
+| `-i`      | Input: pad naar de OpenAPI Specification          |
 | `-g`      | Generator: welke taal/framework (`typescript-nestjs-server`) |
-| `-o`      | Output: map waar de code gegenereerd wordt                   |
-| `-t`      | Templates: pad naar de aangepaste template                   |
-| `-c`      | Configuratiebestand van de gekozen template                  |
+| `-o`      | Output: map waar de code gegenereerd wordt        |
+| `-t`      | Templates: pad naar de aangepaste template        |
+| `-c`      | Configuratiebestand van de gekozen template       |
 
 Gebruik een van deze commando's als je een andere template wilt proberen:
 
