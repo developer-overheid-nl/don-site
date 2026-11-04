@@ -36,7 +36,7 @@ genereert de tool OpenAPI 3.1. Hieronder een voorbeeldconfiguratie:
       "name": "repository",
       "plural": "repositories",
       "readonly": false,
-      "filters": ["owner_name", "status"]
+      "filters": ["ownerName", "status"]
     },
     {
       "name": "api",
@@ -70,10 +70,12 @@ staan, leveren een foutmelding op. Hieronder een overzicht:
 
 ### Filters
 
-Elke filter wordt een optionele query parameter op de collectie, in
-lowerCamelCase en met een standaardomschrijving. Zo levert `owner_name` op
-`GET /repositories` de parameter `ownerName` op. Filters moeten uniek zijn. De
-tool controleert niet of een filter ook voorkomt in het schema van de resource.
+Elke filter wordt een optionele query parameter op de collectie, met een
+standaardomschrijving. De API Design Rules schrijven
+[lowerCamelCase voor query keys](https://gitdocumentatie.logius.nl/publicatie/api/adr/#/core/query-keys-camel-case)
+voor, dus de tool hernoemt filters daar automatisch naar: `owner_name` wordt in
+de OAS `ownerName`. Filters moeten uniek zijn. De tool controleert niet of een
+filter ook voorkomt in het schema van de resource.
 
 ### Eigen schema
 
