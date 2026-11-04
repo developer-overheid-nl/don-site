@@ -41,7 +41,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
               API-Version:
                 // highlight-start
                 # Tip: gebruik het standaard component van developer.overheid.nl
-                $ref: "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                $ref: "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
                 // highlight-end
   ```
   </TabItem>
@@ -77,7 +77,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
                 "API-Version": {
                   // highlight-start
                   // Tip: gebruik het standaard component van developer.overheid.nl
-                  "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                  "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
                   // highlight-end
                 }
               }

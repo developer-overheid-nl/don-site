@@ -105,20 +105,20 @@ concepten, zonder te verdwalen in domeinspecifieke complexiteit.
           "format": "uuid",
           "description": "Unieke identifier",
           // highlight-next-line
-          "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee92"
+          "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee92"]
         },
         "naam": {
           "type": "string",
           "description": "Naam",
           // highlight-next-line
-          "example": "Weizen Tripel"
+          "examples": ["Weizen Tripel"]
         },
         "alcoholPercentage": {
           "type": "number",
           "format": "double",
           "description": "Alcoholpercentage",
           // highlight-next-line
-          "example": 7.6
+          "examples": [7.6]
         },
         "bierstijl": {
           "$ref": "#/components/schemas/Bierstijl"
@@ -143,13 +143,13 @@ concepten, zonder te verdwalen in domeinspecifieke complexiteit.
           "format": "uuid",
           "description": "Unieke identifier",
           // highlight-next-line
-          "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee91"
+          "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee91"]
         },
         "naam": {
           "type": "string",
           "description": "Naam",
           // highlight-next-line
-          "example": "Quadrupel"
+          "examples": ["Quadrupel"]
         }
       },
       "required": ["id", "naam"]
@@ -168,20 +168,20 @@ concepten, zonder te verdwalen in domeinspecifieke complexiteit.
           "format": "uuid",
           "description": "Unieke identifier",
           // highlight-next-line
-          "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee93"
+          "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee93"]
         },
         "naam": {
           "type": "string",
           "description": "Naam",
           // highlight-next-line
-          "example": "Brouwtoren"
+          "examples": ["Brouwtoren"]
         },
         "grootte": {
           "type": "string",
           "enum": ["hobby", "micro", "groot"],
           "description": "Grootte brouwerij (hobby/micro/groot)",
           // highlight-next-line
-          "example": "micro"
+          "examples": ["micro"]
         },
         "adres": {
           "$ref": "#/components/schemas/Adres"
@@ -202,25 +202,25 @@ concepten, zonder te verdwalen in domeinspecifieke complexiteit.
           "type": "string",
           "description": "Straatnaam",
           // highlight-next-line
-          "example": "Waldeck Pyrmontsingel"
+          "examples": ["Waldeck Pyrmontsingel"]
         },
         "huisnummer": {
           "type": "number",
           "description": "Huisnummer",
           // highlight-next-line
-          "example": 12
+          "examples": [12]
         },
         "postcode": {
           "type": "string",
           "description": "Postcode",
           // highlight-next-line
-          "example": "6521 BC"
+          "examples": ["6521 BC"]
         },
         "plaats": {
           "type": "string",
           "description": "Plaats",
           // highlight-next-line
-          "example": "Nijmegen"
+          "examples": ["Nijmegen"]
         }
       },
       "required": ["straat", "huisnummer", "postcode", "plaats"]
@@ -248,7 +248,9 @@ met `$ref` hergebruiken in andere API-beschrijvingen.
 ### Update de OAS met de schemas
 
 Kopieer elk schema hierboven naar het corresponderende schema in de Swagger
-editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
+editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken. De
+collectieschemas zoals `BrouwerijCollection` hoeven we niet aan te passen: die
+verwijzen al naar de schemas die we zojuist hebben uitgebreid.
 
 <details>
   <summary>De spec zou er op dit moment zo uit moeten zien</summary>
@@ -296,20 +298,17 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Brouwerij"
-                  }
+                  "$ref": "#/components/schemas/BrouwerijCollection"
                 }
               }
             }
@@ -325,7 +324,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "201": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "Created",
@@ -338,7 +337,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       }
@@ -358,7 +357,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -371,7 +370,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -384,7 +383,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -397,7 +396,10 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -408,10 +410,10 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
         "tags": ["Brouwerijen"],
         "responses": {
           "204": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/204"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NoContent"
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -426,20 +428,17 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bier"
-                  }
+                  "$ref": "#/components/schemas/BierCollection"
                 }
               }
             }
@@ -455,7 +454,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "201": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "Created",
@@ -468,7 +467,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       }
@@ -488,7 +487,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -501,7 +500,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -514,7 +513,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -527,7 +526,10 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -538,10 +540,10 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
         "tags": ["Bieren"],
         "responses": {
           "204": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/204"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NoContent"
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -556,20 +558,17 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bierstijl"
-                  }
+                  "$ref": "#/components/schemas/BierstijlCollection"
                 }
               }
             }
@@ -592,7 +591,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -605,7 +604,7 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -620,47 +619,62 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee93"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee93"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Weizen Tripel"
+            "examples": ["Brouwtoren"]
           },
           "grootte": {
             "type": "string",
             "enum": ["hobby", "micro", "groot"],
             "description": "Grootte brouwerij (hobby/micro/groot)",
-            "example": "micro"
+            "examples": ["micro"]
           },
           "adres": {
-            "description": "Adres",
-            "properties": {
-              "straat": {
-                "type": "string",
-                "description": "Straatnaam",
-                "example": "Waldeck Pyrmontsingel"
-              },
-              "huisnummer": {
-                "type": "number",
-                "description": "Huisnummer",
-                "example": 12
-              },
-              "postcode": {
-                "type": "string",
-                "description": "Postcode",
-                "example": "6521 BC"
-              },
-              "plaats": {
-                "type": "string",
-                "description": "Plaats",
-                "example": "Nijmegen"
-              }
-            },
-            "required": ["straat", "huisnummer", "postcode", "plaats"]
+            "$ref": "#/components/schemas/Adres"
           }
         },
         "required": ["id", "naam", "grootte"]
+      },
+      "BrouwerijCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Brouwerij"
+            }
+          }
+        }
+      },
+      "Adres": {
+        "description": "Adres",
+        "properties": {
+          "straat": {
+            "type": "string",
+            "description": "Straatnaam",
+            "examples": ["Waldeck Pyrmontsingel"]
+          },
+          "huisnummer": {
+            "type": "number",
+            "description": "Huisnummer",
+            "examples": [12]
+          },
+          "postcode": {
+            "type": "string",
+            "description": "Postcode",
+            "examples": ["6521 BC"]
+          },
+          "plaats": {
+            "type": "string",
+            "description": "Plaats",
+            "examples": ["Nijmegen"]
+          }
+        },
+        "required": ["straat", "huisnummer", "postcode", "plaats"]
       },
       "Bier": {
         "properties": {
@@ -668,18 +682,18 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee92"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee92"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Weizen Tripel"
+            "examples": ["Weizen Tripel"]
           },
           "alcoholPercentage": {
             "type": "number",
             "format": "double",
             "description": "Alcoholpercentage",
-            "example": 7.6
+            "examples": [7.6]
           },
           "bierstijl": {
             "$ref": "#/components/schemas/Bierstijl"
@@ -690,6 +704,18 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
         },
         "required": ["id", "naam", "alcoholPercentage", "bierstijl"]
       },
+      "BierCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bier"
+            }
+          }
+        }
+      },
       "Bierstijl": {
         "description": "Bierstijl",
         "properties": {
@@ -697,15 +723,27 @@ editor. `Adres` bestaat nog niet, dus die moeten we zelf aanmaken.
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee91"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee91"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Quadrupel"
+            "examples": ["Quadrupel"]
           }
         },
         "required": ["id", "naam"]
+      },
+      "BierstijlCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bierstijl"
+            }
+          }
+        }
       }
     },
     "parameters": {

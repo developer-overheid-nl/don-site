@@ -41,10 +41,10 @@ eerste keer kan dit even duren, daarna worden ze gecached.
 ## Bundlen
 
 Onze OAS bevat `$ref` verwijzingen naar externe URL's, zoals
-`https://static.developer.overheid.nl/adr/components.yaml` voor standaard
-headers en error responses. Dit is handig omdat we zo herbruikbare
-ADR-componenten kunnen gebruiken, maar de OpenAPI Generator kan niet overweg met
-externe referenties.
+`https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml`
+voor standaard headers en error responses. Dit is handig omdat we zo
+herbruikbare ADR-componenten kunnen gebruiken, maar de OpenAPI Generator kan
+niet overweg met externe referenties.
 
 We moeten de OAS daarom eerst bundlen. Dit betekent dat externe verwijzingen
 worden opgehaald en als interne `$ref` verwijzingen in het document worden
@@ -68,6 +68,11 @@ npx @developer-overheid-nl/don-checker@latest validate \
   --standard adr \
   --input openapi.bundled.json
 ```
+
+Naast de waarschuwing over OAS 3.1 uit de vorige stap krijg je nu ook de
+waarschuwing `nlgov:schema-camel-case` over `ProblemDetails.schema`. Die naam
+neemt Redocly over uit de bestandsnaam van het externe schema, dus ook deze mag
+je negeren.
 
 :::tip Volledig platslaan
 
@@ -171,13 +176,13 @@ De runtime gebruikt dit bestand bij het starten. Door de gebundelde OAS te
 kopiëren weet de gegenereerde app exact welk contract hij moet valideren en
 publiceren.
 
-| Parameter | Betekenis                                         |
-| --------- | ------------------------------------------------- |
-| `-i`      | Input: pad naar de OpenAPI Specification          |
+| Parameter | Betekenis                                                    |
+| --------- | ------------------------------------------------------------ |
+| `-i`      | Input: pad naar de OpenAPI Specification                     |
 | `-g`      | Generator: welke taal/framework (`typescript-nestjs-server`) |
-| `-o`      | Output: map waar de code gegenereerd wordt        |
-| `-t`      | Templates: pad naar de aangepaste template        |
-| `-c`      | Configuratiebestand van de gekozen template       |
+| `-o`      | Output: map waar de code gegenereerd wordt                   |
+| `-t`      | Templates: pad naar de aangepaste template                   |
+| `-c`      | Configuratiebestand van de gekozen template                  |
 
 Gebruik een van deze commando's als je een andere template wilt proberen:
 
@@ -278,13 +283,15 @@ generated-api-nestjs/
 │   ├── headers-decorator.ts
 │   └── index.ts
 ├── models/                 # Types op basis van de schemas
+│   ├── adres.ts
+│   ├── bier-collection.ts
 │   ├── bier.ts
+│   ├── bierstijl-collection.ts
 │   ├── bierstijl.ts
-│   ├── brouwerij-adres.ts
+│   ├── brouwerij-collection.ts
 │   ├── brouwerij.ts
-│   ├── create-brouwerij-400-response-invalid-params.ts
-│   ├── create-brouwerij-400-response.ts
-│   └── index.ts
+│   ├── index.ts
+│   └── problem-details/
 ├── package.json
 ├── tsconfig.json
 └── README.md
@@ -320,7 +327,7 @@ npm run init-install
 ### Stap 2: Start de server met mock data
 
 Voor deze tutorial starten we de server in mock-modus. Hiermee worden
-automatisch voorbeeldresponses gegenereerd op basis van de `example` waarden in
+automatisch voorbeeldresponses gegenereerd op basis van de voorbeeldwaarden in
 de OAS:
 
 ```bash
@@ -357,19 +364,21 @@ We krijgen nu mock data terug gebaseerd op de voorbeeldwaarden die we aan de
 schemas hebben toegevoegd:
 
 ```json
-[
-  {
-    "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee93",
-    "naam": "Weizen Tripel",
-    "grootte": "micro",
-    "adres": {
-      "straat": "Waldeck Pyrmontsingel",
-      "huisnummer": 12,
-      "postcode": "6521 BC",
-      "plaats": "Nijmegen"
+{
+  "items": [
+    {
+      "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee93",
+      "naam": "Brouwtoren",
+      "grootte": "micro",
+      "adres": {
+        "straat": "Waldeck Pyrmontsingel",
+        "huisnummer": 12,
+        "postcode": "6521 BC",
+        "plaats": "Nijmegen"
+      }
     }
-  }
-]
+  ]
+}
 ```
 
 De gegenereerde server valideert ook automatisch de query parameters. Probeer de
@@ -389,8 +398,9 @@ Dan krijgen we een `400 Bad Request` met een `problem+json` response:
 
 ```json
 {
-  "title": "Request validation failed",
+  "title": "Bad Request",
   "status": 400,
+  "detail": "Request validation failed",
   "errors": [
     {
       "in": "query",

@@ -7,5 +7,6 @@ pages for the seven rules the linter checks that are new in 2.2: kebab-case path
 segments, lowerCamelCase query keys, the three date and time rules, problem
 details and invalid input. Extend the cheat sheet with sections on error
 handling and on date and time. Link to the specification without a version
-number, so every link opens the current version of the rule. Describe OAS 3.1
-as the standard throughout the knowledge base and replace Spectral with OpenLint.
+number, so every link opens the current version of the rule. Describe OAS 3.1 as
+the standard throughout the knowledge base and replace Spectral with OpenLint.
+Update the bouw-een-api tutorial to the current OAS Generator and DON Checker.
