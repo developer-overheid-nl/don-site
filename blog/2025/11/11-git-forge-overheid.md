@@ -126,7 +126,7 @@ vast.
 Echte
 [digitale soevereiniteit](https://www.tweedekamer.nl/zoeken?qry=position+paper+digitale+soevereiniteit&form_build_id=form-qdVAkRjc9-ixopjCXk_eYwERCpEpkS2_Zz1uURDIDxk&form_id=tk_external_data_autonomy_search_form)
 kun je alleen bereiken door het gebruik van
-[vrije software](https://audio-video.gnu.org/video/TEDxGE2014_Stallman05_LQ.webm)
+[vrije software](https://www.fsf.org/blogs/rms/20140407-geneva-tedx-talk-free-software-free-society)
 (_Free and Open Source Software - FOSS_).
 [Vrije software](https://www.gnu.org/philosophy/free-sw.html) is breder dan
 opensource software. FOSS geeft de gebruiker vier vrijheden:
