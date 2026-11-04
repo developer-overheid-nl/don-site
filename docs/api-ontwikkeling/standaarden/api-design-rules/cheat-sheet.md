@@ -9,10 +9,11 @@ sidebar_position: 0
 
 # ADR Cheat Sheet
 
-Het actuele en uitgebreide overzicht van de REST API Design Rules vind je hier:
-[API Design Rules](https://logius-standaarden.github.io/API-Design-Rules/#normative-design-rules).
-Hieronder vind je echter een extract met de belangrijkste technische regels en
-best practices om te gebruiken tijdens het ontwerpen van een API.
+Het actuele en uitgebreide overzicht van de REST API Design Rules vind je in de
+gepubliceerde standaard:
+[NLGov REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/).
+Hieronder vind je een extract met de belangrijkste technische regels en best
+practices om te gebruiken tijdens het ontwerpen van een API.
 
 ## Gebruik OpenAPI Specification
 
@@ -92,8 +93,72 @@ Voorbeeld van een geldig `info.servers` object:
 
 - Gebruik `application/json` voor response bodies.
 - Gebruik `lowerCamelCase` voor properties, bijvoorbeeld `organisatieNaam`.
-- Gebruik [Problem Details](../../architectuur/problem-details) voor
-  foutmeldingen.
+- Geef altijd een object terug, nooit een losse array. Bij een collectie staan
+  de resources in de property `items`. Een object laat ruimte om later velden
+  toe te voegen, zoals paginering, zonder dat dat een breaking change is.
+
+✅**Goed**:
+
+```json title="GET /rijksmonumenten"
+{
+  "items": [
+    { "id": 12, "naam": "Domtoren" },
+    { "id": 13, "naam": "Ridderzaal" }
+  ]
+}
+```
+
+⛔️**Fout**:
+
+```json title="GET /rijksmonumenten"
+[
+  { "id": 12, "naam": "Domtoren" },
+  { "id": 13, "naam": "Ridderzaal" }
+]
+```
+
+## Foutafhandeling
+
+Een 4xx- of 5xx-response gebruikt `application/problem+json` of
+`application/problem+xml` en volgt
+[RFC 9457](https://www.rfc-editor.org/rfc/rfc9457.html). Een eigen formaat zoals
+`{ "error": "..." }` voldoet niet.
+
+Verplicht zijn `status`, `title` en `detail`. De velden `type` en `instance`
+mogen erbij.
+
+```json title="voorbeeld van een 400-response"
+{
+  "status": 400,
+  "title": "Ongeldige aanvraag",
+  "detail": "Het veld aanvraagdatum heeft niet het formaat jjjj-mm-dd."
+}
+```
+
+Ongeldige invoer levert een `400`, en bij voorkeur staan alle validatiefouten in
+één antwoord in plaats van alleen de eerste. Zie
+[Problem Details](../../architectuur/problem-details) voor de achtergrond en
+[hoe te voldoen](./hoe-te-voldoen/error-handling-problem-details) voor de
+OAS-uitwerking.
+
+## Datum en tijd
+
+Een datum-, tijd- of datumtijdveld is in de OAS altijd een `string` met een
+`format`:
+
+| Soort veld | OpenAPI-format           | Voorbeeld              |
+| ---------- | ------------------------ | ---------------------- |
+| Datum      | `"format": "date"`       | `2026-10-08`           |
+| Datumtijd  | `"format": "date-time"`  | `2026-10-08T09:00:00Z` |
+| Tijd       | `"format": "time-local"` | `09:00:00`             |
+
+- Een datumtijd heeft een tijdzone-offset. Zonder offset is hij niet eenduidig.
+- Een API accepteert elke offset in een request en antwoordt bij voorkeur in
+  UTC.
+- Is het tijdstip niet relevant, gebruik dan `date` en niet `date-time`. Een
+  geboortedatum als `date-time` verschuift een dag zodra iemand hem in een
+  andere tijdzone leest.
+- Een epoch-getal voldoet niet, ook niet met uitleg in de omschrijving.
 
 ## HTTP methods
 
@@ -108,22 +173,32 @@ Voorbeeld van een geldig `info.servers` object:
 
 ## Status codes
 
-| Status code | Omschrijving | Wanneer te gebruiken                                                                                  |
-| ----------- | ------------ | ----------------------------------------------------------------------------------------------------- |
-| 200         | Ok           | GET, PUT, PATCH, DELETE, als de request succesvol is uitgevoerd                                       |
-| 201         | Created      | POST, als nieuwe resource direct wordt teruggegeven                                                   |
-| 202         | Accepted     | Als de request een asynchrone response triggert, bijvoorbeeld een POST die niet direct verwerkt wordt |
-| 400         | Bad request  | Als de request invalid is, meestal bij een POST, PUT of PATCH met een invalid body                    |
-| 404         | Not found    | Als de request URI niet gevonden wordt of een resource niet bestaat                                   |
+| Status code | Omschrijving                            | Wanneer te gebruiken                                                                                  |
+| ----------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| 200         | Ok                                      | GET, PUT, PATCH, DELETE, als de request succesvol is uitgevoerd                                       |
+| 201         | Created                                 | POST, als nieuwe resource direct wordt teruggegeven                                                   |
+| 202         | Accepted                                | Als de request een asynchrone response triggert, bijvoorbeeld een POST die niet direct verwerkt wordt |
+| 400         | Bad request                             | Verplicht bij ongeldige invoer: syntaxfouten, ontbrekende of ongeldige query parameters               |
+| 404         | Not found                               | Als de request URI niet gevonden wordt of een resource niet bestaat                                   |
+| 406 / 415   | Not acceptable / Unsupported media type | Verplicht bij een onverwachte of ontbrekende `Content-Type`                                           |
 
 ## URI's
 
-- Collecties in (Nederlands) meervoud. Best practice voor koppelwoorden in de
-  URI is `kebab-case`:
+Let op dat een URI twee schrijfwijzen combineert: het pad is `kebab-case`, de
+query keys zijn `lowerCamelCase`.
+
+- Collecties in (Nederlands) meervoud.
   - ✅**Goed**: `https://api/v1/open-source-projecten`
-- Child genest onder resource in (Nederlands) meervoud. Voorkeur voor
-  koppelwoorden in de URI is `kebab-case`:
+- Child genest onder resource in (Nederlands) meervoud.
   - ✅**Goed**: `https://api/v1/organisaties/372/open-source-projecten`
+- Padsegmenten bevatten alleen kleine letters, cijfers en koppeltekens.
+  - ✅**Goed**: `https://api/v1/open-source-projecten`
+  - ⛔️**Fout**: `https://api/v1/openSourceProjecten`
+  - Een padvariabele houdt zijn OAS-notatie, dus `{organisatieId}` mag, en het
+    laatste segment mag met een `_` beginnen voor een bewerking: `/_zoek`
+- Query keys zijn `lowerCamelCase` en beginnen niet met een cijfer.
+  - ✅**Goed**: `?aantalPerPagina=20`
+  - ⛔️**Fout**: `?aantal-per-pagina=20`
 - URI's mogen niet op een slash eindigen.
   - ✅**Goed**: `https://api/v1/open-source-projecten`
   - ⛔️**Fout**: `https://api/v1/open-source-projecten/`

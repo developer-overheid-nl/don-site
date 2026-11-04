@@ -65,7 +65,7 @@ Valideer de gebundelde OAS ook nog een keer voordat je code genereert:
 
 ```bash
 npx @developer-overheid-nl/don-checker@latest validate \
-  --ruleset adr-21 \
+  --standard adr \
   --input openapi.bundled.json
 ```
 
