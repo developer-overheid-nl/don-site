@@ -14,7 +14,7 @@ voorkeur: het
 vraagt om een getoetst exitplan en raadt een generiek "cloud-tenzij"-beleid af,
 en het kabinet werkt aan een soevereine overheidscloud. Deze richtlijn is de
 uitwerking voor ontwikkelaars van NeRDS-richtlijn 5,
-[Gebruik cloud verantwoord en blijf wendbaar](https://nederlandsedigitaledienst.github.io/NeRDS/richtlijnen/cloud/).
+[Gebruik cloud verantwoord en blijf wendbaar](https://nerds.digitaledienst.overheid.nl/richtlijnen/cloud/).
 
 ## Rationale: Waarom cloud-native softwareontwikkeling?
 
@@ -150,7 +150,7 @@ Geen bekend.
   Kamerbrief van 1 juli 2026
 - [Eisen aan gemeentelijke Cloudvoorzieningen](https://vng.nl/nieuws/nieuwe-handreiking-helpt-bij-inkoop-clouddiensten),
   handreiking van de VNG
-- [NeRDS-richtlijn 5: Gebruik cloud verantwoord en blijf wendbaar](https://nederlandsedigitaledienst.github.io/NeRDS/richtlijnen/cloud/)
+- [NeRDS-richtlijn 5: Gebruik cloud verantwoord en blijf wendbaar](https://nerds.digitaledienst.overheid.nl/richtlijnen/cloud/)
 
 ### Standaarden
 

@@ -18,7 +18,7 @@ Bij het bevorderen van adoptie van standaarden is het van groot belang dat de
 softe kant op orde is. De keuze om een standaard te implementeren heeft een
 grotere impact als een bestuurder die maakt, dan één individuele developer. Zelf
 doe ik mee aan de werkgroep
-["Adoptie van standaarden"](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/794e40b9-9b98-494c-9242-6380409088e5/werkgroep-adoptie-standaarden)
+["Adoptie van standaarden"](https://federatief.datastelsel.nl/kennisbank/standaarden/)
 binnen het
 [Federatief Datastelsel](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel)
 (FDS), om te analyseren welke activiteiten nuttig zijn om adoptie te bevorderen.
@@ -168,9 +168,9 @@ Deze vraagstukken worden dan bij uitstek hier in de kennisbank op
 voor
 [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/)
 zijn er
-[concrete codevoorbeelden](https://developer.overheid.nl/kennisbank/data/standaarden/logboek-dataverwerkingen/implementaties/jakarta)
+[concrete codevoorbeelden](/kennisbank/data/standaarden/logboek-dataverwerkingen/implementaties/java-jakarta)
 en links naar
-[referentie-implementaties](https://developer.overheid.nl/kennisbank/data/standaarden/logboek-dataverwerkingen/implementaties/go)
+[referentie-implementaties](/kennisbank/data/standaarden/logboek-dataverwerkingen/implementaties/go)
 die inspiratie kunnen bieden aan de doeners.
 
 Om te checken of er wordt voldaan aan een standaard kunnen validators worden
