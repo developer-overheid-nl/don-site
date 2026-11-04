@@ -11,8 +11,8 @@ tags:
 
 Deze tool is enkel bedoeld om je op weg te helpen met het API design, inclusief
 herbruikbare componenten en best practices van de
-[API Design Rules](../standaarden/api-design-rules). Eventuele ontbrekende of foutieve
-gegevens dienen handmatig toegevoegd of gewijzigd te worden.
+[API Design Rules](../standaarden/api-design-rules). Eventuele ontbrekende of
+foutieve gegevens dienen handmatig toegevoegd of gewijzigd te worden.
 
 :::
 
@@ -60,12 +60,12 @@ staan, leveren een foutmelding op. Hieronder een overzicht:
 
 ## `ResourceObject`
 
-| Property     | Type               | Verplicht | Omschrijving                                                                                       |
-| ------------ | ------------------ | --------- | -------------------------------------------------------------------------------------------------- |
-| **name**     | `string`           | Ja        | Naam (enkelvoud) van de resource. Juiste casing wordt automatisch gegenereerd.                     |
-| **plural**   | `string`           | Ja        | Naam (meervoud) van de resource. Juiste casing wordt automatisch gegenereerd.                      |
-| **readonly** | `boolean`          | Nee       | Indien `true` worden alleen `GET` methods gegenereerd, anders ook `PUT`, `POST` en `DELETE`.       |
-| **filters**  | `string[]`         | Nee       | Filters op de collectie. Zie [Filters](#filters).                                                  |
+| Property     | Type               | Verplicht | Omschrijving                                                                                         |
+| ------------ | ------------------ | --------- | ---------------------------------------------------------------------------------------------------- |
+| **name**     | `string`           | Ja        | Naam (enkelvoud) van de resource. Juiste casing wordt automatisch gegenereerd.                       |
+| **plural**   | `string`           | Ja        | Naam (meervoud) van de resource. Juiste casing wordt automatisch gegenereerd.                        |
+| **readonly** | `boolean`          | Nee       | Indien `true` worden alleen `GET` methods gegenereerd, anders ook `PUT`, `POST` en `DELETE`.         |
+| **filters**  | `string[]`         | Nee       | Filters op de collectie. Zie [Filters](#filters).                                                    |
 | **schema**   | `object`, `string` | Nee       | JSON Schema van de resource, inline of als URL. Zie [Eigen schema](#eigen-schema). Niet bij OAS 3.0. |
 
 ### Filters
