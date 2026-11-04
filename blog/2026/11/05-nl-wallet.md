@@ -248,7 +248,7 @@ Achter deze vier stappen zitten drie losse flows. De activatie doe je één keer
 als je de app installeert. Daarna gebruik je de wallet zo vaak als je wilt,
 zonder opnieuw met DigiD in te loggen of je PID op te halen.
 
-### **Eenmalig: wallet activeren**
+### Eenmalig: wallet activeren
 
 ```mermaid
 sequenceDiagram
@@ -269,7 +269,7 @@ en
 
 <br/>
 
-### **Kaartje ophalen: eenmalig per kaartje (issuing)**
+### Kaartje ophalen: eenmalig per kaartje (issuing)
 
 ```mermaid
 sequenceDiagram
@@ -304,7 +304,7 @@ presenteren als nodig is.
 
 <br/>
 
-### **Bij elk gebruik: presenteren en verifiëren (verifying)**
+### Bij elk gebruik: presenteren en verifiëren (verifying)
 
 ```mermaid
 sequenceDiagram
