@@ -42,16 +42,8 @@ URL moet nog ingevoerd worden. Voor deze tutorial gaan we het endpoint op
 `https://api.bieren.nepdomein` draaien. Omdat de validator valt over het
 versienummer en we bezig zijn met versie 1.0 van de API, plakken we `/v1`
 erachter. De waarde van de server `url` wordt dus:
-`https://api.bieren.nepdomein/v1`. Zodra je dit hebt aangepast, zijn de fout en
-de waarschuwing `nlgov:servers-use-https` over de server URL verdwenen.
-
-:::note Waarschuwing over OAS 3.1
-
-De checker meldt nu nog de waarschuwing `oas3_1-warning`, dat OAS 3.1 niet op de
-"pas toe of leg uit" lijst zou staan. Deze waarschuwing mag je negeren: OAS 3.1
-is de standaard.
-
-:::
+`https://api.bieren.nepdomein/v1`. Zodra je dit hebt aangepast, meldt de checker
+geen fouten meer.
 
 <details>
   <summary>De spec zou er op dit moment zo uit moeten zien</summary>

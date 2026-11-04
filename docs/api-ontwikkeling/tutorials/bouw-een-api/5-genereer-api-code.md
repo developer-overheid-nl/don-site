@@ -54,12 +54,17 @@ afhankelijkheden.
 Dit doen we met [Redocly CLI](https://redocly.com/docs/cli/):
 
 ```bash
-npx @redocly/cli bundle ./openapi.json --output openapi.bundled.json --ext json
+npx @redocly/cli bundle ./openapi.json \
+  --output openapi.bundled.json \
+  --ext json \
+  --component-names-strategy title
 ```
 
 Dit haalt externe referenties op en zet ze om naar interne `$ref` verwijzingen
-binnen het document. Gebruik `openapi.bundled.json` als input voor de volgende
-stappen.
+binnen het document. Met `--component-names-strategy title` neemt Redocly de
+naam van een opgehaald schema over uit de `title` in plaats van uit de
+bestandsnaam, zodat het component gewoon `ProblemDetails` heet. Gebruik
+`openapi.bundled.json` als input voor de volgende stappen.
 
 Valideer de gebundelde OAS ook nog een keer voordat je code genereert:
 
@@ -69,18 +74,17 @@ npx @developer-overheid-nl/don-checker@latest validate \
   --input openapi.bundled.json
 ```
 
-Naast de waarschuwing over OAS 3.1 uit de vorige stap krijg je nu ook de
-waarschuwing `nlgov:schema-camel-case` over `ProblemDetails.schema`. Die naam
-neemt Redocly over uit de bestandsnaam van het externe schema, dus ook deze mag
-je negeren.
-
 :::tip Volledig platslaan
 
 Sommige tools ondersteunen ook interne `$ref` verwijzingen niet. In dat geval
 kunnen we de `--dereferenced` flag toevoegen om alles volledig plat te slaan:
 
 ```bash
-npx @redocly/cli bundle ./openapi.json --output openapi.bundled.json --ext json --dereferenced
+npx @redocly/cli bundle ./openapi.json \
+  --output openapi.bundled.json \
+  --ext json \
+  --component-names-strategy title \
+  --dereferenced
 ```
 
 Het resultaat bevat dan geen enkele `$ref` meer; alle schemas zijn volledig
@@ -291,7 +295,7 @@ generated-api-nestjs/
 │   ├── brouwerij-collection.ts
 │   ├── brouwerij.ts
 │   ├── index.ts
-│   └── problem-details/
+│   └── problem-details.ts
 ├── package.json
 ├── tsconfig.json
 └── README.md
