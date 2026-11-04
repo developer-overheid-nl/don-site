@@ -11,7 +11,7 @@ draft: true
 # Hoe we WCAG beter willen maken
 
 [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) is al vele jaren dé standaard voor digitale toegankelijkheid. Wereldwijd is wetgeving die toegankelijkheid vereist vaak wetgeving die naar “WCAG” verwijst, al is dat technisch gezien vaak vrijwillig of indirect. Doordat WCAG veel gebruikt wordt, horen we veel over wat er beter kan. Vanuit [Logius](https://logius.nl) werk ik als co-editor actief mee aan [WCAG 3](https://www.w3.org/TR/wcag-3.0/), waarin we proberen WCAG beter te maken.
-
+![Een screenshot van de huidige working draft van de WCAG-standaard versie 3](./img/wcag3.png)
 <!-- truncate -->
 
 ## Wat is WCAG?
