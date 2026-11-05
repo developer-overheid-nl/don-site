@@ -8,8 +8,8 @@ tags: [adr, api]
 Deze regel schrijft voor dat versionering van API's via Semantic Versioning
 (`major.minor.patch` formaat) moet geschieden.
 
-- Regel:
-  [https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/semver](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/semver)
+- Regel: https://gitdocumentatie.logius.nl/publicatie/api/adr/#/core/semver
+- Linterregels: `nlgov:semver`
 
 ## Uitdrukken in OAS
 
@@ -18,7 +18,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 <Tabs>
   <TabItem value="yaml" label="YAML" default>
   ```yaml title="/openapi.yaml"
-  openapi: 3.0.0
+  openapi: 3.1.0
   info:
     title: API van developer.overheid.nl
     // highlight-start
@@ -30,7 +30,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
   <TabItem value="json" label="JSON" default>
   ```json title="/openapi.json"
   {
-    "openapi": "3.0.0",
+    "openapi": "3.1.0",
     "info": {
       // highlight-start
       "contact": {

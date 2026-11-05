@@ -9,9 +9,8 @@ Deze regel schrijft voor dat alleen de standaard HTTP methods `GET`, `POST`,
 `PATCH`, `PUT`, `DELETE`, `HEAD`, `TRACE` en `OPTIONS` toegestaan zijn.
 
 - Regel:
-  https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/http-methods
-- Linter test:
-  https://logius-standaarden.github.io/API-Design-Rules/#:~:text=%23%2Fcore%2Fhttp%2Dmethods
+  https://gitdocumentatie.logius.nl/publicatie/api/adr/#/core/http-methods
+- Linterregels: `nlgov:http-methods`
 
 ## Uitdrukken in OAS
 
@@ -20,7 +19,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 <Tabs>
   <TabItem value="yaml" label="YAML">
   ```yaml title="/openapi.yaml"
-  openapi: 3.0.0
+  openapi: 3.1.0
   paths:
     /rijksmonumenten:
       get: # lijst van rijksmonumenten ophalen
@@ -41,7 +40,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
   <TabItem value="json" label="JSON">
   ```json title="/openapi.json"
   {
-    "openapi": "3.0.0",
+    "openapi": "3.1.0",
     "paths": {
       "/rijksmonumenten": {
         "get": {}, // lijst van rijksmonumenten ophalen

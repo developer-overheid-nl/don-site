@@ -290,6 +290,12 @@ const config: Config & {
           position: "left",
           target: "_self",
         },
+        {
+          to: "https://schemas.developer.overheid.nl",
+          label: "Schema's",
+          position: "left",
+          target: "_self",
+        },
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://data.overheid.nl",
