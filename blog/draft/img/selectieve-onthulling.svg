@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 497" role="img" aria-labelledby="so-title so-desc">
+  <title id="so-title">Selectieve gegevensdeling met gesalte hashes</title>
+  <desc id="so-desc">De wallet stuurt de ontvanger één pakket met drie onderdelen: de attestatie, die alleen gesalte hashes bevat en getekend is door de uitgever; de onthulling van de geboortedatum met salt en waarde; en een handtekening van de wallet over de hash van de ontvanger. De ontvanger hasht de onthulling, vindt de hash terug in de attestatie en controleert beide handtekeningen. De andere attributen blijven verborgen.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#01689b"/>
+    </marker>
+  </defs>
+
+  <g font-family="RijksoverheidSansWebText, 'Segoe UI', Arial, sans-serif">
+    <rect width="800" height="497" rx="16" fill="#eef7fb"/>
+
+    <text x="40" y="52" font-size="22" font-weight="700" fill="#0f172a">Selectieve gegevensdeling</text>
+    <text x="40" y="78" font-size="14" fill="#475569">De wallet stuurt één pakket: de attestatie, de onthulling en een eigen handtekening.</text>
+
+    <!-- Pakket -->
+    <rect x="40" y="100" width="300" height="372" rx="14" fill="#ddeff8" stroke="#8fcae7" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="54" y="123" font-size="13" font-weight="700" fill="#01496d">Presentatie</text>
+
+    <!-- 1. Attestatie -->
+    <rect x="54" y="135" width="272" height="160" rx="10" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <path d="M64,135 h252 a10,10 0 0 1 10,10 v16 h-272 v-16 a10,10 0 0 1 10,-10 z" fill="#01689b"/>
+    <text x="66" y="153" font-size="12" font-weight="700" fill="#ffffff">1. Attestatie (PID)</text>
+
+    <g font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="12">
+      <rect x="66" y="171" width="150" height="20" rx="4" fill="#f1f5f9"/>
+      <text x="76" y="185" fill="#94a3b8">a3f9…41d0</text>
+      <rect x="66" y="195" width="150" height="20" rx="4" fill="#ddeff8" stroke="#01689b" stroke-width="1.5"/>
+      <text x="76" y="209" font-weight="700" fill="#01496d">7c21…e9b5</text>
+      <rect x="66" y="219" width="150" height="20" rx="4" fill="#f1f5f9"/>
+      <text x="76" y="233" fill="#94a3b8">e04b…c732</text>
+      <rect x="66" y="243" width="150" height="20" rx="4" fill="#f1f5f9"/>
+      <text x="76" y="257" fill="#94a3b8">19de…08af</text>
+    </g>
+    <rect x="66" y="267" width="150" height="20" rx="4" fill="#f1f5f9"/>
+    <text x="76" y="281" font-size="11" fill="#334155">sleutel van de wallet</text>
+
+    <circle cx="271" cy="208" r="22" fill="#ddeff8" stroke="#01689b" stroke-width="2"/>
+    <g transform="translate(259,196)">
+        <path d="M5.2,15.2 L15.2,5.2 L18.8,8.8 L8.8,18.8 Z" fill="#01689b"/>
+        <path d="M15.9,4.5 L18.2,2.2 L21.8,5.8 L19.5,8.1 Z" fill="#01496d"/>
+        <path d="M3,21 L5.2,15.2 L8.8,18.8 Z" fill="#8fcae7"/>
+        <path d="M3,21 L3.9,18.6 L5.4,20.1 Z" fill="#01496d"/>
+        <rect x="12" y="20.2" width="9" height="1.8" rx="0.9" fill="#01689b"/>
+    </g>
+    <text x="271" y="248" font-size="11" fill="#334155" text-anchor="middle">Handtekening</text>
+    <text x="271" y="262" font-size="11" fill="#334155" text-anchor="middle">uitgever</text>
+
+    <!-- 2. Onthulling -->
+    <rect x="54" y="305" width="272" height="82" rx="10" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <text x="66" y="326" font-size="12" font-weight="700" fill="#1e293b">2. Onthulling</text>
+    <text x="66" y="349" font-size="11" fill="#64748b">salt</text>
+    <text x="66" y="372" font-size="11" fill="#64748b">waarde</text>
+    <g font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="12">
+      <rect x="120" y="335" width="194" height="20" rx="4" fill="#ddeff8"/>
+      <text x="130" y="349" font-weight="700" fill="#01496d">8kQz3xP1…</text>
+      <rect x="120" y="358" width="194" height="20" rx="4" fill="#ddeff8"/>
+      <text x="130" y="372" font-weight="700" fill="#01496d">1990-03-12</text>
+    </g>
+
+    <!-- 3. Handtekening wallet -->
+    <rect x="54" y="397" width="272" height="60" rx="10" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <text x="66" y="419" font-size="12" font-weight="700" fill="#1e293b">3. Handtekening wallet</text>
+    <text x="66" y="441" font-size="11" fill="#475569">over de hash van de ontvanger</text>
+    <circle cx="295" cy="427" r="16" fill="#ddeff8" stroke="#01689b" stroke-width="2"/>
+    <g transform="translate(286,418) scale(0.75)">
+        <path d="M5.2,15.2 L15.2,5.2 L18.8,8.8 L8.8,18.8 Z" fill="#01689b"/>
+        <path d="M15.9,4.5 L18.2,2.2 L21.8,5.8 L19.5,8.1 Z" fill="#01496d"/>
+        <path d="M3,21 L5.2,15.2 L8.8,18.8 Z" fill="#8fcae7"/>
+        <path d="M3,21 L3.9,18.6 L5.4,20.1 Z" fill="#01496d"/>
+        <rect x="12" y="20.2" width="9" height="1.8" rx="0.9" fill="#01689b"/>
+    </g>
+
+    <!-- Wallet stuurt naar ontvanger -->
+    <line x1="344" y1="300" x2="446" y2="300" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+    <!-- Ontvanger -->
+    <rect x="450" y="100" width="310" height="372" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <text x="470" y="128" font-size="16" font-weight="700" fill="#1e293b">Ontvanger</text>
+
+    <text x="470" y="158" font-size="12" fill="#475569">1. Hash berekenen</text>
+    <text x="470" y="246" font-size="12" fill="#475569">2. Staat deze hash in de attestatie?</text>
+    <text x="470" y="306" font-size="12" fill="#475569">3. Handtekening uitgever geldig?</text>
+    <text x="470" y="366" font-size="12" fill="#475569">4. Handtekening wallet geldig?</text>
+
+    <g font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="12">
+      <rect x="470" y="166" width="270" height="26" rx="4" fill="#f1f5f9"/>
+      <text x="480" y="183" fill="#1e293b">hash(salt + waarde)</text>
+      <text x="480" y="216" font-weight="700" fill="#01496d">= 7c21…e9b5</text>
+      <rect x="470" y="254" width="270" height="26" rx="4" fill="#ddeff8" stroke="#01689b" stroke-width="1.5"/>
+      <text x="480" y="271" font-weight="700" fill="#01496d">7c21…e9b5</text>
+    </g>
+    <rect x="470" y="314" width="270" height="26" rx="4" fill="#f1f5f9"/>
+    <text x="480" y="331" font-size="12" fill="#1e293b">Getekend door de overheid</text>
+    <rect x="470" y="374" width="270" height="26" rx="4" fill="#f1f5f9"/>
+    <text x="480" y="391" font-size="12" fill="#1e293b">Klopt met sleutel en hash</text>
+
+    <g fill="#39870c">
+      <circle cx="722" cy="267" r="7"/>
+      <circle cx="722" cy="327" r="7"/>
+      <circle cx="722" cy="387" r="7"/>
+    </g>
+    <g fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M719,267 l2,2 l4,-5"/>
+      <path d="M719,327 l2,2 l4,-5"/>
+      <path d="M719,387 l2,2 l4,-5"/>
+    </g>
+
+    <text x="470" y="428" font-size="11" fill="#475569">De andere attributen blijven verborgen.</text>
+    <text x="470" y="446" font-size="11" fill="#475569">Een gekopieerd pakket werkt niet: de hash</text>
+    <text x="470" y="462" font-size="11" fill="#475569">is voor elk verzoek nieuw.</text>
+  </g>
+</svg>
