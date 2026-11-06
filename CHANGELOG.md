@@ -1,5 +1,15 @@
 # @developer-overheid-nl/website
 
+## 2.2.0
+
+### Minor Changes
+
+- 9d7bd9f: Add blogpost about nl-wallet app with the team behind it
+
+### Patch Changes
+
+- 4d7b6ae: Add diff syntax highlighting to code blocks, used in the OpenLint blogpost
+
 ## 2.1.0
 
 ### Minor Changes
