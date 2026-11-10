@@ -376,6 +376,18 @@ html {
   color: var(--rhc-color-core-500);
 }
 
+/* Hele kaart klikbaar, zoals card-as-link voor v17: de titellink strekt zich
+   uit over de kaart */
+.rhc-card__heading .rhc-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.rhc-card:has(.rhc-card__heading .rhc-card__link):hover {
+  background-color: var(--rhc-card-hover-background-color);
+}
+
 /* overrides docusaurus css */
 .table-of-contents {
   font-size: 1rem;
