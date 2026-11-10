@@ -272,16 +272,21 @@ html {
 
 /* Rijkshuistijl community overrides */
 .rhc-theme {
-  --rhc-font-family-primary: RijksoverheidSansWebText, Arial, sans-serif;
+  --rhc-text-font-family-sans: RijksoverheidSansWebText, Arial, sans-serif;
   --rhc-link-list-card-padding-block-start: 1rem;
   --rhc-link-list-card-padding-block-end: 1rem;
   --rhc-link-list-card-padding-inline-start: 1rem;
   --rhc-link-list-card-padding-inline-end: 1rem;
-  --utrecht-blockquote-content-font-family: RijksoverheidSerifWeb, serif;
-  --utrecht-blockquote-caption-font-family: RijksoverheidSansWebText, serif;
-  --rhc-card-as-link-border-color: var(--don-grijs-300);
-  --rhc-card-as-link-link-color: var(--don-donkerblauw-500);
-  --nl-link-visited-color: var(--don-donkerblauw-500);
+  --utrecht-blockquote-color: var(--don-grijs-900);
+  --utrecht-blockquote-content-color: var(--don-grijs-900);
+  --utrecht-blockquote-font-size: 1.5rem;
+  --utrecht-blockquote-content-font-size: 1.5rem;
+  --utrecht-blockquote-caption-color: var(--don-grijs-700);
+  --utrecht-blockquote-caption-font-size: 1.25rem;
+  --utrecht-blockquote-row-gap: 0;
+  --rhc-card-border-color: var(--don-grijs-300);
+  --rhc-card-link-color: var(--don-donkerblauw-500);
+  --utrecht-link-visited-color: var(--don-donkerblauw-500);
   --nl-heading-level-1-font-size: var(--ifm-h1-font-size);
   --nl-heading-level-2-font-size: var(--ifm-h2-font-size);
   --nl-heading-level-3-font-size: var(--ifm-h3-font-size);
@@ -300,9 +305,6 @@ html {
   --nl-heading-level-4-font-family: var(--ifm-heading-font-family);
   --nl-heading-level-5-font-family: var(--ifm-heading-font-family);
   --nl-heading-level-6-font-family: var(--ifm-heading-font-family);
-  --utrecht-link-visited-color: var(
-    --nl-link-visited-color
-  ); /* rhc heeft er nog wat utrecht in zitten */
 }
 
 .ro-header {
@@ -365,7 +367,13 @@ html {
 
 /* fix for aligning rhc card footers */
 .rhc-card {
+  --rhc-card-border-radius: 5px;
   justify-content: space-between;
+}
+
+/* Kaarttitel in lintblauw; de link in de footer houdt de linkkleur */
+.rhc-card__heading .rhc-card__link {
+  color: var(--rhc-color-core-500);
 }
 
 /* overrides docusaurus css */
@@ -589,26 +597,33 @@ html {
 }
 
 .rhc-blockquote {
+  --utrecht-document-font-family: RijksoverheidSerifWeb, serif;
+  line-height: 150%;
   padding: 2rem !important;
 }
 
+/* Vervangt de pink-background-variation die rhc sinds v17 niet meer heeft */
+.don-blockquote--pink {
+  background-color: var(--rhc-color-roze-300);
+  border-end-start-radius: 3rem;
+}
+
 /* Prevent border from showing within rhc blockquote */
-.rhc-blockquote--pink-background-variation blockquote {
+.don-blockquote--pink blockquote {
   border-left: 0;
 }
 
 /* Set bold font in quote name */
 .rhc-blockquote figcaption {
+  font-family: RijksoverheidSansWebText, sans-serif;
   font-weight: 600;
+  line-height: 150%;
+  padding-block-start: 0.75rem;
 }
 
-.rhc-blockquote__content p {
+.rhc-blockquote p {
   margin-bottom: 0 !important;
   font-size: 1.25rem;
-}
-
-.rhc-blockquote__content p &:last-child {
-  background-color: red;
 }
 
 /* Prevent some unordered-list-items from having a margin */

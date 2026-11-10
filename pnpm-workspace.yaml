@@ -45,8 +45,6 @@ overrides:
   websocket-driver: 0.7.5
   ws@>=7.0.0 <8.0.0: 7.5.11
   ws@>=8.0.0 <9.0.0: 8.21.3
-patchedDependencies:
-  "@rijkshuisstijl-community/components-react@1.1.0": patches/@rijkshuisstijl-community__components-react@1.1.0.patch
 ignoredBuiltDependencies:
   - core-js
   - core-js-pure
