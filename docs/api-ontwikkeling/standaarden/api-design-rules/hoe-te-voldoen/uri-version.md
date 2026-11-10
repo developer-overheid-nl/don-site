@@ -11,10 +11,8 @@ gespecificeerd worden op `path` niveau; dit zou impliceren dat er binnen
 hetzelfde endpoint meerdere (major versies van) API's beschikbaar zijn, terwijl
 elke API vergezeld moet worden van een eigen `/openapi.json`.
 
-- Regel:
-  https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/uri-version
-- Linter test:
-  https://logius-standaarden.github.io/API-Design-Rules/#:~:text=%23%2Fcore%2Furi%2Dversion
+- Regel: https://gitdocumentatie.logius.nl/publicatie/api/adr/#/core/uri-version
+- Linterregels: `nlgov:include-major-version-in-uri`
 
 ## Uitdrukken in OAS
 
@@ -23,7 +21,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 <Tabs>
   <TabItem value="yaml" label="YAML" default>
   ```yaml title="/openapi.yaml"
-  openapi: 3.0.0
+  openapi: 3.1.0
   servers:
     // highlight-start
     - url: "https://api.developer.overheid.nl/v1" # goed
@@ -39,7 +37,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
   <TabItem value="json" label="JSON" default>
   ```json title="/openapi.json"
   {
-  "openapi": "3.0.0",
+  "openapi": "3.1.0",
   "servers": [
     // highlight-start
     {

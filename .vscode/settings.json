@@ -2,7 +2,7 @@
     "editor.formatOnSave": true,
     "[markdown]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "[mdx]": {
         "editor.formatOnSave": true,

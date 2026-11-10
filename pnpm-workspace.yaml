@@ -7,6 +7,7 @@ overrides:
   "@babel/core": 7.29.7
   "@babel/plugin-transform-modules-systemjs": 7.29.8
   "@puppeteer/browsers": 3.2.0
+  "@ungap/structured-clone@1.3.0": 1.3.1
   ajv@<7.0.0: 6.14.0
   ajv@>=7.0.0 <9.0.0: 8.20.0
   basic-ftp: 5.3.1
@@ -25,7 +26,7 @@ overrides:
   lodash: 4.18.1
   lodash-es: 4.18.1
   mdast-util-to-hast: 13.2.1
-  mermaid: 11.16.1
+  mermaid: 12.3.0 # Issue https://github.com/developer-overheid-nl/don-site/issues/958
   minimatch@>=3.0.0 <4.0.0: 3.1.5
   nanoid@>=3.0.0 <4.0.0: 3.3.18
   path-to-regexp@<0.2.0: 0.1.13
