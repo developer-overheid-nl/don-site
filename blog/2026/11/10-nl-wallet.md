@@ -124,7 +124,7 @@ ondertekening hebben. In plaats van een ingescand energiecontract om je adres te
 bewijzen, krijg je cryptografisch gegarandeerde, betrouwbare gegevens.
 
 <Blockquote
-  attribution="- Jacob Middag, developer"
+  attribution="- Jacob Middag, software engineer"
   variation="pink-background"
 >
 "Voor die derde partij is het fijn dat ze een veel betrouwbaardere ondertekening
