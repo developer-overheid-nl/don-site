@@ -52,13 +52,31 @@ En hier gaat het verhaal weer verder.
 Lorem ipsum.
 ```
 
-- `description` is **verplicht** — wordt gebruikt in de RSS-feed en als
+- `description` is **verplicht**. Die wordt gebruikt in de RSS-feed en als
   meta-beschrijving. Gebruik bij voorkeur de eerste zin van je blogpost.
-- `image` is optioneel maar aanbevolen — wordt gebruikt als preview bij het
-  delen op sociale media (Open Graph). Plaats de afbeelding in dezelfde map of
-  een `img/`-submap.
+- `image` is optioneel maar aanbevolen. De afbeelding wordt gebruikt als preview
+  bij het delen op sociale media (Open Graph). Plaats de afbeelding in dezelfde
+  map of een `img/`-submap.
 
 </details>
+
+## Citaten
+
+Een citaat, bijvoorbeeld uit een interview, zet je in een `Blockquote`. Wil je
+het citaat uitlichten met een roze achtergrond, geef het dan de class
+`don-blockquote--pink`.
+
+```mdx
+import { Blockquote } from "@rijkshuisstijl-community/components-react";
+
+<Blockquote attribution="Timen Olthof" className="don-blockquote--pink">
+  De 5-lagen architectuur betaalt zich uit in dit project.
+</Blockquote>
+```
+
+- De roze kleur komt uit het design token `--rhc-color-roze-300`. Zet geen
+  hexwaarde of `style` in je blogpost.
+- Zet in `attribution` alleen de naam, zonder streepje ervoor.
 
 ## Voorwaarden
 

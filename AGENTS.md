@@ -98,6 +98,21 @@ Regels die de build afdwingt:
 - Voeg een tag alleen toe aan `tags.yml` als hij herbruikbaar is. Eenmalige tags
   horen er niet in.
 
+### Componenten in content
+
+Zie de sectie Componenten in `/contributing/kennisbank-artikel` en Citaten in
+`/contributing/gastblog-schrijven`. De regels:
+
+- Geef elke `Card` een `headingLevel` van één niveau dieper dan de kop erboven:
+  `{3}` onder een `##`, `{4}` onder een `###`. Zonder prop wordt het een H2, wat
+  onder een `##` de kopstructuur breekt.
+- Een uitgelicht roze citaat is `<Blockquote className="don-blockquote--pink">`.
+- Kleuren in CSS komen uit tokens (`--rhc-color-*` uit de design tokens of
+  `--don-*` uit `src/css/custom.css`), niet uit hexwaarden. Zet geen kleur in
+  `style` binnen content.
+- Gebruik `.mdx` voor een artikel met componenten. Prettier voegt in een
+  `.md`-bestand opeenvolgende `import`-regels samen tot één alinea.
+
 ## Blogposts
 
 Zie `/contributing/gastblog-schrijven`. Posts staan in

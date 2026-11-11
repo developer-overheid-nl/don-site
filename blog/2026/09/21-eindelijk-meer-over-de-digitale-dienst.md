@@ -79,7 +79,7 @@ de dienst aan gewerkt wordt. Dit zijn:
 
 <Blockquote
   attribution="~ Kees Keulemans, kwartiermakersteam NLDD"
-  variation="pink-background"
+  className="don-blockquote--pink"
 >
 De Digitale Dienst geeft elke drie weken een demo
 voor de staatssecretaris. Het credo geldt: bring the demo not the memo!

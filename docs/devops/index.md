@@ -31,6 +31,7 @@ diensten risico op storingen en beveiligingslekken.
 <Card
   description="De Haven standaard helpt je bij het efficiënt en secure gebruiken van Kubernetes. Het Haven+ project levert je componenten voor monitoring, authenticatie en certificaatbeheer."
   heading="Kubernetes met Haven(+)"
+  headingLevel={3}
   href="./standaarden/haven"
   linkLabel="Naar hoofdstuk over Haven"
 />
