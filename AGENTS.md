@@ -65,6 +65,7 @@ Het veld `content_type` bepaalt in welke overzichten een artikel verschijnt.
 | `tutorial`     | Stapsgewijze handleidingen                          |
 | `architectuur` | Patronen, concepten, ontwerpbeslissingen            |
 | `richtlijn`    | Leidraad content (principes en richtlijnen)         |
+| `community`    | Samenwerkingsverbanden, platforms en netwerken      |
 
 `content_type` staat los van de tags. Deze waarden mogen **nooit** als tag
 voorkomen.
@@ -76,9 +77,13 @@ Vier lagen, waarvan alleen de tweede verplicht is.
 **Laag 1, content type.** Geen tag, maar een apart frontmatter-veld. Zie
 hierboven.
 
-**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De
-zeven thema's zijn `informatiebeveiliging`, `interoperabiliteit`,
+**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De acht
+thema's zijn `ai`, `informatiebeveiliging`, `interoperabiliteit`,
 `toegankelijkheid`, `privacy`, `infrastructuur`, `front-end` en `open-source`.
+
+De build dwingt deze laag niet af, en de meeste bestaande artikelen voeren geen
+thema-tag. Neem een bestaand artikel dus niet als voorbeeld voor je tags; houd
+je aan de regel hierboven.
 
 **Laag 3, onderwerp-tags.** Optioneel, maximaal 5. Specifieke technologieën,
 standaarden of concepten, bijvoorbeeld `oauth`, `kubernetes`, `dcat`, `wcag`.
@@ -196,4 +201,7 @@ kan.
 Voeg geen dependencies toe zonder dat te overleggen. Let er daarbij op dat
 `pnpm` peer dependencies standaard automatisch installeert: dat een build slaagt
 zonder een declaratie betekent niet dat het package overbodig is. Toets dat met
-`pnpm install --config.auto-install-peers=false`.
+`pnpm install --config.auto-install-peers=false`. Die install haalt de
+automatisch geïnstalleerde peers uit `pnpm-lock.yaml`, en een gewone
+`pnpm install` zet ze niet terug. Herstel de lockfile daarna met
+`git checkout -- pnpm-lock.yaml` en draai `pnpm install` opnieuw.

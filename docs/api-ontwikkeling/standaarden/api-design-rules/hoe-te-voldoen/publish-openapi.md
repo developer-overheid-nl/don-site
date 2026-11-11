@@ -13,7 +13,8 @@ gegenereerd. Dit alles zorgt ervoor dat een API inzichtelijk is, maar ook
 makkelijk te gebruiken voor eindgebruikers
 
 - Regel:
-  https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/publish-openapi
+  https://gitdocumentatie.logius.nl/publicatie/api/adr/#/core/publish-openapi
+- Linterregels: `oas3-schema`, `oas3-api-servers`, `path-params`
 
 ## Waarom moet dit bestandje publiekelijk beschikbaar zijn?
 

@@ -1,5 +1,45 @@
 # @developer-overheid-nl/website
 
+## 2.1.0
+
+### Minor Changes
+
+- 3dbf696: Add an AI theme to the kennisbank covering AGENTS.md, the Model Context
+  Protocol, llms.txt, skills and plugins, and three AI communities. The theme is
+  called "Artificiële Intelligentie (AI)" in the menu, the sidebar and on the
+  homepage, where its tile links to every page in the theme and reuses the icon of
+  the AI button on articles.
+- f2a4c80: Add events page listing upcoming and past events
+- 988df91: Add article about tweakers developers summit 2026
+- 9e7d8b4: Publish blog post about switching all developer.overheid.nl tooling from
+  Spectral to OpenLint
+- db51807: Add REUSE-standard to knowledge base
+- a180b89: Update the API Design Rules pages to version 2.2 of the standard. Add how-to
+  pages for the seven rules the linter checks that are new in 2.2: kebab-case path
+  segments, lowerCamelCase query keys, the three date and time rules, problem
+  details and invalid input. Extend the cheat sheet with sections on error
+  handling and on date and time. Link to the specification without a version
+  number, so every link opens the current version of the rule. Describe OAS 3.1 as
+  the standard throughout the knowledge base and replace Spectral with OpenLint.
+  Update the bouw-een-api tutorial to the current OAS Generator and DON Checker.
+
+### Patch Changes
+
+- 5568cf6: Document `community` as a content type for kennisbank articles. The site has
+  supported it all along and fourteen articles use it, but neither the contributor
+  guide nor AGENTS.md listed it, and both said the five documented values were the
+  only ones allowed.
+- 981cafb: Update the OAS Generator article with OAS 3.1 as default, filters, resource
+  schemas, collection responses, strict input validation and the command line
+- f40a28a: Add swizzle check that detects upstream changes to swizzled Docusaurus
+  components and merges them on upgrade; add Prettier as a devDependency and
+  remove an unused stylesheet import from PaginatorNavLink
+- 4eb0002: Update docusaurus-theme-search-typesense to 0.27.0 and keep query strings in
+  internal search result URLs
+- dc940ec: Re-enable the link checker as a weekly check with a Slack report and fix broken links
+- 0cecbc6: Document in the contributing guidelines that every pull request needs a
+  changeset
+
 ## 2.0.0
 
 ### Major Changes
