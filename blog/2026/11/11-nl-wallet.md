@@ -1,6 +1,5 @@
 ---
 authors: [tom-ootes]
-draft: true
 tags:
   [
     wallet,
@@ -25,16 +24,15 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 # NL Wallet onder de motorkap: in gesprek met het team
 
-Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties[^ezk] bouwt een
-digitale identiteitswallet, werknaam: NL Wallet. Daarmee kun je in de toekomst
-inloggen bij overheidsorganisaties en bedrijven, gegevens delen zoals je diploma
-of rijbewijs en documenten elektronisch ondertekenen. Allemaal vanuit één app.
-Een interessant traject dat voortkomt uit een Europees kader (eIDAS) en volledig
+Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties bouwt een digitale
+identiteitswallet, werknaam: NL Wallet. Daarmee kun je in de toekomst inloggen
+bij overheidsorganisaties en bedrijven, gegevens delen zoals je diploma of
+rijbewijs en documenten elektronisch ondertekenen. Allemaal vanuit één app. Een
+interessant traject dat voortkomt uit een Europees kader (eIDAS) en volledig
 open source wordt ontwikkeld.
 
-[^ezk]:
-    De beleidsverantwoordelijkheid voor het dossier ligt sinds de start van dit
-    kabinet bij het ministerie van Economische Zaken (EZK).
+![Jacob Middag, Sietse Ringers en Tim Speelman van het NL Wallet-team](./img/team-nl-wallet.jpg)
+_Van links naar rechts: Jacob Middag, Sietse Ringers en Tim Speelman_
 
 <!-- truncate -->
 
@@ -68,8 +66,13 @@ Tim studeerde in Delft, eerst Industrieel Ontwerpen (bachelor) en daarna
 Computer Science (master). In die master specialiseerde hij zich in digitale
 identiteit. Zijn masterscriptie bracht hem in contact met RvIG, ICTU en de Kamer
 van Koophandel. Sinds september 2021 werkt hij als beleidsmedewerker bij het
-ministerie van Binnenlandse Zaken en Koninkrijksrelaties. In deze context is hij
-product owner van het NL Wallet-team, een traject dat in augustus 2022 startte.
+ministerie van Binnenlandse Zaken en Koninkrijksrelaties[^ezk]. In deze context
+is hij product owner van het NL Wallet-team, een traject dat in augustus 2022
+startte.
+
+[^ezk]:
+    De beleidsverantwoordelijkheid voor het dossier ligt sinds de start van dit
+    kabinet bij het ministerie van Economische Zaken (EZK).
 
 ### Sietse Ringers, architect en developer
 
@@ -87,8 +90,47 @@ projecten, totdat een oud-collega hem wees op een opdracht bij het NL
 Wallet-team. Zijn achtergrond met DigiD komt direct van pas in zijn huidige rol,
 met focus op de Rust-backend en DevOps voor testomgevingen.
 
-![Jacob Middag, Sietse Ringers en Tim Speelman van het NL Wallet-team](./img/team-nl-wallet.jpg)
-_Van links naar rechts: Jacob Middag, Sietse Ringers en Tim Speelman_
+## Eén Europese digitale wallet
+
+**Wat is de NL Wallet en waarom is het handig?**
+
+**Tim**: De NL Wallet is een Europese digitale identiteitswallet. Het Europese
+kader (de eIDAS-verordening) schrijft voor dat elke lidstaat ervoor moet zorgen
+dat burgers die dat willen een wallet kunnen gebruiken. Daarmee kun je inloggen
+bij overheidsdiensten en bedrijven die zijn aangesloten, gegevens delen zoals
+diploma's en straks je rijbewijs, en elektronisch ondertekenen. Dat allemaal
+vanuit één app, op een gestandaardiseerde manier die met veel toepassingen
+werkt.
+
+![Het woord eIDAS in een cirkel van gele sterren uit de Europese vlag, op een donkerblauwe kaart van Europa](./img/eidas_regulation.webp)
+
+### Geen rondslingerende PDF's meer
+
+Het belangrijkste voordeel is dat je als gebruiker de regie over je eigen
+gegevens voert. Het wordt ook eenvoudiger om informatie aan te leveren in
+bepaalde processen: je hoeft niet meer te werken met papier, pdf's of andere
+onveilige methoden.
+
+**Sietse**: Voor de burger is het uiteindelijk een app waar hij zijn
+identiteitsgegevens in verzamelt. Die worden lokaal opgeslagen op de telefoon
+zelf, niet op een server ergens. Daarna kun je ze vrijgeven aan derde partijen,
+online of fysiek in persoon. Je deelt alleen de gegevens die nodig zijn, niet
+meer, en dat gebeurt op een veilige en privacyvriendelijke manier. Voordat je
+iets deelt, laat de wallet zien om welke gegevens het gaat en vraagt om je
+toestemming.
+
+**Jacob**: En voor die derde partij is het fijn dat ze een veel betrouwbaardere
+ondertekening hebben. In plaats van een ingescand energiecontract om je adres te
+bewijzen, krijg je cryptografisch gegarandeerde, betrouwbare gegevens.
+
+<Blockquote
+  attribution="- Jacob Middag, software engineer"
+  variation="pink-background"
+>
+"Voor die derde partij is het fijn dat ze een veel betrouwbaardere ondertekening
+hebben. In plaats van een ingescand energiecontract om je adres te bewijzen,
+krijg je cryptografisch gegarandeerde, betrouwbare gegevens."
+</Blockquote>
 
 ## Decentrale opzet
 
@@ -120,8 +162,8 @@ graph LR
 
 ## De metafoor van de portemonnee
 
-De metafoor wallet duidt op de fysieke portemonnee: een herkenbaar concept. In
-je fysieke portemonnee bewaar je ook bijvoorbeeld:
+De metafoor wallet duidt op de fysieke portemonnee: een herkenbaar concept voor
+de gebruiker. In je fysieke portemonnee bewaar je ook bijvoorbeeld:
 
 - Je rijbewijs
 - Pasjes van verschillende lidmaatschappen
@@ -130,8 +172,8 @@ je fysieke portemonnee bewaar je ook bijvoorbeeld:
 De wallet doet in principe hetzelfde, maar dan digitaal: het is een digitale
 plek voor je persoonsgegevens en je gebruikt deze om te laten zien wie je bent,
 of dat je gemachtigd bent om iets te doen. Niet al deze kaartjes komen straks
-direct in de wallet; ze kunnen op termijn beschikbaar komen. Wie dat wil, kan
-bijvoorbeeld uiterlijk in 2029 zijn of haar rijbewijs aan de wallet toevoegen.
+direct in de wallet; sommige komen op termijn beschikbaar. Uiterlijk 2029 wordt
+het bijvoorbeeld mogelijk om je rijbewijs aan de wallet toe te voegen.
 
 Dit is ook de reden dat er binnen dit project zoveel aandacht wordt besteed aan
 security en privacy; het is een app met daarin gevoelige data.
@@ -143,14 +185,14 @@ Het gebruik van de app vindt plaats volgens de volgende stappen:
 ### 1. Wallet activeren (personaliseren)
 
 Na het downloaden van de app moet de wallet eenmalig worden geactiveerd. Eerst
-stelt de gebruiker een zes-cijferige code in daarna identificeert de gebruiker
+stelt de gebruiker een zes-cijferige code in, daarna identificeert de gebruiker
 zich op het hoogste betrouwbaarheidsniveau met DigiD. Daarna worden
 persoonsidentificatiegegevens (PID) uit de Basisregistratie Personen (BRP),
 zoals naam en geboortedatum, aan de wallet toegevoegd. Deze gegevens zijn nodig
 om de wallet te gebruiken.
 
 ![Stap 1: de gebruiker kiest een pincode, logt in met DigiD op niveau hoog en ontvangt de PID uit de BRP in de wallet](./img/stap-1-activeren.svg)
-_Schematische weergave door Claude Opus 5.5_
+_Vereenvoudigde schematische weergave door Claude Opus 5.5_
 
 ### 2. Kaartjes ophalen (issuing)
 
@@ -165,26 +207,30 @@ ondertekende attestatie naar de wallet. Die wordt lokaal op de telefoon
 opgeslagen.
 
 ![Stap 2: de wallet vraagt een kaartje aan bij een uitgever, zoals een onderwijsinstelling of de RDW, en slaat het ondertekende kaartje lokaal op](./img/stap-2-kaartjes-ophalen.svg)
-_Schematische weergave door Claude Opus 5.5_
+_Vereenvoudigde schematische weergave door Claude Opus 5.5_
 
 ### 3. Presenteren (verifying)
 
-Een ontvanger stuurt een verzoek: "bewijs dat je in het bezit van een rijbewijs
-bent." De wallet toont dit verzoek aan de gebruiker, die beslist om te delen of
-niet. Alleen de gevraagde attributen gaan de deur uit.
+Een ontvanger stuurt een verzoek: "bewijs dat je in het bezit bent van een
+geldig rijbewijs." De wallet toont dit verzoek aan de gebruiker, die beslist om
+te delen of niet. Alleen de gevraagde attributen gaan de deur uit.
 
 ![Stap 3: de ontvanger vraagt om een geldig rijbewijs; na toestemming deelt de wallet alleen dat gegeven, niet je naam, geboortedatum of adres](./img/stap-3-presenteren.svg)
-_Schematische weergave door Claude Opus 5.5_
+_Vereenvoudigde schematische weergave door Claude Opus 5.5_
 
-### 4. Verificatie
+### 4. Verificatie van het kaartje
 
 De ontvanger controleert de handtekening van de uitgever op de attestatie en
 valideert de gedeelde attributen. Helemaal zonder server gaat dat niet. Bij het
 presenteren (stap 3) ondertekent de wallet-backend, die de sleutels namens de
-gebruiker beheert, een bewijs dat de wallet het kaartje echt bezit (proof of
-possession). Zo ziet de dienstverlener dat het om de legitieme gebruiker gaat en
-niet om een gekopieerd kaartje. De backend krijgt daarbij alleen een hash te
-zien: hij ziet dat de gebruiker actief is, maar niet wat hij aan het doen is.
+gebruiker beheert, een bewijs dat de wallet het kaartje echt bezit (**proof of
+possession**). Zo ziet de dienstverlener dat het om de legitieme gebruiker gaat
+en niet om een gekopieerd kaartje. De backend krijgt daarbij alleen een hash te
+zien: hij ziet dat de gebruiker actief is, ook ziet hij welke sleutel de
+gebruiker gebruikt. Maar niet welke gegevens hij precies deelt, en ook niet met
+welke dienstverlener hij zaken doet.
+
+#### Privacyvriendelijk verifiëren met `Token Status Lists`
 
 Daarnaast kan de ontvanger, afhankelijk van de toepassing, nagaan of een kaartje
 nog geldig is. Dat gebeurt op een privacyvriendelijke manier via Token Status
@@ -194,15 +240,15 @@ het kaartje op, zodat de uitgever niet weet naar welk kaartje de ontvanger op
 zoek is.
 
 ![Stap 4: de ontvanger controleert de handtekening van de uitgever, haalt de statuslijst van de uitgever op en zoekt daarin zelf of het kaartje nog geldig is](./img/stap-4-verificatie.svg)
-_Schematische weergave door Claude Opus 5.5_
+_Vereenvoudigde schematische weergave door Claude Opus 5.5_
 
-### De workflow
+## De workflow
 
 Achter deze vier stappen zitten drie losse flows. De activatie doe je één keer,
 als je de app installeert. Daarna gebruik je de wallet zo vaak als je wilt,
 zonder opnieuw met DigiD in te loggen of je PID op te halen.
 
-#### **Eenmalig: wallet activeren**
+### Eenmalig: wallet activeren
 
 ```mermaid
 sequenceDiagram
@@ -223,7 +269,7 @@ en
 
 <br/>
 
-#### **Kaartje ophalen: eenmalig per kaartje (issuing)**
+### Kaartje ophalen: eenmalig per kaartje (issuing)
 
 ```mermaid
 sequenceDiagram
@@ -258,7 +304,7 @@ presenteren als nodig is.
 
 <br/>
 
-#### **Bij elk gebruik: presenteren en verifiëren (verifying)**
+### Bij elk gebruik: presenteren en verifiëren (verifying)
 
 ```mermaid
 sequenceDiagram
@@ -281,47 +327,6 @@ sequenceDiagram
 
 _Vereenvoudigde weergave. De volledige flow staat in de
 [NL Wallet-documentatie over disclosure](https://github.com/MinBZK/nl-wallet/blob/main/wallet_docs/architecture/use-cases/disclosure-with-openid4vp.md)._
-
-## Eén Europese digitale wallet
-
-**Wat is de NL Wallet en waarom is het handig?**
-
-**Tim**: De NL Wallet is een Europese digitale identiteitswallet. Het Europese
-kader (de eIDAS-verordening) schrijft voor dat elke lidstaat moet ervoor zorgen
-dat burgers die dat willen een wallet kunnen gebruiken. Daarmee kun je inloggen
-bij overheidsdiensten en bij bedrijven die zijn aangesloten, gegevens delen
-zoals diploma's en straks je rijbewijs, en elektronisch ondertekenen. Dat
-allemaal vanuit één app, op een gestandaardiseerde manier die met veel
-toepassingen werkt.
-
-![Het woord eIDAS in een cirkel van gele sterren uit de Europese vlag, op een donkerblauwe kaart van Europa](./img/eidas_regulation.webp)
-
-### Geen rondslingerende PDF's meer
-
-Het belangrijkste voordeel is dat je de regie over je eigen gegevens voert. Het
-wordt ook eenvoudiger om informatie aan te leveren in bepaalde processen: je
-hoeft niet meer te werken met papier, pdf's of andere onveilige methoden.
-
-**Sietse**: Voor de burger is het uiteindelijk een app waar hij zijn
-identiteitsgegevens in verzamelt. Die worden lokaal opgeslagen op de telefoon
-zelf, niet op een server ergens. Daarna kun je ze vrijgeven aan derde partijen,
-online of fysiek in persoon. Je deelt alleen de gegevens die nodig zijn, niet
-meer, en dat gebeurt op een veilige en privacyvriendelijke manier. Voordat je
-iets deelt, laat de wallet zien om welke gegevens het gaat en vraagt om je
-toestemming.
-
-**Jacob**: En voor die derde partij is het fijn dat ze een veel betrouwbaardere
-ondertekening hebben. In plaats van een ingescand energiecontract om je adres te
-bewijzen, krijg je cryptografisch gegarandeerde, betrouwbare gegevens.
-
-<Blockquote
-  attribution="- Jacob Middag, developer"
-  className="don-blockquote--pink"
->
-"Voor die derde partij is het fijn dat ze een veel betrouwbaardere ondertekening
-hebben. In plaats van een ingescand energiecontract om je adres te bewijzen,
-krijg je cryptografisch gegarandeerde, betrouwbare gegevens."
-</Blockquote>
 
 ## Selectieve gegevensdeling
 
@@ -454,10 +459,10 @@ wallet, maar een uitgever van kaartjes moet dit ook goed aanpakken.
 iets in waardoor dit herleidbaar wordt?"
 </Blockquote>
 
-## Android en iOS: op dit moment nog een bewuste afhankelijkheid
+## Google-account en Apple-ID: op dit moment nog een afhankelijkheid
 
 **Digitale soevereiniteit is een hot topic. Kun je de NL Wallet ook draaien op
-non-Google Android, zoals GrapheneOS of LineageOS?**
+Linux of non-Google Android, zoals GrapheneOS of LineageOS?**
 
 ### Voor nu vast aan iOS en Android
 
@@ -490,12 +495,11 @@ enclave zelf, zodat je er zelfs niet van uit een gecompromitteerd
 besturingssysteem bij kan.
 
 :::
-
 ![De Apple M1-chip met losgehaalde heatspreader: links het metalen kapje met het Apple-logo, rechts de chip met de siliciumdie en het geheugen](./img/apple-m1.jpg)
 _De Secure Enclave is een extra beschermd deel van Apple-processors, en bestaat
 sinds de A7-chip. Op de foto: de Apple M1 met losgehaalde heatspreader, die ook
-een Secure Enclave heeft. (Afbeelding: Sonic8400 via
-[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Apple_M1_-_APL1102_-_IHS_removed.jpg),
+een Secure Enclave heeft. (Afbeelding: Sonic8400 via [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Apple_M1_-_APL1102_-_IHS_removed.jpg),
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.nl))_
 
 Het binden van de telefoon aan de persoon en aan de app met gegevens is een van
@@ -526,6 +530,27 @@ gedachten.
 installeren zelf geen malware. Maar je moet ook de gemiddelde gebruiker
 beschermen. Voor gebruikers die bewust kiezen voor een ander besturingssysteem
 en weten wat ze doen, zou je in de toekomst een andere afweging kunnen maken.
+
+### Discussie in de open source community
+
+Door alle zorgen die spelen rondom de kant die Android op gaat, en de macht die
+Google hiermee naar zich toe trekt, is er veel input omtrent het mogelijk maken
+van gebruik van de wallet op meer open besturingssystemen. Een Github issue dat
+erover is gestart heeft inmiddels
+[33 comments](https://github.com/MinBZK/nl-wallet/issues/34). Het levert een
+mooi inkijkje in hoe de discussie zich heeft ontwikkelt. Ook toont het aan hoe
+belangrijk het is om een app als deze open source te ontwikkelen, zodat mensen
+met inhoudelijke kennis zich al vroeg in het proces kunnen mengen over
+oplossingsrichtingen.
+
+### Kamervragen
+
+Vanuit de Tweede Kamer zijn er ook stemmen die zich hard maken voor het mogelijk
+maken van gebruik van de wallet zonder Google-account of Apple-ID. Zo stelde
+Barbara Kathmann (PRO) er
+[Kamervragen](https://www.tweedekamer.nl/kamerstukken/kamervragen/detail?id=2026Z12033&did=2026D36098)
+over waarin ze stelt dat alle Nederlanders, ongeacht welke OS zij gebruiken, de
+app zouden moeten kunnen gebruiken.
 
 ## Rust en Flutter in de praktijk
 
