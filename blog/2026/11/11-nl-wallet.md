@@ -125,7 +125,7 @@ bewijzen, krijg je cryptografisch gegarandeerde, betrouwbare gegevens.
 
 <Blockquote
   attribution="- Jacob Middag, software engineer"
-  variation="pink-background"
+  variation="don-blockquote--pink"
 >
 "Voor die derde partij is het fijn dat ze een veel betrouwbaardere ondertekening
 hebben. In plaats van een ingescand energiecontract om je adres te bewijzen,
