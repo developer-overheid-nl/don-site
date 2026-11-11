@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-labelledby="hsm-title hsm-desc">
+  <title id="hsm-title">Hardware Security Module (HSM)</title>
+  <desc id="hsm-desc">De wallet-backend stuurt een challenge naar de HSM en krijgt een handtekening terug. De private keys van alle NL Wallets staan in een afgeschermde zone in de HSM en verlaten die nooit.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#01689b"/>
+    </marker>
+    <symbol id="key" viewBox="0 0 42 20">
+      <circle cx="10" cy="10" r="9"/>
+      <rect x="17" y="7.5" width="24" height="5" rx="1"/>
+      <rect x="34" y="12" width="4" height="6" rx="1"/>
+      <rect x="27" y="12" width="4" height="4" rx="1"/>
+    </symbol>
+  </defs>
+
+  <g font-family="RijksoverheidSansWebText, 'Segoe UI', Arial, sans-serif">
+    <!-- Kaart -->
+    <rect width="800" height="350" rx="16" fill="#eef7fb"/>
+
+    <text x="40" y="52" font-size="22" font-weight="700" fill="#0f172a">Hardware Security Module (HSM)</text>
+    <text x="40" y="78" font-size="14" fill="#475569">Sleutels worden in de HSM gemaakt en gebruikt, maar verlaten hem nooit.</text>
+
+    <!-- Wallet-backend -->
+    <rect x="40" y="150" width="180" height="150" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <g fill="#d9e8f0" stroke="#66a4c3" stroke-width="2">
+      <rect x="90" y="172" width="80" height="22" rx="4"/>
+      <rect x="90" y="200" width="80" height="22" rx="4"/>
+      <rect x="90" y="228" width="80" height="22" rx="4"/>
+    </g>
+    <g fill="#01689b">
+      <circle cx="102" cy="183" r="3"/>
+      <circle cx="102" cy="211" r="3"/>
+      <circle cx="102" cy="239" r="3"/>
+    </g>
+    <text x="130" y="280" font-size="14" font-weight="700" fill="#1e293b" text-anchor="middle">Wallet-backend</text>
+
+    <!-- Verzoek en antwoord -->
+    <line x1="230" y1="200" x2="350" y2="200" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="290" y="190" font-size="12" fill="#334155" text-anchor="middle">1. Challenge</text>
+    <line x1="350" y1="250" x2="230" y2="250" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="290" y="270" font-size="12" fill="#334155" text-anchor="middle">2. Handtekening</text>
+
+    <!-- HSM-apparaat -->
+    <rect x="360" y="120" width="240" height="200" rx="14" fill="#01689b"/>
+    <path d="M374,120 h212 a14,14 0 0 1 14,14 v18 h-240 v-18 a14,14 0 0 1 14,-14 z" fill="#01496d"/>
+    <text x="378" y="142" font-size="14" font-weight="700" fill="#ffffff">HSM</text>
+    <g fill="#a5c991">
+      <circle cx="430" cy="137" r="4"/>
+      <circle cx="444" cy="137" r="4"/>
+    </g>
+    <circle cx="458" cy="137" r="4" fill="#8fcae7"/>
+    <!-- Slot -->
+    <path d="M567,135 v-4 a6,6 0 0 1 12,0 v4" fill="none" stroke="#ffffff" stroke-width="2.2"/>
+    <rect x="563" y="134" width="20" height="13" rx="2.5" fill="#ffffff"/>
+    <circle cx="573" cy="140.5" r="2" fill="#01496d"/>
+
+    <!-- Afgeschermde zone -->
+    <rect x="378" y="166" width="204" height="138" rx="10" fill="#ddeff8" stroke="#8fcae7" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="392" y="188" font-size="12" font-weight="700" fill="#01496d">Private keys</text>
+    <g fill="#01689b">
+      <use href="#key" x="394" y="202" width="42" height="20"/>
+      <use href="#key" x="459" y="202" width="42" height="20"/>
+      <use href="#key" x="524" y="202" width="42" height="20"/>
+      <use href="#key" x="394" y="238" width="42" height="20"/>
+      <use href="#key" x="459" y="238" width="42" height="20"/>
+      <use href="#key" x="524" y="238" width="42" height="20"/>
+    </g>
+    <g fill="#ddeff8">
+      <circle cx="404" cy="212" r="3.5"/>
+      <circle cx="469" cy="212" r="3.5"/>
+      <circle cx="534" cy="212" r="3.5"/>
+      <circle cx="404" cy="248" r="3.5"/>
+      <circle cx="469" cy="248" r="3.5"/>
+      <circle cx="534" cy="248" r="3.5"/>
+    </g>
+    <text x="392" y="288" font-size="11" fill="#334155">van alle NL Wallets</text>
+
+    <!-- Sleutel verlaat de HSM niet -->
+    <line x1="600" y1="225" x2="684" y2="225" stroke="#ca005d" stroke-width="2.5" stroke-dasharray="6 5"/>
+    <use href="#key" x="699" y="215" width="42" height="20" fill="#e78cb6"/>
+    <circle cx="720" cy="225" r="30" fill="none" stroke="#ca005d" stroke-width="3"/>
+    <line x1="699" y1="246" x2="741" y2="204" stroke="#ca005d" stroke-width="3" stroke-linecap="round"/>
+    <text x="720" y="280" font-size="13" font-weight="700" fill="#ca005d" text-anchor="middle">Verlaat de HSM</text>
+    <text x="720" y="297" font-size="13" font-weight="700" fill="#ca005d" text-anchor="middle">nooit</text>
+  </g>
+</svg>

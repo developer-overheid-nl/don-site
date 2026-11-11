@@ -20,7 +20,7 @@ export default function Grid({
     <div
       className={clsx(styles.grid, className)}
       style={{
-        gridTemplateColumns: `repeat(${columns}, 1fr)`,
+        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
         gap: gap,
       }}
     >

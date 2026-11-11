@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "mijn-services",
+    "name": "MijnServices",
+    "owner": "VNG Realisatie",
+    "source": {
+      "repository": "VNG-Realisatie/mijn-services-documentatie",
+      "branch": "dist-don"
+    },
+    "editBaseUrl": "https://github.com/VNG-Realisatie/mijn-services-documentatie/blob/main/docs/",
+    "issuesUrl": "https://github.com/VNG-Realisatie/mijn-services-documentatie/issues/new"
+  }
+]

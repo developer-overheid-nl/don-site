@@ -58,7 +58,7 @@ deze in jouw `publiccode.yml`-bestand.
 
 Pas alle waarden aan met informatie over jouw project. Ben je op zoek naar
 informatie over de properties van de standaard? Ga dan naar de
-[documentatie van de standaard](https://yml.publiccode.tools/schema.core.html).
+[documentatie van de standaard](https://publiccodeyml.github.io/v0/schema.core.html).
 
 ### 4. Valideer je publiccode.yml
 
@@ -87,7 +87,7 @@ No diagnostics.
 
 ### 5. (optioneel) - Voeg validatie toe aan je CI/CD-pipeline
 
-Door de parser te draaien in je pipeline weet je zeker dat je `publiccode.yml`
+Door de checker te draaien in je pipeline weet je zeker dat je `publiccode.yml`
 altijd geldig is.
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
@@ -155,6 +155,6 @@ of onjuist zijn ingevuld.
 ## Bronnen
 
 - [Pagina over de publiccode.yml standaard](../standaarden/publiccode-yml)
-- [Documentatie van de publiccode.yml standaard](https://yml.publiccode.tools/schema.core.html)
+- [Documentatie van de publiccode.yml standaard](https://publiccodeyml.github.io/v0/schema.core.html)
 - [don-checker (CLI)](https://github.com/developer-overheid-nl/don-checker)
 - [JSON Schema van publiccode.yml](https://json.schemastore.org/publiccode.json)

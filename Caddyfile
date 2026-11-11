@@ -14,5 +14,4 @@
   file_server
   header -Server
   header /blog/feed.json Cache-Control "no-cache"
-  header /agenda/events.json Cache-Control "no-cache"
 }

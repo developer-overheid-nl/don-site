@@ -1,6 +1,7 @@
 import ContributingTiles from "../../components/ContributingTiles";
 
 {/* This class assures Docusaurus markdown CSS is applied */}
+
 <div className="markdown">
 
 # Bijdragerichtlijnen
@@ -108,6 +109,55 @@ hoe je iets dient op te leveren dan kun je je vraag stellen in ons
 Wanneer je pull request wordt gemerged in de `main` branch, squashen we alle
 commits tot één commit met een passende naam. Je hoeft je dus niet druk te maken
 dat de namen van je commits allemaal even eloquent hoeven te zijn.
+
+### Changeset toevoegen
+
+:::warning[Changeset verplicht bij contentwijzigingen]
+
+Wijzig je iets waardoor er iets visueels of contentmatig op de kennisbank
+verandert, voeg dan een changeset toe. Zonder changeset komt je wijziging niet
+in de changelog en krijgt de site geen versiebump. **Schrijf de changeset altijd
+in het Engels**, ook al is de site in het Nederlands.
+
+:::
+
+Maak het bestand aan met:
+
+```bash
+pnpm changeset
+```
+
+Vervolgens geef je aan welk type versionbump het is (`major`,`minor`of `patch`)
+en voer je een samenvatting in. Het resultaat is een bestand in `.changeset/`
+dat je meecommit in je pull request.
+
+Kies het type versionbump als volgt:
+
+- `major` voor een breaking change, zoals een artikel verwijderen of de URL van
+  een bestaand artikel wijzigen.
+- `minor` voor nieuwe content of functionaliteit, zoals een artikel, een
+  blogpost of een component.
+- `patch` voor correcties en dependency-updates. Alleen nodig als de wijziging
+  zichtbaar is op de site.
+
+De samenvatting komt in de changelog terecht, en die is Engelstalig. Schrijf hem
+in de gebiedende wijs, net als de bestaande changesets. Een changeset ziet er
+dan zo uit:
+
+```md title=".changeset/brave-owls-sing.md"
+---
+"@developer-overheid-nl/website": minor
+---
+
+Add article about OAuth in the knowledge base
+```
+
+Andere goede voorbeelden zijn:
+
+- "Fix broken link in BAG tutorial"
+- "Publish blog post about the BAG API"
+
+Schrijf dus niet: "Artikel over OAuth toegevoegd".
 
 ## Opzetten ontwikkelomgeving
 

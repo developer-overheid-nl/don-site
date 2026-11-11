@@ -83,7 +83,6 @@ gaan worden voor:
 
 - [Technische Specificatie](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32015R0806)
 - [eIDAS Building blocs](https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Documentation+eID)
-- [Irish eIDAS node provides OAuth 2.0 API that can be used for authentication](https://demo.eidasnode.gov.ie/doc/usage.html)
 - EU-info:
   [eIDAS Regulation – Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 - Nederlandse uitleg (Logius):

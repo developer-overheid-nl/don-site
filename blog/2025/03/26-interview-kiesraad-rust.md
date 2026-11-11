@@ -282,6 +282,6 @@ specifieke functionaliteiten binnen libraries zou kunnen missen.
 
 ## Verdiep je verder
 
-- [Onderbouwing van De Kiesraad voor keuze van Rust](https://github.com/kiesraad/abacus/blob/main/documentatie/softwarearchitectuur/overwegingen-talen-en-frameworks.md#gemaakte-keuze-backend-rust)
+- [Onderbouwing van De Kiesraad voor keuze van Rust](https://github.com/kiesraad/abacus-documentatie/blob/main/softwarearchitectuur/overwegingen-talen-en-frameworks.md#gemaakte-keuze-backend-rust)
 - [GitHub van de Kiesraad](https://github.com/kiesraad/)
 - [Rustlings.cool](https://rustlings.cool/)

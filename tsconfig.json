@@ -17,5 +17,12 @@
     // "verbatimModuleSyntax": true
   },
   "include": ["**/*.ts", "**/*.tsx", "scripts/wcag-sitemap-check.js"],
-  "exclude": [".docusaurus", "build"]
+  // Content van initiatieven, inclusief eventuele scripts, is van de partner.
+  "exclude": [
+    ".docusaurus",
+    "build",
+    "swizzle-baseline",
+    "initiatieven",
+    "initiatives-snapshot"
+  ]
 }
