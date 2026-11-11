@@ -74,6 +74,20 @@ Het `image` veld is optioneel maar aanbevolen. Deze afbeelding wordt gebruikt
 als preview wanneer het artikel wordt gedeeld op sociale media (Open Graph).
 Plaats de afbeelding in dezelfde map als het artikel of in een `img/`-submap.
 
+### Icoon (optioneel)
+
+In een categorieoverzicht staat elk artikel als kaart met een standaardicoon.
+Wil je een eigen icoon, geef dan het pad op onder `sidebar_custom_props`:
+
+```yaml
+sidebar_custom_props:
+  icon: /img/iconen/mijn-icoon.svg
+```
+
+Het pad is absoluut en verwijst naar een bestand in `static/`; een relatief pad
+zoals `./img/icoon.svg` werkt hier niet. Gebruik bij voorkeur een SVG. Voor een
+categorie zet je hetzelfde veld als `customProps.icon` in `_category_.json`.
+
 ### Content type
 
 Het `content_type` veld bepaalt in welke overzichten het artikel verschijnt en
