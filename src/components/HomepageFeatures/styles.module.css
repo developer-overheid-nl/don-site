@@ -1,5 +1,5 @@
 .features {
-  --rhc-card-as-link-inline-size: 20.5rem; /* Firefox needs rem */
+  --rhc-card-inline-size: 20.5rem; /* Firefox needs rem */
 
   display: flex;
   align-items: center;

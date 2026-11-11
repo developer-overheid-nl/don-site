@@ -1,7 +1,7 @@
 .grid {
-  --rhc-card-as-link-inline-size: 100%;
-  --rhc-font-size-xs-desktop: var(--ifm-font-size-base);
-  --rhc-card-as-link-heading-font-size: var(--ifm-h3-font-size);
+  --rhc-card-inline-size: 100%;
+  --rhc-card-font-size: var(--ifm-font-size-base);
+  --rhc-card-heading-font-size: var(--ifm-h3-font-size);
   display: flex;
   flex-direction: column;
 }
@@ -10,6 +10,7 @@
    library renders. Long words like "Publiccode.yml" may wrap instead of
    overflowing narrow cards. */
 .grid :global(.rhc-card__heading) {
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
 

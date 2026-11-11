@@ -109,7 +109,7 @@ patronen, zoals `POST /doeIets`, zijn te beschrijven in OAS.
 
 <Blockquote
   attribution=" — OpenAPI 3.1 Specification"
-  variation="pink-background"
+  className="don-blockquote--pink"
 >
 "The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface description for HTTP APIs."
 </Blockquote>
