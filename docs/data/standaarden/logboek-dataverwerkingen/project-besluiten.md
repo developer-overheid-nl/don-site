@@ -328,3 +328,44 @@ Tijdens de workshop casus met  RINIS is gebleken dat het veld `foreign_trace_id`
 - `foreign_span_id` wordt wel opgeslagen
 - De aangeroepen organisatie (verwerker) krijgt een eigen `span_id` per activiteit
 
+## Log management lifecycle scope verduidelijken
+
+Datum: _nader te bepalen_
+
+### Context en probleemstelling
+De standaard schrijft nu (impliciet) voor dat Logregels worden vastgelegd na het uitvoeren van Acties.
+Dit blijkt uit de `eind_tijd`, en de eis dat de `status` van de Actie moet worden opgenomen in de Logregel.
+
+Hier is een mogelijk issue bij geïdentificeerd.
+Als Applicaties Logregels opslaan na het uitvoeren van Acties, kan het zijn dat de Applicatie niet de Logregel kan opslaan vanwege bijvoorbeeld een software crash.
+Dan kan het zijn dat er data is verwerkt, en er geen verantwoording over afgelegd kan worden.
+Een suggestie is om Logregels voor het uitvoeren van een Actie op te slaan.
+Maar dit heeft voor- en nadelen.
+
+Dit probleem betreft het concept van log management lifecycle (Zie [NIST Guide to Computer Security Log Management, paragraaf 3.1](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf) & [How does the log management lifecycle work?](https://clickhouse.com/resources/engineering/what-is-log-management#how-does-the-log-management-lifecycle-work)).
+De huidige versie van de standaard neemt hier geen expliciet standpunt over in.
+Hier wordt besloten om dat wel te doen, en de impact hiervan aan implementaties duidelijk te maken.
+
+### Te nemen besluit
+
+-	De scope van de standaard expliciet neerzetten dat het alleen gaat over de opslag van Logregels.
+De generatie van Logregels wordt daarmee buiten scope gezet.
+Ten opzichte van het [overwogen alternatief](#overwogen-alternatief) is deze oplossingsrichting minder ingrijpend, en laat de implementatie de vrijheid om keuzes te maken over log generatie (dit heeft geen impact op interoperabiliteit).
+
+### Gevolgen
+
+-	Inhoudelijk geen functionele wijziging van de standaard (impliciet is dit al het standpunt van de standaard).
+-	In de scope van de standaard wordt explciet genoemd dat het specifiek gaat over log opslag gaat en niet log generatie.
+-	De opslag van Logregels wordt expliciet gedaan nadat een Actie is afgerond.
+-	Er worden niet normatieve aanwijzingen toegevoegd met aandachtspunten voor implementaties over log generatie.
+-	Implementaties krijgen hierdoor de vrijheid om voor hun specifieke situatie een geschikte oplossing voor log generatie te bepalen.
+-	Als er uit praktijkvoorbeelden blijkt dat log generatie toch problemen oplevert kan heroverwogen worden om dit in scope te trekken.
+
+#### Overwogen alternatief
+
+Scope van de standaard uitbreiden en log generatie inscope nemen.
+Dit heeft als gevolg:
+-	Significante impact op de standaard. De scope van de standaard wordt uitgebreid en nieuwe rollen en functionaliteit moeten worden beschreven.
+-	Er zijn veel implementatie keuzes mogelijk voor log generatie. Voor de standaard moeten hier dan keuzes over worden genomen.
+-	De exacte invulling van log generatie moet verder worden onderzocht voordat hier keuzes over genomen kunnen worden. Bijvoorbeeld, hoe worden logs gegenereerd, wanneer worden deze opgeslagen, hoe kunnen alle mogelijke errors worden afgehandeld, enz.
+-	Deze functionaliteit heeft niet direct een impact op de interoperabiliteit van Logregels en de invulling is applicatie afhankelijk. Daarom is het niet gewenst om dit op dit moment in scope van de standaard te nemen.
