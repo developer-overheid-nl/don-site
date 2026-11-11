@@ -28,9 +28,8 @@
     },
     {
       "component": "DocBreadcrumbs",
-      "type": "eject",
+      "type": "wrap",
       "package": "@docusaurus/theme-classic",
-      "version": "3.10.2",
       "files": [
         "DocBreadcrumbs/index.tsx",
         "DocBreadcrumbs/styles.module.css"

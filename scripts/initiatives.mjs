@@ -173,12 +173,25 @@ export function ensureStaticRoot(root = PROJECT_ROOT) {
 }
 
 /**
+ * Regels waarin Docusaurus een fout meldt, met het bronbestand of de bronpagina
+ * erin: MDX- en markdown-linkfouten, "Module not found" en "Broken link on
+ * source page". Alleen deze regels tellen; plugins loggen bij een geslaagde stap
+ * ook paden van initiatieven ("✓ Processed: initiatieven/<slug>/..."), en die
+ * zeggen niets over de oorzaak.
+ */
+const ERROR_LINE = /error|broken link|can't resolve|couldn't be resolved/i;
+
+/**
  * Welke van de opgegeven initiatieven de build-output als bron van een fout
- * noemt. Docusaurus vermeldt bij MDX- en linkfouten het bronbestand, relatief of
- * absoluut, dus we zoeken op het pad van de contentmap.
+ * noemt. Docusaurus vermeldt het bronbestand relatief of absoluut, of bij een
+ * broken link de route van de bronpagina; alle drie bevatten
+ * initiatieven/<slug>/.
  */
 export function findFailingInitiatives(output, slugs) {
-  return slugs.filter((slug) => output.includes(`${CONTENT_ROOT}/${slug}/`));
+  const errorLines = output.split("\n").filter((line) => ERROR_LINE.test(line));
+  return slugs.filter((slug) =>
+    errorLines.some((line) => line.includes(`${CONTENT_ROOT}/${slug}/`)),
+  );
 }
 
 export function warn(message) {

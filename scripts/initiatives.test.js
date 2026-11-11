@@ -194,14 +194,33 @@ test("findFailingInitiatives matches relative and absolute content paths", async
   const { findFailingInitiatives } = await loadModule();
   const output = [
     'Error: MDX compilation failed for file "/home/user/site/initiatieven/mijn-services/a.md"',
-    "Module not found in '/home/user/site/initiatieven/other/b'",
+    "Module not found: Error: Can't resolve '@site/src/components/X' in '/home/user/site/initiatieven/other/b'",
+    "  - Broken link on source page path = /initiatieven/fourth/page:",
   ].join("\n");
 
   assert.deepEqual(
-    findFailingInitiatives(output, ["mijn-services", "other", "third"]),
-    ["mijn-services", "other"],
+    findFailingInitiatives(output, [
+      "mijn-services",
+      "other",
+      "third",
+      "fourth",
+    ]),
+    ["mijn-services", "other", "fourth"],
   );
   assert.deepEqual(findFailingInitiatives(output, ["mijn"]), []);
+});
+
+test("findFailingInitiatives ignores initiative paths outside error lines", async () => {
+  const { findFailingInitiatives } = await loadModule();
+  // Echte output: de markdown-source-plugin logt elk verwerkt bestand, en een
+  // broken link op een van onze eigen pagina's noemt alleen zijn doel.
+  const output = [
+    "  ✓ Processed: initiatieven/mijn-services/index.mdx → initiatieven/mijn-services/index.md",
+    "  - Broken link on source page path = /blog/2023/09/20/waarom-zijn-api-design-rules-zo-belangrijk:",
+    "     -> linking to /initiatieven/mijn-services/missing",
+  ].join("\n");
+
+  assert.deepEqual(findFailingInitiatives(output, ["mijn-services"]), []);
 });
 
 test("installBundle and writeSnapshot keep markdown and images together", async () => {
