@@ -473,6 +473,7 @@ const config: Config & {
       additionalLanguages: [
         "bash",
         "csharp",
+        "diff",
         "go",
         "groovy",
         "java",
