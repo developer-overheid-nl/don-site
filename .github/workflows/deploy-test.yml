@@ -5,6 +5,9 @@ on:
   push:
     branches-ignore:
       - main
+      # Changesets pushes main commits to these branches with the same sha.
+      - "changeset-release/**"
+      - "changesets-ghcommit-temp/**"
 
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}
@@ -16,6 +19,8 @@ env:
   TYPESENSE_API_KEY: NFzpPqCWAFE1133lkURBFaXz7Q0H1LXi
   # Read-only events API of the Tools API on test; the API key is bundled into public browser JavaScript.
   EVENTS_API_URL: https://api.don.projects.digilab.network/tools/v1
+  # Own tag prefix, so a test build never overwrites the <sha> tag that production deploys.
+  IMAGE_TAG: test-${{ github.sha }}
 
 jobs:
   check-keyword:
@@ -68,7 +73,7 @@ jobs:
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:test
-            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           secrets: |
             "PIWIK_PRO_ACCOUNT_ADDRESS=${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}"
             "PIWIK_PRO_SITE_ID=${{ secrets.PIWIK_PRO_SITE_ID }}"
@@ -113,7 +118,7 @@ jobs:
         run: |
           KUSTOMIZATION_FILE="${{ env.KUSTOMIZE_PATH }}${{ env.DEPLOY_ENV }}/kustomization.yaml"
 
-          yq e '(.images[] | select(.newName == "${{ env.IMAGE_NAME }}")).newTag = "${{ github.sha }}"' -i "$KUSTOMIZATION_FILE"
+          yq e '(.images[] | select(.newName == "${{ env.IMAGE_NAME }}")).newTag = "${{ env.IMAGE_TAG }}"' -i "$KUSTOMIZATION_FILE"
 
       - name: Commit en push naar don-infra
         run: |
