@@ -3,4 +3,5 @@
   height: 2rem;
   width: 2rem;
   vertical-align: bottom;
+  object-fit: contain;
 }
