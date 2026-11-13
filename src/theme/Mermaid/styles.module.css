@@ -1,0 +1,107 @@
+.wrapper {
+  position: relative;
+}
+
+.diagram {
+  cursor: zoom-in;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 50%;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-emphasis-800);
+  box-shadow: var(--ifm-global-shadow-lw);
+  cursor: pointer;
+  transition:
+    opacity 150ms ease,
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.iconButton:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Alleen tonen bij hover of focus, zodat het diagram rustig blijft. */
+.zoomButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  opacity: 0;
+}
+
+.wrapper:hover .zoomButton,
+.zoomButton:focus-visible {
+  opacity: 1;
+}
+
+/* Op touchscreens bestaat geen hover: dan altijd tonen. */
+@media (hover: none) {
+  .zoomButton {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  width: min(95vw, 1600px);
+  max-width: none;
+  height: 90vh;
+  max-height: none;
+  padding: 3.5rem 2rem 2rem;
+  border: none;
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-tl);
+}
+
+.dialog[open] {
+  animation: dialogIn 150ms ease-out;
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 60%);
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.content svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+}
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog[open] {
+    animation: none;
+  }
+}
