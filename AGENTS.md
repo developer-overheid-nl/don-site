@@ -151,6 +151,20 @@ commitberichten hoeven niet perfect te zijn.
 
 Push niet naar `main`. Werk altijd op een branch en open een pull request.
 
+## HTML first
+
+Bouw interactie met HTML en CSS waar het platform dat kan, en gebruik JavaScript
+alleen waar het echt nodig is. Een `<dialog>` open je met
+`<button command="show-modal" commandfor="...">`, niet met een `onClick`. Een
+uitklapblok is een `<details>`, een menu of tooltip een `popover`.
+
+Is er toch JavaScript nodig, laat dan het native gedrag staan en voeg er iets
+aan toe, bijvoorbeeld met een listener op het `command`- of `toggle`-event. Leg
+in een comment uit waarom HTML en CSS niet volstonden.
+
+Controleer de browserondersteuning van nieuwere features. Een feature die nog
+alleen in een bèta zit, gebruik je nog niet.
+
 ## Docusaurus upgraden
 
 `src/theme/` bevat componenten die we bij Docusaurus hebben geswizzeld. Bij een
