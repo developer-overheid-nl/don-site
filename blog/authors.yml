@@ -256,3 +256,9 @@ hidde-de-vries:
       mastodon: https://front-end.social/@hdv
       linkedin: https://linkedin.com/in/hiddedevries
       bluesky: hidde.blog
+
+ailoot-ai:
+  name: Ailoot AI
+  title: Technische redactie
+  url: https://ailoot.ai/
+  page: true
