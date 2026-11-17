@@ -165,6 +165,18 @@ in een comment uit waarom HTML en CSS niet volstonden.
 Controleer de browserondersteuning van nieuwere features. Een feature die nog
 alleen in een bèta zit, gebruik je nog niet.
 
+## Iconen
+
+Gebruik Rijkshuisstijl-iconen uit `src/theme/icons/`. Teken geen eigen SVG en
+haal geen iconen uit een andere set. Importeer ze als component, bijvoorbeeld
+`import IconZoek from "@site/src/theme/icons/IconZoek";`. De varianten met
+`Inline` in de naam zijn bedoeld voor gebruik naast tekst.
+
+Staat het icoon dat je nodig hebt er niet tussen, vraag het dan na in plaats van
+zelf iets te maken. Neem een nieuw Rijkshuisstijl-icoon op in dezelfde vorm als
+de bestaande bestanden, met de copyrightvermelding van de Rijksoverheid
+bovenaan. Die vermelding laat je ongewijzigd.
+
 ## Docusaurus upgraden
 
 `src/theme/` bevat componenten die we bij Docusaurus hebben geswizzeld. Bij een
