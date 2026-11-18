@@ -22,11 +22,11 @@ Naast het [API-register](https://apis.developer.overheid.nl) en het
 [OSS-register](https://oss.developer.overheid.nl) hebben we er een register bij:
 het [Schema-register](https://schemas.developer.overheid.nl). Hier vind je JSON
 Schema's die je kunt hergebruiken in je eigen API's, berichten en tooling. Het
-register is nog in bèta, want de afspraken over hoe een goed schema eruitziet
-moeten nog gemaakt worden. Dat gaan we met de nieuwe werkgroep "Schema Design
-Rules" van het Kennisplatform API's verder uitwerken. In deze blog lees je
-waarom JSON Schema juist nú zo belangrijk is, wat het register allemaal kan en
-hoe je kunt bijdragen.
+register is nog in bèta, want uniforme afspraken over hoe overheids schema's
+eruit zien moeten nog gemaakt worden. Dat gaan we met de nieuwe werkgroep
+"Schema Design Rules" van het Kennisplatform API's verder uitwerken. In deze
+blog lees je waarom JSON Schema juist nú zo belangrijk is, wat het register
+allemaal kan en hoe je kunt bijdragen.
 
 <!-- truncate -->
 
@@ -275,16 +275,6 @@ ernaar verwijzen. Denk aan:
 - wel of niet de resourcenaam herhalen in een veldnaam
 - property casing, dat destijds bij de ADR is geparkeerd
 - formats, zoals de OpenAPI Format Registry die de ADR nu gebruiken
-
-Ook een aantal open issues bij de ADR is kandidaat om te verhuizen. Daar is nog
-niets over besloten:
-
-| ADR-issue                                                                 | Onderwerp                                               | Schema Design Rules                                    |
-| ------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
-| [#336](https://github.com/Logius-standaarden/API-Design-Rules/issues/336) | `property-casing` botst met JSON-LD                     | [#699](https://github.com/Geonovum/KP-APIs/issues/699) |
-| [#198](https://github.com/Logius-standaarden/API-Design-Rules/issues/198) | `property-casing` uitbreiden                            | [#699](https://github.com/Geonovum/KP-APIs/issues/699) |
-| [#341](https://github.com/Logius-standaarden/API-Design-Rules/issues/341) | Eenduidige semantiek voor `null` en afwezige properties | nog geen issue                                         |
-| [#289](https://github.com/Logius-standaarden/API-Design-Rules/issues/289) | `date-time` nauwkeuriger dan seconden                   | [#694](https://github.com/Geonovum/KP-APIs/issues/694) |
 
 ### Werkwijze
 
