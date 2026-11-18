@@ -341,6 +341,45 @@ zoals een verplichte `title` en `description`, examples die valideren tegen het
 schema en externe `$ref`s die resolven. Andere onderwerpen zijn lastiger, zoals
 versionering, custom extensions, annotaties en property casing.
 
+### Extensies
+
+JSON Schema beschrijft de structuur van gegevens, maar niet alles wat je erover
+wilt vastleggen. Waar komt een veld vandaan? In welke eenheid is een getal
+uitgedrukt? Welk begrip uit een basisregistratie wordt bedoeld? Daarvoor kun je
+eigen keywords in een schema opnemen: extensies. Dat gebeurt binnen de overheid
+al, alleen doet iedereen het op zijn eigen manier. Gemeente Amsterdam gebruikt
+bijvoorbeeld `provenance` voor de bron van een veld, en de Italiaanse overheid
+koppelt schema's met `x-jsonld-type` aan linked data.
+
+Spreken we af hoe extensies heten en wat erin staat, dan noemen we het allemaal
+hetzelfde. Pas dan kun je er tooling omheen bouwen, zoals een validator die
+controleert of een eenheid bestaat, of een tool die een veld koppelt aan het
+begrip waar het over gaat. Het voorstel is om extensies altijd met `x-` te laten
+beginnen, net als in OpenAPI. Dat werkt nu al in alle versies van JSON Schema,
+en in de volgende versie zijn onbekende keywords zonder dat prefix niet meer
+toegestaan. Een voorbeeld, waarin het schema met `x-jsonld-type` verwijst naar
+het begrip in de [Stelselcatalogus](https://stelselcatalogus.nl):
+
+```json title="Gebouw.schema.json"
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gebouw",
+  "description": "Een gebouw",
+  "type": "object",
+  "x-jsonld-type": "https://purl.stelselcatalogus.nl/mkg/brt/78f66591-2d57-4231-9bad-8b87646de72b",
+  "properties": {
+    "oppervlakte": {
+      "type": "number",
+      "description": "De gebruiksoppervlakte van het gebouw",
+      "x-unit": "m2"
+    }
+  }
+}
+```
+
+De namen in dit voorbeeld zijn ter illustratie. Welke extensies we afspreken en
+wat erin staat, werkt de werkgroep uit.
+
 ### Van regels naar score
 
 Zodra de Schema Design Rules er zijn en in een ruleset staan, kunnen we de
