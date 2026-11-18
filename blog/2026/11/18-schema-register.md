@@ -17,7 +17,7 @@ draft: false
 image: ./img/schema-register.png
 ---
 
-# Het Schema-register: herbruikbare JSON Schema's voor API's, tools en AI
+# Het nieuwe Schema-register: herbruikbare JSON Schema's voor API's, tools en AI
 
 ![Lokale schema's, een OpenAPI-document en tools als een validator, een LLM en een codegenerator die verwijzen naar schema's in het Schema-register](./img/schema-register.svg)
 
@@ -87,6 +87,23 @@ Dat werkt alleen als schema's eenduidig zijn. Een schema zonder `title` of
 inconsistentie in een schema komt terug in alles wat je ermee genereert.
 
 ## Het Schema-register
+
+:::warning
+
+**Het Schema-register is in beta: kopieer een schema voordat je het in productie
+gebruikt.**
+
+URL's, bestandsnamen en versionering worden onderdeel van de Schema Design
+Rules, welke nog niet zijn vastgesteld door de gelijknamige werkgroep van het
+Kennisplatform API's. Een `$ref` naar dit register is daarom nog niet stabiel.
+Verwijzen tijdens de ontwerpfase kan prima, maar haal het schema eerst binnen
+voordat je het in productie gaat gebruiken. Meedenken over de Schema Design
+Rules?
+[Bekijk de open issues](https://github.com/Geonovum/KP-APIs/issues?q=is%3Aissue+state%3Aopen+label%3A%22WG%3A+Schema+design+rules%22).
+Schema toevoegen?
+[Open hier een PR](https://github.com/developer-overheid-nl/don-static/tree/main/assets/schemas).
+
+:::
 
 Het register begint met twee collecties: de schema's uit de API Design Rules,
 zoals Problem Details, en herbruikbare schema's van developer.overheid.nl zelf,
@@ -179,18 +196,6 @@ Rules. Zolang die er nog niet zijn, gebruiken we ter inspiratie de standaard
 ruleset van [Sourcemeta One](https://one.sourcemeta.com), het platform waar het
 register op draait. Dat is een goed startpunt, maar het zijn niet de afspraken
 van de overheid.
-
-### Bèta
-
-Op elke pagina van het register staat een melding:
-
-> Het Schema-register is in beta: kopieer een schema voordat je het in productie
-> gebruikt.
-
-URL's, bestandsnamen en versionering worden onderdeel van de Schema Design
-Rules, en die zijn nog niet vastgesteld. Een `$ref` naar het register is daarom
-nog niet stabiel. Tijdens het ontwerpen kun je er gerust naar verwijzen, maar
-haal het schema binnen of bundel het voordat je het in productie gebruikt.
 
 ### Persistente URL's
 
