@@ -288,7 +288,7 @@ het register te onderbouwen zijn.
 Er staan al issues klaar. Een paar onderwerpen hebben al een concreet voorstel,
 zoals een verplichte `title` en `description`, examples die valideren tegen het
 schema en externe `$ref`s die resolven. Andere onderwerpen zijn lastiger, zoals
-versionering, custom extensions en annotaties en veldnamen en property casing.
+versionering, custom extensions, annotaties en property casing.
 
 ### Van regels naar score
 
