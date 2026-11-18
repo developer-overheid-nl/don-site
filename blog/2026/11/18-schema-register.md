@@ -88,23 +88,6 @@ inconsistentie in een schema komt terug in alles wat je ermee genereert.
 
 ## Het Schema-register
 
-:::warning
-
-**Het Schema-register is in beta: kopieer een schema voordat je het in productie
-gebruikt.**
-
-URL's, bestandsnamen en versionering worden onderdeel van de Schema Design
-Rules, welke nog niet zijn vastgesteld door de gelijknamige werkgroep van het
-Kennisplatform API's. Een `$ref` naar dit register is daarom nog niet stabiel.
-Verwijzen tijdens de ontwerpfase kan prima, maar haal het schema eerst binnen
-voordat je het in productie gaat gebruiken. Meedenken over de Schema Design
-Rules?
-[Bekijk de open issues](https://github.com/Geonovum/KP-APIs/issues?q=is%3Aissue+state%3Aopen+label%3A%22WG%3A+Schema+design+rules%22).
-Schema toevoegen?
-[Open hier een PR](https://github.com/developer-overheid-nl/don-static/tree/main/assets/schemas).
-
-:::
-
 Het register begint met twee collecties: de schema's uit de API Design Rules,
 zoals Problem Details, en herbruikbare schema's van developer.overheid.nl zelf,
 zoals `Organisation`, `Api` en `Repository`. Je kunt zoeken op titel en filteren
@@ -121,7 +104,7 @@ Per schema zie je:
 - de dependencies van het schema
 - een health-score met de gevonden health issues (daarover hieronder meer)
 
-### En de OpenAPI components dan?
+### OpenAPI components
 
 Herbruikbare bouwstenen zijn niet nieuw. Bij de ADR horen al
 [herbruikbare OpenAPI components](https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml),
@@ -160,9 +143,9 @@ hebben.
 ```mermaid
 flowchart LR
   api["Api"] -->|$ref| organisation["Organisation"]
-  api -->|$ref| lifecycle["API Lifecycle"]
+  api -->|$ref| lifecycle["ApiLifecycle"]
   repository["Repository"] -->|$ref| organisation
-  badRequest["Problem Details for Bad Request"] -->|$ref| problem["Problem Details"]
+  badRequest["BadRequest"] -->|$ref| problem["ProblemDetails"]
   openapi["openapi.json"] -.->|$ref| api
   openapi -.->|$ref| repository
   openapi -.->|$ref| badRequest
@@ -236,8 +219,8 @@ het werkt wel als spiegel. Wat we zagen:
 - veel schema's zonder `title` of `description`, waardoor niet duidelijk is wat
   ze voorstellen
 - foutmeldingsschema's in talloze varianten, terwijl
-  [Problem Details](https://www.rfc-editor.org/rfc/rfc9457) er één keer zou
-  moeten zijn
+  [Problem Details](/kennisbank/api-ontwikkeling/architectuur/problem-details)
+  er één keer zou moeten zijn
 - `examples` die niet kloppen met het type, zoals een getal bij `type: string`
 - veel schema's met dezelfde structuur, maar andere annotaties
 
