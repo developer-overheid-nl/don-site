@@ -98,15 +98,69 @@ het werkt wel als spiegel. Wat we zagen:
 Dat laatste is een mooi voorbeeld van waar afspraken helpen. Een GeoJSON Polygon
 voor de contour van een gebouw en die voor een postcodegebied hebben precies
 dezelfde structuur. Alleen de `description` en de `examples` verschillen, en dus
-staan ze er als losse schema's in. Sinds OpenAPI 3.1 mogen annotaties naast een
-`$ref` staan, zodat je de structuur kunt hergebruiken en de betekenis per plek
-beschrijft:
+staan ze er als losse schema's in.
 
-```json
+Dat kan anders. In JSON Schema draft 7 en ouder, en dus ook in OpenAPI 3.0, werd
+alles naast een `$ref` genegeerd, en moest je er een `allOf` omheen zetten om er
+een eigen `description` bij te geven. Sinds JSON Schema 2019-09 is `$ref` een
+gewoon keyword dat naast andere keywords mag staan, en omdat OpenAPI 3.1 JSON
+Schema 2020-12 gebruikt, kun je dat nu ook in je OpenAPI-document toepassen. Zo
+leg je de structuur één keer vast in een minimaal schema:
+
+```json title="Polygon.schema.json"
 {
-  "contour": {
-    "$ref": "./Polygon.schema.json",
-    "description": "De contour van het gebouw."
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Polygon",
+  "description": "Een GeoJSON Polygon",
+  "type": "object",
+  "required": ["type", "coordinates"],
+  "properties": {
+    "type": { "const": "Polygon" },
+    "coordinates": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "minItems": 4,
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+```
+
+En hergebruik je die structuur in je eigen schema's, elk met een eigen
+betekenis:
+
+```json title="Gebouw.schema.json"
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gebouw",
+  "description": "Een gebouw",
+  "type": "object",
+  "properties": {
+    "contour": {
+      "$ref": "./Polygon.schema.json",
+      "description": "De contour van het gebouw"
+    }
+  }
+}
+```
+
+```json title="Postcodegebied.schema.json"
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Postcodegebied",
+  "description": "Het gebied dat bij een postcode hoort",
+  "type": "object",
+  "properties": {
+    "gebied": {
+      "$ref": "./Polygon.schema.json",
+      "description": "De grens van het postcodegebied"
+    }
   }
 }
 ```
@@ -170,7 +224,7 @@ precies waar. Op het moment van schrijven vindt het register onder meer:
 - **`type` naast `enum`.** Als de toegestane waarden al vastliggen, volgt het
   type daaruit. Het schema `API Lifecycle` doet dat bijvoorbeeld bij `status`.
 - **Een `$ref` verpakt in een `allOf`.** Dat was alleen nodig in draft 7 en
-  ouder. Sinds 2020-12 mag een `$ref` gewoon naast andere keywords staan, zoals
+  ouder. Sinds 2019-09 mag een `$ref` gewoon naast andere keywords staan, zoals
   bij de Polygon hierboven. `Problem Details for Bad Request` krijgt dit issue.
 
 Deze regels komen op dit moment uit de ingebouwde set van Sourcemeta One. Dat is
