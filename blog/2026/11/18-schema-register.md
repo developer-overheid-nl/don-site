@@ -81,6 +81,86 @@ Dat werkt alleen als schema's eenduidig zijn. Een schema zonder `title` of
 `description` begrijpt een agent net zo slecht als een mens, en elke
 inconsistentie in een schema komt terug in alles wat je ermee genereert.
 
+## Het Schema-register
+
+Het register begint met twee collecties: de schema's uit de API Design Rules,
+zoals Problem Details, en herbruikbare schema's van developer.overheid.nl zelf,
+zoals `Organisation`, `Api` en `Repository`. Je kunt zoeken op titel en filteren
+op type en JSON Schema-dialect.
+
+### Schema's bekijken en gebruiken
+
+Per schema zie je:
+
+- de beschrijving en een tabel met alle eigenschappen, inclusief type, of ze
+  verplicht zijn en het `format`
+- het schema zelf, ook als gebundelde versie waarin alle verwijzingen zijn
+  opgenomen, en een link om het te openen in de JSON Schema Viewer
+- de dependencies van het schema
+- een health-score met de gevonden health issues, waarover hieronder meer
+
+### Dependencies
+
+Het register laat de dependencies in twee richtingen zien: naar welke schema's
+een schema verwijst, en welke schema's ernaar verwijzen. Neem het schema
+`Organisation`, dat een overheidsorganisatie aanduidt met haar
+[TOOI](https://standaarden.overheid.nl/tooi)-identifier. In het register zie je
+direct dat de schema's `Api` en `Repository` ernaar verwijzen. Pas je
+`Organisation` aan, dan weet je dus ook welke schema's daar last van kunnen
+hebben.
+
+```mermaid
+flowchart LR
+  api["Api"] -->|$ref| organisation["Organisation"]
+  api -->|$ref| lifecycle["API Lifecycle"]
+  repository["Repository"] -->|$ref| organisation
+  badRequest["Problem Details for Bad Request"] -->|$ref| problem["Problem Details"]
+  openapi["openapi.json"] -.->|$ref| api
+  openapi -.->|$ref| repository
+  openapi -.->|$ref| badRequest
+```
+
+De stippellijnen laten zien dat ook een OpenAPI-document op dezelfde manier naar
+deze schema's kan verwijzen.
+
+### Health
+
+Elk schema krijgt een health-score, uitgedrukt in een percentage. Daaronder
+staan de gevonden health issues, elk met een JSON pointer naar de plek in het
+schema waar het om gaat. Zo zie je niet alleen dát er iets schort, maar ook
+precies waar. Op het moment van schrijven vindt het register onder meer:
+
+- **Geen `examples` op het hoogste niveau.** Bijna elk schema in het register
+  heeft dit issue. Zonder voorbeeld moet een mens, of een agent, raden hoe
+  geldige gegevens eruitzien.
+- **Een `description` die eindigt met een punt.** De regel gaat ervan uit dat
+  een gebruikersinterface zelf bepaalt hoe de tekst wordt getoond, en dan zit
+  een punt in de weg.
+- **`type` naast `enum`.** Als de toegestane waarden al vastliggen, volgt het
+  type daaruit. Het schema `API Lifecycle` doet dat bijvoorbeeld bij `status`.
+- **Een `$ref` verpakt in een `allOf`.** Dat was alleen nodig in draft 7 en
+  ouder. In 2020-12 mag een `$ref` gewoon naast andere keywords staan, zoals je
+  verderop in het voorbeeld met een Point ziet.
+  `Problem Details for Bad Request` krijgt dit issue.
+
+Het plan is om hier straks een score te tonen op basis van de Schema Design
+Rules. Zolang die er nog niet zijn, gebruiken we ter inspiratie de standaard
+ruleset van [Sourcemeta One](https://one.sourcemeta.com), het platform waar het
+register op draait. Dat is een goed startpunt, maar het zijn niet de afspraken
+van de overheid.
+
+### Bèta
+
+Op elke pagina van het register staat een melding:
+
+> Het Schema-register is in beta: kopieer een schema voordat je het in productie
+> gebruikt.
+
+URL's, bestandsnamen en versionering worden onderdeel van de Schema Design
+Rules, en die zijn nog niet vastgesteld. Een `$ref` naar het register is daarom
+nog niet stabiel. Tijdens het ontwerpen kun je er gerust naar verwijzen, maar
+haal het schema binnen of bundel het voordat je het in productie gebruikt.
+
 ## Wat we tegenkwamen
 
 Om te zien waar we staan, hebben we op een testomgeving een experiment gedaan.
@@ -103,40 +183,31 @@ voor de contour van een gebouw en die voor een postcodegebied hebben precies
 dezelfde structuur. Alleen de `description` en de `examples` verschillen, en dus
 staan ze er als losse schema's in.
 
-Dat kan anders. In JSON Schema draft 7 en ouder, en dus ook in OpenAPI 3.0, werd
-alles naast een `$ref` genegeerd, en moest je er een `allOf` omheen zetten om er
-een eigen `description` bij te geven. Sinds JSON Schema 2019-09 is `$ref` een
-gewoon keyword dat naast andere keywords mag staan, en omdat OpenAPI 3.1 JSON
-Schema 2020-12 gebruikt, kun je dat nu ook in je OpenAPI-document toepassen. Zo
-leg je de structuur één keer vast in een minimaal schema:
+Dat kan anders. In OpenAPI 3.0 werd alles naast een `$ref` genegeerd en had je
+een `allOf` nodig om er een eigen `description` bij te zetten. JSON Schema
+2020-12, en dus ook OpenAPI 3.1, ondersteunt dit wel. Ter illustratie met een
+simpelere geometrie, een GeoJSON Point. Je legt de structuur één keer vast in
+een minimaal schema:
 
-```json title="Polygon.schema.json"
+```json title="Point.schema.json"
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Polygon",
-  "description": "Een GeoJSON Polygon",
+  "title": "Point",
+  "description": "Een GeoJSON Point",
   "type": "object",
   "required": ["type", "coordinates"],
   "properties": {
-    "type": { "const": "Polygon" },
+    "type": { "const": "Point" },
     "coordinates": {
       "type": "array",
-      "items": {
-        "type": "array",
-        "minItems": 4,
-        "items": {
-          "type": "array",
-          "minItems": 2,
-          "items": { "type": "number" }
-        }
-      }
+      "minItems": 2,
+      "items": { "type": "number" }
     }
   }
 }
 ```
 
-En hergebruik je die structuur in je eigen schema's, elk met een eigen
-betekenis:
+En hergebruikt die structuur in je eigen schema's, elk met een eigen betekenis:
 
 ```json title="Gebouw.schema.json"
 {
@@ -145,106 +216,34 @@ betekenis:
   "description": "Een gebouw",
   "type": "object",
   "properties": {
-    "contour": {
-      "$ref": "./Polygon.schema.json",
-      "description": "De contour van het gebouw"
+    "locatie": {
+      "$ref": "./Point.schema.json",
+      "description": "De locatie van het gebouw"
     }
   }
 }
 ```
 
-```json title="Postcodegebied.schema.json"
+```json title="Laadpaal.schema.json"
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Postcodegebied",
-  "description": "Het gebied dat bij een postcode hoort",
+  "title": "Laadpaal",
+  "description": "Een laadpaal voor elektrische voertuigen",
   "type": "object",
   "properties": {
-    "gebied": {
-      "$ref": "./Polygon.schema.json",
-      "description": "De grens van het postcodegebied"
+    "locatie": {
+      "$ref": "./Point.schema.json",
+      "description": "De locatie van de laadpaal"
     }
   }
 }
 ```
 
-Zonder afspraken krijg je tientallen manieren om een adres te modelleren, en
-schrijft elke afnemer eigen code om ze om te zetten. Een schema dat je niet
-begrijpt, hergebruik je niet, en een AI-agent ook niet. Een register vol
-varianten is geen register, maar een archief.
-
-## Het Schema-register
-
-Het register draait op [Sourcemeta One](https://one.sourcemeta.com), met een
-eigen front-end in de stijl van developer.overheid.nl. Het begint met twee
-collecties: de schema's uit de API Design Rules, zoals Problem Details, en
-herbruikbare schema's van developer.overheid.nl zelf, zoals `Organisation`,
-`Api` en `Repository`. Je kunt zoeken op titel en filteren op type en JSON
-Schema-dialect.
-
-### Schema's bekijken en gebruiken
-
-Per schema zie je:
-
-- de beschrijving en een tabel met alle eigenschappen, inclusief type, of ze
-  verplicht zijn en het `format`
-- het schema zelf, ook als gebundelde versie waarin alle verwijzingen zijn
-  opgenomen, en een link om het te openen in de JSON Schema Viewer
-- de dependencies van het schema
-- een health-score met de gevonden health issues
-
-### Dependencies
-
-Het register laat de dependencies in twee richtingen zien: naar welke schema's
-een schema verwijst, en welke schema's ernaar verwijzen. Neem het schema
-`Organisation`, dat een overheidsorganisatie aanduidt met haar
-[TOOI](https://standaarden.overheid.nl/tooi)-identifier. In het register zie je
-direct dat de schema's `Api` en `Repository` ernaar verwijzen. Pas je
-`Organisation` aan, dan weet je dus ook welke schema's daar last van kunnen
-hebben.
-
-```mermaid
-flowchart LR
-  api["Api"] -->|$ref| organisation["Organisation"]
-  api -->|$ref| lifecycle["API Lifecycle"]
-  repository["Repository"] -->|$ref| organisation
-  badRequest["Problem Details for Bad Request"] -->|$ref| problem["Problem Details"]
-```
-
-### Health
-
-Elk schema krijgt een health-score, uitgedrukt in een percentage. Daaronder
-staan de gevonden health issues, elk met een JSON pointer naar de plek in het
-schema waar het om gaat. Zo zie je niet alleen dát er iets schort, maar ook
-precies waar. Op het moment van schrijven vindt het register onder meer:
-
-- **Geen `examples` op het hoogste niveau.** Bijna elk schema in het register
-  heeft dit issue. Zonder voorbeeld moet een mens, of een agent, raden hoe
-  geldige gegevens eruitzien.
-- **Een `description` die eindigt met een punt.** De regel gaat ervan uit dat
-  een gebruikersinterface zelf bepaalt hoe de tekst wordt getoond, en dan zit
-  een punt in de weg.
-- **`type` naast `enum`.** Als de toegestane waarden al vastliggen, volgt het
-  type daaruit. Het schema `API Lifecycle` doet dat bijvoorbeeld bij `status`.
-- **Een `$ref` verpakt in een `allOf`.** Dat was alleen nodig in draft 7 en
-  ouder. Sinds 2019-09 mag een `$ref` gewoon naast andere keywords staan, zoals
-  bij de Polygon hierboven. `Problem Details for Bad Request` krijgt dit issue.
-
-Deze regels komen op dit moment uit de ingebouwde set van Sourcemeta One. Dat is
-een goed startpunt, maar het zijn niet de afspraken van de overheid. Daarover
-straks meer.
-
-### Bèta
-
-Op elke pagina van het register staat een melding:
-
-> Het Schema-register is in beta: kopieer een schema voordat je het in productie
-> gebruikt.
-
-URL's, bestandsnamen en versionering worden onderdeel van de Schema Design
-Rules, en die zijn nog niet vastgesteld. Een `$ref` naar het register is daarom
-nog niet stabiel. Tijdens het ontwerpen kun je er gerust naar verwijzen, maar
-haal het schema binnen of bundel het voordat je het in productie gebruikt.
+Dit soort bevindingen laat zien waarom afspraken nodig zijn. Zonder afspraken
+krijg je tientallen manieren om een adres te modelleren, en schrijft elke
+afnemer eigen code om ze om te zetten. Een schema dat je niet begrijpt,
+hergebruik je niet, en een AI-agent ook niet. Een register vol varianten is geen
+register, maar een archief.
 
 ## Schema Design Rules
 
