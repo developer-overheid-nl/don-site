@@ -1,6 +1,7 @@
 ---
 authors: [tom-ootes]
 tags: [meetups, community, open-source]
+image: ./img/terras-meetup.jpg
 description: |
   Op 15 december 2026 organiseren we een nieuwe developer.overheid.nl meetup in Utrecht. Een middag voor developers, architecten en makers binnen de overheid die willen bouwen, leren en ervaringen uitwisselen.
 ---
@@ -15,6 +16,8 @@ antwoorden op al deze vragen.
 Wat je kunt verwachten: geen beleidsverhalen maar concrete praktijkvoorbeelden,
 demo's, open source tooling en directe lessen van mensen die hier dagelijks aan
 werken.
+
+![Deelnemers van een eerdere meetup praten na met een drankje op een zonnig terras in Utrecht](./img/terras-meetup.jpg)
 
 <!-- truncate -->
 
