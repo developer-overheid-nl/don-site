@@ -55,15 +55,15 @@ schema's te vinden en te hergebruiken zijn.
 ### Meer dan API's
 
 JSON Schema is echter veel meer dan het `schema`-veld in een OpenAPI-document.
-Dezelfde schema's beschrijven berichten in [AsyncAPI](https://www.asyncapi.com)
-en de gegevens in een
-[CloudEvent](/kennisbank/api-ontwikkeling/standaarden/cloudevents). Validators
-toetsen er gegevens mee, en generators maken er TypeScript-types, Java-classes,
-formulieren en documentatie van. Overal waar gegevensuitwisseling tussen
-systemen plaatsvindt, kan een JSON Schema vastleggen hoe die gegevens eruitzien,
-inclusief een beschrijving en voorbeelden. Een schema uit het register is dus
-niet alleen bruikbaar voor wie een API bouwt, maar ook voor wie berichten
-uitwisselt, gegevens valideert of code genereert.
+Dezelfde schema's beschrijven berichten in
+[AsyncAPI](/kennisbank/api-ontwikkeling/standaarden/asyncapi) en de gegevens in
+een [CloudEvent](/kennisbank/api-ontwikkeling/standaarden/cloudevents).
+Validators toetsen er gegevens mee, en generators maken er TypeScript-types,
+Java-classes, formulieren en documentatie van. Overal waar gegevensuitwisseling
+tussen systemen plaatsvindt, kan een JSON Schema vastleggen hoe die gegevens
+eruitzien, inclusief een beschrijving en voorbeelden. Een schema uit het
+register is dus niet alleen bruikbaar voor wie een API bouwt, maar ook voor wie
+berichten uitwisselt, gegevens valideert of code genereert.
 
 ### Tools in the loop
 
