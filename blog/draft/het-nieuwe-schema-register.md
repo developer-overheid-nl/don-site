@@ -38,7 +38,7 @@ en hoe je kunt bijdragen.
 ## Waarom JSON Schema?
 
 [JSON Schema](https://json-schema.org) is een populaire standaard om de
-structuur van JSON-documenten te beschrijven en te valideren (voor de XML-ers
+structuur van JSON-documenten te beschrijven en te valideren (voor de XML'ers
 onder ons: XSD voor JSON, zeg maar). Je legt er bijvoorbeeld in vast welke
 velden een adres heeft, welke daarvan verplicht zijn en welk type of formaat elk
 veld heeft. Daarnaast kun je er annotaties in kwijt, zoals een `description` en
@@ -52,10 +52,10 @@ Dat we juist nú met een Schema-register komen, heeft alles te maken met
 [OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht). Per 1 januari 2027 is dat
 de verplichte standaard voor API's van de overheid. Waar OAS 3.0 nog een eigen
 schema gebruikte, is 3.1 volledig compliant met "JSON Schema 2020-12". Daardoor
-kun je vanuit je OpenAPI-document met een `$ref` verwijzen naar een JSON Schema
-dat iemand anders al heeft gemaakt, en kun je alle tooling gebruiken die er voor
-JSON Schema bestaat. Met het Schema-register hebben we één plek waar die
-schema's te vinden en te hergebruiken zijn.
+kun je vanuit je OpenAPI-document met een `$ref` verwijzen naar een bestaand
+JSON Schema (al dan niet van iemand anders), en kun je alle tooling gebruiken
+die er voor JSON Schema bestaat. Met het Schema-register hebben we één plek waar
+die schema's te vinden en te hergebruiken zijn.
 
 ### Meer dan API's
 
@@ -63,7 +63,7 @@ JSON Schema is echter veel meer dan het `schema`-veld in een OpenAPI-document.
 Dezelfde schema's beschrijven berichten in
 [AsyncAPI](/kennisbank/api-ontwikkeling/standaarden/asyncapi) en de gegevens in
 een [CloudEvent](/kennisbank/api-ontwikkeling/standaarden/cloudevents).
-Validators toetsen er gegevens mee, en generators maken er TypeScript-types,
+Validators checken er gegevens mee, en generators maken er TypeScript-types,
 Java-classes, formulieren en documentatie van. Overal waar gegevensuitwisseling
 tussen systemen plaatsvindt, kan een JSON Schema vastleggen hoe die gegevens
 eruitzien, inclusief een beschrijving en voorbeelden. Een schema uit het
@@ -110,10 +110,17 @@ Per schema zie je:
 
 ### OpenAPI components
 
-Herbruikbare bouwstenen zijn niet nieuw. Bij de ADR horen al
-[herbruikbare OpenAPI components](https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml),
-zoals de `API-Version`-header en standaardresponses als `BadRequest` en
-`NotFound`. Het verschil zit in wat je hergebruikt. Headers en responses zijn
+Herbruikbare bouwstenen zijn niet nieuw. Bij de ADR horen al herbruikbare
+OpenAPI components, zoals de `API-Version`-header en standaardresponses als
+`BadRequest` en `NotFound`. Die hosten we op static.developer.overheid.nl, zodat
+je er vanuit je eigen OpenAPI-document met een `$ref` naar kunt verwijzen in
+plaats van ze te kopiëren:
+
+```yaml
+$ref: "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+```
+
+Het verschil zit in wat je hergebruikt. Headers en responses zijn
 OpenAPI-begrippen, die je alleen in een OpenAPI-document kunt gebruiken. Een
 JSON Schema beschrijft alleen de gegevens zelf, en is daardoor ook bruikbaar in
 AsyncAPI, in een CloudEvent of in een validator.
