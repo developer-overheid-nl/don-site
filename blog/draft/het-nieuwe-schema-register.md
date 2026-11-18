@@ -7,13 +7,15 @@ description:
   Rules."
 authors: [dimitri-van-hees]
 tags:
+  - interoperabiliteit
+  - ai
   - json-schema
   - openapi
-  - oas
+  - adr
   - api-design
+  - linked-data
   - kennisplatform-apis
-  - standaarden
-draft: false
+draft: true
 image: ./img/schema-register.png
 ---
 
@@ -336,9 +338,11 @@ de regels worden uitgewerkt in rulesets die we met
 register en de regels staan daarbij los van elkaar. Een regel moet ook buiten
 het register te onderbouwen zijn.
 
-Er staan al issues klaar. Een paar onderwerpen hebben al een concreet voorstel,
-zoals een verplichte `title` en `description`, examples die valideren tegen het
-schema en externe `$ref`s die resolven. Andere onderwerpen zijn lastiger, zoals
+Er staan al
+[issues op GitHub](https://github.com/Geonovum/KP-APIs/issues?q=label%3A%22WG%3A%20Schema%20design%20rules%22)
+klaar. Een paar onderwerpen hebben al een concreet voorstel, zoals een
+verplichte `title` en `description`, examples die valideren tegen het schema en
+externe `$ref`s die resolven. Andere onderwerpen zijn lastiger, zoals
 versionering, custom extensions, annotaties en property casing.
 
 ### Extensies
