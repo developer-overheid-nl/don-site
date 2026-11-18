@@ -37,7 +37,7 @@ Het meest voordehandliggende kenmerk is dat AsyncAPI een expliciete beschrijving
 Daarnaast zijn er nog een aantal andere noemenswaardige punten:
 
 - **Protocol-agnostisch:** of men nou MQTT, AMQP, HTTP, WebSockets, Kafka of iets heel anders wil gebruiken, AsyncAPI ondervangt het allemaal
-- **Multi-schema complementair:** hergebruik van bestaande schema's is zonder enige aanpassing mogelijk; de default is JSON-schema, maar Apache Avro, RAML, OpenAPI en meer zijn ook native ondersteund.
+- **Multi-schema complementair:** hergebruik van bestaande schema's is zonder enige aanpassing mogelijk; de default is JSON-schema, maar Apache Avro, OpenAPI en meer zijn ook native ondersteund.
 - **Machine-leesbaar:** door standaard geschreven te zijn in JSON of YAML is alles uit te lezen met de bijgeleverde tooling én bestaande development tools
 - **Ingebouwde security & bestuurbaarheid:** naast manieren om authenticatie en autorisatie te documenteren (OAut2, SASL, X.509 certificaten e.a.) is het ook te integreren in linters om API-design regels af te dwingen
 
