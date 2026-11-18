@@ -15,8 +15,7 @@ vastgesteld kader: een NLGov-profiel of toetsingskader voor AsyncAPIbestaat
 niet. Voor handreikingen over hoe deze afweging te maken is er een reeks aan
 blogposts op developer.overheid.nl te vinden. Ook is deelname aan de werkgroep
 AsyncAPI hier een manier voor; deelname is vrijblijvend en meer dan welkom.
-Aanmelden hiervoor kan via het emailadres van Team Implementatieondersteuning
-van developer.overheid.nl
+Aanmelden hiervoor kan via [developer.overheid@geonovum.nl](mailto:developer.overheid@geonovum.nl)
 
 :::
 
