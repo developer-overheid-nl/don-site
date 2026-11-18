@@ -115,15 +115,43 @@ en filteren op type en JSON Schema-dialect. Per schema zie je:
 
 Neem het schema `Organisation`, dat een overheidsorganisatie aanduidt met haar
 [TOOI](https://standaarden.overheid.nl/tooi)-identifier. In het register zie je
-direct dat de schema's `Api` en `Repository` ernaar verwijzen. Op het moment van
-schrijven is de health-score laag, onder meer omdat er op het hoogste niveau
-geen `examples` staan en omdat een `description` met een punt eindigt. De
-health-score komt op dit moment uit de ingebouwde regels van Sourcemeta One.
-Welke regels voor de overheid gelden, bepaalt de werkgroep.
+direct dat de schema's `Api` en `Repository` ernaar verwijzen. Pas je
+`Organisation` aan, dan weet je dus ook welke schema's daar last van kunnen
+hebben.
 
 Het register begint met twee collecties: de schema's uit de API Design Rules,
 zoals Problem Details, en herbruikbare schema's van developer.overheid.nl zelf,
 zoals `Organisation`, `Api` en `Repository`.
+
+## Health: hoe gezond is een schema?
+
+Elk schema krijgt in het register een health-score, uitgedrukt in een
+percentage. Daaronder staan de gevonden health issues, elk met een JSON pointer
+naar de plek in het schema waar het om gaat. Zo zie je niet alleen dát er iets
+schort, maar ook precies waar. Op het moment van schrijven vindt het register
+onder meer:
+
+- **Geen `examples` op het hoogste niveau.** Bijna elk schema in het register
+  heeft dit issue. Zonder voorbeeld moet een mens, of een agent, raden hoe
+  geldige gegevens eruitzien.
+- **Een `description` die eindigt met een punt.** De regel gaat ervan uit dat
+  een gebruikersinterface zelf bepaalt hoe de tekst wordt getoond, en dan zit
+  een punt in de weg.
+- **`type` naast `enum`.** Als de toegestane waarden al vastliggen, volgt het
+  type daaruit. Het schema `API Lifecycle` doet dat bijvoorbeeld bij `status`.
+- **Een `$ref` verpakt in een `allOf`.** Dat was alleen nodig in draft 7 en
+  ouder. Sinds 2020-12 mag een `$ref` gewoon naast andere keywords staan, zoals
+  verderop bij de Polygon. `Problem Details for Bad Request` krijgt dit issue.
+
+Deze regels komen op dit moment uit de ingebouwde set van Sourcemeta One. Dat is
+een goed startpunt, maar het zijn niet de afspraken van de overheid. Over
+sommige regels zullen we het eens zijn, over andere niet, en welke regels er
+gelden, bepaalt de werkgroep. Zodra de Schema Design Rules er zijn en in een
+ruleset staan, kunnen we de score daarop gaan baseren, zoals de ADR-score in het
+[API-register](https://apis.developer.overheid.nl) laat zien in hoeverre een API
+aan de API Design Rules voldoet. Dan zegt de health-score niet alleen of een
+schema technisch netjes is, maar ook of het voldoet aan wat we binnen de
+overheid hebben afgesproken.
 
 ## Bèta: kopieer voordat je in productie gaat
 
