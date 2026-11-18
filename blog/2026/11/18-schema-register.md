@@ -14,9 +14,12 @@ tags:
   - kennisplatform-apis
   - standaarden
 draft: false
+image: ./img/schema-register.png
 ---
 
 # Het Schema-register: herbruikbare JSON Schema's voor API's, tools en AI
+
+![Lokale schema's, een OpenAPI-document en tools als een validator, een LLM en een codegenerator die verwijzen naar schema's in het Schema-register](./img/schema-register.svg)
 
 Naast het [API-register](https://apis.developer.overheid.nl) en het
 [OSS-register](https://oss.developer.overheid.nl) hebben we er een register bij:
