@@ -67,7 +67,7 @@ Kortom, vernieuwen, blijven investeren, focus op strategische autonomie,
 samenwerken, processen herontwerpen en datagedreven werken als één overheid.
 
 <Blockquote
-  variation="pink-background"
+  className="don-blockquote--pink"
   attribution="— Uit NDS"
 >
 Afgesproken is dat de Rijksoverheid, provincies, gemeenten, waterschappen en publieke dienstverleners als één overheid gaan werken aan zes met elkaar samenhangende prioriteiten om daarop te versnellen.
@@ -116,7 +116,7 @@ Afgesproken is dat de Rijksoverheid, provincies, gemeenten, waterschappen en pub
    [externe link](https://www.digitaleoverheid.nl/nederlandse-digitaliseringsstrategie-nds/6-prioriteiten-voor-een-overheid/prioriteit-6-digitaal-vakmanschap-en-een-moderne-werkomgeving/)
 
 <Blockquote
-  variation="pink-background"
+  className="don-blockquote--pink"
   attribution="— Uit NDS"
 >
 De kracht van de NDS zit in het centraal afspreken en decentraal uitvoeren. Geen vrijblijvendheid meer. De overheid kiest voor collectieve standaarden, architectuurprincipes en een gemeenschappelijk uitvoeringsprogramma.

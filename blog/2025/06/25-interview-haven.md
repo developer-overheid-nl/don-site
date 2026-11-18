@@ -137,7 +137,7 @@ de CNCF, plus de ervaring die we hebben."
 
 <Blockquote
   attribution=" — Sander, DevOps Engineer Team Haven"
-  variation="pink-background">
+  className="don-blockquote--pink">
 "Het is overigens niet dat wij hier hele nieuwe dingen aan het doen zijn. We pakken de best practices die er zijn, die we kennen vanuit de CNCF, plus de ervaring die we hebben."
 </Blockquote>
 
@@ -195,7 +195,7 @@ concludeert Sander.
 
 <Blockquote
   attribution=" — Pauline, Technisch Product Owner gemeente Utrecht"
-  variation="pink-background">
+  className="don-blockquote--pink">
 "Het is een volledige exit strategie. Door die extra abstractielaag is de discussie weg van: “ja maar die cloud provider of hyperscaler biedt nog die functionaliteit”. Dat hebben we allemaal niet meer nodig."
 </Blockquote>
 

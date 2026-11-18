@@ -125,7 +125,7 @@ bewijzen, krijg je cryptografisch gegarandeerde, betrouwbare gegevens.
 
 <Blockquote
   attribution="- Jacob Middag, software engineer"
-  variation="pink-background"
+  variation="don-blockquote--pink"
 >
 "Voor die derde partij is het fijn dat ze een veel betrouwbaardere ondertekening
 hebben. In plaats van een ingescand energiecontract om je adres te bewijzen,
@@ -453,7 +453,7 @@ wallet, maar een uitgever van kaartjes moet dit ook goed aanpakken.
 
 <Blockquote
   attribution="- Sietse Ringers, architect"
-  variation="pink-background"
+  className="don-blockquote--pink"
 >
 "Privacy by design betekent dat je bij elk technisch detail nadenkt: zit hier
 iets in waardoor dit herleidbaar wordt?"

@@ -82,7 +82,7 @@ project is ervoor gekozen om te focussen op de CloudEvents specificatie die in
 de specificatie die in beheer is genomen bij Logius.
 
 <Blockquote
-  variation="pink-background"
+  className="don-blockquote--pink"
   attribution="— Forum Standaardisatie"
 >
 Op 25 september 2025 heeft het Forum Standaardisatie ingestemd met het advies aan het OBDO om het **NL GOV profile for CloudEvents** verplicht te stellen (“Pas toe of leg uit”). Daarnaast is het predicaat *‘Uitstekend beheer’* toegekend voor deze standaard.
