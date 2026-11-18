@@ -41,6 +41,9 @@ Design Rules van het Kennisplatform API's.
 - Per 1 januari 2027 is OpenAPI 3.1 de verplichte standaard. Daarmee wordt JSON
   Schema 2020-12 volledig ondersteund en is hergebruik van schema's tussen API's
   eindelijk technisch mogelijk.
+- JSON Schema is er niet alleen voor API's, maar ook voor berichten, validators,
+  generators en AI. Juist als je AI inzet, wil je tools in de loop houden, en
+  een schema is zo'n tool.
 - De werkgroep Schema Design Rules stelt afspraken op voor JSON Schema, naast de
   API Design Rules. De discussie loopt op
   [GitHub](https://github.com/Geonovum/KP-APIs/issues?q=label%3A%22WG%3A%20Schema%20design%20rules%22),
@@ -67,6 +70,33 @@ volledig. Daardoor kun je vanuit je OpenAPI-document met een `$ref` verwijzen
 naar een schema dat iemand anders al heeft gemaakt, en kun je alle tooling
 gebruiken die er voor JSON Schema bestaat. Dat maakt een register zinvol: één
 plek waar die schema's te vinden, te beoordelen en te hergebruiken zijn.
+
+## Meer dan API's
+
+JSON Schema is veel meer dan het `schema`-veld in een OpenAPI-document. Dezelfde
+schema's beschrijven berichten in [AsyncAPI](https://www.asyncapi.com) en de
+gegevens in een
+[CloudEvent](/kennisbank/api-ontwikkeling/standaarden/cloudevents). Validators
+toetsen er gegevens mee, en generators maken er TypeScript-types, classes,
+formulieren en documentatie van. Overal waar gegevens tussen systemen worden
+uitgewisseld, kan een JSON Schema vastleggen hoe die eruitzien. Een schema uit
+het register is dus niet alleen bruikbaar voor wie een API bouwt.
+
+In het huidige AI-tijdperk wordt dat alleen maar belangrijker. In
+[Tools in the loop](/blog/2026/07/2/tools-in-the-loop) schreven we dat je naast
+de mens ook de _tools_ in de loop moet houden: generators die het zware werk
+doen en validators die de regels bewaken. Een JSON Schema is precies zo'n vaste
+set regels. Een taalmodel genereert plausibel ogende code en data, maar of die
+klopt, beantwoordt een validator met een schema, niet het model. En een agent
+die een API bouwt, hoeft een adres of een organisatie niet zelf te verzinnen als
+hij in het register kan vinden wat er al is. Dat scheelt hallucinaties, en het
+scheelt tokens.
+
+Dat werkt alleen als schema's eenduidig zijn. Een schema zonder `title` of
+`description` begrijpt een agent net zo slecht als een mens, en elke
+inconsistentie in een schema komt terug in alles wat je ermee genereert. Daarom
+zijn "geschikt voor AI" en "productieklaar" twee van de toetsstenen voor de
+Schema Design Rules.
 
 ## Wat je in het register vindt
 
