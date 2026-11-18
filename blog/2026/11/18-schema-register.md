@@ -89,9 +89,11 @@ inconsistentie in een schema komt terug in alles wat je ermee genereert.
 ## Het Schema-register
 
 Het register begint met twee collecties: de schema's uit de API Design Rules,
-zoals Problem Details, en herbruikbare schema's van developer.overheid.nl zelf,
-zoals `Organisation`, `Api` en `Repository`. Je kunt zoeken op titel en filteren
-op type en JSON Schema-dialect.
+zoals
+[Problem Details](/kennisbank/api-ontwikkeling/standaarden/api-design-rules/hoe-te-voldoen/error-handling-problem-details),
+en herbruikbare schema's van developer.overheid.nl zelf, zoals `Organisation`,
+`Api` en `Repository`. Je kunt zoeken op titel en filteren op type en JSON
+Schema-dialect.
 
 ### Schema's bekijken en gebruiken
 
@@ -218,9 +220,8 @@ het werkt wel als spiegel. Wat we zagen:
 
 - veel schema's zonder `title` of `description`, waardoor niet duidelijk is wat
   ze voorstellen
-- foutmeldingsschema's in talloze varianten, terwijl
-  [Problem Details](/kennisbank/api-ontwikkeling/architectuur/problem-details)
-  er één keer zou moeten zijn
+- foutmeldingsschema's in talloze varianten, terwijl Problem Details er één keer
+  zou moeten zijn
 - `examples` die niet kloppen met het type, zoals een getal bij `type: string`
 - veel schema's met dezelfde structuur, maar andere annotaties
 
