@@ -19,7 +19,7 @@ is vrijblijvend en meer dan welkom. Aanmelden hiervoor kan via <f.deutekom@geono
 :::
 
 [AsyncAPI](https://www.asyncapi.com/en) is een standaard voor het beschrijven van API's die zich specifiek toespitst op asynchrone API's en Event-Driven Architecture (EDA)
-Het is een initiatief opgezet met als doel om het werk van OAS voort te zetten en de huidige staat van EDA te verbeteren. Het maakt dan ook gebruik van veel bekende structuren en taal die men kent van [OAS](https://developer.overheid.nl/kennisbank/api-ontwikkeling/standaarden/openapi-specification/).
+Het is een initiatief opgezet met als doel om het werk van OAS voort te zetten en de huidige staat van EDA te verbeteren. Het maakt dan ook gebruik van veel bekende structuren en taal die men kent van [OAS](/kennisbank/api-ontwikkeling/standaarden/openapi-specification/).
 
 De meest recente versie is 3.1.0, welke [hier](https://www.asyncapi.com/docs/reference/specification/v3.1.0) in zijn volledigheid terug te vinden is.
 
@@ -60,7 +60,7 @@ De werkgroep pakt geregeld casussen uit het veld op en legt ze onder de loep om 
 
 - AsyncAPI is een beschrijvingstandaard die machineleesbaar is, en daardoor prima in productie in te zetten voor asynchrone API documentatie
 - AsyncAPI levert documentatie op die informatie bevat over Events, de plek waar die Events leven en hoe ze eruit zien
-- AsyncAPI vertelt niks over event-metadata; hiervoor is een standaard als [CloudEvents](https://developer.overheid.nl/kennisbank/api-ontwikkeling/standaarden/cloudevents) aangetoond als zeer complementair
+- AsyncAPI vertelt niks over event-metadata; hiervoor is een standaard als [CloudEvents](/kennisbank/api-ontwikkeling/standaarden/cloudevents) aangetoond als zeer complementair
 - AsyncAPI levert meerwaarde bij het beschrijven van asynchrone, Event-Driven situaties waar veel onbekende afnemers in het spel zijn en er grote kans is op evolutie in het eventcontract
 - Voordat men overgaat tot het gebruik van AsyncAPI, denk eerst na over eigenaarschap, discovery en distributie voordat men blind aanneemt dat AsyncAPI voor elke asynchrone situatie vereist is
 
