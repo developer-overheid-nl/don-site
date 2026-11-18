@@ -19,15 +19,14 @@ draft: false
 # Het Schema-register: herbruikbare JSON Schema's voor API's, tools en AI
 
 Naast het [API-register](https://apis.developer.overheid.nl) en het
-[OSS-register](https://oss.developer.overheid.nl) heeft developer.overheid.nl er
-een register bij: het [Schema-register](https://schemas.developer.overheid.nl).
-Hier vind je JSON Schema's die je kunt hergebruiken in je eigen API's, berichten
-en tooling. Het register is nog in bèta, want de afspraken over hoe een goed
-schema eruitziet moeten nog gemaakt worden. Dat doen we samen, in de nieuwe
-werkgroep Schema Design Rules van het Kennisplatform API's. In deze blog lees je
-waarom JSON Schema zo belangrijk is, wat we tegenkwamen toen we de huidige
-praktijk onder de loep namen, wat het register allemaal kan en hoe je kunt
-bijdragen.
+[OSS-register](https://oss.developer.overheid.nl) hebben we er een register bij:
+het [Schema-register](https://schemas.developer.overheid.nl). Hier vind je JSON
+Schema's die je kunt hergebruiken in je eigen API's, berichten en tooling. Het
+register is nog in bèta, want de afspraken over hoe een goed schema eruitziet
+moeten nog gemaakt worden. Dat gaan we met de nieuwe werkgroep "Schema Design
+Rules" van het Kennisplatform API's verder uitwerken. In deze blog lees je
+waarom JSON Schema juist nú zo belangrijk is, wat het register allemaal kan en
+hoe je kunt bijdragen.
 
 <!-- truncate -->
 
@@ -44,13 +43,13 @@ Het register staat er nu, en aan de regels wordt gewerkt.
 
 ### OpenAPI 3.1
 
-Dat het juist nu komt, heeft alles te maken met OpenAPI 3.1. Per 1 januari 2027
+Dat het juist nú komt, heeft alles te maken met OpenAPI 3.1. Per 1 januari 2027
 is dat de verplichte standaard voor API's van de overheid. Waar OAS 3.0 nog een
-eigen dialect van JSON Schema gebruikte, ondersteunt 3.1 JSON Schema 2020-12
-volledig. Daardoor kun je vanuit je OpenAPI-document met een `$ref` verwijzen
-naar een schema dat iemand anders al heeft gemaakt, en kun je alle tooling
-gebruiken die er voor JSON Schema bestaat. Dat maakt een register zinvol: één
-plek waar die schema's te vinden, te beoordelen en te hergebruiken zijn.
+eigen schema gebruikte, ondersteunt 3.1 "JSON Schema 2020-12" volledig. Daardoor
+kun je vanuit je OpenAPI-document met een `$ref` verwijzen naar een JSON Schema
+dat iemand anders al heeft gemaakt, en kun je alle tooling gebruiken die er voor
+JSON Schema bestaat. Met het Schema-register hebben we één plek waar die
+schema's te vinden en te hergebruiken zijn.
 
 ### Meer dan API's
 
@@ -59,9 +58,9 @@ Dezelfde schema's beschrijven berichten in [AsyncAPI](https://www.asyncapi.com)
 en de gegevens in een
 [CloudEvent](/kennisbank/api-ontwikkeling/standaarden/cloudevents). Validators
 toetsen er gegevens mee, en generators maken er TypeScript-types, Java-classes,
-formulieren en documentatie van. Overal waar gegevens tussen systemen worden
-uitgewisseld, kan een JSON Schema vastleggen hoe die eruitzien. Een schema uit
-het register is dus niet alleen bruikbaar voor wie een API bouwt.
+formulieren en documentatie van. Overal waar gegevensuitwisseling tussen
+systemen plaatsvindt, kan een JSON Schema vastleggen hoe die gegevens eruitzien.
+Een schema uit het register is dus niet alleen bruikbaar voor wie een API bouwt.
 
 ### Tools in the loop
 
@@ -197,10 +196,12 @@ Om de wildgroei aan te pakken is er een nieuwe werkgroep van het
 de werkgroep Schema Design Rules. De kick-off was op 28 oktober bij Geonovum,
 met deelnemers van Geonovum, Gemeente Amsterdam, VNG en Logius.
 
-### Verhouding met de API Design Rules
+### Relatie met de API Design Rules
 
-De ADR kunnen zeggen "gebruik JSON Schema", de Schema Design Rules zeggen hoe.
-Daarbij gaan ze één laag dieper:
+OpenAPI zegt niets over wat er in het `schema`-veld van een request of response
+staat, en daardoor zeiden de ADR daar tot nu toe ook weinig over. De ADR kunnen
+zeggen "gebruik JSON Schema", de Schema Design Rules zeggen hoe. Daarbij gaan ze
+één laag dieper, met dezelfde aanpak:
 
 | Standaard           | Gaat over                                                           |
 | ------------------- | ------------------------------------------------------------------- |
@@ -208,7 +209,28 @@ Daarbij gaan ze één laag dieper:
 | Schema Design Rules | Request- en response-bodies, berichten en andere gegevensstructuren |
 
 En omdat JSON Schema veel breder wordt gebruikt dan alleen in OpenAPI, verdient
-dat een eigen set afspraken.
+dat een eigen set afspraken naast de ADR, en niet een hoofdstuk erin.
+
+#### Verhuizen vanuit de ADR
+
+Een aantal onderwerpen die nu bij de ADR liggen, gaat eigenlijk over de gegevens
+in bodies. Die kunnen naar de Schema Design Rules verhuizen, waarna de ADR
+ernaar verwijzen. Denk aan:
+
+- veldnamen, zoals geen afkortingen en wel of geen Nederlandse naamgeving
+- wel of niet de resourcenaam herhalen in een veldnaam
+- property casing, dat destijds bij de ADR is geparkeerd
+- formats, zoals de OpenAPI Format Registry die de ADR nu gebruiken
+
+Ook een aantal open issues bij de ADR is kandidaat om te verhuizen. Daar is nog
+niets over besloten:
+
+| ADR-issue                                                                 | Onderwerp                                               | Schema Design Rules                                    |
+| ------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
+| [#336](https://github.com/Logius-standaarden/API-Design-Rules/issues/336) | `property-casing` botst met JSON-LD                     | [#699](https://github.com/Geonovum/KP-APIs/issues/699) |
+| [#198](https://github.com/Logius-standaarden/API-Design-Rules/issues/198) | `property-casing` uitbreiden                            | [#699](https://github.com/Geonovum/KP-APIs/issues/699) |
+| [#341](https://github.com/Logius-standaarden/API-Design-Rules/issues/341) | Eenduidige semantiek voor `null` en afwezige properties | nog geen issue                                         |
+| [#289](https://github.com/Logius-standaarden/API-Design-Rules/issues/289) | `date-time` nauwkeuriger dan seconden                   | [#694](https://github.com/Geonovum/KP-APIs/issues/694) |
 
 ### Werkwijze
 
