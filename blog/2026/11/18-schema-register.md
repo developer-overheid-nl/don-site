@@ -286,16 +286,9 @@ register en de regels staan daarbij los van elkaar. Een regel moet ook buiten
 het register te onderbouwen zijn.
 
 Er staan al issues klaar. Een paar onderwerpen hebben al een concreet voorstel,
-zoals een verplichte
-[`title` en `description`](https://github.com/Geonovum/KP-APIs/issues/687),
-[examples die valideren](https://github.com/Geonovum/KP-APIs/issues/689) tegen
-het schema en
-[externe `$ref`s die resolven](https://github.com/Geonovum/KP-APIs/issues/691).
-Andere onderwerpen zijn lastiger, zoals
-[versionering](https://github.com/Geonovum/KP-APIs/issues/692),
-[custom extensions en annotaties](https://github.com/Geonovum/KP-APIs/issues/693)
-en
-[veldnamen en property casing](https://github.com/Geonovum/KP-APIs/issues/699).
+zoals een verplichte `title` en `description`, examples die valideren tegen het
+schema en externe `$ref`s die resolven. Andere onderwerpen zijn lastiger, zoals
+versionering, custom extensions en annotaties en veldnamen en property casing.
 
 ### Van regels naar score
 
