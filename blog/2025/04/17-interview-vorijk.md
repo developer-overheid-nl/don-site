@@ -190,7 +190,7 @@ de bronorganisaties steeds belangrijker wordt.
 
 <Blockquote
   attribution="— Timen Olthof"
-  variation="pink-background"
+  className="don-blockquote--pink"
 >
 De 5-lagen architectuur betaalt zich uit in dit project, waarin veel partijen uiteindelijk deze componenten in één of andere vorm nodig hebben.
 </Blockquote>
@@ -282,7 +282,7 @@ en kunnen wij iets maken wat daarbij aansluit?
 
 <Blockquote
   attribution="— Kiske de Leest"
-  variation="pink-background"
+  className="don-blockquote--pink"
 >
 Dit is veruit het gaafste project dat ik in 25 jaar heb gedaan, omdat er zoveel dingen samenkomen. De gebruikersgerichte manier van werken, het technische innovatieve stuk, en vooral het maatschappelijke karakter - de impact die we samen hebben.
 </Blockquote>

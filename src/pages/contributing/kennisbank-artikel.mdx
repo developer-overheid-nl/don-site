@@ -231,6 +231,61 @@ genummerde stap-bestanden (`1-eerste-stap.md`, `2-tweede-stap.md`, etc.).
 ## Bronnen
 ```
 
+## Componenten
+
+In een artikel kun je componenten van de
+[Rijkshuisstijl Community](https://rijkshuisstijl-community.vercel.app/)
+gebruiken. Geef je bestand dan de extensie `.mdx`. In een `.md`-bestand voegt
+Prettier losse `import`-regels samen tot één alinea, en dan werkt het artikel
+niet meer.
+
+### Card
+
+Met een `Card` verwijs je naar een ander artikel of een tool. Zet cards in een
+`Grid`, dan staan ze netjes naast elkaar. Pas het pad naar `Grid` aan op de
+diepte van je map.
+
+```mdx
+import Grid from "../../src/components/Grid";
+import { Card } from "@rijkshuisstijl-community/components-react";
+
+## Aan de slag
+
+<Grid>
+  <Card
+    description="Wil je snel aan de slag met NL Design System? Volg dan deze tutorial."
+    heading="Getting started: NL Design System"
+    headingLevel={3}
+    href="./design-systems/nl-design-system/aan-de-slag-met-nl-design-system"
+    linkLabel="Naar de tutorial"
+  />
+</Grid>
+```
+
+#### Kies het juiste `headingLevel`
+
+De titel van een card is een echte kop. Met `headingLevel` bepaal je het niveau:
+altijd één niveau dieper dan de kop waar de card onder staat. Zo klopt de
+kopstructuur van de pagina, en daar navigeren screenreaders op. Zonder
+`headingLevel` wordt de titel een H2.
+
+| De card staat onder | `headingLevel` |
+| ------------------- | -------------- |
+| `# Titel` (H1)      | `{2}`          |
+| `## Kop` (H2)       | `{3}`          |
+| `### Kop` (H3)      | `{4}`          |
+
+Sla geen niveau over. Kies het niveau ook niet op basis van hoe groot de titel
+moet worden: de grootte van een cardtitel staat vast, welk niveau je ook kiest.
+
+#### Kleuren
+
+Een card krijgt zijn kleuren uit de design tokens: de titel in lintblauw, de
+link in de gewone linkkleur. Geef een card geen eigen kleur met `style` of een
+hexwaarde. Heb je toch een andere kleur nodig, voeg dan een regel toe aan
+`src/css/custom.css` en gebruik een token, bijvoorbeeld
+`var(--rhc-color-core-500)`, of een `--don-*`-variabele uit hetzelfde bestand.
+
 ## Toon en stijl
 
 ### Schrijf voor een developer, niet voor een beleidsmaker
@@ -247,7 +302,7 @@ ontwikkelaarsdocumentatie en voelt toegankelijker.
 ### Schrijf in het Nederlands, gebruik Engelse termen waar standaard
 
 De kennisbank is Nederlandstalig. Engelse vakbegrippen die in de praktijk zo
-worden gebruikt — zoals _idempotent_, _pull request_, _header_, of _endpoint_ —
+worden gebruikt, zoals _idempotent_, _pull request_, _header_ of _endpoint_,
 hoef je niet te vertalen. Introduceer een acroniem of technische term bij eerste
 gebruik kort met een uitleg of link.
 
@@ -273,8 +328,8 @@ Geef instructies als directe opdrachten, niet als suggesties.
 
 ### Nummer stappen als "5.", niet als "Stap 5"
 
-Gebruik in een stappenplan koppen met de notatie `N.` (bijvoorbeeld `### 5.
-Titel van de stap`), niet `### Stap 5` of andere varianten.
+Gebruik in een stappenplan koppen met de notatie `N.` (bijvoorbeeld
+`### 5. Titel van de stap`), niet `### Stap 5` of andere varianten.
 
 ```markdown
 ✓ ### 5. Valideer je bestand

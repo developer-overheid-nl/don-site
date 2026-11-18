@@ -273,6 +273,7 @@ const config: Config & {
         sitemap: {},
         theme: {
           customCss: [
+            "./node_modules/@rijkshuisstijl-community/components-css/dist/index.css",
             "./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css",
             "./src/css/custom.css",
             "./src/css/initiatives.css",
