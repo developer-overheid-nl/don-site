@@ -32,14 +32,21 @@ allemaal kan en hoe je kunt bijdragen.
 
 ## Waarom JSON Schema?
 
-Het idee voor een Schema-register is niet nieuw. Toen we in maart 2025
+[JSON Schema](https://json-schema.org) is een standaard om de structuur van
+JSON-documenten te beschrijven en te valideren (voor de XML-mensen onder ons:
+XSD voor JSON-documenten). Je legt er bijvoorbeeld in vast welke velden een
+adres heeft, welke daarvan verplicht zijn en welk type of formaat elk veld
+heeft.
+
+Het idee voor een register van JSON Schema's is niet nieuw. Toen we in maart
+2025
 [de nieuwe versie van developer.overheid.nl](/blog/2025/03/13/nieuwe-versie-developer-overheid-nl)
 aankondigden, noemden we `schemas.developer.overheid.nl` al als mogelijke plek
-voor herbruikbare schema's. Een paar maanden later, in onze blogpost over
-[OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht), schreven we dat er naast de
-API Design Rules waarschijnlijk ook "JSON Schema Design Rules" moesten komen, en
-dat we daarvoor goed zouden kijken naar het schema-register van de Britse DVLA.
-Het register staat er nu, en aan de regels wordt gewerkt.
+voor herbruikbare overheidsschema's. Een paar maanden later, in onze blogpost
+over [OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht), schreven we dat er
+naast de API Design Rules waarschijnlijk ook "JSON Schema Design Rules" moesten
+komen, en dat we daarvoor goed zouden kijken naar het schema-register van de
+Britse DVLA. Het register staat er nu, en aan de regels wordt gewerkt.
 
 ### OpenAPI 3.1
 
