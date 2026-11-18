@@ -34,9 +34,9 @@ en hoe je kunt bijdragen.
 
 [JSON Schema](https://json-schema.org) is een populaire standaard om de
 structuur van JSON-documenten te beschrijven en te valideren (voor de XML-ers
-onder ons: XSD voor JSON). Je legt er bijvoorbeeld in vast welke velden een
-adres heeft, welke daarvan verplicht zijn en welk type of formaat elk veld
-heeft. Daarnaast kun je er annotaties in kwijt, zoals een `description` en
+onder ons: XSD voor JSON, zeg maar). Je legt er bijvoorbeeld in vast welke
+velden een adres heeft, welke daarvan verplicht zijn en welk type of formaat elk
+veld heeft. Daarnaast kun je er annotaties in kwijt, zoals een `description` en
 `examples`. Die zeggen niets over de structuur, maar helpen een ontwikkelaar
 begrijpen wat een veld betekent en hoe geldige gegevens eruitzien. Goed voor de
 Developer Experience dus.
@@ -67,15 +67,17 @@ uitwisselt, gegevens valideert of code genereert.
 
 ### Tools in the loop
 
-In het huidige AI-tijdperk wordt dat alleen maar belangrijker. In
-[Tools in the loop](/blog/2026/07/2/tools-in-the-loop) schreven we dat je naast
-de mens ook de _tools_ in de loop moet houden: generators die het zware werk
-doen en validators die de regels bewaken. Een JSON Schema is precies zo'n vaste
-set regels. Een taalmodel genereert plausibel ogende code en data, maar of die
-klopt, beantwoordt een validator met een schema, niet het model. En een agent
-die een API bouwt, hoeft een adres of een organisatie niet zelf te verzinnen als
-hij in het register kan vinden wat er al is. Dat scheelt hallucinaties, en het
-scheelt tokens.
+In het huidige AI-tijdperk wordt dat alleen maar belangrijker. In onze blogpost
+["Tools in the loop"](/blog/2026/07/2/tools-in-the-loop) schreven we dat je
+naast de mens ook _tools_ in de loop moet houden als je met AI werkt: generators
+die het zware werk doen en validators die de regels bewaken. Die regels kunnen
+verschillende vormen hebben. De API Design Rules staan bijvoorbeeld in een
+[OpenLint](/blog/2026/11/04/openlint-vervangt-spectral)-ruleset, en voor de
+structuur van gegevens is er JSON Schema. Een taalmodel genereert plausibel
+ogende code en data, maar of die data klopt, beantwoordt een validator met een
+schema, niet het model. En een agent die een API bouwt, hoeft een adres of een
+organisatie niet zelf te verzinnen als hij in het register kan vinden wat er al
+is. Dat scheelt hallucinaties, en het scheelt tokens.
 
 Dat werkt alleen als schema's eenduidig zijn. Een schema zonder `title` of
 `description` begrijpt een agent net zo slecht als een mens, en elke
@@ -95,9 +97,35 @@ Per schema zie je:
 - de beschrijving en een tabel met alle eigenschappen, inclusief type, of ze
   verplicht zijn en het `format`
 - het schema zelf, ook als gebundelde versie waarin alle verwijzingen zijn
-  opgenomen, en een link om het te openen in de JSON Schema Viewer
+  opgenomen
 - de dependencies van het schema
-- een health-score met de gevonden health issues, waarover hieronder meer
+- een health-score met de gevonden health issues (daarover hieronder meer)
+
+### En de OpenAPI components dan?
+
+Herbruikbare bouwstenen zijn niet nieuw. Bij de ADR horen al
+[herbruikbare OpenAPI components](https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml),
+zoals de `API-Version`-header en standaardresponses als `BadRequest` en
+`NotFound`. Het verschil zit in wat je hergebruikt. Headers en responses zijn
+OpenAPI-begrippen, die je alleen in een OpenAPI-document kunt gebruiken. Een
+JSON Schema beschrijft alleen de gegevens zelf, en is daardoor ook bruikbaar in
+AsyncAPI, in een CloudEvent of in een validator.
+
+De twee vullen elkaar dus aan. De responses in de components verwijzen voor hun
+body met een `$ref` naar het schema van Problem Details:
+
+```yaml title="common.yaml"
+BadRequest:
+  description: Bad request
+  content:
+    application/problem+json:
+      schema:
+        $ref: "https://static.developer.overheid.nl/schemas/adr/2.2/ProblemDetails.schema.json"
+```
+
+Zowel de components als het schema hebben de versie van de ADR in hun URL. Dat
+is precies waar het bij hergebruik om draait: een `$ref` is zo betrouwbaar als
+de URL waar hij naar wijst.
 
 ### Dependencies
 
@@ -160,6 +188,35 @@ URL's, bestandsnamen en versionering worden onderdeel van de Schema Design
 Rules, en die zijn nog niet vastgesteld. Een `$ref` naar het register is daarom
 nog niet stabiel. Tijdens het ontwerpen kun je er gerust naar verwijzen, maar
 haal het schema binnen of bundel het voordat je het in productie gebruikt.
+
+### Persistente URL's
+
+Een `$ref` werkt alleen zolang de URL waar hij naar wijst blijft bestaan en
+dezelfde inhoud teruggeeft. Naamgeving en versionering horen daarom bij elkaar,
+en over allebei is de discussie nog in volle gang:
+
+- **Naamgeving.** Het voorstel is `UpperCamelCase.schema.json`, zoals
+  `ProblemDetails.schema.json`. Editors als VS Code herkennen de extensie
+  `.schema.json` automatisch als JSON Schema. Er is ook een tegengeluid: macOS
+  heeft standaard een case-insensitive bestandssysteem, en daarom kiezen veel
+  projecten voor alleen kleine letters.
+- **Versie in de URL.** Zet je de versie in een map, zoals bij de ADR
+  (`adr/2.2/`), of in de bestandsnaam, zoals Gemeente Amsterdam doet met `v1` en
+  `v2`? En alleen de major, of de volledige versie?
+- **Wat is breaking?** Een veld verwijderen is dat zeker. Een nieuw verplicht
+  veld hangt af van wie je bent: voor een hergebruiker van het schema is het
+  breaking, voor een afnemer van de API is het een extra veld dat hij kan
+  negeren. Tenzij die afnemer strikt deserialiseert, want dan crasht hij op
+  onbekende velden.
+- **`$id` en hosting.** In JSON Schema is `$id` een identifier, en niet per se
+  de plek waar het schema staat. Het register serveert elk schema onder een
+  eigen URL. Publiceert een organisatie een schema op haar eigen domein en haalt
+  het register het op, welke URL is dan de gezaghebbende?
+
+Een richting die in de kick-off langskwam: immutable URL's per versie, eventueel
+aangevuld met URL's op major- of minor-niveau die meebewegen. Wie naar een
+immutable URL verwijst, weet zeker dat het schema niet onder zijn voeten
+verandert.
 
 ## Wat we tegenkwamen
 
