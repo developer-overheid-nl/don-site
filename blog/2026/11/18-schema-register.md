@@ -22,37 +22,31 @@ Naast het [API-register](https://apis.developer.overheid.nl) en het
 [OSS-register](https://oss.developer.overheid.nl) hebben we er een register bij:
 het [Schema-register](https://schemas.developer.overheid.nl). Hier vind je JSON
 Schema's die je kunt hergebruiken in je eigen API's, berichten en tooling. Het
-register is nog in bèta, want uniforme afspraken over hoe overheids schema's
-eruit zien moeten nog gemaakt worden. Dat gaan we met de nieuwe werkgroep
-"Schema Design Rules" van het Kennisplatform API's verder uitwerken. In deze
-blog lees je waarom JSON Schema juist nú zo belangrijk is, wat het register
-allemaal kan en hoe je kunt bijdragen.
+register is nog in bèta, want uniforme afspraken over hoe overheidsschema's
+eruitzien moeten nog gemaakt worden. Dat gaan we met de nieuwe werkgroep "Schema
+Design Rules" van het Kennisplatform API's verder uitwerken. In deze blog lees
+je waarom JSON Schema juist nú zo belangrijk is, wat het register allemaal kan
+en hoe je kunt bijdragen.
 
 <!-- truncate -->
 
 ## Waarom JSON Schema?
 
-[JSON Schema](https://json-schema.org) is een standaard om de structuur van
-JSON-documenten te beschrijven en te valideren (voor de XML-mensen onder ons:
-XSD voor JSON-documenten). Je legt er bijvoorbeeld in vast welke velden een
+[JSON Schema](https://json-schema.org) is een populaire standaard om de
+structuur van JSON-documenten te beschrijven en te valideren (voor de XML-ers
+onder ons: XSD voor JSON). Je legt er bijvoorbeeld in vast welke velden een
 adres heeft, welke daarvan verplicht zijn en welk type of formaat elk veld
-heeft.
-
-Het idee voor een register van JSON Schema's is niet nieuw. Toen we in maart
-2025
-[de nieuwe versie van developer.overheid.nl](/blog/2025/03/13/nieuwe-versie-developer-overheid-nl)
-aankondigden, noemden we `schemas.developer.overheid.nl` al als mogelijke plek
-voor herbruikbare overheidsschema's. Een paar maanden later, in onze blogpost
-over [OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht), schreven we dat er
-naast de API Design Rules waarschijnlijk ook "JSON Schema Design Rules" moesten
-komen, en dat we daarvoor goed zouden kijken naar het schema-register van de
-Britse DVLA. Het register staat er nu, en aan de regels wordt gewerkt.
+heeft. Daarnaast kun je er annotaties in kwijt, zoals een `description` en
+`examples`. Die zeggen niets over de structuur, maar helpen een ontwikkelaar
+begrijpen wat een veld betekent en hoe geldige gegevens eruitzien. Goed voor de
+Developer Experience dus.
 
 ### OpenAPI 3.1
 
-Dat het juist nú komt, heeft alles te maken met OpenAPI 3.1. Per 1 januari 2027
-is dat de verplichte standaard voor API's van de overheid. Waar OAS 3.0 nog een
-eigen schema gebruikte, ondersteunt 3.1 "JSON Schema 2020-12" volledig. Daardoor
+Dat we juist nú met een Schema-register komen, heeft alles te maken met
+[OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht). Per 1 januari 2027 is dat
+de verplichte standaard voor API's van de overheid. Waar OAS 3.0 nog een eigen
+schema gebruikte, is 3.1 volledig compliant met "JSON Schema 2020-12". Daardoor
 kun je vanuit je OpenAPI-document met een `$ref` verwijzen naar een JSON Schema
 dat iemand anders al heeft gemaakt, en kun je alle tooling gebruiken die er voor
 JSON Schema bestaat. Met het Schema-register hebben we één plek waar die
@@ -66,8 +60,10 @@ en de gegevens in een
 [CloudEvent](/kennisbank/api-ontwikkeling/standaarden/cloudevents). Validators
 toetsen er gegevens mee, en generators maken er TypeScript-types, Java-classes,
 formulieren en documentatie van. Overal waar gegevensuitwisseling tussen
-systemen plaatsvindt, kan een JSON Schema vastleggen hoe die gegevens eruitzien.
-Een schema uit het register is dus niet alleen bruikbaar voor wie een API bouwt.
+systemen plaatsvindt, kan een JSON Schema vastleggen hoe die gegevens eruitzien,
+inclusief een beschrijving en voorbeelden. Een schema uit het register is dus
+niet alleen bruikbaar voor wie een API bouwt, maar ook voor wie berichten
+uitwisselt, gegevens valideert of code genereert.
 
 ### Tools in the loop
 
