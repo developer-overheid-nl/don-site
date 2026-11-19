@@ -3,9 +3,7 @@ authors: [hidde-de-vries]
 description:
   "WCAG is de meestgebruikte standaard voor digitale toegankelijkheid, en er wordt op dit moment gewerkt aan een volgende versie. Wat wordt er verbeterd en waarom? Hidde schrijft mee aan WCAG 3 en geeft in deze post antwoord op die vragen en meer."
 image: ./img/wcag3.png
-tags:
-  - toegankelijkheid
-draft: true
+tags: [wcag, toegankelijkheid]
 ---
 
 # Hoe we WCAG beter willen maken
