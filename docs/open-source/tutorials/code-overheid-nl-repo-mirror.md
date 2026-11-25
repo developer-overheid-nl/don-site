@@ -25,8 +25,8 @@ Door deze geautomatiseerde synchronisatie is code wel altijd beschikbaar op een 
 
 Allereerst heb je een code.overheid.nl account nodig. Deze kun je via de Single Sign on aanmaken, danwel via de link codeplatform@rijksoverheid.nl aanvragen als jouw organisatie nog geen account heeft.
 
-Als je eenmaal ingelogd bent, en inderdaad lid bent van de juiste organisatie kun je in de rechter bovenhoek het menu "Create" gebruiken. Je treft twee keuze's aan, een nieuwe repository aanmaken op code.overheid.nl zelf, of een 
-'Migration'. Deze Migration (hoewel de naam anders doet vermoeden) kan gebruikt worden als doorlopende Mirror of Kopie.
+Als je eenmaal ingelogd bent, en inderdaad lid bent van de juiste organisatie kun je in de rechter bovenhoek het menu "Create" gebruiken. Je treft twee keuze's aan, een nieuwe repository aanmaken op code.overheid.nl zelf, of een [Migration](https://code.overheid.nl/repo/migrate). Deze Migration (hoewel de naam anders doet vermoeden) kan gebruikt worden als doorlopende Mirror of Kopie.
+
 
 Na het klikken op Migation tref je een keuze-scherm met verschillende 'Forges' waar vanaf we kunnen kopieren. Voor dit artikel volgende we de route 'GitHub'.
 Op de pagina 'Migrate from GitHub' vullen we een aantal velden in:
