@@ -19,7 +19,10 @@ oftewel: `GET /brouwerijen`.
 ## Query parameter toevoegen
 
 Voeg de volgende `parameters` array toe aan de `GET /brouwerijen` operatie in de
-Swagger Editor:
+Swagger Editor. Omdat de operatie nu invoer accepteert die ongeldig kan zijn,
+moet hij volgens de API Design Rules ook een
+[`400` response](../../standaarden/api-design-rules/hoe-te-voldoen/error-handling-invalid-input.md)
+kunnen teruggeven. Die voegen we daarom ook toe:
 
 ```json
 "paths": {
@@ -40,8 +43,16 @@ Swagger Editor:
             "enum": ["hobby", "micro", "groot"]
           }
         }
-      ]
+      ],
       //highlight-end
+      "responses": {
+        // de bestaande 200 response blijft staan
+        //highlight-start
+        "400": {
+          "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+        }
+        //highlight-end
+      }
     }
   }
 }
@@ -52,7 +63,7 @@ Swagger Editor:
 
 ```json
 {
-  "openapi": "3.0.2",
+  "openapi": "3.1.0",
   "info": {
     "title": "Bier API",
     "description": "API over bier om te demonstreren hoe je eenvoudig een API kunt ontwikkelen.",
@@ -104,23 +115,23 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Brouwerij"
-                  }
+                  "$ref": "#/components/schemas/BrouwerijCollection"
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       },
@@ -133,7 +144,7 @@ Swagger Editor:
           "201": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "Created",
@@ -146,7 +157,7 @@ Swagger Editor:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       }
@@ -166,7 +177,7 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -179,7 +190,7 @@ Swagger Editor:
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -192,7 +203,7 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -205,7 +216,10 @@ Swagger Editor:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -216,10 +230,10 @@ Swagger Editor:
         "tags": ["Brouwerijen"],
         "responses": {
           "204": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/204"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NoContent"
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -234,20 +248,17 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bier"
-                  }
+                  "$ref": "#/components/schemas/BierCollection"
                 }
               }
             }
@@ -263,7 +274,7 @@ Swagger Editor:
           "201": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "Created",
@@ -276,7 +287,7 @@ Swagger Editor:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       }
@@ -296,7 +307,7 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -309,7 +320,7 @@ Swagger Editor:
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -322,7 +333,7 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -335,7 +346,10 @@ Swagger Editor:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -346,10 +360,10 @@ Swagger Editor:
         "tags": ["Bieren"],
         "responses": {
           "204": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/204"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NoContent"
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -364,20 +378,17 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bierstijl"
-                  }
+                  "$ref": "#/components/schemas/BierstijlCollection"
                 }
               }
             }
@@ -400,7 +411,7 @@ Swagger Editor:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -413,7 +424,7 @@ Swagger Editor:
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -428,47 +439,62 @@ Swagger Editor:
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee93"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee93"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Weizen Tripel"
+            "examples": ["Brouwtoren"]
           },
           "grootte": {
             "type": "string",
             "enum": ["hobby", "micro", "groot"],
             "description": "Grootte brouwerij (hobby/micro/groot)",
-            "example": "micro"
+            "examples": ["micro"]
           },
           "adres": {
-            "description": "Adres",
-            "properties": {
-              "straat": {
-                "type": "string",
-                "description": "Straatnaam",
-                "example": "Waldeck Pyrmontsingel"
-              },
-              "huisnummer": {
-                "type": "number",
-                "description": "Huisnummer",
-                "example": 12
-              },
-              "postcode": {
-                "type": "string",
-                "description": "Postcode",
-                "example": "6521 BC"
-              },
-              "plaats": {
-                "type": "string",
-                "description": "Plaats",
-                "example": "Nijmegen"
-              }
-            },
-            "required": ["straat", "huisnummer", "postcode", "plaats"]
+            "$ref": "#/components/schemas/Adres"
           }
         },
         "required": ["id", "naam", "grootte"]
+      },
+      "BrouwerijCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Brouwerij"
+            }
+          }
+        }
+      },
+      "Adres": {
+        "description": "Adres",
+        "properties": {
+          "straat": {
+            "type": "string",
+            "description": "Straatnaam",
+            "examples": ["Waldeck Pyrmontsingel"]
+          },
+          "huisnummer": {
+            "type": "number",
+            "description": "Huisnummer",
+            "examples": [12]
+          },
+          "postcode": {
+            "type": "string",
+            "description": "Postcode",
+            "examples": ["6521 BC"]
+          },
+          "plaats": {
+            "type": "string",
+            "description": "Plaats",
+            "examples": ["Nijmegen"]
+          }
+        },
+        "required": ["straat", "huisnummer", "postcode", "plaats"]
       },
       "Bier": {
         "properties": {
@@ -476,18 +502,18 @@ Swagger Editor:
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee92"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee92"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Weizen Tripel"
+            "examples": ["Weizen Tripel"]
           },
           "alcoholPercentage": {
             "type": "number",
             "format": "double",
             "description": "Alcoholpercentage",
-            "example": 7.6
+            "examples": [7.6]
           },
           "bierstijl": {
             "$ref": "#/components/schemas/Bierstijl"
@@ -498,6 +524,18 @@ Swagger Editor:
         },
         "required": ["id", "naam", "alcoholPercentage", "bierstijl"]
       },
+      "BierCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bier"
+            }
+          }
+        }
+      },
       "Bierstijl": {
         "description": "Bierstijl",
         "properties": {
@@ -505,15 +543,27 @@ Swagger Editor:
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee91"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee91"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Quadrupel"
+            "examples": ["Quadrupel"]
           }
         },
         "required": ["id", "naam"]
+      },
+      "BierstijlCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bierstijl"
+            }
+          }
+        }
       }
     },
     "parameters": {
@@ -549,6 +599,11 @@ We kunnen op dezelfde manier meer query parameters toevoegen. Denk aan:
 - Filteren op plaats: `?plaats=Nijmegen`
 - Paginering: `?page=1&limit=10`
 
+Weet je vooraf al op welke velden je wilt filteren? Dan kan de
+[OAS Generator](../../tools/openapi-specification-generator.md) de query
+parameters met `filters` per resource ook meteen voor je aanmaken. Een `enum` of
+de `400` response voeg je daarna zelf toe.
+
 :::
 
 ## Wat hebben we geleerd?
@@ -556,6 +611,7 @@ We kunnen op dezelfde manier meer query parameters toevoegen. Denk aan:
 - Hoe we **query parameters** toevoegen aan een operatie
 - Hoe we een **enum** gebruiken om toegestane waarden te beperken
 - Hoe **filtering** kan werken in een API
+- Waarom een operatie met parameters ook een **`400` response** nodig heeft
 
 ## Volgende stap
 

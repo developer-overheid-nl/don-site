@@ -41,10 +41,10 @@ eerste keer kan dit even duren, daarna worden ze gecached.
 ## Bundlen
 
 Onze OAS bevat `$ref` verwijzingen naar externe URL's, zoals
-`https://static.developer.overheid.nl/adr/components.yaml` voor standaard
-headers en error responses. Dit is handig omdat we zo herbruikbare
-ADR-componenten kunnen gebruiken, maar de OpenAPI Generator kan niet overweg met
-externe referenties.
+`https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml`
+voor standaard headers en error responses. Dit is handig omdat we zo
+herbruikbare ADR-componenten kunnen gebruiken, maar de OpenAPI Generator kan
+niet overweg met externe referenties.
 
 We moeten de OAS daarom eerst bundlen. Dit betekent dat externe verwijzingen
 worden opgehaald en als interne `$ref` verwijzingen in het document worden
@@ -54,18 +54,23 @@ afhankelijkheden.
 Dit doen we met [Redocly CLI](https://redocly.com/docs/cli/):
 
 ```bash
-npx @redocly/cli bundle ./openapi.json --output openapi.bundled.json --ext json
+npx @redocly/cli bundle ./openapi.json \
+  --output openapi.bundled.json \
+  --ext json \
+  --component-names-strategy title
 ```
 
 Dit haalt externe referenties op en zet ze om naar interne `$ref` verwijzingen
-binnen het document. Gebruik `openapi.bundled.json` als input voor de volgende
-stappen.
+binnen het document. Met `--component-names-strategy title` neemt Redocly de
+naam van een opgehaald schema over uit de `title` in plaats van uit de
+bestandsnaam, zodat het component gewoon `ProblemDetails` heet. Gebruik
+`openapi.bundled.json` als input voor de volgende stappen.
 
 Valideer de gebundelde OAS ook nog een keer voordat je code genereert:
 
 ```bash
 npx @developer-overheid-nl/don-checker@latest validate \
-  --ruleset adr-21 \
+  --standard adr \
   --input openapi.bundled.json
 ```
 
@@ -75,7 +80,11 @@ Sommige tools ondersteunen ook interne `$ref` verwijzingen niet. In dat geval
 kunnen we de `--dereferenced` flag toevoegen om alles volledig plat te slaan:
 
 ```bash
-npx @redocly/cli bundle ./openapi.json --output openapi.bundled.json --ext json --dereferenced
+npx @redocly/cli bundle ./openapi.json \
+  --output openapi.bundled.json \
+  --ext json \
+  --component-names-strategy title \
+  --dereferenced
 ```
 
 Het resultaat bevat dan geen enkele `$ref` meer; alle schemas zijn volledig
@@ -278,13 +287,15 @@ generated-api-nestjs/
 │   ├── headers-decorator.ts
 │   └── index.ts
 ├── models/                 # Types op basis van de schemas
+│   ├── adres.ts
+│   ├── bier-collection.ts
 │   ├── bier.ts
+│   ├── bierstijl-collection.ts
 │   ├── bierstijl.ts
-│   ├── brouwerij-adres.ts
+│   ├── brouwerij-collection.ts
 │   ├── brouwerij.ts
-│   ├── create-brouwerij-400-response-invalid-params.ts
-│   ├── create-brouwerij-400-response.ts
-│   └── index.ts
+│   ├── index.ts
+│   └── problem-details.ts
 ├── package.json
 ├── tsconfig.json
 └── README.md
@@ -320,7 +331,7 @@ npm run init-install
 ### Stap 2: Start de server met mock data
 
 Voor deze tutorial starten we de server in mock-modus. Hiermee worden
-automatisch voorbeeldresponses gegenereerd op basis van de `example` waarden in
+automatisch voorbeeldresponses gegenereerd op basis van de voorbeeldwaarden in
 de OAS:
 
 ```bash
@@ -357,19 +368,21 @@ We krijgen nu mock data terug gebaseerd op de voorbeeldwaarden die we aan de
 schemas hebben toegevoegd:
 
 ```json
-[
-  {
-    "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee93",
-    "naam": "Weizen Tripel",
-    "grootte": "micro",
-    "adres": {
-      "straat": "Waldeck Pyrmontsingel",
-      "huisnummer": 12,
-      "postcode": "6521 BC",
-      "plaats": "Nijmegen"
+{
+  "items": [
+    {
+      "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee93",
+      "naam": "Brouwtoren",
+      "grootte": "micro",
+      "adres": {
+        "straat": "Waldeck Pyrmontsingel",
+        "huisnummer": 12,
+        "postcode": "6521 BC",
+        "plaats": "Nijmegen"
+      }
     }
-  }
-]
+  ]
+}
 ```
 
 De gegenereerde server valideert ook automatisch de query parameters. Probeer de
@@ -389,8 +402,9 @@ Dan krijgen we een `400 Bad Request` met een `problem+json` response:
 
 ```json
 {
-  "title": "Request validation failed",
+  "title": "Bad Request",
   "status": 400,
+  "detail": "Request validation failed",
   "errors": [
     {
       "in": "query",
@@ -454,8 +468,8 @@ overheidsstandaarden en om die specificatie om te zetten naar werkende code.
   De volledige ADR specificatie
 - [OpenAPI Specification](/kennisbank/api-ontwikkeling/standaarden/openapi-specification) -
   Overzicht van OAS op developer.overheid.nl
-- [OpenAPI Specification 3.0](https://spec.openapis.org/oas/v3.0.3) - Officiële
-  OAS 3.0 documentatie
+- [OpenAPI Specification 3.1](https://spec.openapis.org/oas/v3.1) - Officiële
+  OAS 3.1 documentatie
 - [OpenAPI Generator](https://openapi-generator.tech/) - Documentatie en
   beschikbare generators
 - [Codegen templates](https://github.com/developer-overheid-nl/codegen-templates) -

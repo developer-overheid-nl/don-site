@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-labelledby="s2-title s2-desc">
+  <title id="s2-title">Stap 2: kaartjes ophalen</title>
+  <desc id="s2-desc">De wallet vraagt een kaartje aan bij een uitgever, zoals een onderwijsinstelling of de RDW. De uitgever stuurt een ondertekend kaartje terug, dat lokaal op de telefoon wordt opgeslagen.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#01689b"/>
+    </marker>
+  </defs>
+
+  <g font-family="RijksoverheidSansWebText, 'Segoe UI', Arial, sans-serif">
+    <rect width="800" height="350" rx="16" fill="#eef7fb"/>
+
+    <text x="40" y="52" font-size="22" font-weight="700" fill="#0f172a">Stap 2: kaartjes ophalen</text>
+    <text x="40" y="78" font-size="14" fill="#475569">Een uitgever stuurt een ondertekend kaartje (attestatie) naar je wallet.</text>
+
+    <!-- Uitgevers -->
+    <rect x="40" y="130" width="200" height="170" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <text x="140" y="160" font-size="16" font-weight="700" fill="#1e293b" text-anchor="middle">Uitgever</text>
+
+    <rect x="56" y="178" width="168" height="40" rx="8" fill="#e1eddb"/>
+    <path d="M66,193 l14,-7 l14,7 l-14,7 z" fill="#39870c"/>
+    <path d="M72,197 v6 a8,4 0 0 0 16,0 v-6 l-8,4 z" fill="#39870c"/>
+    <text x="102" y="202" font-size="12" font-weight="700" fill="#1e293b">Onderwijsinstelling</text>
+
+    <rect x="56" y="230" width="168" height="40" rx="8" fill="#f7d9e7"/>
+    <path d="M66,256 v-6 l5,-8 h18 l5,8 v6 z" fill="#ca005d"/>
+    <circle cx="73" cy="257" r="3.5" fill="#ffffff" stroke="#ca005d" stroke-width="2"/>
+    <circle cx="87" cy="257" r="3.5" fill="#ffffff" stroke="#ca005d" stroke-width="2"/>
+    <text x="102" y="254" font-size="12" font-weight="700" fill="#1e293b">RDW</text>
+
+    <!-- Pijlen -->
+    <line x1="353" y1="190" x2="244" y2="190" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="298" y="180" font-size="12" fill="#334155" text-anchor="middle">1. Verzoek</text>
+    <line x1="244" y1="245" x2="353" y2="245" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="298" y="265" font-size="12" fill="#334155" text-anchor="middle">2. Kaartje</text>
+
+    <!-- Telefoon -->
+    <rect x="355" y="110" width="130" height="220" rx="18" fill="#1e293b"/>
+    <rect x="363" y="120" width="114" height="192" rx="10" fill="#ffffff"/>
+    <rect x="363" y="120" width="114" height="28" rx="10" fill="#01689b"/>
+    <rect x="363" y="136" width="114" height="12" fill="#01689b"/>
+    <text x="373" y="139" font-size="11" font-weight="700" fill="#ffffff">NL Wallet</text>
+    <rect x="400" y="318" width="40" height="4" rx="2" fill="#64748b"/>
+
+    <text x="373" y="166" font-size="11" font-weight="700" fill="#1e293b">Mijn kaartjes</text>
+
+    <rect x="373" y="174" width="94" height="36" rx="6" fill="#ddeff8" stroke="#8fcae7" stroke-width="1.5"/>
+    <text x="382" y="189" font-size="10" font-weight="700" fill="#01496d">PID</text>
+    <rect x="382" y="196" width="40" height="4" rx="2" fill="#8cbbd2"/>
+
+    <rect x="373" y="216" width="94" height="36" rx="6" fill="#e1eddb" stroke="#a5c991" stroke-width="1.5"/>
+    <text x="382" y="231" font-size="10" font-weight="700" fill="#1e293b">Diploma</text>
+    <rect x="382" y="238" width="40" height="4" rx="2" fill="#a5c991"/>
+
+    <rect x="373" y="258" width="94" height="36" rx="6" fill="#f7d9e7" stroke="#e78cb6" stroke-width="1.5"/>
+    <text x="382" y="273" font-size="10" font-weight="700" fill="#1e293b">Rijbewijs</text>
+    <rect x="382" y="280" width="40" height="4" rx="2" fill="#e78cb6"/>
+
+    <g fill="#01689b">
+      <circle cx="454" cy="192" r="7"/>
+      <circle cx="454" cy="234" r="7"/>
+      <circle cx="454" cy="276" r="7"/>
+    </g>
+    <g fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M451,192 l2,2 l4,-5"/>
+      <path d="M451,234 l2,2 l4,-5"/>
+      <path d="M451,276 l2,2 l4,-5"/>
+    </g>
+
+    <!-- Toelichting -->
+    <line x1="489" y1="220" x2="538" y2="220" stroke="#8fcae7" stroke-width="2" stroke-dasharray="5 4"/>
+    <rect x="540" y="150" width="220" height="140" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+
+    <path d="M563,180 v-5 a7,7 0 0 1 14,0 v5" fill="none" stroke="#01689b" stroke-width="2.2"/>
+    <rect x="559" y="179" width="22" height="16" rx="3" fill="#01689b"/>
+    <text x="594" y="186" font-size="13" font-weight="700" fill="#1e293b">Lokaal opgeslagen</text>
+    <text x="594" y="203" font-size="12" fill="#475569">op je eigen telefoon</text>
+
+    <circle cx="570" cy="245" r="11" fill="#01689b"/>
+    <path d="M565,245 l3.5,3.5 l6,-7" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="594" y="245" font-size="13" font-weight="700" fill="#1e293b">Ondertekend</text>
+    <text x="594" y="262" font-size="12" fill="#475569">door de uitgever</text>
+  </g>
+</svg>

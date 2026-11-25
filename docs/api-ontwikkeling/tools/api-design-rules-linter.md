@@ -26,14 +26,17 @@ De ADR Checker toont drie soorten meldingen:
 
 ## CLI
 
-Je kunt een OAS via de commandline op de volgende manier valideren:
+Je kunt een OAS via de commandline op de volgende manier valideren. Zonder
+`--version` gebruikt de checker de laatste definitieve versie van de standaard.
+Pin de versie als je wil dat een CI-run niet meeschuift zodra er een nieuwe
+ADR-versie uitkomt.
 
 ```sh
 # From a local file (ADR, default version)
 npx @developer-overheid-nl/don-checker@latest validate --standard adr --input ./openapi.json
 
 # Pin a specific version
-npx @developer-overheid-nl/don-checker@latest validate --standard adr --version 2.1.0 --input ./openapi.json
+npx @developer-overheid-nl/don-checker@latest validate --standard adr --version 2.2.0 --input ./openapi.json
 
 # From an external file (ADR, default version)
 npx @developer-overheid-nl/don-checker@latest validate --standard adr \

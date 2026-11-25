@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-labelledby="s3-title s3-desc">
+  <title id="s3-title">Stap 3: presenteren</title>
+  <desc id="s3-desc">Een ontvanger vraagt of je een geldig rijbewijs hebt. De wallet toont het verzoek en jij kiest delen of weigeren. Alleen het gevraagde gegeven gaat naar de ontvanger; naam, geboortedatum en adres blijven in de wallet.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#01689b"/>
+    </marker>
+  </defs>
+
+  <g font-family="RijksoverheidSansWebText, 'Segoe UI', Arial, sans-serif">
+    <rect width="800" height="350" rx="16" fill="#eef7fb"/>
+
+    <text x="40" y="52" font-size="22" font-weight="700" fill="#0f172a">Stap 3: presenteren</text>
+    <text x="40" y="78" font-size="14" fill="#475569">De ontvanger vraagt wat nodig is. Jij zegt ja of nee, en alleen dat gegeven gaat de deur uit.</text>
+
+    <!-- Telefoon -->
+    <rect x="80" y="110" width="130" height="220" rx="18" fill="#1e293b"/>
+    <rect x="88" y="120" width="114" height="192" rx="10" fill="#ffffff"/>
+    <rect x="88" y="120" width="114" height="28" rx="10" fill="#01689b"/>
+    <rect x="88" y="136" width="114" height="12" fill="#01689b"/>
+    <text x="98" y="139" font-size="11" font-weight="700" fill="#ffffff">NL Wallet</text>
+    <rect x="125" y="318" width="40" height="4" rx="2" fill="#64748b"/>
+
+    <text x="98" y="166" font-size="10" fill="#64748b">Verzoek van</text>
+    <text x="98" y="181" font-size="12" font-weight="700" fill="#1e293b">Ontvanger</text>
+    <text x="98" y="200" font-size="10" fill="#64748b">Wil zien:</text>
+    <rect x="98" y="206" width="94" height="22" rx="11" fill="#ddeff8"/>
+    <text x="145" y="221" font-size="10" font-weight="700" fill="#01496d" text-anchor="middle">Rijbewijs geldig</text>
+    <rect x="98" y="242" width="94" height="24" rx="6" fill="#01689b"/>
+    <text x="145" y="258" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">Delen</text>
+    <rect x="98" y="274" width="94" height="24" rx="6" fill="#ffffff" stroke="#01689b" stroke-width="1.5"/>
+    <text x="145" y="290" font-size="11" font-weight="700" fill="#01689b" text-anchor="middle">Weigeren</text>
+
+    <!-- Verzoek -->
+    <line x1="558" y1="128" x2="214" y2="128" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="386" y="119" font-size="12" fill="#334155" text-anchor="middle">1. Verzoek: geldig rijbewijs?</text>
+
+    <!-- Gedeelde gegevens -->
+    <line x1="214" y1="240" x2="266" y2="240" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <rect x="270" y="160" width="180" height="150" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <text x="284" y="183" font-size="12" font-weight="700" fill="#1e293b">Wat wordt gedeeld?</text>
+
+    <g font-size="11">
+      <rect x="284" y="194" width="152" height="20" rx="4" fill="#f1f5f9"/>
+      <text x="294" y="208" fill="#94a3b8">Naam</text>
+      <rect x="284" y="219" width="152" height="20" rx="4" fill="#f1f5f9"/>
+      <text x="294" y="233" fill="#94a3b8">Geboortedatum</text>
+      <rect x="284" y="244" width="152" height="20" rx="4" fill="#f1f5f9"/>
+      <text x="294" y="258" fill="#94a3b8">Adres</text>
+      <rect x="284" y="275" width="152" height="22" rx="4" fill="#ddeff8" stroke="#01689b" stroke-width="1.5"/>
+      <text x="294" y="290" font-weight="700" fill="#01496d">Rijbewijs geldig</text>
+    </g>
+    <g fill="none" stroke="#94a3b8" stroke-width="1.6">
+      <path d="M419,203 v-2 a3.5,3.5 0 0 1 7,0 v2"/>
+      <path d="M419,228 v-2 a3.5,3.5 0 0 1 7,0 v2"/>
+      <path d="M419,253 v-2 a3.5,3.5 0 0 1 7,0 v2"/>
+    </g>
+    <g fill="#94a3b8">
+      <rect x="417" y="202" width="11" height="8" rx="1.5"/>
+      <rect x="417" y="227" width="11" height="8" rx="1.5"/>
+      <rect x="417" y="252" width="11" height="8" rx="1.5"/>
+    </g>
+    <circle cx="423" cy="286" r="7" fill="#39870c"/>
+    <path d="M420,286 l2,2 l4,-5" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <line x1="454" y1="240" x2="556" y2="240" stroke="#01689b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="505" y="230" font-size="12" fill="#334155" text-anchor="middle">2. Na akkoord</text>
+
+    <!-- Ontvanger -->
+    <rect x="560" y="110" width="200" height="150" rx="12" fill="#ffffff" stroke="#b3d2e1" stroke-width="2"/>
+    <rect x="625" y="132" width="70" height="46" rx="4" fill="#d9e8f0" stroke="#66a4c3" stroke-width="2"/>
+    <rect x="652" y="178" width="16" height="9" fill="#66a4c3"/>
+    <rect x="640" y="187" width="40" height="4" rx="2" fill="#66a4c3"/>
+    <text x="660" y="222" font-size="16" font-weight="700" fill="#1e293b" text-anchor="middle">Ontvanger</text>
+    <text x="660" y="242" font-size="11" fill="#475569" text-anchor="middle">bijvoorbeeld een autoverhuurder</text>
+  </g>
+</svg>

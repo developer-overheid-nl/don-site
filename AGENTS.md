@@ -65,6 +65,7 @@ Het veld `content_type` bepaalt in welke overzichten een artikel verschijnt.
 | `tutorial`     | Stapsgewijze handleidingen                          |
 | `architectuur` | Patronen, concepten, ontwerpbeslissingen            |
 | `richtlijn`    | Leidraad content (principes en richtlijnen)         |
+| `community`    | Samenwerkingsverbanden, platforms en netwerken      |
 
 `content_type` staat los van de tags. Deze waarden mogen **nooit** als tag
 voorkomen.
@@ -76,9 +77,13 @@ Vier lagen, waarvan alleen de tweede verplicht is.
 **Laag 1, content type.** Geen tag, maar een apart frontmatter-veld. Zie
 hierboven.
 
-**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De
-zeven thema's zijn `informatiebeveiliging`, `interoperabiliteit`,
+**Laag 2, thema-tags.** Verplicht, minimaal 1 en maximaal 3 per artikel. De acht
+thema's zijn `ai`, `informatiebeveiliging`, `interoperabiliteit`,
 `toegankelijkheid`, `privacy`, `infrastructuur`, `front-end` en `open-source`.
+
+De build dwingt deze laag niet af, en de meeste bestaande artikelen voeren geen
+thema-tag. Neem een bestaand artikel dus niet als voorbeeld voor je tags; houd
+je aan de regel hierboven.
 
 **Laag 3, onderwerp-tags.** Optioneel, maximaal 5. Specifieke technologieën,
 standaarden of concepten, bijvoorbeeld `oauth`, `kubernetes`, `dcat`, `wcag`.
@@ -92,6 +97,53 @@ Regels die de build afdwingt:
 - Elke tag moet in `tags.yml` staan. Een onbekende tag laat de build falen.
 - Voeg een tag alleen toe aan `tags.yml` als hij herbruikbaar is. Eenmalige tags
   horen er niet in.
+
+### Componenten in content
+
+Zie de sectie Componenten in `/contributing/kennisbank-artikel` en Citaten in
+`/contributing/gastblog-schrijven`. De regels:
+
+- Geef elke `Card` een `headingLevel` van één niveau dieper dan de kop erboven:
+  `{3}` onder een `##`, `{4}` onder een `###`. Zonder prop wordt het een H2, wat
+  onder een `##` de kopstructuur breekt.
+- Een uitgelicht roze citaat is `<Blockquote className="don-blockquote--pink">`.
+- Kleuren in CSS komen uit tokens (`--rhc-color-*` uit de design tokens of
+  `--don-*` uit `src/css/custom.css`), niet uit hexwaarden. Zet geen kleur in
+  `style` binnen content.
+- Gebruik `.mdx` voor een artikel met componenten. Prettier voegt in een
+  `.md`-bestand opeenvolgende `import`-regels samen tot één alinea.
+
+### Eigen icoon op een DocCard
+
+Een artikel of categorie krijgt standaard een emoji op de kaart. Een eigen icoon
+zet je met `sidebar_custom_props.icon` in de frontmatter, of `customProps.icon`
+in `_category_.json`. `src/theme/DocCard/index.tsx` rendert het als `<img>`. Zie
+`/contributing/kennisbank-artikel` voor de syntax.
+
+De build controleert dit niet. Houd je daarom zelf aan deze regels:
+
+- Het pad is absoluut en wijst naar een bestaand bestand in `static/`
+  (bijvoorbeeld `/img/iconen/naam.svg`). Een relatief pad werkt niet. Verwijs
+  niet naar een externe URL: dan laadt de site content van buiten het eigen
+  domein.
+- Gebruik SVG. Een icoon is maximaal **5 KB**; de bestaande iconen in
+  `static/img/` zijn 1 tot 3 KB. Een groter bestand is bijna altijd een
+  exportartefact (ingebed raster, metadata, onnodige paden). Optimaliseer het,
+  bijvoorbeeld met `pnpm dlx svgo`, in plaats van de grens op te rekken.
+- De SVG heeft een `viewBox` en is vierkant. De kaart toont het op 2rem x 2rem
+  (`object-fit: contain`), vaste `width` en `height` in het bestand zijn dus
+  overbodig.
+- Geen `<script>`, geen `<foreignObject>`, geen `<image>` met een `data:`-URI en
+  geen verwijzingen naar externe bestanden of fonts. Zet tekst om naar paden.
+- Kleuren staan in het bestand zelf. Een `<img>` erft geen `currentColor` en
+  kent geen CSS-tokens, dus de regel over hexwaarden geldt hier niet. Gebruik
+  kleuren uit de huisstijl en controleer het resultaat in `pnpm start`.
+- Het icoon is decoratief (`alt=""`). De betekenis moet dus in de titel van de
+  kaart staan, nooit alleen in het icoon.
+- Bestandsnamen zijn Engelse identifiers in kebab-case.
+- Kopieer geen iconen uit `src/theme/icons/` naar `static/`. Dat zijn
+  Rijkshuisstijl-iconen met auteursrechtbeperkingen (zie de header in elk
+  bestand), en ze worden als React-component gebruikt, niet als bestand.
 
 ## Blogposts
 
@@ -146,9 +198,49 @@ commitberichten hoeven niet perfect te zijn.
 
 Push niet naar `main`. Werk altijd op een branch en open een pull request.
 
+## Docusaurus upgraden
+
+`src/theme/` bevat componenten die we bij Docusaurus hebben geswizzeld. Bij een
+eject is het een volledige kopie die niet vanzelf meegaat met upstream. Bij een
+hernoemd component negeert Docusaurus onze override zonder foutmelding.
+`swizzle-baseline/` bewaakt dat:
+
+- `manifest.json` noemt elke override in `src/theme/`, met type (`eject`, `wrap`
+  of `custom`), het package en de bestanden.
+- Voor elk geëject bestand staat ernaast een ongewijzigde kopie van de
+  upstream-versie waarop het is gebaseerd.
+
+`pnpm test` draait `pnpm swizzle:check` mee, dus een Dependabot-PR voor de
+`docusaurus`-groep wordt rood zodra een geswizzeld component upstream verandert.
+
+Een upgrade gaat zo:
+
+1. Maak een branch, bijvoorbeeld `chore/docusaurus-3.11.0`.
+2. Zet alle `@docusaurus/*`-packages op dezelfde exacte versie en draai
+   `pnpm install`.
+3. Draai `pnpm swizzle:check`. Groen betekent dat geen geswizzeld component is
+   veranderd; ga door naar stap 5.
+4. Draai `pnpm swizzle:update`. Dat merget de upstream-wijzigingen met een 3-way
+   merge in onze bestanden en ververst de baselines. Los de conflict markers op
+   (`<<<<<<< DON`) en formatteer de gewijzigde bestanden met Prettier.
+5. Draai `pnpm lint`, `pnpm test` en `pnpm build`. De typecheck vangt
+   wijzigingen in `@docusaurus/theme-common/internal`, waar veel ejects van
+   afhangen.
+6. Controleer met `pnpm serve`: een docs-categoriepagina (DocCard), de mobiele
+   navigatie, een blogpost, `/search` en een tagpagina.
+7. Voeg een changeset toe (`patch`).
+
+`pnpm swizzle:diff <Component>` toont onze aanpassingen ten opzichte van de
+baseline.
+
+Swizzle je een nieuw component, zet het dan in `manifest.json` en draai
+`pnpm swizzle:update`; dat maakt de baseline aan. Kies wrap boven eject waar dat
+kan.
+
 ## Waar je vanaf blijft
 
 - `build/` en `.docusaurus/` zijn gegenereerd.
+- `swizzle-baseline/` alleen via `pnpm swizzle:update`, nooit met de hand.
 - `pnpm-lock.yaml` alleen via pnpm zelf, nooit met de hand.
 - `patches/` bevat patch-bestanden die bij `pnpm.patchedDependencies` horen.
 - Gooi geen bestaande tests weg om een nieuwe te laten slagen.
@@ -156,4 +248,7 @@ Push niet naar `main`. Werk altijd op een branch en open een pull request.
 Voeg geen dependencies toe zonder dat te overleggen. Let er daarbij op dat
 `pnpm` peer dependencies standaard automatisch installeert: dat een build slaagt
 zonder een declaratie betekent niet dat het package overbodig is. Toets dat met
-`pnpm install --config.auto-install-peers=false`.
+`pnpm install --config.auto-install-peers=false`. Die install haalt de
+automatisch geïnstalleerde peers uit `pnpm-lock.yaml`, en een gewone
+`pnpm install` zet ze niet terug. Herstel de lockfile daarna met
+`git checkout -- pnpm-lock.yaml` en draai `pnpm install` opnieuw.

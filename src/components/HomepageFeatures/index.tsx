@@ -60,8 +60,7 @@ function Feature({ title, image, alt, description, link, label }: FeatureItem) {
       href={link}
       heading={title}
       description={description}
-      imageSrc={image}
-      imageAlt={alt}
+      image={image && <img src={image} alt={alt ?? ""} />}
       linkLabel={label}
     />
   );

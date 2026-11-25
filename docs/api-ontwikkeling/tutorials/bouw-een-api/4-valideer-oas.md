@@ -12,20 +12,20 @@ tags:
 
 Voordat we code gaan genereren, is het belangrijk om te controleren of onze
 OpenAPI Specification voldoet aan de API Design Rules (ADR). Hiervoor gebruiken
-we onze OAS Checker.
+we onze DON Checker.
 
-## OAS Checker
+## DON Checker
 
-De [OAS Checker](https://developer-overheid-nl.github.io/oas-checker) is een
-online tool om een OAS te valideren tegen de API Design Rules. Onder de motorkap
-gebruikt de OAS Checker dezelfde Spectral ruleset als de ADR Linter.
+De [DON Checker](https://developer-overheid-nl.github.io/don-checker/#/adr) is
+een online tool om een OAS te valideren tegen de API Design Rules. Onder de
+motorkap gebruikt de DON Checker dezelfde OpenLint ruleset als de ADR Linter.
 
-1. [Open de OAS Checker](https://developer-overheid-nl.github.io/oas-checker).
+1. [Open de DON Checker](https://developer-overheid-nl.github.io/don-checker/#/adr).
 2. Kopieer de volledige OAS uit de Swagger Editor.
 3. Plak de OAS in het invoerveld.
 4. De validatie start automatisch en toont de resultaten.
 
-![OAS Checker](./checker.png) _De OAS Checker met links onze JSON input en
+![DON Checker](./checker.png) _De DON Checker met links onze JSON input en
 rechts de validatie output_
 
 ## Fouten oplossen
@@ -33,25 +33,24 @@ rechts de validatie output_
 Onze OAS bevat, zoals je kunt zien, één fout die in strijd is met de API Design
 Rules:
 
-> [include-major-version-in-uri] /core/uri-version: Include the major version
-> number in the URI
+> [nlgov:include-major-version-in-uri] Include the major version number in the
+> URI.
 
-Met de knop "How to fix" lees je meer over deze foutmelding en hoe je het kunt
-oplossen. Er staat niet voor niks `@TODO` in de boilerplate, dus de server URL
-moet nog ingevoerd worden. Voor deze tutorial gaan we het endpoint op
+Met de knop "Documentation" lees je meer over deze foutmelding en hoe je het
+kunt oplossen. Er staat niet voor niks `@TODO` in de boilerplate, dus de server
+URL moet nog ingevoerd worden. Voor deze tutorial gaan we het endpoint op
 `https://api.bieren.nepdomein` draaien. Omdat de validator valt over het
 versienummer en we bezig zijn met versie 1.0 van de API, plakken we `/v1`
 erachter. De waarde van de server `url` wordt dus:
-`https://api.bieren.nepdomein/v1`. Zodra je dit hebt aangepast meldt de checker:
-
-> [https://logius-standaarden.github.io/API-Design-Rules/] No violations found.
+`https://api.bieren.nepdomein/v1`. Zodra je dit hebt aangepast, meldt de checker
+geen fouten meer.
 
 <details>
   <summary>De spec zou er op dit moment zo uit moeten zien</summary>
 
 ```json
 {
-  "openapi": "3.0.2",
+  "openapi": "3.1.0",
   "info": {
     "title": "Bier API",
     "description": "API over bier om te demonstreren hoe je eenvoudig een API kunt ontwikkelen.",
@@ -103,23 +102,23 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Brouwerij"
-                  }
+                  "$ref": "#/components/schemas/BrouwerijCollection"
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       },
@@ -132,7 +131,7 @@ erachter. De waarde van de server `url` wordt dus:
           "201": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "Created",
@@ -145,7 +144,7 @@ erachter. De waarde van de server `url` wordt dus:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       }
@@ -165,7 +164,7 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -178,7 +177,7 @@ erachter. De waarde van de server `url` wordt dus:
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -191,7 +190,7 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -204,7 +203,10 @@ erachter. De waarde van de server `url` wordt dus:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -215,10 +217,10 @@ erachter. De waarde van de server `url` wordt dus:
         "tags": ["Brouwerijen"],
         "responses": {
           "204": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/204"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NoContent"
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -233,20 +235,17 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bier"
-                  }
+                  "$ref": "#/components/schemas/BierCollection"
                 }
               }
             }
@@ -262,7 +261,7 @@ erachter. De waarde van de server `url` wordt dus:
           "201": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "Created",
@@ -275,7 +274,7 @@ erachter. De waarde van de server `url` wordt dus:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
           }
         }
       }
@@ -295,7 +294,7 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -308,7 +307,7 @@ erachter. De waarde van de server `url` wordt dus:
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -321,7 +320,7 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -334,7 +333,10 @@ erachter. De waarde van de server `url` wordt dus:
             }
           },
           "400": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/400"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       },
@@ -345,10 +347,10 @@ erachter. De waarde van de server `url` wordt dus:
         "tags": ["Bieren"],
         "responses": {
           "204": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/204"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NoContent"
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -363,20 +365,17 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               },
               "Link": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/Link"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/Link"
               }
             },
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bierstijl"
-                  }
+                  "$ref": "#/components/schemas/BierstijlCollection"
                 }
               }
             }
@@ -399,7 +398,7 @@ erachter. De waarde van de server `url` wordt dus:
           "200": {
             "headers": {
               "API-Version": {
-                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
+                "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/headers/API-Version"
               }
             },
             "description": "OK",
@@ -412,7 +411,7 @@ erachter. De waarde van de server `url` wordt dus:
             }
           },
           "404": {
-            "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/responses/404"
+            "$ref": "https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml#/components/responses/NotFound"
           }
         }
       }
@@ -427,47 +426,62 @@ erachter. De waarde van de server `url` wordt dus:
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee93"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee93"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Weizen Tripel"
+            "examples": ["Brouwtoren"]
           },
           "grootte": {
             "type": "string",
             "enum": ["hobby", "micro", "groot"],
             "description": "Grootte brouwerij (hobby/micro/groot)",
-            "example": "micro"
+            "examples": ["micro"]
           },
           "adres": {
-            "description": "Adres",
-            "properties": {
-              "straat": {
-                "type": "string",
-                "description": "Straatnaam",
-                "example": "Waldeck Pyrmontsingel"
-              },
-              "huisnummer": {
-                "type": "number",
-                "description": "Huisnummer",
-                "example": 12
-              },
-              "postcode": {
-                "type": "string",
-                "description": "Postcode",
-                "example": "6521 BC"
-              },
-              "plaats": {
-                "type": "string",
-                "description": "Plaats",
-                "example": "Nijmegen"
-              }
-            },
-            "required": ["straat", "huisnummer", "postcode", "plaats"]
+            "$ref": "#/components/schemas/Adres"
           }
         },
         "required": ["id", "naam", "grootte"]
+      },
+      "BrouwerijCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Brouwerij"
+            }
+          }
+        }
+      },
+      "Adres": {
+        "description": "Adres",
+        "properties": {
+          "straat": {
+            "type": "string",
+            "description": "Straatnaam",
+            "examples": ["Waldeck Pyrmontsingel"]
+          },
+          "huisnummer": {
+            "type": "number",
+            "description": "Huisnummer",
+            "examples": [12]
+          },
+          "postcode": {
+            "type": "string",
+            "description": "Postcode",
+            "examples": ["6521 BC"]
+          },
+          "plaats": {
+            "type": "string",
+            "description": "Plaats",
+            "examples": ["Nijmegen"]
+          }
+        },
+        "required": ["straat", "huisnummer", "postcode", "plaats"]
       },
       "Bier": {
         "properties": {
@@ -475,18 +489,18 @@ erachter. De waarde van de server `url` wordt dus:
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee92"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee92"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Weizen Tripel"
+            "examples": ["Weizen Tripel"]
           },
           "alcoholPercentage": {
             "type": "number",
             "format": "double",
             "description": "Alcoholpercentage",
-            "example": 7.6
+            "examples": [7.6]
           },
           "bierstijl": {
             "$ref": "#/components/schemas/Bierstijl"
@@ -497,6 +511,18 @@ erachter. De waarde van de server `url` wordt dus:
         },
         "required": ["id", "naam", "alcoholPercentage", "bierstijl"]
       },
+      "BierCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bier"
+            }
+          }
+        }
+      },
       "Bierstijl": {
         "description": "Bierstijl",
         "properties": {
@@ -504,15 +530,27 @@ erachter. De waarde van de server `url` wordt dus:
             "type": "string",
             "format": "uuid",
             "description": "Unieke identifier",
-            "example": "046b6c7f-0b8a-43b9-b35d-6489e6daee91"
+            "examples": ["046b6c7f-0b8a-43b9-b35d-6489e6daee91"]
           },
           "naam": {
             "type": "string",
             "description": "Naam",
-            "example": "Quadrupel"
+            "examples": ["Quadrupel"]
           }
         },
         "required": ["id", "naam"]
+      },
+      "BierstijlCollection": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bierstijl"
+            }
+          }
+        }
       }
     },
     "parameters": {
@@ -535,7 +573,7 @@ erachter. De waarde van de server `url` wordt dus:
 :::tip Lokale validatie
 
 Voor grotere projecten is het handig om de validatie te integreren in de
-development workflow. De ADR Checker kan ook via CLI of in CI/CD pipelines
+development workflow. De DON Checker kan ook via CLI of in CI/CD pipelines
 draaien. Zie de
 [ADR Checker documentatie](/kennisbank/api-ontwikkeling/tools/api-design-rules-linter)
 voor meer informatie.
@@ -544,7 +582,7 @@ voor meer informatie.
 
 ## Wat hebben we geleerd?
 
-- Hoe we de **OAS Checker** gebruiken om de specificatie te valideren
+- Hoe we de **DON Checker** gebruiken om de specificatie te valideren
 - Hoe we fouten oplossen die de checker meldt
 
 ## Volgende stap

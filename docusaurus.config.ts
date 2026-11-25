@@ -213,6 +213,7 @@ const config: Config & {
         sitemap: {},
         theme: {
           customCss: [
+            "./node_modules/@rijkshuisstijl-community/components-css/dist/index.css",
             "./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css",
             "./src/css/custom.css",
             "./node_modules/a11y-syntax-highlighting/dist/prism/a11y-light.min.css",
@@ -256,6 +257,7 @@ const config: Config & {
           position: "left",
           to: "/kennisbank",
           items: [
+            { label: "Artificiële Intelligentie (AI)", to: "/kennisbank/ai" },
             { label: "API Ontwikkeling", to: "/kennisbank/api-ontwikkeling" },
             { label: "Front-end", to: "/kennisbank/front-end" },
             {
@@ -286,6 +288,12 @@ const config: Config & {
         {
           to: "https://oss.developer.overheid.nl",
           label: "Repositories",
+          position: "left",
+          target: "_self",
+        },
+        {
+          to: "https://schemas.developer.overheid.nl",
+          label: "Schema's",
           position: "left",
           target: "_self",
         },
@@ -426,6 +434,10 @@ const config: Config & {
               to: "/implementatie-ondersteuning",
             },
             {
+              label: "Evenementen",
+              to: "/evenementen",
+            },
+            {
               label: "Over",
               to: "/over",
             },
@@ -462,6 +474,7 @@ const config: Config & {
       additionalLanguages: [
         "bash",
         "csharp",
+        "diff",
         "go",
         "groovy",
         "java",

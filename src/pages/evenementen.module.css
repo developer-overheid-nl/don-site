@@ -1,0 +1,13 @@
+.page {
+  max-inline-size: 50rem;
+}
+
+.toolbar {
+  margin-block: 1.5rem;
+  max-inline-size: 16rem;
+}
+
+.events {
+  padding: 0;
+  margin-block-end: 2rem;
+}

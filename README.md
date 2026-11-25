@@ -46,6 +46,24 @@ Daarna kan je de lokale versie van de site bekijken op
 Maak je aanpassingen aan de design tokens, draai `pnpm run build` om de CSS te
 builden.
 
+### Werken met Docusaurus
+
+De kennisbank staan in `/docs`, de blogposts in `/blog` en de overige pagina's
+in `/src/pages`.
+
+Een aantal componenten zijn aangepast of toegevoegd, deze staan in `/src/components`
+en `/src/theme`. De laatste map bevat componenten die de standaard Docusaurus
+componenten overschrijven, zogenoemde ge-swizzle-de components. Ga je aanpassingen
+maken aan de standaard Docusaurus componenten, dan doe je dat dmv
+`pnpm run swizzle ...`, [zie de documentatie](https://docusaurus.io/docs/swizzling)
+bij Docusaurus. Om upgrades van Docusaurus makkelijker te maken, is er een script en
+tests toegevoegd die checkt of de ge-swizzle-de componenten nog up-to-date zijn met
+de upstream-versie. Een "pristine copy" van een geswizzled component wordt bijgehouden
+in de map `/swizzle-baseline` zodat er makkelijker gemerged kan worden.
+*Belangrijk*: Swizzle je een nieuw component, zet het dan in
+`/swizzle-baseline/manifest.json` en draai `pnpm swizzle:update`; dat maakt de
+baseline aan. Kies wrap boven eject waar dat kan.
+
 ## WCAG pnpm script
 
 Het `pnpm run lint:wcag` script vereist extra dependencies die niet in de
@@ -62,26 +80,26 @@ pnpm run lint:wcag
 
 ## Links controleren
 
-De workflow `.github/workflows/check-links.yml` controleert of alle links op de
-website nog werken met
-[Linkinator](https://github.com/JustinBeckwith/linkinator). Je kan deze check
-ook lokaal draaien:
+De workflow `.github/workflows/check-links.yml` controleert elke maandag of alle
+links op de website nog werken met
+[Linkinator](https://github.com/JustinBeckwith/linkinator). Worden er kapotte
+links gevonden, dan wordt het rapport in Slack geplaatst. De workflow kan ook
+handmatig gestart worden via de Actions-tab.
+
+Interne links worden al tijdens de build gecontroleerd door Docusaurus. Deze
+check draait daarom niet bij pull requests: externe sites zijn daarvoor te
+wisselvallig.
+
+Je kan deze check ook lokaal draaien:
 
 1. Draai `pnpm run build` om de site te builden naar de map `build/`.
-2. Draai Linkinator met dezelfde instellingen als de workflow:
+2. Draai `pnpm check:links`.
 
-```bash
-npx linkinator build \
---recurse \
---format JSON \
---clean-urls \
---config ./linkinator.config.json \
---verbosity ERROR \
---timeout 5000 \
-> linkinator-results.json
-```
+Voeg `--format JSON > linkinator-results.json` toe voor een rapport in JSON.
 
-Links die bewust overgeslagen moeten worden staan in `linkinator.config.json`.
+De instellingen staan in `linkinator.config.json`. Links die bewust
+overgeslagen moeten worden staan onder `skip`. Sites die bots blokkeren
+(HTTP 401, 403 en 429) geven een waarschuwing in plaats van een fout.
 
 ## Publiceren blogpost
 
@@ -97,17 +115,17 @@ Om een blog te publiceren die in draft staat volg je de volgende stappen:
 
 ## Changelog
 
-Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin 
+Nieuwe features, bugfixes en andere wijzigingen worden bijgehouden in de changelog. Hierin
 vermelden wat er veranderd, verbeterd of toegevoegd is.  
-Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets 
-bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries 
-samenvoegt. Deze pull request, genaamd "Version Packages", _moet_ worden gemerged voor elke release.
+Via [Changesets] (`pnpm changeset`) kan er een changelog entry worden aangemaakt. De Changesets
+bot en workflow maakt automatisch een pull request aan die de verschillende changelog entries
+samenvoegt. Deze pull request, genaamd "Version Packages", *moet* worden gemerged voor elke release.
 
-Ondanks dat er geen software package wordt gepubliceerd, _gebruiken we de changelog om bij te 
-houden wat er veranderd is in de website_. De semver gebruikt in de changelog heeft geen technische 
+Ondanks dat er geen software package wordt gepubliceerd, *gebruiken we de changelog om bij te
+houden wat er veranderd is in de website*. De semver gebruikt in de changelog heeft geen technische
 betekenis, maar kan wel gebruikt worden om in te zien wat er veranderd is.
 Zo is een nieuwe blogpost of kennisbankartikel een **minor** version bump en een bugfix een **patch**.
-Een "breaking" change is een **major** version bump. Voorbeelden van een breaking change 
+Een "breaking" change is een **major** version bump. Voorbeelden van een breaking change
 zijn bijvoorbeeld het verwijderen van een artikel of het aanpassen van de URL van een artikel.
 
 De changelog voor de website schrijven we in het **Nederlands**, anders dan bij onze softwareprojecten,

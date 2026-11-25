@@ -1,5 +1,93 @@
 # @developer-overheid-nl/website
 
+## 2.2.0
+
+### Minor Changes
+
+- 9d7bd9f: Add blogpost about nl-wallet app with the team behind it
+- 22a8024: Add proposed decision on log management lifecycle scope to the Logboek Dataverwerkingen project decisions
+- 0e42534: Add blogpost announcing the developer.overheid.nl meetup on 15 December
+- de1537c: Add support for a custom DocCard icon via sidebar_custom_props.icon or customProps.icon in _category_.json
+- 73ee819: Add blogpost about the upgrade path from WCAG 2.2 to 3.0
+
+### Patch Changes
+
+- 4d7b6ae: Add diff syntax highlighting to code blocks, used in the OpenLint blogpost
+- 3cfba95: Add a SECURITY.md and the full EUPL license text, and set Geonovum as copyright
+  holder in REUSE.toml to match publiccode.yml
+- 0bd0940: Fix image rendering in the WCAG draft blogpost
+- c0487fd: Replace the image-size-next fork override with the patched upstream image-size
+  release
+- e84e852: Update @rijkshuisstijl-community packages to components-react 17 and
+  design-tokens 18, and load component CSS from components-css
+  
+  - Replace the removed `variation="pink-background"` prop on `Blockquote` with
+    `className="don-blockquote--pink"`
+  - Set `headingLevel` on every `Card` so card titles fit the page heading outline
+  - Keep the whole `Card` clickable, as it was before the upgrade
+  - Document Card heading levels, colours and the pink quote in the contributor
+    guides
+- 5f03e7b: Test-deploys pushen hun image niet meer onder de commit-sha die productie deployt, zodat productie geen test-build met test-API en test-zoekindex meer kan krijgen.
+
+## 2.1.0
+
+### Minor Changes
+
+- 3dbf696: Add an AI theme to the kennisbank covering AGENTS.md, the Model Context
+  Protocol, llms.txt, skills and plugins, and three AI communities. The theme is
+  called "Artificiële Intelligentie (AI)" in the menu, the sidebar and on the
+  homepage, where its tile links to every page in the theme and reuses the icon of
+  the AI button on articles.
+- f2a4c80: Add events page listing upcoming and past events
+- 988df91: Add article about tweakers developers summit 2026
+- 9e7d8b4: Publish blog post about switching all developer.overheid.nl tooling from
+  Spectral to OpenLint
+- db51807: Add REUSE-standard to knowledge base
+- a180b89: Update the API Design Rules pages to version 2.2 of the standard. Add how-to
+  pages for the seven rules the linter checks that are new in 2.2: kebab-case path
+  segments, lowerCamelCase query keys, the three date and time rules, problem
+  details and invalid input. Extend the cheat sheet with sections on error
+  handling and on date and time. Link to the specification without a version
+  number, so every link opens the current version of the rule. Describe OAS 3.1 as
+  the standard throughout the knowledge base and replace Spectral with OpenLint.
+  Update the bouw-een-api tutorial to the current OAS Generator and DON Checker.
+
+### Patch Changes
+
+- 5568cf6: Document `community` as a content type for kennisbank articles. The site has
+  supported it all along and fourteen articles use it, but neither the contributor
+  guide nor AGENTS.md listed it, and both said the five documented values were the
+  only ones allowed.
+- 981cafb: Update the OAS Generator article with OAS 3.1 as default, filters, resource
+  schemas, collection responses, strict input validation and the command line
+- f40a28a: Add swizzle check that detects upstream changes to swizzled Docusaurus
+  components and merges them on upgrade; add Prettier as a devDependency and
+  remove an unused stylesheet import from PaginatorNavLink
+- 4eb0002: Update docusaurus-theme-search-typesense to 0.27.0 and keep query strings in
+  internal search result URLs
+- dc940ec: Re-enable the link checker as a weekly check with a Slack report and fix broken links
+- 0cecbc6: Document in the contributing guidelines that every pull request needs a
+  changeset
+
+## 2.0.0
+
+### Major Changes
+
+- 3319016: Add a tool article and a CLI tutorial for the Repository Docs Generator, move
+  the web-app tutorial to
+  /kennisbank/open-source/tutorials/repo-inrichten-generator-webapp
+
+### Minor Changes
+
+- 095b5ba: Publish blog post on developer sessions at the Design Systems Week 2026
+- eac086b: Load the homepage agenda from the events API of the Tools API instead of a
+  static JSON file
+
+### Patch Changes
+
+- 08a24ea: Update the cloud guideline of the Leidraad for the 2026 government cloud policy:
+  portability, exit planning and current policy sources
+
 ## 1.16.0
 
 ### Minor Changes

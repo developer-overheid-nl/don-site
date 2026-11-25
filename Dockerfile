@@ -2,7 +2,7 @@
 
 # Stage 1: Base image.
 ## Start with a base image containing NodeJS so we can build Docusaurus.
-FROM node:lts AS base
+FROM node:24.22.3 AS base
 ## Disable colour output from yarn to make logs easier to read.
 ENV FORCE_COLOR=0
 ## Update Corepack
@@ -53,7 +53,7 @@ EXPOSE 3000
 CMD ["pnpm", "serve", "--host", "0.0.0.0", "--no-open"]
 
 # Stage 3b: Serve with Caddy.
-FROM caddy:2.9.1-alpine AS caddy
+FROM caddy:2.11-alpine AS caddy
 ## Copy the Caddyfile.
 COPY --from=prod /opt/docusaurus/Caddyfile /etc/caddy/Caddyfile
 ## Copy the Docusaurus build output.

@@ -127,7 +127,8 @@ We kunnen deze input nu aan de OAS Generator geven:
 1. Kopieer de JSON hierboven.
 2. [Open de OAS Generator](https://developer-overheid-nl.github.io/oas-generator).
 3. Plak de JSON aan de linkerkant.
-4. Kopieer de gegenereerde openapi.json aan de rechterkant.
+4. Zet de uitvoer aan de rechterkant op `JSON` en kopieer de gegenereerde
+   openapi.json.
 
 ![OAS Generator](./generator.png) _De OAS Generator met links onze JSON input en
 rechts de openapi.json output_
@@ -149,17 +150,24 @@ components
 
 | Onderdeel               | Uitleg                                                                                                                                                                                                                                                                                                                   |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `openapi`               | De gebruikte OpenAPI-versie. De generator zet deze standaard op `3.0.2`.                                                                                                                                                                                                                                                 |
+| `openapi`               | De gebruikte OpenAPI-versie. De generator zet deze standaard op `3.1.0`.                                                                                                                                                                                                                                                 |
 | `info`                  | Metadata over de API, waaronder titel, omschrijving, contactgegevens en versie.                                                                                                                                                                                                                                          |
 | `servers`               | De server URL. De generator vult hier eerst een `@TODO` placeholder in. In stap 4 vervangen we die door een URL met major versie, bijvoorbeeld `/v1`.                                                                                                                                                                    |
 | `tags`                  | Voor elke resource wordt een tag gegenereerd. Hiermee worden operaties gegroepeerd per resourcetype.                                                                                                                                                                                                                     |
 | `paths`                 | Voor elke resource worden paden gegenereerd. Volgens de ADR wordt hier de meervoud schrijfwijze voor gebruikt; bijvoorbeeld `/bieren` voor de collectie en `/bieren/{id}` voor een individuele resource.                                                                                                                |
 | Operaties               | Per `path` worden de correcte operaties toegevoegd. Voor een readonly resource zijn dit alleen `GET` operaties, anders worden ook de juiste `POST`, `PUT` en `DELETE` operaties gegenereerd.                                                                                                                            |
-| `responses`             | Per operatie worden de juiste responses gegenereerd. Succesresponses bevatten statuscodes, headers en verwijzingen naar schemas. Foutresponses verwijzen direct naar standaardresponses in `https://static.developer.overheid.nl/adr/components.yaml`.                                                                    |
-| `headers`               | Per succesresponse worden de juiste headers gegenereerd. `API-Version` is de verplichte response header voor API requests. Voor lijstoperaties wordt ook de `Link` header teruggegeven, die gebruikt kan worden voor paginering. Deze headers komen uit `https://static.developer.overheid.nl/adr/components.yaml`.       |
-| Errors                  | Voor 4XX statuscodes zoals `400` en `404` wordt verwezen naar standaard `application/problem+json` responses uit `https://static.developer.overheid.nl/adr/components.yaml`.                                                                                                                                             |
+| `responses`             | Per operatie worden de juiste responses gegenereerd. Succesresponses bevatten statuscodes, headers en verwijzingen naar schemas. Foutresponses verwijzen direct naar standaardresponses in `common.yaml`.                                                                                                                 |
+| `headers`               | Per succesresponse worden de juiste headers gegenereerd. `API-Version` is de verplichte response header voor API requests. Voor lijstoperaties wordt ook de `Link` header teruggegeven, die gebruikt kan worden voor paginering. Deze headers komen uit `common.yaml`.                                                    |
+| Errors                  | Voor 4XX statuscodes zoals `400` en `404` wordt verwezen naar standaard `application/problem+json` responses uit `common.yaml`.                                                                                                                                                                                          |
 | `components.schemas`    | Hier worden de bijbehorende schemas gegenereerd. Deze bevatten standaard een `id` property omdat een leeg schema niet valid is. In de volgende stap gaan we deze schemas aanpassen naar onze behoeften.                                                                                                                 |
 | `components.parameters` | Hier worden herbruikbare parameters gegenereerd, zoals de `id` path parameter voor individuele resources.                                                                                                                                                                                                                |
+
+Met `common.yaml` bedoelen we de herbruikbare ADR-componenten op
+`https://static.developer.overheid.nl/openapi-components/adr/2.2/common.yaml`.
+
+Per resource komt er in `components.schemas` ook een collectieschema, zoals
+`BierCollection`: een collectie geeft geen platte array terug, maar een object
+met de resources onder de key `items`.
 
 :::tip Handmatige verbeteringen
 

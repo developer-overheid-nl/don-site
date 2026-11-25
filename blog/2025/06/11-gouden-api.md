@@ -14,7 +14,7 @@ import { Blockquote } from "@rijkshuisstijl-community/components-react";
 
 # Welke API verdient goud?
 
-![gouden api](https://www.geonovum.nl/uploads/styles/auto_1600/public/image/2024-12/goudenapigroot.jpg?itok=o0rz1M1t)
+![gouden api](https://www.geonovum.nl/uploads/image/2024-12/goudenapigroot.jpg)
 
 Application Programming Interfaces (API's) spelen een niet weg te denken rol in
 het digitale landschap. API's maken het eenvoudiger om verschillende data en
@@ -33,7 +33,7 @@ kwaliteit van de API. In 2025 kijken we daarnaast in het bijzonder naar het
 thema data soevereiniteit:
 
 <Blockquote
-  variation="pink-background"
+  className="don-blockquote--pink"
 >
 Welke API's helpen in jouw ogen het beste om data in eigen beheer te houden in de publieke sector?
 </Blockquote>

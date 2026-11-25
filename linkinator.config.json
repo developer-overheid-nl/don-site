@@ -1,8 +1,27 @@
 {
+  "recurse": true,
+  "cleanUrls": true,
+  "verbosity": "error",
+  "concurrency": 25,
+  "timeout": 20000,
+  "retry": true,
+  "retryErrors": true,
+  "retryErrorsCount": 3,
+  "statusCodes": {
+    "401": "warn",
+    "403": "warn",
+    "429": "warn"
+  },
   "skip": [
     "https://publicatie.centrumvoorstandaarden.nl/api/adr/",
     "build/apis",
     "build/repositories",
+    "\\?schemas=",
+    "^http://127\\.0\\.0\\.1:8000/",
+    "^https://claude\\.ai/",
+    "^https://chatgpt\\.com/",
+    "^https://[a-z]+\\.slack\\.com/",
+    "^https://github\\.com/developer-overheid-nl/don-site/(tree|edit)/",
     "tweakers.net",
     "www.linkedin.com",
     "player.vimeo.com"

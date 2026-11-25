@@ -1,6 +1,6 @@
 {
   "name": "@developer-overheid-nl/website",
-  "version": "1.16.0",
+  "version": "2.2.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -10,11 +10,15 @@
     "build:docusaurus": "docusaurus build",
     "index:typesense": "node scripts/index-markdown-typesense.mjs",
     "swizzle": "docusaurus swizzle",
+    "swizzle:check": "node scripts/swizzle.js check",
+    "swizzle:update": "node scripts/swizzle.js update",
+    "swizzle:diff": "node scripts/swizzle.js diff",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
+    "check:links": "linkinator build --config ./linkinator.config.json",
     "test": "node --test scripts/*.test.js",
     "lint:typecheck": "tsc --noEmit",
     "lint": "npm-run-all lint:*"
@@ -30,14 +34,14 @@
     "@docusaurus/theme-mermaid": "3.10.2",
     "@mdx-js/react": "3.1.1",
     "@piwikpro/react-piwik-pro": "3.0.0",
-    "@rijkshuisstijl-community/components-react": "1.1.0",
+    "@rijkshuisstijl-community/components-react": "17.0.1",
     "a11y-syntax-highlighting": "1.1.0",
     "algoliasearch-helper": "3.29.3",
     "axios": "1.20.0",
     "client": "link:@docusaurus/plugin-content-docs/client",
     "clsx": "2.1.1",
     "docusaurus-markdown-source-plugin": "2.2.5",
-    "docusaurus-theme-search-typesense": "0.26.0",
+    "docusaurus-theme-search-typesense": "0.27.0",
     "dotenv": "17.4.2",
     "focus-trap-react": "12.0.3",
     "gray-matter": "4.0.3",
@@ -45,7 +49,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "remark-directive-sugar": "1.0.0",
-    "selenium-webdriver": "4.44.0",
+    "selenium-webdriver": "4.52.0",
     "typesense-instantsearch-adapter": "3.0.2",
     "xml2js": "0.6.2"
   },
@@ -54,12 +58,15 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "@rijkshuisstijl-community/design-tokens": "1.2.0",
+    "@rijkshuisstijl-community/components-css": "18.0.2",
+    "@rijkshuisstijl-community/design-tokens": "18.0.1",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
     "browser-driver-manager": "2.0.1",
-    "cypress": "16.0.0",
+    "cypress": "16.1.1",
+    "linkinator": "8.1.0",
     "npm-run-all": "4.1.5",
+    "prettier": "3.9.10",
     "typescript": "7.0.2"
   },
   "browserslist": {
@@ -75,7 +82,7 @@
     ]
   },
   "engines": {
-    "node": ">=24.12"
+    "node": ">=24.22.3"
   },
   "packageManager": "pnpm@10.34.5+sha512.a4ee05f2f73658255bd6a89859c065a45c28a57daefae2c893a168ee2b73168c37b91e83e57ea67654ad03f03031746430e8bce38e362e042605fb8abc80192e"
 }

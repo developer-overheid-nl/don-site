@@ -161,7 +161,7 @@ specificatie die gemaakt is om deze type zaken te beschrijven.
 ## OAS als betere optie
 
 Kortom, AsyncAPI biedt een hoop mogelijkheden. Het is echter zeker niet
-alomvattend, ongeacht wat er op de [Roadmap](https://www.asyncapi.com/roadmap)
+alomvattend, ongeacht wat er op de [Roadmap](https://www.asyncapi.com/docs/community/030-project-vision-strategy-goals)
 pagina staat. Uit onze eigen onderzoeken en use cases is duidelijk gebleken dat
 er situaties zijn waarin de toegevoegde waarde beperkt blijft. Om het verschil
 goed te duiden wil ik deze ook in enige mate van detail toelichten.

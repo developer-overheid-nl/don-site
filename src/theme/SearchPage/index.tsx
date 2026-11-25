@@ -217,7 +217,7 @@ function getSearchResultUrl(hit: SearchHit, externalUrlRegex: string) {
     default:
       return isRegexpStringMatch(externalUrlRegex, parsedURL.href)
         ? parsedURL.href
-        : parsedURL.pathname + parsedURL.hash;
+        : path;
   }
 }
 
