@@ -140,6 +140,15 @@
       ]
     },
     {
+      "component": "Mermaid",
+      "type": "wrap",
+      "package": "@docusaurus/theme-mermaid",
+      "files": [
+        "Mermaid/index.tsx",
+        "Mermaid/styles.module.css"
+      ]
+    },
+    {
       "component": "Navbar/MobileSidebar",
       "type": "eject",
       "package": "@docusaurus/theme-classic",
