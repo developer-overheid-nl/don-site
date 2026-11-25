@@ -6,7 +6,7 @@ tags:
 title: "Repositories mirroren op Code.overheid.nl"
 ---
 
-Jullie github projecten *ook* op code.oveheid.nl hosten, hoe werkt dat?
+Jullie github projecten *ook* op code.overheid.nl hosten, hoe werkt dat?
 
 Code.overheid.nl is de centrale plek van de rijksoverheid om open source code beschikbaar te stellen aan developers (binnen en buiten de overheid), journalisten en burgers.
 De basis van deze website bestaat uit het softwarepakket Forgejo, forgejo is een zogenaamde GIT Forge. In en met een GIT kun je software ontwikkelen, issues beheren, en naturlijk ook Pull of Merge requests verwerken.
@@ -14,7 +14,7 @@ Omdat voor veel partijen een volledige overstap op Forgejo of een eigen forge ee
 
 ## Wat is een Forgejo Mirrored Repository?
 
-Een Mirror is een spiegel, of kopie van een bestaande repository. Deze kopie niet direct bedoeld om actief werk te faciliteren, maar maakt wel de code, en eventueel issues, en andere bijbehorende zaken beschikbaar.
+Een Mirror is een spiegel of kopie van een bestaande repository. Deze kopie is niet direct bedoeld om actief werk te faciliteren, maar maakt wel de code, en eventuele issues, en andere bijbehorende zaken beschikbaar.
 
 ## Wat levert een mirror op code.overheid.nl op?
 
@@ -33,7 +33,7 @@ Op de pagina 'Migrate from GitHub' vullen we een aantal velden in:
 
 ### Migrate / Clone from URL. 
 
-Dis is de Url waarop je op Github de voorpagina van de repository ziet. 
+Dis is de URL waarop je op Github de voorpagina van de repository ziet. 
 Een voorbeeld is `https://github.com/SSC-ICT-Innovatie/nl-kat-coordination/`
 
 ### Access token
@@ -46,9 +46,9 @@ Geef de Token een naam (code.overheid.nl sync), en vul de resterende velden in.
 
 ### Migration Options
 
-Kies 'this reposiroty' will be a Mirror. 
+Kies 'this repository' will be a Mirror. 
 Kies eventueel Migrate LFS Files' als dit van toepassing is.
-LFS Files zijn 'Extra grote bestanden' welke in git opgeschalen zouden kunnen zijn. Voor code projecten is dit doorgaans niet aan de orde, maar het kan dan ook geen kwaad dit wel te kiezen)
+LFS Files zijn 'Extra grote bestanden' welke in git opgeslagen zouden kunnen zijn. Voor code projecten is dit doorgaans niet aan de orde, maar het kan dan ook geen kwaad dit wel te kiezen.
 
 ### Owner
 
