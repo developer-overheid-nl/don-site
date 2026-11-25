@@ -245,6 +245,16 @@ vivian-van-der-heijden-hanssen:
   page: true
   socials:
     linkedin: https://www.linkedin.com/in/vivianvanderheydenhanssen/
+
+sander-van-rijsoort:
+  name: Sander van Rijsoort
+  title: Freelance front-end developer
+  image_url: /img/team/sander-van-rijsoort.webp
+  page: true
+  socials:
+    linkedin: sander-van-rijsoort-335418140
+    github: sanderyt
+    website: https://www.reactdev.io
     
 hidde-de-vries:
     name: Hidde de Vries
@@ -256,3 +266,4 @@ hidde-de-vries:
       mastodon: https://front-end.social/@hdv
       linkedin: https://linkedin.com/in/hiddedevries
       bluesky: hidde.blog
+
