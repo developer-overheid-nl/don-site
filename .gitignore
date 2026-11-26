@@ -137,3 +137,8 @@ package-lock.json
 .DS_Store
 
 linkinator-results.json
+# Documentatie van initiatieven die elders wordt beheerd; neergezet door
+# scripts/initiatives.mjs vlak voor de build. De laatste versie die bouwde staat
+# wel in de repo, onder initiatives-snapshot/.
+/initiatieven/*/
+/.initiatives/

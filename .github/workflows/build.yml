@@ -128,8 +128,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # Via pnpm build: zonder de content van initiatieven faalt de build op
+      # broken links vanaf /initiatieven.
       - name: Build markdown output
-        run: pnpm build:docusaurus
+        run: pnpm build
         env:
           PIWIK_PRO_ACCOUNT_ADDRESS: ${{ secrets.PIWIK_PRO_ACCOUNT_ADDRESS }}
           PIWIK_PRO_SITE_ID: ${{ secrets.PIWIK_PRO_SITE_ID }}

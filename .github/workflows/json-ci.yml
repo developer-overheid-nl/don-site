@@ -11,4 +11,4 @@ jobs:
       issues: write
       pull-requests: write
     with:
-      filter-regex-exclude: "(^|.*/)\\.vscode/|cypress/fixtures/|(^|.*/)tsconfig(\\..+)?\\.json$"
+      filter-regex-exclude: "(^|.*/)\\.vscode/|cypress/fixtures/|(^|.*/)initiatives-snapshot/|(^|.*/)tsconfig(\\..+)?\\.json$"

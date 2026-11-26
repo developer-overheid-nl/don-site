@@ -33,8 +33,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # Via pnpm build: zonder de content van initiatieven faalt de build op
+      # broken links vanaf /initiatieven.
       - name: Build Docusaurus site
-        run: pnpm build:docusaurus
+        run: pnpm build
 
       - name: Check links
         id: links

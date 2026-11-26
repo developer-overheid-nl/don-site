@@ -4,3 +4,6 @@
 pnpm-lock.yaml
 LICENSE.md
 swizzle-baseline
+# Content van initiatieven; die beheert de partner.
+initiatieven/*/
+initiatives-snapshot

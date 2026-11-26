@@ -1,0 +1,82 @@
+name: Initiatives snapshot
+
+# Legt na een groene build op main de nieuwste content van elk initiatief vast
+# als snapshot, als die bouwt en nieuwer is dan de huidige. De build valt op die
+# snapshot terug zodra nieuwere content hem breekt; zie scripts/initiatives.mjs.
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Build
+    types:
+      - completed
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: ${{ github.workflow }}
+
+env:
+  BRANCH: chore/initiatives-snapshot
+
+jobs:
+  update:
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: main
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: 24.12
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build en werk snapshots bij
+        run: pnpm build --update-snapshot
+
+      - name: Open of ververs pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain -- initiatives-snapshot)" ]; then
+            echo "Geen nieuwere content die bouwt; niets te doen."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898579+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+
+          pnpm changeset add --empty
+          CHANGESET=$(git ls-files --others --exclude-standard .changeset | head -n 1)
+          printf -- '---\n"@developer-overheid-nl/website": patch\n---\n\nUpdate initiative snapshots to the latest content that builds\n' > "$CHANGESET"
+
+          git add initiatives-snapshot "$CHANGESET"
+          git commit -m "chore: snapshot van initiatieven bijwerken"
+          git push --force origin "$BRANCH"
+
+          if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "chore: snapshot van initiatieven bijwerken" \
+              --body "Nieuwe snapshot voor een of meer initiatieven in \`initiatives-snapshot/\`. Deze versie is in deze workflow succesvol gebouwd. De build valt op deze snapshot terug als nieuwere content van een initiatief hem breekt.
+
+          Zie \`provenance.json\` per initiatief voor de commit."
+          fi
