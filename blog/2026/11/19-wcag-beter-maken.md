@@ -3,14 +3,13 @@ authors: [hidde-de-vries]
 description:
   "WCAG is de meestgebruikte standaard voor digitale toegankelijkheid, en er wordt op dit moment gewerkt aan een volgende versie. Wat wordt er verbeterd en waarom? Hidde schrijft mee aan WCAG 3 en geeft in deze post antwoord op die vragen en meer."
 image: ./img/wcag3.png
-tags:
-  - toegankelijkheid
-draft: true
+tags: [wcag, toegankelijkheid]
 ---
 
 # Hoe we WCAG beter willen maken
 
 [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) is al vele jaren dé standaard voor digitale toegankelijkheid. Wereldwijd is wetgeving die toegankelijkheid vereist vaak wetgeving die naar “WCAG” verwijst, al is dat technisch gezien vaak vrijwillig of indirect. Doordat WCAG veel gebruikt wordt, horen we veel over wat er beter kan. Vanuit [Logius](https://logius.nl) werk ik als co-editor actief mee aan [WCAG 3](https://www.w3.org/TR/wcag-3.0/), waarin we proberen WCAG beter te maken.
+
 ![Een screenshot van de huidige working draft van de WCAG-standaard versie 3](./img/wcag3.png)
 <!-- truncate -->
 
@@ -87,7 +86,7 @@ Om WCAG makkelijker uitbreidbaar te maken, en een aantal andere problemen te adr
 
 In WCAG 3 zijn er geen succescriteria meer, en is de structuur minder rigide. In plaats daarvan krijg je direct onder de richtlijnen zogenaamde _requirements_ (_core_ en _supplemental_) en daarnaast _assertions_ en _good practices_. 
 
-<img src="./img/anatomie-requirement.png" alt="screenshot van requirement error notifications" /> <em>Een WCAG 3 requirement kan in de huidige draft “Core” of “Supplemental” zijn, heeft een specifieke status (hier: “developing”) en linkt naar gerelateerde issues.</em>
+![screenshot van requirement error notifications](./img/anatomie-requirement.png) <em>Een WCAG 3 requirement kan in de huidige draft “Core” of “Supplemental” zijn, heeft een specifieke status (hier: “developing”) en linkt naar gerelateerde issues.</em>
 
 De requirements zijn uitkomsten die testbaar zijn, een beetje als succescriteria nu. Assertions zijn een nieuw soort test: het zijn als het ware vooromschreven beweringen die je als organisatie kunt doen. Denk aan: “wij testen dagelijks met gebruikers” of “wij werken met SCRUM”. Als veel organisaties dit soort beweringen doen, worden ze makkelijker te vergelijken. Het zou ook kunnen dat overheden, grote bedrijven, of inkoopafdelingen gaan eisen dat bepaalde assertions worden gedaan door organisaties of teams. 
 
