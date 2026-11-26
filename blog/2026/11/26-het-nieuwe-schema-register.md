@@ -15,13 +15,12 @@ tags:
   - api-design
   - linked-data
   - kennisplatform-apis
-draft: true
 image: ./img/schema-register.png
 ---
 
 # Het nieuwe Schema-register: herbruikbare JSON Schema's voor API's, tools en AI
 
-![Lokale schema's, een OpenAPI-document en tools als een validator, een LLM en een codegenerator die verwijzen naar schema's in het Schema-register](./img/schema-register.svg)
+![Lokale schema's, een OpenAPI-document en tools als een validator, een LLM en een codegenerator die verwijzen naar schema's in het Schema-register](./img/schema-register.png)
 
 Naast het [API-register](https://apis.developer.overheid.nl) en het
 [OSS-register](https://oss.developer.overheid.nl) hebben we er een register bij:
@@ -49,7 +48,7 @@ Developer Experience dus.
 ### OpenAPI 3.1
 
 Dat we juist nú met een Schema-register komen, heeft alles te maken met
-[OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht). Per 1 januari 2027 is dat
+[OpenAPI 3.1](/blog/2025/07/10/openapi-31-in-zicht). Vanaf 1 januari 2027 is dat
 de verplichte standaard voor API's van de overheid. Waar OAS 3.0 nog een eigen
 schema gebruikte, is 3.1 volledig compliant met "JSON Schema 2020-12". Daardoor
 kun je vanuit je OpenAPI-document met een `$ref` verwijzen naar een bestaand
@@ -106,11 +105,11 @@ Per schema zie je:
 - het schema zelf, ook als gebundelde versie waarin alle verwijzingen zijn
   opgenomen
 - de dependencies van het schema
-- een health-score met de gevonden health issues (daarover hieronder meer)
+- een health-score met gevonden issues
 
 ### OpenAPI components
 
-Herbruikbare bouwstenen zijn niet nieuw. Bij de ADR horen al herbruikbare
+Herbruikbare componenten zijn niet nieuw. Bij de ADR horen al herbruikbare
 OpenAPI components, zoals de `API-Version`-header en standaardresponses als
 `BadRequest` en `NotFound`. Die hosten we op static.developer.overheid.nl, zodat
 je er vanuit je eigen OpenAPI-document met een `$ref` naar kunt verwijzen in
@@ -185,11 +184,12 @@ precies waar. Op het moment van schrijven vindt het register onder meer:
   verderop in het voorbeeld met een Point ziet.
   `Problem Details for Bad Request` krijgt dit issue.
 
-Het plan is om hier straks een score te tonen op basis van de Schema Design
-Rules. Zolang die er nog niet zijn, gebruiken we ter inspiratie de standaard
-ruleset van [Sourcemeta One](https://one.sourcemeta.com), het platform waar het
-register op draait. Dat is een goed startpunt, maar het zijn niet de afspraken
-van de overheid.
+Bovenstaande regels komen uit de standaard ruleset van
+[Sourcemeta One](https://one.sourcemeta.com), en dienen slechts ter inspiratie
+voor de nog op te stellen Schema Design Rules. Persoonlijk vind ik bijvoorbeeld
+het verplichten van top-level examples geen goed idee, en wat mij betreft is dit
+dan ook een van de eerste regels die we niet gaan overnemen. Maar dat is mijn
+mening, vandaar de oprichting van de nieuwe werkgroep ;-)
 
 ### Persistente URL's
 
@@ -224,8 +224,9 @@ verandert.
 
 Om te zien waar we staan, hebben we op een testomgeving een experiment gedaan.
 Uit alle API's in het API-register hebben we elk schema geëxtraheerd, ook de
-geneste en inline schema's. Dat is niet hoe we het register willen vullen, maar
-het werkt wel als spiegel. Wat we zagen:
+geneste en inline schema's (OpenAPI Schema's zijn hiervoor geconverteerd naar
+JSON Schema, voor zover mogelijk). Dat is niet hoe we het register willen
+vullen, maar het werkt wel om goed inzicht te krijgen. Wat we zagen:
 
 - veel schema's zonder `title` of `description`, waardoor niet duidelijk is wat
   ze voorstellen
@@ -301,7 +302,7 @@ Dit soort bevindingen laat zien waarom afspraken nodig zijn. Zonder afspraken
 krijg je tientallen manieren om een adres te modelleren, en schrijft elke
 afnemer eigen code om ze om te zetten. Een schema dat je niet begrijpt,
 hergebruik je niet, en een AI-agent ook niet. Een register vol varianten is geen
-register, maar een archief.
+bruikbaar register, eerder een archief.
 
 ## Schema Design Rules
 
@@ -323,7 +324,7 @@ zeggen "gebruik JSON Schema", de Schema Design Rules zeggen hoe. Daarbij gaan ze
 | Schema Design Rules | Request- en response-bodies, berichten en andere gegevensstructuren |
 
 En omdat JSON Schema veel breder wordt gebruikt dan alleen in OpenAPI, verdient
-dat een eigen set afspraken naast de ADR, en niet een hoofdstuk erin.
+dat een eigen set afspraken naast de ADR, niet een hoofdstuk erin.
 
 #### Verhuizen vanuit de ADR
 
@@ -333,8 +334,8 @@ ernaar verwijzen. Denk aan:
 
 - veldnamen, zoals geen afkortingen en wel of geen Nederlandse naamgeving
 - wel of niet de resourcenaam herhalen in een veldnaam
-- property casing, dat destijds bij de ADR is geparkeerd
-- formats, zoals de OpenAPI Format Registry die de ADR nu gebruiken
+- property casing, vooralsnog bij de ADR geparkeerd
+- formats, zoals de OpenAPI Format Registry die nu in de ADR staat
 
 ### Werkwijze
 
@@ -363,7 +364,7 @@ bijvoorbeeld `provenance` voor de bron van een veld, en de Italiaanse overheid
 koppelt schema's met `x-jsonld-type` aan linked data.
 
 Spreken we af hoe extensies heten en wat erin staat, dan noemen we het allemaal
-hetzelfde. Pas dan kun je er tooling omheen bouwen, zoals een validator die
+hetzelfde. Pas dan kunnen we er tooling omheen bouwen, zoals een validator die
 controleert of een eenheid bestaat, of een tool die een veld koppelt aan het
 begrip waar het over gaat. Het voorstel is om extensies altijd met `x-` te laten
 beginnen, net als in OpenAPI. Dat werkt nu al in alle versies van JSON Schema,
@@ -381,15 +382,14 @@ het begrip in de [Stelselcatalogus](https://stelselcatalogus.nl):
   "properties": {
     "oppervlakte": {
       "type": "number",
-      "description": "De gebruiksoppervlakte van het gebouw",
-      "x-unit": "m2"
+      "description": "De gebruiksoppervlakte van het gebouw"
     }
   }
 }
 ```
 
 De namen in dit voorbeeld zijn ter illustratie. Welke extensies we afspreken en
-wat erin staat, werkt de werkgroep uit.
+wat erin staat, gaat de werkgroep uitwerken.
 
 ### Van regels naar score
 
@@ -397,9 +397,7 @@ Zodra de Schema Design Rules er zijn en in een ruleset staan, kunnen we de
 health-score in het register daarop gaan baseren, net zoals de ADR-score in het
 API-register laat zien in hoeverre een API aan de API Design Rules voldoet. Dan
 zegt de score niet alleen of een schema technisch netjes is, maar ook of het
-voldoet aan wat we binnen de overheid hebben afgesproken. Niet toevallig zijn
-"geschikt voor AI" en "productieklaar" twee van de toetsstenen die de werkgroep
-voor elke regel hanteert.
+voldoet aan wat we binnen de overheid hebben afgesproken.
 
 ## Een schema toevoegen
 
@@ -417,7 +415,7 @@ We zoeken daarnaast schema's om de regels aan te toetsen. We kijken nu onder
 meer naar Problem Details, CloudEvents, de basisregistraties, de schema's van
 VNG en geoschema's van PDOK, Geonovum, OGC en Kadaster. Heb je schema's uit een
 ander domein, ook als ze nu nog onderdeel zijn van een OpenAPI-document, dan
-horen we dat graag. Hoe breder de toetsset, hoe beter de regels.
+horen we dat graag. Hoe breder de testset, hoe beter de regels.
 
 ## Meedenken over de Schema Design Rules?
 
