@@ -33,7 +33,7 @@ kwaliteit van de API. In 2025 kijken we daarnaast in het bijzonder naar het
 thema data soevereiniteit:
 
 <Blockquote
-  variation="pink-background"
+  className="don-blockquote--pink"
 >
 Welke API's helpen in jouw ogen het beste om data in eigen beheer te houden in de publieke sector?
 </Blockquote>

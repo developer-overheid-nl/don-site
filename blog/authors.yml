@@ -245,3 +245,14 @@ vivian-van-der-heijden-hanssen:
   page: true
   socials:
     linkedin: https://www.linkedin.com/in/vivianvanderheydenhanssen/
+    
+hidde-de-vries:
+    name: Hidde de Vries
+    title: Adviseur standaarden - Logius
+    image_url: /img/authors/hidde-de-vries.webp
+    page: true
+    socials:
+      github: hidde
+      mastodon: https://front-end.social/@hdv
+      linkedin: https://linkedin.com/in/hiddedevries
+      bluesky: hidde.blog

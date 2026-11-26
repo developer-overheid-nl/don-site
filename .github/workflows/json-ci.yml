@@ -4,24 +4,11 @@ on: pull_request
 
 jobs:
   lint-and-validate:
-    name: JSON Lint & OpenAPI Validate
-    runs-on: ubuntu-latest
+    uses: developer-overheid-nl/.github/.github/workflows/json-ci.yml@v1
     permissions:
       contents: read
       statuses: write
       issues: write
       pull-requests: write
-    steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-        with:
-          fetch-depth: 0
-      - name: Run Super-Linter
-        uses: super-linter/super-linter@4ce20838b8ab83717e78138c5b3a1407148e0918
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_EXCLUDE: "(^|.*/)\\.vscode/|cypress/fixtures/|(^|.*/)tsconfig(\\..+)?\\.json$"
-          VALIDATE_ALL_CODEBASE: true
-          VALIDATE_JSON: true
-          VALIDATE_OPENAPI: true
-          ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: true
-          UPDATE_EXISTING_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: true
+    with:
+      filter-regex-exclude: "(^|.*/)\\.vscode/|cypress/fixtures/|(^|.*/)tsconfig(\\..+)?\\.json$"

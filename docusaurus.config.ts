@@ -213,6 +213,7 @@ const config: Config & {
         sitemap: {},
         theme: {
           customCss: [
+            "./node_modules/@rijkshuisstijl-community/components-css/dist/index.css",
             "./node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css",
             "./src/css/custom.css",
             "./node_modules/a11y-syntax-highlighting/dist/prism/a11y-light.min.css",
