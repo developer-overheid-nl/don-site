@@ -113,6 +113,38 @@ Zie de sectie Componenten in `/contributing/kennisbank-artikel` en Citaten in
 - Gebruik `.mdx` voor een artikel met componenten. Prettier voegt in een
   `.md`-bestand opeenvolgende `import`-regels samen tot één alinea.
 
+### Eigen icoon op een DocCard
+
+Een artikel of categorie krijgt standaard een emoji op de kaart. Een eigen icoon
+zet je met `sidebar_custom_props.icon` in de frontmatter, of `customProps.icon`
+in `_category_.json`. `src/theme/DocCard/index.tsx` rendert het als `<img>`. Zie
+`/contributing/kennisbank-artikel` voor de syntax.
+
+De build controleert dit niet. Houd je daarom zelf aan deze regels:
+
+- Het pad is absoluut en wijst naar een bestaand bestand in `static/`
+  (bijvoorbeeld `/img/iconen/naam.svg`). Een relatief pad werkt niet. Verwijs
+  niet naar een externe URL: dan laadt de site content van buiten het eigen
+  domein.
+- Gebruik SVG. Een icoon is maximaal **5 KB**; de bestaande iconen in
+  `static/img/` zijn 1 tot 3 KB. Een groter bestand is bijna altijd een
+  exportartefact (ingebed raster, metadata, onnodige paden). Optimaliseer het,
+  bijvoorbeeld met `pnpm dlx svgo`, in plaats van de grens op te rekken.
+- De SVG heeft een `viewBox` en is vierkant. De kaart toont het op 2rem x 2rem
+  (`object-fit: contain`), vaste `width` en `height` in het bestand zijn dus
+  overbodig.
+- Geen `<script>`, geen `<foreignObject>`, geen `<image>` met een `data:`-URI en
+  geen verwijzingen naar externe bestanden of fonts. Zet tekst om naar paden.
+- Kleuren staan in het bestand zelf. Een `<img>` erft geen `currentColor` en
+  kent geen CSS-tokens, dus de regel over hexwaarden geldt hier niet. Gebruik
+  kleuren uit de huisstijl en controleer het resultaat in `pnpm start`.
+- Het icoon is decoratief (`alt=""`). De betekenis moet dus in de titel van de
+  kaart staan, nooit alleen in het icoon.
+- Bestandsnamen zijn Engelse identifiers in kebab-case.
+- Kopieer geen iconen uit `src/theme/icons/` naar `static/`. Dat zijn
+  Rijkshuisstijl-iconen met auteursrechtbeperkingen (zie de header in elk
+  bestand), en ze worden als React-component gebruikt, niet als bestand.
+
 ## Blogposts
 
 Zie `/contributing/gastblog-schrijven`. Posts staan in

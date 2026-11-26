@@ -1,5 +1,34 @@
 # @developer-overheid-nl/website
 
+## 2.2.0
+
+### Minor Changes
+
+- 9d7bd9f: Add blogpost about nl-wallet app with the team behind it
+- 22a8024: Add proposed decision on log management lifecycle scope to the Logboek Dataverwerkingen project decisions
+- 0e42534: Add blogpost announcing the developer.overheid.nl meetup on 15 December
+- de1537c: Add support for a custom DocCard icon via sidebar_custom_props.icon or customProps.icon in _category_.json
+- 73ee819: Add blogpost about the upgrade path from WCAG 2.2 to 3.0
+
+### Patch Changes
+
+- 4d7b6ae: Add diff syntax highlighting to code blocks, used in the OpenLint blogpost
+- 3cfba95: Add a SECURITY.md and the full EUPL license text, and set Geonovum as copyright
+  holder in REUSE.toml to match publiccode.yml
+- 0bd0940: Fix image rendering in the WCAG draft blogpost
+- c0487fd: Replace the image-size-next fork override with the patched upstream image-size
+  release
+- e84e852: Update @rijkshuisstijl-community packages to components-react 17 and
+  design-tokens 18, and load component CSS from components-css
+  
+  - Replace the removed `variation="pink-background"` prop on `Blockquote` with
+    `className="don-blockquote--pink"`
+  - Set `headingLevel` on every `Card` so card titles fit the page heading outline
+  - Keep the whole `Card` clickable, as it was before the upgrade
+  - Document Card heading levels, colours and the pink quote in the contributor
+    guides
+- 5f03e7b: Test-deploys pushen hun image niet meer onder de commit-sha die productie deployt, zodat productie geen test-build met test-API en test-zoekindex meer kan krijgen.
+
 ## 2.1.0
 
 ### Minor Changes
