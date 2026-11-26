@@ -1,5 +1,13 @@
 # @developer-overheid-nl/website
 
+## 2.3.0
+
+### Minor Changes
+
+- db2d6ad: Add blogpost about the launch of the Schema-register
+- fe73dee: Extend the security.txt article with redirecting to the NCSC, test and demo
+  environments, and private vulnerability reporting on GitHub
+
 ## 2.2.0
 
 ### Minor Changes
